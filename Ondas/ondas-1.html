@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ondas</title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+
+
+
+  <section>
+
+    <header>
+        <h1 id="ejercicios-pulso-y-velocidad">Ejercicios de Pulso y Velocidad</h1>
+    </header>
+
+  </section>
+
+  <article style="background-color:lightred;border-color:red">
+  <p><strong>En la siguiente figura se muestra un instante particular de una onda propagándose por una cuerda. El muelle oscila a una frecuencia <span class="math inline">\(10\pi\)</span> rad/s. La velocidad de propagación de la onda es 5 m/s.
+    <ol>
+      <li> Calcule la longitud de onda y el número de onda.</li>
+      <li> Calcule la distancia entre los puntos A y B, entre los puntos A y C y entre los puntos D y F.</li>
+      <li> Indique el signo de la velocidad en los puntos A, B y C.</li>
+        <br></strong></p>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/ejemplo_lambda.png">
+        <img alt="" src="figuras/ejemplo_lambda.png" width="50%"/>
+      </a>
+      </div>
+  </div>
+
+  <button id="e8" class="button"  onclick="show2('e8');">Solución</button>
+  <div id="sol-e8" style="display:none;">
+  <br>
+  <p>SOLUCIÓN:<br><br>
+  <ol>
+    <li>La longitud de onda se calcula a partir de <span class="math inline">\(\lambda=vT\)</span>. Necesitamos el periodo: <span class="math display">\[T=\frac{2\pi}{\omega}=\frac{2\pi}{10\pi\mbox{ rad/s}}=0.2\mbox{ s}\]</span> Finalmente: <span class="math display">\[\lambda=vT=5\mbox{ m/s}\times 0.2\mbox{ s}=1\mbox{ m}\]</span></li><br />
+    <li>
+      La distancia entre A y B es 1/4 de la longitud de onda, es decir, 0.25 m.<br />
+      La distancia entre A y C es 1/2 de la longitud de onda, es decir, 0.5 m.<br />
+      La distancia entre D y D es la longitud de onda, es decir, 1 m.<br />
+    </li>
+    <br>
+    <li>
+      El tramo a la izquierda de A está por debajo, luego A está bajando: <span class="math inline">\(v_A&lt;0\)</span><br />
+      El tramo a la izquierda de B está por debajo, luego B está bajando: <span class="math inline">\(v_B&lt;0\)</span><br />
+      El tramo a la izquierda de C está por encima, luego C está subiendo: <span class="math inline">\(v_C&gt;0\)</span><br />
+    </li>
+  </p>
+  </div>
+  </article>
+
+  <script type="text/javascript" language="javascript">
+    function show(str, obj){
+      document.getElementById(obj).innerHTML = str;
+      //MathJax.Hub.Typeset();
+      MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+    }
+    function show2(divID) {
+        var sol = document.getElementById("sol-"+divID);
+        var div = document.getElementById(divID);
+        if(sol.style.display == "none"){
+          sol.style.display = "block";
+        }else{
+          sol.style.display = "none";
+        }
+        if(div.innerHTML == "Solución"){
+          div.innerHTML = "Oculta solución";
+        }else{
+          div.innerHTML = "Solución";
+        }
+    }
+  </script>
+
+  </body>
+  </html>

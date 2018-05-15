@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+    <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+
+
+  <div id="header">
+    <h1 class="title">Oscilaciones</h1>
+  </div>
+
+  <section>
+
+    <header>
+        <h1 id="cinemática-del-MAS">Cinemática del M.A.S.</h1>
+    </header>
+
+<p>Imaginemos un cuerpo que se ve sometido a una fuerza dirigida siempre a un punto, que llamaremos de equilibrio. A tal fuerza se le llama “fuerza restauradora&quot;. Si este cuerpo se encuentra en reposo en dicha posición de equilibrio, entonces la fuerza es nula y se mantendrá en reposo. Se dice que el cuerpo está en equilibrio. Podemos imaginarnos varias situaciones de este tipo. En la figura se muestran tres ejemplos.</p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img1.png">
+      <img alt="" src="figuras/img1.png" width="50%"/>
+    </a>
+    </div>
+</div>
+<p>En el primer ejemplo, el muelle que inicialmente esté en B o C tiende a recuperar su forma natural en a). En el segundo ejemplo, el peso en b) y c) no es perpendicular a la plataforma y la rueda tiende a caer hacia la posición más baja. En el tercer ejemplo, la tensión del hilo en b) y c) no es paralelo al peso, por lo que la componente perpendicular al hilo <span class="math inline">\(P_t\)</span> no está compensado y hacen volver al péndulo a su posición vertical.</p>
+<p>En cualquiera de estas situaciones, el cuerpo regresa a la posición de equilibrio con una cierta velocidad. En esta posición, la fuerza neta es nula, con lo cual el cuerpo mantiene su velocidad y rebasa esta posición de equilibrio. Por lo tanto aparece una fuerza restauradora en la dirección opuesta que hará que el cuerpo se frene primero y vuelva a continuación.</p>
+<p>Este tipo de movimiento, en el que el cuerpo se desplaza en torno a una posición de equilibrio se denomina “oscilación&quot;.</p>
+<p>En muchos casos, el cuerpo no sólo pasa repetidas veces por su posición de equilibrio, sino que lo hace periódicamente. Es decir, el tiempo que tarda en hacer un ciclo completo es siempre el mismo. A este tipo de oscilaciones se les llama <strong>vibración armónica</strong>.</p>
+<p>Si el cuerpo se desvía pequeñas distancias del equilibrio, entonces una buena aproximación a su movimiento viene dada por la <strong>vibración armónica simple</strong>. En este caso,</p>
+<ul>
+<li><p>La fuerza que actúa sobre la partícula o sistema es proporcional al desplazamiento del cuerpo con respecto a su posición de equilibrio.</p></li>
+<li><p>La posición de la partícula se pueda especificar mediante una función seno o coseno del tiempo.</p></li>
+</ul>
+
+</section>
+
+
+<section>
+
+  <header>
+      <h1 id="Movimiento-armonico-simple">Movimiento armónico simple (M.A.S.)</h1>
+  </header>
+
+<p>Se define el movimiento armónico simple como aquél que se puede describir con una función armónica del tiempo, es decir, con una función seno o coseno.</p>
+<p>En los movimientos periódicos, la partícula se aleja una distancia máxima, a la que se llama <strong>amplitud</strong> <span class="math inline">\(A\)</span>, distancia en la que se frena completamente y se dirige de nuevo a la posición de equilibrio.</p>
+<p>Imaginemos que en el instante inicial la partícula se encuentra en la posición de equilibrio, es decir, <span class="math inline">\(x(t=0)=0\)</span>. En cualquier otro instante de tiempo, la posición de la partícula se puede describir mediante una función del tiempo <span class="math inline">\(x(t)\)</span> dada por: <span class="math display">\[x(t)=A\sin\left(\varphi\right)=A\sin\left(2\pi\frac{t}{T}\right)\]</span> donde <span class="math inline">\(\varphi\)</span> lo denominamos la “fase&quot; del movimiento.</p>
+<p>En la siguiente gráfica se representa esta función. Obsérvese que para <span class="math inline">\(t=T/4\)</span>, entonces <span class="math inline">\(\sin\left(\pi/2\right)=1\)</span>, su valor máximo, y por tanto, en ese instante, <span class="math inline">\(x(T/2)=A\)</span>. Dado que el máximo valor del seno es 1, entonces, el máximo valor de <span class="math inline">\(x\)</span> es, efectivamente, la amplitud <span class="math inline">\(A\)</span>. Del mismo modo, para <span class="math inline">\(t=3T/4\)</span>, <span class="math inline">\(\sin\left(3\pi/2\right)=-1\)</span> entonces, <span class="math inline">\(x(3T/4)=-A\)</span>: La partícula ejecuta oscilaciones desde <span class="math inline">\(A\)</span> hasta <span class="math inline">\(-A\)</span>. Si esperamos hasta <span class="math inline">\(t=T/4+T\)</span>, entonces de nuevo <span class="math inline">\(x(5T/4)=A\)</span>, es decir, transcurrido un periodo, la partícula vuelve al máximo.</p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img2.png">
+      <img alt="" src="figuras/img2.png" width="50%"/>
+    </a>
+    </div>
+</div>
+<p>Por tanto, <span class="math inline">\(T\)</span> es el tiempo que tarda la partícula en ejecutar una oscilación completa. A este tiempo lo llamamos <strong>periodo</strong>. Fíjese que en medio periodo, habrá completado 1/2 ciclo, en 1/4 de periodo, 1/4 ciclo, etc.</p>
+
+
+<article style="background-color:lightblue;border-color:blue">
+  <strong>EJEMPLO: Un objeto está oscilando sujeto a un muelle vertical. Se observa que tarda tarda 3 segundos en llegar desde su punto más alto hasta su punto más bajo. Calcule su periodo.</strong>
+  <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+  <div id="sol-e1" style="display:none;">
+    <br>
+    Solución:
+    <br><br>
+    Si observamos la figura anterior, el recorrido entre el punto más alto, es decir, cuando <span class="math inline">\(x=A\)</span>, hasta el punto más bajo, es decir, cuando <span class="math inline">\(x=-A\)</span>, es la mitad del ciclo completo y tardará por lo tanto <span class="math inline">\(T=2\)</span>. Por lo tanto, si tarda t = 3 s, el periodo será el doble: <span class="math inline">\(T=6s\)</span>.
+
+  </div>
+</article>
+
+
+<p>Se define la <strong>frecuencia</strong> como el número de ciclos por unidad de tiempo. Para calcularlo, basta con tener en cuenta que en un tiempo <span class="math inline">\(T\)</span> se ejecuta una oscilación, es decir, <span class="math display">\[f=\frac{1}{T}\]</span> Como el tiempo se mide en segundos, la frecuencia se mide en s<span class="math inline">\(^{-1}\)</span>. A esta unidad se le conoce como <strong>hercio</strong> (Hz). Fíjese que con esta definición, en un cierto tiempo <span class="math inline">\(t\)</span> ejecutará <span class="math inline">\(N=ft\)</span> oscilaciones.</p>
+
+<article style="background-color:lightblue;border-color:blue">
+  <strong>EJEMPLO: Un objeto está oscilando sujeto a un muelle vertical. Se observa que tarda tarda 5 segundos en realizar 10 oscilaciones. Calcule su periodo y su frecuencia.</strong>
+  <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+  <div id="sol-e2" style="display:none;">
+    <br>
+    Solución:
+    <br><br>
+    El periodo será el tiempo que tarda en realizar una
+oscilación:
+
+<span class="math display">\[T=\frac{t}{N}=\frac{5}{10}=0.5s\]</span>
+
+
+Por otro lado, la frecuencia es el número de oscilaciones en
+la unidad de tiempo:
+
+<span class="math display">\[f=\frac{N}{t}=\frac{1}{T}=2Hz\]</span>
+
+  </div>
+</article>
+
+
+
+
+
+
+<p>Finalmente, recordemos que la función seno o coseno es cíclica cuando su argumento (al que llamamos fase), llega a 2<span class="math inline">\(\pi\)</span>. Por ello, es usual definir la <strong>frecuencia angular</strong> <span class="math inline">\(\omega\)</span> como la fase en radianes por unidad de tiempo. Como un ciclo completo son 2<span class="math inline">\(\pi\)</span> radianes, la frecuencia angular será: <span class="math display">\[\omega=2\pi f\]</span> y se mide en rad/s. De este modo es fácil ver que el M.A.S. se puede describir con la función: <span class="math display">\[x(t)=A\sin\left(\omega t\right)\]</span></p>
+<p>En resumen:</p>
+<center><table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x(t)=A\sin\left(\omega t\right)\)</span></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></center>
+<center><table>
+<tbody>
+<tr class="odd">
+<td align="center">Nombre</td>
+<td align="center">Abreviatura</td>
+<td align="center">Unidad</td>
+<td align="center">Equivalencia</td>
+</tr>
+<tr class="even">
+<td align="center">Amplitud</td>
+<td align="center"><span class="math inline">\(A\)</span></td>
+<td align="center">m</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Periodo</td>
+<td align="center"><span class="math inline">\(T\)</span></td>
+<td align="center">s</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">Frecuencia</td>
+<td align="center"><span class="math inline">\(f\)</span></td>
+<td align="center">Hz</td>
+<td align="center"><span class="math inline">\(\frac{1}{T}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Frecuencia angular</td>
+<td align="center"><span class="math inline">\(\omega\)</span></td>
+<td align="center">rad/s</td>
+<td align="center"><span class="math inline">\(\frac{2\pi}{T}=2\pi f\)</span></td>
+</tr>
+</tbody>
+</table></center>
+<p>En este movimiento, no sólo varía la posición. Nótese que la partícula se frena al llegar a la máxima amplitud y luego invierte la dirección del movimiento. La velocidad la podemos calcular como la variación temporal de la posición: <span class="math display">\[v=\frac{\mbox{d}x}{\mbox{d}t}=A\omega\cos\left(\omega t\right)\]</span> Dado que los límites de la función coseno son también <span class="math inline">\(\pm\)</span>1, entonces la velocidad oscila también con el tiempo desde un valor máximo <span class="math inline">\(v_{MAX}=A\omega\)</span> hasta el valor mínimo <span class="math inline">\(-v_{MAX}\)</span>, pero lo hace desafasada <span class="math inline">\(\pi/2\)</span> respecto de la posición. En efecto, cuando el muelle está estirado, la masa se para (<span class="math inline">\(v=0\)</span>) e inicia su movimiento ascendente (velocidad negativa). Cuando pasa por la posición de equilibrio, la velocidad es máxima y continúa su ascenso a velocidad negativa pero decreciente en valor absoluto. Cuando el muelle está comprimido, la masa se vuelve a frenar (<span class="math inline">\(v=0\)</span>) e inicia el descenso (velocidad positiva). En resumen, cuando <span class="math inline">\(x\)</span> es máxima en valor absoluto, entonces la velocidad es cero y viceversa.</p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img3.png">
+      <img alt="" src="figuras/img3.png" width="50%"/>
+    </a>
+    </div>
+</div>
+
+
+
+
+</table></center>
+<center><table>
+<tbody>
+
+<tr class="even">
+<td align="center"><span class="math inline">\(X=A\)</span></td>
+<td align="center"><span class="math inline">\(v=0\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(A>x>0\)</span></td>
+<td align="center"><span class="math inline">\(v<0\)</span> creciente en valor absoluto</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x=0\)</span></td>
+<td align="center"><span class="math inline">\(v=-v_{MAX}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(0>x>-A\)</span></td>
+<td align="center"><span class="math inline">\(v<0\)</span> decreciente en valor absoluto</td>
+
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x=-A\)</span></td>
+<td align="center"><span class="math inline">\(v=0\)</span></td>
+
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(-A < x < 0\) </td>
+<td align="center"><span class="math inline">\(v>0\)</span> creciente en valor absoluto</td>
+
+</tr>
+</tbody>
+</table></center>
+
+
+<p>Este caso particular nos ha servido para entender las características principales del M.A.S. Fijémosnos ahora en el instante incial del movimiento, es decir, <span class="math inline">\(t=0\)</span>. Si observamos de nuevo la gráfica anterior, podemos ver que en el instante inicial <span class="math inline">\(t=0\)</span> el objeto parte de la posición de equilibrio <span class="math inline">\(x(0)=0\)</span> con la velocidad máxima <span class="math inline">\(v(0)=v_{MAX}\)</span>. Sin embargo, no todas las oscilaciones son así. Por ejemplo, podríamos haber iniciado el movimiento estirando o comprimiendo el muelle y soltándolo en el instante inicial. En este caso, las ecuaciones anteriores no son correctas porque no describen el movimiento real. Otra opción podría haber sido partir de una posición intermedia a una velocidad. Por tanto, cuando se estudia un movimiento es muy importante tener en cuenta las “condiciones&quot; iniciales del movimiento. Éstas se expresan indicando <span class="math inline">\(x(t=0)\)</span> (o bien, simplemente <span class="math inline">\(x(0)\)</span>) y <span class="math inline">\(v(t=0)\)</span> (o bien, simplemente <span class="math inline">\(v(0)\)</span>).</p>
+<p>Veamos cómo se actúa en este caso. En el ejemplo del muelle estirado que se suelta en el instante inicial, la velocidad inicial es <span class="math inline">\(v(0)=0\)</span>. Hemos visto en la tabla anterior que cuando la velocidad es nula, la masa tiende a volver a su posición de equilibrio. Esto quiere decir que la elongación es máxima: <span class="math inline">\(x(0)=A\)</span>. Esto se cumple si escribimos, para cualquier otro instante de tiempo: <span class="math display">\[x(t)=A\sin\left(\omega t+\pi/2\right)\]</span> Efectivamente, si sustituimos <span class="math inline">\(t=0\)</span> en la ecuación anterior, obtenemos <span class="math inline">\(x=A\)</span>. Para la velocidad, como es la derivada temporal de la posición: <span class="math display">\[v(t)=\frac{\mbox{d}x}{\mbox{d}t}=A\omega\cos\left(\omega t+\pi/2\right)\]</span></p>
+<p>Y como hemos llamado <span class="math inline">\(v_{MAX}\)</span> al valor máximo de la velocidad, entonces: <span class="math display">\[v(t)=A\omega\cos\left(\omega t+\pi/2\right)=v_{MAX}\cos\left(\omega t+\pi/2\right)\]</span> Y por tanto, <span class="math display">\[v_{MAX}=A\omega\]</span> Vemos, pues, que podemos utilizar la misma función trigonométrica, modificando ligeramente su argumento para incluir lo que llamamos <strong>fase inicial</strong>. La fase inicial en este ejemplo es <span class="math inline">\(\varphi_0=\pi/2\)</span>.</p>
+<p>En el caso completamente general, podemos decir que en <span class="math inline">\(t=0\)</span>, la fase del ciclo <span class="math inline">\(\varphi_0\)</span> no tiene por qué ser ni cero ni <span class="math inline">\(\pi/2\)</span>. Por ello, el modo más general de describir el M.A.S. es mediante:</p>
+<p>En la siguiente gráfica se muestran tres casos. La línea negra corresponde con el caso <span class="math inline">\(\varphi_0=0\)</span>, es decir, la masa parte de la posición de equilibrio. La línea verde es el caso <span class="math inline">\(\varphi_0=\pi/2\)</span>, es decir, la masa parte de la máxima elongación en reposo. La línea roja es el caso <span class="math inline">\(\varphi_0=\pi/4\)</span>, que es un caso intermedio: la masa parte de una distancia menor que la máxima con una velocidad menor que la velocidad máxima.</p>
+
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img4.png">
+      <img alt="" src="figuras/img4.png" width="50%"/>
+    </a>
+    </div>
+</div>
+
+<p>En un caso cualquiera, para poder determinar la posición y velocidad en cualquier instante, tendremos en cuenta que:</p>
+<ul>
+<li><p><span class="math inline">\(x(t=0)=A\sin\left(\varphi_0\right)\)</span></p></li>
+<li><p><span class="math inline">\(v(t=0)=A\omega\cos\left(\varphi_0\right)\)</span></p></li>
+</ul>
+<p>Típicamente, si en un problema nos dan la frecuencia y la posición y velocidad iniciales, entonces, de las dos ecuaciones anteriores se obtiene la amplitud del movimiento y la fase inicial.</p>
+
+
+<article style="background-color:lightblue;border-color:blue">
+  <strong>EJEMPLO: Tenemos una oscilación de frecuencia <span class="math inline">\(w = 20rad/s\)</span> . Inicialmente, la masa se encuentra en  <span class="math inline">\(x = 1 m\)</span>
+respecto de la posición de equilibrio y con una velocidad de
+<span class="math inline">\(v = 20 m/s\)</span>. Encuentre la función que describe la posición
+y velocidad en cualquier instante.</strong>
+  <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+  <div id="sol-e3" style="display:none;">
+    <br>
+    Solución:
+    <br><br>
+    En general, sabemos que:
+
+    <span class="math display">\[x(t) = A \sin(wt + \varphi_0) = A \sin(20t+ \varphi_0)\]</span>
+    <span class="math display">\[v(t) = A w \cos(wt + \varphi_0) = 20 A \cos(20t+ \varphi_0)\]</span>
+
+    Nos dan los valores en el instante inicial:<br>
+
+    <span class="math inline">\(x(0) = 1 m = A \sin (\varphi_0)\)</span>.<br>
+    <span class="math inline">\(v(0) = 20 m/s = 20 A \cos (\varphi_0)\)</span>.<br>
+
+    De esta última ecuación:
+
+    <span class="math display">\[v(0)/20 = 20/20 = 1 = A \cos (\varphi_0)\]</span>
+
+    Y por tanto,
+
+    <span class="math display">\[\frac{x(0)}{v(0)/20} = \frac{A \sin(\varphi_0)}{A \cos(\varphi_0)} = tan(\varphi_0)\]</span>
+
+    Como <span class="math inline">\(\frac{x(0)}{v(0)/20} = 1\)</span>, entonces,
+
+    <span class="math display">\[\varphi_0 = \pi/4\]</span>
+
+    Además, <span class="math inline">\(x(0) = 1 m = A \sin (\varphi_0)\)</span>, por lo tanto
+
+    <span class="math display">\[\frac{x(0)}{\sin(\varphi_0)} = \sqrt{2}\]</span>
+
+    Finalmente:<br>
+    <span class="math inline">\(x(t) = \sqrt{2} \sin(20t + \pi/4) = 1,41 m \sin(20t+ \pi/4)\)</span>
+    <span class="math inline">\(v(t) = \sqrt{2} * 20 \cos(20t + \pi/4) = 28,3 m/s \cos(20t+ \pi/4)\)</span>
+
+  </div>
+</article>
+
+
+
+
+
+
+      <h2 id="ley-de-hooke">Ley de Hooke</h2>
+
+<p>Como ya se adelantó, un cuerpo oscila cuando sobre él actúa una fuerza recuperadora, es decir, una fuerza que se dirige siempre hacia una posición, que es la posición de equilibrio. Tomemos el caso de una masa sujeta a un muelle:</p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img5.png">
+      <img alt="" src="figuras/img5.png" width="50%"/>
+    </a>
+    </div>
+</div>
+<p>A medida que la partícula se desplaza hacia la derecha (segundo dibujo), el muelle se estira y por tanto ejerce una fuerza sobre la masa hacia la izquierda. En el tercer dibujo el muelle se opone a ser comprimido, por lo que la fuerza lleva el sentido positivo del eje x. Si situamos el origen de coordenadas en la posición de equilibrio, tal y como se muestra en esta figura, entonces la fuerza que ejerce el muelle es: <span class="math display">\[\vec{F}=-kx\hat{\imath}\]</span> siendo <span class="math inline">\(k\)</span> la “constante elástica del muelle&quot;. Esta es la denominada “ley de Hooke&quot;.</p>
+
+
+<article style="background-color:lightblue;border-color:blue">
+  <strong>EJEMPLO: Si tenemos un muelle de constante k = 20N/m,
+calcule la fuerza que ejerce sobre una masa m = 0,5
+kg, cuando ésta esté situada a 15 cm de la posición de
+equilibrio. >Con qué aceleración se mueve?</strong>
+
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img_ej1.png">
+      <img alt="" src="figuras/img_ej1.png" width="60%"/>
+    </a>
+    </div>
+</div>
+
+
+  <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+  <div id="sol-e4" style="display:none;">
+    <br>
+    Solución:
+    <br><br>
+
+    <span class="math inline">\(\vec{F}=-kx\hat{\imath}\)</span>, entonces:
+
+    <span class="math display">\[\vec{F}=-20 N/m x 0,15mî = -3 Nî\]</span>
+
+    Para calcular la aceleración a, utilizamos la segunda ley de
+Newton: <span class="math inline">\(\vec{F}=m\vec{a}\)</span>, por lo que
+
+<span class="math display">\[\vec{a}= \vec{F}/m = -\frac{3N}{0,5kg}î = -6 m/s^2\]</span>
+
+  </div>
+</article>
+
+<p>Como la única fuerza es la que ejerce el muelle, por la segunda ley de Newton: <span class="math display">\[\sum\vec{F}=-kx\hat{\imath}=m\frac{d^2x}{dt^2}\hat{\imath}\]</span> Cuando una masa está sometida a una fuerza de este tipo, entonces su posición viene descrita por un M.A.S. Es decir, <span class="math display">\[x(t)=A\cos\left(\omega t+\varphi_0\right)\]</span> Por lo tanto su velocidad será: <span class="math display">\[\vec{v}(t)=v_x(t)\hat{\imath}=\frac{dx}{dt}\hat{\imath}=-\omega A\sin\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> Y su aceleración: <span class="math display">\[\vec{a}(t)=\frac{d\vec{v}}{dt}=-\omega^2A\cos\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> En definitiva nos queda: <span class="math display">\[\sum\vec{F}=-kx\hat{\imath}=-kA\cos\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> <span class="math display">\[m\frac{d^2x}{dt^2}\hat{\imath}=-m\omega^2A\cos\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> E igualando: <span class="math display">\[-kA\cos\left(\omega t+\varphi_0\right)=-m\omega^2A\cos\left(\omega t+\varphi_0\right)\]</span> Por lo tanto: <span class="math display">\[\omega=\sqrt{\frac{k}{m}}\]</span></p>
+
+
+</section>
+
+
+<section>
+
+  <header>
+      <h1 id="muelle-vertical">El muelle vertical</h1>
+  </header>
+
+<p>Hemos visto que cuando sobre una masa actúa una fuerza del tipo <span class="math inline">\(\vec{F}=-kx\hat{\imath}\)</span>, siendo <span class="math inline">\(x\)</span> la distancia respecto de la posición de equilibrio, entonces el objeto realiza un movimiento armónico simple. Veamos que esto es válido también cuando además de esta fuerza, actúa otra constante.</p>
+<p>Un ejemplo es el muelle vertical. En este caso, además de la fuerza del muelle, actúa la fuerza gravitatoria. En la siguiente figura se esquematiza esta situación.</p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img6.png">
+      <img alt="" src="figuras/img6.png" width="50%"/>
+    </a>
+    </div>
+</div>
+<p>En el primer caso, el muelle no tiene ningún peso, por lo que su longitud es la longitud natural del muelle, <span class="math inline">\(l_0\)</span>. A continuación se suspende una masa <span class="math inline">\(m\)</span>. Como consecuencia, el muelle se alarga un poco hasta encontrar el equilibrio. En esta posición de equilibrio (segundo dibujo), la suma de fuerzas ha de ser nula: <span class="math display">\[\sum\vec{F}=\vec{F}_k+\vec{P}=0\]</span> Por lo tanto:<br />
+<span class="math inline">\(-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0\)</span>, es decir: <span class="math display">\[-k(l-l_0)+mg=0\]</span>,</p>
+<p>En el tercer dibujo, la elongación del muelle es mayor, por lo que la fuerza del muelle supera al peso y habrá una componente neta en dirección hacia arriba. En este caso, la elongación del muelle es <span class="math inline">\(l+y-l_0\)</span> por lo que la fuerza neta es: <span class="math display">\[\sum\vec{F}=\vec{F}_k+\vec{P}=-k(l-l_0+y)\hat{\jmath}+mg\hat{\jmath}\]</span> Reagrupando: <span class="math display">\[\sum\vec{F}=-ky\hat{\jmath}\underbrace{-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}}\]</span> El contenido dentro de la llave hemos visto que es nulo, por lo que: <span class="math display">\[\sum\vec{F}=-ky\hat{\jmath}\]</span> Y por la segunda ley de Newton: <span class="math display">\[\sum\vec{F}=m\vec{a}=-ky\hat{\jmath}\]</span> que se corresponde con la ley de Hooke. Es decir, cuando el muelle está en posición vertical, el objeto realiza un M.A.S. pero desde una posición de equilibrio diferente, en la que el muelle está algo deformado.</p>
+<p>Con esta situación tenemos un modo de calcular la constante de un muelle. Si colgamos una masa conocida y determinamos la elongación de equilibrio <span class="math inline">\(l-l_0\)</span>, la constante del muelle se determina a partir de: <span class="math display">\[-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0\]</span> Es decir, en el equilibrio la suma de fuerzas es 0. Y despejando la constante del muelle, podemos calcularla a partir de la siguiente ecuación:</p>
+
+
+
+</section>
+
+
+<section>
+
+  <header>
+      <h1 id="energia-del-oscilador-armonico-simple">Energía del oscilador armónico simple</h1>
+  </header>
+
+
+
+<p>El oscilador armónico tiene una energía mecánica dada por: <span class="math display">\[E_m=E_p+E_c\]</span> siendo <span class="math inline">\(E_c\)</span> la energía cinética de la masa y <span class="math inline">\(E_p\)</span> la energía potencial del muelle que tiene el muelle cuando está deformado. Esta energía viene dada por: <span class="math display">\[E_p=\frac{1}{2}kx^2\]</span> Como <span class="math display">\[x(t)=A\sin\left(\omega t+\varphi_0\right)\]</span> tendremos entonces que: <span class="math display">\[E_p=\frac{1}{2}kA^2\sin^2\left(\omega t+\varphi_0\right)\]</span> Fíjese que la energía potencial será máxima cuando el muelle esté totalmente estirado o comprimido, instantes en los que <span class="math inline">\(x=\pm A\)</span> y por lo tanto: <span class="math display">\[E_{p,max}=\frac{1}{2}kA^2\]</span></p>
+<p>Por otro lado, la masa en su movimiento tiene una energía cinética: <span class="math display">\[E_c=\frac{1}{2}mv^2\]</span> Como: <span class="math display">\[v(t)=\frac{dx}{dt}=\omega A\cos\left(\omega t+\varphi_0\right)\]</span> se obtiene que: <span class="math display">\[E_c=\frac{1}{2}m\omega^2A^2\cos^2\left(\omega t+\varphi_0\right)\]</span> Y dado que <span class="math inline">\(\omega=\sqrt{\frac{k}{m}}\)</span>, entonces: <span class="math display">\[E_c=\frac{1}{2}kA^2\cos^2\left(\omega t+\varphi_0\right)\]</span></p>
+<p>El valor máximo de la energía cinética será: <span class="math display">\[E_{c,max}=\frac{1}{2}kA^2\]</span></p>
+<p>Exactamente igual que el valor máximo de la energía potencial. Fíjese que en realidad estos valores de energía se alcanzan en instantes diferentes. En efecto, cuando la velocidad es máxima (y por tanto tambié la energía cinética), la posición es la de equilibrio (<span class="math inline">\(x=0\)</span>, ya que la velocidad y la posición están desfasados <span class="math inline">\(\pi/2\)</span>), y por tanto la energía potencial es nula. Igualmente, cuando la posición es máxima (y por tanto, la energía potencial), la velocidad es nula, y por tanto, la energía cinética es nula. Dicho de otro modo:</p>
+<p><strong>Cuando el muelle está totalmente estirado o comprimido, la energía potencial es máxima y la energía cinética nula, mientras que cuando el muelle no está deformado, la energía potencial es nula y la energía cinética máxima.</strong></p>
+<p>Esto se ilustra en la siguiente figura.</p>
+<p>La energía mecánica total será: <span class="math display">\[E_m=E_c+E_p=\frac{1}{2}kA^2\cos^2\left(\omega t+\varphi_0\right)+\frac{1}{2}kA^2\sin^2\left(\omega t+\varphi_0\right)\]</span></p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img7.png">
+      <img alt="" src="figuras/img7.png" width="50%"/>
+    </a>
+    </div>
+</div>
+<p> Y sacando factor común <span class="math inline">\(\frac{1}{2}kA^2\)</span>, tendremos <span class="math display">\[E_m=\frac{1}{2}kA^2\left[\cos^2\left(\omega t+\varphi_0\right)+\sin^2\left(\omega t+\varphi_0\right)\right]\]</span> Si tenemos en cuenta que <span class="math inline">\(\cos^2R+\sin^2R=1\)</span>, tendremos: <span class="math display">\[E_m=\frac{1}{2}kA^2\]</span></p>
+<p>Puede verse que aunque tanto la energía cinética como la energía potencial varían con el tiempo, la suma permanece constante, es decir,<br />
+</p>
+
+<blockquote style="background-color:lightyellow;border-color:yellow">
+  <p><strong> La energía mecánica de un oscilador armónico se conserva</strong></p>
+</blockquote>
+
+<p>De este modo, cuando la masa se aleja de la posición de equilibrio, empieza a frenarse, disminuye su energía cinética hasta que se para y retrocede. Al mismo tiempo, la energía potencial va aumentando hasta llegar a su valor máximo cuando la masa se ha parado.</p>
+
+
+</section>
+
+
+<section>
+
+  <header>
+      <h1 id="el-pendulo">El péndulo</h1>
+  </header>
+
+
+  <p>Imaginemos una cuerda de longitud <span class="math inline">\(L\)</span> fija en su extremo superior. Supongamos que es muy ligera. En el extremo inferior sujetamos un cuerpo de masa <span class="math inline">\(m\)</span>. En este sistema, las únicas fuerzas que actúan sobre dicho cuerpo son su peso y la tensión de cuerda. Mientras que la primera será siempre vertical, la segunda llevará la dirección de la cuerda.</p>
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/img8.png">
+        <img alt="" src="figuras/img8.png" width="50%"/>
+      </a>
+      </div>
+  </div>
+  <p>Por tanto, en el equilibrio, la cuerda estará en posición vertical, de modo que la tensión de la cuerda compensa el peso de dicho cuerpo. Si desplazamos la masa hacia la izquierda, tal y como se muestra en el segundo dibujo, entonces la tensión de la cuerda y el peso no llevarán la misma dirección. Si separamos el peso en componentes radial <span class="math display">\[P_1=P\cos\alpha\]</span> y tangencial <span class="math display">\[P_2=P\sin\alpha=P\frac{x}{L}\]</span> dado que la tensión de la cuerda tiene dirección radial, entonces sólo compensará a la componente <span class="math inline">\(P_1\)</span>, mientras que la componente tangencial del peso será la responsable del movimiento. Por lo tanto, el objeto se moverá en dirección tangencial, es decir, describiendo arcos.</p>
+  <p><span class="math display">\[\sum\vec{F}=\vec{P}_2=m\vec{a}\]</span> <span class="math display">\[P_2=-mg\frac{x}{L}=ma_t\]</span></p>
+  <p>En la siguiente figura se muestra un esquema: en un instante cualquiera, tendremos que la cuerda se ha desviado desde la vertical un ángulo <span class="math inline">\(\alpha\)</span>, de modo que el arco descrito <span class="math inline">\(s=L\alpha\)</span>.</p>
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/img9.png">
+        <img alt="" src="figuras/img9.png" width="50%"/>
+      </a>
+      </div>
+  </div>
+  <p>Si el ángulo <span class="math inline">\(\alpha\)</span> es pequeño, entonces el arco <span class="math inline">\(s\)</span> que describe el péndulo es prácticamente igual a <span class="math inline">\(x\)</span>, y por tanto el movimiento tiene lugar prácticamente en la horizontal, es decir,</p>
+  <p><span class="math display">\[a_t=\frac{d^2s}{dt^2}\approx\frac{d^2x}{dt^2}\]</span></p>
+  <p>Finalmente: <span class="math display">\[-m\frac{g}{L}x=m\frac{d^2x}{dt^2}\]</span> Esta ecuación es idéntica a la ecuación de la ley de Hooke, si hacemos la equivalencia <span class="math inline">\(k=mg/L\)</span>. Por lo tanto, siempre y cuando el ángulo sea pequeño, el péndulo realizará un movimiento armónico simple de frecuencia: <span class="math display">\[\omega=\sqrt{\frac{g}{L}}\]</span></p>
+  <p>La ecuación del movimiento será: <span class="math display">\[x(t)=A\sin\left(\omega t+\varphi_0\right)\]</span></p>
+  <p>Y su velocidad: <span class="math display">\[v(t)=\omega A\cos\left(\omega t+\varphi_0\right)\]</span> Fíjese que las características son las mismas que en el caso del muelle, pero con una diferencia: la frecuencia no depende de la masa. En efecto, esto podríamos haberlo deducido desde el principio: cuando la única fuerza externa es la fuerza gravitatoria, entonces la aceleración, la velocidad y la posición no dependen de la masa.</p>
+
+
+<h2 id="energía-del-péndulo">Energía del péndulo</h2>
+
+
+
+<p>Al igual que en el caso del muelle, la energía cinética será: <span class="math display">\[E_c=\frac{1}{2}m\omega^2A^2\cos^2\left(\omega t+\varphi_0\right)\]</span></p>
+<p>Pero ahora la energía potencial es energía potencial gravitatoria: <span class="math display">\[E_p=mgy\]</span> Para conocer <span class="math inline">\(y\)</span>, la altura que asciende el péndulo en cada instante desde la posición más baja, observemos el triángulo rectángulo de la siguiente figura:</p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/img10.png">
+      <img alt="" src="figuras/img10.png" width="50%"/>
+    </a>
+    </div>
+</div>
+<p><img src="figuras/teoria-pendulo-Pitagoras.png" alt="image" width="188" /></p>
+<p>De ahí, <span class="math display">\[L^2=(L-y)^2+x^2=L^2+y^2-2Ly+x^2=L^2+y^2-2Ly+x^2\]</span> Simplificando y sacando factor común <span class="math inline">\(y\)</span>: <span class="math display">\[0=y(y-2L)+x^2\]</span> Dado que el péndulo se desvía poco de la vertical, tendremos que <span class="math inline">\(y\)</span> es mucho más pequeño que <span class="math inline">\(2L\)</span>, por lo que el paréntesis en la igualdad anterior es aproximadamente: <span class="math display">\[y(y-2L)\approx -2Ly\]</span> Y por lo tanto <span class="math display">\[0=y(y-2L)+x^2\approx -2Ly+x^2\]</span> de donde: <span class="math display">\[y=\frac{x^2}{2L}\]</span> Teniendo en cuenta que <span class="math inline">\(x(t)\)</span> es un M.A.S., la energía potencial nos queda: <span class="math display">\[E_p=mgy=mg\frac{x^2}{2L}=\frac{1}{2}m\frac{g}{L}A^2\sin^2\left(\omega t+\varphi_0\right)\]</span> Finalmente, como <span class="math inline">\(\omega=\sqrt{\frac{g}{L}}\)</span>, <span class="math display">\[E_p=\frac{1}{2}m\omega^2A^2\sin^2\left(\omega t+\varphi_0\right)\]</span></p>
+<p>Observamos que las características son las mismas que en el caso del muelle. La única diferencia estriba en el valor de la frecuencia <span class="math inline">\(\omega\)</span>. Por tanto, la energía potencial y cinética se comportan igual que en aquel caso. Además, la energía mecánica: <span class="math display">\[E_m=E_p+E_c=\frac{1}{2}m\omega^2A^2\left[\sin^2\left(\omega t+\varphi_0\right)+\cos^2\left(\omega t+\varphi_0\right)\right]\]</span> Y como <span class="math inline">\(\sin^2R+\cos^2R=1\)</span>, <span class="math display">\[E_m=E_p+E_c=\frac{1}{2}m\omega^2A^2=\frac{mg}{2L}A^2\]</span> Y se conserva durante el movimiento del péndulo.</p>
+<p>Tomemos el caso de un péndulo que parte del reposo con un cierto ángulo inicial. Este caso es idéntico al caso del muelle que se estira y se suelta. la ecuación del movimiento viene dada por: <span class="math display">\[x(t)=A\sin\left(\sqrt{\frac{g}{L}}t+\pi/2\right)\]</span> siendo <span class="math inline">\(A=x(0)\)</span>. Es decir, si se suelta el péndulo, éste nunca rebasará la posición inicial, ya que esto significaría aumentar la energía potencial por encima del máximo y por tanto, no se cumpliría el principio de conservación de la energía mecánica.</p>
+<p>En el siguiente vídeo se muestra este caso: al profesor Walter Lewin no le importa jugarse su integridad física, puesto que está seguro de que el péndulo, si no le alcanza al principio, no le alcanzará nunca.</p>
+
+</section>
+
+<br><br><br>
+
+<a href="oscilaciones-1.html">Ejercicios de vibraciones</a><br><br>
+<a href="oscilaciones-2.html">Ejercicios de Ley de Hooke</a>
+
+<br><br><br>
+
+<script type="text/javascript" language="javascript">
+  function show(str, obj){
+    document.getElementById(obj).innerHTML = str;
+    //MathJax.Hub.Typeset();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+  }
+  function show2(divID) {
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+      if(sol.style.display == "none"){
+        sol.style.display = "block";
+      }else{
+        sol.style.display = "none";
+      }
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+  }
+</script>
+
+
+
+</body>
+</html>

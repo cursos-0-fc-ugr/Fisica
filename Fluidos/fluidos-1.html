@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="header">
+  <h1 class="title">EJERCICIOS DE DENSIDAD</h1>
+</div>
+
+<br><br><br>
+
+<a href="fluidos_teoría.html">Volver a teoría</a>
+
+<br><br>
+
+<ol>
+<li><article style="background-color:lightred;border-color:red"><p>Un trozo de cuarzo de masa 26 g ocupa un volumen de 10 cm<span class="math inline">\(^3\)</span>. ¿Cuál es su densidad en g/cm<span class="math inline">\(^3\)</span>?<br />
+
+  <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+  <div id="sol-e1" style="display:none;">
+
+SOLUCIÓN: <span class="math display">\[d=\frac{m}{V}=\frac{26\mbox{ g}}{10\mbox{ cm}^3}=2.6\mbox{ g/cm}^3\]</span></p></article></li>
+<li><article style="background-color:lightred;border-color:red"><p>Si ahora partimos la pieza en dos trozos iguales. ¿Cuál será ahora su densidad?<br />
+
+  <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+  <div id="sol-e2" style="display:none;">
+
+SOLUCIÓN: La misma. La densidad no depende del volumen escogido.</p></article></li>
+<li><article style="background-color:lightred;border-color:red"><p>¿Y si la pieza fuese de mármol?<br />
+
+  <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+  <div id="sol-e3" style="display:none;">
+
+SOLUCIÓN: La misma. Si el volumen y la masa son iguales, entonces la densidad <span class="math inline">\(d=m/V\)</span> también.</p></article></li>
+<li><article style="background-color:lightred;border-color:red"><p>Calcular la densidad de 37 g de aire encerrado en un globo esférico de radio 2 dm. Expresar el resultado en kg/m<span class="math inline">\(^3\)</span> y g/ml.<br />
+
+  <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+  <div id="sol-e4" style="display:none;">
+
+SOLUCIÓN: Necesitamos calcular primero el volumen en m<span class="math inline">\(^3\)</span> y en ml (= cm<span class="math inline">\(^3\)</span>):<br />
+<span class="math display">\[V=\frac{4}{3}\pi R^3\]</span> <span class="math display">\[V(\mbox{m}^3)=\frac{4}{3}\pi \left(0.2\mbox{ m}\right)^3=0.0335\mbox{ m}^3\]</span> <span class="math display">\[V(\mbox{ml})=\frac{4}{3}\pi \left(20\mbox{ cm}\right)^3=33.5\times 10^3\mbox{ ml}\]</span> Con lo cual, la densidad: <span class="math display">\[d(\mbox{kg/m}^3)=\frac{m(\mbox{kg})}{V(\mbox{m}^3)}=\frac{0.037\mbox{ kg}}{0.0335\mbox{ m}^3}= 1.1\mbox{ kg/m}^3\]</span> <span class="math display">\[d(\mbox{g/ml})=\frac{m(\mbox{g})}{V(\mbox{ml})}=\frac{37\mbox{ g}}{33.5\times 10^3\mbox{ ml}}= 0.0011\mbox{ g/ml}\]</span></p></article></li>
+</ol>
+
+<br><br><br>
+
+<a href="fluidos_teoría.html">Volver a teoría</a>
+
+<br><br>
+
+<script type="text/javascript" language="javascript">
+  function show(str, obj){
+    document.getElementById(obj).innerHTML = str;
+    //MathJax.Hub.Typeset();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+  }
+  function show2(divID) {
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+      if(sol.style.display == "none"){
+        sol.style.display = "block";
+      }else{
+        sol.style.display = "none";
+      }
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+  }
+</script>
+</body>
+</html>

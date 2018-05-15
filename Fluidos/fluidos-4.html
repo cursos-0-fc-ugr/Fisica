@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+
+  <div id="header">
+    <h1 class="title">EJERCICIOS DE PRINCIPIO DE ARQUIMEDES Y PRINCIPIO DE PASCAL</h1>
+  </div>
+
+  <br><br><br>
+
+  <a href="fluidos_teoría.html">Volver a teoría</a>
+
+  <br><br>
+
+<h2>El principio de Arquímedes</h2>
+<ol>
+<li><article style="background-color:lightred;border-color:red">
+  <strong>Cuando se infla un globo, se debe hacer una presión extra para compensar la fuerza elástica de la goma, que tiende a desinflarlo. Por ello, la presión dentro ha de ser mayor que fuera. Como resultado, la densidad dentro del globo es mayor.
+<p>Pesamos un globo de 2 dm de radio (considérelo esférico) y la balanza nos indica 13.37 g. Si el globo desinflado tiene una masa de 10 g, calcule:</p>
+<ol>
+<li><p>El aumento de densidad del aire en el interior del globo.</p></li>
+<li><p>La masa de aire en el interior.</p></li>
+</ol>
+</strong>
+
+<button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+  <div id="sol-e1" style="display:none;">
+
+<p>SOLUCIÓN:<br />
+</p>
+<ol>
+<li><p>Hay que tener en cuenta que la masa real <span class="math inline">\(m\)</span> no es la marcada por la balanza, ya que sobre el globo actúan dos fuerzas, el peso y el empuje debido al aire circundante, tal y como se muestra en el siguiente esquema.</p>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob4-empuje-1.png">
+        <img alt="" src="figuras/prob4-empuje-1.png" width="40%"/>
+      </a>
+      </div>
+  </div>
+
+
+<p>Por lo tanto, si llamamos <span class="math inline">\(m_{ap}\)</span> a la masa marcada por la balanza, la masa real del globo podemos obtenerla del balance de fuerzas: <span class="math display">\[P-E=m_{ap}g\]</span> siendo <span class="math inline">\(P\)</span> el peso real del globo y <span class="math inline">\(E\)</span> el empuje.<br />
+<span class="math inline">\(P=mg\)</span>, siendo <span class="math inline">\(m\)</span> la masa real del globo.<br />
+<span class="math inline">\(E=m&#39;g=Vdg\)</span>, siendo <span class="math inline">\(m&#39;\)</span> la masa del aire circundante desalojado, <span class="math inline">\(d\)</span> su densidad y <span class="math inline">\(V\)</span> el volumen desalojado, es decir, el volumen del globo,<br />
+<span class="math inline">\(V=\frac{4}{3}\pi R^3=\frac{4}{3}\pi (0.2\mbox{ m})^3=0.0335\)</span> m<span class="math inline">\(^3\)</span>.<br />
+Por lo tanto: <span class="math display">\[mg-Vdg=m_{ap}g\]</span> De aquí se obtiene: <span class="math display">\[m=m_{ap}+Vd\]</span> Por lo tanto: <span class="math display">\[m=13.37\times 10^{-3}\mbox{ kg}+0.0335\mbox{ m}^3\times 1\mbox{ kg/m}^3\]</span> <span class="math display">\[m_{real}= 0.0469\mbox{kg}\]</span> De esta masa, 10 g corresponden al globo y el resto es el aire en el interior: <span class="math display">\[m_{aire}=0.0369\mbox{ kg}=36.9\mbox{ g}\]</span></p></li>
+<li><p>La densidad será: <span class="math display">\[d=\frac{m_{aire}}{V}=\frac{0.0369\mbox{ g}}{0.0335\mbox{ m}^3}\]</span> <span class="math display">\[d=1.1\mbox{ kg/m}^3\]</span></p></li>
+</ol></li></div>
+</article>
+
+
+<li><article style="background-color:lightred;border-color:red">
+  <strong><p>Un iceberg tiene una masa de 20<span class="math inline">\(\times 10^6\)</span> kg. Si la densidad el hielo es 0.92 g/ml y la del agua salada 1.03 g/ml, calcular:</p>
+<ol>
+<li><p>El volumen del iceberg.</p></li>
+<li><p>La proporción de dicho volumen que permanece sumergido.</p></li>
+</ol>
+</strong>
+
+<button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+  <div id="sol-e2" style="display:none;">
+<p>SOLUCIÓN:<br />
+</p>
+<ol>
+<li><p>El volumen del iceberg será <span class="math inline">\(V_{ice}=\frac{m}{d}\)</span>, donde <span class="math inline">\(m\)</span> es la masa del iceberg y <span class="math inline">\(d\)</span> la densidad del hielo, <span class="math inline">\(d=0.92\)</span> g/ml<span class="math inline">\(=920\)</span> kg/m<span class="math inline">\(^3\)</span>. Por tanto: <span class="math display">\[V_{ice}=\frac{20\times 10^9\mbox{ kg}}{920\mbox{ kg/m}^3}=21740\mbox{ m}^3\]</span></p></li>
+<li><p>Para que flote, el balance de fuerzas ha de ser cero. Las fuerzas que actúan sobre todo el iceberg son el peso hacia abajo y el empuje hacia arriba. El peso será: <span class="math display">\[P=mg\]</span> Mientras que el empuje será el peso del agua desalojada <strong>SÓLO</strong> por la parte sumergida, <span class="math inline">\(V_s\)</span>: <span class="math display">\[E=V_sd_{mar}g\]</span> siendo <span class="math inline">\(d_{mar}\)</span> la densidad del agua salada, 1.03 g/ml<span class="math inline">\(=1030\)</span> kg/m<span class="math inline">\(^3\)</span>. El balance de fuerzas será <span class="math inline">\(P-E=0\)</span>, por tanto, <span class="math display">\[mg-V_sd_{mar}g=0\]</span> de donde: <span class="math display">\[V_s=\frac{m}{d_{mar}}\]</span> Sustituyendo: <span class="math display">\[V_s=\frac{20\times 10^6\mbox{ kg}}{1030\mbox{ kg/m}^3}=19420\mbox{ m}^3\]</span> es decir, un <span class="math inline">\(\frac{V_s}{V}=90\)</span>% del total de su volumen está sumergido bajo el agua.</p></li>
+</ol></div>
+</article></li>
+
+
+<li><article style="background-color:lightred;border-color:red">
+
+  <strong><p>El peso de una corona en el aire es 56 N. La misma corona sumergida en agua pesa 52 N. ¿Cuál es la densidad de la corona?<br /></strong>
+
+    <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+      <div id="sol-e3" style="display:none;">
+
+SOLUCIÓN:<br />
+Para poder encontrar la solución, tenemos que tener en cuenta que la densidad es: <span class="math display">\[d=\frac{m}{V}\]</span> siendo <span class="math inline">\(m\)</span> la masa de la corona y <span class="math inline">\(V\)</span> su volumen. Dado que nos dan el peso real de la corona, <span class="math inline">\(P=56\)</span> N, podemos calcular su masa: <span class="math display">\[m=\frac{P}{g}\]</span> Por otro lado, para calcular el volumen haremos uso del segundo dato que nos dan: el peso aparente dentro del agua <span class="math inline">\(P_{ap}=52\)</span> N. Del siguiente esquema de fuerzas, es claro que el peso aparente es menor que el peso real debido al empuje:</p>
+
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/prob4-corona.png">
+      <img alt="" src="figuras/prob4-corona.png" width="40%"/>
+    </a>
+    </div>
+</div>
+
+<p><span class="math display">\[P_{ap}=P-E\]</span> Por lo tanto, conocemos el empuje: <span class="math inline">\(E=P-P_{ap}\)</span>. Dado que éste es el peso del agua desalojada, podemos obtener de ahí el volumen desalojado, es decir, el volumen de la corona: <span class="math display">\[E=Vd_{agua}g\]</span> Junto con la ecuación anterior, podemos entonces calcular el volumen como: <span class="math display">\[V=\frac{P-P_{ap}}{d_{agua}g}\]</span> Y finalmente, la densidad de la corona será: <span class="math display">\[d=\frac{m}{V}=\frac{\frac{P}{g}}{\frac{P-P_{ap}}{d_{agua}g}}\]</span> es decir, <span class="math display">\[d=d_{agua}\frac{P}{P-P_{ap}}=1000\mbox{ kg/m}^3\frac{56\mbox{ N}}{56\mbox{ N}-52\mbox{ N}}=14\times 10^3\mbox{ kg/m}^3\]</span></p>
+<p><strong>Principio de Pascal</strong></p>
+</div>
+</article>
+</li>
+
+
+
+<h2>El experimento de Pascal</h2>
+
+
+
+
+<li><article style="background-color:lightred;border-color:red"><strong>En el siglo VXII, Pascal realizó el experimento indicado en la figura. Se llenó con agua un barril de vino al que conectó un tubo largo. Tras añadir suficiente cantidad de agua por el tubo, el barril reventó. Si el radio de la tapa del barril era de 20 cm y la altura del agua en el tubo era de 12 m, calcule la fuerza neta ejercida sobre la tapa.</p>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob4-barril.png">
+        <img alt="" src="figuras/prob4-barril.png" width="40%"/>
+      </a>
+      </div>
+  </div>
+
+</strong>
+
+<button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+  <div id="sol-e4" style="display:none;">
+
+<p>SOLUCIÓN:<br />
+Lo primero es hacer un esquema del barril descrito. Es fundamental identificar todas las variables del problema y en particular, todos los elementos que ejercen fuerza sobre la tapa.</p>
+
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/prob4-barril_y_esquema.png">
+      <img alt="" src="figuras/prob4-barril_y_esquema.png" width="40%"/>
+    </a>
+    </div>
+</div>
+
+<p>No olvidemos que en definitiva, la presión es una fuerza por unidad de superficie, así que sobre la tapa la fuerza neta será las fuerzas de presión de TODOS los fluidos en contacto con ella, concretamente:</p>
+<ol>
+<li><p>El agua en el interior ejerce fuerzas de presión sobre las paredes y sobre la tapa. Esto es <span class="math inline">\(F_2=P_{sup}S\)</span></p></li>
+<li><p>El aire en el exterior ejerce también una fuerza puesto que está en contacto con la tapa. Esto es <span class="math inline">\(F_1=P_{atm}S\)</span></p></li>
+</ol>
+<p>siendo el área <span class="math inline">\(S=\pi R^2\)</span>. La presión en el interior del tanque viene dada por: <span class="math display">\[P_{sup}=P_0+dgh\]</span> siendo <span class="math inline">\(P_0=P_{atm}\)</span>, puesto que el extremo del tubo está en contacto con la atmósfera.</p>
+<p>La fuerza neta será: <span class="math display">\[F=F_2-F_1=(P_{sup}-P_{atm})S=dghS\]</span> que es una fuerza hacia arriba. Puede verse que la fuerza neta no importa el grosor del tubo. A medida que se va llenando el tubo, la presión en la superficie del agua en el tonel aumenta y por tanto la fuerza que ejerce el líquido sobre la tapa y sobre los laterales. Con los datos del problema obtenemos: <span class="math display">\[S=\pi(0.2)^2=0.126\mbox{ m}^2\]</span> <span class="math display">\[F=1000\times 9.8\times 12\times 0.126= 14800\mbox{ N}\]</span></p>
+</ol>
+</div>
+</article>
+</li>
+
+<br><br><br>
+
+<a href="fluidos_teoría.html">Volver a teoría</a>
+
+<br><br>
+
+<script type="text/javascript" language="javascript">
+  function show(str, obj){
+    document.getElementById(obj).innerHTML = str;
+    //MathJax.Hub.Typeset();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+  }
+  function show2(divID) {
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+      if(sol.style.display == "none"){
+        sol.style.display = "block";
+      }else{
+        sol.style.display = "none";
+      }
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+  }
+</script>
+
+</body>
+</html>

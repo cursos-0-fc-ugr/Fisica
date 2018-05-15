@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+
+  <div id="header">
+    <h1 class="title">EJERCICIOS DE PRESIÓN</h1>
+  </div>
+
+  <br><br><br>
+
+  <a href="fluidos_teoría.html">Volver a teoría</a>
+
+  <br><br>
+
+<ol>
+<li><article style="background-color:lightred;border-color:red"><strong>En la siguiente figura, la presión atmosférica es <span class="math inline">\(P_{atm}\)</span>=0.8 atm. Calcule la altura que ascenderá el mercurio en un barómetro.</strong>
+<button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+  <div id="sol-e1" style="display:none;">
+    <p>SOLUCIÓN: <br />
+Si hacemos un esquema:</p>
+
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/prob3-barometro-esquema.png">
+      <img alt="" src="figuras/prob3-barometro-esquema.png" width="30%"/>
+    </a>
+    </div>
+</div>
+
+<p>En A’: <span class="math inline">\(P(A&#39;)=\)</span> 0.8 atm=<span class="math inline">\(0.8\times 101300\)</span> Pa/atm=81040 Pa. Como A y A’ están a la misma altura, la presión es la misma. Por otro lado, la presión en B es 0, ya que no hay ningún fluido encima. Por lo tanto: <span class="math display">\[P(A&#39;)=P_B+dgH=dgH\]</span> Como el fluido es mercurio, <span class="math inline">\(d=13500\)</span> kg/m<span class="math inline">\(^3\)</span>. Despejando <span class="math inline">\(H\)</span>: <span class="math display">\[H=\frac{P(A&#39;)}{dg}=\frac{81040\mbox{ Pa}}{13600\mbox{ jg/m}^3\times 9.8\mbox{ m/s}^2}=0.608\mbox{ m}\]</span> El mercurio asciende 608 mm por la columna.</p></article></li>
+<li><article style="background-color:lightred;border-color:red">
+  <strong>A partir de la siguiente figura, calcule la presión atmosférica. Exprese el resultado en torr.</strong>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob3-barometro-2.png">
+        <img alt="" src="figuras/prob3-barometro-2.png" width="30%"/>
+      </a>
+      </div>
+  </div>
+
+<button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+  <div id="sol-e2" style="display:none;">
+    <p>SOLUCIÓN: <br />
+Dado que me lo piden en torr, por definición, esto es justamente la altura en mm de la columna de mercurio, es decir: <span class="math display">\[P_{atm}=810\mbox{ torr}\]</span> Lo podemos comprobar así: hacemos un esquema similar al ejercicio anterior. Entonces: <span class="math display">\[P_{atm}=P(A)=P_B+dgH=dgH\]</span> <span class="math display">\[P_{atm}=13600\mbox{ kg/m}^3\times 9.8\mbox{ m/s}^2\times 0.81\mbox{ m}=107957\mbox{ Pa}\]</span> Y pasando a torr: <span class="math display">\[P_{atm}=107957\mbox{ Pa}\times \frac{101300\mbox{ Pa}}{760\mbox{ torr}}=810\mbox{ torr}\]</span></p></article></li>
+<li><article style="background-color:lightred;border-color:red"><p>La presión atmosférica en un punto dado son 980 mbar. Exprese este valor en atm, Pa, torr y dinas/cm<span class="math inline">\(^2\)</span>.</p>
+<button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+  <div id="sol-e3" style="display:none;">
+    <p>SOLUCIÓN: <br />
+1 mbar = 100 Pa, entonces<br />
+<br><center><span class="math inline">\(P=980\)</span> mbar <span class="math inline">\(\times 100\)</span> Pa/mbar <span class="math inline">\(=0.98\times 10^5\)</span> Pa.<br /></center>
+1 atm = 101300 Pa/atm, entonces<br />
+<br><center><span class="math inline">\(P=0.98\times 10^5\)</span> Pa<span class="math inline">\(\times\frac{1}{101300}\)</span> atm/Pa<span class="math inline">\(=0.97\)</span> atm.<br /></center>
+1 atm = 760 torr/atm, entonces<br />
+<br><center><span class="math inline">\(P=0.97\)</span> atm<span class="math inline">\(\times 760\)</span> torr/atm<span class="math inline">\(=735\)</span> torr.<br /></center>
+1 Pa = 10 dinas/cm<span class="math inline">\(^2\)</span>, entonces<br />
+<br><center><span class="math inline">\(P=0.98\times 10^5\)</span> Pa<span class="math inline">\(\times 10\frac{\mbox{dinas/cm}^2}{\mbox{Pa}}=0.98\times 10^6\)</span> dinas/cm<span class="math inline">\(^2\)</span>.<br /></center>
+</p></article></li>
+<li><article style="background-color:lightred;border-color:red">
+  <strong>El tanque de la figura lleva adosado un tubo por el que asciende el fluido. El líquido es agua. a) Calcular la presión en el fondo. b) ¿Cuál será la altura del agua en el tanque?</strong>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob3-tanque_abierto.png">
+        <img alt="" src="figuras/prob3-tanque_abierto.png" width="40%"/>
+      </a>
+      </div>
+  </div>
+
+<button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+  <div id="sol-e4" style="display:none;">
+    <p>SOLUCIÓN: <br />
+</p>
+<ol>
+<li ><p>Para ello aplicamos la ecuación de la hidrostática: <span class="math display">\[P=P_0+dgh\]</span> siendo <span class="math inline">\(P_0\)</span> la presión en la superficie libre del tubo. Como el tubo está abierto, <span class="math inline">\(P_0=P_{atm}=101300\)</span> Pa. Por lo tanto: <span class="math display">\[P=101300\mbox{ Pa}+1000\mbox{ kg/m}^3\times 9.8\mbox{ m/s}^2\times 1.5\mbox{ m}=116000\mbox{ Pa}\]</span></p></li >
+<li ><p>Dado que la presión no depende A una misma altura, la presión ha de ser la misma, tanto en el tanque como en el tubo. En particular esto es así en la superficie libre, donde tendremos la presión atmosférica, tanto en el tanque como en el tubo. Por lo que la superficie libre ha de estar en la misma altura: 1. 5 m.</p></li >
+</ol></article></li>
+<li><article style="background-color:lightred;border-color:red"><strong>¿Y si en vez del tanque tengo un recipiente como el de las siguientes figuras? ¿Cambia la presión?</strong>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob3-tanques-formas.png">
+        <img alt="" src="figuras/prob3-tanques-formas.png" width="40%"/>
+      </a>
+      </div>
+  </div>
+
+  <button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+    <div id="sol-e5" style="display:none;">
+<p>SOLUCIÓN: <br> La presión varía sólo con la altura, independientemente de la forma del recipiente. Por tanto, la altura ha de ser siempre la misma.</p></article></li>
+<li><article style="background-color:lightred;border-color:red"><strong>Ahora el tanque está cerrado. Esto quiere decir que no está en contacto con la atmósfera. En las condiciones del dibujo, calcula la presión en la superficie libre del tanque (punto A).</strong>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob3-tanque_cerrado.png">
+        <img alt="" src="figuras/prob3-tanque_cerrado.png" width="40%"/>
+      </a>
+      </div>
+  </div>
+
+<button id="e6" class="button"  onclick="show2('e6');">Solución</button>
+  <div id="sol-e6" style="display:none;">
+    <p>SOLUCIÓN: <br />
+Para encontrar la solución, buscamos un punto donde conozcamos la presión. Como el tubo está abierto, la presión en su parte superior será la presión atmosférica: <span class="math display">\[P_0=101300\mbox{ Pa}\]</span></p>
+
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/prob3-tanque_cerrado-sol.png">
+      <img alt="" src="figuras/prob3-tanque_cerrado-sol.png" width="40%"/>
+    </a>
+    </div>
+</div>
+
+<p>Y como la presión sólo depende de la diferencia de altura: <span class="math display">\[P_A=P_0+dgH=101300\mbox{ Pa}+1000\mbox{ kg/m}^3\times 9.8\mbox{ m/s}^2\times 1\mbox{ m}=111100\mbox{ Pa}\]</span></p></article></li>
+<li><article style="background-color:lightred;border-color:red"><strong>De las siguientes figuras, indica cuáles son imposibles y explica la razón.</strong>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob3-tanques.png">
+        <img alt="" src="figuras/prob3-tanques.png" width="40%"/>
+      </a>
+      </div>
+  </div>
+
+<button id="e7" class="button"  onclick="show2('e7');">Solución</button>
+  <div id="sol-e7" style="display:none;">
+    <p>SOLUCIÓN: <br />
+A: Sí es posible, ya que el tanque está cerrado, la presión en la cámara de aire no tiene por qué ser la misma que la exterior. En particular, en este caso la presión es menor, ya que la superficie está más alta.<br />
+B: No es posible. El tanque está abierto y por tanto la presión ha de ser la presión atmosférica. Como la presión sólo depende de la altura, y dado que la presión es la misma en las superficies libres en el tubo y en el tanque, la altura debe ser también la misma.<br />
+C: No es posible, por los mismos argumentos que en B. Da igual la forma que tenga el tubo o su anchura.<br />
+D: Sí es posible. La presión es igual en ambas superficies libres, tanque y tubo, por lo tanto también su altura. No importa la forma o anchura del tubo.<br />
+E: No es posible. Da igual dónde esté conectado el tubo. Siempre que los líquidos en tubo y tanque estén conectados, la presión sólo será función de la profundidad desde la superficie libre.<br />
+F: Sí es posible. La superficie libre está a la misma altura, como se corresponde con el hecho de que la presión es la misma.</p></article></li>
+</ol>
+
+<br><br><br>
+
+<a href="fluidos_teoría.html">Volver a teoría</a>
+
+<br><br>
+
+<script type="text/javascript" language="javascript">
+  function show(str, obj){
+    document.getElementById(obj).innerHTML = str;
+    //MathJax.Hub.Typeset();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+  }
+  function show2(divID) {
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+      if(sol.style.display == "none"){
+        sol.style.display = "block";
+      }else{
+        sol.style.display = "none";
+      }
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+  }
+</script>
+</body>
+</html>

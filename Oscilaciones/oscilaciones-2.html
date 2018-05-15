@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+        <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="--otro.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+
+  <div id="header">
+    <h1 class="title">EJERCICIOS DE LEY DE HOOKE</h1>
+  </div>
+
+
+  <a href="oscilaciones_teoría.html">Volver a teoría</a>
+
+
+<ol>
+
+
+<li>
+<article style="background-color:lightred;border-color:red">
+  <p>Una masa de 50 g está sujeta a un muelle horizontal de constante <span class="math inline">\(k=25\)</span> N/m. Calcule el periodo de las oscilaciones.</p>
+
+
+  <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+  <div id="sol-e1" style="display:none;">
+
+    <p>SOLUCIÓN:<br />
+Dado que <span class="math inline">\(\omega=\sqrt{\frac{k}{m}}\)</span>, por lo que <span class="math display">\[T=\frac{2\pi}{\omega}=\frac{2\pi}{\sqrt{\frac{k}{m}}}=\frac{2\pi}{\sqrt{\frac{25\mbox{ N/m}}{0.05\mbox{ kg}}}}=\boxed{0.28\mbox{ s}}\]</span></p>
+</article>
+</li>
+
+
+
+<li>
+  <article style="background-color:lightred;border-color:red">
+    <p>Se hace oscilar horizontalmente una masa de 0.5 kg sujeta a un muelle de constante desconocida. Se observa que en un minuto realiza 45 oscilaciones. Calcule la constante del muelle.</p>
+
+
+    <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+    <div id="sol-e2" style="display:none;">
+
+      <p>SOLUCIÓN:<br />
+Para conocer la constante del muelle, recuérdese que la periodicidad de las oscilaciones está relacionada con dicha constante y con la masa oscilante a través de <span class="math inline">\(\omega=\sqrt{\frac{k}{m}}\)</span>, por lo que <span class="math display">\[k=m\omega^2\]</span> Para calcular la frecuencia angular, fíjese que nos dan el número de oscilaciones <span class="math inline">\(N=45\)</span> en un minuto, podemos calcular el número de oscilaciones en 1 s, es decir, la frecuencia, como: <span class="math display">\[f=\frac{45}{60\mbox{ s}}=0.75\mbox{ Hz}\]</span> Por lo que <span class="math inline">\(\omega=2\pi f=1.5\pi\)</span> rad/s y finalmente: <span class="math display">\[k=0.5(1.5\pi)^2=\boxed{11.1\mbox{ N/m}}\]</span></p>
+</article>
+</li>
+
+
+<li>
+<article style="background-color:lightred;border-color:red">
+  <p>Una masa de 20 g está en el origen y sujeta a un muelle horizontal de constante <span class="math inline">\(k=10\)</span> N/m. En el instante inicial se coloca la masa en la posición <span class="math inline">\(x=-20\)</span> cm y se suelta. Escriba la ecuación que describe la posición en función del tiempo, la velocidad, la aceleración, la fuerza ejercida por el muelle, su energía potencial, la energía cinética de la masa y la energía mecánica. Represente gráficamente cada una de estas funciones.</p>
+
+  <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+  <div id="sol-e3" style="display:none;">
+
+
+<p>SOLUCIÓN:<br />
+Con las características de este sistema, la frecuencia angular será: <span class="math display">\[\omega=\sqrt{\frac{k}{m}}=\sqrt{\frac{10}{0.02}}=22.4\mbox{ rad/s}\]</span> Y el periodo será: <span class="math display">\[T=\frac{2\pi}{\omega}=\frac{2\pi}{22.4\mbox{ rad/s}}=0.28\mbox{ s}\]</span> La forma general del movimiento es: <span class="math display">\[x(t)=A\sin\left(\omega t+\varphi_0\right)\]</span> Y su velocidad: <span class="math display">\[v(t)=\omega A\cos\left(\omega t+\varphi_0\right)\]</span> En el instante inicial se suelta la masa, luego en ese instante su velocidad es cero: <span class="math display">\[v(0)=\omega A\cos\left(\varphi_0\right)=0\]</span> Dado que ni <span class="math inline">\(\omega\)</span> ni <span class="math inline">\(A\)</span> pueden ser cero (pues en ese caso no habría movimiento), entonces, <span class="math display">\[\cos\left(\varphi_0\right)=0\]</span> Lo cual se cumple siempre y cuando <span class="math display">\[\varphi_0=\pi/2\]</span> Por otro lado, me dicen que en el instante inicial la partícula está en <span class="math inline">\(x(0)=0.2\)</span> m, luego: <span class="math display">\[x(0)=A\sin\left(\varphi_0\right)=A\sin\left(\pi/2\right)=A=0.2\mbox{ m}\]</span></p>
+<p>Por lo tanto: <span class="math display">\[\boxed{x(t)=0.2\mbox{ m}\sin\left(22.4 t+\pi/2\right)}\]</span> La amplitud de la velocidad es <span class="math inline">\(\omega A=22.4\mbox{ rad/s}\times 0.2\mbox{ m}=4.48\)</span> m/s, y por lo tanto <span class="math display">\[\boxed{v(t)=4.48\mbox{ m/s}\cos\left(22.4 t+\pi/2\right)}\]</span></p>
+<p>La aceleración la podemos calcular como la derivada temporal de la velocidad: <span class="math display">\[a(t)=\frac{dv}{dt}=-\omega^2A\sin\left(\omega t+\varphi_0\right)\]</span> Y la amplitud de la aceleración será <span class="math inline">\(\omega^2A=(22.4\mbox{ rad/s})^20.2\mbox{ m}=100.4\)</span>m/s<span class="math inline">\(^2\)</span>, por lo que: <span class="math display">\[a(t)=\frac{dv}{dt}=\boxed{-100.4\mbox{ m/s}^2\sin\left(22.4 t+\pi/2\right)}\]</span></p>
+<p>Para calcular la fuerza podemos hacer uso de dos ecuaciones: <span class="math display">\[F=-kx(t)=-kA\sin\left(\omega t+\varphi_0\right)\]</span> o bien <span class="math display">\[F(t)=ma(t)=-m\omega^2A\sin\left(\omega t+\varphi_0\right)\]</span> lo cual da el mismo resultado. La amplitud de la fuerza será <span class="math inline">\(m\omega^2A=kA=2\)</span>N, por lo que <span class="math display">\[\boxed{F(t)=-2\mbox{ N}\sin\left(22.4 t+\pi/2\right)}\]</span></p>
+<p>La energía potencial viene dada por <span class="math inline">\(E_p(t)=\frac{1}{2}kx(t)^2\)</span>, por lo que <span class="math display">\[E_p(t)=\frac{1}{2}k\bigl[A\sin\left(\omega t+\varphi_0\right)\bigr]^2\]</span> Sustituyendo los valores calculados: <span class="math display">\[\boxed{E_p(t)=0.2\mbox{ J}\sin^2\left(22.4 t+\pi/2\right)}\]</span></p>
+<p>La energía cinética se calcula como <span class="math inline">\(E_c(t)=\frac{1}{2}mv(t)^2\)</span>, por lo que: <span class="math display">\[E_c(t)=\frac{1}{2}m\omega^2\bigl[A\cos\left(\omega t+\varphi_0\right)\bigr]^2\]</span> Sustituyendo: <span class="math display">\[\boxed{E_c(t)=0.2\mbox{ J}\cos^2\left(22.4 t+\pi/2\right)}\]</span></p>
+<p>La energía mecánica <span class="math inline">\(E_m=E_p+E_c\)</span> se conserva y por lo tanto no varía con el tiempo. Podemos utilizar cualquier instante para calcularlo, por ejemplo el instante en que <span class="math inline">\(E_c=0\)</span>. Vimos que en ese instante, la energía potencial es máxima, por lo tanto <span class="math inline">\(E_p=0.2\)</span> J. Entonces, <span class="math display">\[\boxed{E_m=0.2\mbox{ J}}\]</span></p>
+<p>Fíjese que dado que las amplitudes de la energía potencial y cinética son iguales. Esto debe ser así, ya que la energía mecánica coincide con el máximo de cualquiera de ellas.</p>
+<p>En la siguiente figura se representan estas funciones:</p>
+
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/prob2-graph.png">
+      <img alt="" src="figuras/prob2-graph.png" width="40%"/>
+    </a>
+    </div>
+</div>
+
+
+</article>
+</li>
+
+
+<li>
+<article style="background-color:lightred;border-color:red">
+  <p>Una masa de 20 g está en el origen y sujeta a un muelle horizontal de constante <span class="math inline">\(k=10\)</span> N/m. En el instante inicial se coloca la masa en la posición de equilibrio y se le imprime una velocidad de 4.48 m/s. Escriba la ecuación que describe la posición en función del tiempo, la velocidad, la aceleración, la fuerza ejercida por el muelle, su energía potencial, la energía cinética de la masa y la energía mecánica. Represente gráficamente cada una de estas funciones.</p>
+
+  <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+  <div id="sol-e4" style="display:none;">
+
+<p>SOLUCIÓN:<br />
+Este problema cambia respecto al anterior puesto que las condiciones iniciales (posición y velocidad iniciales) son diferentes.</p>
+<p>Con las características de este sistema, la frecuencia angular será igual que en el problema anterior: <span class="math display">\[\omega=\sqrt{\frac{k}{m}}=\sqrt{\frac{10}{0.02}}=22.4\mbox{ rad/s}\]</span> Y el periodo será: <span class="math display">\[T=\frac{2\pi}{\omega}=\frac{2\pi}{22.4\mbox{ rad/s}}=0.28\mbox{ s}\]</span> La forma general del movimiento es: <span class="math display">\[x(t)=A\sin\left(\omega t+\varphi_0\right)\]</span> Y su velocidad: <span class="math display">\[v(t)=\omega A\cos\left(\omega t+\varphi_0\right)\]</span> Pero en este caso, en el instante inicial la masa está en la posición de equilibrio. Esto quiere decir que: <span class="math display">\[x(0)=0=A\sin\left(\varphi_0\right)\]</span> Condición que se cumple si <span class="math inline">\(\varphi_0=0\)</span>. Por otro lado, la velocidad inicial es 4.48 m/s, es decir <span class="math display">\[v(0)=4.48=\omega A\cos\left(\varphi_0\right)=\omega A\]</span> donde se ha utilizado que <span class="math inline">\(\cos\left(\varphi_0\right)=\cos 0=1\)</span>. Como <span class="math inline">\(\omega=22.4\)</span> rad/s, entonces: <span class="math display">\[A=\frac{v(0)}{\omega}=\frac{4.48\mbox{ m/s}}{22.4\mbox{ rad/s}}=0.2\mbox{ m}\]</span> Por lo tanto: <span class="math display">\[\boxed{x(t)=0.2\mbox{ m}\sin\left(22.4 t\right)}\]</span> <span class="math display">\[\boxed{v(t)=4.48\mbox{ m/s}\cos\left(22.4 t\right)}\]</span> Vemos que la solución es la misma, pero con una fase inicial <span class="math inline">\(\varphi_0=0\)</span>, por lo que: <span class="math display">\[\boxed{a(t)=-100.4\mbox{ m/s}^2\sin\left(22.4 t\right)}\]</span> <span class="math display">\[\boxed{F(t)=-2\mbox{ N}\sin\left(22.4 t\right)}\]</span> <span class="math display">\[\boxed{E_p(t)=0.2\mbox{ J}\sin^2\left(22.4 t\right)}\]</span> <span class="math display">\[\boxed{E_c(t)=0.2\mbox{ J}\cos^2\left(22.4 t\right)}\]</span> <span class="math display">\[\boxed{E_m=0.2\mbox{ J}}\]</span></p>
+<p>En la siguiente figura se representan estas funciones:</p>
+<div class="sbsimage">
+    <div class="imgContainerEnd">
+      <a data-fancybox="" href="figuras/prob2-graph2.png">
+      <img alt="" src="figuras/prob2-graph2.png" width="40%"/>
+    </a>
+    </div>
+</div>
+
+
+<p>En estas figuras vemos que la diferencia fundamental es el momento del ciclo en el que comienza la oscilación.</p>
+</article>
+</li>
+
+<li>
+<article style="background-color:lightred;border-color:red">
+<p>A un resorte, cuya longitud natural, cuando está colgado de un punto fijo es de 25 cm, se le cuelga una masa de 80 g, unida a su extremo libre. Cuando esta masa está en posición de equilibrio, la longitud del resorte es de 33 cm. La masa se impulsa 8 cm hacia abajo y se suelta. Calcule:</p>
+<ol>
+<li><p>La constante recuperadora del muelle.</p></li>
+<li><p>Las expresiones de la elongación y de la velocidad, tomando como referencia la posición de equilibrio de resorte-masa.</p></li>
+<li><p>Los valores máximos de las magnitudes anteriores.</p></li>
+</ol>
+
+<button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+<div id="sol-e5" style="display:none;">
+
+<p>SOLUCIÓN:<br />
+</p>
+<ul>
+<li><p>En este caso, el sistema está en posición vertical, por lo que además de la fuerza del muelle tendremos la fuerza gravitatoria. Esto se muestra en el siguiente esquema:</p>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob2-muelle_vertical.png">
+        <img alt="" src="figuras/prob2-muelle_vertical.png" width="40%"/>
+      </a>
+      </div>
+  </div>
+
+<p>En el segundo dibujo, el objeto está en equilibrio. Por lo tanto, <span class="math display">\[\sum\vec{F}=0\]</span> Las fuerzas que actúan son la fuerza del muelle <span class="math inline">\(\vec{F}_k=-k(l-l_0)\hat{\jmath}\)</span> y la fuerza gravitatoria <span class="math inline">\(\vec{P}=mg\hat{\jmath}\)</span>. Por lo tanto, <span class="math display">\[-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0\]</span> de donde: <span class="math display">\[k=\frac{mg}{l-l_0}=\frac{0.08\mbox{ kg}\times 9.8\mbox{m/s}^2}{0.33\mbox{ m}-0.25\mbox{ m}}=\boxed{9.8\mbox{ N/m}}\]</span></p></li>
+<li><p>El objeto realizará oscilaciones en torno a la posición de equilibrio. Si llamamos <span class="math inline">\(y\)</span> la distancia desde esta posición, tal y como se muestra en la figura anterior, entonces: <span class="math display">\[y(t)=A\sin\left(\omega t+\varphi_0\right)\]</span> siendo <span class="math display">\[\omega=\sqrt{\frac{k}{m}}=\sqrt{\frac{9.8\mbox{ N/m}}{0.08\mbox{ kg}}}=11.1\mbox{ rad/s}\]</span> Para conocer <span class="math inline">\(A\)</span> y <span class="math inline">\(\varphi_0\)</span> tenemos que tener en cuenta, al igual que en los ejercicios anteriores, las condiciones en el instante inicial. Como <span class="math inline">\(y(0)=0.33\)</span> m y <span class="math inline">\(v(0)=0\)</span>. Con esto tendremos: <span class="math display">\[A=y(0)=0.33\mbox{ m}\]</span> <span class="math display">\[\varphi_0=\pi/2\mbox{ rad}\]</span> Por lo cual: <span class="math display">\[\boxed{y(t)=0.33\mbox{ m}\sin\left(11.1 t+\pi/2\right)}\]</span> Fíjese que en efecto, <span class="math inline">\(y(t=0)=0.33\mbox{ m}\sin\left(\pi/2\right)=0.33\)</span> m.</p>
+<p>Para la velocidad: <span class="math display">\[v(t)=\frac{dy}{dt}=\omega A\cos\left(\omega t+\varphi_0\right)\]</span> Y sustituyendo: <span class="math display">\[\boxed{v(t)=3.66\mbox{ m/s}\cos\left(11.1 t+\pi/2\right)}\]</span> Fíjese que en efecto, <span class="math inline">\(v(t=0)=0.33\mbox{ m}\cos\left(\pi/2\right)=0\)</span>.</p></li>
+<li><p>Dado que el valor máximo tanto del seno como del coseno es 1, los valores máximos de la posición y la velocidad serán: <span class="math display">\[\boxed{x_{max}=A=0.33\mbox{ m}}\]</span> <span class="math display">\[\boxed{v_{max}=\omega A=3.66\mbox{ m/s}}\]</span></p></li>
+</ul>
+</article>
+</li>
+
+<li>
+<article style="background-color:lightred;border-color:red">
+<p>El péndulo de la figura tiene una longitud de 3 m. Inicialmente se separa de la vertical un ángulo <span class="math inline">\(3^\circ\)</span> y se suelta. Calcular:</p>
+<ol>
+<li><p>El periodo de las oscilaciones.</p></li>
+<li><p>El máximo desplazamiento desde la vertical.</p></li>
+<li><p>El tiempo que tarda en pasar por la vertical.</p></li>
+<li><p>La posición en el instante <span class="math inline">\(t=2\)</span>s.</p></li>
+<li><p>La dirección del movimiento en ese mismo instante.</p></li>
+</ol>
+
+<button id="e6" class="button"  onclick="show2('e6');">Solución</button>
+<div id="sol-e6" style="display:none;">
+
+<p>SOLUCIÓN:</p>
+<ol>
+<li><p>Dadas las características, como el ángulo es pequeño, el péndulo realiza un M.A.S. con frecuencia: <span class="math display">\[\omega=\sqrt{\frac{g}{L}}\]</span> Y por lo tanto, el periodo: <span class="math display">\[T=2\pi\frac{1}{\omega}=2\pi\sqrt{\frac{L}{g}}\]</span> Sustituyendo los valores del problema: <span class="math display">\[T=2\pi\sqrt{\frac{3\mbox{ m}}{9.8\mbox{ m/s}^2}}=\boxed{3.48\mbox{ s}}\]</span></p></li>
+<li><p>Dado que la energía cinética inicial es nula, la energía mecánica es únicamente energía potencial, es decir, en esta posición, la energía potencial es máxima. Por tanto, el desplazamiento es también máximo. En la siguiente figura se muestra un esquema de la posición inicial.</p>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob2-pendulo1.png">
+        <img alt="" src="figuras/prob2-pendulo1.png" width="50%"/>
+      </a>
+      </div>
+  </div>
+
+<p>La coordenada <span class="math inline">\(x_{max}\)</span> será: <span class="math display">\[x_{max}=L\sin\alpha=L\sin 3^\circ=\boxed{0.157\mbox{ m}}\]</span></p></li>
+<li><p>Dado que parte de la máxima distancia, el paso por la vertical es <span class="math inline">\(1/4\)</span> de ciclo, por tanto tardará <span class="math inline">\(T/4\)</span>: <span class="math display">\[t=\frac{T}{4}=\frac{3.48}{4}=\boxed{0.869\mbox{ s}}\]</span></p></li>
+<li><p>Para calcularlo utilicemos: <span class="math display">\[x(t)=A\sin\left(\omega t+\varphi_0\right)\]</span> Dadas las condiciones del problema, como parte del reposo: <span class="math display">\[v(0)=\omega A\cos\left(\omega\times 0+\varphi_0\right)=0\]</span> Por lo que <span class="math inline">\(\varphi=\pi/2\)</span>. La posición en el instante inicial queda: <span class="math display">\[x(0)=L\sin\alpha=A\sin\pi/2=A\]</span> Por lo que: <span class="math display">\[A=x(0)=0.157\mbox{ m}\]</span> Y la frecuencia angular de las oscilaciones: <span class="math display">\[\omega=\sqrt{\frac{g}{L}}=\sqrt{\frac{9.8\mbox{ m/s}^2}{3\mbox{ m}}}=1.81\mbox{ rad/s}\]</span> Así, la posición en cualquier instante la podemos calcular con la función: <span class="math display">\[x(t)=0.157\mbox{ m}\sin\left(1.81 t+\pi/2\right)\]</span> En particular, la posición a los 2 s: <span class="math display">\[x(t-2\mbox{ s})=0.157\mbox{ m}\sin\left(1.81\times 2+\pi/2\right)=\boxed{-0.139\mbox{ m}}\]</span> Es decir, a la izquierda de la vertical, como se muestra en la figura:</p>
+
+  <div class="sbsimage">
+      <div class="imgContainerEnd">
+        <a data-fancybox="" href="figuras/prob2-pendulo2.png">
+        <img alt="" src="figuras/prob2-pendulo2.png" width="50%"/>
+      </a>
+      </div>
+  </div>
+
+<li><p>La velocidad será: <span class="math display">\[v(t)=\omega A \cos\left(\omega t+\varphi_0\right)=0.284\mbox{ m/s}\cos\left(1.81 t+\pi/2\right)\]</span> Y sustituyendo <span class="math inline">\(t=2\)</span> s, <span class="math display">\[v(t)=0.284\mbox{ m/s}\cos\left(1.81\times 2+\pi/2\right)=\boxed{0.131\mbox{ m/s}}\]</span> Es decir, se mueve en la dirección positiva del eje x.</p></li>
+</ol>
+</article>
+</li>
+
+<li>
+<article style="background-color:lightred;border-color:red">
+<p>Se separa un péndulo 3<span class="math inline">\(^\circ\)</span> de la vertical y se observa que el periodo de las oscilaciones es <span class="math inline">\(T=2.5\)</span> s. Si ahora se separa el péndulo 6<span class="math inline">\(^\circ\)</span>, ¿cuál será el periodo de estas oscilaciones?</p>
+
+
+<button id="e7" class="button"  onclick="show2('e7');">Solución</button>
+<div id="sol-e7" style="display:none;">
+
+  <p>SOLUCIÓN:<br />
+Dado que en ambos casos la desviación de la vertical es pequeña, el periodo vendrá dado por <span class="math inline">\(T=2\pi\sqrt{\frac{L}{g}}\)</span>, independiente de la amplitud de las oscilaciones. Por tanto, el periodo será el mismo: <span class="math inline">\(T=2.5\)</span> s.</p>
+</article>
+</li>
+
+
+</ol>
+
+  <a href="oscilaciones_teoría.html">Volver a teoría</a>
+
+  
+<script type="text/javascript" language="javascript">
+  function show(str, obj){
+    document.getElementById(obj).innerHTML = str;
+    //MathJax.Hub.Typeset();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+  }
+  function show2(divID) {
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+      if(sol.style.display == "none"){
+        sol.style.display = "block";
+      }else{
+        sol.style.display = "none";
+      }
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+  }
+</script>
+
+</body>
+</html>
