@@ -28,7 +28,7 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 
 2.3. [Ejercicios de Presión](Fluidos/fluidos-3.html)
 
-2.4. [Ejercicios de Principio de Arqúimedes y Principio de Pascal](Fluidos/fluidos-4.html)
+2.4. [Ejercicios de Principio de Arquímedes y Principio de Pascal](Fluidos/fluidos-4.html)
 
 ### Tema 1: Ondas
 3. [Ondas](Ondas/ondas.html)
