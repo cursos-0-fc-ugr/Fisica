@@ -14,8 +14,8 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 
 ### Tema 1: Oscilaciones
 1. [Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
-  1.1. [Ejercicios de vibraciones](Oscilaciones/oscilaciones-1.html)
-  1.2. [Ejercicios de Ley de Hooke](Oscilaciones/oscilaciones-2.html)
+1.1. [Ejercicios de vibraciones](Oscilaciones/oscilaciones-1.html)
+1.2. [Ejercicios de Ley de Hooke](Oscilaciones/oscilaciones-2.html)
 
 ### Tema 1: Fluidos
 2. [Fluidos](Fluidos/fluidos_teoría.html)
