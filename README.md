@@ -13,14 +13,14 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 ## Contenidos
 
 ### Oscilaciones
-1. [Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
+  1. [Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
 
 1.1. [Ejercicios de vibraciones](Oscilaciones/oscilaciones-1.html)
 
 1.2. [Ejercicios de Ley de Hooke](Oscilaciones/oscilaciones-2.html)
 
 ### Fluidos
-2. [Fluidos](Fluidos/fluidos_teoría.html)
+  2. [Fluidos](Fluidos/fluidos_teoría.html)
 
 2.1. [Ejercicios de Densidad](Fluidos/fluidos-1.html)
 
@@ -31,7 +31,7 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 2.4. [Ejercicios de Principio de Arquímedes y Principio de Pascal](Fluidos/fluidos-4.html)
 
 ### Ondas
-3. [Ondas](Ondas/ondas.html)
+  3. [Ondas](Ondas/ondas.html)
 
 3.1. [Ejercicios de Pulso y Velocidad](Ondas/ondas-1.html)
 
