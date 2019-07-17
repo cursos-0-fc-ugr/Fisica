@@ -11,9 +11,25 @@ Este repositorio se puede visitar en [GitHub pages](https://cursos-0-fc-ugr.gith
 Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](https://github.com/cursos-0-fc-ugr/Fisica/issues) de este repositorio.
 
 ## Contenidos
+### La Física y sus métodos: magnitudes físicas y su medida
+1.1. [Teoría de magnitudes físicas y su medida](Magnitudes/magnitudes_teoría.html)
+
+  * [Ejercicios de repaso](Magnitudes/magnitudes-1.html)
+  
+  * [Problemas](Magnitudes/magnitudes-2.html)
+
+### Vectores. Análisis Vectorial
+2.1. [Teoría de Análisis Vectorial](Vectores/vectores_teoría.html)
+
+  * [Test de repaso](Vectores/vectores-test.html)
+
+### Cinemática
+3.1. [Teoría de Cinemática](Cinematica/cinematica_teoría.html)
+
+  * [Test de repaso](Cinematica/cinematica-test.html)
 
 ### Fluidos
-1.1. [Teoría de Fluidos](Fluidos/fluidos_teoría.html)
+4.1. [Teoría de Fluidos](Fluidos/fluidos_teoría.html)
 
   * [Ejercicios de Densidad](Fluidos/fluidos-1.html)
 
@@ -24,7 +40,7 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
   * [Ejercicios de Principio de Arquímedes y Principio de Pascal](Fluidos/fluidos-4.html)
 
 ### Oscilaciones
-2.1. [Teoría de Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
+5.1. [Teoría de Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
 
   * [Ejercicios de vibraciones](Oscilaciones/oscilaciones-1.html)
 
@@ -32,7 +48,7 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 
 
 ### Ondas
-3.1. [Teoría de Ondas](Ondas/ondas.html)
+6.1. [Teoría de Ondas](Ondas/ondas.html)
 
   * [Ejercicios de Pulso y Velocidad](Ondas/ondas-1.html)
 
