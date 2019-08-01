@@ -28,8 +28,8 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 
   * [Test de repaso](Cinematica/cinematica-test.html)
   
-### Leyes del movimiento de Newton
-4.1. [Teoría de leyes de Newton](Newton/newton_teoría.html)
+### Dinámica: Leyes del movimiento de Newton
+4.1. [Teoría de Dinámica](Newton/newton_teoría.html)
 
   * [Test de repaso](Newton/newton-test.html)
 
