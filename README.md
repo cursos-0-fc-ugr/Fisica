@@ -27,9 +27,14 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 3.1. [Teoría de Cinemática](Cinematica/cinematica_teoría.html)
 
   * [Test de repaso](Cinematica/cinematica-test.html)
+  
+### Leyes del movimiento de Newton
+4.1. [Teoría de leyes de Newton](Newton/newton_teoría.html)
+
+  * [Test de repaso](Newton/newton-test.html)
 
 ### Fluidos
-4.1. [Teoría de Fluidos](Fluidos/fluidos_teoría.html)
+5.1. [Teoría de Fluidos](Fluidos/fluidos_teoría.html)
 
   * [Ejercicios de Densidad](Fluidos/fluidos-1.html)
 
@@ -40,7 +45,7 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
   * [Ejercicios de Principio de Arquímedes y Principio de Pascal](Fluidos/fluidos-4.html)
 
 ### Oscilaciones
-5.1. [Teoría de Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
+6.1. [Teoría de Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
 
   * [Ejercicios de vibraciones](Oscilaciones/oscilaciones-1.html)
 
@@ -48,7 +53,7 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 
 
 ### Ondas
-6.1. [Teoría de Ondas](Ondas/ondas.html)
+7.1. [Teoría de Ondas](Ondas/ondas.html)
 
   * [Ejercicios de Pulso y Velocidad](Ondas/ondas-1.html)
 
