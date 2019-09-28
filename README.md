@@ -58,5 +58,25 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
   * [Ejercicios de Pulso y Velocidad](Ondas/ondas-1.html)
 
   * [Ejercicios de Ondas](Ondas/ondas-2.html)
+  
+  
+### Electrostática
+8.1. [Teoría de Electrostática](Electrostática/electrostatica_teoría.html) 
+
+
+### Electromagnetismo
+8.1. [Teoría de Electromagnetismo](Electromagnetismo/electromagnetismo_teoría.html) 
+
+ * [Cálculo de fuerzas magnéticas 1](Electromagnetismo/electromagnetismo-1.html)
+ 
+ * [Cálculo de fuerzas magnéticas 2](Electromagnetismo/electromagnetismo-2.html)
+ 
+ * [Cálculo de fuerzas magnéticas 3](Electromagnetismo/electromagnetismo-3.html)
+ 
+ * [Ejercicios de campos creados por cargas en movimiento](Electromagnetismo/electromagnetismo-4.html)
+ 
+ * [Ejercicios de inducción electromagnética](Electromagnetismo/electromagnetismo-5.html)
+ 
+ * [Test de repaso](Electromagnetismo/electromagnetismo-test.html)
 
 Estos contenidos forman parte del FIDO "IMPLEMENTACIÓN DE CURSOS CERO EN LA PLATAFORMA PRADO2 PARA LAS TITULACIONES DE LA FACULTAD DE CIENCIAS" de la Convocatoria de Proyectos de Innovación Docente y Buenas Prácticas del Plan FIDO UGR 2016-2018 (Universidad de Granada)
