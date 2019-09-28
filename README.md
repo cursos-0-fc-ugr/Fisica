@@ -65,7 +65,7 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
 
 
 ### Electromagnetismo
-8.1. [Teoría de Electromagnetismo](Electromagnetismo/electromagnetismo_teoría.html) 
+9.1. [Teoría de Electromagnetismo](Electromagnetismo/electromagnetismo_teoría.html) 
 
  * [Cálculo de fuerzas magnéticas 1](Electromagnetismo/electromagnetismo-1.html)
  
