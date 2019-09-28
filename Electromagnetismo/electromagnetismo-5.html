@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+    <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+<body>
+      <div id="header">
+            <h1 class="title">EJERCICIOS DE INDUCCIÓN ELECTROMAGNÉTICA</h1>
+      </div>
+     
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a><br><br>
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a>
+
+      <ol type="1">
+
+            <li><article style="background-color:lightred;border-color:red">
+
+                <strong><p>Una bobina está formada por <span class="math inline">\(N=200\)</span> espiras cuadradas de lado <span class="math inline">\(l=3\)</span> cm se sitúa en una región donde existe un campo magnético uniforme de <span class="math inline">\(B=0.3\)</span> T perpendicular a las espiras. Calcular el flujo magnético que circula por ellas.</p></strong>
+            
+                <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+                <div id="sol-e1" style="display:none;">
+                  
+                    <p>SOLUCIÓN:</p>
+
+                    <p>Las espiras son planas y el campo uniforme, luego <span class="math inline">\(\Phi=\int_S\vec{B}\cdot\mbox{d}\vec{S}=\vec{B}\cdot{S}\)</span>.
+                        Como las espiras son perpendiculares al campo, el vector superficie es paralelo a éste, y por tanto <span class="math inline">\(\vec{B}\cdot\vec{S}=BS\)</span>. El área total será el área de una espira multiplicado por el número total de espiras que tenemos:</p>
+                    <span class="math display">\[S=Nl^2\]</span>
+                    <span class="math display">\[\Phi=BS=BNl^2=0.3\mbox{ T}\cdot 200\cdot 0.03^2\mbox{ m}^2=0.054\mbox{ Wb}\]</span>
+                </div>
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">
+
+                <strong><p>Considere la situación de la figura.</p>
+                    <ol style="list-style-type: lower-alpha">
+                        <li><p>Dibuje el vector superficie.</p></li>
+                        <li><p>Calcule el flujo a través de la espira.</p></li>
+                    </ol>
+
+                    <div class="sbsimage">
+                        <div class="imgContainerEnd">
+                            <a data-fancybox="" href="figuras/ejercicios-flujo1.png">
+                            <img alt="" src="figuras/ejercicios-flujo1.png" width="20%"/>
+                            </a>
+                        </div>
+                    </div>
+                </strong>
+                
+                <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+                <div id="sol-e2" style="display:none;">
+                      
+                    <p>SOLUCIÓN:</p>
+
+                    <ol style="list-style-type: lower-alpha">
+                        <li><br>
+                            <div class="sbsimage">
+                                <div class="imgContainerEnd">
+                                    <a data-fancybox="" href="figuras/ejercicios-flujo1-sol.png">
+                                    <img alt="" src="figuras/ejercicios-flujo1-sol.png" width="20%"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Como la espira es plana y el campo uniforme:</p>
+                            <span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\cos (70^\circ)=0.0547\mbox{ Wb}\]</span>
+                        </li>
+                    </ol>
+    
+                </div>
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">
+            
+                <strong><p>Una espira cuadrada se encuentra en el seno de un campo magnético uniforme de módulo <span class="math inline">\(B=0.5\)</span> T tal y como se muestra en la figura. La espira tiene un lado que puede deslizarse sobre unas guías, de modo que mantiene dos lados de tamaño fijo <span class="math inline">\(l_1=1.2\)</span> m y los otros dos se van reduciendo de acuerdo con <span class="math inline">\(l_2=1.2\mbox{ m}-vt\)</span>, siendo <span class="math inline">\(v=0.2\)</span> m/s, el ritmo al que se desliza el lado móvil.</p>
+                    <ol style="list-style-type: lower-alpha">
+                        <li><p>Calcular el flujo a través del área sustentada por la espira.</p></li>
+                        <li><p>Calcular la fuerza electromotriz inducida sobre la espira.</p></li>
+                        <li><p>Dibujar la dirección que lleva la corriente por la espira.</p></li>
+                    </ol>
+                    <div class="sbsimage">
+                        <div class="imgContainerEnd">
+                            <a data-fancybox="" href="figuras/ejercicios-espira_movil.png">
+                            <img alt="" src="figuras/ejercicios-espira_movil.png" width="25%"/>
+                            </a>
+                        </div>
+                    </div>
+                </strong>
+
+                <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+                <div id="sol-e3" style="display:none;">
+                      
+                    <p>SOLUCIÓN:</p>
+
+                    <ol style="list-style-type: lower-alpha">
+                        <li>
+                            <p>Para calcular el flujo, primero necesito una dirección de la superficie. Escogemos la misma que la del campo magnético, como se muestra en la figura A. Entonces, el flujo será:</p>
+                            <span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\]</span>
+                            <p>donde <span class="math inline">\(S=l_1l_2=1.2(1.2-0.2t)\)</span> m<span class="math inline">\(^2\)</span>, por lo tanto:</p>
+                            <span class="math display">\[\Phi=0.5\mbox{ T}\times 1.2(1.2-0.2t)\mbox{ m}^2=(0.72-0.12t)\mbox{ Wb}\]</span>
+                        
+                            <div class="sbsimage">
+                                <div class="imgContainerEnd">
+                                    <a data-fancybox="" href="figuras/ejercicios-espira_movil-sol.png">
+                                    <img alt="" src="figuras/ejercicios-espira_movil-sol.png" width="30%"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p> Sigamos los pasos indicados en teoría. Definido el sentido del vector superficie, usamos la regla de la mano derecha para determinar el sentido positivo de la fuerza electromotriz, tal y como se muestra en la figura B. </p>
+                            <p>A continuación, utilizamos el flujo magnético calculado en el apartado anterior para calcular la fuerza electromotriz:</p>
+                            <span class="math display">\[\varepsilon=-\frac{\mbox{d}\Phi}{\mbox{d}t}=-\frac{\mbox{d}}{\mbox{d}t}(0.72-0.12t)\mbox{ Wb}=+0.12V\]</span>
+                        </li>
+                        <li>
+                            <p>Dado que se ha obtenido un valor positivo, esto quiere decir que el sentido escogido en la figura B es el sentido correcto de la fuerza electromotriz, y por tanto de la corriente.</p>
+                        </li>
+                    </ol>
+    
+                </div>
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">
+               
+                <strong><p>La misma espira del ejercicio anterior, pero ahora el lado móvil se mueve en dirección contraria a igual velocidad, de modo que <span class="math inline">\(l_1=1.2\)</span> m y <span class="math inline">\(l_2=vt\)</span>, siendo <span class="math inline">\(v=0.2\)</span> m/s. El campo es el mismo, <span class="math inline">\(B=0.5\)</span> T. ¿Cómo cambiaría el ejercicio anterior?</p></strong>
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/ejercicios-espira_movil2.png">
+                        <img alt="" src="figuras/ejercicios-espira_movil2.png" width="25%"/>
+                        </a>
+                    </div>
+                </div>
+
+                <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+                <div id="sol-e4" style="display:none;">
+                      
+                    <p>SOLUCIÓN:</p>
+
+                    <p>Intuitivamente, podríamos decir que dado que la superficie en este caso aumenta en vez de disminuir, también lo hace el flujo magnético y por tanto la ley de Faraday me dará el mismo valor pero cambiado de signo. Esto indica que la fuerza electromotriz y por tanto la corriente siguen la dirección opuesta. En detalle sería:</p>
+                    <p>Lo primero es escoger una dirección de la superficie. Escogemos la misma que la del campo magnético, como se muestra en la figura. Entonces, el flujo será el mismo que en el ejercicio anterior:</p>
+                    <span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\]</span>
+                    <p>donde <span class="math inline">\(S=l_1l_2=0.24t\)</span> m<span class="math inline">\(^2\)</span>, por lo tanto:</p>
+                    <span class="math display">\[\Phi=0.5\mbox{ T}\times 0.24t\mbox{ m}^2=0.12t\mbox{ Wb}\]</span>
+                
+                    <div class="sbsimage">
+                        <div class="imgContainerEnd">
+                            <a data-fancybox="" href="figuras/ejercicios-espira_movil2-sol.png">
+                            <img alt="" src="figuras/ejercicios-espira_movil2-sol.png" width="25%"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p>Definido el sentido del vector superficie, usamos la regla de la mano derecha para determinar el sentido positivo de la fuerza electromotriz, tal y como se muestra en la figura a la derecha en verde.</p>
+                    <p>A continuación, calculamos la fuerza electromotriz con la ley de Faraday:</p>
+                    <span class="math display">\[\varepsilon=-\frac{\mbox{d}\Phi}{\mbox{d}t}=-\frac{\mbox{d}}{\mbox{d}t}(0.12t)\mbox{ Wb}=-0.12V\]</span>
+                    <p>Efectivamente <span class="math inline">\(\varepsilon < 0\)</span>, por lo que la fuerza electromotriz y la corriente siguen el sentido indicado en la figura en amarillo.</p>
+                </div>
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">
+
+                <strong><p>Un solenoide está compuesto por <span class="math inline">\(N=300\)</span> espiras cuadradas de lado <span class="math inline">\(2.0\)</span> cm y gira en torno al eje vertical OZ con una frecuencia de 60 Hz en una región en la que existe un campo magnético uniforme <span class="math inline">\(\vec{B}=0.4\hat{\imath}\)</span> T (ver figura).</p>
+                    <ol style="list-style-type: lower-alpha">
+                        <li><p>¿Cuál es la fuerza electromotriz en cualquier instante de tiempo <span class="math inline">\(t\)</span>?</p></li>
+                        <li><p>¿Cuál es la máxima fuerza electromotriz?</p></li>
+                    </ol>
+    
+                    <div class="sbsimage">
+                        <div class="imgContainerEnd">
+                            <a data-fancybox="" href="figuras/ejercicios-bobina_girando.png">
+                            <img alt="" src="figuras/ejercicios-bobina_girando.png" width="20%"/>
+                            </a>
+                        </div>
+                    </div>
+                </strong>
+                    
+                <button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+                <div id="sol-e5" style="display:none;">
+                          
+                    <p>SOLUCIÓN:</p>
+    
+                    <ol style="list-style-type: lower-alpha">
+                        <li>
+                            <p>El primer paso es elegir el vector superficie. Dado que la espira está girando, la orientación cambia con el tiempo. El número de vueltas que realiza por segundo, es decir, la frecuencia <span class="math inline">\(f=60\)</span> Hz, multiplicado por el ángulo que corresponde a una vuelta, es decir <span class="math inline">\(2\pi\)</span> rad me dará el ángulo que gira por segundo <span class="math inline">\(\omega\)</span>. Esto multiplicado por el tiempo que está girando me da el ángulo <span class="math inline">\(\theta\)</span> con el eje OX: </p>
+                            <span class="math display">\[\theta=2\pi ft\]</span>
+                            <p>El área sustentada cada espira es <span class="math inline">\(S=l^2=4\cdot 10^{-4}\)</span> m<span class="math inline">\(^2\)</span>. Como hay un total de 300 espiras. <span class="math inline">\(S=0.12\)</span> m<span class="math inline">\(^2\)</span>. El vector superficie será:</p>
+                            <span class="math display">\[\vec{S}=0.12(\cos (2\pi  ft)\hat{\imath}+\sin (2\pi  ft)\hat{\jmath})\]</span>
+                            <p>El flujo será:</p>
+                            <span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\cos\theta=BS\cos (2\pi ft)\]</span>
+                            <p>Y con la ley de Faraday:</p>
+                            <span class="math display">\[\varepsilon=-\frac{\mbox{d}\Phi}{\mbox{d}t}=-\frac{\mbox{d}}{\mbox{d}t}(BS\cos (2\pi ft))=BS2\pi f\sin (2\pi ft)\]</span>
+                            <p>Y sustituyendo los datos</p>
+                            <span class="math display">\[\varepsilon=0.4\mbox{ T}\cdot 0.12\mbox{ m}^22\pi 60\mbox{ Hz}\sin (120\pi t)=18.09\mbox{ V}\sin (120\pi t)\]</span>
+                        </li>
+                        <li>
+                            <p>Como vemos, la fuerza electromotriz varía sinusoidalmente. Alcanzará el valor máximo en los instantes en el que <span class="math inline">\(\sin (120\pi t)\)</span> sea máximo. Dado que la función <i>seno</i> tiene como valor máximo 1, entonces, la fuerza electromotriz máxima será 18.09 V.</p>
+                        </li>
+                    </ol>
+        
+                    </div>
+                </article></li>
+      </ol>
+
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a><br><br>
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+      
+      <br><br>
+      
+      <script type="text/javascript" language="javascript">
+        function show(str, obj){
+          document.getElementById(obj).innerHTML = str;
+          //MathJax.Hub.Typeset();
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+        }
+        function show2(divID) {
+            var sol = document.getElementById("sol-"+divID);
+            var div = document.getElementById(divID);
+            if(sol.style.display == "none"){
+              sol.style.display = "block";
+            }else{
+              sol.style.display = "none";
+            }
+            if(div.innerHTML == "Solución"){
+              div.innerHTML = "Oculta solución";
+            }else{
+              div.innerHTML = "Solución";
+            }
+        }
+      </script>
+      
+</body>
+</html>

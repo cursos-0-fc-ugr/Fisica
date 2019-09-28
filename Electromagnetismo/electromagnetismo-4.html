@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+    <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+<body>
+      <div id="header">
+            <h1 class="title">EJERCICIOS DE CAMPOS CREADOS POR CARGAS EN MOVIMIENTO</h1>
+      </div>
+     
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a><br><br>
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a>
+
+      <ol type="1">
+
+            <li><article style="background-color:lightred;border-color:red">
+            
+                <strong><p>Una carga <span class="math inline">\(q=-2\mu\)</span>C situada inicialmente en el origen se dirige en el sentido positivo del eje OY con velocidad 2 m/s.</p>
+                    <ol style="list-style-type: lower-alpha">
+                        <li><p>Calcular el campo generado por dicha carga en el punto de coordenadas (1,1,0) en el instante inicial.</p></li>
+                        <li><p>Calcular el campo generado por la misma carga en el mismo punto 1 s después.</p></li>
+                    </ol>
+                </strong>
+
+                <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+                <div id="sol-e1" style="display:none;">
+                  
+                    <p>SOLUCIÓN:</p>
+                    
+                    <ol style="list-style-type: lower-alpha">
+                        <li>
+                            <p>Para calcular el campo magnético debemos usar la expresión:</p>
+                            <span class="math display">\[\vec{B}=\frac{\mu}{4\pi}\frac{q}{r^3}\vec{v}\times\vec{r}\]</span>
+                            <p>siendo <span class="math inline">\(\mu=4\pi\cdot 10^{-7}\)</span> N/A<span class="math inline">\(^2\)</span>, <span class="math inline">\(q=-2\times 10^{-6}\)</span> C y <span class="math inline">\(\vec{v}=2\hat{\jmath}\)</span> m/s. Finalmente <span class="math inline">\(\vec{r}\)</span> es el vector que comienza en la carga (cuya posición es <span class="math inline">\(\vec{r}_q\)</span>) y acaba en el punto de interés (de posición <span class="math inline">\(\vec{r}_P\)</span>). Este vector varía según la posición de la carga:</p>
+                            <span class="math display">\[\vec{r}=\vec{r}_P-\vec{r}_q\]</span>
+                            <p>En la figura A se muestra un esquema de la situación inicial. En este caso, <span class="math inline">\(\vec{r}_q=0\)</span>, y <span class="math inline">\(\vec{r}_P=(\hat{\imath}+\hat{\jmath})\)</span> m, por lo que</p>
+                            <span class="math display">\[\vec{r}=(\hat{\imath}+\hat{\jmath})\mbox{ m}\]</span>
+                            <p>y su módulo es <span class="math inline">\(r=\sqrt{2}\)</span>. Por lo tanto:</p>
+                            <span class="math display">\[\vec{B}=\frac{4\pi\cdot 10^{-7}\mbox{ N/A}^2}{4\pi}\frac{-2\times 10^{-6}\mbox{ C}}{(\sqrt{2})^3\mbox{ m}^3}2\hat{\jmath}\mbox{ m/s}\times(\hat{\imath}+\hat{\jmath})\mbox{ m}\]</span>
+                            <span class="math display">\[\vec{B}=\sqrt{2}\cdot 10^{-13}\hat{k}\mbox{ T}\]</span>
+                            <div class="sbsimage">
+                                <div class="imgContainerEnd">
+                                    <a data-fancybox="" href="figuras/ejercicios-BiotSavart_1.png">
+                                    <img alt="" src="figuras/ejercicios-BiotSavart_1.png" width="30%"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>1 segundo después nos encontraremos en la situación de la figura B, la carga se sitúa en un punto diferente: <span class="math inline">\(\vec{r}_q=\vec{v}t=2\hat{\jmath}\)</span> m, por lo tanto:</p>    
+                            <span class="math display">\[\vec{r}=\vec{r}_P-\vec{r}_q=\hat{\imath}-\hat{\jmath}\mbox{ m}\]</span>
+                            <p>Y el campo magnético será:</p>
+                            <span class="math display">\[\vec{B}=\frac{4\pi\cdot 10^{-7}\mbox{ N/A}^2}{4\pi}\frac{-2\times 10^{-6}\mbox{ C}}{(\sqrt{2})^3\mbox{ m}^3}2\hat{\jmath}\mbox{ m/s}\times(\hat{\imath}-\hat{\jmath})\mbox{ m}\]</span>
+                            <span class="math display">\[\vec{B}=\sqrt{2}\cdot 10^{-13}\hat{k}\mbox{ T}\]</span>
+                        </li>
+
+                    </ol>
+
+                </div>
+        </article></li>
+
+
+        <li><article style="background-color:lightred;border-color:red">
+            
+            <strong><p>Tenemos una corriente de 20 A que circula por un conductor rectilíneo. Calcular el campo magnético que produce a 0.5 m de distancia.</p></strong>
+                
+            <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+                <div id="sol-e2" style="display:none;">
+                  
+                    <p>SOLUCIÓN:</p>
+
+                    <p>El módulo del campo mangético se calcula con la expresión:</p>
+                    <span class="math display">\[|\vec{B}|=\frac{\mu I}{2 \pi r}=\frac{4\pi\cdot 10^{-7}\mbox{ N/A}^2 20\mbox {A}}{2 \pi 0.5\mbox{ m}}=8\mu\mbox{T}\]</span>
+                    <p>Si lo comparamos con el campo magnético terrestre (entre 25 y 65 <span class="math inline">\(\mu\)</span>T), vemos que se trata de una cantidad muy inferior.</p>
+                    
+                </div>
+        </article></li>
+
+
+        <li><article style="background-color:lightred;border-color:red">
+            
+            <strong><p>Un solenoide tiene una longitud <span class="math inline">\(L=25\)</span> cm, un radio <span class="math inline">\(R=1\)</span> cm y un total de <span class="math inline">\(N=400\)</span> vueltas. Por él circula una corriente <span class="math inline">\(I=3\)</span> A. Calcular el campo magnético que genera.</p></strong>  
+
+            <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+            <div id="sol-e3" style="display:none;">
+                      
+                <p>SOLUCIÓN:</p>
+
+                <p>El campo magnético que genera un solenoide en su eje viene dado por:</p>
+                <span class="math display">\[|\vec{B}|=N\frac{\mu I}{L}=\frac{4\pi\cdot 10^{-7}\mbox{ N/A}^2 3\mbox {A}}{0.25\mbox{ m}}=6\mbox{ mT}\]</span>
+
+                </div>
+        </article></li>
+
+      </ol>
+
+      
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a><br><br>
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+      
+      <br><br>
+      
+      <script type="text/javascript" language="javascript">
+        function show(str, obj){
+          document.getElementById(obj).innerHTML = str;
+          //MathJax.Hub.Typeset();
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+        }
+        function show2(divID) {
+            var sol = document.getElementById("sol-"+divID);
+            var div = document.getElementById(divID);
+            if(sol.style.display == "none"){
+              sol.style.display = "block";
+            }else{
+              sol.style.display = "none";
+            }
+            if(div.innerHTML == "Solución"){
+              div.innerHTML = "Oculta solución";
+            }else{
+              div.innerHTML = "Solución";
+            }
+        }
+      </script>
+      
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+    <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+<body>
+      <div id="header">
+            <h1 class="title">CÁLCULO DE FUERZAS MAGNÉTICAS 3</h1>
+      </div>
+     
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a><br><br>
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a>
+
+      <ol type="1">
+
+            <li><article style="background-color:lightred;border-color:red">
+                  
+                <strong><p>Se introduce una carga en una región donde coexisten un campo magnético y un campo eléctrico. Inicialmente la carga está en reposo. ¿Qué dirección debe llevar el campo magnético respecto del campo eléctrico para que la carga no se desvíe de su trayectoria?</p></strong>
+
+                <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+                <div id="sol-e1" style="display:none;">
+                  
+                    <p>SOLUCIÓN:</p> 
+
+                    <p>Inicialmente la carga está en reposo, luego sólo actúa la fuerza eléctrica y por tanto:</p>
+                    <span class="math display">\[\vec{a}=\vec{F}/m=\frac{q}{m}\vec{E}\]</span>
+                    <p>En el momento en que empieza a moverse, el campo magnético ejerce una fuerza perpendicular a dicha dirección. Para que no produzca ninguna desviación tiene que darse una de estas dos condiciones:</p>
+                    <ul>
+                        <li><p>Que la fuerza eléctrica contrarreste la fuerza magnética, o</p></li>
+                        <li><p>Que el campo magnético sea paralelo a la dirección de movimiento, en cuyo caso la fuerza magnética será nula.</p></li>
+                    </ul>
+                    <p>El primero de los casos no puede darse puesto que la fuerza magnética es perpendicular a la velocidad, y ya hemos visto que la fuerza eléctrica, al menos en el instante inicial, es paralela a ésta. Queda como única opción que el campo magnético sea paralelo a la velocidad, y por lo tanto al campo eléctrico.</p>
+                </div>                   
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">
+                  
+                <strong><p>Una electrón se mueve inicialmente con velocidad <span class="math inline">\(v_i=20\)</span> m/s en la dirección del eje OX. Al entrar en una región donde coexisten un campo magnético de 500 mT y un campo eléctrico de 5 <span class="math inline">\(\mu\)</span>N/C paralelos a la dirección de movimiento de la carga,</p>
+                    <ol style="list-style-type: lower-alpha">
+                        <li><p>¿Cuál será su aceleración?</p></li>
+                        <li><p>Calcular la velocidad 1 s después de aplicar el campo.</p></li>
+                    </ol>
+                <p>NOTA: Recuerde que el electrón tiene una carga <span class="math inline">\(q_e=-1.6\cdot 10^{-19}\)</span> C y una masa <span class="math inline">\(m_e=9.1\cdot 10^{-31}\)</span> kg.</p>
+                </strong>
+
+                <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+                <div id="sol-e2" style="display:none;">
+                      
+                    <p>SOLUCIÓN:</p> 
+
+                    <p>Como la velocidad y campos son paralelos, entonces:</p>
+                    <ul>
+                        <li><p>La fuerza eléctrica y por tanto la aceleración son también paralelos a la velocidad inicial. Por tanto, el campo eléctrico no desvía la carga de su trayectoria recta.</p></li>
+                        <li><p>Inicialmente no hay fuerza magnética, puesto que la velocidad es paralela al campo magnético. Dado que la fuerza eléctrica no desvía a la carga de su trayectoria, la velocidad no cambia de dirección y por tanto no aparecerá en ningún momento una componente perpendicular.</p></li>
+                    </ul>
+
+                    <ol style="list-style-type: lower-alpha">
+                        <li>
+                            <span class="math display">\[\vec{F}=q_e\vec{E}=-1.6\cdot 10^{-19}\cdot 5\cdot 10^{-6}\hat{\imath}=-8\cdot 10^{-25}\hat{\imath}\mbox{ N}\]</span>
+                            <span class="math display">\[\vec{a}=\frac{\vec{F}}{m_e}=\frac{-8\cdot 10^{-25}\hat{\imath}}{9.1\cdot 10^{-31}}=-879121\hat{\imath}\mbox{ m/s}^2\approx -879000\hat{\imath}\mbox{ m/s}^2\]</span>
+                        </li>
+                        <li>
+                            <p>Como conocemos la aceleración y la velocidad inicial:</p>
+                            <span class="math display">\[\vec{v}_f=\vec{v}_i+\vec{a}t=20\hat{\imath}\mbox{ m/s}-879000\mbox{ m/s}^2\cdot 1\mbox{ s}\hat{\imath}=-879101\hat{\imath}\mbox{ m/s}\]</span>
+                        </li>
+                    </ol>
+                    
+                </div>                       
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">
+                <strong><p>Una carga positiva con velocidad <span class="math inline">\(\vec{v_i}=2\hat{\imath}\)</span> m/s penetra en una región donde coexisten un campo magnético <span class="math inline">\(\vec{B}=0.2\hat{\imath}\)</span> T y un campo eléctrico <span class="math inline">\(\vec{E}=0.2\hat{\jmath}\)</span> N/C. ¿Puede concluirse que el campo magnético no producirá ninguna fuerza?</p></strong>
+  
+                <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+                <div id="sol-e3" style="display:none;">
+                          
+                    <p>SOLUCIÓN:</p> 
+
+                    <p>	En el instante inicial está claro que no hay fuerza magnética, puesto que el campo magnético es paralelo a la velocidad. Pero sobre la carga actúa una fuerza eléctrica en la dirección del campo eléctrico. Como éste es perpendicular a la dirección inicial de la carga, ésta se desviará de esta trayectoria tal y como se indica en la figura de la izquierda, </p>
+    
+                    <div class="sbsimage">
+                        <div class="imgContainerEnd">
+                            <a data-fancybox="" href="figuras/ejercicios-fuerzaBE.png">
+                            <img alt="" src="figuras/ejercicios-fuerzaBE.png" width="40%"/>
+                            </a>
+                        </div>
+                    </div>     
+
+                    <span class="math display">\[\vec{F}_e=q\vec{E}=qE_j\hat{\jmath}\]</span>
+                    <span class="math display">\[\vec{a}=\frac{qE}{m}\hat{\jmath}\]</span>
+                    <span class="math display">\[\vec{v}=\vec{v}_i+\vec{a}t=v_i\hat{\imath}+\frac{qE}{m}\hat{\jmath}\]</span>
+                    <p>por lo que instantes después aparecerá una componente de la velocidad en la dirección del eje OY y por tanto una fuerza magnética (figura derecha).</p>
+                </div>                            
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">     
+             
+                <strong><p>Una carga de -5 <span class="math inline">\(\mu\)</span>C se mueve a una velocidad <span class="math inline">\(\vec{v}=(3\hat{\imath}+2\hat{k})\)</span> m/s. Calcular la fuerza que actúa sobre ella cuando se encuentra en una región donde coexisten un campo magnético <span class="math inline">\(\vec{B}=25\hat{\imath}\)</span> mT y un campo eléctrico <span class="math inline">\(\vec{E}=2000\hat{\imath}\)</span> <span class="math inline">\(\mu\)</span>N/C.</p></strong>
+
+                <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+                <div id="sol-e4" style="display:none;">
+                              
+                    <p>SOLUCIÓN:</p> 
+
+                    <p>La fuerza total es la suma vectorial de la fuerza ejercida por los campos magnético y eléctrico. Llamemos <span class="math inline">\(\vec{F}_m\)</span> a la fuerza ejercida por el campo magnético y <span class="math inline">\(\vec{F}_e\)</span> a la ejercida por el campo eléctrico. La fuerza magnética será:</p>
+                    <span class="math display">\[\vec{B}=B_x\hat{\imath}=25\cdot 10^{-3}\hat{\imath}\mbox{ T}\]</span>
+                    <span class="math display">\[\vec{v}=v_x\hat{\imath}+v_z\hat{k}=(3\hat{\imath}+2\hat{k})\mbox{ m/s}\]</span>
+                    <span class="math display">\[\vec{F}_m=q\vec{v}\times\vec{B}=qv_zB_x\hat{k}\times\hat{\imath}=qv_zB_x\hat{\jmath}\]</span>
+                    <span class="math display">\[\vec{F}_m=-5\cdot 10^{-6}\mbox{ C}\cdot 2\mbox{ m/s}\cdot 25\cdot 10^{-3}\mbox{ T}\hat{\jmath}=-250\hat{\jmath}\mbox{ nN}\]</span>
+                    <p>Y la fuerza eléctrica:</p>
+                    <span class="math display">\[\vec{F}_e=q\vec{E}=-5\cdot 10^{-6}\mbox{ C}\cdot 2000\cdot 10^{-6}\hat{\imath}\mbox{ N/C}=-10\hat{\imath}\mbox{ nN}\]</span>
+                    <p>La fuerza total será: </p>
+                    <span class="math display">\[\vec{F}=(-10\hat{\imath}-250\hat{\jmath})\mbox{ nN}\]</span>
+                    <p>	En la siguiente figura se muestra una representación:</p>
+
+                    <div class="sbsimage">
+                        <div class="imgContainerEnd">
+                            <a data-fancybox="" href="figuras/ejercicios-ley_LorentzG-2sol.png">
+                            <img alt="" src="figuras/ejercicios-ley_LorentzG-2sol.png" width="35%"/>
+                            </a>
+                        </div>
+                    </div>     
+                </div>                            
+            </article></li>
+
+
+            <li><article style="background-color:lightred;border-color:red">     
+                 
+                <strong>
+                    <p>Se tiene una carga de 5<span class="math inline">\(\mu\)</span>C y masa <span class="math inline">\(m=10^{-10}\)</span> kg, inicialmente a una velocidad <span class="math inline">\(\vec{v_i}=3\hat{\jmath}\)</span> m/s. En <span class="math inline">\(t=0\)</span> se conectan un campo eléctrico <span class="math inline">\(\vec{E}=2000\hat{\imath}\mu\)</span>N/C y un campo magnético <span class="math inline">\(\vec{B}=300\hat{\imath}\)</span> mT.</p>
+                    <ol style="list-style-type: lower-alpha">
+                        <li><p>Calcule la fuerza eléctrica y fuerza magnética que actúan sobre la carga en cualquier instante posterior.</p></li>
+                        <li><p>Dibuje la trayectoria.</p></li>
+                    </ol>
+                </strong>
+
+                <button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+                <div id="sol-e5" style="display:none;">
+                                  
+                    <p>SOLUCIÓN:</p> 
+                    
+                    <ol style="list-style-type: lower-alpha">
+                        <li>
+                            <p>Sobre la carga actúan dos fuerzas. La fuerza eléctrica es paralela al campo eléctrico, mientras que la fuerza magnética es perpendicular al campo magnético.</p>
+                            <span class="math display">\[\vec{E}=2000\hat{\imath}\mu\mbox{N/C}=E\hat{\imath}\]</span>
+                            <span class="math display">\[\vec{B}=0.3\hat{\imath}\mbox{ T}=B_x\hat{\imath}\]</span>
+                            <p>Como resultado, la carga se moverá en el espacio con una cierta velocidad que todavía no conocemos, pero que podemos escribir como:</p>
+                            <span class="math display">\[\vec{v}=v_x\hat{\imath}+v_y\hat{\jmath}+v_z\hat{k}\]</span>
+                            <p>	Como ambos campos son paralelos, esto significa que las fuerzas son perpendiculares entre sí. Por tanto, es de esperar que la carga se acelere en la dirección X por la fuerza eléctrica y en el plano YZ debido a la fuerza magnética.</p>
+                            <p>La fuerza eléctrica será:</p>
+                            <span class="math display">\[\vec{F}_E=q\vec{E}=qE\hat{\imath}=5\cdot 10^{-6}\mbox{ C}\cdot 2000\cdot 10^{-6}\hat{\imath}\mbox{ N/C}=1.36\cdot 10^{-5}\hat{\imath}\mbox{ N}\]</span>
+                            <p>Para calcular la fuerza magnética, recordemos que</p>  
+                            <ul>
+                                <li><p>Su módulo sólo depende de la parte de la velocidad perpendicular al campo. En nuestro caso <span class="math inline">\(\vec{v}_\perp=v_y\hat{\jmath}+v_z\hat{k}\)</span>. En efecto, como se muestra en la figura, si <span class="math inline">\(\theta\)</span> es el ángulo que forma el campo y la velocidad, entonces <span class="math inline">\(|\vec{F}_B|=qvB\sin\theta\)</span> y tal y como se muestra en la figura <span class="math inline">\(v\sin\theta=v_\perp=\sqrt{v_y^2+v_z^2}\)</span>. </p>
+                                    <div class="sbsimage">
+                                        <div class="imgContainerEnd">
+                                            <a data-fancybox="" href="figuras/ejercicios-ley-Lorentz-5.png">
+                                            <img alt="" src="figuras/ejercicios-ley-Lorentz-5.png" width="30%"/>
+                                            </a>
+                                        </div>
+                                    </div>   
+                                </li>
+                                <li><p>La fuerza magnética es una fuerza centrípeta, perpendicular a la trayectoria, por lo que no modifica el módulo de la velocidad, sino sólo su dirección: <span class="math inline">\(\vec{v}_\perp\)</span> tiene siempre el mismo módulo y por tanto es igual al módulo en el instante inicial, es decir <span class="math inline">\(v_\perp=v_i\)</span> y por tanto:</p>
+                                    <span class="math display">\[|\vec{F}_B|=q|\vec{v}\times\vec{B}|=qv_iB_x=5\cdot 10^{-6}\mbox{ C}\cdot 3\mbox{ m/s}\cdot 0.3\mbox{ T}=4.5\cdot 10^{-6}\mbox{ N}\]</span>
+                                </li>
+                            </ul>  
+                        </li>
+                        <li>
+                            <p>Podemos calcular la aceleración como</p>
+                            <span class="math display">\[\vec{a}=a_x/m\hat{\imath}+a_y/m\hat{\jmath}+a_z/m\hat{k}=F_x/m\hat{\imath}+F_y/m\hat{\jmath}+F_z/m\hat{k}\]</span>
+                            <span class="math display">\[F_x=F_E=qE\]</span>
+                            <span class="math display">\[F_y\hat{\jmath}+F_z\hat{k}=\vec{F}_B\]</span>
+                            <p>Por lo tanto:</p>
+                            <span class="math display">\[a_x=\frac{F_x}{m}=\frac{qE}{m}=\frac{5\cdot 10^{-6}\mbox{ C}\cdot 2\cdot 10^{-3}\mbox{ N/C}}{10^{-10}\mbox{ kg}}=100\mbox{ m/s}^2\]</span>
+                            <p>	En la dirección X sólo actúa la fuerza eléctrica lleva la dirección del eje X, y produce una movimiento uniformemente acelerado:</p>
+                            <span class="math display">\[v_x=a_xt=\frac{qE}{m}t\]</span>
+                            <p>Por otro lado, la fuerza magnética está en el plano YZ (por ser perpendicular al eje OX) y es perpendicular a la velocidad, se trata de una fuerza centrípeta:</p>
+                            <span class="math display">\[|\vec{F_B}|=\frac{mv^2_\perp}{r}\]</span>
+                            <p>siendo <span class="math inline">\(v_\perp=v_i\)</span>. Como <span class="math inline">\(|\vec{F_B}|=qv_iB\)</span>. Por lo tanto, la proyección de la trayectoria en el plano YZ es un movimiento circular con radio:</p>
+                            <span class="math display">\[[r=\frac{mv_i}{qB}=\frac{10^{-10}\mbox{ kg }3\mbox{ m/s}}{5\cdot 10^{-6}\mbox{ C }0.3\mbox{ T}}=0.0002\mbox{ m}\]</span>
+                            <p>	Teniendo en cuenta la componente x de la velocidad, tendremos finalmente que la trayectoria será helicoidal: la carga avanza con un movimiento uniformemente acelerado en la dirección X girando en torno a dicho eje:</p>
+                            <div class="sbsimage">
+                                <div class="imgContainerEnd">
+                                    <a data-fancybox="" href="figuras/ejercicios-trayectoria_helicoidal.png">
+                                    <img alt="" src="figuras/ejercicios-trayectoria_helicoidal.png" width="25%"/>
+                                    </a>
+                                </div>
+                            </div>   
+                        </li>
+                    </ol>
+   
+                    </div>                            
+                </article></li>
+    
+      </ol>
+
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a><br><br>
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+      
+      <br><br>
+      
+      <script type="text/javascript" language="javascript">
+        function show(str, obj){
+          document.getElementById(obj).innerHTML = str;
+          //MathJax.Hub.Typeset();
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+        }
+        function show2(divID) {
+            var sol = document.getElementById("sol-"+divID);
+            var div = document.getElementById(divID);
+            if(sol.style.display == "none"){
+              sol.style.display = "block";
+            }else{
+              sol.style.display = "none";
+            }
+            if(div.innerHTML == "Solución"){
+              div.innerHTML = "Oculta solución";
+            }else{
+              div.innerHTML = "Solución";
+            }
+        }
+      </script>
+      
+</body>
+</html>
