@@ -17,6 +17,8 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
   * [Ejercicios de repaso](Magnitudes/magnitudes-1.html)
   
   * [Problemas](Magnitudes/magnitudes-2.html)
+  
+  * [Test de repaso](Magnitudes/magnitudes-test.html)
 
 ### Vectores. Análisis Vectorial
 2.1. [Teoría de Análisis Vectorial](Vectores/vectores_teoría.html)
@@ -43,6 +45,8 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
   * [Ejercicios de Presión](Fluidos/fluidos-3.html)
 
   * [Ejercicios de Principio de Arquímedes y Principio de Pascal](Fluidos/fluidos-4.html)
+  
+  * [Cuestionario Fluidos](Fluidos/fluidos-test.html)
 
 ### Oscilaciones
 6.1. [Teoría de Oscilaciones](Oscilaciones/oscilaciones_teoría.html)
@@ -50,6 +54,8 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
   * [Ejercicios de vibraciones](Oscilaciones/oscilaciones-1.html)
 
   * [Ejercicios de Ley de Hooke](Oscilaciones/oscilaciones-2.html)
+  
+  * [Cuestionario Oscilaciones](Oscilaciones/oscilaciones-test.html)
 
 
 ### Ondas
@@ -58,6 +64,8 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](
   * [Ejercicios de Pulso y Velocidad](Ondas/ondas-1.html)
 
   * [Ejercicios de Ondas](Ondas/ondas-2.html)
+  
+  * [Cuestionario Ondas](Ondas/ondas-test.html)
   
   
 ### Electrostática
