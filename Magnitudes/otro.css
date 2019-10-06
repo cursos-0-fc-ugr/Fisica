@@ -28,6 +28,34 @@ button {
     cursor: pointer;
   }
 
+  #button2 {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 18px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+
+
+
+#button2:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#textbox {
+	height: 25px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 2px solid red;
+	padding-left: 5px;
+}
 
 h3:after {
   counter-increment: article;
