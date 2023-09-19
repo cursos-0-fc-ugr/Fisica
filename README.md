@@ -8,7 +8,7 @@ La maquetación e inclusión de gráficos la ha llevado a cabo Diego Jesús Ramo
 
 Este repositorio se puede visitar en [GitHub pages](https://cursos-0-fc-ugr.github.io/Fisica).
 
-Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](https://github.com/cursos-0-fc-ugr/Fisica/issues) de este repositorio.
+Si encuentra algún error, por favor, comuníquenoslo usando el [gestor de incidencias](https://github.com/cursos-0-fc-ugr/Fisica/issues) de este repositorio.
 
 ## Contenidos
 ### La Física y sus métodos: magnitudes físicas y su medida
