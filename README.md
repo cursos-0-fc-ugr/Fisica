@@ -1,6 +1,6 @@
 # Curso cero de Física
 
-Curso cero de Física para la ETSIIT y la Facultad de Ciencias de la Universidad de Granada
+Curso cero de Física para la ETSIIT y la Facultad de Ciencias de la Universidad de Granada. Puedes encontrar otros cursos cero de nuestro centro en este [enlace](https://cursos-0-fc-ugr.github.io/).
 
 Material elaborado por 	María Luisa Jiménez Olivares, profesora titular del Departamento de Física Aplicada y Marta Anguiano Millán, profesora titular del Departamento de Física Atómica, Molecular y Nuclear,
 
