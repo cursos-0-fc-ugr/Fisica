@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Luz y radiación electromagnética</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Tema8_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Tema8_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Tema8_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Tema8_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Tema8_files/libs/quarto-html/popper.min.js"></script>
+<script src="Tema8_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Tema8_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Tema8_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Tema8_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Tema8_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Tema8_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Tema8_files/libs/bootstrap/bootstrap-33c1396811bb647a58f862e5ff553a70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Tema8_files/libs/quarto-contrib/quizdown-0.6.1/quizdown.js"></script>
+<script src="Tema8_files/libs/quarto-contrib/quizdown-0.6.1/quizdownKatex.js"></script>
+<script src="Tema8_files/libs/quarto-contrib/quizdown-0.6.1/quizdownHighlight.js"></script>
+<script src="Tema8_files/libs/quarto-contrib/quizdown-0.6.1/quizdown-init.js"></script>
+<script src="Tema8_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="Tema8_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="Tema8_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Luz y radiación electromagnética</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción-histórica-la-naturaleza-de-la-luz" id="toc-introducción-histórica-la-naturaleza-de-la-luz" class="nav-link active" data-scroll-target="#introducción-histórica-la-naturaleza-de-la-luz">1. Introducción Histórica: La Naturaleza de la Luz</a></li>
+  <li><a href="#la-luz-como-onda-electromagnética" id="toc-la-luz-como-onda-electromagnética" class="nav-link" data-scroll-target="#la-luz-como-onda-electromagnética">2. La luz como Onda Electromagnética</a>
+  <ul class="collapse">
+  <li><a href="#naturaleza-electromagnética" id="toc-naturaleza-electromagnética" class="nav-link" data-scroll-target="#naturaleza-electromagnética">2.1. Naturaleza Electromagnética</a></li>
+  <li><a href="#el-espectro-electromagnético" id="toc-el-espectro-electromagnético" class="nav-link" data-scroll-target="#el-espectro-electromagnético">2.2. El Espectro Electromagnético</a></li>
+  <li><a href="#fenómenos-ondulatorios-clave" id="toc-fenómenos-ondulatorios-clave" class="nav-link" data-scroll-target="#fenómenos-ondulatorios-clave">2.3. Fenómenos Ondulatorios Clave</a></li>
+  <li><a href="#reflexión-y-refracción-de-una-onda-electromagnética" id="toc-reflexión-y-refracción-de-una-onda-electromagnética" class="nav-link" data-scroll-target="#reflexión-y-refracción-de-una-onda-electromagnética">2.4. Reflexión y Refracción de una onda electromagnética</a></li>
+  <li><a href="#reflexión-total-interna" id="toc-reflexión-total-interna" class="nav-link" data-scroll-target="#reflexión-total-interna">2.5. Reflexión Total Interna</a></li>
+  </ul></li>
+  <li><a href="#óptica-geométrica-el-modelo-de-rayos" id="toc-óptica-geométrica-el-modelo-de-rayos" class="nav-link" data-scroll-target="#óptica-geométrica-el-modelo-de-rayos">3. Óptica Geométrica: El Modelo de Rayos</a>
+  <ul class="collapse">
+  <li><a href="#del-frente-de-onda-al-rayo" id="toc-del-frente-de-onda-al-rayo" class="nav-link" data-scroll-target="#del-frente-de-onda-al-rayo">3.1. Del Frente de Onda al Rayo</a></li>
+  <li><a href="#el-principio-de-propagación-rectilínea" id="toc-el-principio-de-propagación-rectilínea" class="nav-link" data-scroll-target="#el-principio-de-propagación-rectilínea">3.2. El Principio de Propagación Rectilínea</a></li>
+  <li><a href="#ejemplos-de-aplicación-de-la-óptica-geométrica" id="toc-ejemplos-de-aplicación-de-la-óptica-geométrica" class="nav-link" data-scroll-target="#ejemplos-de-aplicación-de-la-óptica-geométrica">3.3. Ejemplos de aplicación de la Óptica Geométrica</a></li>
+  <li><a href="#leyes-fundamentales-de-la-óptica-geométrica" id="toc-leyes-fundamentales-de-la-óptica-geométrica" class="nav-link" data-scroll-target="#leyes-fundamentales-de-la-óptica-geométrica">3.4. Leyes Fundamentales de la Óptica Geométrica</a></li>
+  </ul></li>
+  <li><a href="#sistema-óptico-y-su-representación" id="toc-sistema-óptico-y-su-representación" class="nav-link" data-scroll-target="#sistema-óptico-y-su-representación">4. Sistema óptico y su representación</a>
+  <ul class="collapse">
+  <li><a href="#elementos-de-un-sistema-óptico" id="toc-elementos-de-un-sistema-óptico" class="nav-link" data-scroll-target="#elementos-de-un-sistema-óptico">4.1. Elementos de un sistema óptico</a></li>
+  <li><a href="#objetos-e-imágenes" id="toc-objetos-e-imágenes" class="nav-link" data-scroll-target="#objetos-e-imágenes">4.2. Objetos e Imágenes</a></li>
+  <li><a href="#focos-objetos-e-imagen" id="toc-focos-objetos-e-imagen" class="nav-link" data-scroll-target="#focos-objetos-e-imagen">4.3. Focos objetos e imagen</a></li>
+  <li><a href="#distancias-y-alturas" id="toc-distancias-y-alturas" class="nav-link" data-scroll-target="#distancias-y-alturas">4.4. Distancias y alturas</a></li>
+  <li><a href="#trazado-de-rayos" id="toc-trazado-de-rayos" class="nav-link" data-scroll-target="#trazado-de-rayos">4.5. Trazado de rayos</a></li>
+  </ul></li>
+  <li><a href="#criterio-de-signos" id="toc-criterio-de-signos" class="nav-link" data-scroll-target="#criterio-de-signos">5. Criterio de Signos</a></li>
+  <li><a href="#lentes-delgadas" id="toc-lentes-delgadas" class="nav-link" data-scroll-target="#lentes-delgadas">6. Lentes Delgadas</a>
+  <ul class="collapse">
+  <li><a href="#ecuación-de-gauss-para-lentes-delgadas" id="toc-ecuación-de-gauss-para-lentes-delgadas" class="nav-link" data-scroll-target="#ecuación-de-gauss-para-lentes-delgadas">6.1. Ecuación de Gauss para lentes delgadas</a></li>
+  <li><a href="#relación-de-tamaños" id="toc-relación-de-tamaños" class="nav-link" data-scroll-target="#relación-de-tamaños">6.2 Relación de tamaños</a></li>
+  <li><a href="#marcha-de-rayos" id="toc-marcha-de-rayos" class="nav-link" data-scroll-target="#marcha-de-rayos">6.3 Marcha de rayos</a></li>
+  </ul></li>
+  <li><a href="#espejos-esféricos" id="toc-espejos-esféricos" class="nav-link" data-scroll-target="#espejos-esféricos">7. Espejos Esféricos</a>
+  <ul class="collapse">
+  <li><a href="#ecuación-del-espejo-esférico" id="toc-ecuación-del-espejo-esférico" class="nav-link" data-scroll-target="#ecuación-del-espejo-esférico">7.1. Ecuación del espejo esférico</a></li>
+  <li><a href="#relación-de-tamaños-en-espejos-esféricos" id="toc-relación-de-tamaños-en-espejos-esféricos" class="nav-link" data-scroll-target="#relación-de-tamaños-en-espejos-esféricos">7.2. Relación de tamaños en espejos esféricos</a></li>
+  <li><a href="#marcha-de-rayos-en-espejos-esféricos" id="toc-marcha-de-rayos-en-espejos-esféricos" class="nav-link" data-scroll-target="#marcha-de-rayos-en-espejos-esféricos">7.3. Marcha de rayos en espejos esféricos</a></li>
+  </ul></li>
+  <li><a href="#el-ojo-humano-y-sus-defectos" id="toc-el-ojo-humano-y-sus-defectos" class="nav-link" data-scroll-target="#el-ojo-humano-y-sus-defectos">8. El Ojo Humano y sus Defectos</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="introducción-histórica-la-naturaleza-de-la-luz" class="level2">
+<h2 class="anchored" data-anchor-id="introducción-histórica-la-naturaleza-de-la-luz">1. Introducción Histórica: La Naturaleza de la Luz</h2>
+<p>El estudio de la luz ha sido uno de los debates más fascinantes de la física. En la antigüedad, Euclides aplicó la geometría a la formación de sombras, mientras que en el siglo XI, Al-Hazen describió ya la cámara oscura y las leyes de la reflexión.</p>
+<p>Sin embargo, las teorías científicas modernas no surgieron hasta finales del siglo XVII con dos modelos contrapuestos:</p>
+<ul>
+<li><strong>Modelo Corpuscular (Newton):</strong> Postulaba que la luz estaba formada por pequeñas partículas materiales que viajaban a gran velocidad en línea recta.</li>
+<li><strong>Modelo Ondulatorio (Huygens):</strong> Defendía que la luz era una onda mecánica que se propagaba a través de un medio ideal llamado éter.</li>
+</ul>
+<p>Durante el siglo XIX, el modelo ondulatorio se impuso gracias a los experimentos de <strong>Young</strong> sobre interferencias (1801) y <strong>Fresnel</strong> sobre difracción. Finalmente, <strong>James C. Maxwell</strong> unificó la electricidad y el magnetismo en 1865, demostrando que la luz es una <strong>onda electromagnética</strong> que no necesita medio material para propagarse, predicción que fue confirmada experimentalmente por <strong>Hertz</strong> en 1887.</p>
+</section>
+<section id="la-luz-como-onda-electromagnética" class="level2">
+<h2 class="anchored" data-anchor-id="la-luz-como-onda-electromagnética">2. La luz como Onda Electromagnética</h2>
+<p>Como se ha mencionado, Maxwell determinó y Hertz confirmó que la luz es una onda electromagnética. La parte de la física que estudia la luz como una onda se denomina óptica ondulatoria, y utiliza muchos de los desarrollos generales de la teoría de ondas mecánicas, y algunas adaptaciones al caso específico de ondas electromagnéticas. Este enfoque es esencial para comprender fenómenos como la interferencia, la difracción y la polarización, que no pueden ser explicados por el modelo corpuscular.</p>
+<section id="naturaleza-electromagnética" class="level3">
+<h3 class="anchored" data-anchor-id="naturaleza-electromagnética">2.1. Naturaleza Electromagnética</h3>
+<p>Una onda electromagnética consiste en la propagación de campos eléctricos (<span class="math inline">\(\vec{E}\)</span>) y magnéticos (<span class="math inline">\(\vec{B}\)</span>) oscilantes, en fase y perpendiculares entre sí y a la dirección de propagación. Por tanto, en el caso más sencillo pueden escribirse como:</p>
+<p><span class="math display">\[\vec{E}(x, t) = \vec{E}_0 \cos(k x- \omega t)\ \text{ y }\ \vec{B}(x, t) = \vec{B}_0 \cos(k x - \omega t), \]</span> con <span class="math inline">\(\vec E_0\)</span> y <span class="math inline">\(\vec B_0\)</span> los vectores amplitud de los campos, perpendiculares entre sí y perpendiculares a la dirección de propagación, <span class="math inline">\(k\)</span> el número de onda y <span class="math inline">\(\omega\)</span> la frecuencia angular.</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Onda_Electromagnetica.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Onda Electromagnética, donde \vec S es la dirección de propagación. Modificado a partir de un original de SuperManu (vía Wikimedia Commons), bajo licencia CC BY-SA 3.0."><img src="_media/Onda_Electromagnetica.png" class="img-fluid figure-img" style="width:50.0%" alt="Onda Electromagnética, donde \vec S es la dirección de propagación. Modificado a partir de un original de SuperManu (vía Wikimedia Commons), bajo licencia CC BY-SA 3.0."></a></p>
+<figcaption>Onda Electromagnética, donde <span class="math inline">\(\vec S\)</span> es la dirección de propagación.<br><small>Modificado a partir de un original de SuperManu (vía Wikimedia Commons), bajo licencia CC BY-SA 3.0.</small></figcaption>
+</figure>
+</div>
+</div>
+<p>Su velocidad en el vacío es una constante universal, <span class="math inline">\(c=\frac{1}{\sqrt{\mu_0 \epsilon_0}} \approx 3 \cdot 10^8 \text{ m/s}\)</span>.</p>
+<p>Cuando una onda electromagnética pasa a un medio material, su velocidad disminuye a una velocidad <span class="math inline">\(v\)</span>. Se define el <strong>índice de refracción</strong> de un material <span class="math inline">\(n\)</span> como el cociente entre la velocidad de la onda en el vacío y la velocidad en el medio, es decir, <span class="math inline">\(n = c/v\)</span>. El índice de refracción es un número adimensional que caracteriza la capacidad de un material para refractar la luz y será siempre mayor o igual a 1, siendo <span class="math inline">\(n=1\)</span> para el vacío.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: índice de refracción del agua">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: índice de refracción del agua
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La velocidad de la luz en el agua es aproximadamente <span class="math inline">\(v = 2.25 \cdot 10^8 \text{ m/s}\)</span>. Por lo tanto, el índice de refracción del agua es: <span class="math display">\[n = \frac{c}{v} = \frac{3 \cdot 10^8 \text{ m/s}}{2.25 \cdot 10^8 \text{ m/s}} \approx 1.33.\]</span> Esto significa que la luz viaja un 33% más lento en el agua que en el vacío, lo que explica fenómenos como la refracción que hace que los objetos sumergidos parezcan más cercanos de lo que realmente están.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Tabla: índices de refracción de algunos materiales">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tabla: índices de refracción de algunos materiales
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La siguiente tabla muestra valores típicos del índice de refracción para algunos materiales comunes (<span class="math inline">\(\lambda \approx 589\)</span> nm).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Material</th>
+<th>Índice de refracción (n)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aire (0°C y 1 atm)</td>
+<td>1.000293</td>
+</tr>
+<tr class="even">
+<td>Hidrógeno (0°C y 1 atm)</td>
+<td>1.000132</td>
+</tr>
+<tr class="odd">
+<td>Agua (20°C)</td>
+<td>1.333</td>
+</tr>
+<tr class="even">
+<td>Aceite de oliva (20°C)</td>
+<td>1.47</td>
+</tr>
+<tr class="odd">
+<td>Hielo</td>
+<td>1.31</td>
+</tr>
+<tr class="even">
+<td>Vidrio</td>
+<td>1.52</td>
+</tr>
+<tr class="odd">
+<td>Vidrio Flint</td>
+<td>1.69</td>
+</tr>
+<tr class="even">
+<td>Glicerina</td>
+<td>1.473</td>
+</tr>
+<tr class="odd">
+<td>Diamante</td>
+<td>2.417</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="el-espectro-electromagnético" class="level3">
+<h3 class="anchored" data-anchor-id="el-espectro-electromagnético">2.2. El Espectro Electromagnético</h3>
+<p>Las ondas electromagnéticas pueden tener una amplia gama de frecuencias y longitudes de onda, lo que da lugar a diferentes tipos de radiación electromagnética:</p>
+<ul>
+<li><strong>Radioondas</strong>: Ondas de baja frecuencia producidas por circuitos eléctricos. Se utilizan principalmente en radiodifusión y telecomunicaciones (radio, TV, telefonía).</li>
+<li><strong>Microondas</strong>: Generadas por vibraciones moleculares. Se emplean en radares, comunicaciones y hornos microondas.</li>
+<li><strong>Infrarrojos</strong>: Emitidos por cuerpos calientes debido a oscilaciones atómicas. Tienen aplicaciones en calefacción, mandos a distancia y medicina.</li>
+<li><strong>Luz visible</strong>: Es la única región del espectro que percibe la retina humana. Es producida por saltos de los electrones más externos del átomo.</li>
+<li><strong>Ultravioleta</strong>: Producidos por electrones internos. Tienen aplicaciones en esterilización y medicina, aunque la exposición prolongada es nociva para la piel.</li>
+<li><strong>Rayos X</strong>: Ondas de alta energía producidas por electrones próximos al núcleo. Se usan ampliamente en diagnósticos médicos (radiografías) y análisis de materiales.</li>
+<li><strong>Rayos gamma</strong>: Son las ondas más energéticas, originadas por procesos nucleares y radiactivos. Poseen un gran poder de penetración y se usan en medicina nuclear.</li>
+</ul>
+<p>El <strong>espectro electromagnético</strong> está formado por todas las posibles ondas electromagnéticas, en función de la frecuencia o de la longitud de onda, van desde las ondas de radio de baja frecuencia y gran longitud de onda, aproximadamente de kilómetros, hasta las ondas gamma de alta frecuencia y longitud de onda del orden de picómetros. La luz visible es solo una pequeña fracción de este espectro, comprendida aproximadamente entre los 380 nm (violeta) y los 780 nm (rojo).</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Espectro_Electromagnetico.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Espectro Electromagnético.  Modificado a partir de un original de Ignacio Icke (vía Wikimedia Commons), basado en NASA/Inductiveload."><img src="_media/Espectro_Electromagnetico.png" class="img-fluid figure-img" style="width:100.0%" alt="Espectro Electromagnético.  Modificado a partir de un original de Ignacio Icke (vía Wikimedia Commons), basado en NASA/Inductiveload."></a></p>
+<figcaption>Espectro Electromagnético. <br><small>Modificado a partir de un original de Ignacio Icke (vía Wikimedia Commons), basado en NASA/Inductiveload.</small></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="fenómenos-ondulatorios-clave" class="level3">
+<h3 class="anchored" data-anchor-id="fenómenos-ondulatorios-clave">2.3. Fenómenos Ondulatorios Clave</h3>
+<p>Como la luz es una onda, exhibe fenómenos característicos de las ondas, que se explican mediante principios fundamentales:</p>
+<ul>
+<li><strong>Interferencias:</strong> Ocurren cuando dos o más ondas coherentes coinciden en el espacio, sumando sus efectos según el <strong>principio de superposición</strong>. La interferencia puede ser constructiva, si las ondas se suman o destructiva, si las ondas se restan.</li>
+<li><strong>Difracción:</strong> Es la desviación de la luz al encontrar obstáculos o rendijas de tamaño comparable a su longitud de onda. Se explica mediante el <strong>Principio de Huygens</strong>, donde cada punto de un frente de onda actúa como un nuevo foco emisor.</li>
+<li><strong>Reflexión y refracción:</strong> Son fenómenos que ocurren cuando la luz cambia de medio. La reflexión ocurre al chocar con una superficie, mientras que la refracción ocurre al pasar de un medio a otro.</li>
+<li><strong>Polarización:</strong> Es un fenómeno exclusivo de ondas transversales como la luz. Mediante polarizadores, podemos filtrar la luz para que el campo eléctrico oscile en una única dirección.</li>
+</ul>
+</section>
+<section id="reflexión-y-refracción-de-una-onda-electromagnética" class="level3">
+<h3 class="anchored" data-anchor-id="reflexión-y-refracción-de-una-onda-electromagnética">2.4. Reflexión y Refracción de una onda electromagnética</h3>
+<p>Cuando una onda incide sobre una superficie, parte de ella se refleja y parte se refracta (o transmite). La <strong>ley de la reflexión</strong> establece que el ángulo de incidencia, respecto a la normal a la superficie, es igual al ángulo de reflexión, también respecto a la normal. Por otro lado, la <strong>ley de la refracción (Snell)</strong> describe cómo cambia la dirección de la onda al pasar de un medio a otro con diferente índice de refracción, y se expresa como:</p>
+<p><span class="math display">\[n_1 \text{sen}(\theta_i) = n_2 \text{sen}(\theta_t)\]</span></p>
+<p>donde <span class="math inline">\(n_1\)</span> y <span class="math inline">\(n_2\)</span> son los índices de refracción de los medios, y <span class="math inline">\(\theta_i\)</span> y <span class="math inline">\(\theta_t\)</span> son los ángulos de incidencia y refracción (o transmisión), respectivamente.</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Reflexion_Refraccion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Reflexión y Refracción de una onda en una superficie"><img src="_media/Reflexion_Refraccion.png" class="img-fluid figure-img" style="width:50.0%" alt="Reflexión y Refracción de una onda en una superficie"></a></p>
+<figcaption>Reflexión y Refracción de una onda en una superficie</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Caso: $n_1<n_2$">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Caso: <span class="math inline">\(n_1&lt;n_2\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Si el índice de refracción del medio 1 (por el cual se propaga la onda) es menor que el del medio 2 (al cual se va a refractar), entonces la luz se refractará hacia la normal, es decir, el ángulo de refracción será menor que el ángulo de incidencia (<span class="math inline">\(\theta_t &lt; \theta_i\)</span>). Esto se puede deducir de la ley de Snell:</p>
+<p><span class="math display">\[n_1\, \text{sen}(\theta_i) = n_2\, \text{sen}(\theta_t)\ \Rightarrow\ \text{sen}(\theta_t) = \frac{n_1}{n_2} \text{sen}(\theta_i).\]</span></p>
+<p>Como <span class="math inline">\(n_1 &lt; n_2\)</span>, entonces <span class="math inline">\(\text{sen}(\theta_t) &lt; \text{sen}(\theta_i)\)</span>, lo que implica que <span class="math inline">\(\theta_t &lt; \theta_i\)</span>.</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Refraccion_Caso1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="n_1<n_2"><img src="_media/Refraccion_Caso1.png" class="img-fluid figure-img" style="width:40.0%" alt="n_1<n_2"></a></p>
+<figcaption><span class="math inline">\(n_1&lt;n_2\)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Onda incidiendo con un ángulo de 30° desde el aire hacia el agua">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Onda incidiendo con un ángulo de 30° desde el aire hacia el agua
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si la onda pasa del aire al agua, con <span class="math inline">\(n_1 \approx 1\)</span> y <span class="math inline">\(n_2 \approx 1.33\)</span>, la luz se doblará hacia la normal al entrar en el agua, lo que explica por qué los objetos sumergidos parecen más cercanos de lo que realmente están.</p>
+<p>En concreto, si la luz incide con un ángulo de 30° desde el aire hacia el agua, podemos calcular el ángulo de refracción usando la ley de Snell: <span class="math display">\[ 1 \,\text{sen}(30°) = 1.33 \, \text{sen}(\theta_t)\]</span> <span class="math display">\[\text{sen}(\theta_t) = \frac{\text{sen}(30°)}{1.33} = \frac{0.5}{1.33} \approx 0.3759\]</span> <span class="math display">\[\theta_t = \text{sen}^{-1}(0.3759) \approx 22.09°\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Caso: $n_1>n_2$">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Caso: <span class="math inline">\(n_1&gt;n_2\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Si el índice de refracción del medio 1 es mayor que el del medio 2, entonces la luz se refractará alejándose de la normal, es decir, el ángulo de refracción será mayor que el ángulo de incidencia (<span class="math inline">\(\theta_t &gt; \theta_i\)</span>). Esto se deduce de la ley de Snell de manera similar al caso anterior: <span class="math display">\[n_1\, \text{sen}(\theta_i) = n_2\, \text{sen}(\theta_t)\ \Rightarrow\ \text{sen}(\theta_t) = \frac{n_1}{n_2} \text{sen}(\theta_i).\]</span> Como <span class="math inline">\(n_1 &gt; n_2\)</span>, entonces <span class="math inline">\(\text{sen}(\theta_t) &gt; \text{sen}(\theta_i)\)</span>, lo que implica que <span class="math inline">\(\theta_t &gt; \theta_i\)</span>.</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Refraccion_Caso2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="n_1>n_2"><img src="_media/Refraccion_Caso2.png" class="img-fluid figure-img" style="width:40.0%" alt="n_1>n_2"></a></p>
+<figcaption><span class="math inline">\(n_1&gt;n_2\)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Onda incidiendo con un ángulo de 30° desde el agua hacia el aire">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Onda incidiendo con un ángulo de 30° desde el agua hacia el aire
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si la onda pasa del agua al aire, con <span class="math inline">\(n_1 \approx 1.33\)</span> y <span class="math inline">\(n_2 \approx 1\)</span>, la luz se doblará alejándose de la normal al salir del agua, lo que explica por qué los objetos sumergidos parecen más cercanos de lo que realmente están. En concreto, si la luz incide con un ángulo de 30° desde el agua hacia el aire, podemos calcular el ángulo de refracción usando la ley de Snell: <span class="math display">\[1.33\, \text{sen}(30°) = 1\, \text{sen}(\theta_t)\]</span> <span class="math display">\[\text{sen}(\theta_t) = 1.33\, \text{sen}(30°) = 1.33 \times 0.5 = 0.665\]</span> <span class="math display">\[\theta_t = \text{sen}^{-1}(0.665) \approx 41.81°\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reflexión-total-interna" class="level3">
+<h3 class="anchored" data-anchor-id="reflexión-total-interna">2.5. Reflexión Total Interna</h3>
+<p>En el caso en el que la onda pasa de un medio con mayor índice de refracción a otro con menor índice de refracción, hemos visto que la onda refractada se acerca a la superficie. Si se inclina la onda incidente, aumentando el ángulo de incidencia, existe un <strong>ángulo límite</strong> o <strong>ángulo crítico</strong>, <span class="math inline">\(\theta_l\)</span>, a partir del cual la luz no se refracta, sino que se refleja completamente dentro del primer medio. Este fenómeno se conoce como <strong>reflexión total interna</strong> y se produce cuando el ángulo de incidencia es mayor que el ángulo crítico, que se calcula como: <span class="math display">\[\theta_l = \text{sen}^{-1}\left(\frac{n_2}{n_1}\right)\]</span></p>
+<div style="display:flex; justify-content:center; gap:5%;align-items:flex-end;">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Reflexion_Total.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Ángulo límite"><img src="_media/Reflexion_Total.png" class="img-fluid figure-img" style="width:100.0%" alt="Ángulo límite"></a></p>
+<figcaption>Ángulo límite</figcaption>
+</figure>
+</div>
+</div>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Reflexion_Total2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Reflexión total interna"><img src="_media/Reflexion_Total2.png" class="img-fluid figure-img" style="width:100.0%" alt="Reflexión total interna"></a></p>
+<figcaption>Reflexión total interna</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Ángulo crítico para la luz que pasa del agua al aire">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Ángulo crítico para la luz que pasa del agua al aire
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si la luz pasa del agua al aire, con <span class="math inline">\(n_1 \approx 1.33\)</span> y <span class="math inline">\(n_2 \approx 1\)</span>, el ángulo crítico se calcula como: <span class="math display">\[\theta_l = \text{sen}^{-1}\left(\frac{1}{1.33}\right) \approx 48.75°\]</span></p>
+<p>Esto significa que si la luz incide desde el agua hacia el aire con un ángulo mayor a 48.75°, se producirá reflexión total interna, y la luz no saldrá del agua, sino que se reflejará completamente dentro de ella.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Aplicación: Fibra óptica">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Aplicación: Fibra óptica
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La fibra óptica es un medio de transmisión de datos que utiliza la reflexión total interna para guiar la luz a través de su núcleo.</p>
+<p>Está compuesta por un núcleo de vidrio o plástico con un índice de refracción <span class="math inline">\(n_1\)</span> alto, rodeado por una capa de revestimiento con un índice de refracción <span class="math inline">\(n_2\)</span> más bajo. Cuando la luz se introduce en el núcleo con un ángulo adecuado, se refleja completamente dentro del núcleo debido a la reflexión total interna, lo que permite que la luz viaje largas distancias sin pérdidas significativas. Este principio es fundamental para el funcionamiento de la fibra óptica, que se utiliza ampliamente en telecomunicaciones, redes de datos y aplicaciones médicas.</p>
+<blockquote class="blockquote">
+<p>Importante: el ángulo de incidencia en la fibra óptica tiene que ser mayor que el ángulo límite</p>
+</blockquote>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Fibra_optica.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Esquema de una fibra óptica [IA: Gemini]."><img src="_media/Fibra_optica.png" class="img-fluid figure-img" style="width:50.0%" alt="Esquema de una fibra óptica [IA: Gemini]."></a></p>
+<figcaption>Esquema de una fibra óptica <small>[IA: Gemini]</small>.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Otras fenómenos físicos y aplicaciones de la reflexión total interna">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Otras fenómenos físicos y aplicaciones de la reflexión total interna
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Además de la fibra óptica, la reflexión total interna tiene otras aplicaciones importantes en la tecnología y la ciencia, como:</p>
+<ul>
+<li><strong>Espejismos:</strong> En la atmósfera, la reflexión total interna puede causar espejismos, donde la luz se refracta y refleja en capas de aire con diferentes temperaturas, creando imágenes distorsionadas de objetos lejanos.</li>
+<li><strong>Espejos de agua:</strong> En condiciones atmosféricas específicas, la reflexión total interna puede hacer que objetos lejanos, como barcos o islas, aparezcan flotando en el aire o reflejados en la superficie del agua.</li>
+<li><strong>Prismas de reflexión total interna:</strong> Se utilizan en dispositivos ópticos como binoculares y cámaras para redirigir la luz sin pérdidas significativas.</li>
+<li><strong>Sensores de nivel:</strong> Se emplean en la industria para detectar el nivel de líquidos, aprovechando la reflexión total interna para determinar si un líquido está presente o no en un recipiente.</li>
+<li><strong>Endoscopios:</strong> En medicina, los endoscopios utilizan fibras ópticas para transmitir luz y permitir la visualización de órganos internos sin necesidad de cirugía invasiva.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="óptica-geométrica-el-modelo-de-rayos" class="level2">
+<h2 class="anchored" data-anchor-id="óptica-geométrica-el-modelo-de-rayos">3. Óptica Geométrica: El Modelo de Rayos</h2>
+<p>Históricamente, el estudio de la luz comenzó analizando su comportamiento macroscópico mucho antes de comprender su naturaleza electromagnética. Así, la <strong>óptica Geométrica</strong> surgió como una disciplina que modela la luz como rayos que se propagan en línea recta, sin considerar su naturaleza ondulatoria. Esta aproximación es válida siempre que la longitud de onda de la luz sea mucho menor que el tamaño de los objetos u orificios con los que interactúa, lo que permite ignorar fenómenos como la interferencia, la difracción o la polarización. Por lo tanto, la óptica geométrica no es una teoría independiente, sino un <strong>caso límite de la óptica ondulatoria</strong> que resulta extremadamente útil para estudiar la propagación de la luz a través de dispositivos complejos sin necesidad de recurrir a la complejidad de las ecuaciones de Maxwell y estudios ondulatorios, que son las que describen el comportamiento de las ondas electromagnéticos.</p>
+<section id="del-frente-de-onda-al-rayo" class="level3">
+<h3 class="anchored" data-anchor-id="del-frente-de-onda-al-rayo">3.1. Del Frente de Onda al Rayo</h3>
+<p>Desde el punto de vista teórico de la óptica ondulatoria, un <strong>rayo óptico</strong> es una construcción geométrica definida como una línea perpendicular a los frentes de onda, lo que indica la dirección en la que se propaga la energía lumínica.</p>
+<p>En la práctica, modelamos la luz como rayos para simplificar el análisis de su comportamiento en sistemas ópticos, especialmente cuando los objetos y aperturas son mucho mayores que la longitud de onda. Esto nos permite aplicar leyes simples de reflexión y refracción sin tener que resolver las complejas ecuaciones de Maxwell, lo que es fundamental para diseñar y entender dispositivos ópticos como lentes, espejos y sistemas de imagen.</p>
+</section>
+<section id="el-principio-de-propagación-rectilínea" class="level3">
+<h3 class="anchored" data-anchor-id="el-principio-de-propagación-rectilínea">3.2. El Principio de Propagación Rectilínea</h3>
+<p>El postulado fundamental de la óptica geométrica establece que <strong>la luz se propaga en línea recta</strong> mientras el índice de refracción del medio permanezca constante. Los rayos se desvían al cambiar de medio (refracción) o si el índice de refracción del propio medio varía, por ejemplo, por cambios de temperatura en el aire. También se desvían al reflejarse en superficies, como ocurre con los espejos. Sin embargo, en ausencia de estas condiciones, la luz seguirá un camino rectilíneo, lo que es la base para el análisis de sistemas ópticos.</p>
+</section>
+<section id="ejemplos-de-aplicación-de-la-óptica-geométrica" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-de-aplicación-de-la-óptica-geométrica">3.3. Ejemplos de aplicación de la Óptica Geométrica</h3>
+<p>Para comprender por qué modelamos la luz como rayos, podemos fijarnos en fenómenos cotidianos que demuestran la propagación rectilínea:</p>
+<ol type="1">
+<li><strong>Formación de Sombras y Penumbras (Eclipses):</strong> Cuando un objeto opaco se interpone ante un foco de luz extenso (como el Sol), la luz viaja en línea recta desde cada punto del emisor. Esto genera una zona de oscuridad total donde no llega ningún rayo (<strong>sombra</strong>) y una zona circundante donde solo llegan rayos de algunas partes del foco (<strong>penumbra</strong>). Este modelo geométrico es el que explica con precisión los eclipses de Sol y Luna.</li>
+</ol>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Eclipse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Esquema de eclipses [IA: Gemini]."><img src="_media/Eclipse.png" class="img-fluid figure-img" style="width:50.0%" alt="Esquema de eclipses [IA: Gemini]."></a></p>
+<figcaption>Esquema de eclipses <small>[IA: Gemini]</small>.</figcaption>
+</figure>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>La Cámara Oscura:</strong> Documentada desde el siglo XI por Al-Hazen, consiste en una caja cerrada con un pequeño orificio en una cara. Debido a que la luz viaja en línea recta y el orificio es pequeño, cada punto de un objeto exterior solo puede enviar un rayo (o un haz muy estrecho) a través del agujero, proyectando una imagen invertida en la pared opuesta. Es el fundamento geométrico de la fotografía.</li>
+</ol>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Camara_Oscura.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Esquema de la cámara oscura [IA: Gemini]."><img src="_media/Camara_Oscura.png" class="img-fluid figure-img" style="width:50.0%" alt="Esquema de la cámara oscura [IA: Gemini]."></a></p>
+<figcaption>Esquema de la cámara oscura <small>[IA: Gemini]</small>.</figcaption>
+</figure>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Efectos Ópticos de la Refracción:</strong> Seguramente has observado que un lápiz parece “doblarse” al introducirlo en un vaso con agua. Este fenómeno se explica por la refracción, que es el cambio de dirección de los rayos al pasar de un medio a otro con diferente índice de refracción. La luz viaja en línea recta dentro de cada medio, pero al cambiar de medio, su dirección se modifica según la ley de Snell, lo que da lugar a la ilusión óptica.</li>
+</ol>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/lapiz_vaso.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Esquema de un lápiz en un vaso con agua."><img src="_media/lapiz_vaso.png" class="img-fluid figure-img" style="width:30.0%" alt="Esquema de un lápiz en un vaso con agua."></a></p>
+<figcaption>Esquema de un lápiz en un vaso con agua.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="leyes-fundamentales-de-la-óptica-geométrica" class="level3">
+<h3 class="anchored" data-anchor-id="leyes-fundamentales-de-la-óptica-geométrica">3.4. Leyes Fundamentales de la Óptica Geométrica</h3>
+<p>La observación de los rayos de luz y su comportamiento al pasar de unos medios a otros dio lugar a las leyes de la óptica geométrica. Si el rayo de luz incide sobre una superficie, parte del rayo se refleja y parte se refracta. Si <span class="math inline">\(\theta_i\)</span> es el ángulo de incidencia que forma el rayo que incide en la superficie de separación entre dos medios con la normal, <span class="math inline">\(\theta_r\)</span> y <span class="math inline">\(\theta_t\)</span> son los ángulos de los rayos reflejado y refractado (o transmitido) con la misma normal, entonces las leyes que rigen estos fenómenos son:</p>
+<ol type="1">
+<li><strong>Ley de la Reflexión:</strong> El ángulo de incidencia y el de reflexión son iguales (<span class="math inline">\(\theta_i = \theta_{r}\)</span>).</li>
+<li><strong>Ley de la Refracción (Snell):</strong> Cuando la luz pasa de un medio 1 a un medio 2, se cumple: <span class="math display">\[n_1 \text{sen}(\theta_1) = n_2 \text{sen}(\theta_2)\]</span> Donde <span class="math inline">\(n\)</span> es el índice de refracción (<span class="math inline">\(n = c/v\)</span>).</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Recuerda:</strong> Si <span class="math inline">\(n_1 &gt; n_2\)</span>, existe un <strong>ángulo límite</strong> por encima del cual se produce la <strong>reflexión total</strong>, fundamento de la fibra óptica.</p>
+</blockquote>
+</section>
+</section>
+<section id="sistema-óptico-y-su-representación" class="level2">
+<h2 class="anchored" data-anchor-id="sistema-óptico-y-su-representación">4. Sistema óptico y su representación</h2>
+<p>Un sistema óptico es un conjunto de elementos (lentes, espejos, prismas, etc.) que interactúan con la luz para formar imágenes. Para analizar estos sistemas, utilizamos diagramas de rayos, que son representaciones gráficas que muestran cómo los rayos de luz se propagan a través del sistema. En estos diagramas, se representan los rayos incidentes, reflejados y refractados, lo que nos permite determinar la posición, tamaño y orientación de las imágenes formadas por el sistema óptico.</p>
+<section id="elementos-de-un-sistema-óptico" class="level3">
+<h3 class="anchored" data-anchor-id="elementos-de-un-sistema-óptico">4.1. Elementos de un sistema óptico</h3>
+<p>Los elementos más comunes en un sistema óptico son:</p>
+<ul>
+<li><strong>Lentes:</strong> Dispositivos transparentes que refractan la luz para convergerla o divergerla. Las lentes pueden ser convergentes (convexas) o divergentes (cóncavas).</li>
+<li><strong>Espejos:</strong> Superficies reflectantes que pueden ser planas o curvas, cóncavas o convexas, que reflejan la luz que incide sobre ellas.</li>
+<li><strong>Prismas:</strong> Dispositivos que refractan la luz para dispersarla en sus componentes espectrales y/o para cambiar su dirección. En la actualidad los prismas se utilizan principalmente para cambiar la dirección de la luz, mientras que la dispersión de la luz se realiza principalmente mediante <strong>redes de difracción</strong>.</li>
+<li><strong>Pantallas:</strong> Superficies donde se proyectan las imágenes formadas por los sistemas ópticos.</li>
+</ul>
+<p>Los sistemas ópticos más habituales son sistemas ópticos de <strong>revolución</strong>, que son aquellos que tienen simetría de circular alrededor de un <strong>eje óptico</strong>, lo que simplifica su análisis y diseño. El eje óptico es una línea imaginaria que pasa por el centro de un sistema óptico y es perpendicular a las superficies de los elementos ópticos. El <strong>vértice</strong> o <strong>vértice</strong> es el punto en el eje óptico donde se encuentra el sistema óptico, y es el punto de referencia para medir las distancias de objetos e imágenes.</p>
+<p>Por ejemplo, para una lente o un espejo curvo, el eje óptico sería la línea que pasa por el centro de la lente o el espejo y es perpendicular a su superficie, mientras que el vértice sería el punto donde el eje óptico intersecta la lente o el espejo.</p>
+</section>
+<section id="objetos-e-imágenes" class="level3">
+<h3 class="anchored" data-anchor-id="objetos-e-imágenes">4.2. Objetos e Imágenes</h3>
+<p>En óptica, un <strong>objeto</strong> es cualquier fuente de luz o cualquier cosa que refleje la luz, de forma que de todos los puntos del objeto se emiten rayos de luz. Los puntos del objeto se llama <strong>puntos objeto (<span class="math inline">\(O\)</span>)</strong>. Una <strong>imagen</strong> es la representación visual de un objeto formada por un sistema óptico, y los puntos de la imagen se llaman <strong>puntos imagen (<span class="math inline">\(O^\prime\)</span>)</strong>. Las imágenes pueden ser:</p>
+<ul>
+<li><strong>Reales:</strong> Se forman por la convergencia de rayos de luz, tras haber pasado por el sistema óptico, y se pueden proyectarse en una pantalla. En este caso los rayos salen del sistema óptico convergiendo, y se cruzan realmente.</li>
+<li><strong>Virtuales:</strong> Se forman por la apariencia divergencia de rayos de luz y no pueden proyectarse en una pantalla, ya que los rayos no se cruzan realmente. En este caso, los rayos parecen divergir desde un punto detrás del sistema óptico, de ahí el nombre de imagen virtual.</li>
+</ul>
+<div style="display:flex; justify-content:center; gap:5%;align-items:flex-center;">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Objeto_Imagen1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Imagen real"><img src="_media/Objeto_Imagen1.png" class="img-fluid figure-img" style="width:100.0%" alt="Imagen real"></a></p>
+<figcaption>Imagen real</figcaption>
+</figure>
+</div>
+</div>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Objeto_Imagen2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Imagen virtual"><img src="_media/Objeto_Imagen2.png" class="img-fluid figure-img" style="width:100.0%" alt="Imagen virtual"></a></p>
+<figcaption>Imagen virtual</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Las imágenes también pueden ser <strong>derechas</strong> o <strong>invertidas</strong>, dependiendo de la orientación de la imagen con respecto al objeto, de forma que si la imagen tiene la misma orientación que el objeto, se dice que es derecha, y si tiene orientación opuesta, se dice que es invertida.</p>
+<p>Por último, el tamaño de la imagen puede ser mayor, menor o igual al del objeto, lo que se describe mediante el <strong>aumento lateral</strong>, que es la razón de la altura de la imagen a la altura del objeto. Si el aumento lateral es mayor que 1, la imagen es mayor que el objeto, si es menor que 1, la imagen es menor que el objeto, y si es igual a 1, la imagen tiene el mismo tamaño que el objeto. Si el aumento lateral es positivo, la imagen es derecha, y si es negativo, la imagen es invertida.</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/arbol_SO.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Esquema de una imagen real, menor e invertida."><img src="_media/arbol_SO.png" class="img-fluid figure-img" style="width:80.0%" alt="Esquema de una imagen real, menor e invertida."></a></p>
+<figcaption>Esquema de una imagen real, menor e invertida.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="focos-objetos-e-imagen" class="level3">
+<h3 class="anchored" data-anchor-id="focos-objetos-e-imagen">4.3. Focos objetos e imagen</h3>
+<p>En sistemas ópticos, el <strong>foco objeto (<span class="math inline">\(F\)</span>)</strong> es el punto objeto sobre el eje óptico donde los rayos que inciden en el sistema óptico salen paralelos tras pasar por él.</p>
+<p>El <strong>foco imagen (<span class="math inline">\(F'\)</span>)</strong> es el punto imagen sobre el eje óptico donde los rayos que inciden paralelos al eje óptico convergen o parecen divergir después de pasar por el sistema. Estos puntos son fundamentales para determinar la formación de imágenes y se utilizan como referencia para aplicar las leyes de la óptica geométrica.</p>
+<div style="display:flex; justify-content:center; gap:5%;align-items:flex-center;">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Foco_Objeto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Foco objeto real"><img src="_media/Foco_Objeto.png" class="img-fluid figure-img" style="width:100.0%" alt="Foco objeto real"></a></p>
+<figcaption>Foco objeto real</figcaption>
+</figure>
+</div>
+</div>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Foco_Imagen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Foco imagen real"><img src="_media/Foco_Imagen.png" class="img-fluid figure-img" style="width:100.0%" alt="Foco imagen real"></a></p>
+<figcaption>Foco imagen real</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="distancias-y-alturas" class="level3">
+<h3 class="anchored" data-anchor-id="distancias-y-alturas">4.4. Distancias y alturas</h3>
+<p>En óptica, es fundamental medir las distancias y alturas de los objetos e imágenes para analizar su formación. La <strong>distancia objeto (<span class="math inline">\(s\)</span>)</strong> es la distancia desde el objeto al vértice, mientras que la <strong>distancia imagen (<span class="math inline">\(s'\)</span>)</strong> es la distancia desde la imagen al vértice. La <strong>altura del objeto (<span class="math inline">\(y\)</span>)</strong> es la distancia vertical desde el objeto al eje óptico, y la <strong>altura de la imagen (<span class="math inline">\(y'\)</span>)</strong> es la distancia vertical desde la imagen al eje óptico. Estas medidas son esenciales para aplicar las fórmulas de la óptica geométrica y determinar las características de las imágenes formadas por los sistemas ópticos.</p>
+<p>La <strong>distancia focal objeto (<span class="math inline">\(f\)</span>)</strong> es la distancia desde el vértice al foco objeto (<span class="math inline">\(F\)</span>), mientras que la <strong>distancia focal imagen (<span class="math inline">\(f'\)</span>)</strong> es la distancia desde el vértice al foco imagen (<span class="math inline">\(F'\)</span>).</p>
+<div style="text-align:center;">
+<div id="fig-distancias" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="Distancias y tamaños, objeto e imagen.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-distancias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/arbol_lente.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figura&nbsp;1: Distancias y tamaños, objeto e imagen."><img src="_media/arbol_lente.png" class="img-fluid figure-img" style="width:80.0%" alt="Distancias y tamaños, objeto e imagen."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distancias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Distancias y tamaños, objeto e imagen.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="trazado-de-rayos" class="level3">
+<h3 class="anchored" data-anchor-id="trazado-de-rayos">4.5. Trazado de rayos</h3>
+<p>El análisis de la formación de imágenes de un sistema óptico se puede hacer de forma gráfica, mediante lo que se conoce como <strong>trazado de rayos</strong>. Este trazado se apoya en tres rayos principales que facilitan la construcción de diagramas de rayos:</p>
+<ol type="1">
+<li><strong>Rayo paralelo:</strong> Incide paralelo al eje óptico y, después de pasar por el sistema óptico, se refracta o refleja de tal manera que pasa, real o virtualmente, por el foco imagen (<span class="math inline">\(F'\)</span>).</li>
+<li><strong>Rayo focal:</strong> Pasa por el foco objeto (<span class="math inline">\(F\)</span>) y, después de pasar por el sistema óptico, se refracta o refleja de tal manera que sale paralelo al eje óptico.</li>
+<li><strong>Rayo central:</strong> Es un rayo que no se desvía al pasar por el sistema óptico,es decir, sigue una trayectoria recta a través del sistema óptico. En el caso de las lentes, el rayo central pasa por el vértice de la lente, mientras que en el caso de los espejos, el rayo central pasa por el centro de curvatura del espejo.</li>
+</ol>
+<p>Estos rayos son fundamentales para determinar la posición, tamaño y orientación de las imágenes formadas por los sistemas ópticos, y se utilizan como referencia para aplicar las leyes de la óptica geométrica.</p>
+<div style="text-align:center;">
+<div id="fig-lente-delgada" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lente-delgada-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/marcha_rayos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figura&nbsp;2: Trazado de rayos. Rayo paralelo (azul), focal (verde) y central (rojo)."><img src="_media/marcha_rayos.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lente-delgada-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Trazado de rayos. Rayo paralelo (azul), focal (verde) y central (rojo).
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</section>
+<section id="criterio-de-signos" class="level2">
+<h2 class="anchored" data-anchor-id="criterio-de-signos">5. Criterio de Signos</h2>
+<p>El criterio de signos más utilizado en óptica es el <strong>criterio DIN</strong>, que es un sistema de coordenadas cartesiano centrado en el vértice (<span class="math inline">\(V\)</span>). Concretamente, el criterio de signos DIN establece lo siguiente:</p>
+<ul>
+<li>La lente o el espejo son verticales y el eje óptico es horizontal.</li>
+<li>El vértice (<span class="math inline">\(V\)</span>) de la superficie es el origen <span class="math inline">\((0,0)\)</span>.</li>
+<li>Las distancias de objetos e imágenes (<span class="math inline">\(s\)</span> y <span class="math inline">\(s'\)</span>) a la izquierda son negativas y a la derecha son positivas.</li>
+<li>Las alturas de los objetos e imágenes (<span class="math inline">\(y\)</span> y <span class="math inline">\(y'\)</span>) por debajo del eje son negativas y por encima del eje son positivas.</li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: aplicación del criterio de signos en @fig-distancias">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: aplicación del criterio de signos en <a href="#fig-distancias" class="quarto-xref">Figura&nbsp;1</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En <a href="#fig-distancias" class="quarto-xref">Figura&nbsp;1</a>, el objeto se encuentra a la izquierda del vértice, por lo que su distancia objeto (<span class="math inline">\(s\)</span>) es negativa. La imagen se forma a la derecha del vértice, por lo que su distancia imagen (<span class="math inline">\(s'\)</span>) es positiva. Además, el objeto está por encima del eje óptico, por lo que su altura (<span class="math inline">\(y\)</span>) es positiva, mientras que la imagen está por debajo del eje óptico, por lo que su altura (<span class="math inline">\(y'\)</span>) es negativa. En resumen, en este caso, <span class="math inline">\(s &lt; 0\)</span>, <span class="math inline">\(s' &gt; 0\)</span>, <span class="math inline">\(y &gt; 0\)</span> y <span class="math inline">\(y' &lt; 0\)</span> según el criterio de signos DIN.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="lentes-delgadas" class="level2">
+<h2 class="anchored" data-anchor-id="lentes-delgadas">6. Lentes Delgadas</h2>
+<p>Las lentes son el componente principal de instrumentos como el microscopio o el telescopio. Consisten en un medio transparente con dos superficies esféricas, que pueden ser convexas o cóncavas. Las lentes se clasifican en:</p>
+<ul>
+<li><strong>Lentes convergentes:</strong> Son más anchas en el centro que en los bordes, y esta forma produce que los rayos paralelos al eje óptico que inciden sobre la lente salgan de ella convergiendo hacia el foco imagen, que por tanto será real. Las lentes convergentes se representan con una una doble flecha que apunta hacia afuera, indicando que la luz se refracta hacia el eje óptico.</li>
+</ul>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Lentes_Convergentes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Lentes convergentes."><img src="_media/Lentes_Convergentes.png" class="img-fluid figure-img" style="width:80.0%" alt="Lentes convergentes."></a></p>
+<figcaption>Lentes convergentes.</figcaption>
+</figure>
+</div>
+</div>
+<p>Las lentes convergentes se utilizan en una amplia variedad de aplicaciones, como en gafas para corregir la hipermetropía, en cámaras fotográficas para enfocar la luz y en instrumentos ópticos como microscopios y telescopios para ampliar la imagen de objetos lejanos o pequeños.</p>
+<ul>
+<li><strong>Lentes divergentes:</strong> Son más anchas en los bordes que en el centro, lo que produce los rayos paralelos al eje óptico que entren en la lente salgan divergiendo, por lo que el foco imagen será virtual. Las lentes divergentes se representan con una doble flecha que apunta hacia adentro, indicando que la luz se refracta alejándose del eje óptico.</li>
+</ul>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Lentes_Divergentes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Lentes divergentes."><img src="_media/Lentes_Divergentes.png" class="img-fluid figure-img" style="width:80.0%" alt="Lentes divergentes."></a></p>
+<figcaption>Lentes divergentes.</figcaption>
+</figure>
+</div>
+</div>
+<p>Las lentes divergentes se utilizan principalmente para corregir la miopía, ya que ayudan a divergir los rayos de luz antes de que entren en el ojo, permitiendo que la imagen se forme correctamente en la retina. También se emplean en algunos tipos de cámaras y dispositivos ópticos para controlar la dispersión de la luz.</p>
+<div style="display:flex; justify-content:center; gap:5%;align-items:flex-center;">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Lente_convergente_foco.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Foco imagen de lente convergente"><img src="_media/Lente_convergente_foco.png" class="img-fluid figure-img" style="width:100.0%" alt="Foco imagen de lente convergente"></a></p>
+<figcaption>Foco imagen de lente convergente</figcaption>
+</figure>
+</div>
+</div>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Lente_divergente_foco.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Foco imagen de lente divergente"><img src="_media/Lente_divergente_foco.png" class="img-fluid figure-img" style="width:100.0%" alt="Foco imagen de lente divergente"></a></p>
+<figcaption>Foco imagen de lente divergente</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="ecuación-de-gauss-para-lentes-delgadas" class="level3">
+<h3 class="anchored" data-anchor-id="ecuación-de-gauss-para-lentes-delgadas">6.1. Ecuación de Gauss para lentes delgadas</h3>
+<p>La ecuación que relaciona la distancia objeto (<span class="math inline">\(s\)</span>), la distancia imagen (<span class="math inline">\(s'\)</span>) y la distancia focal imagen (<span class="math inline">\(f'\)</span>) de una lente delgada es conocida como la <strong>ecuación de Gauss</strong> para lentes delgadas. Esta ecuación se deriva a partir de las leyes de la óptica geométrica y se expresa como: <span class="math display">\[\frac{1}{s'} - \frac{1}{s} = \frac{1}{f'}\]</span></p>
+<p>donde <span class="math inline">\(s\)</span> es la distancia desde el objeto al vértice de la lente, <span class="math inline">\(s'\)</span> es la distancia desde la imagen al vértice de la lente, y <span class="math inline">\(f'\)</span> es la distancia focal imagen de la lente. Esta ecuación es fundamental para analizar y diseñar sistemas ópticos que utilizan lentes delgadas, ya que permite determinar la posición y características de las imágenes formadas por estas lentes.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Posición de una imagen">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Posición de una imagen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si conocemos la distancia objeto (<span class="math inline">\(s\)</span>) y la distancia focal imagen (<span class="math inline">\(f'\)</span>) de una lente delgada, podemos calcular la distancia imagen (<span class="math inline">\(s'\)</span>) utilizando la ecuación de Gauss. Por ejemplo, si un objeto se encuentra a 30 cm de una lente delgada con una distancia focal de 10 cm, podemos calcular <span class="math inline">\(s'\)</span> de la siguiente manera: <span class="math display">\[\frac{1}{s'} - \frac{1}{30} = \frac{1}{10}\]</span> <span class="math display">\[\frac{1}{s'} = \frac{1}{10} + \frac{1}{30} = \frac{3}{30} + \frac{1}{30} = \frac{4}{30}\]</span> <span class="math display">\[s' = \frac{30}{4} = 7.5 \text{ cm}\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Focos objeto e imagen de una lente delgada">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Focos objeto e imagen de una lente delgada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>A partir de la ecuación de Gauss, se pueden determinar las posiciones de los focos objeto e imagen de una lente delgada. La posición del foco imagen (<span class="math inline">\(F'\)</span>) se obtiene haciendo <span class="math inline">\(s=\infty\)</span>, lo que significa que el foco imagen se encuentra a una distancia igual a la distancia focal imagen (<span class="math inline">\(f'\)</span>) desde el vértice, es decir, <span class="math inline">\(s' = f'\)</span>, como era de esperar.</p>
+<p>Por otro lado, el foco objeto (<span class="math inline">\(F\)</span>) se obtiene haciendo <span class="math inline">\(s'=\infty\)</span>, lo que significa que el foco objeto se encuentra a una distancia igual a la distancia focal objeto (<span class="math inline">\(f\)</span>) desde el vértice, y se puede calcular utilizando la relación entre las distancias focales objeto e imagen: <span class="math display">\[\frac{1}{f} + \frac{1}{f'} = 0\]</span> De esta manera, si conocemos la distancia focal imagen (<span class="math inline">\(f'\)</span>) de una lente delgada, podemos calcular la distancia focal objeto (<span class="math inline">\(f\)</span>) utilizando la fórmula: <span class="math display">\[f = -f'\]</span> Esto significa que el foco objeto se encuentra a la misma distancia que el foco imagen, pero en el lado opuesto del vértice, lo que es una característica fundamental de las lentes delgadas.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="relación-de-tamaños" class="level3">
+<h3 class="anchored" data-anchor-id="relación-de-tamaños">6.2 Relación de tamaños</h3>
+<p>La relación entre el tamaño de la imagen <span class="math inline">\(y\prime\)</span> y el tamaño del objeto <span class="math inline">\(y\)</span> se calcula utilizando la siguiente fórmula: <span class="math display">\[\frac{y'}{y} = \frac{s'}{s}\]</span> donde <span class="math inline">\(s'\)</span> es la distancia imagen y <span class="math inline">\(s\)</span> es la distancia objeto.</p>
+<section id="aumento-lateral-beta" class="level4">
+<h4 class="anchored" data-anchor-id="aumento-lateral-beta">Aumento Lateral (<span class="math inline">\(\beta\)</span>)</h4>
+<p>La relación entre el tamaño imagen y el tamaños objeto se conoce como el <strong>aumento lateral</strong> (<span class="math inline">\(\beta\)</span>), y es una medida de cuánto más grande o más pequeña es la imagen en comparación con el objeto. Es decir, el aumento lateral se define como la razón entre el tamaño de la imagen y el tamaño del objeto, y se calcula utilizando la siguiente fórmula: <span class="math display">\[\beta = \frac{y'}{y} = \frac{s'}{s}\]</span> * Si <span class="math inline">\(\beta &gt; 0\)</span>, la imagen es <strong>derecha</strong>. * Si <span class="math inline">\(\beta &lt; 0\)</span>, la imagen es <strong>invertida</strong>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Cálculo del aumento lateral">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Cálculo del aumento lateral
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si se conoce la posición y el tamaño de un objeto, y se quiere obtener el tamaño de la imagen formada por una lente delgada de focal imagen (<span class="math inline">\(f'\)</span>), se puede calcular el aumento lateral (<span class="math inline">\(\beta\)</span>), primero es necesario obtener la distancia imagen (<span class="math inline">\(s'\)</span>) utilzando la ecuación de Gauss. Luego, se utiliza la expresión de <span class="math inline">\(\beta\)</span> para obtener el aumento lateral. A partir del tamaño del objeto se puede obtener con <span class="math inline">\(\beta\)</span> el tamañao de la imagen.</p>
+<p>Por ejemplo, si un objeto de 5 cm de altura se encuentra a 30 cm de una lente delgada con una distancia focal de 10 cm, hemos calculado previamente que la distancia imagen (<span class="math inline">\(s'\)</span>) es de 7.5 cm, entonces el aumento lateral se calcula como: <span class="math display">\[\beta = \frac{s'}{s} = \frac{7.5}{30} = 0.25\]</span> Esto significa que la imagen es un cuarto del tamaño del objeto, es decir, la imagen es más pequeña que el objeto. Además, como <span class="math inline">\(\beta\)</span> es positivo, la imagen es derecha, lo que indica que tiene la misma orientación que el objeto. El tamaño de la imagen se puede calcular multiplicando el tamaño del objeto por el aumento lateral: <span class="math display">\[y' = \beta \cdot y = 0.25 \cdot 5 \text{ cm} = 1.25 \text{ cm}\]</span> Por lo tanto, la imagen formada por la lente delgada tiene una altura de 1.25 cm, es derecha y más pequeña que el objeto original.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="marcha-de-rayos" class="level3">
+<h3 class="anchored" data-anchor-id="marcha-de-rayos">6.3 Marcha de rayos</h3>
+<p>La marcha de rayos descrita anteriomente y mostrada en <a href="#fig-lente-delgada" class="quarto-xref">Figura&nbsp;2</a> permite obtener graficamente la posición de las imágenes. Para ello necesita la posición de los focos objetos e imagen de la lente.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Marcha de rayos de una lente convergente">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Marcha de rayos de una lente convergente
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Marcha_lente_a_7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Marcha de rayos de una lente convergente"><img src="_media/Marcha_lente_a_7.png" class="img-fluid figure-img" style="width:80.0%" alt="Marcha de rayos de una lente convergente"></a></p>
+<figcaption>Marcha de rayos de una lente convergente</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Marcha de rayos de una lente divergente">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Marcha de rayos de una lente divergente
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Marcha_lente_c_7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Marcha de rayos de una lente divergente"><img src="_media/Marcha_lente_c_7.png" class="img-fluid figure-img" style="width:80.0%" alt="Marcha de rayos de una lente divergente"></a></p>
+<figcaption>Marcha de rayos de una lente divergente</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="espejos-esféricos" class="level2">
+<h2 class="anchored" data-anchor-id="espejos-esféricos">7. Espejos Esféricos</h2>
+<p>Un espejo es un sistema donde la luz cambia de sentido tras la reflexión. Existe dos tipos de espejos esféricos:</p>
+<ul>
+<li><strong>Espejo Cóncavo:</strong> La parte reflectante está curvada hacia el objeto. Puede formar imágenes reales o virtuales según la posición del objeto.</li>
+<li><strong>Espejo Convexo:</strong> La parte reflectante está curvada hacia fuera. Siempre forma imágenes virtuales, derechas y de menor tamaño.</li>
+</ul>
+<p>El radio de curvatura (<span class="math inline">\(R\)</span>) es la posición del centro de curvatura mediad desde el vertice, que es el origen del sistema de referencia. Por esto, para un espejo cóncavo, el radio de curvatura es positivo, mientras que para un espejo convexo, el radio de curvatura es negativo.</p>
+<section id="ecuación-del-espejo-esférico" class="level3">
+<h3 class="anchored" data-anchor-id="ecuación-del-espejo-esférico">7.1. Ecuación del espejo esférico</h3>
+<p>Para un espejo esférico de radio <span class="math inline">\(R\)</span>, la relación entre la posición del objeto (<span class="math inline">\(s\)</span>) y la de la imagen (<span class="math inline">\(s'\)</span>) viene dada por:</p>
+<p><span class="math display">\[\frac{1}{s'} + \frac{1}{s} = \frac{2}{R}\]</span></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Focos de un espejo esférico">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Focos de un espejo esférico
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>De la expresión del espejo esférico se puede obtener distancia focal imagen y objeto.</p>
+<p>Para obtener la distancia focal imagen (<span class="math inline">\(f'\)</span>) se hace <span class="math inline">\(s=\infty\)</span>, lo que significa que el foco imagen se encuentra a una distancia igual a la mitad del radio de curvatura (<span class="math inline">\(R/2\)</span>) desde el vértice, es decir, <span class="math inline">\(f' = R/2\)</span>.</p>
+<p>Para obtener la distancia focal objeto (<span class="math inline">\(f\)</span>) se hace <span class="math inline">\(s'=\infty\)</span>, lo que significa que el foco objeto se encuentra a una distancia igual a la mitad del radio de curvatura (<span class="math inline">\(R/2\)</span>) desde el vértice, es decir, <span class="math inline">\(f = R/2\)</span>.</p>
+<p>Por tanto, para una espejo esférico, el foco objeto e imagen se encuentran en el mismo punto, a una distancia de <span class="math inline">\(R/2\)</span> del vértice, aunque en lados opuestos del vértice.</p>
+<p>La ecuación del espejo esférico se puede reescribir como: <span class="math display">\[\frac{1}{s'} + \frac{1}{s} = \frac{1}{f'}\]</span></p>
+<div style="display:flex; justify-content:center; gap:5%;align-items:flex-center;">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Foco_imagen_espejo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Foco imagen de un espejo cóncavo"><img src="_media/Foco_imagen_espejo.png" class="img-fluid figure-img" style="width:60.0%" alt="Foco imagen de un espejo cóncavo"></a></p>
+<figcaption>Foco imagen de un espejo cóncavo</figcaption>
+</figure>
+</div>
+</div>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Foco_objeto_espejo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Foco objeto de un espejo cóncavo"><img src="_media/Foco_objeto_espejo.png" class="img-fluid figure-img" style="width:60.0%" alt="Foco objeto de un espejo cóncavo"></a></p>
+<figcaption>Foco objeto de un espejo cóncavo</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Posición de una imagen en un espejo esférico">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Posición de una imagen en un espejo esférico
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si un objeto se encuentra a 10 cm de un espejo cóncavo con un radio de curvatura de 40 cm, podemos calcular la posición de la imagen utilizando la ecuación del espejo esférico.</p>
+<p>El objeto se encuentra a la izquierda del vértice, por lo que su distancia objeto (<span class="math inline">\(s\)</span>) es de -10 cm. El radio de curvatura es positivo para un espejo cóncavo, por lo que <span class="math inline">\(R = -40\)</span> cm. Sustituyendo estos valores en la ecuación del espejo esférico, tenemos:</p>
+<p><span class="math display">\[\frac{1}{s'} - \frac{1}{10} = \frac{2}{-40}\]</span> <span class="math display">\[\frac{1}{s'} = -\frac{1}{20} - \frac{1}{10} = -\frac{3}{20}\]</span> <span class="math display">\[s' = -\frac{20}{3} \text{ cm}=-6.67 \text{ cm}\]</span></p>
+<p>Es decir, la imagen se forma a 6.67 cm del vértice, pero en el lado del objeto, lo que indica que la imagen es real.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="relación-de-tamaños-en-espejos-esféricos" class="level3">
+<h3 class="anchored" data-anchor-id="relación-de-tamaños-en-espejos-esféricos">7.2. Relación de tamaños en espejos esféricos</h3>
+<p>La relación entre el tamaño de la imagen <span class="math inline">\(y\prime\)</span> y el tamaño del objeto <span class="math inline">\(y\)</span> en un espejo esférico se calcula utilizando la siguiente fórmula: <span class="math display">\[\frac{y'}{y} = -\frac{s'}{s}\]</span> donde <span class="math inline">\(s'\)</span> es la distancia imagen y <span class="math inline">\(s\)</span> es la distancia objeto. El signo negativo en la fórmula indica que si la imagen es real (es decir, si <span class="math inline">\(s'\)</span> es negativo), entonces la imagen será invertida con respecto al objeto, lo que se refleja en el aumento lateral (<span class="math inline">\(\beta\)</span>) de la imagen, que en este caso crea: <span class="math display">\[\beta = -\frac{s'}{s}\]</span> * Si <span class="math inline">\(\beta &gt; 0\)</span>, la imagen es <strong>derecha</strong>. * Si <span class="math inline">\(\beta &lt; 0\)</span>, la imagen es <strong>invertida</strong>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Cálculo del aumento lateral en un espejo esférico">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Cálculo del aumento lateral en un espejo esférico
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si se conoce la posición y el tamaño de un objeto, y se quiere obtener el tamaño de la imagen formada por un espejo esférico de radio de curvatura (<span class="math inline">\(R\)</span>), se puede calcular el aumento lateral (<span class="math inline">\(\beta\)</span>), primero es necesario obtener la distancia imagen (<span class="math inline">\(s'\)</span>) utilizando la ecuación del espejo esférico. Luego, se utiliza la expresión de <span class="math inline">\(\beta\)</span> para obtener el aumento lateral. A partir del tamaño del objeto se puede obtener con <span class="math inline">\(\beta\)</span> el tamaño de la imagen.</p>
+<p>Por ejemplo, si un objeto de 5 cm de altura se encuentra a 10 cm de un espejo cóncavo con un radio de curvatura de 40 cm, hemos calculado previamente que la distancia imagen (<span class="math inline">\(s'\)</span>) es de -6.67 cm, entonces el aumento lateral se calcula como: <span class="math display">\[\beta = -\frac{s'}{s} = -\frac{-6.67}{-10} = 0.667\]</span> Esto significa que la imagen es aproximadamente dos tercios del tamaño del objeto, es decir, la imagen es más pequeña que el objeto. Además, como <span class="math inline">\(\beta\)</span> es positivo, la imagen es derecha, lo que indica que tiene la misma orientación que el objeto. El tamaño de la imagen se puede calcular multiplicando el tamaño del objeto por el aumento lateral: <span class="math display">\[y' = \beta \cdot y = 0.667 \cdot 5 \text{ cm} = 3.33 \text{ cm}\]</span> Por lo tanto, la imagen formada por el espejo cóncavo tiene una altura de 3.33 cm, es derecha y más pequeña que el objeto original.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="marcha-de-rayos-en-espejos-esféricos" class="level3">
+<h3 class="anchored" data-anchor-id="marcha-de-rayos-en-espejos-esféricos">7.3. Marcha de rayos en espejos esféricos</h3>
+<p>La marcha de rayos para espejos esféricos se basa en los mismos principios que para las lentes delgadas, pero con algunas diferencias debido a la naturaleza de la reflexión en lugar de la refracción.</p>
+<p>Para un espejo cóncavo, los focos objetos e imagen son reales. Los rayos paralelos al eje óptico se reflejan convergiendo hacia el foco imagen (<span class="math inline">\(F'\)</span>), los rayos que pasan por el foco objeto (<span class="math inline">\(F\)</span>) se reflejan saliendo paralelos al eje óptico y los rayos que pasan por el centro de curvatura se reflejan sobre sí mismos. La imagen se forma en la intersección de estos rayos reflejados, y puede ser real o virtual dependiendo de si la posición del objeto es antes del foco (imagen virtual) o después del foco (imagen real).</p>
+<p>Para un espejo convexo, los rayos paralelos al eje óptico se reflejan divergiendo, de forma que es la continuación del rayo reflejado la que pasa por el foco imagen (<span class="math inline">\(F\)</span>); los rayos que inciden hacia el foco objeto (<span class="math inline">\(F\)</span>) se reflejan saliendo paralelos al eje óptico; y los rayos que inciden hacia el centro de curvatura se reflejan sobre sí mismos. La imagen se forma en la intersección de las continuaciones de los rayos reflejados. En este caso, la imagen siempre es virtual, derecha y de menor tamaño que el objeto.</p>
+<div style="display:flex; justify-content:center; gap:5%;align-items:flex-center;">
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Marcha_rayos_espejo_concavo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Marcha de rayos en un espejo cóncavo"><img src="_media/Marcha_rayos_espejo_concavo.png" class="img-fluid figure-img" style="width:40.0%" alt="Marcha de rayos en un espejo cóncavo"></a></p>
+<figcaption>Marcha de rayos en un espejo cóncavo</figcaption>
+</figure>
+</div>
+</div>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/Marcha_rayos_espejo_convexo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Marcha de rayos en un espejo convexo"><img src="_media/Marcha_rayos_espejo_convexo.png" class="img-fluid figure-img" style="width:90.0%" alt="Marcha de rayos en un espejo convexo"></a></p>
+<figcaption>Marcha de rayos en un espejo convexo</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="el-ojo-humano-y-sus-defectos" class="level2">
+<h2 class="anchored" data-anchor-id="el-ojo-humano-y-sus-defectos">8. El Ojo Humano y sus Defectos</h2>
+<p>El ojo funciona como un sistema de lentes convergentes que proyecta imágenes en la retina. Como repaso para Física II, debes recordar cómo se corrigen las ametropías:</p>
+<ul>
+<li><strong>Miopía:</strong> El ojo es demasiado potente y la imagen se forma antes de la retina. Se corrige con <strong>lentes divergentes</strong>.</li>
+<li><strong>Hipermetropía:</strong> La imagen se formaría detrás de la retina. Se corrige con <strong>lentes convergentes</strong>.</li>
+<li><strong>Astigmatismo:</strong> La córnea tiene una forma irregular, lo que provoca que la imagen se forme en diferentes planos. Se corrige con <strong>lentes cilíndricas</strong>.</li>
+<li><strong>Presbicia:</strong> El cristalino pierde flexibilidad con la edad, lo que dificulta enfocar objetos cercanos. Se corrige con <strong>lentes convergentes</strong> para visión cercana.</li>
+</ul>
+<div class="quizdown">
+
+# ¿Qué modelo de la luz postulaba que esta estaba formada por pequeñas partículas materiales?
+- [ ] Modelo Ondulatorio de Huygens.
+- [x] Modelo Corpuscular de Newton.
+- [ ] Modelo Electromagnético de Maxwell.
+
+# ¿Quién demostró teóricamente en 1865 que la luz es una onda electromagnética?
+- [ ] Heinrich Hertz.
+- [x] James C. Maxwell.
+- [ ] Thomas Young.
+
+# ¿Qué campos oscilan en una onda electromagnética y cómo lo hacen?
+- [ ] Campos eléctricos y magnéticos paralelos entre sí.
+- [x] Campos eléctricos y magnéticos perpendiculares entre sí y a la dirección de propagación.
+- [ ] Solo campos eléctricos en la dirección del movimiento.
+
+# La velocidad de la luz en el vacío es aproximadamente:
+- [x] $3 \cdot 10^8\ \text{m/s}$
+- [ ] $2.25 \cdot 10^8\ \text{m/s}$
+- [ ] $340\ \text{m/s}$
+
+# El índice de refracción ($n$) de un material se define como:
+- [ ] El producto de la velocidad en el vacío y en el medio.
+- [x] El cociente entre la velocidad en el vacío ($c$) y la velocidad en el medio ($v$).
+- [ ] La diferencia de velocidades entre dos medios.
+
+# ¿Cuál es el valor mínimo que puede tomar el índice de refracción?
+- [ ] 0.
+- [ ] 0.5.
+- [x] 1 (para el vacío).
+
+# ¿En qué rango de longitudes de onda se encuentra la luz visible?
+- [ ] Entre 100 nm y 400 nm.
+- [x] Entre 380 nm y 780 nm.
+- [ ] Entre 1 mm y 1 m.
+
+# ¿Qué tipo de ondas electromagnéticas son las más energéticas y tienen gran poder de penetración?
+- [ ] Radioondas.
+- [ ] Rayos X.
+- [x] Rayos gamma.
+
+# ¿Qué fenómeno ocurre cuando dos o más ondas coherentes se suman en el espacio?
+- [ ] Difracción.
+- [x] Interferencias.
+- [ ] Polarización.
+
+# El principio que explica que cada punto de un frente de onda actúa como un nuevo foco emisor es el:
+- [x] Principio de Huygens.
+- [ ] Principio de Newton.
+- [ ] Principio de Fermat.
+
+# ¿Qué fenómeno es exclusivo de las ondas transversales como la luz?
+- [ ] Refracción.
+- [ ] Difracción.
+- [x] Polarización.
+
+# Según la ley de la reflexión, el ángulo de incidencia es:
+- [ ] El doble que el de reflexión.
+- [x] Igual al ángulo de reflexión.
+- [ ] Complementario al de reflexión.
+
+# ¿Cómo se conoce a la ley que describe el cambio de dirección de la luz al pasar de un medio a otro?
+- [ ] Ley de Hertz.
+- [ ] Ley de Maxwell.
+- [x] Ley de Snell.
+
+# Si la luz pasa del aire ($n \approx 1$) al agua ($n \approx 1.33$), el rayo refractado:
+- [ ] Se aleja de la normal.
+- [x] Se acerca a la normal.
+- [ ] No cambia de dirección.
+
+# ¿Qué condición es necesaria para que ocurra la reflexión total interna?
+- [ ] Que la luz pase de un medio de menor índice a uno de mayor índice.
+- [x] Que la luz pase de un medio de mayor índice a uno de menor índice.
+- [ ] Que el ángulo de incidencia sea menor que el ángulo crítico.
+
+# ¿Cuál es la fórmula para calcular el ángulo crítico ($\theta_l$)?
+- [x] $\theta_l = \sin^{-1}(n_2 / n_1)$
+- [ ] $\theta_l = \cos(n_1 / n_2)$
+- [ ] $\theta_l = n_1 \cdot \sin(\theta_i)$
+
+# ¿Cuál es la aplicación tecnológica más importante de la reflexión total interna?
+- [ ] El telescopio.
+- [x] La fibra óptica.
+- [ ] La cámara oscura.
+
+# La óptica geométrica es válida siempre que:
+- [ ] La longitud de onda sea mucho mayor que los objetos.
+- [x] La longitud de onda sea mucho menor que el tamaño de los objetos.
+- [ ] La luz viaje a través del vacío únicamente.
+
+# En óptica geométrica, un rayo se define como:
+- [ ] Una partícula de luz.
+- [x] Una línea perpendicular a los frentes de onda.
+- [ ] Una onda transversal circular.
+
+# ¿Qué postulado establece que la luz viaja en línea recta si el medio es constante?
+- [x] Propagación rectilínea de la luz.
+- [ ] Ley de Snell.
+- [ ] Principio de superposición.
+
+# La zona donde solo llegan rayos de algunas partes de un foco extenso se llama:
+- [ ] Sombra.
+- [ ] Umbra.
+- [x] Penumbra.
+
+# ¿Qué tipo de imagen se puede proyectar en una pantalla porque los rayos realmente se cruzan?
+- [ ] Imagen virtual.
+- [x] Imagen real.
+- [ ] Imagen invertida.
+
+# El punto donde convergen los rayos que inciden paralelos al eje óptico es el:
+- [ ] Foco objeto ($F$).
+- [x] Foco imagen ($F'$).
+- [ ] Vértice ($V$).
+
+# Según el criterio de signos DIN, las distancias a la izquierda del vértice son:
+- [ ] Positivas.
+- [x] Negativas.
+- [ ] Nulas.
+
+# En el trazado de rayos, el "rayo focal" es aquel que:
+- [x] Pasa por el foco objeto y sale paralelo al eje óptico.
+- [ ] Pasa por el foco imagen y no se desvía.
+- [ ] Incide paralelo al eje óptico.
+
+# La ecuación de Gauss para lentes delgadas es:
+- [ ] $1/s' + 1/s = 1/f'$
+- [x] $1/s' - 1/s = 1/f'$
+- [ ] $n_1 \cdot s = n_2 \cdot s'$
+
+# Si el aumento lateral ($\beta$) es negativo, la imagen está:
+- [ ] Derecha.
+- [x] Invertida.
+- [ ] Es mayor que el objeto.
+
+# En un espejo esférico, la distancia focal ($f'$) es:
+- [ ] Igual al radio de curvatura ($R$).
+- [x] La mitad del radio de curvatura ($R/2$).
+- [ ] El doble del radio de curvatura ($2R$).
+
+# Un espejo convexo siempre forma imágenes:
+- [ ] Reales, invertidas y mayores.
+- [x] Virtuales, derechas y de menor tamaño.
+- [ ] Virtuales, invertidas y mayores.
+
+# La miopía ocurre cuando el ojo es demasiado potente y se corrige con:
+- [ ] Lentes convergentes.
+- [x] Lentes divergentes.
+- [ ] Espejos cóncavos.
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
