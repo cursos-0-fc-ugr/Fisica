@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+
+<body>
+    <div id="header">
+      <h1 class="title">Cinemática</h1>
+    </div>
+  
+  
+    <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+    
+  
+    <section>
+      <header>
+        <h1 id="Cinemática-de-la-partícula-en-una-dimensión">Cinemática de la partícula en una dimensión</h1>
+      </header>
+
+      <header>
+        <h2 id="introducción">Introducción</h2>
+      </header>
+
+      <p>El fenómeno físico más obvio y fundamental es el movimiento. La <span><em>Mecánima</em></span> (ciencia del movimiento) es la rama de la Físaca que estudia los movimientos y las fuerzas que las producen. Atendiendo a la naturaleza de su contenido, la Mecánima se divide en dos partes:</p>
+
+      <ol>
+        <li><p><span><strong>Cinemática</strong></span>, o teoría geométrica del movimiento.</p></li>
+        <li><p><span><strong>Dinámica</strong></span>, o estudio de las relaciones existentes entre las fuerzas y los movimientos que éstos producen.</p></li>
+      </ol>
+
+      <p>En este tema nos centraremos en la Cinemática, más concretamente en el caso particular de una dimensión. Los elementos básicos de la cinemática son <span> <span class="math display">\[\fbox{móvil, espacio, tiempo}\]</span></span>
+
+      <p>El móvil más simple que podemos considerar es el punto material (partícula). La partícula es una idealización de los cuerpos que existen en la Naturaleza. Entendemos por <span><strong>punto material o partícula</strong></span> un cuerpo de dimensiones tan pequeñas que pueda considerarse como puntiforme; de ese modo, su posición en el espacio quedará determinada al fijar las coordenadas de un punto geométrico. Naturalmente, la posibilidad de despreciar las dimensiones de un cuerpo estará en relación con las condiciones especíricas del problema considerado. Por ejemplo, podemos considerar la Tierra como un punto material si sśolo estamos interesados en su movimiento alrededor del Sol, pero no cuando estemos interesados en el movimiento de la Tierra alrededor de su propio eje.</p>
+
+      <p>Dado un punto material, con una cierta masa inercia, se precisará un cierto esfuerzo para modificar su estado de movimiento. Llamaremos <span><strong>fuerza</strong></span> a cualquier agente capaz de modificar el estado de movimiento de los cuerpos.
+    </section>
+
+
+    <section>
+        <header>
+          <h2 id="desplazamiento-velocidad-módulo-de-la-velocidad">Desplazamiento, velocidad, módulo de la velocidad</h2>
+        </header>
+
+        <p>Dado que estamos por el momento trabajando en una dimensión no hace falta notación vectorial, solo <span class="math inline">\(+\)</span> ó <span class="math inline">\(-\)</span> para indicar el sentido del movimiento.</p>
+        <ol>
+            <li><p><span><strong>Posición y desplazamiento</strong></span></p>
+              <p>La descripción del movimiento consiste en saber la posición de una partícula y cómo ésta cambia con el movimiento de la partícula. En un movimiento en una dimensión se suele escoger el eje <span class="math inline">\(x\)</span> a lo largo de la línea por la que discurre el movimiento. Ejemplo:</p>
+              <p><span class="math display">\[x (t_i) \, ---------------------------  \, x(t_f)\]</span></p>
+              <p>Distinguiremos ahora entre dos conceptos, <span><em>desplazamiento</em></span> y <span><em>distancia recorrida</em></span>. La <span><em>distancia recorrida</em></span> es la longitud que un partícula sigue desde su posición inicial a su posición final. Es, por tanto, una magnitud escalar siempre positiva. Por otra parte, el <span><em>desplazamiento</em></span> es el cambio en la posición de la partícula. Será positivo si la partícula va en la dirección de <span class="math inline">\(x\)</span> positiva y negativo si va en la dirección de <span class="math inline">\(x\)</span> negativa.</p>
+
+              <article style="background-color:lightblue;border-color:blue">
+                <strong>EJEMPLO: Sacamos nuestro perro a pasear y le lanzamos un palo en línea recta a <span class="math inline">\(5\)</span> m de distancia. El perro corre, alcanza el palo y regresa con él en la boca, recorriendo <span class="math inline">\(3\)</span> m. Entonces se para y se echa al suelo.
+                <ol>
+                  <li><p>¿Cuál es la distancia total que recorre el perro?</p></li>
+                  <li><p>¿Cuál es el desplazamiento neto?</p></li>
+                </ol></strong>
+    
+                <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+                <div id="sol-e1" style="display:none;">
+                  
+                  <p> Solución: </p>
+                  <ol>
+                    <li><p>El perro ha recorrido como distancia total <span class="math inline">\(5+3=8\)</span> m.</p></li>
+                    <li><p>Llamemos <span class="math inline">\(t_0\)</span> al instante inicial. Para ese tiempo, supongamos que la posición del perro es <span class="math inline">\(x(t_0)=0\)</span> m. Sea <span class="math inline">\(t_1\)</span> el instante en el que el perro alcanza el palo. Para ese instante entonces, tendremos que <span class="math inline">\(x(t_1)=5\)</span> m. Finalmente, sea <span class="math inline">\(t_3\)</span> el instante de tiempo en el que el perro se para. En ese instante, la posición respecto al punto inicial será <span class="math inline">\(x(t_3)=2\)</span> m. Por tanto, el desplazamiento neto será: <span class="math display">\[\Delta x= x(t_3)-x(t_0)= 2 \text { m}\]</span></p></li>
+                  </ol>
+                  
+                </div>
+              </article></li>
+            
+            <br>
+
+            <li><p><span><strong>Velocidad media</strong></span></p>
+              <p>La velocidad media, en la dirección del eje <span class="math inline">\(x\)</span>, <span class="math inline">\(v_{m,x}\)</span>, se define como la razón entre el desplazamiento sobre el eje <span class="math inline">\(x\)</span> y el intervalo de tiempo <span class="math inline">\(t\)</span>:</p>
+              <p><span class="math display">\[v_{m}= \frac{\Delta x}{\Delta t} = \frac{x(t_f)-x(t_i)}{t_f-t_i} \quad \quad \Delta x = v_{m} \, \Delta t\]</span></p>
+              <p>La velocidad media puede ser positiva o negativa, al igual que el desplazamiento. Sus dimensiones serán L/T, y sus unidades en el S.I m/s.</p>
+
+              <article style="background-color:lightblue;border-color:blue">
+                  <strong>EJEMPLO: Se tardan 10 m de casa al conservatorio (5 km) en línea recta. Un día salimos <span class="math inline">\(15\)</span> m antes del comienzo de la clase y nos encontramos con un semáforo estropeado que hace que la velocidad durante los <span class="math inline">\(2\)</span> primeros km sea de <span class="math inline">\(20\)</span> km/h. ¿Llegaremos a tiempo a clase? </strong>
+      
+                  <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+                  <div id="sol-e2" style="display:none;">
+                    
+                    <p> Solución: </p>
+                    <ul>
+                      <li><p>Velocidad durante el 1<span class="math inline">\(^{\rm er}\)</span> tramo <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(20\)</span> km/h <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2\)</span> km</p></li>
+                      <li><p>Velocidad en los últimos <span class="math inline">\(3\)</span> km <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\displaystyle \frac{5 {\rm km}}{10 {\rm m}/60 {\rm m} \times 1 {\rm h}} = 30 \, {\rm km/h}}\)</span></p></li>
+                      <li><p>Distancia recorrida en el primer tramo <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2\)</span> km <span class="math inline">\(\rightarrow\)</span> ¿tiempo?</p>
+                      <p><span class="math display">\[\Delta t_1 = \frac{ 2 {\rm km}}{20 {\rm km/h}} = \frac{1}{10} \, {\rm h} = 6 \, {\rm min}\]</span></p>
+                      <p>En el segundo tramo:</p>
+                      <p><span class="math inline">\(3\)</span> km a <span class="math inline">\(30\)</span> km/h <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\displaystyle \Delta t_2 = \frac{3 \, {\rm km}}{30 \, {\rm km/h}} = \frac{1}{10} \, {\rm h} = 6 \, {\rm min} }\)</span></p></li>
+                    </ul>
+                      <p>Por tanto, el tiempo total que tardamos en llegar al conservatorio es <span class="math inline">\(\Delta t = \Delta t_1 + \Delta t_2 = 6 \, {\rm min} + 6 \, {\rm min} = 12 \, {\rm min} \)</span>. Llegamos entonces a tiempo, y nos sobran <span class="math inline">\(3\)</span> min antes del comienzo de las clases.</p></li>                                            
+                  </div>
+                </article></li>
+                
+            <br>
+
+            <li><p><span><strong>Velocidad instantánea y módulo de la velocidad</strong></span>:</p>
+              <p>La velocidad instantánea es el límite de la relación <span class="math inline">\(\Delta x/\Delta t\)</span> cuando <span class="math inline">\(\Delta t\)</span> se aproxima a cero:</p>
+              <p><span class="math display">\[v(t) =  \lim\limits_{\Delta t \rightarrow 0} \frac{\Delta x }{\Delta t} = \frac{ {\rm d} x }{{\rm d} t }\]</span></p>
+              <p>Por tanto, podemos decir que la velocidad instantánea en el tiempo <span class="math inline">\(t\)</span> es la derivada de la función posición, <span class="math inline">\(x(t)\)</span>, respecto al tiempo. Este valor puede ser positivo, negativo o nulo; en un movimiento unidimensional, la velocidad instantánea puede ser positiva (<span class="math inline">\(x\)</span> creciente, negativa (<span class="math inline">\(x\)</span> decreciente) o nula (no hay movimiento). En un objeto que se mueve a velocidad constante, la velocidad instantánea coincide con la velocidad media, y tendremos que la gráfica de la posición en función del tiempo será</p>
+
+              <div class="sbsimage">
+                  <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/fig-velocidad.png">
+                    <img alt="" src="figuras/fig-velocidad.png" width="35%"/>
+                  </a>
+                  </div>
+              </div>  
+
+              <p>La velocidad instantánea es un vector, por lo que a veces podemos hablar del <span><em>módulo</em></span> de la velocidad instantánea.</p>
+
+              <article style="background-color:lightblue;border-color:blue">
+                  <strong>EJEMPLO: Supongamos una piedra que, partiendo del reposo, se deja caer desde un acantilado de altura <span class="math inline">\(h\)</span>. Se puede demostrar que la posición (vertical) de la piedra, en cualquier instante de tiempo, viene dada por: <span class="math display">\[x(t) = h - 5t^2  \]</span> Calcular la velocidad de la piedra en cualquier instante de tiempo.</strong>
+      
+                  <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+                  <div id="sol-e3" style="display:none;">
+                    
+                    <p> Solución: </p>
+
+                    <p>Tendremos que calcular: <span class="math display">\[v(t) =  \frac{ {\rm d} x } { {\rm d} t } = -10 \, t \, ,\]</span></p>
+                    <p>y esa es la expresión de la velocidad en cualquier instante de tiempo <span class="math inline">\(t\)</span>.</p></li>                    
+
+                  </div>
+              </article></li>
+            
+            <br>
+
+            <li><p><span><strong>Aceleración</strong></span>:</p>
+              <p>La aceleración es la tasa de cambio de la velocidad. Podemos definir la aceleración media, a partir de la velocidad media, o la aceleración instantánea, a partir de la velocidad instantánea:</p>
+              <ul>
+              <li><p>Aceleración media:</p>
+              <p><span class="math display">\[a_m =  {\displaystyle \frac{\Delta v_{m}}{\Delta t} = \frac{v(t_1)-v(t_0)}{t_1-t_0} }\]</span></p></li>
+              <li><p>Aceleración instantánea:</p>
+              <p><span class="math display">\[a(t) = {\displaystyle \lim\limits_{\Delta t \rightarrow 0} \frac{\Delta v(t) }{\Delta t} = \frac{ {\rm d}^2 x }{{\rm d} t^2} }\]</span></p></li>
+              </ul>
+
+              <article style="background-color:lightblue;border-color:blue">
+                  <strong>EJEMPLO: Un guepardo puede acelerar de <span class="math inline">\(0\)</span> a <span class="math inline">\(100\)</span> km/h en <span class="math inline">\(2\)</span> s, mientras que una moto requiere <span class="math inline">\(5\)</span> s. Calcular las aceleraciones medias del guepardo y de la moto, y compararlas con la aceleración de caída libre debido a la gravedad (g<span class="math inline">\(=9.81\)</span> m/s<span class="math inline">\(^2\)</span>).</strong>
+      
+                  <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+                  <div id="sol-e4" style="display:none;">
+                    
+                    <p> Solución: </p>
+
+                    <ul>
+                        <li><p>Guepardo:</p>
+                        <p><span class="math display">\[a_m= \frac{100 \, {\rm km}/{\rm h} }{2 \, {\rm s} \cdot 1 \,  {\rm h} / 3600 \,  {\rm s} } =  180000   \, {\rm km}/{\rm h}^2 = 13.9 \, {\rm m}/{\rm s}^2\]</span></p></li>
+                        <li><p>Moto:</p>
+                        <p><span class="math display">\[a_m= \frac{100 \, {\rm km}/{\rm h} }{5 \, {\rm s} \cdot 1 \,  {\rm h} / 3600 \,  {\rm s} } =   72000  \, {\rm km}/{\rm h}^2 = 5.6  \, {\rm m}/{\rm s}^2\]</span></p></li>
+                        </ul>
+                        <p>Por tanto, la aceleración del guepardo y de la moto, comparados con <span class="math inline">\(g\)</span>, será:</p>
+                        <ul>
+                        <li><p>Guepardo:</p>
+                        <p><span class="math display">\[{\displaystyle \frac{13.8 \, {\rm m}/{\rm s}^2}{9.81 \, {\rm m} \ {\rm s}^2} } = 1.41 \quad  \rightarrow \quad  a_{\rm guep}= 1.41\, g\]</span></p></li>
+                        <li><p>Moto:</p>
+                        <p><span class="math display">\[{\displaystyle \frac{5.6 \, {\rm m}/ {\rm s}^2}{9.81 \, {\rm m} \ {\rm s}^2} } = 0.57  \quad \rightarrow \quad   a_{\rm moto} = 0.57 \, g\]</span></p></li>
+                        </ul>
+
+                  </div>
+              </article></li>
+
+              <article style="background-color:lightblue;border-color:blue">
+                  <strong>EJEMPLO: La posición de un partícula en función del tiempo viene dada por: <span class="math display">\[x(t) = C \,  t^3 \, ,\]</span>siendo <span class="math inline">\(C\)</span> una constante cuyas unidades son m/s<span class="math inline">\(^3\)</span>. Hallar la velocidad y la aceleración en función del tiempo.</strong>
+      
+                  <button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+                  <div id="sol-e5" style="display:none;">
+                    
+                    <p> Solución: </p>
+
+                    <p>Para ello, solo tendremos que derivar la expresión de la posición para obtener la velocidad y, una vez obtenida esta última, derivarla de nuevo para obtener la aceleración:</p>
+                    <p><span class="math display">\[v(t)= \frac{ {\rm d} x} { {\rm d} t}  = 3 \, C \, t^2 \quad \quad    a(t) = \frac{ {\rm d}^2 x }{ {\rm d} t^2} = 6 \, C \, t\]</span></p></li>
+                    
+                  </div>
+              </article></li>
+            </ol>
+
+          </section>
+
+
+          <section>
+              <header>
+                <h2 id="movimiento-con-aceleración-constante">Movimiento con aceleración constante</h2>
+              </header>
+              
+              <p>Sabemos que en general:</p>
+              <p><span class="math display">\[a = \frac{ {\rm d}  v}  {  {\rm d} t}\]</span></p>
+              <p>Integrando:</p>
+              <p><span class="math display">\[{{\rm d} v} = a {\rm d} t  \rightarrow  \int_{t_0}^t  {\rm d} v = \int_{t_0}^t a \, {\rm d} t = (a={\rm cte} ) = a \, \left ( t-t_0 \right )\]</span></p>
+              <p>Por tanto:</p>
+              <p><span class="math display">\[ v(t)= v(t_0) + a (t-t_0)\]</span></p>
+              <p>Si <span class="math inline">\(t_0=0\)</span> y llamamos <span class="math inline">\(v(t_0)=v_0\)</span>, resulta:</p>
+              <p><span> <span class="math display">\[\fbox{ $v(t)\, = \, v_0 \,+ \, a\, t $}\]</span></span></p>
+              <p>Pero también sabemos que</p>
+              <p><span class="math display">\[ \frac{{\rm d} x(t)}{{\rm d} t} = v(t)= v(t_0) + a \left ( t - t_0 \right )\]</span></p>
+              <p><span class="math display">\[{\rm d} x(t) = v(t_0) \, {\rm d} t + a \left ( t-t_0 \right ) \, {\rm d} t\]</span></p>
+              <p>Integrando:</p>
+              <p><span class="math display">\[ \int_{t_0}^t {\rm d} x = v(t_0) \int_{t_0}^t {\rm d} t + a \int_{t_0}^t \left (t-t_0 \right ) {\rm d} t\]</span></p>
+              <p>Por tanto, obtenemos como ecuación general que nos da la posición en el tiempo <span class="math inline">\(t\)</span>, <span class="math inline">\(x(t)\)</span>, con el tiempo <span class="math inline">\(t\)</span> y la aceleración <span class="math inline">\(a\)</span>, del siguiente modo:</p>
+              <p><span class="math display">\[x(t)= x(t_0) + v(t_0) \, (t-t_0) + a \frac{(t-t_0)^2}{2}\]</span></p>
+              <p>Si <span class="math inline">\(t_0=0\)</span>, <span class="math inline">\(x(t_0)=x_0\)</span> y <span class="math inline">\(v(t_0)=v_0\)</span>, podemos escribir finalmente:</p>
+              <p><span> <span class="math display">\[\fbox{ $x(t)\, = \, x_0 \,+ \, v_0\, t + a \,  \frac{t^2}{2} $}\]</span></span></p>
+              <p>Si en la ecuación general obtenida la velocidad <span class="math inline">\(v(t)\)</span>, despejamos <span class="math inline">\((t-t_0)\)</span>, tendremos:</p>
+              <p><span class="math display">\[ v(t) = v(t_0) + a\, (t-t_0) \, \, \rightarrow \, \, \left ( t-t_0 \right ) = \frac{v(t) -v(t_0) }{ a }\]</span></p>
+              <p>Y si ahora, sustituimos esta cantidad en la ecuación de la posición <span class="math inline">\(x(t)\)</span>, resulta:</p>
+              <p><span class="math display">\[x(t)= x(t_0) + v(t_0) \, (t-t_0) + a \frac{(t-t_0)^2}{2} \, \, \rightarrow \, , x(t) = x(t_0) + \frac{v(t_0)}{a} \left (v(t)-v(t_0) \right ) + \frac{a}{2 a^2} \left (v(t)-v(t_0) \right )^2\]</span></p>
+              <p><span class="math display">\[ x(t)=x(t_0) + \frac{1}{2\, a} \left (v(t) - v(t_0) \right ) \left ( 2 \, v(t_0) + v(t) - v(t_0) \right ) = x(t_0) + \frac{1}{2\, a} \left (v(t) - v(t_0) \right ) \left ( v(t_0) + v(t)  \right ) =x(t_0) + \frac{1}{2\, a} \left (v(t)^2 - v(t_0)^2  \right )\]</span></p>
+              <p>Definiendo el desplazamiento <span class="math inline">\(\Delta x(t)= x(t)-x(t_0)\)</span>, podemos escribir finalmente:</p>
+              <p><span> <span class="math display">\[\fbox{ $v(t)^2\, = \, v(t_0)^2  \, + \, 2 \, a  \,  \Delta x(t) $}\]</span></span></p>
+
+              <article style="background-color:lightblue;border-color:blue">
+                  <strong>EJEMPLO 1: Una persona conduce un vehículo de noche por una autovía. De pronto, a una cierta distancia, ve un coche parado. Entonces, frena hasta detenerse con una aceleración de <span class="math inline">\(5\)</span> m/s<span class="math inline">\(^2\)</span>. Determina la distancia de frenado si su velocidad inicial es 
+                    <ol>
+                      <li><p><span class="math inline">\(15\)</span> m/s.</p></li>
+                      <li><p><span class="math inline">\(30\)</span> m/s.</p></li>
+                    </ol>
+                  </strong>
+      
+                  <button id="e6" class="button"  onclick="show2('e6');">Solución</button>
+                  <div id="sol-e6" style="display:none;">
+                    
+                    <p> Solución: </p>
+                    <ol>
+                      <li><p>Suponemos <span class="math inline">\(t_0=0\)</span>, <span class="math inline">\(x(t_0)=0\)</span> y sabemos además que <span class="math inline">\(v(t_0)=15\)</span> m/s y que <span class="math inline">\(v(t)=0\)</span> (puesto que queremos que el vehículo se detenga) y <span class="math inline">\(a=-5\)</span> m/s<span class="math inline">\(^2\)</span> (el signo <span class="math inline">\(-\)</span> es porque estamos frenando).</p>
+                        <p>Para determinar la distancia de frenado, podemos usar la fórmula obtenida anteriormente:</p>
+                        <p><span class="math display">\[ v(t)^2 = v(t_0)^2 + 2 \, a \, \Delta x(t)  \rightarrow   0 = \left ( 15 \, {\rm m/s} \right ) ^2  - 2 \, \cdot 5 \, {\rm m/s}^2 \Delta x(t)\]</span></p>
+                        <p>Por tanto, se obtiene que la distancia de frenado, <span class="math inline">\(\Delta x(t)= 22.5\)</span> m.</p></li>
+                      </li>
+                      <li><p>Haciendo la misma operación, obtenemos que <span class="math inline">\(\Delta x(t)= 90\)</span> m.</p>
+                        <p>En este segundo caso, ¿cuánto tarda el coche en detenerse?</p>
+                        <p>Para calcularlo, podemos hacer uso de la ecuación que nos da la velocidad final en términos del tiempo, de la aceleración y de la velocidad inicial. Puesto que <span class="math inline">\(t_0=0\)</span>, podemos escribir:</p>
+                        <p><span class="math display">\[v(t) = v(t_0)   + a \, t  \rightarrow 0  \, {\rm m/s} = 30 \, {\rm m/s}  - 5 \, {\rm m/s}^2 \, t \, \, \rightarrow \, \, t= 6 \, {\rm s}\]</span></p>
+                        <p>¿Qué distancia recorre el coche durante el último segundo?</p>
+                        <p>Dado que tarda <span class="math inline">\(6\)</span> segundos en pararse, la distancia que recorre el coche en el último segundo será la que transcurre entre <span class="math inline">\(t_1=5\)</span> s y <span class="math inline">\(t=6\)</span> s. Aplicamos la fórmula:</p>
+                        <p><span class="math display">\[ \Delta x (t) = v(t_1) \, \left (t-t_1 \right ) + \frac{a}{2} \left (t - t_1 \right ) ^2\]</span></p>
+                        <p>Para conocer <span class="math inline">\(v(t_0)\)</span>, necesitamos saber qué velocidad tenía el vehículo en el instante <span class="math inline">\(t_1=5\)</span> s. Sabiendo que para <span class="math inline">\(t_0=0\)</span>, <span class="math inline">\(v(t_0)=30\)</span> m/s, podemos escribir:</p>
+                        <p><span class="math display">\[v(t_1)= v(t_0) + a \, \left ( t_1 - t_0 \right )  \rightarrow v(t_1) = 30 \, {\rm m/s} \, - \, 5 \, {\rm m/s}^2 \, \cdot \, 5 \, {\rm s} =  5 \, {\rm m/s}\]</span></p>
+                        <p>Sustituyendo este resultado en la ecuación de arriba, tendremos:</p>
+                        <p><span class="math display">\[ \Delta x(t) = 5 \, {\rm m/s} \, \left (6 \, {\rm s} - 5 \, {\rm s} \right ) - \frac{ 5 \, {\rm m/s}^2 } {2} \,  \left ( 6 \, {\rm s} - 5 \, {\rm s} \right )^2 = 2.5 \, {\rm m}\]</span></p></li>
+                      </li>
+                    </ol>                    
+                  </div>
+              </article></li>              
+
+              <article style="background-color:lightblue;border-color:blue">
+                  <strong>EJEMPLO 2: Lanzamos una pelota hacia arriba con una velocidad inicial de <span class="math inline">\(15\)</span> m/s. Si consideramos que su aceleración es <span class="math inline">\(9.8\)</span> m/s<span class="math inline">\(^2\)</span> hacia abajo (despreciando la resistencia del aire),
+                    <ol>
+                      <li><p>Calcular el tiempo que tarda la pelota en alcanzar su punto más alto.</p></li>
+                      <li><p>Calcular la altura máxima alcanzada.</p></li>
+                      <li><p>Calcular el tiempo total que la pelota está en el aire, suponiendo que se recoge a la misma altura de la que se tiró.</p></li>    
+                    </ol>
+                    </strong>
+
+                  <button id="e7" class="button"  onclick="show2('e7');">Solución</button>
+                  <div id="sol-e7" style="display:none;">
+                    
+                    <p> Solución: </p>
+                    
+                    <ol>
+                      <li><p>Cuando la pelota alcance su punto más alto, su velocidad será cero. Consideramos positiva la velocidad hacia arriba y negativa hacia abajo (igual que la aceleración). Por tanto, <span class="math inline">\(v(t_0)=15\)</span> m/s y <span class="math inline">\(a=g=-9.8\)</span> m/<span class="math inline">\(^2\)</span>. Por tanto, podemos usar la siguiente ecuación <span class="math display">\[v(t) = v(t_0) + a \left ( t-t_0 \right ) \rightarrow   0 = 15 \, {\rm m/s} - 9.8 \, {\rm m/s}^2 \, \, t \, \rightarrow  \, t = 1.53 \, {\rm s}\]</span></p></li>
+                      <li><p>Tenemos que determinar la posición para el tiempo <span class="math inline">\(t\)</span> calculado anteriormente. Por tanto, <span class="math display">\[ x(t) = x(t_0) + v(t_0) \left (t - t_0 \right )  + \frac{a}{2} \, \left ( t - t_0 \right )^2  = 0 + 15 \, {\rm m/s} \, \left (1.53 \, {\rm s} - 0 \, {\rm s} \right ) - \frac{9.8}{2} \left ( 1.53 \, {\rm s} - 0 \, {\rm s} \right )^2 =  11.48 \, {\rm m}\]</span></p></li>
+                      <li><p>Dado que la pelota tardará lo mismo en subir que en bajar la misma altura, el tiempo total que estará en el aire será el doble del tiempo calculado en el primer apartado, es decir, <span class="math inline">\(2 \times 1.53\)</span> s <span class="math inline">\(=3.06\)</span> s.</p></li>
+                    </ol>
+        
+                  </div>
+                </article>
+
+                <article style="background-color:lightblue;border-color:blue">
+                  <strong>EJEMPLO 3 (dos objetos que se mueven con aceleración constante): Un coche lleva una velocidad constante <span class="math inline">\(v_c=50\)</span> m/s en una zona cercana a un colegio. Un coche de policía, que está parado, arranca cuando el infractor le adelanta y acelera con una aceleración constante de <span class="math inline">\(8\)</span> m/s<span class="math inline">\(^2\)</span>.
+                    <ol>
+                      <li><p>Calcular el tiempo que tarda el coche de policía en alcanzar al coche.</p></li>
+                      <li><p>Calcular la velocidad que lleva el coche de policiía cuando da alcance al coche.</p></li>
+                    </ol>
+                  </strong>
+  
+                  <button id="e8" class="button"  onclick="show2('e8');">Solución</button>
+                  <div id="sol-e8" style="display:none;">
+                      
+                    <p> Solución: </p>
+                      
+                    <ol>
+                      <li><p>Notaremos con subíndice <span class="math inline">\(c\)</span> todas las magnitudes referidas al coche, y con <span class="math inline">\(p\)</span> al coche de policía. Supondremos que el instante en el que ambos coches se encuentran es <span class="math inline">\(t_0=0\)</span>, y que la posición de ambos en dicho instante es <span class="math inline">\(x_c(t_0)=x_p(t_0)=0\)</span>. Inicialmente, el coche de policía está parado, por lo que <span class="math inline">\(v_p(t_0)=0\)</span> Por tanto, para cualquier instante de tiempo <span class="math inline">\(t\)</span>, tendremos que:</p>
+                        <p><span class="math display">\[ x_c(t)= v_c \times t \; \; \;  x_p(t)= \frac{1}{2} \, a \, t^2\]</span></p>
+                        <p>Por tanto, ambos coches se encontrarán cuando</p>
+                        <span class="math display">\[ x_c(t)=x_p(t) \, \, \rightarrow \, \,  v_c \times t = \frac{1}{2} \, a \, \,  t^2  \rightarrow  50 \, {\rm m/s} \times t = \frac{1}{2} 8 \, {\rm m/s}^2 \, t^2 \rightarrow t= 12.5 \, {\rm s}\]</span></p>
+                      </li>
+                        <p>Usamos la ecuación</p>
+                        <p><span class="math display">\[ v_p(t) = v_p(t_0) + a \, \left ( t - t_0 \right ) = 0 + 8 \, {\rm m/s}^2 \, \times  12.5 \, {\rm s} = 100 \, {\rm m/s}\]</span></p>
+                      </li>
+                    </ol>
+          
+                  </div>
+                </article>
+
+                <article style="background-color:lightblue;border-color:blue">
+                    <strong>EJEMPLO 4 (aceleración no constante): Marta conduce por una autovía. En el instante <span class="math inline">\(t_0=0\)</span>, cuando Marta circula hacia el este a una velocidad de <span class="math inline">\(30\)</span> m/s (<span class="math inline">\(v(t_0)=30\)</span> m/s), pasa por un punto que se encuentra a <span class="math inline">\(50\)</span> m de su punto de partida, es decir, <span class="math inline">\(x(t_0)=50\)</span> m. Su aceleración en función del tiempo tiene la siguiente expresión <span class="math display">\[ a(t) = 2 \, {\rm m/s}^2 \, - \, 0.10 \, {\rm m/s}^3 \, t\]</span>
+                      <ol>
+                        <li><p>Deducir expresiones para su velocidad y posición en función del tiempo.</p></li>
+                        <li><p>Calcular el momento en que es máxima su velocidad y cuál es su velocidad máxima.</p></li>
+                        <li><p>Determinar dónde está el coche respecto al punto de partida cuando alcanza la velocidad máxima.</p></li>
+                      </ol>
+                    </strong>
+    
+                    <button id="e9" class="button"  onclick="show2('e9');">Solución</button>
+                    <div id="sol-e9" style="display:none;">
+                        
+                      <p> Solución: </p>
+                        
+                      <ol>
+                        <li>
+                            <p><span class="math display">\[ v(t) = v(t_0) + \int_{t_0}^t a \, {\rm d} t = v(t_0) + \int_{t_0}^t \left ( 2 - 0.10 \, t \right ) \, {\rm d} t = 10 \, {\rm m/s} + 2 \, {\rm m/s}^2 \, t \, - \, 0.10 \, {\rm m/s}^3 \, \frac{t^2}{2} = \left (10 + 2\, t - 0.05 \, t^2 \right ) \, {\rm m/s}\]</span></p>
+                            <p><span class="math display">\[ x(t) = x(t_0) + \int_{t_0}^t v(t) \, {\rm d} t = 50 \, {\rm m} + \int_{t_0}^t \left (10 + 2\, t - 0.05 \, t^2 \right ) \, {\rm m/s} \, {\rm d} t = \left ( 50 + 10 \, t + t^2 - \frac{0.05}{3} \, t^3 \right ) \, {\rm m}\]</span></p>                      
+                        </li>
+                        <li>
+                          <p>La velocidad será máxima cuando su derivada valga cero. Por tanto:</p>
+                          <p><span class="math display">\[\frac{{\rm d} v} {{\rm d} t} = 2 - 0.10 \, t = 0 \, \rightarrow \, t=20 \, {\rm  s}\]</span>
+                          <p><span class="math display">\[v_{\rm max} = v(t=20 \, {\rm s}) = 10 + 2 \times 20 \, - \, 0.05 \times \, 20^2 \, {\rm m/s} = 30 \, {\rm m/s}\]</span></p>                            
+                        </li>
+                        <li>
+                          <p><span class="math display">\[x(t=20 \, {\rm s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3} \, 20^3 \right ) \, {\rm m} = 516.6 \, {\rm m}\]</span></p>
+                        </li>
+                      </ol>
+            
+                    </div>
+                  </article>
+          </section>
+         
+    <section>
+      <header>
+        <h1 id="movimiento-en-más-de-una-dimensión">Movimiento en más de una dimensión</h1>
+      </header>
+        
+      <header>
+        <h2 id="introducción-1">Introducción</h2>
+      </header>
+      
+      <p>En esta sección, aprenderemos a analizar el movimiento de partículas en más de una dimensión, en concreto estudiaremos:</p>
+
+      <ol>
+        <li><p>Cómo representar la posición de una partícula en dos o tres dimensiones usando vectores.</p></li>
+        <li><p>Cómo determinar el vector velocidad de un cuerpo conociendo su trayectoria.</p></li>
+        <li><p>Cómo obtener el vector aceleración de un cuerpo y por qué un cuerpo puede tener aceleración aunque el módulo de su velocidad sea constante.</p></li>
+      </ol>
+
+      <header>
+        <h2 id="vectores-posición-y-desplazamiento">Vectores posición y desplazamiento</h2>
+      </header>
+
+      <p>El vector posición de una partícula es un vector que se traza desde el origen de coordenadas hasta la posición de la partícula. Para una partícula en el plano <span class="math inline">\(xy\)</span>, si su posición en dicho plano es el punto con coordenadas <span class="math inline">\((x,y)\)</span>, tendremos como vector de posición</p>
+      <p><span class="math display">\[ {\overrightarrow{r}} = x \, \hat{\imath} + y\, \hat{\jmath}\]</span></p>
+      <p>Fijémonos ahora en la siguiente figura (obtenida de este <a href="http://rabfis15.uco.es/sistemasligados/pagina1fin/marcurv.htm" class="uri">enlace</a>):</p>
+
+      <div class="sbsimage">
+          <div class="imgContainerEnd">
+            <a data-fancybox="" href="figuras/Cine_10.png">
+            <img alt="Figura de la página http://rabfis15.uco.es/sistemasligados/pagina1fin/marcurv.htm" src="figuras/Cine_10.png" width="70%"/>
+          </a>
+          </div>
+      </div>  
+      
+      <p>Tenemos que <span class="math display">\[{\overrightarrow{r}}+ \Delta {\overrightarrow{r}} = {\overrightarrow{r&#39;}} \, \rightarrow \, \Delta {\overrightarrow{r}} = {\overrightarrow{r&#39;}} - {\overrightarrow{r}}\]</span></p>
+      <p>Si las coordenadas de los puntos <span class="math inline">\(P\)</span> y <span class="math inline">\(P&#39;\)</span> son <span class="math inline">\((x,y)\)</span> e <span class="math inline">\((x&#39;,y&#39;)\)</span>, respectivamente, podemos escribir el vector desplazamiento <span class="math inline">\(\Delta {\overrightarrow{r}}\)</span> de la siguiente manera:</p>
+      <span class="math display">\[\Delta {\overrightarrow{r}} =   {\overrightarrow{r&#39;}} - {\overrightarrow{r}} = \left (x&#39;-x \right ) \hat {i} + \left (y&#39; -y \right ) \hat{\jmath} = \Delta x \, \hat{\imath} \, + \, \Delta y \, \hat{\jmath}\]</span>
+      <p>Ahora, para definir el vector velocidad, tengamos en cuenta que la velocidad media se define como el cociente entre el desplazamiento y el intervalo de tiempo transcurrido. Entonces, definiremos el vector velocidad media como el cociente entre el vector desplazamiento y el intervalo de tiempo <span class="math inline">\(\Delta t= t_2-t_1\)</span>.</p>
+      <p><span class="math display">\[{\overrightarrow{v_m}} = \frac{\Delta {\overrightarrow{r}}} {\Delta t}\]</span></p>
+      <p>El módulo del vector desplazamiento es inferior a la distancia recorrida a menos que la partícula se mueva en línea recta. Sin embargo, si consideramos intervalos de tiempo cada vez más pequeños, el desplazamiento se aproxima a la distancia real recorrida por la partícula a lo largo de la curva.</p>
+      
+      <div class="sbsimage">
+          <div class="imgContainerEnd">
+            <a data-fancybox="" href="figuras/Cine_11.png">
+            <img alt="Figura de la página http://rabfis15.uco.es/sistemasligados/pagina1fin/marcurv.htm" src="figuras/Cine_11.png" width="70%"/>
+          </a>
+          </div>
+      </div>  
+
+      <p>Definimos el vector velocidad instantánea como el límite del vector velocidad media cuando <span class="math inline">\(\Delta t\)</span> tiende a cero:</p>
+      <p><span class="math display">\[{\overrightarrow{v}} = \lim_{\Delta t \rightarrow 0} \frac{\Delta {\overrightarrow{r}}}{\Delta t} = \frac{{\rm d} {\overrightarrow{r}}}{{\rm d} t}\]</span></p>
+      <p>El módulo de <span class="math inline">\({\overrightarrow{v}}\)</span>, <span class="math inline">\(|{\overrightarrow{v}}|\)</span> es la velocidad escalar, y la dirección de <span class="math inline">\({\overrightarrow{v}}\)</span> coincide con la tangente a la curva en la dirección del movimiento de la partícula:</p>
+
+      <div class="sbsimage">
+          <div class="imgContainerEnd">
+            <a data-fancybox="" href="figuras/Cine_12.png">
+            <img alt="Figura de la página http://rabfis15.uco.es/sistemasligados/pagina1fin/marcurv.htm" src="figuras/Cine_12.png" width="70%"/>
+          </a>
+          </div>
+      </div> 
+      
+      <p>Para calcular la derivada, expresamos el vector desplazamiento en la forma anterior:</p>
+      <p><span class="math display">\[ \Delta {\overrightarrow{r}} = \Delta x \, \hat{\imath} + \Delta y \, \hat{\jmath}\]</span></p>
+      <p>Por tanto:</p>
+      <p><span class="math display">\[ {\overrightarrow{v}} =  \lim_{\Delta t \rightarrow 0}  \frac{\Delta {\overrightarrow{r}} }{\Delta t} = 
+        \lim_{\Delta t \rightarrow 0} \frac{ \Delta x \, \hat{\imath} + \Delta y \, \hat{\jmath} } {\Delta t} =
+        \lim_{\Delta t \rightarrow 0}  \frac{ \Delta x}{\Delta t} 
+        +  \lim_{\Delta t \rightarrow 0}   \frac{\Delta y}{\Delta t}\]</span></p>
+      <p>Es decir: <span class="math display">\[ {\overrightarrow{v}} = \frac{{\rm d} x}{{\rm d} t }\, \hat{\imath} + \frac{ {\rm d} y}{ {\rm d} t} \, \hat{\jmath} = v_x \, \hat{\imath} + v_y \, \hat{\jmath}\]</span></p>
+      <p>donde <span class="math inline">\(v_x= \frac{ {\rm d} x}{ {\rm d} t} \)</span> y <span class="math inline">\(v_y= \frac{{\rm d} y}{{\rm d} t} \)</span> son las componentes <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> de la velocidad.</p>
+      <p>El módulo <span class="math inline">\(|{\overrightarrow{v}}|\)</span> vendrá dado por</p>
+      <p><span class="math display">\[ |{\overrightarrow{v}}| = \sqrt{v_x^2 + v_y^2}\]</span></p>
+      <p>y la dirección del vector <span class="math inline">\({\overrightarrow{v}}\)</span> por el ángulo <span class="math inline">\(\theta\)</span>, que se obtiene como</p>
+      <p><span class="math display">\[\theta =  \arctan \, \frac{v_y}{v_x}\]</span></p>
+
+      <article style="background-color:lightblue;border-color:blue">
+          <strong>EJEMPLO 1: Un barco tiene las coordenadas <span class="math inline">\((x_1,y_1)=(130\, {\rm m}, 205 \, {\rm m})\)</span> en el instante <span class="math inline">\(t_1=60\)</span> s. Dos minutos más tarde, en el instante <span class="math inline">\(t_2\)</span>, sus coordenadas son <span class="math inline">\((x_2,y_2)=(110\, {\rm m}, 218\, {\rm m})\)</span>.
+            <ol>
+              <li><p>Determinar la velocidad media en este intervalo de dos minutos.</p></li>
+              <li><p>Determinar el módulo y dirección de <span class="math inline">\({\overrightarrow{v_m}}\)</span>.</p></li>
+              <li><p>Para <span class="math inline">\(t \ge 20\)</span> s, la posición del barco en función del tiempo es <span class="math inline">\(x(t)=b_1+b_2 \, t\)</span>, <span class="math inline">\(y(t)=c_1+c_2 \,  t\)</span>, con <span class="math inline">\(b_1=100\)</span> m, <span class="math inline">\(b_2=0.5\)</span> m/s, <span class="math inline">\(c_1=200\)</span> m, <span class="math inline">\(c_2 = 360\)</span> m <span class="math inline">\(\cdot\)</span> s. Calcular la velocidad instantánea para <span class="math inline">\(t \ge 20\)</span> s.</p></li>
+            </ol>
+          </strong>
+
+          <button id="e10" class="button"  onclick="show2('e10');">Solución</button>
+          <div id="sol-e10" style="display:none;">
+              
+            <p> Solución: </p>
+              
+            <ol>
+              <li>
+                <p><span class="math display">\[{\overrightarrow{v_m}} = \frac{\Delta {\overrightarrow{r}}}{\Delta t} = \frac{\left (x_2-x_1 \right )  \hat{\imath} + \left(y_2-y_1 \right ) \hat{\jmath}}{120 \, {\rm s}}= \frac{\left ( 110-130 \right )}{120} \, \hat{\imath} \, + \, \frac{\left ( 218-205 \right )}{120} \, \hat{\jmath} \, \, {\rm m/s} = -\frac{20}{120} \, \hat{\imath} + \frac{113}{120} \, \hat{\jmath} \, \, {\rm m/s} = \left ( -0.167 \, \hat{\imath} + 0.108 \, \hat{\jmath} \right ) \, {\rm m/s}\]</span></p>
+              </li>
+              <br>
+              <li>
+                <p><span class="math display">\[ |{\overrightarrow{v_m}}| = \sqrt{\left (0.167 \right )^2 + \left ( 0.108 \right ) ^2 } = 0.199 \, {\rm m/s}\]</span></p>
+                <p><span class="math display">\[ \theta = \arctan \, \frac{0.108}{-0.167} = -32.89º \equiv 147.11º\]</span></p>
+              </li>
+              <br>
+              <li>
+                <p><span class="math display">\[x(t=20 \, {\rm s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3} \, 20^3 \right ) \, {\rm m} = 516.6 \, {\rm m}\]</span></p>
+                <p>con <span class="math inline">\(t\)</span> en segundos.</p>
+              </li>
+            </ol>
+  
+          </div>
+        </article>
+
+        <header>
+            <h2 id="vectores-de-aceleración">Vectores de aceleración</h2>
+        </header>
+
+        <p>Se define el vector aceleración media como el cociente entre la variación del vector velocidad instantánea <span class="math inline">\(\Delta {\overrightarrow{v}}\)</span> y el intervalo de tiempo transcurrido, <span class="math inline">\(\Delta t\)</span>:</p>
+        <p><span class="math display">\[\vec{a_m} = \frac{\Delta v}{\Delta t} = \frac{{\overrightarrow{v}}(t_1) - {\overrightarrow{v}}(t_0)}{t_1-t_0}\]</span></p>
+        <p>El vector aceleración instantánea es el límite de esta relación cuando <span class="math inline">\(\Delta t \rightarrow 0\)</span>:</p>
+        <p><span class="math display">\[{\overrightarrow{a}} =  \lim_{\Delta t \rightarrow 0} \frac{\Delta {\overrightarrow{v}}}{\Delta t} = \frac{{\rm d} {\overrightarrow{v}}}{{\rm d} t }\]</span></p>
+        <p><span class="math display">\[l\vec{a} = \frac{{\rm d} v_x}{{\rm d} t} \hat{\imath} + \frac{{\rm d} v_y}{{\rm d} t } \hat{\jmath} + \frac{{\rm d}v_z}{{\rm d} t} \hat{k} = a_x\, \hat{\imath} + a_y \, \hat{\jmath} + a_z \, \hat{k}\]</span></p>
+
+        <article style="background-color:lightblue;border-color:blue">
+          <strong>EJEMPLO 2: La posición de una pelota de béisbol golpeada por un bateador viene dada por la expresión <span class="math display">\[{\overrightarrow{r}} =  \left [ \left ( 1.5 + 12 \, t \right ) \, \hat{\imath} + \left ( 16 \, t - 4.9 \, t^2 \right ) \, \hat{\jmath} \right ]  \, {\rm m} \, ,\]</span> con <span class="math inline">\(t\)</span> expresado en <span class="math inline">\(s\)</span>. Determinar su velocidad y aceleración en función del tiempo. </strong>
+          
+          <button id="e11" class="button"  onclick="show2('e11');">Solución</button>
+          <div id="sol-e11" style="display:none;">
+              
+            <p> Solución: </p>
+       
+            <p><span class="math display">\[ {\overrightarrow{v}} = \frac{{\rm d} \overrightarrow{r}} { {\rm d} t} =  \left [ 12 \, \hat{\imath} + \left ( 16 - 9.8 \, t \right ) \, \hat{\jmath}  \right ] \, {\rm m/s}\]</span></p>
+            <p><span class="math display">\[ {\overrightarrow{a}} = \frac{{\rm d} \overrightarrow{v}} { {\rm d} t} = -9.8\, \hat{\jmath} \, {\rm m/s^2}\]</span></p>
+
+          </div>
+        </article>
+
+        <article style="background-color:lightblue;border-color:blue">
+          <strong>EJEMPLO 3: Un coche viaja hacia el este a <span class="math inline">\(60\)</span> km/h y <span class="math inline">\(5\)</span> s más tarde viaja hacia el norte a <span class="math inline">\(60\)</span> km/h. Determinar la aceleración media del coche. </strong>
+          
+          <button id="e12" class="button"  onclick="show2('e12');">Solución</button>
+          <div id="sol-e12" style="display:none;">
+                
+          <p> Solución: </p>
+         
+          <p>Supondremos que la dirección hacia el este es la del vector <span class="math inline">\(\hat{\imath}\)</span>, y la dirección hacia el norte es la del vector <span class="math inline">\(\hat{\jmath}\)</span>. Entonces:</p>
+          <p><span class="math display">\[ {\overrightarrow{v_i}} = 60 \, {\rm km/h} \, \hat{\imath} = 16.67 \, {\rm m/s} \, \hat{\imath}\]</span></p>
+          <p><span class="math display">\[{\overrightarrow{v_f}}= 60 \, {\rm km/h} \, \hat{\jmath} = 16.67 \, {\rm m/s} \, \hat{ j}\]</span></p>
+          <p>Por tanto:</p>
+          <p><span class="math display">\[ {\overrightarrow{a_m}} = \frac{{\overrightarrow{v_f}}-{\overrightarrow{v_i}}}{\Delta t} = \left ( -3.3 \,\, \hat{\imath} + 3.3  \, \hat{\jmath} \right )  \, {\rm m/s^2}\]</span></p>
+          <p>El movimiento de un objeto alrededor de una circunferencia es un ejemplo típico de movimiento en el cual la velocidad de un objeto cambia, aunque su módulo permanece constante.</p>
+          
+          </div>
+        </article>
+
+        <header>
+            <h2 id="caso-particular-movimiento-de-proyectiles">CASO PARTICULAR: Movimiento de Proyectiles</h2>
+        </header>
+
+        <p>En esta sección, vamos a estudiar el tipo de movimiento que describe un proyectil cuando se lanza al aire y se mueve libremente. Despreciando la resistencia del aire, diremos que el proyectil está en caída libre. Supongamos que lanzamos una partícula con velocidad inicial <span class="math inline">\(v_0\)</span>, formando un ángulo <span class="math inline">\(\theta_0\)</span> con el eje horizontal y sea <span class="math inline">\((x_0,y_0)\)</span> el punto de lanzamiento, para <span class="math inline">\(t_0=0\)</span>. Tendremos un movimiento en dos dimensiones, <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>. Notaremos las magnitudes con un subídice <span class="math inline">\(x\)</span> o <span class="math inline">\(y\)</span>, según se refieran a uno u otro movimiento.</p>
+
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+              <a data-fancybox="" href="figuras/2245d-tiro-h8.png">
+              <img alt="" src="figuras/2245d-tiro-h8.png" width="35%"/>
+            </a>
+            </div>
+        </div>  
+
+        <p>Por tanto, las componentes de la velocidad inicial serán:</p>
+
+        <p><span class="math display">\[   v_{0x}=v_0 \, \cos \theta_0  \,        \quad    \, v_{0y}=v_0 \, {\rm sen} \, \theta_0\]</span></p>
+        <p>En ausencia de la resistencia del aire, la aceleración es la de la gravedad, <span class="math inline">\(g\)</span>, dirigida verticalmente hacia abajo. Por tanto:</p>
+        <p><span class="math display">\[a_x= 0 \, \quad \, a_y = -g\]</span></p>
+        <p>Es decir, el movimiento a lo largo del eje <span class="math inline">\(x\)</span> es rectilíneo y uniforme y en el eje <span class="math inline">\(y\)</span> es uniformemente acelerado.</p>
+        <p>Como la aceleración es constante, podemos usar las ecuaciones cinemáticas anteriores, y tendremos: I <span class="math display">\[ v_x = v_{0x} \, \quad \, v_y=v_{0y} - g \, t\]</span></p>
+        <p>Los desplazamientos vendrán dados por:</p>
+        <p><span class="math display">\[ x(t) = x_0 + v_{0x} \, t \, \quad \, y(t) = y_0 + v_{0y} \, t - \frac{1}{2} g \, t^2\]</span></p>
+        <p>Si queremos saber cuál es la ecuación general para la trayectoria <span class="math inline">\(y(x)\)</span>, sólo tendremos que despejar <span class="math inline">\(t\)</span> en la primera ecuación, y sustituirlo en la segunda:</p>
+        <p><span class="math display">\[t = \frac{x(t)-x_0}{v_{0x}}\]</span></p>
+        <p>Entonces:</p>
+        <p><span class="math display">\[ y(t) = y_0 + v_{0y} t - \frac{1}{2} g t^2  =  y_0+ v_{0y} \, \left ( \frac{ x(t) - x_0}{v_{0x} } \right ) - \frac{1}{2} \left ( \frac{x(t) -x_0}{v_{0x}} \right )^2\]</span></p>
+        <p>Desarrollando esta ecuación, y suponiendo que <span class="math inline">\(x_0=y_0=0\)</span>, resulta:</p>
+        <p><span class="math display">\[y(x) = \frac{v_{0y}}{v_{0x}} \, x - \frac{1}{2} \frac{g}{v_{0x}^2} \, x^2\]</span></p>
+        <p>También, teniendo en cuenta las expresiones de <span class="math inline">\(v_{0x}\)</span> y <span class="math inline">\(v_{0y}\)</span> anteriores, en términos de <span class="math inline">\(\theta_0\)</span>, podemos escribir:</p>
+        <p><span class="math display">\[y(x)= \tan \theta_0 \, x - \frac{g}{2 v_0^2 \cos^2 \theta_0} \, x^2\]</span></p>
+
+        <article style="background-color:lightblue;border-color:blue">
+          <strong>EJEMPLO: Se lanza una pelota al aire con una velocidad inicial de <span class="math inline">\(v_0=24.5\)</span> m/s, formando un ángulo de <span class="math inline">\(36.9^{\rm o}\)</span> con la horizontal. Posteriormente, otra persona la recoge a la misma altura desde la que ha sido lanzada. 
+          <ol>
+            <li><p>Determinar el tiempo total que la pelota está en el aire.</p></li>
+            <li><p>Calcular la distancia total horizontal recorrida.</p></li>
+          </ol>
+          </strong>  
+          
+          <button id="e13" class="button"  onclick="show2('e13');">Solución</button>
+          <div id="sol-e13" style="display:none;">
+                  
+          <p> Solución: </p>
+          
+          <ol>
+            <li>
+              <p>Para determinar el tiempo total <span class="math inline">\(T\)</span> en el que la pelota está en el aire, debemos de imponer que <span class="math inline">\(y(T)=y(t_0)\)</span>:</p>
+              <p><span class="math display">\[ y(T) = y(t_0) + v_{0y} \, \left ( t-t_0 \right )  - \frac{1}{2} \, g \, \left ( t - t_0 \right ) ^2 = y(t_0)\]</span></p>
+              <p>Suponiendo que <span class="math inline">\(t_0=0\)</span>, tendremos:</p>
+              <p><span class="math display">\[  \left ( v_{0y} - \frac{1}{2} \, g \, t \right ) \, t = 0 \, \rightarrow  \,  v_{0y}=\frac{1}{2} \, g \, t \, \rightarrow \, t = \frac{2 \, v_{0y}}{g}  = \frac{2 \times 24.5 \, {\rm m/s} \times {\rm sen} \, (36.9^{\rm o})}{9.81 \, {\rm m/s}^2} = 3.0 \, {\rm s}\]</span></p>        
+            </li>
+            <li>
+              <p>Suponemos que <span class="math inline">\(x(t_0)=0\)</span> y usamos la expresión:</p>
+              <p><span class="math display">\[ x(T) = x(t_0) + v_{0x} \, t = 0 + 24.5 \, {\rm m/s} \times \cos{(36.9^{\rm o})} \times 3.0 \, {\rm s} = 58.8 \, {\rm m}\]</span></p>             
+            </li>      
+          </ol>
+
+          </div>
+        </article>
+
+      </section>
+
+      <br>
+
+      <a href="cinematica-test.html">Test para repasar Cinemática</a><br><br>
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+    
+      <br><br>
+
+<script type="text/javascript" language="javascript">
+  function show(str, obj){
+    document.getElementById(obj).innerHTML = str;
+    //MathJax.Hub.Typeset();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+  }
+  function show2(divID) {
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+      if(sol.style.display == "none"){
+        sol.style.display = "block";
+      }else{
+        sol.style.display = "none";
+      }
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+  }
+</script>
+
+</body>
+</html>
