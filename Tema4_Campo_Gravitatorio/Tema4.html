@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 4. Campo Gravitatorio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Tema4_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Tema4_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Tema4_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Tema4_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Tema4_files/libs/quarto-html/popper.min.js"></script>
+<script src="Tema4_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Tema4_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Tema4_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Tema4_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Tema4_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Tema4_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Tema4_files/libs/bootstrap/bootstrap-33c1396811bb647a58f862e5ff553a70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Tema4_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="Tema4_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="Tema4_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Tema 4. Campo Gravitatorio</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción-histórica" id="toc-introducción-histórica" class="nav-link active" data-scroll-target="#introducción-histórica">1. Introducción Histórica</a></li>
+  <li><a href="#el-campo-gravitatorio" id="toc-el-campo-gravitatorio" class="nav-link" data-scroll-target="#el-campo-gravitatorio">2. El Campo Gravitatorio</a>
+  <ul class="collapse">
+  <li><a href="#definición-de-campo" id="toc-definición-de-campo" class="nav-link" data-scroll-target="#definición-de-campo">2.1. Definición de campo</a></li>
+  <li><a href="#ley-de-gravitación-universal-de-newton" id="toc-ley-de-gravitación-universal-de-newton" class="nav-link" data-scroll-target="#ley-de-gravitación-universal-de-newton">2.2. Ley de gravitación universal de Newton</a></li>
+  <li><a href="#campo-gravitatorio" id="toc-campo-gravitatorio" class="nav-link" data-scroll-target="#campo-gravitatorio">2.3. Campo gravitatorio</a></li>
+  <li><a href="#aceleración-debida-a-la-gravedad" id="toc-aceleración-debida-a-la-gravedad" class="nav-link" data-scroll-target="#aceleración-debida-a-la-gravedad">2.4. Aceleración debida a la gravedad</a></li>
+  </ul></li>
+  <li><a href="#energía-potencial-y-potencial-gravitatorio" id="toc-energía-potencial-y-potencial-gravitatorio" class="nav-link" data-scroll-target="#energía-potencial-y-potencial-gravitatorio">3. Energía potencial y potencial gravitatorio</a>
+  <ul class="collapse">
+  <li><a href="#energía-potencial-gravitatoria" id="toc-energía-potencial-gravitatoria" class="nav-link" data-scroll-target="#energía-potencial-gravitatoria">3.1. Energía potencial gravitatoria</a></li>
+  <li><a href="#potencial-gravitatorio" id="toc-potencial-gravitatorio" class="nav-link" data-scroll-target="#potencial-gravitatorio">3.2. Potencial gravitatorio</a></li>
+  <li><a href="#relación-entre-el-campo-gravitatorio-y-el-potencial-gravitatorio" id="toc-relación-entre-el-campo-gravitatorio-y-el-potencial-gravitatorio" class="nav-link" data-scroll-target="#relación-entre-el-campo-gravitatorio-y-el-potencial-gravitatorio">3.3. Relación entre el campo gravitatorio y el potencial gravitatorio</a></li>
+  </ul></li>
+  <li><a href="#movimiento-bajo-la-influencia-de-la-gravedad" id="toc-movimiento-bajo-la-influencia-de-la-gravedad" class="nav-link" data-scroll-target="#movimiento-bajo-la-influencia-de-la-gravedad">4. Movimiento bajo la influencia de la gravedad</a>
+  <ul class="collapse">
+  <li><a href="#movimiento-en-un-campo-gravitatorio-uniforme" id="toc-movimiento-en-un-campo-gravitatorio-uniforme" class="nav-link" data-scroll-target="#movimiento-en-un-campo-gravitatorio-uniforme">4.1. Movimiento en un campo gravitatorio uniforme</a></li>
+  <li><a href="#movimiento-en-un-campo-gravitatorio-no-uniforme" id="toc-movimiento-en-un-campo-gravitatorio-no-uniforme" class="nav-link" data-scroll-target="#movimiento-en-un-campo-gravitatorio-no-uniforme">4.2. Movimiento en un campo gravitatorio no uniforme</a></li>
+  </ul></li>
+  <li><a href="#teorema-de-gauss-para-la-gravedad" id="toc-teorema-de-gauss-para-la-gravedad" class="nav-link" data-scroll-target="#teorema-de-gauss-para-la-gravedad">5. Teorema de Gauss para la gravedad</a></li>
+  <li><a href="#campo-gravitatorio-terrestre" id="toc-campo-gravitatorio-terrestre" class="nav-link" data-scroll-target="#campo-gravitatorio-terrestre">6. Campo gravitatorio Terrestre</a>
+  <ul class="collapse">
+  <li><a href="#movimiento-de-los-satélites-alrededor-de-la-tierra" id="toc-movimiento-de-los-satélites-alrededor-de-la-tierra" class="nav-link" data-scroll-target="#movimiento-de-los-satélites-alrededor-de-la-tierra">6.1. Movimiento de los satélites alrededor de la Tierra</a></li>
+  <li><a href="#velocidad-de-escape-de-la-tierra" id="toc-velocidad-de-escape-de-la-tierra" class="nav-link" data-scroll-target="#velocidad-de-escape-de-la-tierra">6.2. Velocidad de escape de la Tierra</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="introducción-histórica" class="level1">
+<h1>1. Introducción Histórica</h1>
+<p>Prácticamente desde el inicio de la humanidad, el ser humano ha observado los fenómenos naturales y ha intentado comprenderlos. La gravedad, como una de las fuerzas fundamentales de la naturaleza, ha sido objeto de estudio desde tiempos antiguos. El movimiento de los cuerpos celestes, la caída de los objetos hacia la Tierra y la sensación de peso han sido fenómenos que han despertado la curiosidad humana durante milenios. Precisamente el estudio de los cuerpos celestes ha estado presente en la mitología de muchas culturas, y ha sido un motor importante para el desarrollo de la astronomía y la física. Por otro lado, el movimiento de los objetos en la Tierra, como la caída de los cuerpos, ha sido observado y estudiado desde tiempos antiguos, lo que ha llevado a la formulación de teorías sobre la naturaleza de la gravedad.</p>
+<p>Las primeras explicaciones sobre la gravedad, como causa del movimiento de los cuerpos en la superficie terrestre, se remontan a filósofos como Aristóteles, quien creía que los objetos caían hacia la Tierra debido a su naturaleza “pesada”. Sin embargo, fue Isaac Newton quien, en el siglo XVII, formuló la ley de gravitación universal, estableciendo que todos los objetos con masa se atraen mutuamente con una fuerza proporcional a sus masas e inversamente proporcional al cuadrado de la distancia entre ellos, unificando así los fenómenos celestes y terrestres. Más tarde, en el siglo XX, Albert Einstein revolucionó nuestra comprensión de la gravedad con su teoría de la relatividad general, describiendo la gravedad no como una fuerza, sino como una curvatura del espacio-tiempo causada por la masa y la energía.</p>
+<p>El estudio del campo gravitatorio ha sido fundamental en la historia de la física, desde las primeras observaciones de los movimientos celestes hasta las teorías modernas de la relatividad. En esta sección, exploraremos los hitos clave en el desarrollo de nuestra comprensión del campo gravitatorio.</p>
+<ul>
+<li><strong>Aristóteles (384-322 a.C.)</strong>: Propuso que los objetos caen hacia la Tierra debido a su naturaleza “pesada”.</li>
+<li><strong>Isaac Newton (1642-1727)</strong>: Formuló la ley de gravitación universal, estableciendo que todos los objetos con masa se atraen mutuamente con una fuerza proporcional a sus masas e inversamente proporcional al cuadrado de la distancia entre ellos.</li>
+<li><strong>Albert Einstein (1879-1955)</strong>: Desarrolló la teoría de la relatividad general, describiendo la gravedad como una curvatura del espacio-tiempo causada por la masa y la energía.</li>
+</ul>
+</section>
+<section id="el-campo-gravitatorio" class="level1">
+<h1>2. El Campo Gravitatorio</h1>
+<p>El campo gravitatorio es una región del espacio donde un objeto con masa experimentaría una fuerza de atracción hacia otro objeto con masa. La intensidad de esta fuerza depende de la masa de los objetos y la distancia entre ellos, según la ley de gravitación universal de Newton, y a partir de esta fuerza podremos definir el campo gravitatorio. En esta sección, trataremos conceptos fundamentales relacionados con campos en general y el campo gravitatorio en particular. A través del campo podremos posteriormente definir el potencial gravitatorio y la aceleración debida a la gravedad.</p>
+<section id="definición-de-campo" class="level2">
+<h2 class="anchored" data-anchor-id="definición-de-campo">2.1. Definición de campo</h2>
+<p>En física, un campo es una función que asigna un valor para una magnitud física a cada punto del espacio. Esta magnitud puede ser escalar o vectorial, por lo que la asignación puede ser un número o un vector, dependiendo del tipo de campo. Ejemplos de campos escalares incluyen campos de temperaturas, presión y potencial eléctrico, mientras que ejemplos de campos vectoriales incluyen el campo de velocidad en un fluido, el campo eléctrico y el campo gravitatorio.</p>
+<p>Los campos escalares se representan mediante una función que asigna el valor de una magnitud escalar, que es un número, a cada punto del espacio. Esto da lugar a una representación gráfica mediante líneas de contorno donde el campo toma igual valor, como sería el caso de los mapas topográficos donde se representan con lineas los puntos de igual altura o los mapas meteorológicos donde vienen representadas con líneas isobaras los puntos de igual presión atmosférica. Si el campo escalar fuese tridimensional, se representaría mediante superficies donde el campo toma igual valor, en vez de líneas.</p>
+<p>Los campos vectoriales se representan mediante una función que asigna un vector a cada punto del espacio. La representación gráfica de un campo vectorial se realiza mediante líneas de campo, que indican la dirección y la magnitud del campo en cada punto, de forma que los vectores campo son perpendiculares a las líneas de campo. En el caso del campo de velocidad en un fluido, la velocidad de una partícula en un punto será tangente a la línea de campo en ese punto, y la magnitud de la velocidad será proporcional a la densidad de las líneas de campo.</p>
+</section>
+<section id="ley-de-gravitación-universal-de-newton" class="level2">
+<h2 class="anchored" data-anchor-id="ley-de-gravitación-universal-de-newton">2.2. Ley de gravitación universal de Newton</h2>
+<p>La ley de gravitación universal de Newton establece que todos los objetos con masa se atraen mutuamente con una fuerza proporcional a sus masas e inversamente proporcional al cuadrado de la distancia entre ellos. Matemáticamente, esta ley se expresa como:</p>
+<p><span class="math display">\[F = G \frac{m_1 m_2}{r^2}\]</span></p>
+<p>donde <span class="math inline">\(F\)</span> es la fuerza de atracción gravitatoria entre dos objetos, <span class="math inline">\(G\)</span> es la constante de gravitación universal, <span class="math inline">\(m_1\)</span> y <span class="math inline">\(m_2\)</span> son las masas de los objetos, y <span class="math inline">\(r\)</span> es la distancia entre ellos. Esta ley es fundamental para entender el comportamiento de los objetos bajo la influencia de la gravedad, desde la caída de una manzana hasta el movimiento de los planetas alrededor del Sol.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Constante de gravitación universal">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Constante de gravitación universal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La constante de gravitación universal, denotada por <span class="math inline">\(G\)</span>, es una constante física que aparece en la ley de gravitación universal de Newton. Su valor es aproximadamente <span class="math inline">\(6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>. Esta constante es fundamental para calcular la fuerza gravitatoria entre dos objetos con masa.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Obtención experimental de la constante de gravitación universal">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Obtención experimental de la constante de gravitación universal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La constante de gravitación universal <span class="math inline">\(G\)</span> se obtuvo por primera vez mediante el experimento de Cavendish en 1798. En este experimento, Henry Cavendish utilizó una balanza de torsión para medir la fuerza gravitatoria entre dos masas conocidas. A partir de las mediciones realizadas, Cavendish pudo calcular el valor de <span class="math inline">\(G\)</span> con una precisión sorprendente para la época, y su valor ha sido confirmado por numerosos experimentos posteriores. El valor de <span class="math inline">\(G\)</span> que obtuvo fue aproximadamente <span class="math inline">\(6.754 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>, lo que es muy cercano al valor aceptado actualmente, que es <span class="math inline">\(6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>, lo que representa una desviación de aproximadamente un 1.2%.</p>
+<p>El experimento de Cavendish no solo permitió determinar el valor de <span class="math inline">\(G\)</span>, sino que también proporcionó la primera estimación de la masa de la Tierra, ya que al conocer <span class="math inline">\(G\)</span> y la fuerza gravitatoria entre la Tierra y un objeto en su superficie, se puede calcular la masa de la Tierra utilizando la ley de gravitación universal.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><a href="Cavendish_Experiment.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Cavendish_Experiment.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><a href="Cavendish_Experiment_b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="Cavendish_Experiment_b.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+<div style="text-align: center; font-size: 0.9em; color: gray;">
+<p>Esquema del experimento de Cavendish (1797–1798). A la izquierda, vista lateral; a la derecha, vista superior. <br><small>Figuras originales del trabajo de Henry Cavendish (1798), vía Wikimedia Commons.</small></p>
+</div>
+</div>
+</div>
+</div>
+<p>La dirección de la fuerza gravitatoria es siempre hacia el objeto que genera el campo, lo que significa que la fuerza es atractiva. La magnitud de la fuerza depende de las masas de los objetos y la distancia entre ellos, lo que implica que objetos más masivos o más cercanos experimentarán una fuerza gravitatoria más fuerte. Si el origen de coordenadas se coloca en el primer cuerpo, <span class="math inline">\(\vec r\)</span> será el vector que va desde ese primer cuerpo hasta el segundo, y corresponderá con el vector de posición del segundo cuerpo. En este caso, la fuerza gravitatoria que experimentará el segundo cuerpo será: <span class="math display">\[\vec F = - G \frac{m_1 m_2}{r^2} \hat r\]</span> donde <span class="math inline">\(\hat r\)</span> es el vector unitario que apunta desde el primer cuerpo hacia el segundo. El signo negativo indica que la fuerza es atractiva, es decir, apunta hacia el primer cuerpo que genera la fuerza.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Expresión alternativa de la fuerza gravitatoria">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Expresión alternativa de la fuerza gravitatoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un vector unitario es un vector que tiene un módulo 1 y se utiliza para indicar la dirección de un vector sin importar su módulo. Para cualquier vector <span class="math inline">\(\vec a\)</span>, se puede construir el vector unitario <span class="math inline">\(\hat a = \frac{\vec a}{|\vec a|}=\frac{\vec a}{a}\)</span>. En el caso de la anterior expresión del campo gravitatorio, el vector unitario <span class="math inline">\(\hat r\)</span> indica la dirección del vector que va del primer al segundo cuerpo, y que, al haber colocado el origen de coordenadas en el primer cuerpo, coincide con el vector de posición del segundo cuerpo <span class="math inline">\(\vec r\)</span>. Por tanto <span class="math inline">\(\hat r = \frac{\vec r}{r}\)</span>, y la fuerza gravitatoria que experimentará el segundo cuerpo se puede escribir como: <span class="math display">\[\vec F = - G \frac{m_1 m_2}{r^3} \vec r\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo de aplicación de la ley de gravitación universal">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo de aplicación de la ley de gravitación universal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que queremos calcular la fuerza gravitatoria entre la Tierra y la Luna. La masa de la Tierra es aproximadamente <span class="math inline">\(5.97 \times 10^{24} \, \text{kg}\)</span>, la masa de la Luna es aproximadamente <span class="math inline">\(7.35 \times 10^{22} \, \text{kg}\)</span>, y la distancia promedio entre la Tierra y la Luna es aproximadamente <span class="math inline">\(384,400 \, \text{km}\)</span> (o <span class="math inline">\(3.844 \times 10^8 \, \text{m}\)</span>). Utilizando la ley de gravitación universal de Newton, podemos calcular la fuerza gravitatoria entre la Tierra y la Luna como sigue: <span class="math display">\[F = G \frac{m_1 m_2}{r^2} = (6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}) \frac{(5.97 \times 10^{24} \, \text{kg})(7.35 \times 10^{22} \, \text{kg})}{(3.844 \times 10^8 \, \text{m})^2}\]</span> <span class="math display">\[F \approx 1.98 \times 10^{20} \, \text{N}\]</span> Esta fuerza es la que mantiene a la Luna en órbita alrededor de la Tierra, y es un ejemplo de cómo la ley de gravitación universal de Newton se aplica para entender los movimientos de los cuerpos celestes.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="campo-gravitatorio" class="level2">
+<h2 class="anchored" data-anchor-id="campo-gravitatorio">2.3. Campo gravitatorio</h2>
+<p>El campo gravitatorio es una región del espacio donde un objeto con masa experimentaría una fuerza de atracción hacia otro objeto con masa. La intensidad de esta fuerza depende de la masa de los objetos y la distancia entre ellos, según la ley de gravitación universal de Newton. El campo gravitatorio se puede definir como la fuerza gravitatoria por unidad de masa que experimentaría un objeto colocado en un punto del espacio. Matemáticamente, el campo gravitatorio <span class="math inline">\(\vec g\)</span> en un punto del espacio se define como: <span class="math display">\[\vec g = \frac{\vec F}{m}\]</span> donde <span class="math inline">\(\vec F\)</span> es la fuerza gravitatoria que experimentaría un objeto de masa <span class="math inline">\(m\)</span> colocado en ese punto. Si el campo gravitatorio es generado por un objeto de masa <span class="math inline">\(M\)</span> situado en el origen de coordenadas, el campo gravitatorio en un punto del espacio con vector de posición <span class="math inline">\(\vec r\)</span> se puede expresar como: <span class="math display">\[\vec g = - G \frac{M}{r^3} \vec r\]</span> donde <span class="math inline">\(r\)</span> es la distancia desde el origen hasta el punto donde se calcula el campo gravitatorio, y el signo negativo indica que el campo gravitatorio apunta hacia el objeto que lo genera, es decir, hacia el origen de coordenadas. El campo gravitatorio es un campo vectorial, lo que significa que tiene tanto magnitud como dirección. La dirección del campo gravitatorio es siempre hacia el objeto que lo genera, lo que implica que la fuerza gravitatoria que experimentaría un objeto colocado en ese punto también estaría dirigida hacia el objeto que genera el campo. La magnitud del campo gravitatorio se puede calcular como: <span class="math display">\[g = G \frac{M}{r^2}\]</span> lo que indica que el campo gravitatorio disminuye con el cuadrado de la distancia desde el objeto que lo genera, y aumenta con la masa del objeto. El campo gravitatorio es fundamental para entender el comportamiento de los objetos bajo la influencia de la gravedad, desde la caída de una manzana hasta el movimiento de los planetas alrededor del Sol. Además, el campo gravitatorio es un concepto clave en la teoría de la relatividad general de Einstein, donde se describe la gravedad como una curvatura del espacio-tiempo causada por la masa y la energía.</p>
+</section>
+<section id="aceleración-debida-a-la-gravedad" class="level2">
+<h2 class="anchored" data-anchor-id="aceleración-debida-a-la-gravedad">2.4. Aceleración debida a la gravedad</h2>
+<p>La aceleración debida a la gravedad es la aceleración que experimenta un objeto debido a la fuerza gravitatoria que actúa sobre él. En la superficie de la Tierra, esta aceleración es aproximadamente <span class="math inline">\(9.81 \, \text{m/s}^2\)</span> y se denota comúnmente como <span class="math inline">\(g\)</span>. La aceleración debida a la gravedad se puede calcular utilizando la ley de gravitación universal de Newton, considerando la masa de la Tierra y la distancia desde el centro de la Tierra hasta el objeto. Matemáticamente, la aceleración debida a la gravedad en la superficie de la Tierra se puede expresar como: <span class="math display">\[g = G \frac{M}{R^2}\]</span> donde <span class="math inline">\(G\)</span> es la constante de gravitación universal, <span class="math inline">\(M\)</span> es la masa de la Tierra, y <span class="math inline">\(R\)</span> es el radio de la Tierra. Esta aceleración es responsable de la caída de los objetos hacia la Tierra y es un factor importante en la dinámica de los cuerpos en la superficie terrestre. Además, la aceleración debida a la gravedad varía ligeramente con la altitud y la latitud debido a la forma de la Tierra y su rotación, pero el valor promedio de <span class="math inline">\(9.81 \, \text{m/s}^2\)</span> es comúnmente utilizado para la mayoría de los cálculos relacionados con la gravedad en la superficie terrestre.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Obtención del valor de la aceleración debida a la gravedad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Obtención del valor de la aceleración debida a la gravedad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El valor de la aceleración debida a la gravedad en la superficie de la Tierra se puede obtener utilizando la ley de gravitación universal de Newton, considerando la masa de la Tierra y el radio de la Tierra. La masa de la Tierra es aproximadamente <span class="math inline">\(5.97 \times 10^{24} \, \text{kg}\)</span> y el radio de la Tierra es aproximadamente <span class="math inline">\(6.371 \times 10^6 \, \text{m}\)</span>. Sustituyendo estos valores en la fórmula para calcular <span class="math inline">\(g\)</span>, obtenemos: <span class="math display">\[g = G \frac{M}{R^2} = (6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}) \frac{5.97 \times 10^{24} \, kg}{(6.371 \times 10^6 \, \text{m})^2} \approx 9.81 \, \text{m/s}^2\]</span> Este valor es el promedio de la aceleración debida a la gravedad en la superficie de la Tierra, y es utilizado comúnmente para la mayoría de los cálculos relacionados con la gravedad en la superficie terrestre.</p>
+<p>El radio de la Tierra no es constante, ya que la Tierra no es una esfera perfecta, sino que tiene una forma ligeramente achatada en los polos y ensanchada en el ecuador. El radio de la Tierra varía desde aproximadamente <span class="math inline">\(6.356 \times 10^6 \, \text{m}\)</span> en los polos hasta aproximadamente <span class="math inline">\(6.378 \times 10^6 \, \text{m}\)</span> en el ecuador. Sin embargo, el valor promedio del radio de la Tierra es comúnmente utilizado para cálculos relacionados con la gravedad, y es aproximadamente <span class="math inline">\(6.371 \times 10^6 \, \text{m}\)</span>. La variación del radio de la Tierra afecta ligeramente el valor de la aceleración debida a la gravedad en diferentes latitudes, siendo ligeramente mayor en los polos y ligeramente menor en el ecuador debido a la forma de la Tierra y su rotación.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="energía-potencial-y-potencial-gravitatorio" class="level1">
+<h1>3. Energía potencial y potencial gravitatorio</h1>
+<p>La fuerza gravitatoria es una fuerza central, es decir, que apunta siempre hacia el objeto que la genera, y depende únicamente de la distancia entre el objeto que la experimenta y el objeto que la genera. Todas las fuerzas centrales son conservativas, por lo que la fuerza gravitatoria es una fuerza conservativa, y se le puede asociar a ella una energía potencial.</p>
+<section id="energía-potencial-gravitatoria" class="level2">
+<h2 class="anchored" data-anchor-id="energía-potencial-gravitatoria">3.1. Energía potencial gravitatoria</h2>
+<p>La energía potencial gravitatoria es la energía almacenada en un sistema debido a la posición de los objetos bajo la influencia de la gravedad. Para una fuerza conservativa, como es el caso de la fuerza gravitatoria, la energía potencial se puede definir como el trabajo realizado por la fuerza conservativa para mover un objeto desde un punto de referencia hasta el punto donde se encuentra el objeto.</p>
+<p>Recordemos que la relación entre una fuerza conservativa <span class="math inline">\(\vec F\)</span> y su energía potencial <span class="math inline">\(U\)</span> es que el trabajo de la fuerza conservativa es igual a menos la variación de la energía potencial, es decir: <span class="math display">\[W = \int \vec F \cdot d\vec r = -\Delta U\]</span> donde <span class="math inline">\(W\)</span> es el trabajo realizado por la fuerza conservativa, <span class="math inline">\(\vec F\)</span> es la fuerza conservativa, <span class="math inline">\(d\vec r\)</span> es un elemento infinitesimal del desplazamiento, y <span class="math inline">\(\Delta U\)</span> es la variación de la energía potencial. En el caso de la fuerza gravitatoria, la energía potencial gravitatoria <span class="math inline">\(U\)</span> se puede calcular integrando la fuerza gravitatoria desde un punto de referencia hasta el punto donde se encuentra el objeto. Si tomamos como punto de referencia el infinito, donde la energía potencial gravitatoria es cero, la energía potencial gravitatoria <span class="math inline">\(U\)</span> de un objeto de masa <span class="math inline">\(m\)</span> situado a una distancia <span class="math inline">\(r\)</span> de un objeto de masa <span class="math inline">\(M\)</span> se puede expresar como: <span class="math display">\[U = - G \frac{M m}{r}\]</span> donde <span class="math inline">\(G\)</span> es la constante de gravitación universal, <span class="math inline">\(M\)</span> es la masa del objeto que genera el campo gravitatorio, <span class="math inline">\(m\)</span> es la masa del objeto que experimenta la fuerza gravitatoria, y <span class="math inline">\(r\)</span> es la distancia entre los dos objetos. El signo negativo indica que la energía potencial gravitatoria es negativa, lo que refleja el hecho de que se requiere trabajo para separar los objetos y llevarlos a una distancia infinita, donde la energía potencial gravitatoria es cero. La energía potencial gravitatoria es un concepto fundamental en la física, ya que permite entender el comportamiento de los objetos bajo la influencia de la gravedad, desde la caída de una manzana hasta el movimiento de los planetas alrededor del Sol.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Energía potencial gravitatoria cerca de la superficie de la Tierra">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Energía potencial gravitatoria cerca de la superficie de la Tierra
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Cerca de la superficie de la Tierra, donde el campo gravitatorio es aproximadamente uniforme, la energía potencial gravitatoria <span class="math inline">\(U\)</span> de un objeto de masa <span class="math inline">\(m\)</span> situado a una altura <span class="math inline">\(h\)</span> sobre la superficie de la Tierra se puede expresar como: <span class="math display">\[U = m g h\]</span> donde <span class="math inline">\(g\)</span> es la aceleración debida a la gravedad, que es aproximadamente <span class="math inline">\(9.81 \, m/s^2\)</span> cerca de la superficie de la Tierra. En este caso, la energía potencial gravitatoria es positiva, lo que refleja el hecho de que se requiere trabajo para elevar el objeto a una altura <span class="math inline">\(h\)</span> sobre la superficie de la Tierra. Esta expresión es una aproximación válida para alturas pequeñas en comparación con el radio de la Tierra, donde el campo gravitatorio puede considerarse uniforme.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="potencial-gravitatorio" class="level2">
+<h2 class="anchored" data-anchor-id="potencial-gravitatorio">3.2. Potencial gravitatorio</h2>
+<p>El potencial gravitatorio es una medida de la energía potencial gravitatoria por unidad de masa en un punto del espacio. Se define como el trabajo realizado por la fuerza gravitatoria para mover un objeto de masa <span class="math inline">\(m\)</span> desde un punto de referencia hasta el punto donde se encuentra el objeto, dividido por la masa del objeto. Matemáticamente, el potencial gravitatorio <span class="math inline">\(\Phi\)</span> en un punto del espacio se puede expresar como: <span class="math display">\[\Phi = \frac{U}{m}\]</span> donde <span class="math inline">\(U\)</span> es la energía potencial gravitatoria y <span class="math inline">\(m\)</span> es la masa del objeto que experimenta la fuerza gravitatoria. Si tomamos como punto de referencia el infinito, donde el potencial gravitatorio es cero, el potencial gravitatorio <span class="math inline">\(\Phi\)</span> de un objeto situado a una distancia <span class="math inline">\(r\)</span> de un objeto de masa <span class="math inline">\(M\)</span> se puede expresar como: <span class="math display">\[\Phi = - G \frac{M}{r}\]</span> donde <span class="math inline">\(G\)</span> es la constante de gravitación universal, <span class="math inline">\(M\)</span> es la masa del objeto que genera el campo gravitatorio, y <span class="math inline">\(r\)</span> es la distancia entre el objeto que genera el campo y el punto donde se calcula el potencial gravitatorio. El signo negativo indica que el potencial gravitatorio es negativo, lo que refleja el hecho de que se requiere trabajo para separar los objetos y llevarlos a una distancia infinita, donde el potencial gravitatorio es cero. El potencial gravitatorio es un concepto fundamental en la física, ya que permite entender el comportamiento de los objetos bajo la influencia de la gravedad, desde la caída de una manzana hasta el movimiento de los planetas alrededor del Sol.</p>
+</section>
+<section id="relación-entre-el-campo-gravitatorio-y-el-potencial-gravitatorio" class="level2">
+<h2 class="anchored" data-anchor-id="relación-entre-el-campo-gravitatorio-y-el-potencial-gravitatorio">3.3. Relación entre el campo gravitatorio y el potencial gravitatorio</h2>
+<p>El campo gravitatorio <span class="math inline">\(\vec g\)</span> y el potencial gravitatorio <span class="math inline">\(\Phi\)</span> están relacionados entre sí a través de la siguiente relación: <span class="math display">\[\vec g = - \nabla \Phi\]</span> donde <span class="math inline">\(\nabla\)</span> es el operador nabla, que se utiliza para calcular el gradiente de una función escalar. Esta relación indica que el campo gravitatorio es igual al negativo del gradiente del potencial gravitatorio, lo que significa que el campo gravitatorio apunta en la dirección de la mayor disminución del potencial gravitatorio. En otras palabras, el campo gravitatorio indica la dirección en la que un objeto se movería si se colocara en ese punto del espacio, y la magnitud del campo gravitatorio indica la fuerza gravitatoria que experimentaría un objeto de masa <span class="math inline">\(m\)</span> colocado en ese punto. Esta relación es fundamental para entender el comportamiento de los objetos bajo la influencia de la gravedad, desde la caída de una manzana hasta el movimiento de los planetas alrededor del Sol.</p>
+</section>
+</section>
+<section id="movimiento-bajo-la-influencia-de-la-gravedad" class="level1">
+<h1>4. Movimiento bajo la influencia de la gravedad</h1>
+<p>El movimiento de los objetos bajo la influencia de la gravedad es un tema fundamental en la física, y se puede describir utilizando las leyes del movimiento de Newton y la ley de gravitación universal. Distinguiremos entre el movimiento de un objeto en un campo gravitatorio uniforme y el movimiento de un objeto en un campo gravitatorio no uniforme.</p>
+<section id="movimiento-en-un-campo-gravitatorio-uniforme" class="level2">
+<h2 class="anchored" data-anchor-id="movimiento-en-un-campo-gravitatorio-uniforme">4.1. Movimiento en un campo gravitatorio uniforme</h2>
+<p>En un campo gravitatorio uniforme, la fuerza gravitatoria que actúa sobre un objeto es constante en magnitud y dirección. Esto ocurre, por ejemplo, cerca de la superficie de la Tierra, donde el campo gravitatorio es aproximadamente uniforme. En este caso, la fuerza gravitatoria que actúa sobre un objeto de masa <span class="math inline">\(m\)</span> es: <span class="math display">\[\vec F = m \vec g\]</span> donde <span class="math inline">\(\vec g\)</span> es la aceleración debida a la gravedad, que es aproximadamente <span class="math inline">\(9.81 \, m/s^2\)</span> cerca de la superficie de la Tierra. La aceleración <span class="math inline">\(\vec a\)</span> del objeto se puede calcular utilizando la segunda ley de Newton, que establece que la fuerza es igual a la masa por la aceleración, es decir: <span class="math display">\[\vec F = m \vec a\]</span> Sustituyendo la expresión de la fuerza gravitatoria, obtenemos: <span class="math display">\[m \vec a = m \vec g\]</span> Dividiendo ambos lados por <span class="math inline">\(m\)</span>, obtenemos la aceleración del objeto bajo la influencia de la gravedad: <span class="math display">\[\vec a = \vec g\]</span> Esto significa que en un campo gravitatorio uniforme, todos los objetos experimentan la misma aceleración debido a la gravedad, independientemente de su masa. Este es el principio de equivalencia, que establece que la aceleración debida a la gravedad es la misma para todos los objetos, lo que fue una de las ideas clave que llevó a Einstein a desarrollar la teoría de la relatividad general.</p>
+<p>Desde el punto de vista energético, la energía mecánica de un objeto en un campo gravitatorio uniforme se puede expresar como la suma de su energía cinética y su energía potencial gravitatoria, es decir: <span class="math display">\[E = K + U = \frac{1}{2} m v^2 + m g h\]</span> donde <span class="math inline">\(h\)</span> es la altura del objeto sobre la superficie de la Tierra. En un campo gravitatorio uniforme, la energía mecánica total del objeto se conserva, lo que significa que a medida que el objeto se mueve hacia abajo por el campo gravitatorio, su energía potencial gravitatoria disminuye y su energía cinética aumenta de tal manera que la suma de ambas se mantiene constante. Esto se puede expresar como: <span class="math display">\[E = \text{constante}\]</span> lo que implica que: <span class="math display">\[\frac{1}{2} m v^2 + m g h = \text{constante}\]</span> Esta relación muestra cómo la energía mecánica del objeto se conserva durante su movimiento bajo la influencia de un campo gravitatorio uniforme, y cómo la energía potencial gravitatoria se convierte en energía cinética a medida que el objeto se mueve hacia abajo por el campo gravitatorio.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: movimiento en un plano inclinado sin rozamiento: fuerzas">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: movimiento en un plano inclinado sin rozamiento: fuerzas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que tenemos un objeto de masa <span class="math inline">\(m\)</span> situado en un plano inclinado con un ángulo <span class="math inline">\(\theta\)</span> respecto a la horizontal, y que el plano está bajo la influencia de un campo gravitatorio uniforme. La fuerza gravitatoria que actúa sobre el objeto se puede descomponer en dos componentes: una componente paralela al plano inclinado, que es responsable del movimiento del objeto hacia abajo por el plano, y una componente perpendicular al plano inclinado, que es responsable de la fuerza normal que el plano ejerce sobre el objeto. La componente paralela de la fuerza gravitatoria se puede calcular como: <span class="math display">\[F_{\parallel} = m g \sin \theta\]</span> y la componente perpendicular de la fuerza gravitatoria se puede calcular como: <span class="math display">\[F_{\perp} = m g \cos \theta\]</span> La aceleración del objeto hacia abajo por el plano inclinado se puede calcular utilizando la segunda ley de Newton, considerando solo la componente paralela de la fuerza gravitatoria, es decir: <span class="math display">\[m a = m g \sin \theta\]</span> Dividiendo ambos lados por <span class="math inline">\(m\)</span>, obtenemos la aceleración del objeto hacia abajo por el plano inclinado: <span class="math display">\[a = g \sin \theta\]</span> Esto muestra que la aceleración del objeto hacia abajo por el plano inclinado depende del ángulo del plano inclinado, y es menor que la aceleración debida a la gravedad <span class="math inline">\(g\)</span> cuando el ángulo <span class="math inline">\(\theta\)</span> es menor que <span class="math inline">\(90^\circ\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: movimiento en un plano inclinado sin rozamiento: energía">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: movimiento en un plano inclinado sin rozamiento: energía
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que tenemos un objeto de masa <span class="math inline">\(m\)</span> situado en un plano inclinado con un ángulo <span class="math inline">\(\theta\)</span> respecto a la horizontal, y que el plano está bajo la influencia de un campo gravitatorio uniforme. La energía potencial gravitatoria del objeto se puede calcular como: <span class="math display">\[U = m g h\]</span> donde <span class="math inline">\(h\)</span> es la altura del objeto sobre la superficie de la Tierra, que se puede expresar en términos de la distancia <span class="math inline">\(d\)</span> del objeto al punto más bajo del plano inclinado como <span class="math inline">\(h = d \sin \theta\)</span>. Por lo tanto, la energía potencial gravitatoria del objeto se puede expresar como: <span class="math display">\[U = m g d \sin \theta\]</span> Si el objeto se mueve hacia abajo por el plano inclinado, su energía potencial gravitatoria disminuirá, y su energía cinética aumentará. La energía mecánica total del objeto se puede expresar como la suma de su energía cinética y su energía potencial gravitatoria, es decir: <span class="math display">\[E = K + U = \frac{1}{2} m v^2 + m g d \sin \theta\]</span> Si no hay fuerzas de fricción u otras fuerzas no conservativas actuando sobre el objeto, la energía mecánica total del objeto se conservará, lo que significa quea medida que el objeto se mueve hacia abajo por el plano inclinado, su energía potencial gravitatoria disminuirá y su energía cinética aumentará de tal manera que la suma de ambas se mantendrá constante. Esto se puede expresar como: <span class="math display">\[E = \text{constante}\]</span> lo que implica que: <span class="math display">\[\frac{1}{2} m v^2 + m g d \sin \theta = \text{constante}\]</span> Esta relación muestra cómo la energía mecánica del objeto se conserva durante su movimiento por el plano inclinado bajo la influencia de un campo gravitatorio uniforme, y cómo la energía potencial gravitatoria se convierte en energía cinética a medida que el objeto se mueve hacia abajo por el plano inclinado.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: movimiento en un plano inclinado con rozamiento: fuerzas">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: movimiento en un plano inclinado con rozamiento: fuerzas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que tenemos un objeto de masa <span class="math inline">\(m\)</span> situado en un plano inclinado con un ángulo <span class="math inline">\(\theta\)</span> respecto a la horizontal, que el plano está bajo la influencia de un campo gravitatorio uniforme y que el cuerpo desciende por el plano. Además, supongamos que hay una fuerza de fricción cinética actuando sobre el objeto, con un coeficiente de fricción cinética <span class="math inline">\(\mu_k\)</span>. La fuerza de fricción cinética se puede calcular como: <span class="math display">\[F_{\text{fricción}} = \mu_k N \]</span></p>
+<p>donde <span class="math inline">\(N\)</span> es la fuerza normal que el plano ejerce sobre el objeto, que es igual a la componente perpendicular de la fuerza gravitatoria, es decir: <span class="math display">\[N = F_{\perp} = m g \cos \theta\]</span> Por lo tanto, la fuerza de fricción cinética se puede expresar como: <span class="math display">\[F_{\text{fricción}} = \mu_k m g \cos \theta\]</span> Esta fuerza de fricción actúa en dirección opuesta al movimiento del objeto, es decir, hacia arriba por el plano inclinado, ya que hemos supuesto que el cuerpo baja (si el cuerpo subiera, la fuerza de fricción iría hacia abajo).</p>
+<p>En la dirección del plano, las fuerzas que existen son la componente paralela del peso, que va hacia abajo del plano, y la fricción obtenida anteriormente, de forma que la fuerza neta que actúa sobre el objeto es la diferencia entre la componente paralela de la fuerza gravitatoria y la fuerza de fricción, es decir: <span class="math display">\[F_{\text{neto}} = F_{\parallel} - F_{\text{fricción}} = m g \sin \theta - \mu_k m g \cos \theta\]</span> La aceleración del objeto hacia abajo por el plano inclinado se puede calcular utilizando la segunda ley de Newton, considerando la fuerza neta que actúa sobre el objeto, es decir: <span class="math display">\[m a = m g \sin \theta - \mu_k m g \cos \theta\]</span> Dividiendo ambos lados por <span class="math inline">\(m\)</span>, obtenemos la aceleración del objeto hacia abajo por el plano inclinado con fricción: <span class="math display">\[a = g \sin \theta - \mu_k g \cos \theta\]</span> Esta relación muestra cómo la aceleración del objeto hacia abajo por el plano inclinado se ve afectada por la presencia de una fuerza de fricción, y cómo la aceleración es menor que en el caso sin fricción debido a la fuerza de fricción que actúa en dirección opuesta al movimiento del objeto.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: movimiento en un plano inclinado con rozamiento: energía">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: movimiento en un plano inclinado con rozamiento: energía
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que tenemos un objeto de masa <span class="math inline">\(m\)</span> situado en un plano inclinado con un ángulo <span class="math inline">\(\theta\)</span> respecto a la horizontal, que el plano está bajo la influencia de un campo gravitatorio uniforme y que el cuerpo desciende por el plano. Además, supongamos que hay una fuerza de fricción cinética actuando sobre el objeto, con un coeficiente de fricción cinética <span class="math inline">\(\mu_k\)</span>. La energía potencial gravitatoria del objeto se puede calcular como: <span class="math display">\[U = m g h\]</span> donde <span class="math inline">\(h\)</span> es la altura del objeto sobre la superficie de la Tierra, que se puede expresar en términos de la distancia <span class="math inline">\(d\)</span> del objeto al punto más bajo del plano inclinado como <span class="math inline">\(h = d \sin \theta\)</span>. Por lo tanto, la energía potencial gravitatoria del objeto se puede expresar como: <span class="math display">\[U = m g d \sin \theta\]</span> Si el objeto se mueve hacia abajo por el plano inclinado, su energía potencial gravitatoria disminuirá, y su energía cinética aumentará. Sin embargo, debido a la presencia de la fuerza de fricción, la energía mecánica total del objeto no se conservará, ya que la fuerza de fricción realiza un trabajo negativo sobre el objeto, disipando energía mecánica en forma de calor. La energía mecánica total del objeto se puede expresar como la suma de su energía cinética y su energía potencial gravitatoria, es decir: <span class="math display">\[E = K + U = \frac{1}{2} m v^2 + m g d \sin \theta\]</span> A medida que el objeto se mueve hacia abajo por el plano inclinado, su energía potencial gravitatoria disminuirá y su energía cinética aumentará, pero la energía mecánica total del objeto disminuirá debido al trabajo realizado por la fuerza de fricción, lo que se puede expresar como: <span class="math display">\[E = \text{no constante}\]</span> lo que implica que: <span class="math display">\[\frac{1}{2} m v^2 + m g d \sin \theta &lt; \text{constante}\]</span> Esta relación muestra cómo la energía mecánica del objeto no se conserva durante su movimiento por el plano inclinado bajo la influencia de un campo gravitatorio uniforme debido a la presencia de una fuerza de fricción, y cómo la energía potencial gravitatoria se convierte en energía cinética a medida que el objeto se mueve hacia abajo por el plano inclinado, pero parte de esa energía mecánica se disipa en forma de calor debido a la fuerza de fricción.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="movimiento-en-un-campo-gravitatorio-no-uniforme" class="level2">
+<h2 class="anchored" data-anchor-id="movimiento-en-un-campo-gravitatorio-no-uniforme">4.2. Movimiento en un campo gravitatorio no uniforme</h2>
+<p>Para un objeto de masa <span class="math inline">\(m\)</span> situado a una distancia <span class="math inline">\(r\)</span> de un objeto de masa <span class="math inline">\(M\)</span>, la fuerza gravitatoria que actúa sobre el objeto de masa <span class="math inline">\(m\)</span> es: <span class="math display">\[\vec F = - G \frac{M m}{r^3} \vec r\]</span> donde <span class="math inline">\(\vec r\)</span> es el vector de posición del objeto de masa <span class="math inline">\(m\)</span> cono origen en el objeto de masa <span class="math inline">\(M\)</span>. La aceleración <span class="math inline">\(\vec a\)</span> del objeto de masa <span class="math inline">\(m\)</span> se puede calcular utilizando la segunda ley de Newton, que establece que la fuerza es igual a la masa por la aceleración, es decir: <span class="math display">\[\vec F = m \vec a\]</span> Sustituyendo la expresión de la fuerza gravitatoria, obtenemos: <span class="math display">\[m \vec a = - G \frac{M m}{r^3} \vec r\]</span> Dividiendo ambos lados por <span class="math inline">\(m\)</span>, obtenemos la aceleración del objeto de masa <span class="math inline">\(m\)</span> bajo la influencia de la gravedad: <span class="math display">\[\vec a = - G \frac{M}{r^3} \vec r\]</span> Esta ecuación describe el movimiento de un objeto bajo la influencia de la gravedad, y se puede utilizar para analizar el movimiento de los planetas alrededor del Sol, la caída de los objetos hacia la Tierra, y otros fenómenos relacionados con la gravedad.</p>
+<p>La energía mecánica de un objeto en un campo gravitatorio es la suma de su energía cinética y su energía potencial gravitatoria. La energía cinética <span class="math inline">\(K\)</span> de un objeto de masa <span class="math inline">\(m\)</span> que se mueve con una velocidad <span class="math inline">\(\vec v\)</span> se puede expresar como: <span class="math display">\[K = \frac{1}{2} m v^2\]</span> donde <span class="math inline">\(v\)</span> es la magnitud de la velocidad del objeto. La energía potencial gravitatoria <span class="math inline">\(U\)</span> de un objeto de masa <span class="math inline">\(m\)</span> situado a una distancia <span class="math inline">\(r\)</span> de un objeto de masa <span class="math inline">\(M\)</span> se puede expresar como: <span class="math display">\[U = - G \frac{M m}{r}\]</span> donde <span class="math inline">\(G\)</span> es la constante de gravitación universal, <span class="math inline">\(M\)</span> es la masa del objeto que genera el campo gravitatorio, y <span class="math inline">\(r\)</span> es la distancia entre los dos objetos. La energía mecánica <span class="math inline">\(E\)</span> de un objeto en un campo gravitatorio se puede expresar como: <span class="math display">\[E = K + U = \frac{1}{2} m v^2 - G \frac{M m}{r}\]</span> La energía mecánica es un concepto fundamental en la física, ya que permite entender el comportamiento de los objetos bajo la influencia de la gravedad, desde la caída de una manzana hasta el movimiento de los planetas alrededor del Sol.</p>
+</section>
+</section>
+<section id="teorema-de-gauss-para-la-gravedad" class="level1">
+<h1>5. Teorema de Gauss para la gravedad</h1>
+<p>El teorema de Gauss para la gravedad es una herramienta matemática que se utiliza para calcular el campo gravitatorio generado por una distribución de masa. Este teorema establece que el flujo del campo gravitatorio a través de una superficie cerrada es proporcional a la masa total encerrada por esa superficie. Matemáticamente, el teorema de Gauss para la gravedad se puede expresar como: <span class="math display">\[\oint \vec g \cdot d\vec A = -4 \pi G M_{\text{enc}}\]</span> donde <span class="math inline">\(\oint \vec g \cdot d\vec A\)</span> es el flujo del campo gravitatorio a través de una superficie cerrada, <span class="math inline">\(G\)</span> es la constante de gravitación universal, y <span class="math inline">\(M_{\text{enc}}\)</span> es la masa total encerrada por la superficie. El signo negativo indica que el campo gravitatorio apunta hacia la masa que lo genera, lo que refleja el hecho de que la fuerza gravitatoria es atractiva. El teorema de Gauss para la gravedad es una herramienta poderosa para calcular el campo gravitatorio generado por distribuciones de masa con simetría, como es el caso de una esfera de masa uniforme, donde el campo gravitatorio fuera de la esfera se puede calcular fácilmente utilizando el teorema de Gauss, y se encuentra que el campo gravitatorio fuera de la esfera es el mismo que si toda la masa de la esfera estuviera concentrada en un punto en el centro de la esfera. Este resultado es conocido como el teorema de la esfera, y es un caso particular del teorema de Gauss para la gravedad.</p>
+</section>
+<section id="campo-gravitatorio-terrestre" class="level1">
+<h1>6. Campo gravitatorio Terrestre</h1>
+<p>El campo gravitatorio terrestre es el campo gravitatorio generado por la masa de la Tierra. Este campo gravitatorio es responsable de la fuerza de gravedad que experimentamos en la superficie de la Tierra, y es fundamental para entender el comportamiento de los objetos bajo la influencia de la gravedad en la Tierra. El campo gravitatorio terrestre se puede aproximar como un campo gravitatorio uniforme cerca de la superficie de la Tierra, donde la aceleración debida a la gravedad es aproximadamente <span class="math inline">\(9.81 \,\text{m/s}^2\)</span>. Sin embargo, a medida que nos alejamos de la superficie de la Tierra, el campo gravitatorio terrestre se vuelve no uniforme, y su intensidad disminuye con la distancia desde el centro de la Tierra. El campo gravitatorio terrestre también se ve afectado por la rotación de la Tierra, lo que provoca una ligera disminución de la aceleración debida a la gravedad en el ecuador en comparación con los polos. Además, el campo gravitatorio terrestre se ve afectado por la distribución de masa en la Tierra, lo que provoca pequeñas variaciones en la aceleración debida a la gravedad en diferentes lugares de la superficie de la Tierra. El campo gravitatorio terrestre es un tema fundamental en la física, ya que permite entender el comportamiento de los objetos bajo la influencia de la gravedad en la Tierra, desde la caída de una manzana hasta el movimiento de los satélites alrededor de la Tierra.</p>
+<section id="movimiento-de-los-satélites-alrededor-de-la-tierra" class="level2">
+<h2 class="anchored" data-anchor-id="movimiento-de-los-satélites-alrededor-de-la-tierra">6.1. Movimiento de los satélites alrededor de la Tierra</h2>
+<p>El movimiento de los satélites alrededor de la Tierra se puede describir utilizando las leyes del movimiento de Newton y la ley de gravitación universal. Un satélite en órbita alrededor de la Tierra experimenta una fuerza gravitatoria que actúa como fuerza centrípeta, manteniéndolo en órbita. La fuerza gravitatoria que actúa sobre un satélite de masa <span class="math inline">\(m\)</span> situado a una distancia <span class="math inline">\(r\)</span> del centro de la Tierra se puede expresar como: <span class="math display">\[\vec F = - G \frac{M m}{r^3} \vec r\]</span> donde <span class="math inline">\(G\)</span> es la constante de gravitación universal, <span class="math inline">\(M\)</span> es la masa de la Tierra, y <span class="math inline">\(\vec r\)</span> es el vector de posición del satélite con origen en el centro de la Tierra. La aceleración <span class="math inline">\(\vec a\)</span> del satélite se puede calcular utilizando la segunda ley de Newton, que establece que la fuerza es igual a la masa por la aceleración, es decir: <span class="math display">\[\vec F = m \vec a\]</span> Sustituyendo la expresión de la fuerza gravitatoria, obtenemos: <span class="math display">\[m \vec a = - G \frac{M m}{r^3} \vec r\]</span> Dividiendo ambos lados por <span class="math inline">\(m\)</span>, obtenemos la aceleración del satélite bajo la influencia de la gravedad terrestre: <span class="math display">\[\vec a = - G \frac{M}{r^3} \vec r\]</span> Esta ecuación describe el movimiento de un satélite bajo la influencia de la gravedad terrestre, y se puede utilizar para analizar el movimiento de los satélites alrededor de la Tierra, la caída de los objetos hacia la Tierra, y otros fenómenos relacionados con la gravedad terrestre.</p>
+<p>Si la trayectoria del satélite es circular, la aceleración centrípeta necesaria para mantener el satélite en órbita se puede expresar como: <span class="math display">\[a = \frac{v^2}{r}\]</span> donde <span class="math inline">\(v\)</span> es la velocidad del satélite y <span class="math inline">\(r\)</span> es la distancia desde el centro de la Tierra. Igualando esta expresión con la aceleración debida a la gravedad, obtenemos: <span class="math display">\[\frac{v^2}{r} = G \frac{M}{r^2}\]</span> Multiplicando ambos lados por <span class="math inline">\(r\)</span>, obtenemos la velocidad del satélite en órbita circular alrededor de la Tierra: <span class="math display">\[v = \sqrt{G \frac{M}{r}}\]</span> Esta relación muestra que la velocidad de un satélite en órbita circular alrededor de la Tierra depende de la masa de la Tierra y la distancia del satélite al centro de la Tierra, y es un resultado fundamental para entender el movimiento de los satélites alrededor de la Tierra.</p>
+<p>A partir de esta relación, también podemos calcular el periodo del satélite en órbita circular alrededor de la Tierra. El periodo <span class="math inline">\(T\)</span> es el tiempo que tarda el satélite en completar una órbita completa, y se puede calcular utilizando la relación entre la velocidad del satélite y la circunferencia de la órbita, es decir: <span class="math display">\[T = \frac{2\pi r}{v}\]</span> Sustituyendo la expresión de la velocidad del satélite, obtenemos: <span class="math display">\[T = \frac{2\pi r}{\sqrt{G \frac{M}{r}}} = 2\pi \sqrt{\frac{r^3}{GM}}\]</span> Esta relación muestra que el periodo de un satélite en órbita circular alrededor de la Tierra depende de la masa de la Tierra y la distancia del satélite al centro de la Tierra, y es un resultado fundamental para entender el movimiento de los satélites alrededor de la Tierra.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Velocidad de un satélite en órbita circular">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Velocidad de un satélite en órbita circular
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que tenemos un satélite en órbita circular alrededor de la Tierra a una distancia de <span class="math inline">\(r = 7.0 \times 10^6 \, \text{m}\)</span> desde el centro de la Tierra. La masa de la Tierra es aproximadamente <span class="math inline">\(M = 5.97 \times 10^{24} \, \text{kg}\)</span> y la constante de gravitación universal es <span class="math inline">\(G = 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>. Sustituyendo estos valores en la fórmula para calcular la velocidad del satélite, obtenemos: <span class="math display">\[v = \sqrt{G \frac{M}{r}} = \sqrt{(6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}) \frac{5.97 \times 10^{24} \, \text{kg}}{7.0 \times 10^6 \, \text{m}}} \approx 7.12 \times 10^3 \, \text{m/s}\]</span> Esta es la velocidad que el satélite debe mantener para permanecer en órbita circular alrededor de la Tierra a esa distancia. Si el satélite se mueve a una velocidad menor, caerá hacia la Tierra, y si se mueve a una velocidad mayor, se alejará de la Tierra y eventualmente escapará de su influencia gravitatoria. Esta relación es fundamental para entender el movimiento de los satélites alrededor de la Tierra.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Periodo de un satélite en órbita circular">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Periodo de un satélite en órbita circular
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que tenemos un satélite en órbita circular alrededor de la Tierra a una distancia de <span class="math inline">\(r = 7.0 \times 10^6 \, \text{m}\)</span> desde el centro de la Tierra. La masa de la Tierra es aproximadamente <span class="math inline">\(M = 5.97 \times 10^{24} \, \text{kg}\)</span> y la constante de gravitación universal es <span class="math inline">\(G = 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>. Sustituyendo estos valores en la fórmula para calcular el periodo del satélite, obtenemos: <span class="math display">\[T = 2\pi \sqrt{\frac{r^3}{GM}} = 2\pi \sqrt{\frac{(7.0 \times 10^6 \, \text{m})^3}{(6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2})(5.97 \times 10^{24} \, \text{kg})}} \approx 5.42 \times 10^3 \, \text{s}\]</span> Este es el tiempo que el satélite tarda en completar una órbita circular alrededor de la Tierra a esa distancia. Esta relación es fundamental para entender el movimiento de los satélites alrededor de la Tierra.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Radio de una órbita geoestacionaria">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Radio de una órbita geoestacionaria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Queremos calcular el radio de una órbita geoestacionaria alrededor de la Tierra, es decir, una órbita en la que un satélite permanece fijo respecto a un punto en la superficie de la Tierra. Para que esto ocurra, el periodo del satélite debe ser igual al periodo de rotación de la Tierra, que es aproximadamente <span class="math inline">\(T = 24 \, \text{h} = 86400 \, \text{s}\)</span>. La masa de la Tierra es aproximadamente <span class="math inline">\(M = 5.97 \times 10^{24} \, \text{kg}\)</span> y la constante de gravitación universal es <span class="math inline">\(G = 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>. Sustituyendo estos valores en la fórmula para calcular el radio del satélite en órbita circular, obtenemos: <span class="math display">\[r = \left( \frac{G M T^2}{4 \pi^2} \right)^{1/3} = \left( \frac{(6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2})(5.97 \times 10^{24} \, \text{kg})(86400 \, \text{s})^2}{4 \pi^2} \right)^{1/3} \approx 4.23 \times 10^7 \, \text{m}\]</span> Este es el radio de la órbita geoestacionaria alrededor de la Tierra, medido desde el centro de la Tierra. Esta relación es fundamental para entender el movimiento de los satélites geoestacionarios alrededor de la Tierra, que son utilizados para comunicaciones, meteorología y otros fines.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="velocidad-de-escape-de-la-tierra" class="level2">
+<h2 class="anchored" data-anchor-id="velocidad-de-escape-de-la-tierra">6.2. Velocidad de escape de la Tierra</h2>
+<p>La velocidad de escape de la Tierra es la velocidad mínima que un objeto debe alcanzar para escapar completamente de la influencia gravitatoria de la Tierra. Esta velocidad se puede calcular utilizando la conservación de la energía. Para que un objeto escape de la Tierra, su energía mecánica total debe ser mayor o igual a cero, lo que significa que la energía cinética del objeto debe ser al menos igual a la energía potencial gravitatoria negativa del objeto en la superficie de la Tierra. La energía cinética <span class="math inline">\(K\)</span> de un objeto de masa <span class="math inline">\(m\)</span> que se mueve con una velocidad <span class="math inline">\(v\)</span> se puede expresar como: <span class="math display">\[K = \frac{1}{2} m v^2\]</span> La energía potencial gravitatoria <span class="math inline">\(U\)</span> de un objeto de masa <span class="math inline">\(m\)</span> situado a una distancia <span class="math inline">\(r\)</span> de un objeto de masa <span class="math inline">\(M\)</span> se puede expresar como: <span class="math display">\[U = - G \frac{M m}{r}\]</span> En la superficie de la Tierra, donde <span class="math inline">\(r\)</span> es igual al radio de la Tierra <span class="math inline">\(R\)</span>, la energía potencial gravitatoria del objeto se puede expresar como: <span class="math display">\[U = - G \frac{M m}{R}\]</span> Para que el objeto escape de la Tierra, su energía mecánica total debe ser mayor o igual a cero, lo que implica que: <span class="math display">\[\frac{1}{2} m v^2 - G \frac{M m}{R} \geq 0\]</span> Multiplicando ambos lados por <span class="math inline">\(2/m\)</span>, obtenemos: <span class="math display">\[v^2 \geq 2 G \frac{M}{R}\]</span> Tomando la raíz cuadrada de ambos lados, obtenemos la velocidad de escape de la Tierra: <span class="math display">\[v \geq \sqrt{2 G \frac{M}{R}}\]</span> Esta relación muestra que la velocidad de escape de la Tierra depende de la masa de la Tierra y el radio de la Tierra, y es un resultado fundamental para entender el movimiento de los objetos bajo la influencia de la gravedad terrestre, desde la caída de una manzana hasta el lanzamiento de cohetes y satélites al espacio.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Cálculo de velocidad de escape en la Tierra">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Cálculo de velocidad de escape en la Tierra
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular la velocidad de escape de la Tierra, partimos de la fórmula derivada de la conservación de la energía. La masa de la Tierra es aproximadamente <span class="math inline">\(M = 5.97 \times 10^{24} \, \text{kg}\)</span>, el radio de la Tierra es aproximadamente <span class="math inline">\(R = 6.371 \times 10^6 \, \text{m}\)</span>, y la constante de gravitación universal es <span class="math inline">\(G = 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>. Sustituyendo estos valores en la fórmula para calcular la velocidad de escape, obtenemos: <span class="math display">\[v = \sqrt{2 G \frac{M}{R}} = \sqrt{2 (6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}) \frac{5.97 \times 10^{24} \, \text{kg}}{6.371 \times 10^6 \, \text{m}}} \approx 1.12 \times 10^4 \, \text{m/s}\]</span> Esta es la velocidad mínima que un objeto debe alcanzar para escapar completamente de la influencia gravitatoria de la Tierra. Si un objeto se mueve a una velocidad menor que esta, eventualmente caerá de nuevo hacia la Tierra debido a la fuerza gravitatoria. Esta relación es fundamental para entender el movimiento de los objetos bajo la influencia de la gravedad terrestre, desde la caída de una manzana hasta el lanzamiento de cohetes y satélites al espacio.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo: Cálculo de la velocidad de escape en la Luna">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo: Cálculo de la velocidad de escape en la Luna
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular la velocidad de escape de la Luna, partimos de la fórmula derivada de la conservación de la energía. La masa de la Luna es aproximadamente <span class="math inline">\(M = 7.35 \times 10^{22} \, \text{kg}\)</span>, el radio de la Luna es aproximadamente <span class="math inline">\(R = 1.737 \times 10^6 \, \text{m}\)</span>, y la constante de gravitación universal es <span class="math inline">\(G = 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>. Sustituyendo estos valores en la fórmula para calcular la velocidad de escape, obtenemos: <span class="math display">\[v = \sqrt{2 G \frac{M}{R}} = \sqrt{2 (6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}) \frac{7.35 \times 10^{22} \, \text{kg}}{1.737 \times 10^6 \, \text{m}}} \approx 2.38 \times 10^3 \, \text{m/s}\]</span> Esta es la velocidad mínima que un objeto debe alcanzar para escapar completamente de la influencia gravitatoria de la Luna. Si un objeto se mueve a una velocidad menor que esta, eventualmente caerá de nuevo hacia la Luna debido a la fuerza gravitatoria. Esta relación es fundamental para entender el movimiento de los objetos bajo la influencia de la gravedad lunar, desde la caída de una roca hasta el lanzamiento de cohetes y satélites al espacio desde la superficie lunar.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

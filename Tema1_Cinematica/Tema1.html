@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 1. Cinemática</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Tema1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Tema1_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Tema1_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Tema1_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Tema1_files/libs/quarto-html/popper.min.js"></script>
+<script src="Tema1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Tema1_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Tema1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Tema1_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Tema1_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Tema1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Tema1_files/libs/bootstrap/bootstrap-33c1396811bb647a58f862e5ff553a70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Tema1_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="Tema1_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="Tema1_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Tema 1. Cinemática</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#Cinemática-de-la-partícula-en-una-dimensión" id="toc-Cinemática-de-la-partícula-en-una-dimensión" class="nav-link active" data-scroll-target="#Cinemática-de-la-partícula-en-una-dimensión">1. Cinemática de la partícula en una dimensión</a>
+  <ul class="collapse">
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">1.1. Introducción</a></li>
+  <li><a href="#desplazamiento-velocidad-módulo-de-la-velocidad" id="toc-desplazamiento-velocidad-módulo-de-la-velocidad" class="nav-link" data-scroll-target="#desplazamiento-velocidad-módulo-de-la-velocidad">1.2.Desplazamiento, velocidad, módulo de la velocidad</a></li>
+  <li><a href="#aceleración" id="toc-aceleración" class="nav-link" data-scroll-target="#aceleración">1.3. Aceleración:</a></li>
+  </ul></li>
+  <li><a href="#movimiento-con-aceleración-constante" id="toc-movimiento-con-aceleración-constante" class="nav-link" data-scroll-target="#movimiento-con-aceleración-constante">2. Movimiento con aceleración constante</a></li>
+  <li><a href="#movimiento-en-más-de-una-dimensión" id="toc-movimiento-en-más-de-una-dimensión" class="nav-link" data-scroll-target="#movimiento-en-más-de-una-dimensión">3. Movimiento en más de una dimensión</a>
+  <ul class="collapse">
+  <li><a href="#introducción-1" id="toc-introducción-1" class="nav-link" data-scroll-target="#introducción-1">3.1. Introducción</a></li>
+  <li><a href="#vectores-posición-y-desplazamiento" id="toc-vectores-posición-y-desplazamiento" class="nav-link" data-scroll-target="#vectores-posición-y-desplazamiento">3.2. Vectores posición y desplazamiento</a></li>
+  <li><a href="#vectores-de-aceleración" id="toc-vectores-de-aceleración" class="nav-link" data-scroll-target="#vectores-de-aceleración">3.3. Vectores de aceleración</a></li>
+  <li><a href="#componentes-intrínsecas-de-la-aceleración" id="toc-componentes-intrínsecas-de-la-aceleración" class="nav-link" data-scroll-target="#componentes-intrínsecas-de-la-aceleración">3.4. Componentes intrínsecas de la aceleración</a></li>
+  <li><a href="#casos-particulares" id="toc-casos-particulares" class="nav-link" data-scroll-target="#casos-particulares">3.5. Casos particulares</a>
+  <ul class="collapse">
+  <li><a href="#movimiento-circular" id="toc-movimiento-circular" class="nav-link" data-scroll-target="#movimiento-circular">3.5.1. Movimiento circular</a></li>
+  <li><a href="#movimiento-de-proyectiles" id="toc-movimiento-de-proyectiles" class="nav-link" data-scroll-target="#movimiento-de-proyectiles">3.5.2. Movimiento de Proyectiles</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="Cinemática-de-la-partícula-en-una-dimensión" class="level1">
+<h1>1. Cinemática de la partícula en una dimensión</h1>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">1.1. Introducción</h2>
+<p>El fenómeno físico más obvio y fundamental es el movimiento. La <em>Mecánica</em> (ciencia del movimiento) es la rama de la Física que estudia los movimientos y las fuerzas que las producen. Atendiendo a la naturaleza de su contenido, la Mecánica se divide en dos partes:</p>
+<ol type="1">
+<li><p><strong>Cinemática</strong>, o teoría geométrica del movimiento.</p></li>
+<li><p><strong>Dinámica</strong>, o estudio de las relaciones existentes entre las fuerzas y los movimientos que éstos producen.</p></li>
+</ol>
+<p>En este tema nos centraremos en la Cinemática, más concretamente en el caso particular de una dimensión. Los elementos básicos de la cinemática son <span class="math display">\[\fbox{móvil, espacio, tiempo}\]</span></p>
+<p>El móvil más simple que podemos considerar es el punto material (partícula). La partícula es una idealización de los cuerpos que existen en la Naturaleza. Entendemos por <strong>punto material o partícula</strong> un cuerpo de dimensiones tan pequeñas que pueda considerarse como puntiforme; de ese modo, su posición en el espacio quedará determinada al fijar las coordenadas de un punto geométrico. Naturalmente, la posibilidad de despreciar las dimensiones de un cuerpo estará en relación con las condiciones específicas del problema considerado. Por ejemplo, podemos considerar la Tierra como un punto material si sólo estamos interesados en su movimiento alrededor del Sol, pero no cuando estemos interesados en el movimiento de la Tierra alrededor de su propio eje.</p>
+<p>Dado un punto material, con una cierta masa inercia, se precisará un cierto esfuerzo para modificar su estado de movimiento. Llamaremos <strong>fuerza</strong> a cualquier agente capaz de modificar el estado de movimiento de los cuerpos.</p>
+</section>
+<section id="desplazamiento-velocidad-módulo-de-la-velocidad" class="level2">
+<h2 class="anchored" data-anchor-id="desplazamiento-velocidad-módulo-de-la-velocidad">1.2.Desplazamiento, velocidad, módulo de la velocidad</h2>
+<p>Dado que estamos por el momento trabajando en una dimensión no hace falta notación vectorial, solo <span class="math inline">\(+\)</span> ó <span class="math inline">\(-\)</span> para indicar el sentido del movimiento.</p>
+<p><strong>Posición y desplazamiento</strong></p>
+<p>La descripción del movimiento consiste en saber la posición de una partícula y cómo ésta cambia con el movimiento de la partícula. En un movimiento en una dimensión se suele escoger el eje <span class="math inline">\(x\)</span> a lo largo de la línea por la que discurre el movimiento.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[x (t_i) \, ----------------------------------------\, x(t_f)\]</span></p>
+</div>
+</div>
+</div>
+<p>Distinguiremos ahora entre dos conceptos, <em>desplazamiento</em> y <em>distancia recorrida</em>. La <em>distancia recorrida</em> es la longitud que un partícula sigue desde su posición inicial a su posición final. Es, por tanto, una magnitud escalar siempre positiva. Por otra parte, el <em>desplazamiento</em> es el cambio en la posición de la partícula. Será positivo si la partícula va en la dirección de <span class="math inline">\(x\)</span> positiva y negativo si va en la dirección de <span class="math inline">\(x\)</span> negativa.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Sacamos nuestro perro a pasear y le lanzamos un palo en línea recta a <span class="math inline">\(5\)</span> m de distancia. El perro corre, alcanza el palo y regresa con él en la boca, recorriendo <span class="math inline">\(3\text{ m}\)</span>. Entonces se para y se echa al suelo.</p>
+<ol type="1">
+<li><p>¿Cuál es la distancia total que recorre el perro?</p></li>
+<li><p>¿Cuál es el desplazamiento neto?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>El perro ha recorrido como distancia total <span class="math inline">\(5+3=8\text{ m}\)</span>.</p></li>
+<li><p>Llamemos <span class="math inline">\(t_0\)</span> al instante inicial. Para ese tiempo, supongamos que la posición del perro es <span class="math inline">\(x(t_0)=0\)</span> m. Sea <span class="math inline">\(t_1\)</span> el instante en el que el perro alcanza el palo. Para ese instante entonces, tendremos que <span class="math inline">\(x(t_1)=5\text{ m}\)</span>. Finalmente, sea <span class="math inline">\(t_3\)</span> el instante de tiempo en el que el perro se para. En ese instante, la posición respecto al punto inicial será <span class="math inline">\(x(t_3)=2\text{ m}\)</span>. Por tanto, el desplazamiento neto será: <span class="math display">\[\Delta x= x(t_3)-x(t_0)= 2 \text { m}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Velocidad media</strong></p>
+<p>La velocidad media, en la dirección del eje <span class="math inline">\(x\)</span>, <span class="math inline">\(v_{m,x}\)</span>, se define como la razón entre el desplazamiento sobre el eje <span class="math inline">\(x\)</span> y el intervalo de tiempo <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[v_{m}= \frac{\Delta x}{\Delta t} = \frac{x(t_f)-x(t_i)}{t_f-t_i} \quad \quad \Delta x = v_{m} \Delta t\]</span></p>
+<p>La velocidad media puede ser positiva o negativa, al igual que el desplazamiento. Sus dimensiones serán L/T, y sus unidades en el SI <span class="math inline">\(\text{m/s}\)</span>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Se tardan <span class="math inline">\(10\text{ m}\)</span> de casa al conservatorio (<span class="math inline">\(5\text{ km}\)</span>) en línea recta. Un día salimos <span class="math inline">\(15\text{ m}\)</span> antes del comienzo de la clase y nos encontramos con un semáforo estropeado que hace que la velocidad durante los <span class="math inline">\(2\)</span> primeros <span class="math inline">\(\text{km}\)</span> sea de <span class="math inline">\(20\text{ km/h}\)</span>. ¿Llegaremos a tiempo a clase?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Velocidad durante el 1<span class="math inline">\(^{\text{er}}\)</span> tramo <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(20\text{ km/h}\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2\text{ km}\)</span></p></li>
+<li><p>Velocidad en los últimos <span class="math inline">\(3\text{ km}\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\displaystyle \frac{5 \text{ km}}{10 \text{ m}/60 \text{ m} \times 1 \text{ h}} = 30 \text{ km}}\)</span></p></li>
+<li><p>Distancia recorrida en el primer tramo <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2\text{ km}\)</span> <span class="math inline">\(\rightarrow\)</span>¿tiempo?</p>
+<p><span class="math display">\[\Delta t_1 = \frac{ 2 \text{ km}}{20 \text{ km/h}} =   \frac{1}{10} \text{ h} = 6 \text{ min}\]</span></p>
+<p>En el segundo tramo:</p>
+<p><span class="math display">\[3\text{ km a }30\text{ km/h}\ \rightarrow\ \Delta t_2 =  \frac{3\text{ km}}{30\text{ km/h}} = \frac{1}{10}\text{ h} = 6 \text{ min} \]</span></p></li>
+</ul>
+<p>Por tanto, el tiempo total que tardamos en llegar al conservatorio es <span class="math inline">\(\Delta t = \Delta t_1 + \Delta t_2=6 \text{ min} + 6\text{ min} = 12 \text{ min}\)</span>. Llegamos entonces a tiempo, y nos sobran <span class="math inline">\(3\text{ min}\)</span> antes del comienzo delas clases.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Velocidad instantánea y módulo de la velocidad</strong>:</p>
+<p>La velocidad instantánea es el límite de la relación <span class="math inline">\(\Delta x/\Delta t\)</span> cuando <span class="math inline">\(\Delta t\)</span> se aproxima a cero:</p>
+<p><span class="math display">\[v(t) = \lim\limits_{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} = \frac{ d x }{d t }\]</span></p>
+<p>Por tanto, podemos decir que la velocidad instantánea en el tiempo <span class="math inline">\(t\)</span> es la derivada de la función posición, <span class="math inline">\(x(t)\)</span>, respecto al tiempo. Este valor puede ser positivo, negativo o nulo; en un movimiento unidimensional, la velocidad instantánea puede ser positiva (<span class="math inline">\(x\)</span> creciente, negativa (<span class="math inline">\(x\)</span> decreciente) o nula (no hay movimiento). En un objeto que se mueve a velocidad constante, la velocidad instantánea coincide con la velocidad media, y tendremos que la gráfica de la posición en función del tiempo será</p>
+<div style="text-align:center;">
+<p><a href="_media/fig-velocidad.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_media/fig-velocidad.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<p>La velocidad instantánea es un vector, por lo que a veces podemos hablar del <em>módulo</em> de la velocidad instantánea.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Supongamos una piedra que, partiendo del reposo, se deja caer desde un acantilado de altura <span class="math inline">\(h\)</span>. Se puede demostrar que la posición (vertical) de la piedra, en cualquier instante de tiempo, viene dada por: <span class="math display">\[x(t) = h - 5t^2 \]</span> Calcular la velocidad de la piedra en cualquier instante de tiempo.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Tendremos que calcular: <span class="math display">\[v(t) = \frac{ dx } { dt } = -10 t\]</span></p>
+<p>y esa es la expresión de la velocidad en cualquier instante de tiempo <span class="math inline">\(t\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="aceleración" class="level2">
+<h2 class="anchored" data-anchor-id="aceleración">1.3. Aceleración:</h2>
+<p>La aceleración es la tasa de cambio de la velocidad. Podemos definir la aceleración media, a partir de la velocidad media, o la aceleración instantánea, a partir de la velocidad instantánea:</p>
+<ul>
+<li><p>Aceleración media:</p>
+<p><span class="math display">\[a_m = \frac{\Delta v_{m}}{\Delta t} =  \frac{v(t_1)-v(t_0)}{t_1-t_0} \]</span></p></li>
+<li><p>Aceleración instantánea:</p>
+<p><span class="math display">\[a(t) = \lim\limits_{\Delta t \rightarrow 0} \frac{\Delta v(t) }{\Delta t} = \frac{ d^2 x }{d t^2} \]</span></p></li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un guepardo puede acelerar de <span class="math inline">\(0\)</span> a <span class="math inline">\(100\text{ km/h}\)</span> en <span class="math inline">\(2\text{ s}\)</span>, mientras que una moto requiere <span class="math inline">\(5\text{ s}\)</span>. Calcular las aceleraciones medias del guepardo y de la moto, y compararlas con la aceleración de caída libre debido a la gravedad (g<span class="math inline">\(=9.81\)</span>).</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Guepardo:</p>
+<p><span class="math display">\[a_m= \frac{100\text{ km/h} }{2\text{ s}\frac{1\text{ h}}{3600\text{ s}}} = 180000 \text{ km/h}^2= 13.9\text{ m/s}^2\]</span></p></li>
+<li><p>Moto:</p>
+<p><span class="math display">\[a_m= \frac{100\text{ km/h} }{5\text{ s}\frac{1\text{ h}}{3600\text{ s}}} = 72000\text{ km/h}^2 = 5.6\text{ m}/\text{ s}^2\]</span></p></li>
+</ul>
+<p>Por tanto, la aceleración del guepardo y de la moto, comparados con <span class="math inline">\(g\)</span>, será:</p>
+<ul>
+<li><p>Guepardo:</p>
+<p><span class="math display">\[\frac{13.8\text{ m/s}^2}{9.81\text{ m/s}^2}= 1.41 \ \rightarrow \ a_\text{guep}= 1.41g\]</span></p></li>
+<li><p>Moto:</p>
+<p><span class="math display">\[\frac{5.6\text{ m/s}^2}{9.81\text{ m/s}^2}= 0.57 \ \rightarrow \ a_\text{moto} = 0.57g\]</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La posición de un partícula en función del tiempo viene dada por: <span class="math display">\[x(t) = C t^3\ ,\]</span> siendo <span class="math inline">\(C\)</span> una constante cuyas unidades son <span class="math inline">\(\text{m/s}^3\)</span>. Hallar la velocidad y la aceleración en función del tiempo.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para ello, solo tendremos que derivar la expresión de la posición para obtener la velocidad y, una vez obtenida esta última, derivarla de nuevo para obtener la aceleración:</p>
+<p><span class="math display">\[v(t)= \frac{ dx} { dt} = 3C t^2 \ \ a(t) = \frac{ d^2 x }{ d t^2} = 6 Ct\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="movimiento-con-aceleración-constante" class="level1">
+<h1>2. Movimiento con aceleración constante</h1>
+<p>Sabemos que en general: <span class="math display">\[a = \frac{ d v} { d t}\]</span></p>
+<p>Integrando:</p>
+<p><span class="math display">\[{d&nbsp;v} = a d t \rightarrow \int_{t_0}^t d v = \int_{t_0}^t a d t = a\int_{t_0}^t d t =  a \left ( t-t_0 \right )\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[&nbsp;v(t)= v(t_0) + a (t-t_0)\]</span></p>
+<p>Si <span class="math inline">\(t_0=0\)</span> y llamamos <span class="math inline">\(v(t_0)=v_0\)</span>, resulta:</p>
+<p><span class="math display">\[\fbox{ $v(t) = v_0 + a t $}\]</span></p>
+<p>Pero también sabemos que</p>
+<p><span class="math display">\[&nbsp;\frac{d x(t)}{d t} = v(t)= v(t_0) + a \left ( t - t_0 \right )\]</span></p>
+<p><span class="math display">\[d x(t) = v(t_0) d t + a \left ( t-t_0 \right ) d t\]</span></p>
+<p>Integrando:</p>
+<p><span class="math display">\[&nbsp;\int_{t_0}^t d x = v(t_0) \int_{t_0}^t d t + a \int_{t_0}^t \left (t-t_0 \right ) d&nbsp;t\]</span></p>
+<p>Por tanto, obtenemos como ecuación general que nos da la posición en el tiempo <span class="math inline">\(t\)</span>, <span class="math inline">\(x(t)\)</span>, con el tiempo <span class="math inline">\(t\)</span> y la aceleración <span class="math inline">\(a\)</span>, del siguiente modo:</p>
+<p><span class="math display">\[x(t)= x(t_0) + v(t_0) (t-t_0) + a \frac{(t-t_0)^2}{2}\]</span></p>
+<p>Si <span class="math inline">\(t_0=0\)</span>, <span class="math inline">\(x(t_0)=x_0\)</span> y <span class="math inline">\(v(t_0)=v_0\)</span>, podemos escribir finalmente:</p>
+<p><span class="math display">\[\fbox{ $x(t) =  x_0 +  v_0 t + a  \frac{t^2}{2} $}\]</span></p>
+<p>Si en la ecuación general obtenida la velocidad <span class="math inline">\(v(t)\)</span>, despejamos <span class="math inline">\((t-t_0)\)</span>, tendremos:</p>
+<p><span class="math display">\[&nbsp;v(t) = v(t_0) + a (t-t_0) \ \rightarrow \ \left ( t-t_0 \right ) = \frac{v(t) -v(t_0) }{ a }\]</span></p>
+<p>Y si ahora, sustituimos esta cantidad en la ecuación de la posición <span class="math inline">\(x(t)\)</span>, resulta:</p>
+<p><span class="math display">\[x(t)= x(t_0) + v(t_0)  (t-t_0) + a \frac{(t-t_0)^2}{2} \ \rightarrow \ x(t) = x(t_0) + \frac{v(t_0)}{a} \left (v(t)-v(t_0) \right ) + \frac{a}{2 a^2} \left (v(t)-v(t_0) \right)^2\]</span></p>
+<p><span class="math display">\[&nbsp;x(t)=x(t_0) + \frac{1}{2¡ a} \left (v(t) - v(t_0) \right ) \left (v(t_0) + v(t) \right ) =x(t_0) + \frac{1}{2 a} \left (v(t)^2 - v(t_0)^2 \right )\]</span></p>
+<p>Definiendo el desplazamiento <span class="math inline">\(\Delta x(t)= x(t)-x(t_0)\)</span>, podemos escribir finalmente:</p>
+<p><span class="math display">\[\fbox{ $v(t)^2 =  v(t_0)^2  +  2 a  \Delta x(t) $}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una persona conduce un vehículo de noche por una autovía. De pronto, a una cierta distancia, ve un coche parado. Entonces, frena hasta detenerse con una aceleración de <span class="math inline">\(5\text{m/s}^2\)</span>. Determina la distancia de frenado si su velocidad inicial es</p>
+<ol type="1">
+<li><p><span class="math inline">\(15\text{ m/s}\)</span>.</p></li>
+<li><p><span class="math inline">\(30\text{ m/s}\)</span>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Suponemos <span class="math inline">\(t_0=0\)</span>, <span class="math inline">\(x(t_0)=0\)</span> y sabemos además que <span class="math inline">\(v(t_0)=15\text{ m/s}\)</span> y que <span class="math inline">\(v(t)=0\)</span> (puesto que queremos que el vehículo se detenga) y <span class="math inline">\(a=-5\text{ m/s}^2\)</span> (el signo <span class="math inline">\(-\)</span> es porque estamos frenando).</p>
+<p>Para determinar la distancia de frenado, podemos usar la fórmula obtenida anteriormente:</p>
+<p><span class="math display">\[&nbsp;v(t)^2 = v(t_0)^2 + 2  a  \Delta x(t) \rightarrow 0 = \left ( 15 \text{ m/s} \right ) ^2 - 2 \cdot 5 \text{ m/s}^2 \Delta x(t)\]</span></p>
+<p>Por tanto, se obtiene que la distancia de frenado, <span class="math inline">\(\Delta x(t)=22.5\text{ m}\)</span>.</p>
+<p>Haciendo la misma operación, obtenemos que <span class="math inline">\(\Delta x(t)=90\text{ m}\)</span>.</p>
+<p>En este segundo caso, ¿cuánto tarda el coche en detenerse?</p>
+<p>Para calcularlo, podemos hacer uso de la ecuación que nos da la velocidad final en términos del tiempo, de la aceleración y de la velocidad inicial. Puesto que <span class="math inline">\(t_0=0\)</span>, podemos escribir:</p>
+<p><span class="math display">\[v(t) = v(t_0) + a t\ \rightarrow 0 \ \text{ m/s} = 30\text{ m/s} - 5 \text{ m/s}^2t \ \rightarrow \ t= 6\text{ s}\]</span></p>
+<p>¿Qué distancia recorre el coche durante el último segundo?</p>
+<p>Dado que tarda <span class="math inline">\(6\)</span> segundos en pararse, la distancia que recorre el coche en el último segundo será la que transcurre entre <span class="math inline">\(t_1=5\text{ s}\)</span> y <span class="math inline">\(t=6\text{ s}\)</span>. Aplicamos la fórmula:</p>
+<p><span class="math display">\[&nbsp;\Delta x (t) = v(t_1) \left (t-t_1 \right ) + \frac{a}{2} \left (t - t_1 \right ) ^2\]</span></p>
+<p>Para conocer <span class="math inline">\(v(t_0)\)</span>, necesitamos saber qué velocidad tenía el vehículo en el instante <span class="math inline">\(t_1=5\text{ s}\)</span>. Sabiendo que para <span class="math inline">\(t_0=0\)</span>, <span class="math inline">\(v(t_0)=30\text{ m/s}\)</span>, podemos escribir:</p>
+<p><span class="math display">\[v(t_1)= v(t_0) + a \left ( t_1 - t_0 \right )\  \rightarrow v(t_1) = 30 \text{m/s}-5\text{ m/s}^2 \cdot 5 \text{ s} = 5 \text{ m/s}\]</span></p>
+<p>Sustituyendo este resultado en la ecuación de arriba, tendremos:</p>
+<p><span class="math display">\[&nbsp;\Delta x(t) = 5 \text{ m/s} \left (6 \text{ s} - 5\text{ s}&nbsp;\right ) - \frac{ 5 \text{ m/s}^2 } {2} \left ( 6\text{ s} - 5 \text{ s} \right )^2 = 2.5\text{ m}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Lanzamos una pelota hacia arriba con una velocidad inicial de <span class="math inline">\(15\text{ m/s}\)</span>. Si consideramos que su aceleración es <span class="math inline">\(9.8\text{ m/s}^2\)</span> hacia abajo (despreciando la resistencia del aire), determinar:</p>
+<ol type="1">
+<li><p>Calcular el tiempo que tarda la pelota en alcanzar su punto más alto.</p></li>
+<li><p>Calcular la altura máxima alcanzada.</p></li>
+<li><p>Calcular el tiempo total que la pelota está en el aire, suponiendo que se recoge a la misma altura de la que se tiró.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Cuando la pelota alcance su punto más alto, su velocidad será cero. Consideramos positiva la velocidad hacia arriba y negativa hacia abajo (igual que la aceleración). Por tanto, <span class="math inline">\(v(t_0)=15\text{ m/s}\)</span> y <span class="math inline">\(a=g=-9.8\text{ m/s}^2\)</span>. Por tanto, podemos usar la siguiente ecuación:</li>
+</ol>
+<p><span class="math display">\[v(t) =    v(t_0) + a \left ( t-t_0 \right )\ \rightarrow\ 0 = 15 \text{ m/s} - 9.8 \text{ m/s}^2 t \ \rightarrow \ t = 1.53\text{ s}\]</span></p>
+<ol start="2" type="1">
+<li><p>Tenemos que determinar la posición para el tiempo <span class="math inline">\(t\)</span> calculado anteriormente. Por tanto, <span class="math display">\[&nbsp;x(t) = x(t_0) +    v(t_0) \left (t - t_0 \right ) + \frac{a}{2} \left ( t - t_0\right )^2 = 0 + 15 \text{ m/s} \left (1.53 \text{ s} -0 \text{ s} \right ) - \frac{9.8}{2} \left ( 1.53 \text{ s} - 0 \text{ s} \right )^2 = 11.48 \text{ m}\]</span></p></li>
+<li><p>Dado que la pelota tardará lo mismo en subir que en bajar la misma altura, el tiempo total que estará en el aire será el doble del tiempo calculado en el primer apartado, es decir, <span class="math inline">\(2 \times1.53\text{ s}=3.06 \text{ s}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un coche lleva una velocidad constante <span class="math inline">\(v_c=50\text{ m/s}\)</span> en una zona cercana a un colegio. Un coche de policía, que está parado, arranca cuando el infractor le adelanta y acelera con una aceleración constante de <span class="math inline">\(8\text{ m/s}^2\)</span>.</p>
+<ol type="1">
+<li><p>Calcular el tiempo que tarda el coche de policía en alcanzar al coche.</p></li>
+<li><p>Calcular la velocidad que lleva el coche de policía cuando da alcance al coche.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Notaremos con subíndice <span class="math inline">\(c\)</span> todas las magnitudes referidas al coche, y con <span class="math inline">\(p\)</span> al coche de policía. Supondremos que el instante en el que ambos coches se encuentran es <span class="math inline">\(t_0=0\)</span>, y que la posición de ambos en dicho instante es <span class="math inline">\(x_c(t_0)=x_p(t_0)=0\)</span>. Inicialmente, el coche de policía está parado, por lo que <span class="math inline">\(v_p(t_0)=0\)</span>. Por tanto, para cualquier instante de tiempo <span class="math inline">\(t\)</span>, tendremos que:</p>
+<p><span class="math display">\[&nbsp;x_c(t)= v_c \times t \; \; \; x_p(t)= \frac{1}{2} a t^2\]</span></p>
+<p>Por tanto, ambos coches se encontrarán cuando</p>
+<p><span class="math display">\[&nbsp;x_c(t)=x_p(t) \  \rightarrow \  v_c \times t = \frac{1}{2}  a  t^2 \rightarrow 50  t = \frac{1}{2} 8  t^2\  \rightarrow\ t= 12.5 \text{ s}\]</span></p>
+<p>Usamos la ecuación</p>
+<p><span class="math display">\[&nbsp;v_p(t) = v_p(t_0) + a\left(t-t_0\right)=0+8\times 12.5 = 100 \text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Marta conduce por una autovía. En el instante <span class="math inline">\(t_0=0\)</span>, cuando Marta circula hacia el este a una velocidad de <span class="math inline">\(30 \text{ m/s}\)</span> (<span class="math inline">\(v(t_0)=30 \text{ m/s}\)</span>), pasa por un punto que se encuentra a <span class="math inline">\(50\text{ m}\)</span> de su punto de partida, es decir, <span class="math inline">\(x(t_0)=50\text{ m}\)</span>. Su aceleración en función del tiempo tiene la siguiente expresión <span class="math display">\[&nbsp;a(t) = 2 \text{ m/s}^2 -  0.10 \text{ m/s}^3 t\]</span></p>
+<ol type="1">
+<li><p>Deducir expresiones para su velocidad y posición en función del tiempo.</p></li>
+<li><p>Calcular el momento en que es máxima su velocidad y cuál es su velocidad máxima.</p></li>
+<li><p>Determinar dónde está el coche respecto al punto de partida cuando alcanza la velocidad máxima.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><span class="math display">\[&nbsp;v(t) = v(t_0) + \int_{t_0}^t a d t = v(t_0) + \int_{t_0}^t \left(2-0.10t\right)dt=10+ 2t-0.10\frac{t^2}{2} = \left(10+2t-0.05t^2\right)\text{ m/s}\]</span></p>
+<p><span class="math display">\[x(t)=x(t_0)+\int_{t_0}^tv(t)dt=50\text{ m}+\int_{t_0}^t\left(10+2t-0.05t^2\right)d&nbsp;t=\left(50+10 t+t^2-\frac{0.05}{3}t^3\right)\text{ m}\]</span></p></li>
+<li><p>La velocidad será máxima cuando su derivada valga cero. Por tanto:</p>
+<p><span class="math display">\[\frac{dv}{dt}=2-0.10t=0\ \rightarrow \ t=20 \text{ s}\]</span></p>
+<p><span class="math display">\[v_\text{max} = v(t=20 \text{ s}) = 10 + 2 \times 20 - 0.05 \times 20^2 \text{ m/s} = 30 \text{ m/s}\]</span></p></li>
+<li><p><span class="math display">\[x(t=20\text{ s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3} 20^3 \right )= 516.6  \text{ m}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="movimiento-en-más-de-una-dimensión" class="level1">
+<h1>3. Movimiento en más de una dimensión</h1>
+<section id="introducción-1" class="level2">
+<h2 class="anchored" data-anchor-id="introducción-1">3.1. Introducción</h2>
+<p>En esta sección, aprenderemos a analizar el movimiento de partículas en más de una dimensión, en concreto estudiaremos:</p>
+<ol type="1">
+<li><p>Cómo representar la posición de una partícula en dos o tres dimensiones usando vectores.</p></li>
+<li><p>Cómo determinar el vector velocidad de un cuerpo conociendo su trayectoria.</p></li>
+<li><p>Cómo obtener el vector aceleración de un cuerpo y por qué un cuerpo puede tener aceleración aunque el módulo de su velocidad sea constante.</p></li>
+</ol>
+</section>
+<section id="vectores-posición-y-desplazamiento" class="level2">
+<h2 class="anchored" data-anchor-id="vectores-posición-y-desplazamiento">3.2. Vectores posición y desplazamiento</h2>
+<p>El vector posición de una partícula es un vector que se traza desde el origen de coordenadas hasta la posición de la partícula. Para una partícula en el plano <span class="math inline">\(xy\)</span>, si su posición en dicho plano es el punto con coordenadas <span class="math inline">\((x,y)\)</span>, tendremos como vector de posición</p>
+<p><span class="math display">\[&nbsp;\vec r = x  \hat{\imath} + y\hat{\jmath}\]</span></p>
+<p>Fijémonos ahora en la siguiente figura:</p>
+<div style="text-align:center;">
+<p><a href="_media/Cine_10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_media/Cine_10.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>Tenemos que <span class="math display">\[{\vec{r}}+ \Delta {\vec{r}} = {\vec r'}  \rightarrow \Delta{\vec{r}} = {\vec r'} -{\vec{r}}\]</span></p>
+<p>Si las coordenadas de los puntos <span class="math inline">\(P\)</span> y <span class="math inline">\(P'\)</span> son <span class="math inline">\((x,y)\)</span> e <span class="math inline">\((x',y')\)</span>, respectivamente, podemos escribir el vector desplazamiento <span class="math inline">\(\Delta {\vec{r}}\)</span> de la siguiente manera:</p>
+<p><span class="math display">\[\Delta {\vec{r}} = {\vec r'} -{\vec{r}} = \left (x'-x \right ) \hat {i} + \left (y' -y \right ) \hat{\jmath} = \Delta x \hat{\imath} + \Delta y \hat{\jmath}\]</span></p>
+<p>Ahora, para definir el vector velocidad, tengamos en cuenta que la velocidad media se define como el cociente entre el desplazamiento y el intervalo de tiempo transcurrido. Entonces, definiremos el vector velocidad media como el cociente entre el vector desplazamiento y el intervalo de tiempo <span class="math inline">\(\Delta t= t_2-t_1\)</span>.</p>
+<p><span class="math display">\[{\vec{v_m}} = \frac{\Delta {\vec{r}}} {\Delta t}\]</span></p>
+<p>El módulo del vector desplazamiento es inferior a la distancia recorrida a menos que la partícula se mueva en línea recta. Sin embargo, si consideramos intervalos de tiempo cada vez más pequeños, el desplazamiento se aproxima a la distancia real recorrida por la partícula a lo largo de la curva.</p>
+<div style="text-align:center;">
+<p><a href="_media/Cine_11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_media/Cine_11.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>Definimos el vector velocidad instantánea como el límite del vector velocidad media cuando <span class="math inline">\(\Delta t\)</span> tiende a cero:</p>
+<p><span class="math display">\[{\vec{v}} = \lim_{\Delta t \rightarrow 0} \frac{\Delta {\vec{r}}}{\Delta t} = \frac{d{\vec{r}}}{d t}\]</span></p>
+<p>El módulo de <span class="math inline">\({\vec{v}}\)</span>, <span class="math inline">\(|{\vec{v}}|\)</span> es la velocidad escalar, y la dirección de <span class="math inline">\({\vec{v}}\)</span> coincide con la tangente a la curva en la dirección del movimiento de la partícula:</p>
+<div style="text-align:center;">
+<p><a href="_media/Cine_12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="_media/Cine_12.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>Para calcular la derivada, expresamos el vector desplazamiento en la forma anterior:</p>
+<p><span class="math display">\[&nbsp;\Delta {\vec{r}} = \Delta x \hat{\imath} +\Delta y  \hat{\jmath}\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[&nbsp;{\vec{v}} = \lim_{\Delta t \rightarrow 0}\frac{\Delta {\vec{r}} }{\Delta t} = \lim_{\Delta t \rightarrow 0} \frac{ \Delta x \hat{\imath} + \Delta y  \hat{\jmath} } {\Delta t} = \lim_{\Delta t \rightarrow 0} \frac{ \Delta x}{\Delta t}\hat\imath + \lim_{\Delta t \rightarrow 0} \frac{\Delta y}{\Delta t}\hat\jmath\]</span></p>
+<p>Es decir: <span class="math display">\[&nbsp;{\vec{v}} = \frac{d x}{d t}\hat{\imath} + \frac{ d y}{ d t} \hat{\jmath} = v_x  \hat{\imath} + v_y  \hat{\jmath}\]</span></p>
+<p>donde $v_x= $ y $v_y= $ son las componentes <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> de la velocidad.</p>
+<p>El módulo <span class="math inline">\(|{\vec{v}}|\)</span> vendrá dado por</p>
+<p><span class="math display">\[&nbsp;|{\vec{v}}| = \sqrt{v_x^2 + v_y^2}\]</span></p>
+<p>y la dirección del vector <span class="math inline">\({\vec{v}}\)</span> por el ángulo <span class="math inline">\(\theta\)</span>, que se obtiene como</p>
+<p><span class="math display">\[\theta = \arctan \left( \frac{v_y}{v_x} \right)\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un barco tiene las coordenadas <span class="math inline">\((x_1,y_1)=(130\text{ m}, 205 \text{ m})\)</span> en el instante <span class="math inline">\(t_1=60\text{ s}\)</span>. Dos minutos más tarde, en el instante <span class="math inline">\(t_2\)</span>, sus coordenadas son <span class="math inline">\((x_2,y_2)=(110\text{ m}, 218 \text{ m})\)</span>.</p>
+<ol type="1">
+<li><p>Determinar la velocidad media en este intervalo de dos minutos.</p></li>
+<li><p>Determinar el módulo y dirección de <span class="math inline">\({\vec{v_m}}\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(t \ge 20 \text{ s}\)</span>, la posición del barco en función del tiempo es <span class="math inline">\(x(t)=b_1+b_2 t\)</span>, <span class="math inline">\(y(t)=c_1+c_2 t\)</span>, con <span class="math inline">\(b_1=100 \text{ m}\)</span>, <span class="math inline">\(b_2=0.5 \text{ m/s}\)</span>, <span class="math inline">\(c_1=200 \text{ m}\)</span>, <span class="math inline">\(c_2 = 360 \text{ m/s}\)</span>. Calcular la velocidad instantánea para <span class="math inline">\(t \ge 20\)</span> s.</p></li>
+</ol>
+<p>Solución</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Solución:</p>
+<ol type="1">
+<li><p><span class="math display">\[{\vec v_m} = \frac{\Delta {\vec{r}}}{\Delta t} = \frac{\left (x_2-x_1 \right ) \hat{\imath} + \left(y_2-y_1 \right ) \hat{\jmath}}{120}= \frac{\left ( 110-130 \right )}{120} \hat{\imath} + \frac{\left ( 218-205 \right )}{120} \hat{\jmath} = -\frac{20}{120} \hat{\imath} + \frac{113}{120} \hat{\jmath}\]</span> <span class="math display">\[\fbox{$\vec v_m = \left ( -0.167  \hat{\imath} + 0.108  \hat{\jmath} \right )\text{ m/s}$}\]</span></p></li>
+<li><p><span class="math display">\[&nbsp;|\vec v_m| = \sqrt{\left (0.167 \right)^2 + \left ( 0.108 \right ) ^2 } = 0.199  \text{ m/s}\]</span></p>
+<p><span class="math display">\[&nbsp;\theta = \arctan \left( \frac{0.108}{-0.167} \right ) = -32.89^\circ \equiv    147.11^\circ\]</span></p></li>
+<li><p><span class="math display">\[x(t=20 \text{s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3}  20^3 \right )\text{ m} = 516.6 \text{ m}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="vectores-de-aceleración" class="level2">
+<h2 class="anchored" data-anchor-id="vectores-de-aceleración">3.3. Vectores de aceleración</h2>
+<p>Se define el vector aceleración media como el cociente entre la variación del vector velocidad instantánea <span class="math inline">\(\Delta {\vec{v}}\)</span> y el intervalo de tiempo transcurrido, <span class="math inline">\(\Delta t\)</span>:</p>
+<p><span class="math display">\[\vec{a_m} = \frac{\Delta v}{\Delta t} = \frac{{\vec{v}}(t_1) - {\vec{v}}(t_0)}{t_1-t_0}\]</span></p>
+<p>El vector aceleración instantánea es el límite de esta relación cuando <span class="math inline">\(\Delta t \rightarrow 0\)</span>:</p>
+<p><span class="math display">\[{\vec{a}} = \lim_{\Delta t \rightarrow 0} \frac{\Delta {\vec{v}}}{\Delta t} = \frac{d {\vec{v}}}{d t }\]</span></p>
+<p><span class="math display">\[\vec{a} = \frac{d v_x}{d t} \hat{\imath} + \frac{d v_y}{d t } \hat{\jmath} + \frac{dv_z}{d t} \hat{k} = a_x\hat{\imath} + a_y \hat{\jmath} + a_z \hat{k}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La posición de una pelota de béisbol golpeada por un bateador viene dada por la expresión <span class="math display">\[{\vec{r}} =&nbsp;\left [&nbsp;\left ( 1.5 + 12 t \right ) \hat{\imath} + \left ( 16 t - 4.9 t^2 \right )  \hat{\jmath} \right ] \text{ m} \]</span> con <span class="math inline">\(t\)</span> expresado en <span class="math inline">\(s\)</span>. Determinar su velocidad y aceleración en función del tiempo.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[&nbsp;{\vec{v}} = \frac{d \vec{r}} {d t} = \left [&nbsp;12 \hat{\imath} + \left ( 16 - 9.8t\right ) \hat{\jmath} \right ]&nbsp;\text{ m/s}\]</span></p>
+<p><span class="math display">\[&nbsp;{\vec{a}} = \frac{d \vec{v}} {d t} = -9.8\hat{\jmath} \text{ m/s}^2\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un coche viaja hacia el este a <span class="math inline">\(60\text{km/h}\)</span> y <span class="math inline">\(5\text{s}\)</span> más tarde viaja hacia el norte a <span class="math inline">\(60\text{ km/h}\)</span>. Determinar la aceleración media del coche.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supondremos que la dirección hacia el este es la del vector <span class="math inline">\(\hat{\imath}\)</span>, y la dirección hacia el norte es la del vector <span class="math inline">\(\hat{\jmath}\)</span>. Entonces:</p>
+<p><span class="math display">\[&nbsp;\vec v_i = 60 \text{ km/h} \hat{\imath} = 16.67 \text{ m/s}\hat{\imath}\]</span></p>
+<p><span class="math display">\[\vec v_f= 60 \text{ km/h} \hat{\jmath} =16.67 \text{ m/s}  \hat{\jmath}\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[&nbsp;{\vec{a_m}} =\frac{\vec v_f-\vecv_i}{\Delta t} = \left ( -3.3 \hat{\imath} + 3.3 \hat{\jmath} \right )\text{ m/s^2}\]</span></p>
+<p>El movimiento de un objeto alrededor de una circunferencia es un ejemplo típico de movimiento en el cual la velocidad de un objeto cambia, aunque su módulo permanece constante.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="componentes-intrínsecas-de-la-aceleración" class="level2">
+<h2 class="anchored" data-anchor-id="componentes-intrínsecas-de-la-aceleración">3.4. Componentes intrínsecas de la aceleración</h2>
+<p>Como hemos visto, la aceleración es la derivada del vector velocidad respecto al tiempo, pero un vector velocidad puede cambiar tanto su módulo como su dirección. Si separamos estas dos variaciones, podemos descomponer el vector aceleración en dos componentes: una tangencial y otra normal. Para ello expresamos primero el vector velocidad en términos de su módulo y de su dirección:</p>
+<p><span class="math display">\[&nbsp;{\vec{v}} = |{\vec{v}}| \hat{e}_t\]</span></p>
+<p>donde <span class="math inline">\(\hat{e}_t\)</span> es el vector unitario en la dirección tangencial, es decir, el vector tangente a la trayectoria en el sentido del movimiento, que es la dirección del vector velocidad. Ahora derivamos respecto al tiempo:</p>
+<p><span class="math display">\[&nbsp;{\vec{a}} = \frac{d {\vec{v}}}{d t} = \frac{d |{\vec{v}}|}{d t} \hat{e}_t + |{\vec{v}}| \frac{d \hat{e}_t}{d t}\]</span></p>
+<p>El primero de los términos de la derecha es la componente tangencial de la aceleración, llamada (<span class="math inline">\(\vec{a}_t\)</span>), que es paralela a la dirección del vector velocidad y cuya magnitud es la derivada del módulo de la velocidad respecto al tiempo:</p>
+<p><span class="math display">\[&nbsp;|{\vec{a}}_t| = \frac{d |{\vec{v}}|}{d t}\]</span></p>
+<p>El segundo de los términos de la derecha es la componente normal de la aceleración, llamada (<span class="math inline">\(\vec{a}_n\)</span>), que es perpendicular a la dirección del vector velocidad y cuya magnitud es el producto del módulo de la velocidad por la derivada del vector unitario tangente respecto al tiempo:</p>
+<p><span class="math display">\[&nbsp;|{\vec{a}}_n| = |{\vec{v}}| \left | \frac{d \hat{e}_t}{d t} \right |= \frac{v^2}{R}\hat{e}_n\]</span> donde <span class="math inline">\(R\)</span> es el radio de curvatura de la trayectoria y <span class="math inline">\(\hat{e}_n\)</span> es el vector unitario en la dirección normal, es decir, perpendicular a la trayectoria y hacia el centro de curvatura.</p>
+</section>
+<section id="casos-particulares" class="level2">
+<h2 class="anchored" data-anchor-id="casos-particulares">3.5. Casos particulares</h2>
+<p>Vamos a estudiar ahora algunos casos particulares de movimiento en dos dimensiones, que son el movimiento circular y el movimiento de proyectiles.</p>
+<section id="movimiento-circular" class="level3">
+<h3 class="anchored" data-anchor-id="movimiento-circular">3.5.1. Movimiento circular</h3>
+<p>Si la trayectoria de una partícula es una circunferencia, el movimiento se denomina movimiento circular. En este caso el radio de curvatura es constante e igual al radio de la circunferencia <span class="math inline">\(R\)</span>, por lo que la aceleración normal es la que mantiene a la partícula en la trayectoria circular y se denomina aceleración normal o centrípeta. Su dirección es radial hacia el centro de la circunferencia y su magnitud viene dada por:</p>
+<p><span class="math display">\[&nbsp;|{\vec{a}}_n| = \frac{v^2}{R}\]</span></p>
+<p>Por otro lado, si la partícula se mueve con velocidad constante, la aceleración tangencial es nula y la aceleración total es igual a la aceleración normal. En este caso, el vector aceleración es perpendicular al vector velocidad y su dirección es radial hacia el centro de la circunferencia. Este movimiento se denomina .</p>
+<p>Si la velocidad de la partícula no es constante, la aceleración tangencial es distinta de cero y la aceleración total es la suma vectorial de las componentes normal y tangencial. En este caso, el vector aceleración no es perpendicular al vector velocidad y su dirección no es radial hacia el centro de la circunferencia. Este movimiento se denomina .</p>
+<p>Los movimientos circulares es más cómodo expresarlo en función del ángulo <span class="math inline">\(\theta\)</span> que forma el radio de la circunferencia con el eje horizontal. En este caso, la posición de la partícula se expresa en función del ángulo <span class="math inline">\(\theta\)</span> y del radio <span class="math inline">\(R\)</span> de la circunferencia:</p>
+<p><span class="math display">\[&nbsp;x(t) = R \cos \theta(t) \ \text{ y } \ y(t) = R \sin \theta(t)\]</span></p>
+<p>y el vector posición de la partícula es:</p>
+<p><span class="math display">\[&nbsp;{\vec{r}} = R \cos \theta(t) \hat{\imath} + R \sin \theta(t) \hat{\jmath}\]</span></p>
+<p>El ángulo varia con el tiempo y su derivada se conoce como y se denota por <span class="math display">\[
+\omega = \frac{d \theta}{d t}
+\]</span></p>
+<p>Por tanto, la velocidad de la partícula es:</p>
+<p><span class="math display">\[\vec v = \frac{d {\vec{r}}}{d t} = - R \sin \theta(t) \frac{d \theta}{d t} \hat{\imath} + R \cos \theta(t) \frac{d \theta}{d t} \hat{\jmath} = - R \omega \sin \theta(t) \hat{\imath} + R \omega \cos \theta(t) \hat{\jmath}\]</span></p>
+<p>Si se toma el módulo de la velocidad, se obtiene:</p>
+<p><span class="math display">\[&nbsp;v = |{\vec{v}}| = R \omega\]</span></p>
+<p>Es decir, la velocidad de la partícula es el producto del radio de la circunferencia por la velocidad angular.</p>
+<p>La velocidad angular también puede variar con el tiempo, y su derivada se conoce como y se denota por <span class="math display">\[
+\alpha = \frac{d \omega}{d t}
+\]</span></p>
+<p>Si se deriva el vector velocidad respecto al tiempo, se obtiene la aceleración de la partícula:</p>
+<p><span class="math display">\[&nbsp;{\vec{a}} = \frac{d {\vec{v}}}{d t} = \frac{d|{\vec{v}}|}{d t} \hat{e}_t + |{\vec{v}}| \frac{d \hat{e}_t}{d t}=R\alpha \hat{e}_t+ R\omega^2 \hat{e}_n\]</span></p>
+<p>Es decir, la aceleración de la partícula es la suma vectorial de la aceleración tangencial y de la aceleración normal. La aceleración tangencial es el producto del radio de la circunferencia por la aceleración angular, y la aceleración normal es el producto del radio de la circunferencia por el cuadrado de la velocidad angular.</p>
+<p><span class="math display">\[ a_t = R \alpha \ \text{ y } \ a_n = R \omega^2\]</span></p>
+<p>Las ecuaciones del movimiento circular uniforme se pueden expresar en función del ángulo <span class="math inline">\(\theta\)</span> y de la velocidad angular <span class="math inline">\(\omega\)</span>. Para el caso del movimiento circular uniforme, la velocidad angular es constante, por lo que <span class="math inline">\(\alpha=0\)</span> y la aceleración tangencial es nula.</p>
+<p>El ángulo <span class="math inline">\(\theta\)</span> varía linealmente con el tiempo, y se puede expresar como: <span class="math display">\[&nbsp;\theta(t) = \theta_0 + \omega t\]</span></p>
+<p>Para el caso de movimiento circular de aceleración angular constante, la velocidad ángular varía linealmente con el tiempo de acuerdo a la ecuación: <span class="math display">\[&nbsp;\omega(t) = \omega_0 + \alpha t\]</span></p>
+<p>Mientras que el ángulo <span class="math inline">\(\theta\)</span> varía con el tiempo de acuerdo a la ecuación: <span class="math display">\[&nbsp;\theta(t) = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un coche circula por una rotonda de radio <span class="math inline">\(R=20\text{ m}\)</span> a una velocidad constante de <span class="math inline">\(v=10\text{ m/s}\)</span>. Determinar:</p>
+<ol type="1">
+<li>La velocidad angular.</li>
+<li>El ángulo recorrido en 5 segundos.</li>
+<li>La aceleración normal.</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>La velocidad angular se obtiene de la relación <span class="math inline">\(v=R\omega\)</span>:</p>
+<p><span class="math display">\[&nbsp;\omega = \frac{v}{R} = \frac{10\text{ m/s}}{20\text{ m}} = 0.5 \text{ rad/s}\]</span></p></li>
+<li><p>El ángulo recorrido en 5 segundos se obtiene de la relación <span class="math inline">\(\theta(t) = \theta_0 + \omega t\)</span>:</p>
+<p><span class="math display">\[&nbsp;\theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \times 5 \text{ s} = 2.5 \text{ rad}\]</span></p></li>
+<li><p>La aceleración normal se obtiene de la relación <span class="math inline">\(a_n = R \omega^2\)</span>:</p>
+<p><span class="math display">\[&nbsp;a_n = R \omega^2 = 20\text{ m} \times (0.5 \text{ rad/s})^2 = 5 \text{ m/s}^2\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Ejemplo de movimiento circular de aceleración angular constante. Un coche circula por una rotonda de radio <span class="math inline">\(R=20\text{ m}\)</span> con una velocidad angular inicial de <span class="math inline">\(\omega_0=0.5\text{ rad/s}\)</span> y una aceleración angular constante de <span class="math inline">\(\alpha=0.1\text{ rad/s}^2\)</span>. Determinar: 1. La velocidad angular después de 5 segundos. 2. El ángulo recorrido en 5 segundos.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>La velocidad angular después de 5 segundos se obtiene de la relación <span class="math inline">\(\omega(t) = \omega_0 + \alpha t\)</span>: <span class="math display">\[&nbsp;\omega(5\text{ s}) = 0.5 \text{ rad/s} + 0.1 \text{ rad/s}^2 \times 5 \text{ s} = 1.0 \text{ rad/s}\]</span></p></li>
+<li><p>El ángulo recorrido en 5 segundos se obtiene de la relación <span class="math inline">\(\theta(t) = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2\)</span>: <span class="math display">\[&nbsp;\theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \times 5 \text{ s} + \frac{1}{2} \times 0.1 \text{ rad/s}^2 \times (5 \text{ s})^2 = 2.5 \text{ rad} + 1.25 \text{ rad} = 3.75 \text{ rad}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="movimiento-de-proyectiles" class="level3">
+<h3 class="anchored" data-anchor-id="movimiento-de-proyectiles">3.5.2. Movimiento de Proyectiles</h3>
+<p>En esta sección, vamos a estudiar el tipo de movimiento que describe un proyectil cuando se lanza al aire y se mueve libremente. Despreciando la resistencia del aire, diremos que el proyectil está en caída libre. Supongamos que lanzamos una partícula con velocidad inicial <span class="math inline">\(v_0\)</span>, formando un ángulo <span class="math inline">\(\theta_0\)</span> con el eje horizontal y sea <span class="math inline">\((x_0,y_0)\)</span> el punto de lanzamiento, para <span class="math inline">\(t_0=0\)</span>. Tendremos un movimiento en dos dimensiones, <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>. Notaremos las magnitudes con un subídice <span class="math inline">\(x\)</span> o <span class="math inline">\(y\)</span>, según se refieran a uno u otro movimiento.</p>
+<div style="text-align:center;">
+<p><a href="_media/2245d-tiro-h8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_media/2245d-tiro-h8.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>Por tanto, las componentes de la velocidad inicial serán:</p>
+<p><span class="math display">\[&nbsp; v_{0x}=v_0 \cos \theta_0 \ \text{ y } \ v_{0y}=v_0 \sin \theta_0\]</span></p>
+<p>En ausencia de la resistencia del aire, la aceleración es la de la gravedad, <span class="math inline">\(g\)</span>, dirigida verticalmente hacia abajo. Por tanto:</p>
+<p><span class="math display">\[a_x= 0 \ \text{ y } \ a_y = -g\]</span></p>
+<p>Es decir, el movimiento a lo largo del eje <span class="math inline">\(x\)</span> es rectilíneo y uniforme y en el eje <span class="math inline">\(y\)</span> es uniformemente acelerado.</p>
+<p>Como la aceleración es constante, podemos usar las ecuaciones cinemáticas anteriores, y tendremos: I <span class="math display">\[&nbsp;v_x = v_{0x} \ \text{ y } \ v_y=v_{0y} - g  t\]</span></p>
+<p>Los desplazamientos vendrán dados por:</p>
+<p><span class="math display">\[&nbsp;x(t) = x_0 + v_{0x} t\  \text{ y }\  y(t) = y_0 + v_{0y}t - \frac{1}{2} g  t^2\]</span></p>
+<p>Si queremos saber cuál es la ecuación general para la trayectoria <span class="math inline">\(y(x)\)</span>, sólo tendremos que despejar <span class="math inline">\(t\)</span> en la primera ecuación, y sustituirlo en la segunda:</p>
+<p><span class="math display">\[t = \frac{x(t)-x_0}{v_{0x}}\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[&nbsp;y(t) = y_0 + v_{0y} t - \frac{1}{2} g t^2 = y_0+ v_{0y}  \left ( \frac{ x(t) - x_0}{v_{0x} } \right ) - \frac{1}{2} \left ( \frac{x(t) -x_0}{v_{0x}} \right )^2\]</span></p>
+<p>Desarrollando esta ecuación, y suponiendo que <span class="math inline">\(x_0=y_0=0\)</span>, resulta:</p>
+<p><span class="math display">\[y(x) = \frac{v_{0y}}{v_{0x}} x - \frac{1}{2} \frac{g}{v_{0x}^2} x^2\]</span></p>
+<p>También, teniendo en cuenta las expresiones de <span class="math inline">\(v_{0x}\)</span> y <span class="math inline">\(v_{0y}\)</span> anteriores, en términos de <span class="math inline">\(\theta_0\)</span>, podemos escribir:</p>
+<p><span class="math display">\[y(x)= x\tan \theta_0  - \frac{g}{2 v_0^2 \cos^2 \theta_0} x^2\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Se lanza una pelota al aire con una velocidad inicial de <span class="math inline">\(v_0=24.5\ \text{m/s}\)</span>, formando un ángulo de <span class="math inline">\(36.9^\circ\)</span> con la horizontal. Posteriormente, otra persona la recoge a la misma altura desde la que ha sido lanzada.</p>
+<ol type="1">
+<li><p>Determinar el tiempo total que la pelota está en el aire.</p></li>
+<li><p>Calcular la distancia total horizontal recorrida.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Para determinar el tiempo total <span class="math inline">\(T\)</span> en el que la pelota está en el aire, debemos de imponer que <span class="math inline">\(y(T)=y(t_0)\)</span>:</p>
+<p><span class="math display">\[&nbsp;y(T) = y(t_0) + v_{0y} \left ( t-t_0 \right ) - \frac{1}{2} g  \left ( t - t_0 \right ) ^2 = y(t_0)\]</span></p>
+<p>Suponiendo que <span class="math inline">\(t_0=0\)</span>, tendremos:</p>
+<p><span class="math display">\[&nbsp; \left ( v_{0y} - \frac{1}{2} g t \right ) t =0 \ \rightarrow \ v_{0y}=\frac{1}{2} g t \ \rightarrow \  t = \frac{2 v_{0y}}{g} = \frac{2 \times24.5 \sin (36.9^\circ)}{9.81} = 3.0 \text{ s}\]</span></p></li>
+<li><p>Suponemos que <span class="math inline">\(x(t_0)=0\)</span> y usamos la expresión:</p>
+<p><span class="math display">\[&nbsp;x(T) = x(t_0) + v_{0x} t = 0 + 24.5\times 3.0 \cos(36.9^\circ)   = 58.8 \text{ m}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

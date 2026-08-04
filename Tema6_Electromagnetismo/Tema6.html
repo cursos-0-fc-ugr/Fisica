@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Electromagnetismo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Tema6_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Tema6_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Tema6_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Tema6_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Tema6_files/libs/quarto-html/popper.min.js"></script>
+<script src="Tema6_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Tema6_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Tema6_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Tema6_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Tema6_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Tema6_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Tema6_files/libs/bootstrap/bootstrap-33c1396811bb647a58f862e5ff553a70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Tema6_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="Tema6_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="Tema6_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Electromagnetismo</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">1. Introducción</a></li>
+  <li><a href="#El-campo-magnético" id="toc-El-campo-magnético" class="nav-link" data-scroll-target="#El-campo-magnético">2. El campo magnético</a></li>
+  <li><a href="#Fuerza-magnética-sobre-cargas-en-movimiento" id="toc-Fuerza-magnética-sobre-cargas-en-movimiento" class="nav-link" data-scroll-target="#Fuerza-magnética-sobre-cargas-en-movimiento">3. Fuerza magnética sobre cargas en movimiento</a></li>
+  <li><a href="#Fuerza-magnética-sobre-corrientes" id="toc-Fuerza-magnética-sobre-corrientes" class="nav-link" data-scroll-target="#Fuerza-magnética-sobre-corrientes">4. Fuerza magnética sobre corrientes</a>
+  <ul class="collapse">
+  <li><a href="#Corriente-rectilínea" id="toc-Corriente-rectilínea" class="nav-link" data-scroll-target="#Corriente-rectilínea">4.1. Corriente rectilínea</a></li>
+  <li><a href="#Fuerza-sobre-una-espira-cuadrada" id="toc-Fuerza-sobre-una-espira-cuadrada" class="nav-link" data-scroll-target="#Fuerza-sobre-una-espira-cuadrada">4.2. Fuerza sobre una espira cuadrada</a></li>
+  </ul></li>
+  <li><a href="#Campo-creado-por-cargas-en-movimiento" id="toc-Campo-creado-por-cargas-en-movimiento" class="nav-link" data-scroll-target="#Campo-creado-por-cargas-en-movimiento">5. Campo creado por cargas en movimiento</a>
+  <ul class="collapse">
+  <li><a href="#Campo-creado-por-una-corriente-rectilínea" id="toc-Campo-creado-por-una-corriente-rectilínea" class="nav-link" data-scroll-target="#Campo-creado-por-una-corriente-rectilínea">5.1. Campo creado por una corriente rectilínea</a></li>
+  <li><a href="#Fuerza-entre-corrientes-paralelas" id="toc-Fuerza-entre-corrientes-paralelas" class="nav-link" data-scroll-target="#Fuerza-entre-corrientes-paralelas">5.2. Fuerza entre corrientes paralelas</a></li>
+  <li><a href="#Campo-magnético-creado-por-un-solenoide" id="toc-Campo-magnético-creado-por-un-solenoide" class="nav-link" data-scroll-target="#Campo-magnético-creado-por-un-solenoide">5.3. Campo magnético creado por un solenoide</a></li>
+  </ul></li>
+  <li><a href="#El-flujo-magnético-a-través-de-una-superficie" id="toc-El-flujo-magnético-a-través-de-una-superficie" class="nav-link" data-scroll-target="#El-flujo-magnético-a-través-de-una-superficie">6. El flujo magnético a través de una superficie</a></li>
+  <li><a href="#Inducción-electromagnética" id="toc-Inducción-electromagnética" class="nav-link" data-scroll-target="#Inducción-electromagnética">7. Inducción electromagnética</a>
+  <ul class="collapse">
+  <li><a href="#ley-de-faraday-ley-de-faraday" id="toc-ley-de-faraday-ley-de-faraday" class="nav-link" data-scroll-target="#ley-de-faraday-ley-de-faraday">7.1. Ley de Faraday {#Ley de Faraday}</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="introducción" class="level1">
+<h1>1. Introducción</h1>
+<p>En este tema se van a exponer unas breves nociones sobre electromagnetismo. Este texto no consiste en una repetición de lo ya estudiado en Bachillerato. Ni siquiera se abordarán todos los aspectos que en su momento se trataron. Se pretende aquí asentar unos conocimientos mínimos que se tratarán con más profundidad durante la asignatura de Física en el grado. Trataremos la fuerza magnética que actúa sobre cargas eléctricas en movimiento. Además se estudiarán algunos casos del campo creado por cargas en movimiento. Finalmente se abordará con algunos casos sencillos la generación de corriente eléctrica con el uso de campos magnéticos.</p>
+<p>Dada la naturaleza de los campos magnéticos y sus efectos, el uso del cálculo vectorial estará presente durante todo el tema, por lo que se recomienda que antes de empezar repase sus conocimientos en esta materia, especialmente el producto vectorial y el producto escalar de vectores.</p>
+</section>
+<section id="El-campo-magnético" class="level1">
+<h1>2. El campo magnético</h1>
+<p>El fenómeno del magnetismo se conoce desde la Antigüedad. Ya entonces se conocía que ciertos materiales como la magnetita poseen la propiedad de atraer trozos de hierro. Esta atracción no es de origen electrostático, ya que aparece aun en la ausencia de carga neta.</p>
+<p>Los materiales que poseen esta propiedad se llaman <strong>imanes</strong>. Los imanes se componen de dos polos, usualmente denominados norte y sur, de modo que si acercamos los polos norte de dos imanes, éstos se repelen. Lo mismo ocurre si acercamos los polos sur. En cambio, si acercamos el polo sur de un imán con el norte del otro, se atraerán.</p>
+<p>Hay materiales que pueden convertirse en imanes temporalmente, al ponerlo en contacto con otro imán. Se les denomina imanes artificiales. Por ejemplo, la aguja de una brújula es un imán artificial. Una vez imantada, la aguja apuntará su polo sur hacia el norte geográfico, puesto que la Tierra es como un gran imán orientado de norte a sur.</p>
+<p>La región de influencia de un imán se conoce como <strong>CAMPO MAGNÉTICO</strong>. En esta región se suelen representar unas líneas. En cada punto, estas líneas llevan la dirección que tendría una aguja imantada colocada en dicho punto. En la siguiente figura se muestran dos ejemplos: el campo magnético de un imán natural (izquierda) y el campo magnético terrestre (derecha).</p>
+<div style="text-align:center;">
+<div id="fig-campo_magnetico" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-campo_magnetico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-campo_magnetico.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Izquierda: campo magnético alrededor de un imán. Derecha: campo magnético en torno a la Tierra"><img src="_media/teoria-campo_magnetico.png" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-campo_magnetico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Izquierda: campo magnético alrededor de un imán. Derecha: campo magnético en torno a la Tierra
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Está claro que el campo magnético se deja sentir no sólo donde están las líneas, sino en toda la región del espacio. El número de líneas que se representan depende de la intensidad del campo, siendo mayor el número de líneas en las zonas donde el campo es mayor. Por ejemplo, en el dibujo anterior se señalan dos puntos (1) y (2). Obsérvese que la distancia entre las líneas de campo es mayor en el punto (2), lo cual implica que la intensidad del campo en ese punto es menor.</p>
+<p>El campo magnético es un campo vectorial. Es decir, en cada punto, el campo tiene una intensidad y una dirección, y se representa por <span class="math inline">\(\vec{B}\)</span>.</p>
+<blockquote class="blockquote">
+<p>La unidad de la intensidad del campo magnético en el S.I. es el Tesla (T).</p>
+</blockquote>
+</section>
+<section id="Fuerza-magnética-sobre-cargas-en-movimiento" class="level1">
+<h1>3. Fuerza magnética sobre cargas en movimiento</h1>
+<p>Como ya hemos dicho, los materiales magnéticos modifican su posición cuando se encuentran en presencia de un campo magnético, orientando sus polos en la dirección del campo. Para que este movimiento tenga lugar, es necesario que actúe sobre ellos una fuerza, que es la fuerza magnética.</p>
+<p>Esta fuerza magnética no sólo actúa sobre los materiales magnéticos. También lo hace sobre <strong>cargas eléctricas en movimiento</strong>. Así, si tenemos una carga en reposo en el seno de un campo magnético, no actuará sobre ésta ninguna fuerza, pero si se está moviendo, entonces actuará una fuerza sobre ella. Esta fuerza tiene varias características:</p>
+<ul>
+<li><p>Es perpendicular a la dirección del campo.</p></li>
+<li><p>Es perpendicular a la dirección del movimiento de la carga.</p></li>
+<li><p>Es proporcional al campo, la velocidad de la carga y a la propia carga.</p></li>
+</ul>
+<p>La expresión que representa todas estas características es la llamada <strong>Ley de Lorentz</strong>:</p>
+<p><span class="math display">\[\fbox{$\vec{F}=q\vec{v}\times\vec{B}$}\]</span></p>
+<p>De aquí podemos obtener ya una definición de Tesla: Es la fuerza que experimenta una carga de 1 C cuando se mueve a una velocidad de 1 m/s en la dirección perpendicular al campo.</p>
+<p>Del ejemplo en la <a href="#fig-campo_magnetico" class="quarto-xref">Figura&nbsp;1</a> se deduce también que en general, los campos, y por tanto la fuerza experimentada por cuerpos cargados, no tienen por qué tener el mismo valor ni en intensidad ni en dirección en todos los puntos del espacio. Pero como punto de partida nos situaremos de aquí en adelante en el caso más sencillo: campo magnético homogéneo, es decir, con el mismo valor en toda la región de influencia. Para representarlo lo indicaremos con un único vector en un extremo de la figura, con la dirección del campo. Además, si el campo es perpendicular a la pantalla, lo indicaremos con un punto si la dirección es hacia nosotros y una cruz si se aleja.</p>
+<p>Veamos en esta situación cómo calcular la fuerza (y por tanto la aceleración). De la ley de Lorentz se deduce que la fuerza es nula en los siguientes casos:</p>
+<ul>
+<li><p>Carga en reposo (su velocidad es cero).</p></li>
+<li><p>Carga que se mueve en la dirección del campo. La ley de Lorentz es un producto vectorial, y el producto vectorial de dos vectores paralelos es nulo.</p></li>
+</ul>
+<p>Si lo que deseamos conocer es la intensidad de la fuerza, entonces un modo sencillo de calcularlo es utilizar la forma más compacta del producto vectorial: <span class="math inline">\(|\vec{a}\times\vec{b}|=|\vec{a}||\vec{b}|\sin[\theta]\)</span>. La dirección es la perpendicular al plano formado por ambos vectores. Para saber el sentido hay que seguir la regla del tornillo o de la mano derecha. Aquí usaremos la de la mano derecha, véanse algunos ejemplos en la <a href="#fig-producto_vectorial" class="quarto-xref">Figura&nbsp;2</a>.</p>
+<div style="text-align:center;">
+<div id="fig-producto_vectorial" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-producto_vectorial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-producto_vectorial.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Ejemplos de producto vectorial"><img src="_media/teoria-producto_vectorial.png" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-producto_vectorial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Ejemplos de producto vectorial
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Para aplicar esta regla, debe ponerse la mano derecha con los dedos índice-anular en la dirección del primer vector de modo que al cerrar el puño estos dedos se dirijan hacia el segundo vector. En esta posición, el pulgar indica la dirección del producto vectorial.</p>
+<p>En nuestro caso, el vector <span class="math inline">\(q\vec{v}\)</span> juega el papel de <span class="math inline">\(\vec{a}\)</span> y el vector <span class="math inline">\(\vec{B}\)</span> el papel del vector <span class="math inline">\(\vec{b}\)</span>. Esto quiere decir que si tenemos una carga positiva, el sentido de la fuerza es el mismo que el del producto <span class="math inline">\(\vec{v}\times\vec{B}\)</span>, mientras que si la carga es negativa, entonces el sentido de la fuerza es el opuesto al producto <span class="math inline">\(\vec{v}\times \vec{B}\)</span>, tal y como se muestra en la <a href="#fig-ley_Lorentz" class="quarto-xref">Figura&nbsp;3</a>.</p>
+<div style="text-align:center;">
+<div id="fig-ley_Lorentz" class="quarto-float quarto-figure quarto-figure-center anchored" width="60%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ley_Lorentz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-ley_Lorentz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: "><img src="_media/teoria-ley_Lorentz.png" id="fig-ley_Lorentz" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-ley_Lorentz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Dirección de la fuerza magnética">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Dirección de la fuerza magnética
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Caso 1">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Caso 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de <span class="math inline">\(3\ \mu\text{C}\)</span> de valor.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="_media/ejercicios-ley_Lorentz-1.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(q&gt;0\)</span>, luego la fuerza lleva la misma dirección que el producto vectorial <span class="math inline">\(\vec{v}\times\vec{B}\)</span></p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-1-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_media/ejercicios-ley_Lorentz-1-sol.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Caso 2">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Caso 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de <span class="math inline">\(-3\ \mu\text{C}\)</span> de valor.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-1neg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="_media/ejercicios-ley_Lorentz-1neg.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ahora la carga es negativa, <span class="math inline">\(q &lt; 0\)</span>, luego la fuerza lleva la misma dirección que el producto vectorial <span class="math inline">\(\vec{v}\times\vec{B}\)</span> pero SENTIDO OPUESTO. En la siguiente figura el esquema es igual que el del ejercicio anterior, pero ahora la fuerza apunta en sentido opuesto.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-1neg-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="_media/ejercicios-ley_Lorentz-1neg-sol.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Caso 3">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Caso 3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de <span class="math inline">\(3\ \mu\text{C}\)</span> de valor.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="_media/ejercicios-ley_Lorentz-2.png" class="img-fluid" style="width:20.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El campo y la velocidad tienen sentidos opuestos, pero la misma dirección, y por tanto, la fuerza, que es el producto vectorial <span class="math inline">\(\vec{F}=q\vec{v}\times\vec{B}\)</span> es nulo.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-2-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="_media/ejercicios-ley_Lorentz-2-sol.png" class="img-fluid" style="width:15.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Caso 4">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Caso 4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de <span class="math inline">\(3\ \mu\text{C}\)</span> de valor.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="_media/ejercicios-ley_Lorentz-3.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(q&gt;0\)</span>, luego la fuerza lleva la misma dirección que el producto vectorial <span class="math inline">\(\vec{v}\times\vec{B}\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-3-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="_media/ejercicios-ley_Lorentz-3-sol.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Caso 5">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Caso 5
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de <span class="math inline">\(-3\ \mu\text{C}\)</span> de valor.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-3neg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="_media/ejercicios-ley_Lorentz-3neg.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ahora la carga es negativa, <span class="math inline">\(q &lt; 0\)</span>, luego la fuerza lleva la misma dirección que el producto vectorial <span class="math inline">\(\vec{v}\times\vec{B}\)</span> pero SENTIDO OPUESTO. En la siguiente figura el esquema es igual que el del ejercicio anterior, pero ahora la fuerza apunta en sentido opuesto.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-3neg-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="_media/ejercicios-ley_Lorentz-3neg-sol.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Caso 6">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Caso 6
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de <span class="math inline">\(3\ \mu\text{C}\)</span> de valor.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="_media/ejercicios-ley_Lorentz-4.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(q&gt;0\)</span>, luego la fuerza lleva la misma dirección que el producto vectorial <span class="math inline">\(\vec{v}\times\vec{B}\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-4-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="_media/ejercicios-ley_Lorentz-4-sol.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Caso 7">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Caso 7
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de <span class="math inline">\(-3\ \mu\text{C}\)</span> de valor.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-4neg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="_media/ejercicios-ley_Lorentz-4neg.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ahora la carga es negativa, <span class="math inline">\(q &lt; 0\)</span>, luego la fuerza lleva la misma dirección que el producto vectorial <span class="math inline">\(\vec{v}\times\vec{B}\)</span> pero SENTIDO OPUESTO. En la siguiente figura el esquema es igual que el del ejercicio anterior, pero ahora la fuerza apunta en sentido opuesto.</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_Lorentz-4neg-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="_media/ejercicios-ley_Lorentz-4neg-sol.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Es posible también calcular la fuerza utilizando las coordenadas cartesianas de los vectores involucrados. Recordemos que, si <span class="math inline">\(\vec{a}=a_x\hat{\imath}+a_y\hat{\jmath}+a_z\hat{k}\)</span> y <span class="math inline">\(\vec{b}=b_x\hat{\imath}+b_y\hat{\jmath}+b_z\hat{k}\)</span>, entonces:</p>
+<p><span class="math display">\[\vec{a}\times\vec{b}=\begin{vmatrix}
+\hat{\imath} &amp; \hat{\jmath} &amp; \hat{k}\\
+a_x &amp; a_y &amp; a_z\\
+b_x &amp; b_y &amp; b_z
+\end{vmatrix}=\begin{vmatrix}
+a_y &amp; a_z\\
+b_y &amp; b_z
+\end{vmatrix}\hat{\imath}-\begin{vmatrix}
+a_x &amp; a_z\\
+b_x &amp; b_z
+\end{vmatrix}\hat{\jmath}+\begin{vmatrix}
+a_x &amp; a_y\\
+b_x &amp; b_y
+\end{vmatrix}\hat{k}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Calcular la fuerza que actúa sobre una carga de <span class="math inline">\(-2\mu\text{C}\)</span> al moverse en un campo magnético <span class="math inline">\(\vec{B}=5\hat{\imath}\text{ mT}\)</span> con una velocidad <span class="math inline">\(\vec{v}=3\hat{\jmath}\text{ m/s}\)</span>.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La fuerza viene dada por la ley de Lorentz. Utilizaremos el sistema internacional, para el que <span class="math inline">\(q=-2\cdot 10^{-6}\text{ C}\)</span>, <span class="math inline">\(\vec{v}=3\hat{\jmath}\text{ m/s}\)</span> y <span class="math inline">\(\vec{B}=5\cdot 10^{-3}\hat\imath\text{ T}\)</span>. Calculemos primero <span class="math inline">\(\vec{v}\times\vec{B}\)</span> y el resultado lo multiplicaremos por la carga:</p>
+<p><span class="math display">\[\vec{v}\times\vec{B}= \begin{vmatrix}
+\hat{\imath} &amp; \hat{\jmath} &amp; \hat{k}\\
+v_x &amp; v_y &amp; v_z\\
+B_x &amp; B_y &amp; B_z
+\end{vmatrix}=\begin{vmatrix}
+\hat{\imath} &amp; \hat{\jmath} &amp; \hat{k}\\
+0 &amp; 3 &amp; 0\\
+5\times 10^{-3} &amp; 0 &amp; 0
+\end{vmatrix}=\begin{vmatrix}
+3 &amp; 0\\
+0 &amp; 0
+\end{vmatrix} \hat{\imath}
++\begin{vmatrix}
+0 &amp; 0\\
+5\cdot 10^{-3} &amp; 0
+\end{vmatrix} \hat{\jmath}+\begin{vmatrix}
+0 &amp; 3\\
+5\cdot 10^{-3} &amp; 0
+\end{vmatrix} \hat{k}
+=-15\cdot 10^{-3} \text{ T m/s} \, \hat{k}\]</span></p>
+<p>Finalmente, la fuerza se obtiene multiplicando por la carga:</p>
+<p><span class="math display">\[\vec{F}=-2\cdot 10^{-6}(-15\cdot 10^{-3} \hat{k})=30\cdot 10^{-9}\hat{k}\text{ N}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Profundicemos un poco más. En caso de que el vector velocidad forme un cierto ángulo <span class="math inline">\(\theta\)</span> con el campo, entonces la fuerza magnética tendrá por módulo:</p>
+<p><span class="math display">\[F_m=q|\vec{v}\times \vec{B}|=qvB\sin\theta\]</span></p>
+<div style="text-align:center;">
+<div id="fig-vparalelo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vparalelo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-vparalelo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figura&nbsp;4: Descomposición del vector velocidad en componente paralela y perpendicular al campo magnético"><img src="_media/teoria-vparalelo.png" class="img-fluid figure-img" style="width:35.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vparalelo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Descomposición del vector velocidad en componente paralela y perpendicular al campo magnético
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Tal y como se muestra en la <a href="#fig-vparalelo" class="quarto-xref">Figura&nbsp;4</a>, <span class="math inline">\(v\sin\theta\)</span> es la componente de la velocidad perpendicular al campo, <span class="math inline">\(v_\perp\)</span>, por lo que concluimos que:</p>
+<blockquote class="blockquote">
+<p>Sólo la componente de la velocidad perpendicular al campo magnético producirá algún efecto en el cálculo de la fuerza magnética</p>
+</blockquote>
+<p>Podemos verlo también vectorialmente. Si observamos de nuevo la figura, vemos que la velocidad la podemos descomponer como suma vectorial de dos vectores paralelo (<span class="math inline">\(\parallel\)</span>) y perpendicular (<span class="math inline">\(\perp\)</span>) al campo:</p>
+<p><span class="math display">\[\vec{v}=\vec{v}_\parallel+\vec{v}_\perp\]</span></p>
+<p>Si por ejemplo, el campo magnético lleva la dirección <span class="math inline">\(OZ\)</span>, entonces:</p>
+<p><span class="math display">\[\vec{v}_\parallel=v_z\hat{k}\]</span> <span class="math display">\[\vec{v}_\perp=v_x\hat{\imath}+v_y\hat{\jmath}\]</span></p>
+<p>La fuerza de Lorentz podemos descomponerla así:</p>
+<p><span class="math display">\[\vec{F}=q\vec{v}\times\vec{B}=q\vec{v}_\parallel\times\vec{B}+q\vec{v}_\perp\times\vec{B}\]</span></p>
+<p>El primer sumando es nulo y se llega a la misma conclusión. La fuerza magnética es independiente de la componente de la velocidad paralela al campo.</p>
+<p>En el caso de que uno de los vectores, la velocidad, el campo magnético, o ambos, tenga una sola componente cartesiana, el producto vectorial se puede hacer de un modo más rápido. Tal y como se muestra en el esquema de la <a href="#fig-triedro" class="quarto-xref">Figura&nbsp;5</a>, si aplicamos la regla de la mano derecha a cualesquiera dos vectores unitarios perpendiculares, entonces obtenemos el vector restante. Es decir, si giramos en el sentido antihorario nos da un producto positivo, si lo hacemos en el sentido horario, negativo. En la figura de la izquierda se muestra un ejemplo, <span class="math inline">\(\hat{\jmath}\times\hat{k}\)</span>, y en la figura de la derecha un resumen de todas las opciones.</p>
+<div style="text-align:center;">
+<div id="fig-triedro" class="quarto-float quarto-figure quarto-figure-center anchored" width="45%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-triedro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-triedro.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figura&nbsp;5: "><img src="_media/teoria-triedro.png" id="fig-triedro" class="img-fluid figure-img" style="width:45.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-triedro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Todas estas opciones se pueden resumir en las siguientes igualdades:</p>
+<p><span class="math display">\[\begin{matrix}
+\hat{\imath}\times\hat{\jmath}=\hat{k} &amp; \hat{\jmath}\times\hat{k}=\hat{\imath} &amp; \hat{k}\times\hat{\imath}=\hat{\jmath}\\
+\hat{\jmath}\times\hat{\imath}=-\hat{k} &amp; \hat{\imath}\times\hat{k}=-\hat{\jmath} &amp; \hat{k}\times\hat{\jmath}=-\hat{\imath}
+\end{matrix}\]</span></p>
+<p><span class="math display">\[\hat{\imath}\times\hat{\imath}=\hat{\jmath}\times\hat{\jmath}=\hat{k}\times\hat{k}=0\]</span></p>
+<p>Con esta idea en mente, el ejemplo anterior sería, <span class="math inline">\(\vec{v}\times\vec{B}=v_y\hat{\jmath}\times B_x\hat{\imath}\)</span>, puesto que el resto de componentes cartesianas son cero. Reordenando:</p>
+<p><span class="math display">\[\vec{v}\times\vec{B}=v_yB_x\hat{\jmath}\times\hat{\imath}=15\times 10^{-3} (-\hat{k})\text{ N}=-15\times 10^{-3}\hat{k}\text{ N}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una carga de <span class="math inline">\(-5\mu\text{ C}\)</span> se mueve a una velocidad <span class="math inline">\(\vec{v}=(3\hat{\imath}+2\hat{k})\text{ m/s}\)</span>. a. Calcular la fuerza magnética que actúa sobre ella cuando se encuentra en un campo magnético <span class="math inline">\(\vec{B}=25\hat{\imath}\)</span> mT. b. Represente esquemáticamente los tres vectores. c.&nbsp;Si su masa es <span class="math inline">\(6.6 \cdot 10^{-26}\text{ kg}\)</span>, calcular la aceleración. d.&nbsp;Y si la velocidad hubiese sido <span class="math inline">\(\vec{v}=2\hat{k} \text{ m/s}\)</span>, ¿cambiaría el resultado? ¿por qué?</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Datos: <span class="math inline">\(q=-5\cdot 10^{-6} \text{ C}\)</span>; <span class="math inline">\(\vec v =3\hat{\imath}+2\hat{k} \text{ m/s}\)</span>; <span class="math inline">\(\quad\vec{B}=25\cdot 10^{-3}\hat{\imath} \text{ T}\)</span> La fuerza será:</li>
+</ol>
+<p><span class="math display">\[\vec{F}=q\vec{v}\times\vec{B}=-5\cdot 10^{-6}(3\hat{\imath}+2\hat{k})\times 25\cdot 10^{-3}\hat{\imath}=\]</span> <span class="math display">\[=-125\cdot 10^{-9}(3\hat{\imath}+2\hat{k})\times\hat{\imath}=-125\cdot 10^{-9}\left[3(\hat{\imath}\times\hat{\imath})+2(\hat{k}\times\hat{\imath})\right]\]</span></p>
+<p>Como <span class="math inline">\(\hat{\imath}\times\hat{\imath}=0\)</span> y <span class="math inline">\(\hat{k}\times\hat{\imath}=\hat{\jmath}\)</span>, <span class="math display">\[\vec{F}=-250\cdot 10^{-9}\hat{\jmath} \text{ N}\]</span></p>
+<ol start="2" type="a">
+<li>Para representar los vectores, se puede usar el siguiente esquema:</li>
+</ol>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-magnetismo2-1-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="_media/ejercicios-magnetismo2-1-sol.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<ol start="3" type="a">
+<li><p><span class="math inline">\(\vec{F}=m\vec{a}\)</span>, de donde <span class="math inline">\(\vec{a}=\vec{F}/m=\frac{-250\cdot 10^{-9}\text{ N}}{6.6\cdot 10^{-23}\text{ kg}}\hat{\jmath}=-3.8\cdot 10^{18}\hat{\jmath} \text{ m/s}^2\)</span></p></li>
+<li><p>La fuerza sólo depende de la proyección de la velocidad en el plano perpendicular al campo magnético. En nuestro caso, dado que el campo magnético va en la dirección <span class="math inline">\(X\)</span>, la proyección de la velocidad en esta dirección no influye en la fuerza magnética, y por lo tanto el resultado no varía.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una carga de <span class="math inline">\(2\text{ nC}\)</span> viaja a una velocidad <span class="math inline">\(\vec{v}=(5\hat{\jmath}+8\hat{k}) \text{ m/s}\)</span>. En esta región existe un campo magnético <span class="math inline">\(\vec{B}=(0.2\hat{\imath}+0.2\hat{\jmath}) \text{ T}\)</span>. Calcular la fuerza que actúa sobre ella.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Datos: <span class="math inline">\(q= 2\cdot 10^{-9} \text{ C}\)</span>; <span class="math inline">\(\quad v_x=0, \, v_y=5 \text{ m/s}, \, v_z=8 \text{ m/s}\)</span>; <span class="math inline">\(\quad B_x=0.2 \text{ T}, \, B_y=0.2 \text{ T}\)</span></p>
+<p>Aplicando la ley de Lorentz:</p>
+<p><span class="math display">\[\vec{F}= q\begin{vmatrix}
+\hat{\imath} &amp; \hat{\jmath} &amp; \hat{k}\\
+0 &amp; v_y &amp; v_z\\
+B_x &amp; B_y &amp; 0
+\end{vmatrix}=q\begin{vmatrix}
+v_y &amp; v_z\\
+B_y &amp; 0
+\end{vmatrix}\hat{\imath}-q\begin{vmatrix}
+0 &amp; v_z\\
+B_x &amp; 0
+\end{vmatrix}\hat{\jmath}+q\begin{vmatrix}
+0 &amp; v_y\\
+B_x &amp; B_y
+\end{vmatrix}\hat{k}=\]</span> <span class="math display">\[=-qv_zB_y\hat{\imath}+qv_zB_x\hat{\jmath}-qv_yB_x\hat{k}\]</span> Y sustituyendo:</p>
+<p><span class="math display">\[\vec{F}=-2\cdot 10^{-9}\times 8\times 0.2\hat{\imath}+2\cdot 10^{-9}\times 8\times 0.2\hat{\jmath}-2\cdot 10^{-9}\times 5\times 0.2\hat{k}\]</span></p>
+<p><span class="math display">\[\vec{F}=\left(-3.2\cdot 10^{-9}\hat{\imath}+3.2\cdot 10^{-9}\hat{\jmath}-2\cdot 10^{-9}\hat{k}\right) \text{ N}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Hemos visto que la fuerza magnética es siempre perpendicular a la dirección de movimiento de la carga. La aceleración que produce no actúa aumentando ni disminuyendo la velocidad, sino cambiándola de dirección, es decir:</p>
+<p><strong>La fuerza magnética es una fuerza centrípeta.</strong></p>
+<p>En ausencia de otras fuerzas, si una carga se mueve inicialmente perpendicularmente al campo magnético, realizará trayectorias circulares, tal y como se muestra esquemáticamente en la <a href="#fig-ciclotron" class="quarto-xref">Figura&nbsp;6</a>.</p>
+<div style="text-align:center;">
+<div id="fig-ciclotron" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ciclotron-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-ciclotron.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figura&nbsp;6: Trayectoria de una carga en un campo magnético"><img src="_media/teoria-ciclotron.png" class="img-fluid figure-img" style="width:35.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ciclotron-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Trayectoria de una carga en un campo magnético
+</figcaption>
+</figure>
+</div>
+</div>
+<p>El radio <span class="math inline">\(r\)</span> de esta trayectoria se puede calcular también. El ángulo entre <span class="math inline">\(\vec{v}\)</span> y <span class="math inline">\(\vec{B}\)</span> es 90<span class="math inline">\(^\circ\)</span>, por lo que <span class="math inline">\(|\sin \vec{v}\vec{B}|=1\)</span>. Por lo tanto:</p>
+<p>Se trata de una aceleración centrípeta: <span class="math inline">\(F=m\frac{v^2}{r}\)</span>, por lo que:</p>
+<p><span class="math display">\[|q|vB=m\frac{v^2}{r}\]</span></p>
+<p>Como hemos dicho que el módulo de la velocidad permanece inalterado, despejando de la ecuación anterior:</p>
+<p><span class="math display">\[r=\frac{mv^2}{|q|vB}=\frac{mv}{|q|B}\]</span></p>
+<p>Y la velocidad angular será:</p>
+<p><span class="math display">\[\omega=\frac{v}{r}=|q|B/m\]</span></p>
+<p>Esta propiedad se usa en la práctica, en los espectrómetros de masa (para medir masas muy pequeñas) y en el acelerador de partículas o ciclotrón, en los que se usa esta propiedad para proporcionar elevadas velocidades angulares a pequeñas cargas. Por ese motivo, a esta frecuencia <span class="math inline">\(\omega=|q|B/m\)</span> se le llama <strong>frecuencia ciclotrón</strong>.</p>
+<p>Además, dado que la fuerza es también perpendicular al campo magnético, la carga se moverá siempre en el plano perpendicular. En efecto, <span class="math inline">\(\vec{v}=\vec{v}_0+\vec{a}t\)</span>, y la aceleración, al igual que la fuerza, siempre está en la dirección perpendicular al campo. Por tanto, si inicialmente la velocidad no tiene ninguna componente en la dirección de <span class="math inline">\(\vec{B}\)</span>, tampoco la tendrá después. Esto se ilustra en la <a href="#fig-aceleracion" class="quarto-xref">Figura&nbsp;7</a>, en la que se muestra la velocidad de una carga en el seno de un campo magnético perpendicular, en dos instantes de tiempo <span class="math inline">\(\vec{v}_0\)</span> y <span class="math inline">\(\vec{v}\)</span> y de la aceleración que experimenta.</p>
+<div style="text-align:center;">
+<div id="fig-aceleracion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-aceleracion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-aceleracion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figura&nbsp;7: Esquema de la velocidad de una carga en el seno de un campo magnético perpendicular, en dos instantes de tiempo \vec{v}_0 y \vec{v} y de la aceleración que experimenta."><img src="_media/teoria-aceleracion.png" class="img-fluid figure-img" style="width:35.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aceleracion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7: Esquema de la velocidad de una carga en el seno de un campo magnético perpendicular, en dos instantes de tiempo <span class="math inline">\(\vec{v}_0\)</span> y <span class="math inline">\(\vec{v}\)</span> y de la aceleración que experimenta.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Puede darse el caso de que la carga no se mueva inicialmente perpendicularmente al campo magnético. Por ejemplo, sea el campo magnético en la dirección <span class="math inline">\(x\)</span>: <span class="math inline">\(\vec{B}=B\hat{\imath}\)</span> (ver figura inferior). Si la carga tiene una velocidad <span class="math inline">\(\vec{v}=v\hat{\jmath}\)</span>, entonces estaríamos en el ejemplo anterior, campo y velocidad de la carga perpendiculares. Si en cambio, la velocidad no es perpendicular, entonces podemos separarla en dos componentes, una paralela y una perpendicular. En este ejemplo, tendríamos <span class="math inline">\(\vec{v}=\vec{v}_\perp+v_\parallel\hat{\imath}\)</span> (<a href="#fig-trayectoria_helicoidal" class="quarto-xref">Figura&nbsp;8</a>).</p>
+<div style="text-align:center;">
+<div id="fig-trayectoria_helicoidal" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-trayectoria_helicoidal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-trayectoria_helicoidal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Figura&nbsp;8: Distintos instantes de la trayectoria helicoidal de una carga que se mueve en una dirección no perpendicular al campo magnético"><img src="_media/teoria-trayectoria_helicoidal.png" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trayectoria_helicoidal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: Distintos instantes de la trayectoria helicoidal de una carga que se mueve en una dirección no perpendicular al campo magnético
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Como la aceleración es perpendicular al campo, sólo hace variar <span class="math inline">\(\vec{v}_\perp\)</span>, mientras que la otra componente no varía (obsérvese que en todos los casos <span class="math inline">\(\vec{v}_\parallel\)</span> es la misma).</p>
+<p>En <span class="math inline">\(A\)</span>, <span class="math inline">\(\vec{v}_\perp\)</span> lleva la dirección <span class="math inline">\(\hat{\jmath}\)</span>, por lo que la fuerza de Lorentz le imprime una aceleración a la carga <span class="math inline">\(\vec{a}\)</span> dirigida en dirección <span class="math inline">\(-\hat{k}\)</span>: la carga se desvía de su trayectoria horizontal tal y como indica la flecha discontinua gris. En <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span> se indican momentos posteriores de la trayectoria.</p>
+<p>Puesto que <span class="math inline">\(\vec{v}_\parallel\)</span> no varía la carga avanza en la dirección <span class="math inline">\(X\)</span> y a la vez gira en torno al eje dado por la dirección del campo magnético. Por ejemplo, trascurrido un tiempo nos encontramos en la situación dibujada en <span class="math inline">\(B\)</span>. La carga ha avanzado en la dirección <span class="math inline">\(X\)</span> y se encuentra ahora en la posición indicada por la carga en negro con <span class="math inline">\(\vec{v}_\perp\)</span> en la dirección <span class="math inline">\(-\hat{k}\)</span>. La aceleración ahora lleva la dirección <span class="math inline">\(-\hat{\jmath}\)</span>, por lo que la carga se desvía en la misma dirección.</p>
+<p>De nuevo, transcurrido un tiempo la carga se encuentra en la posición indicada en <span class="math inline">\(C\)</span>: <span class="math inline">\(\vec{v}_\perp\)</span> en la dirección <span class="math inline">\(-\hat{\jmath}\)</span> y por tanto aceleración en la dirección <span class="math inline">\(\hat{k}\)</span>, completando poco a poco la trayectoria circular.</p>
+<p>En <span class="math inline">\(D\)</span> se muestra la trayectoria realizada: el movimiento consta de dos partes, una paralela al campo con velocidad constante <span class="math inline">\(v_\parallel\hat{\imath}\)</span>, esto es, un movimiento rectilíneo uniforme y otra componente consistente en un movimiento circular en el plano perpendicular al campo. La composición de ambos movimientos será un movimiento helicoidal.</p>
+<p>En la práctica se puede dar la situación en la que existe al mismo tiempo un campo eléctrico y un campo magnético. Por lo tanto, sobre una carga eléctrica actuará una fuerza electrostática y una fuerza magnética. La expresión de la fuerza de Lorentz generalizada será:</p>
+<p><span class="math display">\[\vec{F}=q\left(\vec{E}+\vec{v}\times{B}\right)\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplos">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplos
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 1">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Se introduce una carga en una región donde coexisten un campo magnético y un campo eléctrico. Inicialmente la carga está en reposo. ¿Qué dirección debe llevar el campo magnético respecto del campo eléctrico para que la carga no se desvíe de su trayectoria?</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Inicialmente la carga está en reposo, luego sólo actúa la fuerza eléctrica y por tanto:</p>
+<p><span class="math display">\[\vec{a}=\vec{F}/m=\frac{q}{m}\vec{E}\]</span> En el momento en que empieza a moverse, el campo magnético ejerce una fuerza perpendicular a dicha dirección. Para que no produzca ninguna desviación tiene que darse una de estas dos condiciones:</p>
+<ul>
+<li><p>Que la fuerza eléctrica contrarreste la fuerza magnética, o</p></li>
+<li><p>Que el campo magnético sea paralelo a la dirección de movimiento, en cuyo caso la fuerza magnética será nula.</p></li>
+</ul>
+<p>El primero de los casos no puede darse puesto que la fuerza magnética es perpendicular a la velocidad, y ya hemos visto que la fuerza eléctrica, al menos en el instante inicial, es paralela a ésta. Queda como única opción que el campo magnético sea paralelo a la velocidad, y por lo tanto al campo eléctrico.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 2">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Una electrón se mueve inicialmente con velocidad <span class="math inline">\(v_i=20\text{ m/s}\)</span> en la dirección del eje <span class="math inline">\(OX\)</span>. Al entrar en una región donde coexisten un campo magnético de <span class="math inline">\(500\text{ mT}\)</span> y un campo eléctrico de <span class="math inline">\(5\ \mu\text{N}/\text{C}\)</span> paralelos a la dirección de movimiento de la carga,</p>
+<ol type="a">
+<li><p>¿Cuál será su aceleración?</p></li>
+<li><p>Calcular la velocidad <span class="math inline">\(1\text{ s}\)</span> después de aplicar el campo.</p></li>
+</ol>
+<p>NOTA: Recuerde que el electrón tiene una carga <span class="math inline">\(q_e=-1.6\cdot 10^{-19}\text{ C}\)</span> y una masa <span class="math inline">\(m_e=9.1\cdot 10^{-31}\text{ kg}\)</span>.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como la velocidad y campos son paralelos, entonces:</p>
+<ul>
+<li><p>La fuerza eléctrica y por tanto la aceleración son también paralelos a la velocidad inicial. Por tanto, el campo eléctrico no desvía la carga de su trayectoria recta.</p></li>
+<li><p>Inicialmente no hay fuerza magnética, puesto que la velocidad es paralela al campo magnético. Dado que la fuerza eléctrica no desvía a la carga de su trayectoria, la velocidad no cambia de dirección y por tanto no aparecerá en ningún momento una componente perpendicular.</p></li>
+</ul>
+<ol type="a">
+<li><p>&nbsp; <span class="math display">\[\vec{F}=q_e\vec{E}=-1.6\cdot 10^{-19}\cdot 5\cdot 10^{-6}\hat{\imath}=-8\cdot 10^{-25}\hat{\imath}\text{ N}\]</span> <span class="math display">\[\vec{a}=\frac{\vec{F}}{m_e}=\frac{-8\cdot 10^{-25}\hat{\imath}}{9.1\cdot 10^{-31}}=-879121\hat{\imath}\text{ m/s}^2\approx -879000\hat{\imath}\text{ m/s}^2\]</span></p></li>
+<li><p>Como conocemos la aceleración y la velocidad inicial:</p></li>
+</ol>
+<p><span class="math display">\[\vec{v}_f=\vec{v}_i+\vec{a}t=20\hat{\imath}\text{ m/s}-879000\text{ m/s}^2\cdot 1\text{ s}\hat{\imath}=-879101\hat{\imath}\text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 3">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Una carga positiva con velocidad <span class="math inline">\(\vec{v_i}=2\hat{\imath}\)</span> m/s penetra en una región donde coexisten un campo magnético <span class="math inline">\(\vec{B}=0.2\hat{\imath}\text{ T}\)</span> y un campo eléctrico <span class="math inline">\(\vec{E}=0.2\hat{\jmath}\text{ N/C}\)</span>. ¿Puede concluirse que el campo magnético no producirá ninguna fuerza?</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En el instante inicial está claro que no hay fuerza magnética, puesto que el campo magnético es paralelo a la velocidad. Pero sobre la carga actúa una fuerza eléctrica en la dirección del campo eléctrico. Como éste es perpendicular a la dirección inicial de la carga, ésta se desviará de esta trayectoria tal y como se indica en la figura de la izquierda,</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-fuerzaBE.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="_media/ejercicios-fuerzaBE.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p><span class="math display">\[\vec{F}_e=q\vec{E}=qE_j\hat{\jmath}\]</span> <span class="math display">\[\vec{a}=\frac{qE}{m}\hat{\jmath}\]</span> <span class="math display">\[\vec{v}=\vec{v}_i+\vec{a}t=v_i\hat{\imath}+\frac{qE}{m}\hat{\jmath}\]</span> por lo que instantes después aparecerá una componente de la velocidad en la dirección del eje <span class="math inline">\(OY\)</span> y por tanto una fuerza magnética (figura derecha).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 4">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Una carga de <span class="math inline">\(-5\ \mu\text{ C}\)</span> se mueve a una velocidad <span class="math inline">\(\vec{v}=(3\hat{\imath}+2\hat{k})\text{ m/s}\)</span>. Calcular la fuerza que actúa sobre ella cuando se encuentra en una región donde coexisten un campo magnético <span class="math inline">\(\vec{B}=25\hat{\imath}\text{ mT}\)</span> y un campo eléctrico <span class="math inline">\(\vec{E}=2000\hat{\imath}\ \mu\text{N/C}\)</span>.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La fuerza total es la suma vectorial de la fuerza ejercida por los campos magnético y eléctrico. Llamemos <span class="math inline">\(\vec{F}_m\)</span> a la fuerza ejercida por el campo magnético y <span class="math inline">\(\vec{F}_e\)</span> a la ejercida por el campo eléctrico. La fuerza magnética será:</p>
+<p><span class="math display">\[\vec{B}=B_x\hat{\imath}=25\cdot 10^{-3}\hat{\imath}\text{ T}\]</span> <span class="math display">\[\vec{v}=v_x\hat{\imath}+v_z\hat{k}=(3\hat{\imath}+2\hat{k})\text{ m/s}\]</span> <span class="math display">\[\vec{F}_m=q\vec{v}\times\vec{B}=qv_zB_x\hat{k}\times\hat{\imath}=qv_zB_x\hat{\jmath}\]</span> <span class="math display">\[\vec{F}_m=-5\cdot 10^{-6}\text{ C}\cdot 2\text{ m/s}\cdot 25\cdot 10^{-3}\text{ T}\hat{\jmath}=-250\hat{\jmath}\text{ nN}\]</span> Y la fuerza eléctrica:</p>
+<p><span class="math display">\[\vec{F}_e=q\vec{E}=-5\cdot 10^{-6}\text{ C}\cdot 2000\cdot 10^{-6}\hat{\imath}\text{ N/C}=-10\hat{\imath}\text{ nN}\]</span> La fuerza total será:</p>
+<p><span class="math display">\[\vec{F}=(-10\hat{\imath}-250\hat{\jmath})\text{ nN}\]</span> En la siguiente figura se muestra una representación:</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley_LorentzG-2sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="_media/ejercicios-ley_LorentzG-2sol.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 5">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 5
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Se tiene una carga de <span class="math inline">\(5\ \mu\text{C}\)</span> y masa <span class="math inline">\(m=10^{-10}\text{ kg}\)</span>, inicialmente a una velocidad <span class="math inline">\(\vec{v_i}=3\hat{\jmath}\text{ m/s}\)</span>. En <span class="math inline">\(t=0\)</span> se conectan un campo eléctrico <span class="math inline">\(\vec{E}=2000\hat{\imath}\ \mu\text{N/C}\)</span> y un campo magnético <span class="math inline">\(\vec{B}=300\hat{\imath}\text{ mT}\)</span>.</p>
+<ol type="a">
+<li><p>Calcule la fuerza eléctrica y fuerza magnética que actúan sobre la carga en cualquier instante posterior.</p></li>
+<li><p>Dibuje la trayectoria.</p></li>
+</ol>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Sobre la carga actúan dos fuerzas. La fuerza eléctrica es paralela al campo eléctrico, mientras que la fuerza magnética es perpendicular al campo magnético.</li>
+</ol>
+<p><span class="math display">\[\vec{E}=2000\hat{\imath}\ \mu\text{N/C}=E\hat{\imath}\]</span> <span class="math display">\[\vec{B}=0.3\hat{\imath}\text{ T}=B_x\hat{\imath}\]</span></p>
+<p>Como resultado, la carga se moverá en el espacio con una cierta velocidad que todavía no conocemos, pero que podemos escribir como:</p>
+<p><span class="math display">\[\vec{v}=v_x\hat{\imath}+v_y\hat{\jmath}+v_z\hat{k}\]</span></p>
+<p>Como ambos campos son paralelos, esto significa que las fuerzas son perpendiculares entre sí. Por tanto, es de esperar que la carga se acelere en la dirección <span class="math inline">\(X\)</span> por la fuerza eléctrica y en el plano <span class="math inline">\(YZ\)</span> debido a la fuerza magnética.</p>
+<p>La fuerza eléctrica será:</p>
+<p><span class="math display">\[\vec{F}_E=q\vec{E}=qE\hat{\imath}=5\cdot 10^{-6}\text{ C}\cdot 2000\cdot 10^{-6}\hat{\imath}\text{ N/C}=1.36\cdot 10^{-5}\hat{\imath}\text{ N}\]</span></p>
+<p>Para calcular la fuerza magnética, recordemos que</p>
+<ul>
+<li>Su módulo sólo depende de la parte de la velocidad perpendicular al campo. En nuestro caso <span class="math inline">\(\vec{v}_\perp=v_y\hat{\jmath}+v_z\hat{k}\)</span>. En efecto, como se muestra en la figura, si <span class="math inline">\(\theta\)</span> es el ángulo que forma el campo y la velocidad, entonces <span class="math inline">\(|\vec{F}_B|=qvB\sin\theta\)</span> y tal y como se muestra en la figura <span class="math inline">\(v\sin\theta=v_\perp=\sqrt{v_y^2+v_z^2}\)</span>.</li>
+</ul>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-ley-Lorentz-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="_media/ejercicios-ley-Lorentz-5.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<ul>
+<li>La fuerza magnética es una fuerza centrípeta, perpendicular a la trayectoria, por lo que no modifica el módulo de la velocidad, sino sólo su dirección: <span class="math inline">\(\vec{v}_\perp\)</span> tiene siempre el mismo módulo y por tanto es igual al módulo en el instante inicial, es decir <span class="math inline">\(v_\perp=v_i\)</span> y por tanto:</li>
+</ul>
+<p><span class="math display">\[|\vec{F}_B|=q|\vec{v}\times\vec{B}|=qv_iB_x=5\cdot 10^{-6}\text{ C}\cdot 3\text{ m/s}\cdot 0.3\text{ T}=4.5\cdot 10^{-6}\text{ N}\]</span></p>
+<ol start="2" type="a">
+<li>Podemos calcular la aceleración como</li>
+</ol>
+<p><span class="math display">\[\vec{a}=a_x/m\hat{\imath}+a_y/m\hat{\jmath}+a_z/m\hat{k}=F_x/m\hat{\imath}+F_y/m\hat{\jmath}+F_z/m\hat{k}\]</span> <span class="math display">\[F_x=F_E=qE\]</span> <span class="math display">\[F_y\hat{\jmath}+F_z\hat{k}=\vec{F}_B\]</span></p>
+<p>Por lo tanto:</p>
+<p><span class="math display">\[a_x=\frac{F_x}{m}=\frac{qE}{m}=\frac{5\cdot 10^{-6}\text{ C}\cdot 2\cdot 10^{-3}\text{ N/C}}{10^{-10}\text{ kg}}=100\text{ m/s}^2\]</span></p>
+<p>En la dirección <span class="math inline">\(X\)</span> sólo actúa la fuerza eléctrica lleva la dirección del eje <span class="math inline">\(X\)</span>, y produce una movimiento uniformemente acelerado:</p>
+<p><span class="math display">\[v_x=a_xt=\frac{qE}{m}t\]</span></p>
+<p>Por otro lado, la fuerza magnética está en el plano <span class="math inline">\(YZ\)</span> (por ser perpendicular al eje <span class="math inline">\(OX\)</span>) y es perpendicular a la velocidad, se trata de una fuerza centrípeta:</p>
+<p><span class="math display">\[|\vec{F_B}|=\frac{mv^2_\perp}{r}\]</span></p>
+<p>siendo <span class="math inline">\(v_\perp=v_i\)</span>. Como <span class="math inline">\(|\vec{F_B}|=qv_iB\)</span>. Por lo tanto, la proyección de la trayectoria en el plano <span class="math inline">\(YZ\)</span> es un movimiento circular con radio:</p>
+<p><span class="math display">\[ r=\frac{mv_i}{qB}=\frac{10^{-10}\text{ kg }3\text{ m/s}}{5\cdot 10^{-6}\text{ C }0.3\text{ T}}=0.0002\text{ m}\]</span></p>
+<p>Teniendo en cuenta la componente <span class="math inline">\(x\)</span> de la velocidad, tendremos finalmente que la trayectoria será helicoidal: la carga avanza con un movimiento uniformemente acelerado en la dirección <span class="math inline">\(X\)</span> girando en torno a dicho eje:</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-trayectoria_helicoidal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="_media/ejercicios-trayectoria_helicoidal.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="Fuerza-magnética-sobre-corrientes" class="level1">
+<h1>4. Fuerza magnética sobre corrientes</h1>
+<p>La corriente eléctrica no es más que cargas eléctricas en movimiento, por lo que si situamos un conductor por el que pasa una corriente en un campo magnético, éste ejercerá una fuerza magnética sobre el conductor. Según la ley de Lorentz, esta fuerza debe ser perpendicular al campo y a la dirección de movimiento de las cargas, es decir, perpendicular al eje del conductor.</p>
+<section id="Corriente-rectilínea" class="level2">
+<h2 class="anchored" data-anchor-id="Corriente-rectilínea">4.1. Corriente rectilínea</h2>
+<p>Sea un segmento de conductor de una cierta longitud <span class="math inline">\(l\)</span> por el que circula una corriente de intensidad <span class="math inline">\(I\)</span>. Podemos construir un vector <span class="math inline">\(\vec{l}\)</span> que tenga la longitud del conductor y dirección la de la corriente (ver figura <a href="./electromagnetismo_teoría_files/teoria-conductor_rectilineo.png">9</a>). Entonces, la fuerza sobre eléctrica sobre el conductor viene dada por:</p>
+<p><span class="math display">\[\fbox{$\vec{F}=I(\vec{l}\times\vec{B})$}\]</span></p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/teoria-conductor_rectilineo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Esquema de la fuerza que actúa sobre un conductor rectilíneo"><img src="_media/teoria-conductor_rectilineo.png" class="img-fluid figure-img" style="width:40.0%" alt="Esquema de la fuerza que actúa sobre un conductor rectilíneo"></a></p>
+<figcaption>Esquema de la fuerza que actúa sobre un conductor rectilíneo</figcaption>
+</figure>
+</div>
+</div>
+<p>En definitiva:</p>
+<ul>
+<li><p>La fuerza es perpendicular al conductor.</p></li>
+<li><p>El sentido es el del productor vectorial <span class="math inline">\(\vec{l}\times\vec{B}\)</span>.</p></li>
+<li><p>El módulo es <span class="math inline">\(|\vec{F}|=IlB\sin\theta\)</span>.</p></li>
+</ul>
+</section>
+<section id="Fuerza-sobre-una-espira-cuadrada" class="level2">
+<h2 class="anchored" data-anchor-id="Fuerza-sobre-una-espira-cuadrada">4.2. Fuerza sobre una espira cuadrada</h2>
+<p>Supongamos que tenemos una espira cuadrada perpendicular al campo magnético, tal y como se muestra en la figura A. Entonces sobre cada sección del conductor tendremos una dirección diferente de la fuerza, tal y como se indica en la figura <a href="./electromagnetismo_teoría_files/teoria-espira.png">10</a>.</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_media/teoria-espira.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Fuerza que actúa sobre una espira"><img src="_media/teoria-espira.png" class="img-fluid figure-img" style="width:60.0%" alt="Fuerza que actúa sobre una espira"></a></p>
+<figcaption>Fuerza que actúa sobre una espira</figcaption>
+</figure>
+</div>
+</div>
+<p>En efecto, sobre los tramos laterales el campo magnético es el mismo y también su longitud. Pero el sentido de la corriente, y por tanto de la fuerza, es opuesto. Lo mismo ocurre con los tramos horizontales.</p>
+<p>Las fuerzas se anulan dos a dos y por tanto la espira no se desplaza.</p>
+<p>Si en cambio, la espira no es perpendicular (figura B), vemos que las fuerzas sobre los tramos laterales ejercen un momento <span class="math inline">\(\vec{M}\)</span> que hace girar la espira. Este es el fundamento de los motores eléctricos: se hace pasar corriente por una espira situada en un campo magnético como el creado por un imán. En el momento que empieza a pasar corriente, la fuerza magnética fuerza a la espira y todo lo que esté ligado a ella a girar.</p>
+</section>
+</section>
+<section id="Campo-creado-por-cargas-en-movimiento" class="level1">
+<h1>5. Campo creado por cargas en movimiento</h1>
+<section id="Campo-creado-por-una-corriente-rectilínea" class="level2">
+<h2 class="anchored" data-anchor-id="Campo-creado-por-una-corriente-rectilínea">5.1. Campo creado por una corriente rectilínea</h2>
+<p><strong>Dirección y sentido del campo magnético creado</strong></p>
+<p>El campo magnético creado por una corriente <span class="math inline">\(I\)</span> son circunferencias que rodean al conductor y que siguen la dirección indicada por la mano derecha, tal y como se muestra en la <a href="#fig-campo_creado_conductor" class="quarto-xref">Figura&nbsp;9</a>.</p>
+<div style="text-align:center;">
+<div id="fig-campo_creado_conductor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-campo_creado_conductor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-campo_creado_conductor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Figura&nbsp;9: Esquema de la regla de la mano derecha para conocer la dirección del campo magnético."><img src="_media/teoria-campo_creado_conductor.png" class="img-fluid figure-img" style="width:25.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-campo_creado_conductor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9: Esquema de la regla de la mano derecha para conocer la dirección del campo magnético.
+</figcaption>
+</figure>
+</div>
+</div>
+<p><strong>Módulo del campo</strong></p>
+<p>Se puede entender intuitivamente que a mayor intensidad de corriente <span class="math inline">\(I\)</span>, mayor número de cargas tenemos en movimiento y por lo tanto el campo ha de ser proporcional a dicha intensidad. El módulo del campo magnético se determina mediante la llamada ley de Biot y Savart:</p>
+<p><span class="math display">\[\fbox{$B=\frac{\mu I}{2\pi r}$}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Tenemos una corriente de <span class="math inline">\(20\text{ A}\)</span> que circula por un conductor rectilíneo. Calcular el campo magnético que produce a <span class="math inline">\(0.5\text{ m}\)</span> de distancia.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El módulo del campo mangético se calcula con la expresión: <span class="math display">\[B=\frac{\mu I}{2\pi r}=\frac{4\pi\cdot 10^{-7}\text{ Tm/A }20\text{ A}}{2\pi\cdot 0.5\text{ m}}=8\cdot 10^{-6}\text{ T}=8\text{ }\mu\text{T}\]</span> Si lo comparamos con el campo magnético terrestre (entre <span class="math inline">\(25\)</span> y <span class="math inline">\(65\ \mu\text{T}\)</span>), vemos que se trata de una cantidad muy inferior.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="Fuerza-entre-corrientes-paralelas" class="level2">
+<h2 class="anchored" data-anchor-id="Fuerza-entre-corrientes-paralelas">5.2. Fuerza entre corrientes paralelas</h2>
+<p>Anteriormente vimos que una corriente rectilínea en presencia de un campo magnético experimenta una fuerza perpendicular a la línea. Por tanto, si acercamos dos corrientes rectilíneas existirá una fuerza sobre una de ellas debida al campo magnético generado por la otra y viceversa. Esta fuerza es perpendicular a las líneas y será de repulsión o atracción según la dirección de las corrientes:</p>
+<ul>
+<li><p>Corrientes en el mismo sentido (A en la <a href="#fig-fuerza_entre_corrientes" class="quarto-xref">Figura&nbsp;10</a>). En la figura A izquierda se ha destacado en rojo el campo magnético <span class="math inline">\(\vec{B}_1\)</span> generado por la corriente 1 en un punto situado sobre un elemento de la corriente 2. Esta corriente experimenta una fuerza <span class="math inline">\(\vec{F}_{1-2}\)</span> (fuerza que la corriente 1 ejerce sobre la corriente 2) en el sentido negativo del eje <span class="math inline">\(OX\)</span>. Es de ATRACCIÓN. Se destaca en la figura A derecha en naranja el campo magnético <span class="math inline">\(\vec{B}_2\)</span> generado por la corriente 2 en un punto situado sobre un elemento de la corriente 1. Esta corriente experimenta una fuerza <span class="math inline">\(\vec{F}_{2-1}\)</span> (fuerza que la corriente 2 ejerce sobre la corriente 1) en sentido positivo del eje <span class="math inline">\(OX\)</span>. Es de ATRACCIÓN. Naturalmente, por la ley de acción-reacción, ambas fuerzas han de ser iguales y de sentido opuesto.</p></li>
+<li><p>Corrientes antiparalelas (B en la <a href="#fig-fuerza_entre_corrientes" class="quarto-xref">Figura&nbsp;10</a>). En la figura B izquierda se ha destacado en rojo el campo magnético <span class="math inline">\(\vec{B}_2\)</span> generado por la corriente 1 en un punto situado sobre un elemento de la corriente 2. Al ser la corriente 1 igual al ejemplo anterior, el campo es también el mismo. Sin embargo, dado que ahora la corriente 2 se dirige hacia abajo, la fuerza es opuesta al ejemplo anterior, en la dirección positiva del eje <span class="math inline">\(OX\)</span>. Es de REPULSIÓN. Se destaca en la figura B derecha en naranja el campo magnético <span class="math inline">\(\vec{B}_2\)</span> generado por la corriente 2 en un punto sobre un elemento de la corriente 1. Teniendo de nuevo en cuenta la regla de la mano derecha, encontramos que la fuerza <span class="math inline">\(\vec{F}_{2-1}\)</span> sigue la dirección negativa del eje <span class="math inline">\(OX\)</span>. Es de repulsión. De nuevo comprobamos que se cumple la ley de acción y reacción.</p></li>
+</ul>
+<div style="text-align:center;">
+<div id="fig-fuerza_entre_corrientes" class="quarto-float quarto-figure quarto-figure-center anchored" width="65%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fuerza_entre_corrientes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-fuerza_entre_corrientes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Figura&nbsp;10: "><img src="_media/teoria-fuerza_entre_corrientes.png" id="fig-fuerza_entre_corrientes" class="img-fluid figure-img" style="width:65.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-fuerza_entre_corrientes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;10
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Dos conductores rectilíneos paralelos, separados una distancia de <span class="math inline">\(0.5\text{ m}\)</span>, por los que circulan corrientes de <span class="math inline">\(20\text{ A}\)</span> en el mismo sentido. Calcular la fuerza que se ejerce cada conductor sobre el otro.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El campo magnético que genera el conductor 1 en el conductor 2 es: <span class="math display">\[B_1=\frac{\mu I_1}{2\pi r}=\frac{4\pi\cdot 10^{-7}\text{ Tm/A }20\text{ A}}{2\pi\cdot 0.5\text{ m}}=8\cdot 10^{-6}\text{ T}\]</span> La fuerza que ejerce el conductor 1 sobre el conductor 2 es: <span class="math display">\[F_{1-2}=I_2lB_1=20\text{ A}\cdot 1\text{ m}\cdot 8\cdot 10^{-6}\text{ T}=1.6\cdot 10^{-4}\text{ N}\]</span> Y la fuerza que ejerce el conductor 2 sobre el conductor 1 es: <span class="math display">\[F_{2-1}=I_1lB_2=20\text{ A}\cdot 1\text{ m}\cdot 8\cdot 10^{-6}\text{ T}=1.6\cdot 10^{-4}\text{ N}\]</span> En ambos casos, la fuerza es de atracción.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="Campo-magnético-creado-por-un-solenoide" class="level2">
+<h2 class="anchored" data-anchor-id="Campo-magnético-creado-por-un-solenoide">5.3. Campo magnético creado por un solenoide</h2>
+<p>Un solenoide es un conductor enrollado en torno a un cilindro (ver la <a href="#fig-solenoide" class="quarto-xref">Figura&nbsp;11</a>), de modo que su longitud es mucho mayor que el radio del cilindro. Se trata, pues, de un conjunto de <span class="math inline">\(N\)</span> espiras, tantas como vueltas. El campo magnético que genera en el eje es un vector que lleva la dirección del eje <span class="math inline">\(Y\)</span> el sentido marcado por la regla de la mano derecha. Se calcula con la expresión:</p>
+<p><span class="math display">\[\fbox{$B=N\frac{\mu I}{L}$}\]</span></p>
+<div style="text-align:center;">
+<div id="fig-solenoide" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-solenoide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-solenoide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Figura&nbsp;11: Campo magnético en el eje de un solenoide."><img src="_media/teoria-solenoide.png" class="img-fluid figure-img" style="width:50.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-solenoide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;11: Campo magnético en el eje de un solenoide.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un solenoide tiene una longitud <span class="math inline">\(L=25\text{ cm}\)</span>, un radio <span class="math inline">\(R=1\text{cm}\)</span> y un total de <span class="math inline">\(N=400\)</span> vueltas. Por él circula una corriente <span class="math inline">\(I=3\text{ A}\)</span>. Calcular el campo magnético que genera.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El campo magnético generado por el solenide es: <span class="math display">\[B=N\frac{\mu I}{L}=\frac{400\cdot 4\pi\cdot 10^{-7}\text{ Tm/A }3\text{ A}}{0.25\text{ m}}=6.03\cdot 10^{-3}\text{ T}=6.03\text{ mT}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="El-flujo-magnético-a-través-de-una-superficie" class="level1">
+<h1>6. El flujo magnético a través de una superficie</h1>
+<p>El flujo es una magnitud que puede calcularse para cualquier campo vectorial y consiste en la suma del campo a todos los puntos de una superficie perpendicular a aquel. En este apartado vamos a aplicarlo al caso de un campo magnético.</p>
+<p><strong>Vector superficie</strong></p>
+<p>Previamente vamos a definir el vector superficie. Supongamos que trazamos una superficie imaginaria con un cierto área <span class="math inline">\(S\)</span>. Esta superficie podría ser la sustentada por una línea de corriente como la de la espira de la <a href="#fig-vector_superficie" class="quarto-xref">Figura&nbsp;12</a>. El vector superficie asociado es un vector de módulo <span class="math inline">\(S\)</span> y dirección PERPENDICULAR al plano de la superficie, tal y como se muestra en la misma figura:</p>
+<div style="text-align:center;">
+<div id="fig-vector_superficie" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vector_superficie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-vector_superficie.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Figura&nbsp;12: Superficie sustentada por una espira."><img src="_media/teoria-vector_superficie.png" class="img-fluid figure-img" style="width:40.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vector_superficie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12: Superficie sustentada por una espira.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Naturalmente, si la superficie no es plana, entonces no se puede definir un único vector superficie para todo el área. En este caso, el vector superficie se define de manera local, para una porción de superficie infinitesimal <span class="math inline">\(\vec{dS}\)</span> (ver <a href="#fig-vector_superficie2" class="quarto-xref">Figura&nbsp;13</a>). Al ser tan pequeña, la curvatura es despreciable y puede considerarse que la dirección es la misma en todos punto de este elemento de superficie.</p>
+<div style="text-align:center;">
+<div id="fig-vector_superficie2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vector_superficie2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-vector_superficie2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Figura&nbsp;13: Vector d\vec{S} en una superficie curva."><img src="_media/teoria-vector_superficie2.png" class="img-fluid figure-img" style="width:45.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vector_superficie2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;13: Vector <span class="math inline">\(d\vec{S}\)</span> en una superficie curva.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Para el cálculo del flujo magnético partamos del caso más sencillo:</p>
+<p><strong>Flujo magnético de un campo uniforme a través de una superficie plana </strong><span class="math inline">\(\vec{S}\parallel\vec{B}\)</span></p>
+<p>En este caso, el plano de la superficie es perpendicular al vector campo y por lo tanto el flujo, campo sumado a todo punto de la superficie, es simplemente:</p>
+<p><span class="math display">\[\Phi=BS\]</span></p>
+<p><strong>Flujo magnético de un campo uniforme a través de una superficie plana inclinada respecto del campo</strong></p>
+<p>Tal y como se muestra en la <a href="#fig-flujo_superficie" class="quarto-xref">Figura&nbsp;14</a>, en este caso, la superficie perpendicular <span class="math inline">\(S_\perp\)</span> es la proyección de <span class="math inline">\(\vec{S}\)</span> en el plano perpendicular al campo:</p>
+<p><span class="math display">\[\Phi=BS_\perp=BS\cos\theta=\vec{B}\cdot\vec{S}\]</span></p>
+<p>es decir, el producto escalar entre campo magnético y vector superficie.</p>
+<div style="text-align:center;">
+<div id="fig-flujo_superficie" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flujo_superficie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-flujo_superficie.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Figura&nbsp;14: Esquema de la proyección de \vec{S} sobre la dirección del campo magnético."><img src="_media/teoria-flujo_superficie.png" class="img-fluid figure-img" style="width:45.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flujo_superficie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;14: Esquema de la proyección de <span class="math inline">\(\vec{S}\)</span> sobre la dirección del campo magnético.
+</figcaption>
+</figure>
+</div>
+</div>
+<p><strong>Flujo magnético de un campo no uniforme a través de una superficie cualquiera</strong></p>
+<p>En este caso, no se puede realizar el cálculo directamente. Sí puede hacerse localmente. El flujo a través de una superficie elemental <span class="math inline">\(\vec{dS}\)</span> contenida en la superficie de interés es:</p>
+<p><span class="math display">\[d\Phi=\vec{B}\cdot\vec{dS}\]</span></p>
+<p>El flujo total a través de toda la superficie será la suma del flujo sobre cada elemento de superficie:</p>
+<blockquote class="blockquote">
+<p><span class="math display">\[\Phi=\int_S\vec{B}\cdot\vec{dS}\]</span></p>
+<p>La unidad del flujo magnético es el Weber (Wb)</p>
+<p><span class="math display">\[1 \text{ Wb}= 1 \text{ T·m}^2\]</span></p>
+</blockquote>
+</section>
+<section id="Inducción-electromagnética" class="level1">
+<h1>7. Inducción electromagnética</h1>
+<p>Hemos visto que los campos magnéticos ejercen fuerzas sobre las cargas en movimiento. Vamos a ver a continuación que esto puede utilizarse para la generación de corriente eléctrica.</p>
+<section id="ley-de-faraday-ley-de-faraday" class="level2">
+<h2 class="anchored" data-anchor-id="ley-de-faraday-ley-de-faraday">7.1. Ley de Faraday {#Ley de Faraday}</h2>
+<p>Si situamos un conductor en el seno de un campo magnético, en determinadas circunstancias se puede producir una fuerza electromotriz entre los extremos que dé lugar a una corriente eléctrica. Faraday realizó diversas experiencias en las que se mostraba como un campo magnético podía genera corriente en una espira:</p>
+<ul>
+<li><p><strong>Imán que se acerca o aleja de una espira.</strong> El campo magnético que genera un imán no es uniforme, sino que disminuye en intensidad al alejarnos de él. Si acercamos o alejamos un imán a una espira, observaremos que se genera una corriente eléctrica en la espira.</p></li>
+<li><p><strong>Espira que se acerca o aleja de otra por la que circula una corriente.</strong> Si tenemos una espira por la que hacemos pasar una corriente, esta corriente genera un campo magnético qe de nuevo es no uniforme. Si acercamos o alejamos esta espira a otra, observaremos una corriente en la segunda espira.</p></li>
+<li><p>También podemos conseguir una corriente en la segunda espira manteniendo la primera fija y utilizando un interruptor que conecte y desconecte la corriente. Mientras se conecta o desconecta, varía el campo magnético y se produce una corriente en la segunda espira.</p></li>
+</ul>
+<p>Existen más posibilidades:</p>
+<ul>
+<li><p><strong>Espira con un lado móvil</strong> (ver <a href="#fig-espira_ladomovil" class="quarto-xref">Figura&nbsp;15</a>). Si ponemos una espira en un campo magnético uniforme y deslizamos uno de sus lados, entonces también se produce una corriente eléctrica.</p></li>
+<li><p><strong>Espira que gira.</strong> Si la espira gira en el seno de un campo magnético, entonces también se produce una fuerza electromotriz. (Este es el fundamento de la dinamo de una bicicleta)</p></li>
+</ul>
+<div style="text-align:center;">
+<div id="fig-espira_ladomovil" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-espira_ladomovil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="_media/teoria-espira_ladomovil.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Figura&nbsp;15: Espira con un lado corredero."><img src="_media/teoria-espira_ladomovil.png" class="img-fluid figure-img" style="width:35.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-espira_ladomovil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;15: Espira con un lado corredero.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Vemos entonces que no es necesario que varíe el campo magnético. Basta con variar el área que sustenta la espira o el ángulo entre dicha superficie y el campo. Esto se resume en la ley de Faraday:</p>
+<blockquote class="blockquote">
+<p><span class="math display">\[\varepsilon=-\frac{\text{d}\Phi}{\text{d}t}\]</span></p>
+<p>La unidad de la fuerza electromotriz es el voltio (V)</p>
+</blockquote>
+<p>Es decir, la fuerza electromotriz que se genera en una espira es igual a la rapidez con la que varía el flujo magnético en la superficie sustentada por dicha espira y cambiada de signo.</p>
+<p>Teniendo en cuenta que, en el caso de campo magnético homogéneo, <span class="math inline">\(\Phi=\vec{B}\cdot\vec{S}\)</span>, vemos que efectivamente, aparecerá una corriente cuando varíe el campo, el área sustentada por la espira o el ángulo entre ellas.</p>
+<p>Para poder usar esta expresión seguiremos los siguientes pasos:</p>
+<ol type="1">
+<li><p>Definir el sentido del vector superficie. El vector superficie es perpendicular al área sustentada por la espira, pero no hay ningún criterio para elegir el sentido del vector. Escogemos uno cualquiera.</p></li>
+<li><p>Usamos la regla de la mano derecha. Con el pulgar en la dirección escogida para <span class="math inline">\(\vec{S}\)</span> el sentido de cierre del puño indica el sentido de la corriente positiva.</p></li>
+<li><p>Calculamos el flujo magnético <span class="math inline">\(\Phi=\vec{B}\cdot\vec{S}\)</span>.</p></li>
+<li><p>Utilizamos la ley de Faraday para obtener <span class="math inline">\(\varepsilon\)</span>.</p></li>
+<li><p>Si <span class="math inline">\(\varepsilon\)</span> es positivo, entonces la dirección de la corriente es la elegida con la regla de la mano derecha. Si se obtiene <span class="math inline">\(\varepsilon &lt; 0\)</span>, entonces la dirección es la opuesta.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplos">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplos
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 1">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Una bobina está formada por <span class="math inline">\(N=200\)</span> espiras cuadradas de lado <span class="math inline">\(l=3\text{ cm}\)</span> se sitúa en una región donde existe un campo magnético uniforme de <span class="math inline">\(B=0.3\text{ T}\)</span> perpendicular a las espiras. Calcular el flujo magnético que circula por ellas.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Las espiras son planas y el campo uniforme, luego <span class="math inline">\(\Phi=\int_S\vec{B}\cdot\text{d}\vec{S}=\vec{B}\cdot{S}\)</span>. Como las espiras son perpendiculares al campo, el vector superficie es paralelo a éste, y por tanto <span class="math inline">\(\vec{B}\cdot\vec{S}=BS\)</span>. El área total será el área de una espira multiplicado por el número total de espiras que tenemos: <span class="math display">\[S=Nl^2\]</span></p>
+<p><span class="math display">\[\Phi=BS=BNl^2=0.3\text{ T}\cdot 200\cdot 0.03^2\text{ m}^2=0.054\text{ Wb}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 2">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Considere la situación de la figura.</p>
+<ol type="a">
+<li><p>Dibuje el vector superficie.</p></li>
+<li><p>Calcule el flujo a través de la espira.</p></li>
+</ol>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-flujo1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="_media/ejercicios-flujo1.png" class="img-fluid" style="width:20.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><br>
+</li>
+</ol>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-flujo1-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="_media/ejercicios-flujo1-sol.png" class="img-fluid" style="width:20.0%"></a></p>
+</div>
+<ol start="2" type="a">
+<li>Como la espira es plana y el campo uniforme: <span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\cos (70^\circ)=0.0547\text{ Wb}\]</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 3">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Una espira cuadrada se encuentra en el seno de un campo magnético uniforme de módulo <span class="math inline">\(B=0.5\text{ T}\)</span> tal y como se muestra en la figura. La espira tiene un lado que puede deslizarse sobre unas guías, de modo que mantiene dos lados de tamaño fijo <span class="math inline">\(l_1=1.2\text{ m}\)</span> y los otros dos se van reduciendo de acuerdo con <span class="math inline">\(l_2=1.2\text{ m}-vt\)</span>, siendo <span class="math inline">\(v=0.2\text{ m/s}\)</span>, el ritmo al que se desliza el lado móvil.</p>
+<ol type="a">
+<li><p>Calcular el flujo a través del área sustentada por la espira.</p></li>
+<li><p>Calcular la fuerza electromotriz inducida sobre la espira.</p></li>
+<li><p>Dibujar la dirección que lleva la corriente por la espira.</p></li>
+</ol>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-espira_movil.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="_media/ejercicios-espira_movil.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Para calcular el flujo, primero necesito una dirección de la superficie. Escogemos la misma que la del campo magnético, como se muestra en la figura A. Entonces, el flujo será:</li>
+</ol>
+<p><span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\]</span></p>
+<p>donde <span class="math inline">\(S=l_1l_2=1.2(1.2-0.2t)\)</span> m<span class="math inline">\(^2\)</span>, por lo tanto:</p>
+<p><span class="math display">\[\Phi=0.5\text{ T}\times 1.2(1.2-0.2t)\text{ m}^2=(0.72-0.12t)\text{ Wb}\]</span></p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-espira_movil-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="_media/ejercicios-espira_movil-sol.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<ol start="2" type="a">
+<li>Sigamos los pasos indicados en teoría. Definido el sentido del vector superficie, usamos la regla de la mano derecha para determinar el sentido positivo de la fuerza electromotriz, tal y como se muestra en la figura B.</li>
+</ol>
+<p>A continuación, utilizamos el flujo magnético calculado en el apartado anterior para calcular la fuerza electromotriz:</p>
+<p><span class="math display">\[\varepsilon=-\frac{\text{d}\Phi}{\text{d}t}=-\frac{\text{d}}{\text{d}t}(0.72-0.12t)\text{ Wb}=+0.12\text{&nbsp;V}\]</span></p>
+<ol start="3" type="a">
+<li>Dado que se ha obtenido un valor positivo, esto quiere decir que el sentido escogido en la figura B es el sentido correcto de la fuerza electromotriz, y por tanto de la corriente.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 4">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La misma espira del ejercicio anterior, pero ahora el lado móvil se mueve en dirección contraria a igual velocidad, de modo que <span class="math inline">\(l_1=1.2\text{ m}\)</span> y <span class="math inline">\(l_2=vt\)</span>, siendo <span class="math inline">\(v=0.2\text{ m/s}\)</span>. El campo es el mismo, <span class="math inline">\(B=0.5\text{ T}\)</span>. ¿Cómo cambiaría el ejercicio anterior?</p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-espira_movil2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="_media/ejercicios-espira_movil2.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Intuitivamente, podríamos decir que dado que la superficie en este caso aumenta en vez de disminuir, también lo hace el flujo magnético y por tanto la ley de Faraday me dará el mismo valor pero cambiado de signo. Esto indica que la fuerza electromotriz y por tanto la corriente siguen la dirección opuesta. En detalle sería:</p>
+<p>Lo primero es escoger una dirección de la superficie. Escogemos la misma que la del campo magnético, como se muestra en la figura. Entonces, el flujo será el mismo que en el ejercicio anterior:</p>
+<p><span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\]</span></p>
+<p>donde <span class="math inline">\(S=l_1l_2=0.24t\text{ m}^2\)</span>, por lo tanto:</p>
+<p><span class="math display">\[\Phi=0.5\text{ T}\times 0.24t\text{ m}^2=0.12t\text{ Wb}\]</span></p>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-espira_movil2-sol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="_media/ejercicios-espira_movil2-sol.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<p>Definido el sentido del vector superficie, usamos la regla de la mano derecha para determinar el sentido positivo de la fuerza electromotriz, tal y como se muestra en la figura a la derecha en verde.</p>
+<p>A continuación, calculamos la fuerza electromotriz con la ley de Faraday:</p>
+<p><span class="math display">\[\varepsilon=-\frac{\text{d}\Phi}{\text{d}t}=-\frac{\text{d}}{\text{d}t}(0.12t)\text{ Wb}=-0.12\text{&nbsp;V}\]</span></p>
+<p>Efectivamente <span class="math inline">\(\varepsilon &lt; 0\)</span>, por lo que la fuerza electromotriz y la corriente siguen el sentido indicado en la figura en amarillo.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Ejemplo 5">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Precaución</span>Ejemplo 5
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Un solenoide está compuesto por <span class="math inline">\(N=300\)</span> espiras cuadradas de lado <span class="math inline">\(2.0\text{ cm}\)</span> y gira en torno al eje vertical <span class="math inline">\(OZ\)</span> con una frecuencia de <span class="math inline">\(60 \text{ Hz}\)</span> en una región en la que existe un campo magnético uniforme <span class="math inline">\(\vec{B}=0.4\hat{\imath}\text{ T}\)</span> (ver figura).</p>
+<ol type="a">
+<li><p>¿Cuál es la fuerza electromotriz en cualquier instante de tiempo <span class="math inline">\(t\)</span>?</p></li>
+<li><p>¿Cuál es la máxima fuerza electromotriz?</p></li>
+</ol>
+<div style="text-align:center;">
+<p><a href="_media/ejercicios-bobina_girando.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="_media/ejercicios-bobina_girando.png" class="img-fluid" style="width:20.0%"></a></p>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>El primer paso es elegir el vector superficie. Dado que la espira está girando, la orientación cambia con el tiempo. El número de vueltas que realiza por segundo, es decir, la frecuencia <span class="math inline">\(f=60 \text{ Hz}\)</span>, multiplicado por el ángulo que corresponde a una vuelta, es decir <span class="math inline">\(2\pi\text{ rad}\)</span>, me dará el ángulo que gira por segundo <span class="math inline">\(\omega\)</span>. Esto multiplicado por el tiempo que está girando me da el ángulo <span class="math inline">\(\theta\)</span> con el eje <span class="math inline">\(OX\)</span>:</li>
+</ol>
+<p><span class="math display">\[\theta=2\pi ft\]</span></p>
+<p>El área sustentada cada espira es <span class="math inline">\(S=l^2=4\cdot 10^{-4}\)</span> m<span class="math inline">\(^2\)</span>. Como hay un total de 300 espiras. <span class="math inline">\(S=0.12\)</span> m<span class="math inline">\(^2\)</span>. El vector superficie será:</p>
+<p><span class="math display">\[\vec{S}=0.12(\cos (2\pi ft)\hat{\imath}+\sin (2\pi ft)\hat{\jmath})\]</span></p>
+<p>El flujo será:</p>
+<p><span class="math display">\[\Phi=\vec{B}\cdot\vec{S}=BS\cos\theta=BS\cos (2\pi ft)\]</span></p>
+<p>Y con la ley de Faraday:</p>
+<p><span class="math display">\[\varepsilon=-\frac{\text{d}\Phi}{\text{d}t}=-\frac{\text{d}}{\text{d}t}(BS\cos (2\pi ft))=BS2\pi f\sin (2\pi ft)\]</span></p>
+<p>Y sustituyendo los datos</p>
+<p><span class="math display">\[\varepsilon=0.4\text{ T}\cdot 0.12\text{ m}^22\pi 60\text{ Hz}\sin (120\pi t)=18.09\text{ V}\sin (120\pi t)\]</span></p>
+<ol start="2" type="a">
+<li>Como vemos, la fuerza electromotriz varía sinusoidalmente. Alcanzará el valor máximo en los instantes en el que <span class="math inline">\(\sin (120\pi t)\)</span> sea máximo. Dado que la función <em>seno</em> tiene como valor máximo 1, entonces, la fuerza electromotriz máxima será 18.09 V.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

@@ -1,5 +1,6 @@
 project:
-  type: website
+  type: default
+  output-dir: .
 
 website:
   title: "Cursos 0 Física"

@@ -85,7 +85,10 @@ vector fuerza resultante $\vec{R}$, y sus
 componentes respectivas en el espacio
 
 $$\vec R = \vec F_1+\vec F_2+\vec F_3+\dots+\vec F_n=\sum_{i=1}^n\vec F_i$$
-$$\vec R = R_x \hat i + R_y \hat j + R_z \hat k\ \Rightarrow\ \left\lbrace\begin{array}{l} R_x=\sum_{i=1}^n {(F_i)}_x \ R_y = \sum_{i=1}^n {(F_i)}_y \ R_z = \sum_{i=1}^n {(F_i)}_z \end{array}\right.$$
+$$
+\vec R = R_x \hat i + R_y \hat j + R_z \hat k\ \Rightarrow\ \left\lbrace
+\begin{array}{l} R_x=\sum_{i=1}^n {(F_i)}_x \\ R_y = \sum_{i=1}^n {(F_i)}_y \\ R_z = \sum_{i=1}^n {(F_i)}_z \end{array}\right.
+$$
 
 :::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
 Calcula la fuerza resultante, teniendo en cuenta los valores de los módulos y los ángulos que forman con el eje $x$ para las tres fuerzas $\vec{F_1}$, $\vec{F_2}$ y $\vec{F_3}$ de @fig-ejemplo1.
@@ -335,7 +338,7 @@ En general, podemos enunciar la tercera ley de Newton de la siguiente manera:
 Es común referirse a estas fuerzas como par acción-reacción. Ambas fuerzas actúan siempre *simultáneamente y sobre objetos diferentes*. En la figura siguiente se muestra esta propiedad, en el caso de dos masas $A$ y $B$.
 
 ::: {style="text-align:center;"}
-![](_media/accionyreaccion.png){width=80%}
+![](_media/accionyreaccion.png){width=50%}
 :::
 
 ## 1.10. Problemas con dos o más objetos {#Problemas-con-dos-o-más-objetos}

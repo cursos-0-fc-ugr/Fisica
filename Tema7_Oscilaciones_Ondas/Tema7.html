@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Oscilaciones y Ondas</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Tema7_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Tema7_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Tema7_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Tema7_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Tema7_files/libs/quarto-html/popper.min.js"></script>
+<script src="Tema7_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Tema7_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Tema7_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Tema7_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Tema7_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Tema7_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Tema7_files/libs/bootstrap/bootstrap-33c1396811bb647a58f862e5ff553a70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Tema7_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="Tema7_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="Tema7_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Oscilaciones y Ondas</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#oscilaciones" id="toc-oscilaciones" class="nav-link active" data-scroll-target="#oscilaciones">1. Oscilaciones</a>
+  <ul class="collapse">
+  <li><a href="#cinemática-del-m.a.s." id="toc-cinemática-del-m.a.s." class="nav-link" data-scroll-target="#cinemática-del-m.a.s.">1.2. Cinemática del M.A.S.</a></li>
+  <li><a href="#movimiento-armónico-simple-m.a.s." id="toc-movimiento-armónico-simple-m.a.s." class="nav-link" data-scroll-target="#movimiento-armónico-simple-m.a.s.">1.2. Movimiento armónico simple (M.A.S.)</a></li>
+  <li><a href="#ley-de-hooke" id="toc-ley-de-hooke" class="nav-link" data-scroll-target="#ley-de-hooke">1.3 Ley de Hooke</a></li>
+  <li><a href="#el-muelle-vertical" id="toc-el-muelle-vertical" class="nav-link" data-scroll-target="#el-muelle-vertical">1.4. El muelle vertical</a></li>
+  <li><a href="#energía-del-oscilador-armónico-simple" id="toc-energía-del-oscilador-armónico-simple" class="nav-link" data-scroll-target="#energía-del-oscilador-armónico-simple">1.5. Energía del oscilador armónico simple</a></li>
+  <li><a href="#el-pendulo" id="toc-el-pendulo" class="nav-link" data-scroll-target="#el-pendulo">1.6. El péndulo</a></li>
+  <li><a href="#energía-del-péndulo" id="toc-energía-del-péndulo" class="nav-link" data-scroll-target="#energía-del-péndulo">1.6. Energía del péndulo</a></li>
+  </ul></li>
+  <li><a href="#ondas" id="toc-ondas" class="nav-link" data-scroll-target="#ondas">2. Ondas</a>
+  <ul class="collapse">
+  <li><a href="#el-pulso" id="toc-el-pulso" class="nav-link" data-scroll-target="#el-pulso">2.1. El pulso</a></li>
+  <li><a href="#tipos-de-onda" id="toc-tipos-de-onda" class="nav-link" data-scroll-target="#tipos-de-onda">2.2. Tipos de onda</a></li>
+  <li><a href="#magnitudes-características-de-una-onda" id="toc-magnitudes-características-de-una-onda" class="nav-link" data-scroll-target="#magnitudes-características-de-una-onda">2.3. Magnitudes características de una onda</a>
+  <ul class="collapse">
+  <li><a href="#velocidad-de-la-onda" id="toc-velocidad-de-la-onda" class="nav-link" data-scroll-target="#velocidad-de-la-onda">Velocidad de la onda</a></li>
+  <li><a href="#periodicidad-de-la-onda" id="toc-periodicidad-de-la-onda" class="nav-link" data-scroll-target="#periodicidad-de-la-onda">Periodicidad de la onda</a></li>
+  <li><a href="#amplitud-de-la-onda" id="toc-amplitud-de-la-onda" class="nav-link" data-scroll-target="#amplitud-de-la-onda">Amplitud de la onda</a></li>
+  </ul></li>
+  <li><a href="#ecuación-de-la-onda-armónica" id="toc-ecuación-de-la-onda-armónica" class="nav-link" data-scroll-target="#ecuación-de-la-onda-armónica">2.4. Ecuación de la onda armónica</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="oscilaciones" class="level1">
+<h1>1. Oscilaciones</h1>
+<section id="cinemática-del-m.a.s." class="level2">
+<h2 class="anchored" data-anchor-id="cinemática-del-m.a.s.">1.2. Cinemática del M.A.S.</h2>
+<p>Imaginemos un cuerpo que se ve sometido a una fuerza dirigida siempre a un punto, que llamaremos de equilibrio. A tal fuerza se le llama “fuerza restauradora”. Si este cuerpo se encuentra en reposo en dicha posición de equilibrio, entonces la fuerza es nula y se mantendrá en reposo. Se dice que el cuerpo está en equilibrio. Podemos imaginarnos varias situaciones de este tipo. En la figura se muestran tres ejemplos.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="figuras/img1.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>En el primer ejemplo, el muelle que inicialmente esté en B o C tiende a recuperar su forma natural en a). En el segundo ejemplo, el peso en b) y c) no es perpendicular a la plataforma y la rueda tiende a caer hacia la posición más baja. En el tercer ejemplo, la tensión del hilo en b) y c) no es paralelo al peso, por lo que la componente perpendicular al hilo <span class="math inline">\(P_t\)</span> no está compensado y hacen volver al péndulo a su posición vertical.</p>
+<p>En cualquiera de estas situaciones, el cuerpo regresa a la posición de equilibrio con una cierta velocidad. En esta posición, la fuerza neta es nula, con lo cual el cuerpo mantiene su velocidad y rebasa esta posición de equilibrio. Por lo tanto aparece una fuerza restauradora en la dirección opuesta que hará que el cuerpo se frene primero y vuelva a continuación.</p>
+<p>Este tipo de movimiento, en el que el cuerpo se desplaza en torno a una posición de equilibrio se denomina “oscilación”.</p>
+<p>En muchos casos, el cuerpo no sólo pasa repetidas veces por su posición de equilibrio, sino que lo hace periódicamente. Es decir, el tiempo que tarda en hacer un ciclo completo es siempre el mismo. A este tipo de oscilaciones se les llama <strong>vibración armónica</strong>.</p>
+<p>Si el cuerpo se desvía pequeñas distancias del equilibrio, entonces una buena aproximación a su movimiento viene dada por la <strong>vibración armónica simple</strong>. En este caso,</p>
+<ul>
+<li><p>La fuerza que actúa sobre la partícula o sistema es proporcional al desplazamiento del cuerpo con respecto a su posición de equilibrio.</p></li>
+<li><p>La posición de la partícula se pueda especificar mediante una función seno o coseno del tiempo.</p></li>
+</ul>
+</section>
+<section id="movimiento-armónico-simple-m.a.s." class="level2">
+<h2 class="anchored" data-anchor-id="movimiento-armónico-simple-m.a.s.">1.2. Movimiento armónico simple (M.A.S.)</h2>
+<p>Se define el movimiento armónico simple como aquél que se puede describir con una función armónica del tiempo, es decir, con una función seno o coseno.</p>
+<p>En los movimientos periódicos, la partícula se aleja una distancia máxima, a la que se llama <strong>amplitud</strong> <span class="math inline">\(A\)</span>, distancia en la que se frena completamente y se dirige de nuevo a la posición de equilibrio.</p>
+<p>Imaginemos que en el instante inicial la partícula se encuentra en la posición de equilibrio, es decir, <span class="math inline">\(x(t=0)=0\)</span>. En cualquier otro instante de tiempo, la posición de la partícula se puede describir mediante una función del tiempo <span class="math inline">\(x(t)\)</span> dada por: <span class="math display">\[x(t)=A\sin\left(\varphi\right)=A\sin\left(2\pi\frac{t}{T}\right)\]</span> donde <span class="math inline">\(\varphi\)</span> lo denominamos la “fase” del movimiento.</p>
+<p>En la siguiente gráfica se representa esta función. Obsérvese que para <span class="math inline">\(t=T/4\)</span>, entonces <span class="math inline">\(\sin\left(\pi/2\right)=1\)</span>, su valor máximo, y por tanto, en ese instante, <span class="math inline">\(x(T/2)=A\)</span>. Dado que el máximo valor del seno es 1, entonces, el máximo valor de <span class="math inline">\(x\)</span> es, efectivamente, la amplitud <span class="math inline">\(A\)</span>. Del mismo modo, para <span class="math inline">\(t=3T/4\)</span>, <span class="math inline">\(\sin\left(3\pi/2\right)=-1\)</span> entonces, <span class="math inline">\(x(3T/4)=-A\)</span>: La partícula ejecuta oscilaciones desde <span class="math inline">\(A\)</span> hasta <span class="math inline">\(-A\)</span>. Si esperamos hasta <span class="math inline">\(t=T/4+T\)</span>, entonces de nuevo <span class="math inline">\(x(5T/4)=A\)</span>, es decir, transcurrido un periodo, la partícula vuelve al máximo.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="figuras/img2.png" class="img-fluid" style="width:80.0%"></a></p>
+</div>
+<p>Por tanto, <span class="math inline">\(T\)</span> es el tiempo que tarda la partícula en ejecutar una oscilación completa. A este tiempo lo llamamos <strong>periodo</strong>. Fíjese que en medio periodo, habrá completado 1/2 ciclo, en 1/4 de periodo, 1/4 ciclo, etc.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un objeto está oscilando sujeto a un muelle vertical. Se observa que tarda tarda 3 segundos en llegar desde su punto más alto hasta su punto más bajo. Calcule su periodo.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si observamos la figura anterior, el recorrido entre el punto más alto, es decir, cuando <span class="math inline">\(x=A\)</span>, hasta el punto más bajo, es decir, cuando <span class="math inline">\(x=-A\)</span>, es la mitad del ciclo completo y tardará por lo tanto <span class="math inline">\(T/2\)</span>. Por lo tanto, si tarda <span class="math inline">\(t=3 \text{ s}\)</span>, el periodo será el doble: <span class="math inline">\(T=6 \text{ s}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Se define la <strong>frecuencia</strong> como el número de ciclos por unidad de tiempo. Para calcularlo, basta con tener en cuenta que en un tiempo <span class="math inline">\(T\)</span> se ejecuta una oscilación, es decir, <span class="math display">\[f=\frac{1}{T}\]</span> Como el tiempo se mide en segundos, la frecuencia se mide en <span class="math inline">\(\text{s}^{-1}\)</span>. A esta unidad se le conoce como <strong>hercio</strong> (Hz). Fíjese que con esta definición, en un cierto tiempo <span class="math inline">\(t\)</span> ejecutará <span class="math inline">\(N=ft\)</span> oscilaciones.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un objeto está oscilando sujeto a un muelle vertical. Se observa que tarda tarda 5 segundos en realizar 10 oscilaciones. Calcule su periodo y su frecuencia.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El periodo será el tiempo que tarda en realizar una oscilación: <span class="math display">\[T=\frac{t}{N}=\frac{5 \text{ s}}{10}=0.5 \text{ s}\]</span> Por otro lado, la frecuencia es el número de oscilaciones en la unidad de tiempo: <span class="math display">\[f=\frac{N}{t}=\frac{1}{T}=2 \text{ Hz}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Finalmente, recordemos que la función seno o coseno es cíclica cuando su argumento (al que llamamos fase), llega a 2<span class="math inline">\(\pi\)</span>. Por ello, es usual definir la <strong>frecuencia angular</strong> <span class="math inline">\(\omega\)</span> como la fase en radianes por unidad de tiempo. Como un ciclo completo son 2<span class="math inline">\(\pi\)</span> radianes, la frecuencia angular será: <span class="math display">\[\omega=2\pi f\]</span> y se mide en rad/s. De este modo es fácil ver que el M.A.S. se puede describir con la función: <span class="math display">\[x(t)=A\sin\left(\omega t\right)\]</span></p>
+<p>En resumen:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: left;">Abreviatura</th>
+<th style="text-align: left;">Unidad</th>
+<th style="text-align: left;">Equivalencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Amplitud</td>
+<td style="text-align: left;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Periodo</td>
+<td style="text-align: left;"><span class="math inline">\(T\)</span></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Frecuencia</td>
+<td style="text-align: left;"><span class="math inline">\(f\)</span></td>
+<td style="text-align: left;">Hz</td>
+<td style="text-align: left;"><span class="math inline">\(\frac{1}{T}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frecuencia angular</td>
+<td style="text-align: left;"><span class="math inline">\(\omega\)</span></td>
+<td style="text-align: left;">rad/s</td>
+<td style="text-align: left;"><span class="math inline">\(\frac{2\pi}{T}=2\pi f\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>En este movimiento, no sólo varía la posición. Nótese que la partícula se frena al llegar a la máxima amplitud y luego invierte la dirección del movimiento. La velocidad la podemos calcular como la variación temporal de la posición: <span class="math display">\[v=\frac{dx}{dt}=A\omega\cos\left(\omega t\right)\]</span> Dado que los límites de la función coseno son también $$1, entonces la velocidad oscila también con el tiempo desde un valor máximo <span class="math inline">\(v_{MAX}=A\omega\)</span> hasta el valor mínimo <span class="math inline">\(-v_{MAX}\)</span>, pero lo hace desfasada <span class="math inline">\(\pi/2\)</span> respecto de la posición. En efecto, cuando el muelle está estirado, la masa se para (<span class="math inline">\(v=0\)</span>) e inicia su movimiento ascendente (velocidad negativa). Cuando pasa por la posición de equilibrio, la velocidad es máxima y continúa su ascenso a velocidad negativa pero decreciente en valor absoluto. Cuando el muelle está comprimido, la masa se vuelve a frenar (<span class="math inline">\(v=0\)</span>) e inicia el descenso (velocidad positiva). En resumen, cuando <span class="math inline">\(x\)</span> es máxima en valor absoluto, entonces la velocidad es cero y viceversa.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="figuras/img3.png" class="img-fluid" style="width:80.0%"></a></p>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 52%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x=A\)</span></td>
+<td><span class="math inline">\(v=0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A&gt;x&gt;0\)</span></td>
+<td><span class="math inline">\(v&lt;0\)</span> creciente en valor absoluto</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x=0\)</span></td>
+<td><span class="math inline">\(v=-v_{MAX}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0&gt;x&gt;-A\)</span></td>
+<td><span class="math inline">\(v&lt;0\)</span> decreciente en valor absoluto</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x=-A\)</span></td>
+<td><span class="math inline">\(v=0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(-A &lt; x &lt; 0\)</span></td>
+<td><span class="math inline">\(v&gt;0\)</span> creciente en valor absoluto</td>
+</tr>
+</tbody>
+</table>
+<p>Este caso particular nos ha servido para entender las características principales del M.A.S. Fijémosnos ahora en el instante incial del movimiento, es decir, <span class="math inline">\(t=0\)</span>. Si observamos de nuevo la gráfica anterior, podemos ver que en el instante inicial <span class="math inline">\(t=0\)</span> el objeto parte de la posición de equilibrio <span class="math inline">\(x(0)=0\)</span> con la velocidad máxima <span class="math inline">\(v(0)=v_{MAX}\)</span>. Sin embargo, no todas las oscilaciones son así. Por ejemplo, podríamos haber iniciado el movimiento estirando o comprimiendo el muelle y soltándolo en el instante inicial. En este caso, las ecuaciones anteriores no son correctas porque no describen el movimiento real. Otra opción podría haber sido partir de una posición intermedia a una velocidad. Por tanto, cuando se estudia un movimiento es muy importante tener en cuenta las “condiciones” iniciales del movimiento. Éstas se expresan indicando <span class="math inline">\(x(t=0)\)</span> (o bien, simplemente <span class="math inline">\(x(0)\)</span>) y <span class="math inline">\(v(t=0)\)</span> (o bien, simplemente <span class="math inline">\(v(0)\)</span>).</p>
+<p>Veamos cómo se actúa en este caso. En el ejemplo del muelle estirado que se suelta en el instante inicial, la velocidad inicial es <span class="math inline">\(v(0)=0\)</span>. Hemos visto en la tabla anterior que cuando la velocidad es nula, la masa tiende a volver a su posición de equilibrio. Esto quiere decir que la elongación es máxima: <span class="math inline">\(x(0)=A\)</span>. Esto se cumple si escribimos, para cualquier otro instante de tiempo: <span class="math display">\[x(t)=A\sin\left(\omega t+\pi/2\right)\]</span> Efectivamente, si sustituimos <span class="math inline">\(t=0\)</span> en la ecuación anterior, obtenemos <span class="math inline">\(x=A\)</span>. Para la velocidad, como es la derivada temporal de la posición: <span class="math display">\[v(t)=\frac{dx}{dt}=A\omega\cos\left(\omega t+\pi/2\right)\]</span></p>
+<p>Y como hemos llamado <span class="math inline">\(v_{MAX}\)</span> al valor máximo de la velocidad, entonces: <span class="math display">\[v(t)=A\omega\cos\left(\omega t+\pi/2\right)=v_{MAX}\cos\left(\omega t+\pi/2\right)\]</span> Y por tanto, <span class="math display">\[v_{MAX}=A\omega\]</span> Vemos, pues, que podemos utilizar la misma función trigonométrica, modificando ligeramente su argumento para incluir lo que llamamos <strong>fase inicial</strong>. La fase inicial en este ejemplo es <span class="math inline">\(\varphi_0=\pi/2\)</span>.</p>
+<p>En el caso completamente general, podemos decir que en <span class="math inline">\(t=0\)</span>, la fase del ciclo <span class="math inline">\(\varphi_0\)</span> no tiene por qué ser ni cero ni <span class="math inline">\(\pi/2\)</span>. Por ello, el modo más general de describir el M.A.S. es mediante:</p>
+<p>En la siguiente gráfica se muestran tres casos. La línea negra corresponde con el caso <span class="math inline">\(\varphi_0=0\)</span>, es decir, la masa parte de la posición de equilibrio. La línea verde es el caso <span class="math inline">\(\varphi_0=\pi/2\)</span>, es decir, la masa parte de la máxima elongación en reposo. La línea roja es el caso <span class="math inline">\(\varphi_0=\pi/4\)</span>, que es un caso intermedio: la masa parte de una distancia menor que la máxima con una velocidad menor que la velocidad máxima.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="figuras/img4.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<p>En un caso cualquiera, para poder determinar la posición y velocidad en cualquier instante, tendremos en cuenta que:</p>
+<ul>
+<li><p><span class="math inline">\(x(t=0)=A\sin\left(\varphi_0\right)\)</span></p></li>
+<li><p><span class="math inline">\(v(t=0)=A\omega\cos\left(\varphi_0\right)\)</span></p></li>
+</ul>
+<p>Típicamente, si en un problema nos dan la frecuencia y la posición y velocidad iniciales, entonces, de las dos ecuaciones anteriores se obtiene la amplitud del movimiento y la fase inicial.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Tenemos una oscilación de frecuencia <span class="math inline">\(\omega = 20 \text{ rad/s}\)</span> . Inicialmente, la masa se encuentra en <span class="math inline">\(x = 1 \text{ m}\)</span> respecto de la posición de equilibrio y con una velocidad de <span class="math inline">\(v = 20 \text{ m/s}\)</span>. Encuentre la función que describe la posición y velocidad en cualquier instante.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En general, sabemos que: <span class="math display">\[x(t) = A \sin(\omega t + \varphi_0) = A \sin(20t+ \varphi_0)\]</span> <span class="math display">\[v(t) = A \omega \cos(\omega t + \varphi_0) = 20 A \cos(20t+ \varphi_0)\]</span> Nos dan los valores en el instante inicial:<br>
+<span class="math inline">\(x(0) = 1 \text{ m} = A \sin (\varphi_0)\)</span>.<br>
+<span class="math inline">\(v(0) = 20 \text{ m/s} = 20 A \cos (\varphi_0)\)</span>.<br>
+De esta última ecuación: <span class="math display">\[v(0)/20 = 20/20 = 1 = A \cos (\varphi_0)\]</span> Y por tanto, <span class="math display">\[\frac{x(0)}{v(0)/20} = \frac{A \sin(\varphi_0)}{A \cos(\varphi_0)} = tan(\varphi_0)\]</span> Como <span class="math inline">\(\frac{x(0)}{v(0)/20} = 1\)</span>, entonces, <span class="math display">\[\varphi_0 = \pi/4\]</span> Además, <span class="math inline">\(x(0) = 1 \text{ m} = A \sin (\varphi_0)\)</span>, por lo tanto <span class="math display">\[\frac{x(0)}{\sin(\varphi_0)} = \sqrt{2}\]</span> Finalmente: <span class="math display">\[x(t) = \sqrt{2} \sin(20t + \pi/4) \text{ m} = 1.41 \sin(20t+ \pi/4) \text{ m}\]</span> <span class="math display">\[v(t) = \sqrt{2} \cdot 20 \cos(20t + \pi/4) \text{ m/s} = 28.3 \cos(20t+ \pi/4) \text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ley-de-hooke" class="level2">
+<h2 class="anchored" data-anchor-id="ley-de-hooke">1.3 Ley de Hooke</h2>
+<p>Como ya se adelantó, un cuerpo oscila cuando sobre él actúa una fuerza recuperadora, es decir, una fuerza que se dirige siempre hacia una posición, que es la posición de equilibrio. Tomemos el caso de una masa sujeta a un muelle:</p>
+<div style="text-align:center;">
+<p><a href="figuras/img5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="figuras/img5.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<p>A medida que la partícula se desplaza hacia la derecha (segundo dibujo), el muelle se estira y por tanto ejerce una fuerza sobre la masa hacia la izquierda. En el tercer dibujo el muelle se opone a ser comprimido, por lo que la fuerza lleva el sentido positivo del eje x. Si situamos el origen de coordenadas en la posición de equilibrio, tal y como se muestra en esta figura, entonces la fuerza que ejerce el muelle es: <span class="math display">\[\vec{F}=-kx\hat{\imath}\]</span> siendo <span class="math inline">\(k\)</span> la “constante elástica del muelle”. Esta es la denominada “ley de Hooke”.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Si tenemos un muelle de constante k = 20 N/m, calcule la fuerza que ejerce sobre una masa m = 0.5 kg, cuando ésta esté situada a 15 cm de la posición de equilibrio. ¿Con qué aceleración se mueve?</p>
+<div style="text-align:center;">
+<p><a href="figuras/img_ej1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="figuras/img_ej1.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\vec{F}=-kx\hat{\imath}\)</span>, entonces: <span class="math display">\[\vec{F}=-20 \text{ N/m} \cdot 0.15\text{ m }\hat{\imath} = -3 \text{ N }\hat{\imath}\]</span> Para calcular la aceleración <span class="math inline">\(\vec{a}\)</span>, utilizamos la segunda ley de Newton: <span class="math inline">\(\vec{F}=m\vec{a}\)</span>, por lo que <span class="math display">\[\vec{a}= \frac{\vec{F}}{m} = -\frac{3\text{ N}}{0.5 \text{ kg}}\hat{\imath} = -6 \text{ m/s}^2\text{ } \hat{\imath}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Como la única fuerza es la que ejerce el muelle, por la segunda ley de Newton: <span class="math display">\[\sum\vec{F}=-kx\hat{\imath}=m\frac{d^2x}{dt^2}\hat{\imath}\]</span> Cuando una masa está sometida a una fuerza de este tipo, entonces su posición viene descrita por un M.A.S. Es decir, <span class="math display">\[x(t)=A\cos\left(\omega t+\varphi_0\right)\]</span> Por lo tanto su velocidad será: <span class="math display">\[\vec{v}(t)=v_x(t)\hat{\imath}=\frac{dx}{dt}\hat{\imath}=-\omega A\sin\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> Y su aceleración: <span class="math display">\[\vec{a}(t)=\frac{d\vec{v}}{dt}=-\omega^2A\cos\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> En definitiva nos queda: <span class="math display">\[\sum\vec{F}=-kx\hat{\imath}=-kA\cos\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> <span class="math display">\[m\frac{d^2x}{dt^2}\hat{\imath}=-m\omega^2A\cos\left(\omega t+\varphi_0\right)\hat{\imath}\]</span> E igualando: <span class="math display">\[-kA\cos\left(\omega t+\varphi_0\right)=-m\omega^2A\cos\left(\omega t+\varphi_0\right)\]</span> Por lo tanto: <span class="math display">\[\omega=\sqrt{\frac{k}{m}}\]</span></p>
+</section>
+<section id="el-muelle-vertical" class="level2">
+<h2 class="anchored" data-anchor-id="el-muelle-vertical">1.4. El muelle vertical</h2>
+<p>Hemos visto que cuando sobre una masa actúa una fuerza del tipo <span class="math inline">\(\vec{F}=-kx\hat{\imath}\)</span>, siendo <span class="math inline">\(x\)</span> la distancia respecto de la posición de equilibrio, entonces el objeto realiza un movimiento armónico simple. Veamos que esto es válido también cuando además de esta fuerza, actúa otra constante.</p>
+<p>Un ejemplo es el muelle vertical. En este caso, además de la fuerza del muelle, actúa la fuerza gravitatoria. En la siguiente figura se esquematiza esta situación.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="figuras/img6.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<p>En el primer caso, el muelle no tiene ningún peso, por lo que su longitud es la longitud natural del muelle, <span class="math inline">\(l_0\)</span>. A continuación se suspende una masa <span class="math inline">\(m\)</span>. Como consecuencia, el muelle se alarga un poco hasta encontrar el equilibrio. En esta posición de equilibrio (segundo dibujo), la suma de fuerzas ha de ser nula: <span class="math display">\[\sum\vec{F}=\vec{F}_k+\vec{P}=0\]</span> Por lo tanto, <span class="math inline">\(-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0\)</span>, es decir: <span class="math display">\[-k(l-l_0)+mg=0\]</span></p>
+<p>En el tercer dibujo, la elongación del muelle es mayor, por lo que la fuerza del muelle supera al peso y habrá una componente neta en dirección hacia arriba. En este caso, la elongación del muelle es <span class="math inline">\(l+y-l_0\)</span> por lo que la fuerza neta es: <span class="math display">\[\sum\vec{F}=\vec{F}_k+\vec{P}=-k(l-l_0+y)\hat{\jmath}+mg\hat{\jmath}\]</span> Reagrupando: <span class="math display">\[\sum\vec{F}=-ky\hat{\jmath}\underbrace{-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}}\]</span> El contenido dentro de la llave hemos visto que es nulo, por lo que: <span class="math display">\[\sum\vec{F}=-ky\hat{\jmath}\]</span> Y por la segunda ley de Newton: <span class="math display">\[\sum\vec{F}=m\vec{a}=-ky\hat{\jmath}\]</span> que se corresponde con la ley de Hooke. Es decir, cuando el muelle está en posición vertical, el objeto realiza un M.A.S. pero desde una posición de equilibrio diferente, en la que el muelle está algo deformado.</p>
+<p>Con esta situación tenemos un modo de calcular la constante de un muelle. Si colgamos una masa conocida y determinamos la elongación de equilibrio <span class="math inline">\(l-l_0\)</span>, la constante del muelle se determina a partir de: <span class="math display">\[-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0\]</span> Es decir, en el equilibrio la suma de fuerzas es 0. Y despejando la constante del muelle, podemos calcularla a partir de la siguiente ecuación:<span class="math display">\[k=\frac{m g}{l-l_0}\]</span></p>
+</section>
+<section id="energía-del-oscilador-armónico-simple" class="level2">
+<h2 class="anchored" data-anchor-id="energía-del-oscilador-armónico-simple">1.5. Energía del oscilador armónico simple</h2>
+<p>El oscilador armónico tiene una energía mecánica dada por: <span class="math display">\[E_m=E_p+E_c\]</span> siendo <span class="math inline">\(E_c\)</span> la energía cinética de la masa y <span class="math inline">\(E_p\)</span> la energía potencial del muelle que tiene el muelle cuando está deformado. Esta energía viene dada por: <span class="math display">\[E_p=\frac{1}{2}kx^2\]</span> Como <span class="math display">\[x(t)=A\sin\left(\omega t+\varphi_0\right)\]</span> tendremos entonces que: <span class="math display">\[E_p=\frac{1}{2}kA^2\sin^2\left(\omega t+\varphi_0\right)\]</span> Fíjese que la energía potencial será máxima cuando el muelle esté totalmente estirado o comprimido, instantes en los que <span class="math inline">\(x=\pm A\)</span> y por lo tanto: <span class="math display">\[E_{p,MAX}=\frac{1}{2}kA^2\]</span></p>
+<p>Por otro lado, la masa en su movimiento tiene una energía cinética: <span class="math display">\[E_c=\frac{1}{2}mv^2\]</span> Como: <span class="math display">\[v(t)=\frac{dx}{dt}=\omega A\cos\left(\omega t+\varphi_0\right)\]</span> se obtiene que: <span class="math display">\[E_c=\frac{1}{2}m\omega^2A^2\cos^2\left(\omega t+\varphi_0\right)\]</span> Y dado que <span class="math inline">\(\omega=\sqrt{\frac{k}{m}}\)</span>, entonces: <span class="math display">\[E_c=\frac{1}{2}kA^2\cos^2\left(\omega t+\varphi_0\right)\]</span></p>
+<p>El valor máximo de la energía cinética será: <span class="math display">\[E_{c,MAX}=\frac{1}{2}kA^2\]</span></p>
+<p>Exactamente igual que el valor máximo de la energía potencial. Fíjese que en realidad estos valores de energía se alcanzan en instantes diferentes. En efecto, cuando la velocidad es máxima (y por tanto tambié la energía cinética), la posición es la de equilibrio (<span class="math inline">\(x=0\)</span>, ya que la velocidad y la posición están desfasados <span class="math inline">\(\pi/2\)</span>), y por tanto la energía potencial es nula. Igualmente, cuando la posición es máxima (y por tanto, la energía potencial), la velocidad es nula, y por tanto, la energía cinética es nula. Dicho de otro modo:</p>
+<p><strong>Cuando el muelle está totalmente estirado o comprimido, la energía potencial es máxima y la energía cinética nula, mientras que cuando el muelle no está deformado, la energía potencial es nula y la energía cinética máxima.</strong></p>
+<p>Esto se ilustra en la siguiente figura.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="figuras/img7.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>La energía mecánica total será: <span class="math display">\[E_m=E_c+E_p=\frac{1}{2}kA^2\cos^2\left(\omega t+\varphi_0\right)+\frac{1}{2}kA^2\sin^2\left(\omega t+\varphi_0\right)\]</span></p>
+<p>Y sacando factor común <span class="math inline">\(\frac{1}{2}kA^2\)</span>, tendremos: <span class="math display">\[E_m=\frac{1}{2}kA^2\left [\cos^2\left(\omega t+\varphi_0\right)+\sin^2\left(\omega t+\varphi_0\right)\right ]\]</span> Si tenemos en cuenta que <span class="math inline">\(\cos^2R+\sin^2R=1\)</span>, tendremos: <span class="math display">\[E_m=\frac{1}{2}kA^2\]</span></p>
+<p>Puede verse que aunque tanto la energía cinética como la energía potencial varían con el tiempo, la suma permanece constante, es decir,<br>
+</p>
+<blockquote class="blockquote">
+<p><strong>La energía mecánica de un oscilador armónico se conserva</strong></p>
+</blockquote>
+<p>De este modo, cuando la masa se aleja de la posición de equilibrio, empieza a frenarse, disminuye su energía cinética hasta que se para y retrocede. Al mismo tiempo, la energía potencial va aumentando hasta llegar a su valor máximo cuando la masa se ha parado.</p>
+</section>
+<section id="el-pendulo" class="level2">
+<h2 class="anchored" data-anchor-id="el-pendulo">1.6. El péndulo</h2>
+<p>Imaginemos una cuerda de longitud <span class="math inline">\(L\)</span> fija en su extremo superior. Supongamos que es muy ligera. En el extremo inferior sujetamos un cuerpo de masa <span class="math inline">\(m\)</span>. En este sistema, las únicas fuerzas que actúan sobre dicho cuerpo son su peso y la tensión de cuerda. Mientras que la primera será siempre vertical, la segunda llevará la dirección de la cuerda.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="figuras/img8.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>Por tanto, en el equilibrio, la cuerda estará en posición vertical, de modo que la tensión de la cuerda compensa el peso de dicho cuerpo. Si desplazamos la masa hacia la izquierda, tal y como se muestra en el segundo dibujo, entonces la tensión de la cuerda y el peso no llevarán la misma dirección. Si separamos el peso en componentes radial <span class="math display">\[P_1=P\cos\alpha\]</span> y tangencial <span class="math display">\[P_2=P\sin\alpha=P\frac{x}{L}\]</span> dado que la tensión de la cuerda tiene dirección radial, entonces sólo compensará a la componente <span class="math inline">\(P_1\)</span>, mientras que la componente tangencial del peso será la responsable del movimiento. Por lo tanto, el objeto se moverá en dirección tangencial, es decir, describiendo arcos.</p>
+<p><span class="math display">\[\sum\vec{F}=\vec{P}_2=m\vec{a}\]</span> <span class="math display">\[P_2=-mg\frac{x}{L}=ma_t\]</span></p>
+<p>En la siguiente figura se muestra un esquema: en un instante cualquiera, tendremos que la cuerda se ha desviado desde la vertical un ángulo <span class="math inline">\(\alpha\)</span>, de modo que el arco descrito <span class="math inline">\(s=L\alpha\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="figuras/img9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="figuras/img9.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<p>Si el ángulo <span class="math inline">\(\alpha\)</span> es pequeño, entonces el arco <span class="math inline">\(s\)</span> que describe el péndulo es prácticamente igual a <span class="math inline">\(x\)</span>, y por tanto el movimiento tiene lugar prácticamente en la horizontal, es decir,</p>
+<p><span class="math display">\[a_t=\frac{d^2s}{dt^2}\approx\frac{d^2x}{dt^2}\]</span></p>
+<p>Finalmente: <span class="math display">\[-m\frac{g}{L}x=m\frac{d^2x}{dt^2}\]</span> Esta ecuación es idéntica a la ecuación de la ley de Hooke, si hacemos la equivalencia <span class="math inline">\(k=mg/L\)</span>. Por lo tanto, siempre y cuando el ángulo sea pequeño, el péndulo realizará un movimiento armónico simple de frecuencia: <span class="math display">\[\omega=\sqrt{\frac{g}{L}}\]</span></p>
+<p>La ecuación del movimiento será: <span class="math display">\[x(t)=A\sin\left(\omega t+\varphi_0\right)\]</span></p>
+<p>Y su velocidad: <span class="math display">\[v(t)=\omega A\cos\left(\omega t+\varphi_0\right)\]</span> Fíjese que las características son las mismas que en el caso del muelle, pero con una diferencia: la frecuencia no depende de la masa. En efecto, esto podríamos haberlo deducido desde el principio: cuando la única fuerza externa es la fuerza gravitatoria, entonces la aceleración, la velocidad y la posición no dependen de la masa.</p>
+</section>
+<section id="energía-del-péndulo" class="level2">
+<h2 class="anchored" data-anchor-id="energía-del-péndulo">1.6. Energía del péndulo</h2>
+<p>Al igual que en el caso del muelle, la energía cinética será: <span class="math display">\[E_c=\frac{1}{2}m\omega^2A^2\cos^2\left(\omega t+\varphi_0\right)\]</span></p>
+<p>Pero ahora la energía potencial es energía potencial gravitatoria: <span class="math display">\[E_p=mgy\]</span> Para conocer <span class="math inline">\(y\)</span>, la altura que asciende el péndulo en cada instante desde la posición más baja, observemos el triángulo rectángulo de la siguiente figura:</p>
+<div style="text-align:center;">
+<p><a href="figuras/img10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="figuras/img10.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<p>De ahí, <span class="math display">\[L^2=(L-y)^2+x^2=L^2+y^2-2Ly+x^2=L^2+y^2-2Ly+x^2\]</span> Simplificando y sacando factor común <span class="math inline">\(y\)</span>: <span class="math display">\[0=y(y-2L)+x^2\]</span> Dado que el péndulo se desvía poco de la vertical, tendremos que <span class="math inline">\(y\)</span> es mucho más pequeño que <span class="math inline">\(2L\)</span>, por lo que el paréntesis en la igualdad anterior es aproximadamente: <span class="math display">\[y(y-2L)\approx -2Ly\]</span> Y por lo tanto <span class="math display">\[0=y(y-2L)+x^2\approx -2Ly+x^2\]</span> de donde: <span class="math display">\[y=\frac{x^2}{2L}\]</span> Teniendo en cuenta que <span class="math inline">\(x(t)\)</span> es un M.A.S., la energía potencial nos queda: <span class="math display">\[E_p=mgy=mg\frac{x^2}{2L}=\frac{1}{2}m\frac{g}{L}A^2\sin^2\left(\omega t+\varphi_0\right)\]</span> Finalmente, como <span class="math inline">\(\omega=\sqrt{\frac{g}{L}}\)</span>, <span class="math display">\[E_p=\frac{1}{2}m\omega^2A^2\sin^2\left(\omega t+\varphi_0\right)\]</span></p>
+<p>Observamos que las características son las mismas que en el caso del muelle. La única diferencia estriba en el valor de la frecuencia <span class="math inline">\(\omega\)</span>. Por tanto, la energía potencial y cinética se comportan igual que en aquel caso. Además, la energía mecánica: <span class="math display">\[E_m=E_p+E_c=\frac{1}{2}m\omega^2A^2\left [\sin^2\left(\omega t+\varphi_0\right)+\cos^2\left(\omega t+\varphi_0\right)\right ]\]</span> Y como <span class="math inline">\(\sin^2R+\cos^2R=1\)</span>, <span class="math display">\[E_m=E_p+E_c=\frac{1}{2}m\omega^2A^2=\frac{mg}{2L}A^2\]</span> Y se conserva durante el movimiento del péndulo.</p>
+<p>Tomemos el caso de un péndulo que parte del reposo con un cierto ángulo inicial. Este caso es idéntico al caso del muelle que se estira y se suelta. la ecuación del movimiento viene dada por: <span class="math display">\[x(t)=A\sin\left(\sqrt{\frac{g}{L}}t+\pi/2\right)\]</span> siendo <span class="math inline">\(A=x(0)\)</span>. Es decir, si se suelta el péndulo, éste nunca rebasará la posición inicial, ya que esto significaría aumentar la energía potencial por encima del máximo y por tanto, no se cumpliría el principio de conservación de la energía mecánica.</p>
+</section>
+</section>
+<section id="ondas" class="level1">
+<h1>2. Ondas</h1>
+<p>Una onda (o movimiento ondulatorio) se puede definir como una perturbación que se propaga de unos puntos a otros del espacio. También se define como un trasporte de energía de un punto del espacio a otro sin que haya transporte neto de materia. Ejemplos de ondas son: onda en una cuerda, en la superficie del agua, el sonido, o las ondas electromagnéticas.</p>
+<section id="el-pulso" class="level2">
+<h2 class="anchored" data-anchor-id="el-pulso">2.1. El pulso</h2>
+<p>Podemos imaginarnos una onda de manera esquemática como se muestra en la figura. Tenemos una cuerda horizontal y tensa infinitamente larga y sujeta en un extremo a un muelle que se fuerza a oscilar. En un cierto tiempo <span class="math inline">\(T/4\)</span>, concretamente) se habrá levantado el extremo. La tensión de la cuerda provocará que el segmento adyacente se levante a continuación. En este tiempo, el muelle comienza a descender, tirando de nuevo de la cuerda hacia abajo, de modo que en la cuerda se van sucediendo las situaciones mostradas en la figura. Transcurrido un cierto tiempo observaremos que un segmento cualquiera de cuerda que inicialmente estaba en reposo, y que por tanto no tenía energía mecánica, comienza a oscilar, es decir, adquiere energía potencial elástica y energía cinética procedente del muelle oscilante.</p>
+<div style="text-align:center;">
+<p><a href="figuras/teoria-cuerda_oscilante.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="figuras/teoria-cuerda_oscilante.png" class="img-fluid" style="width:55.0%"></a></p>
+</div>
+<p>Vemos por tanto que se propaga energía de izquierda a derecha sin desplazamiento de materia (la cuerda sólo oscila en la dirección vertical). <strong>A esta propagación de energía lo llamamos onda</strong>. Al emisor de este pulso lo llamamos <strong>fuente</strong>.</p>
+<p>Si el muelle sigue oscilando, entonces, al cabo de un tiempo todos los segmentos de la cuerda se pondrán también a oscilar. Si nos fijamos en un segmento concreto, entonces veremos que está haciendo una oscilación en la dirección vertical:</p>
+<p><span class="math display">\[y(t)=A\text{sen}\left(\omega t+\varphi_0\right)\]</span> donde la fase inicial dependerá del segmento qu estemos mirando. Es decir, depende de la coordenada <span class="math inline">\(x\)</span>. Si en vez de fijarnos en un segmento concreto, hacemos una foto en un instante cualquiera, entonces veremos que la cuerda tiene la forma de una función seno. Cada cierta distancia nos encontraremos que la cuerda está haciendo exactamente lo mismo que el muelle. Esta distancia entre dos puntos de la cuerda que ejecutan exactamente el mismo movimiento se llama <strong>longitud de onda</strong> y se designa por la letra griega <span class="math inline">\(\lambda\)</span>.</p>
+</section>
+<section id="tipos-de-onda" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-onda">2.2. Tipos de onda</h2>
+<p>En el caso anterior vemos que hay dos desplazamientos diferentes. Por un lado, cada segmento se mueve en la dirección vertical. Por otro lado, el muelle continúa su oscilación produciendo continuamente una perturbación sobre la cuerda que se propaga hacia la derecha en la dirección horizontal. Ambos desplazamientos, movimiento de la cuerda y perturbación, se producen en direcciones perpendiculares. Cuando se da este tipo de situación, decimos que la onda es <strong>transversal</strong>.</p>
+<p>En la siguiente figura tenemos un tubo en el que hay un gas, por ejemplo aire. En el extremo izquierdo hay una membrana como la de un tambor. Deformamos la membrana rápidamente y la hacemos vibrar como se ve en la segunda figura. La densidad, y por tanto la presión, en esa zona aumentará, por lo que el aire se desplazará hacia la derecha. En ese tiempo, la membrana se dirige hacia la derecha como se ve en la figura tercera. Cuando vuelve, generará un nuevo pulso de alta presión. Al cabo de un tiempo se obtiene la imagen de la última figura, donde la presión pasa alternativamente de alta a baja a medida que nos desplazamos por el tubo.</p>
+<div style="text-align:center;">
+<p><a href="figuras/teoria-tambor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="figuras/teoria-tambor.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>En este caso, el desplazamiento del aire y la perturbación llevan la misma dirección. Se dice que la onda es <strong>longitudinal</strong>.</p>
+<p>Finalmente, hay ondas que no son ni puramente longitudinales ni transversales. Un ejemplo son las olas del mar, en las que el agua ejecuta movimientos circulares como el de la figura.</p>
+<div style="text-align:center;">
+<p><a href="figuras/teoria-ola.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="figuras/teoria-ola.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<p>Todas estas ondas tienen una característica común: se propagan en una única dirección. Se dice que son <strong>monodimensionales</strong>. También pueden ser <strong>bidimensionales</strong>, si se extiende en dos dimensiones, como el caso de la onda producida por una piedra en el agua, o la estela de un barco, o <strong>tridimensionales</strong>, si se propaga en tres dimensiones, como el caso del sonido en el espacio.</p>
+<p>Ya sean monodimensionales o no, longitudinales o transversales, todos los ejemplos mostrados tienen una cosa en común: necesitan un medio para propagarse. Por ello, se les llama <strong>ondas mecánicas</strong>. Si por el contrario no necesitan de un medio material, como es el caso de la luz, se les llama <strong>ondas electromagnéticas</strong>. En resumen:</p>
+<p><br>
+</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 52%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Necesidad de un medio material</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Mecánicas</td>
+<td style="text-align: center;">Sonido, onda en la cuerda,<br>
+terremotos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Electromagnéticas</td>
+<td style="text-align: center;">Luz, microondas, radio</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Dirección de propagación</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Monodimensionales</td>
+<td style="text-align: center;">Cuerda, tubo de sonido</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Bidimensionales</td>
+<td style="text-align: center;">Ondas en una plataforma vibratoria,<br>
+ondas en la superficie del agua</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tridimensionales</td>
+<td style="text-align: center;">Luz, sonido</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Relación entre propagación y vibración</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Longitudinales</td>
+<td style="text-align: center;">Sonido</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Transversales</td>
+<td style="text-align: center;">Onda en la cuerda, luz en el vacío</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Mixtas</td>
+<td style="text-align: center;">Olas</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="magnitudes-características-de-una-onda" class="level2">
+<h2 class="anchored" data-anchor-id="magnitudes-características-de-una-onda">2.3. Magnitudes características de una onda</h2>
+<section id="velocidad-de-la-onda" class="level3">
+<h3 class="anchored" data-anchor-id="velocidad-de-la-onda">Velocidad de la onda</h3>
+<p>Tomemos el ejemplo anterior de la cuerda horizontal estirada. El impulso que produce el muelle tarda un tiempo en llegar al final de la cuerda. En el caso del sonido o cualquier otra onda, el pulso producido por la fuente tarda siempre un tiempo en llegar a cualquier receptor ya que viaja a una velocidad finita. La velocidad a la que viaje el pulso o perturbación producido por la fuente lo llamamos <strong>velocidad de la onda</strong>. Esta velocidad depende de las características del medio por el que viaja.</p>
+<p>No debe confundirse esta velocidad con la velocidad de vibración. En una onda existen dos velocidades:</p>
+<ul>
+<li><p>La velocidad de vibración de las partículas. Esta es la velocidad a la que se mueven las partículas al oscilar y se calcula como la variación temporal de su posición: <span class="math inline">\(\frac{d y}{d t}\)</span>.</p></li>
+<li><p>La velocidad de la onda. Se suele designar con la letra <span class="math inline">\(v\)</span>. Esta es la velocidad a la que se transmite la perturbación de unos puntos a otros del medio por el que se propaga la onda. Por ejemplo, la velocidad de la luz en el vacío es <span class="math inline">\(3\cdot 10^8\)</span> m/s. La velocidad del sonido en el aire es 340 m/s. No está relacionado con la posición de ninguna partícula. Depende de las características elásticas y la densidad del medio.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una cuerda estirada horizontal se levanta repentinamente en un extremo una altura de <span class="math inline">\(20\text{ cm}\)</span> y se vuelve a bajar a la posición inicial. En total el extremo tarda <span class="math inline">\(0.1\text{ s}\)</span> en bajar desde la posición más alta. Se observa que dicho pulso se propaga por la cuerda de modo que recorre <span class="math inline">\(5 \text{ m}\)</span> en <span class="math inline">\(2 \text{ s}\)</span>. Hacer un esquema de la situación inicial cuando se levanta la cuerda, cuando han pasado <span class="math inline">\(0.1\text{ s}\)</span> y cuando han pasado <span class="math inline">\(2 \text{ s}\)</span>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div style="text-align:center;">
+<p><a href="figuras/prob1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="figuras/prob1.png" class="img-fluid" style="width:55.0%"></a></p>
+</div>
+<p>La primera figura muestra la situación inicial en la que el extremo está levantado <span class="math inline">\(20 \text{ cm}\)</span>. En la segunda el extremo ha bajado a su posición inicial y el pulso se ha trasladado una cierta distancia. En la tercera, el pulso se encuentra a <span class="math inline">\(5 \text{ m}\)</span> y el resto está en reposo ya que sólo se ha producido un pulso.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>EJEMPLO 2: En el ejemplo anterior, ¿cuál es la velocidad de la onda?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La velocidad de la onda es la velocidad a la que viaja el pulso. Por tanto: <span class="math display">\[v=\frac{v}{t}=\frac{5 \text{ m}}{2 \text{ s}}=2.5\text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>¿Cuál es la velocidad media del extremo de la cuerda?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La velocidad del extremo de la cuerda es la velocidad a la que se mueve. Por tanto: <span class="math display">\[v_c=\frac{20 \text{ cm}}{0.1 \text{ s}}=2\text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>¿Determinar la posición del pulso cuando el extremo vuelve a la posición horizontal</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La posición del pulso es la distancia recorrida por éste. Como la velocidad de la onda es <span class="math inline">\(2.5 \text{ m/s}\)</span>, en <span class="math inline">\(0.1\text{ s}\)</span> habrá recorrido: <span class="math display">\[v_2=vt=2.5 \text{ m/s} \cdot 0.1\text{ s} = 0.25 \text{ m}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>¿Cuál será la anchura del pulso?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Cuando el extremo de la cuerda vuelve a su posicián inicial, el pulso está totalmente desarrollado. Esto ocurre <span class="math inline">\(0.1 \text{ s}\)</span> después de tenerlo en su punto más alto. En el apartado anterior encontramos que en ese instante, el punto de mayor altura se habrá desplazado a <span class="math inline">\(0.25 \text{ m}\)</span>. La siguiente figura esquematiza esta situación:</p>
+<div style="text-align:center;">
+<p><a href="figuras/prob1_v.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="figuras/prob1_v.png" class="img-fluid" style="width:45.0%"></a></p>
+</div>
+</div>
+</div>
+</div>
+<p>Luego, esa distancia es justamente la mitad de la anchura del pulso. Es decir la anchura del pulso es <span class="math inline">\(0.5 \text{ m}\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="periodicidad-de-la-onda" class="level3">
+<h3 class="anchored" data-anchor-id="periodicidad-de-la-onda">Periodicidad de la onda</h3>
+<p>Supongamos que hacemos vibrar un extremo de la cuerda, el periodo <span class="math inline">\(T\)</span> (señalado en azul en la figura siguiente) es el tiempo que tarda en ejecutar un ciclo completo. Durante este tiempo, la perturbación habrá recorrido una distancia <span class="math inline">\(vT\)</span> (señalado en verde en la figura), de modo que transcurrido un tiempo <span class="math inline">\(T\)</span>, ambos puntos se encuentran exactamente en la misma posición. Dado que el extremo sigue vibrando, se siguen propagando pulsos por la cuerda. Estos pulsos son periódicos, al igual que la vibración del extremo. Por tanto, si esperamos otro tiempo <span class="math inline">\(T\)</span>, entonces, el extremo y los puntos situados a una distancia <span class="math inline">\(vT\)</span> y <span class="math inline">\(2vT\)</span> se encontrarán en la misma posición y así sucesivamente. Si detenemos el tiempo (podemos imaginarnos esta situación si hacemos una foto a la cuerda), nos encontraremos que la posición de la cuerda se repite periódicamente en intervalos espaciales <span class="math inline">\(vT\)</span>. Esta es la periodicidad espacial, conocida como <strong>“longitud de onda"</strong>. La longitud de onda se designa con la letra griega <span class="math inline">\(\lambda\)</span> y se mide en metros en el S.I.</p>
+<div style="text-align:center;">
+<p><a href="figuras/teoria-lambda.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="figuras/teoria-lambda.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<blockquote class="blockquote">
+<p>La longitud de onda es la mínima distancia entre dos puntos del medio por el que se propaga la onda que se mueven de la misma forma. Se calcula como:</p>
+<p><span class="math display">\[\lambda=vT\]</span></p>
+</blockquote>
+<p>Para describir las ondas, es usual utilizar también el llamado <strong>“número de ondas”</strong>. Se calcula como: <span class="math display">\[k=\frac{2\pi}{\lambda}\]</span> y se mide en <span class="math inline">\(\text{&nbsp;m}^{-1}\)</span>.</p>
+<p>Por tanto, en una onda existe una doble periodicidad:</p>
+<ul>
+<li><p>Temporal: El extremo de la cuerda está vibrando, por lo que su posición se repite cada periodo de tiempo <span class="math inline">\(T\)</span>. Esta perturbación se propaga por la cuerda. Por lo tanto, si nos fijamos en un cierto punto de la cuerda situado a una distancia <span class="math inline">\(x\)</span> del extremo, observaremos que realiza el mismo movimiento que el extremo, es decir, una oscilación con un mismo periodo <span class="math inline">\(T\)</span>. Dado que esta perturbación tarda un tiempo <span class="math inline">\(t=x/v\)</span> en llegar desde el extremo hasta dicho punto, entonces, observamos que realiza el mismo movimiento, pero retrasado.</p></li>
+<li><p>Espacial: Cuando el extremo llega a su punto más alto, en la cuerda habrá puntos que también están en su punto más alto. Por tanto, en un instante concreto, la situación en la que se encuentra el extremo se repite en puntos de la cuerda equidistantes. La distancia entre estos puntos es la longitud de onda.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>En la siguiente figura, determine la distancia entre los puntos indicados, en términos de la longitud de onda <span class="math inline">\(\lambda\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="figuras/ejemplo_lambda.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="figuras/ejemplo_lambda.png" class="img-fluid" style="width:55.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Por definición, <span class="math inline">\(x_1 = \lambda\)</span>.<br>
+Los extremos de <span class="math inline">\(x_2\)</span> están en la misma posición y tienen la misma velocidad: la distancia entre ellos también es la longitud de onda: <span class="math display">\[x_2 = \lambda\]</span> Los extremos de <span class="math inline">\(x_3\)</span> están en la misma posición pero la velocidad es diferente: <span class="math inline">\(A\)</span> tiene velocidad negativa y <span class="math inline">\(C\)</span> positiva. Luego <span class="math display">\[x_3 = \frac{\lambda}{2}\]</span> Para saber la velocidad de un punto de la cuerda tenemos que fijarnos en el lado por el que viene la perturbación. En el ejemplo, la onda se dirige hacia la derecha. Por ejemplo, el punto <span class="math inline">\(A\)</span>, tiene a su izquierda un tramo de cuerda que se encuentra por debajo. Por lo tanto, en instantes posteriores, dicho punto de la cuerda bajará, es decir, en el instante indicado en la figura, el punto <span class="math inline">\(A\)</span> tiene velocidad negativa. El punto <span class="math inline">\(C\)</span>, sin embargo, tiene a su izquierda un tramo que está a mayor altura y por lo tanto, como reacción, en instantes posteriores se espera que <span class="math inline">\(C\)</span> suba, es decir, tiene velocidad positiva.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="amplitud-de-la-onda" class="level3">
+<h3 class="anchored" data-anchor-id="amplitud-de-la-onda">Amplitud de la onda</h3>
+<p>Dado que el extremo ejecuta oscilaciones, su separación del equilibrio no superará un cierto valor, que es la amplitud de la oscilación. Por tanto, ningún segmento de la cuerda superará esta separación del equilibrio. Esta máxima distancia de separación del equilibrio se llama <strong>“Amplitud"</strong> <span class="math inline">\(A\)</span>, en rojo en la figura anterior). Sus unidades son las mismas que tenga la perturbación. En el caso de la onda en la cuerda, la perturbación es un desplazamiento, por lo que <span class="math inline">\(A\)</span> se mide en metros.</p>
+</section>
+</section>
+<section id="ecuación-de-la-onda-armónica" class="level2">
+<h2 class="anchored" data-anchor-id="ecuación-de-la-onda-armónica">2.4. Ecuación de la onda armónica</h2>
+<p>Al igual que la ecuación de una vibración describe la posición del oscilador en cualquier instante de tiempo, la ecuación de ondas debe describir la posición temporal de todos los puntos por los que se propaga la onda. Imaginemos que se trata de una onda transversal como la de la cuerda. Entonces la ecuación de ondas debe ser una función del tipo: <span class="math display">\[y(x,t)\]</span> Es decir, la posición <span class="math inline">\(y\)</span> en el instante <span class="math inline">\(t\)</span> del segmento de cuerda o punto del espacio situado a una distancia <span class="math inline">\(x\)</span> de la fuente que produce la onda.</p>
+<p>Decimos que una onda es armónica cuando se puede describir matemáticamente mediante una función seno o coseno. Si la fuente ejecuta una oscilación armónica simple: <span class="math display">\[y(0,t)=A\sin\left(\omega t\right)\]</span> Entonces, en cualquier otro punto encontraremos: <span class="math display">\[y(x,t)=A\sin\left(\omega t-kx\right)\]</span> Esta es la ecuación de una onda armónica.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>EJEMPLO: Una onda se desplaza por una cuerda de acuerdo con la siguiente ecuación: <span class="math inline">\(y(x, t) = (2000\pi t − 20x)\)</span>. Determine:</p>
+<p>-La altura máxima a la que podremos encontrar cualquier segmento de la cuerda. -La frecuencia angular de la onda. -El periodo. -La longitud de onda. -La velocidad de la onda. -La posición y velocidad de un segmento situado a 2 m de la fuente en cualquier instante.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En general, sabemos que: <span class="math display">\[y(x,t)=A\sin\left(\omega t-kx\right)\]</span></p>
+<p><span class="math inline">\(A = 1\text{ m}\)</span>. Esta es la amplitud del movimiento en cualquier punto de la cuerda, luego también es la máxima altura que se puede alcanzar.</p>
+<p>Si comparamos con la ecuación general, la frecuencia angular será: <span class="math display">\[\omega=2000\pi \text{ rad/s}\]</span></p>
+<p>Dado <span class="math inline">\(T=\frac{2\pi}{\omega}\)</span> entonces <span class="math display">\[T=10^{-3} \text{ s}\]</span></p>
+<p>En la ecuación de ondas tenemos también <span class="math inline">\(k = 20 \text{ m}^{−1}\)</span>.Como <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span>, entonces la longitud de onda es <span class="math inline">\(\lambda=\frac{2\pi}{k}\)</span>.Sustituyendo valores: <span class="math display">\[\lambda=0.314 \text{ m}\]</span></p>
+<p>La velocidad la podemos obtener teniendo en cuenta que <span class="math inline">\(\lambda=vT\)</span>, luego <span class="math inline">\(v=\lambda/T\)</span>. Sustituyendo: <span class="math display">\[v = \frac{0.314 \text{ m}}{10^{-3} \text{ s}} = 314 \text{ m/s}\]</span></p>
+<p>Es decir <span class="math inline">\(x=2 \text{ m}\)</span>. Sustituyendo en la ecuación de ondas: <span class="math display">\[y(x=2,t) = A\sin(\omega t-40)\]</span> Y la velocidad de este segmento es su velocidad de vibración en la dirección vertical: <span class="math display">\[v_v=\frac{d_y}{d_t} = A\omega\cos(\omega t -kx)\]</span> Sustituyendo los valores que conocemos de <span class="math inline">\(A\)</span>, <span class="math inline">\(\omega\)</span>, <span class="math inline">\(k\)</span> y <span class="math inline">\(x\)</span>: <span class="math display">\[v_v=2000\pi \cos(2000\pi t - 40) \text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
