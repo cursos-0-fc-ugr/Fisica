@@ -1,0 +1,951 @@
+---
+title: "Oscilaciones y Ondas"
+title-block-banner: true
+lang: es
+execute:
+  echo: false
+format: 
+  html: 
+    toc: true
+    page-layout: full
+    format-links: true
+    lightbox: true
+#filters:
+#  - quizdown
+---
+
+# 1. Oscilaciones
+
+## 1.2. Cinemática del MAS
+
+Imaginemos un cuerpo que se ve sometido a una fuerza dirigida siempre a un punto, que llamaremos de equilibrio. A tal fuerza se le llama "fuerza restauradora". Si este cuerpo se encuentra en reposo en dicha posición de equilibrio, entonces la fuerza es nula y se mantendrá en reposo. Se dice que el cuerpo está en equilibrio. Podemos imaginarnos varias situaciones de este tipo. En la figura se muestran tres ejemplos.
+
+::: {style="text-align:center;"}
+![](figuras/img1.png){width="50%"}
+:::
+
+En el primer ejemplo, el muelle que inicialmente esté en B o C tiende a recuperar su forma natural en a). En el segundo ejemplo, el peso en b) y c) no es perpendicular a la plataforma y la rueda tiende a caer hacia la posición más baja. En el tercer ejemplo, la tensión del hilo en b) y c) no es paralelo al peso, por lo que la componente perpendicular al hilo $P_t$ no está compensado y hacen volver al péndulo a su posición vertical.
+
+En cualquiera de estas situaciones, el cuerpo regresa a la posición de equilibrio con una cierta velocidad. En esta posición, la fuerza neta es nula, con lo cual el cuerpo mantiene su velocidad y rebasa esta posición de equilibrio. Por lo tanto aparece una fuerza restauradora en la dirección opuesta que hará que el cuerpo se frene primero y vuelva a continuación.
+
+Este tipo de movimiento, en el que el cuerpo se desplaza en torno a una posición de equilibrio se denomina "oscilación".
+
+En muchos casos, el cuerpo no sólo pasa repetidas veces por su posición de equilibrio, sino que lo hace periódicamente. Es decir, el tiempo que tarda en hacer un ciclo completo es siempre el mismo. A este tipo de oscilaciones se les llama **vibración armónica**.
+
+Si el cuerpo se desvía pequeñas distancias del equilibrio, entonces una buena aproximación a su movimiento viene dada por la **vibración armónica simple**. En este caso,
+
+- La fuerza que actúa sobre la partícula o sistema es proporcional al desplazamiento del cuerpo con respecto a su posición de equilibrio.
+
+- La posición de la partícula se pueda especificar mediante una función seno o coseno del tiempo.
+
+## 1.2. Movimiento armónico simple (MAS) 
+
+Se define el movimiento armónico simple como aquél que se puede describir con una función armónica del tiempo, es decir, con una función seno o coseno.
+
+En los movimientos periódicos, la partícula se aleja una distancia máxima, a la que se llama **amplitud** $A$, distancia en la que se frena completamente y se dirige de nuevo a la posición de equilibrio.
+
+Imaginemos que en el instante inicial la partícula se encuentra en la posición de equilibrio, es decir, $x(t=0)=0$. En cualquier otro instante de tiempo, la posición de la partícula se puede describir mediante una función del tiempo $x(t)$ dada por: 
+$$x(t)=A\sin\left(\varphi\right)=A\sin\left(2\pi\frac{t}{T}\right)$$ 
+donde $\varphi$ lo denominamos la "fase" del movimiento.
+
+En la siguiente gráfica se representa esta función. Obsérvese que para $t=T/4$, entonces $\sin\left(\pi/2\right)=1$, su valor máximo, y por tanto, en ese instante, $x(T/2)=A$. Dado que el máximo valor del seno es 1, entonces, el máximo valor de $x$ es, efectivamente, la amplitud $A$. Del mismo modo, para $t=3T/4$, $\sin\left(3\pi/2\right)=-1$ entonces, $x(3T/4)=-A$: La partícula ejecuta oscilaciones desde $A$ hasta $-A$. Si esperamos hasta $t=T/4+T$, entonces de nuevo $x(5T/4)=A$, es decir, transcurrido un periodo, la partícula vuelve al máximo.
+
+::: {style="text-align:center;"}
+![](figuras/img2.png){width="80%"}
+:::
+
+Por tanto, $T$ es el tiempo que tarda la partícula en ejecutar una oscilación completa. A este tiempo lo llamamos **periodo**. Fíjese que en medio periodo, habrá completado 1/2 ciclo, en 1/4 de periodo, 1/4 ciclo, etc.
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+Un objeto está oscilando sujeto a un muelle vertical. Se observa que tarda tarda 3 segundos en llegar desde su punto más alto hasta su punto más bajo. Calcule su periodo.
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+Si observamos la figura anterior, el recorrido entre el punto más alto, es decir, cuando $x=A$, hasta el punto más bajo, es decir, cuando $x=-A$, es la mitad del ciclo completo y tardará por lo tanto $T/2$. Por lo tanto, si tarda $t=3 \text{ s}$, el periodo será el doble: $T=6 \text{ s}$.
+:::
+::::
+
+Se define la **frecuencia** como el número de ciclos por unidad de tiempo. Para calcularlo, basta con tener en cuenta que en un tiempo $T$ se ejecuta una oscilación, es decir, 
+$$f=\frac{1}{T}$$ 
+Como el tiempo se mide en segundos, la frecuencia se mide en $\text{s}^{-1}$. A esta unidad se le conoce como **hercio** (Hz). Fíjese que con esta definición, en un cierto tiempo $t$ ejecutará $N=ft$ oscilaciones.
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+Un objeto está oscilando sujeto a un muelle vertical. Se observa que tarda tarda 5 segundos en realizar 10 oscilaciones. Calcule su periodo y su frecuencia.
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+El periodo será el tiempo que tarda en realizar una oscilación: 
+$$T=\frac{t}{N}=\frac{5 \text{ s}}{10}=0.5 \text{ s}$$
+Por otro lado, la frecuencia es el número de oscilaciones en la unidad de tiempo: 
+$$f=\frac{N}{t}=\frac{1}{T}=2 \text{ Hz}$$
+:::
+::::
+
+Finalmente, recordemos que la función seno o coseno es cíclica cuando su argumento (al que llamamos fase), llega a 2$\pi$. Por ello, es usual definir la **frecuencia angular** $\omega$ como la fase en radianes por unidad de tiempo. Como un ciclo completo son 2$\pi$ radianes, la frecuencia angular será: $$\omega=2\pi f$$ y se mide en rad/s. De este modo es fácil ver que el MAS se puede describir con la función: $$x(t)=A\sin\left(\omega t\right)$$
+
+En resumen:
+
+
+|Nombre|Abreviatura|Unidad|Equivalencia|
+|:---------------------|:--------------------|:--------------------|:--------------------|
+|Amplitud |          $A$|        m     | |
+|Periodo  |          $T$|        s     | |
+|Frecuencia|         $f$|        Hz    |$\frac{1}{T}$|
+|Frecuencia angular|   $\omega$|   rad/s|    $\frac{2\pi}{T}=2\pi f$|
+
+En este movimiento, no sólo varía la posición. Nótese que la partícula se frena al llegar a la máxima amplitud y luego invierte la dirección del movimiento. La velocidad la podemos calcular como la variación temporal de la posición: 
+$$v=\frac{dx}{dt}=A\omega\cos\left(\omega t\right)$$ 
+Dado que los límites de la función coseno son también $\pm$1, entonces la velocidad oscila también con el tiempo desde un valor máximo $v_{MAX}=A\omega$ hasta el valor mínimo $-v_{MAX}$, pero lo hace desfasada $\pi/2$ respecto de la posición. En efecto, cuando el muelle está estirado, la masa se para ($v=0$) e inicia su movimiento ascendente (velocidad negativa). Cuando pasa por la posición de equilibrio, la velocidad es máxima y continúa su ascenso a velocidad negativa pero decreciente en valor absoluto. Cuando el muelle está comprimido, la masa se vuelve a frenar ($v=0$) e inicia el descenso (velocidad positiva). En resumen, cuando $x$ es máxima en valor absoluto, entonces la velocidad es cero y viceversa.
+
+::: {style="text-align:center;"}
+![](figuras/img3.png){width="80%"}
+:::
+
++---------------------+-------------------------------------+
+| $x=A$               | $v=0$                               |
++---------------------+-------------------------------------+
+| $A>x>0$             | $v<0$ creciente en valor absoluto   |
++---------------------+-------------------------------------+
+| $x=0$               | $v=-v_{MAX}$                        |
++---------------------+-------------------------------------+
+| $0>x>-A$            | $v<0$ decreciente en valor absoluto |
++---------------------+-------------------------------------+
+| $x=-A$              | $v=0$                               |
++---------------------+-------------------------------------+
+| $-A < x < 0$        | $v>0$ creciente en valor absoluto   |
++---------------------+-------------------------------------+
+
+
+Este caso particular nos ha servido para entender las características principales del MAS Fijémosnos ahora en el instante incial del movimiento, es decir, $t=0$. Si observamos de nuevo la gráfica anterior, podemos ver que en el instante inicial $t=0$ el objeto parte de la posición de equilibrio $x(0)=0$ con la velocidad máxima $v(0)=v_{MAX}$. Sin embargo, no todas las oscilaciones son así. Por ejemplo, podríamos haber iniciado el movimiento estirando o comprimiendo el muelle y soltándolo en el instante inicial. En este caso, las ecuaciones anteriores no son correctas porque no describen el movimiento real. Otra opción podría haber sido partir de una posición intermedia a una velocidad. Por tanto, cuando se estudia un movimiento es muy importante tener en cuenta las "condiciones" iniciales del movimiento. Éstas se expresan indicando $x(t=0)$ (o bien, simplemente $x(0)$) y $v(t=0)$ (o bien, simplemente $v(0)$).
+
+Veamos cómo se actúa en este caso. En el ejemplo del muelle estirado que se suelta en el instante inicial, la velocidad inicial es $v(0)=0$. Hemos visto en la tabla anterior que cuando la velocidad es nula, la masa tiende a volver a su posición de equilibrio. Esto quiere decir que la elongación es máxima: $x(0)=A$. Esto se cumple si escribimos, para cualquier otro instante de tiempo: $$x(t)=A\sin\left(\omega t+\pi/2\right)$$ Efectivamente, si sustituimos $t=0$ en la ecuación anterior, obtenemos $x=A$. Para la velocidad, como es la derivada temporal de la posición: $$v(t)=\frac{dx}{dt}=A\omega\cos\left(\omega t+\pi/2\right)$$
+
+Y como hemos llamado $v_{MAX}$ al valor máximo de la velocidad, entonces: $$v(t)=A\omega\cos\left(\omega t+\pi/2\right)=v_{MAX}\cos\left(\omega t+\pi/2\right)$$ Y por tanto, $$v_{MAX}=A\omega$$ Vemos, pues, que podemos utilizar la misma función trigonométrica, modificando ligeramente su argumento para incluir lo que llamamos **fase inicial**. La fase inicial en este ejemplo es $\varphi_0=\pi/2$.
+
+En el caso completamente general, podemos decir que en $t=0$, la fase del ciclo $\varphi_0$ no tiene por qué ser ni cero ni $\pi/2$. Por ello, el modo más general de describir el MAS es mediante:
+
+En la siguiente gráfica se muestran tres casos. La línea negra corresponde con el caso $\varphi_0=0$, es decir, la masa parte de la posición de equilibrio. La línea verde es el caso $\varphi_0=\pi/2$, es decir, la masa parte de la máxima elongación en reposo. La línea roja es el caso $\varphi_0=\pi/4$, que es un caso intermedio: la masa parte de una distancia menor que la máxima con una velocidad menor que la velocidad máxima.
+
+::: {style="text-align:center;"}
+![](figuras/img4.png){width="30%"}
+:::
+
+En un caso cualquiera, para poder determinar la posición y velocidad en cualquier instante, tendremos en cuenta que:
+
+- $x(t=0)=A\sin\left(\varphi_0\right)$
+
+- $v(t=0)=A\omega\cos\left(\varphi_0\right)$
+
+Típicamente, si en un problema nos dan la frecuencia y la posición y velocidad iniciales, entonces, de las dos ecuaciones anteriores se obtiene la amplitud del movimiento y la fase inicial.
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+
+Tenemos una oscilación de frecuencia $\omega = 20 \text{ rad/s}$ . Inicialmente, la masa se encuentra en $x = 1 \text{ m}$ respecto de la posición de equilibrio y con una velocidad de $v = 20 \text{ m/s}$. Encuentre la función que describe la posición y velocidad en cualquier instante.
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+En general, sabemos que: $$x(t) = A \sin(\omega t + \varphi_0) = A \sin(20t+ \varphi_0)$$ $$v(t) = A \omega \cos(\omega t + \varphi_0) = 20 A \cos(20t+ \varphi_0)$$ Nos dan los valores en el instante inicial:\
+$x(0) = 1 \text{ m} = A \sin (\varphi_0)$.\
+$v(0) = 20 \text{ m/s} = 20 A \cos (\varphi_0)$.\
+De esta última ecuación: $$v(0)/20 = 20/20 = 1 = A \cos (\varphi_0)$$ Y por tanto, 
+$$\frac{x(0)}{v(0)/20} = \frac{A \sin(\varphi_0)}{A \cos(\varphi_0)} = tan(\varphi_0)$$ Como $\frac{x(0)}{v(0)/20} = 1$, entonces, $$\varphi_0 = \pi/4$$ 
+Además, $x(0) = 1 \text{ m} = A \sin (\varphi_0)$, por lo tanto $$\frac{x(0)}{\sin(\varphi_0)} = \sqrt{2}$$ 
+Finalmente:
+$$x(t) = \sqrt{2} \sin(20t + \pi/4) \text{ m} = 1.41 \sin(20t+ \pi/4) \text{ m}$$ 
+$$v(t) = \sqrt{2} \cdot 20 \cos(20t + \pi/4) \text{ m/s} = 28.3 \cos(20t+ \pi/4) \text{ m/s}$$
+:::
+::::
+
+## 1.3 Ley de Hooke
+
+Como ya se adelantó, un cuerpo oscila cuando sobre él actúa una fuerza recuperadora, es decir, una fuerza que se dirige siempre hacia una posición, que es la posición de equilibrio. Tomemos el caso de una masa sujeta a un muelle:
+
+::: {style="text-align:center;"}
+![](figuras/img5.png){width="30%"}
+:::
+
+A medida que la partícula se desplaza hacia la derecha (segundo dibujo), el muelle se estira y por tanto ejerce una fuerza sobre la masa hacia la izquierda. En el tercer dibujo el muelle se opone a ser comprimido, por lo que la fuerza lleva el sentido positivo del eje x. Si situamos el origen de coordenadas en la posición de equilibrio, tal y como se muestra en esta figura, entonces la fuerza que ejerce el muelle es: $$\vec{F}=-kx\hat{\imath}$$ siendo $k$ la "constante elástica del muelle". Esta es la denominada "ley de Hooke".
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+
+Si tenemos un muelle de constante k = 20 N/m, calcule la fuerza que ejerce sobre una masa m = 0.5 kg, cuando ésta esté situada a 15 cm de la posición de equilibrio. ¿Con qué aceleración se mueve?
+
+::: {style="text-align:center;"}
+![](figuras/img_ej1.png){width="50%"}
+:::
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+$\vec{F}=-kx\hat{\imath}$, entonces: $$\vec{F}=-20 \text{ N/m} \cdot 0.15\text{ m }\hat{\imath} = -3 \text{ N }\hat{\imath}$$ Para calcular la aceleración $\vec{a}$, utilizamos la segunda ley de Newton: $\vec{F}=m\vec{a}$, por lo que $$\vec{a}= \frac{\vec{F}}{m} = -\frac{3\text{ N}}{0.5 \text{ kg}}\hat{\imath} = -6 \text{ m/s}^2\text{ } \hat{\imath}$$
+:::
+::::
+
+Como la única fuerza es la que ejerce el muelle, por la segunda ley de Newton: $$\sum\vec{F}=-kx\hat{\imath}=m\frac{d^2x}{dt^2}\hat{\imath}$$ Cuando una masa está sometida a una fuerza de este tipo, entonces su posición viene descrita por un MAS Es decir, $$x(t)=A\cos\left(\omega t+\varphi_0\right)$$ Por lo tanto su velocidad será: $$\vec{v}(t)=v_x(t)\hat{\imath}=\frac{dx}{dt}\hat{\imath}=-\omega A\sin\left(\omega t+\varphi_0\right)\hat{\imath}$$ Y su aceleración: $$\vec{a}(t)=\frac{d\vec{v}}{dt}=-\omega^2A\cos\left(\omega t+\varphi_0\right)\hat{\imath}$$ En definitiva nos queda: $$\sum\vec{F}=-kx\hat{\imath}=-kA\cos\left(\omega t+\varphi_0\right)\hat{\imath}$$ $$m\frac{d^2x}{dt^2}\hat{\imath}=-m\omega^2A\cos\left(\omega t+\varphi_0\right)\hat{\imath}$$ E igualando: $$-kA\cos\left(\omega t+\varphi_0\right)=-m\omega^2A\cos\left(\omega t+\varphi_0\right)$$ Por lo tanto: $$\omega=\sqrt{\frac{k}{m}}$$
+
+
+## 1.4. El muelle vertical
+
+Hemos visto que cuando sobre una masa actúa una fuerza del tipo $\vec{F}=-kx\hat{\imath}$, siendo $x$ la distancia respecto de la posición de equilibrio, entonces el objeto realiza un movimiento armónico simple. Veamos que esto es válido también cuando además de esta fuerza, actúa otra constante.
+
+Un ejemplo es el muelle vertical. En este caso, además de la fuerza del muelle, actúa la fuerza gravitatoria. En la siguiente figura se esquematiza esta situación.
+
+::: {style="text-align:center;"}
+![](figuras/img6.png){width="30%"}
+:::
+
+En el primer caso, el muelle no tiene ningún peso, por lo que su longitud es la longitud natural del muelle, $l_0$. A continuación se suspende una masa $m$. Como consecuencia, el muelle se alarga un poco hasta encontrar el equilibrio. En esta posición de equilibrio (segundo dibujo), la suma de fuerzas ha de ser nula: $$\sum\vec{F}=\vec{F}_k+\vec{P}=0$$ Por lo tanto, $-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0$, es decir: $$-k(l-l_0)+mg=0$$
+
+En el tercer dibujo, la elongación del muelle es mayor, por lo que la fuerza del muelle supera al peso y habrá una componente neta en dirección hacia arriba. En este caso, la elongación del muelle es $l+y-l_0$ por lo que la fuerza neta es: $$\sum\vec{F}=\vec{F}_k+\vec{P}=-k(l-l_0+y)\hat{\jmath}+mg\hat{\jmath}$$ Reagrupando: $$\sum\vec{F}=-ky\hat{\jmath}\underbrace{-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}}$$ El contenido dentro de la llave hemos visto que es nulo, por lo que: $$\sum\vec{F}=-ky\hat{\jmath}$$ Y por la segunda ley de Newton: $$\sum\vec{F}=m\vec{a}=-ky\hat{\jmath}$$ que se corresponde con la ley de Hooke. Es decir, cuando el muelle está en posición vertical, el objeto realiza un MAS pero desde una posición de equilibrio diferente, en la que el muelle está algo deformado.
+
+Con esta situación tenemos un modo de calcular la constante de un muelle. Si colgamos una masa conocida y determinamos la elongación de equilibrio $l-l_0$, la constante del muelle se determina a partir de: $$-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0$$ Es decir, en el equilibrio la suma de fuerzas es 0. Y despejando la constante del muelle, podemos calcularla a partir de la siguiente ecuación:$$k=\frac{m g}{l-l_0}$$
+
+
+## 1.5. Energía del oscilador armónico simple
+
+El oscilador armónico tiene una energía mecánica dada por: $$E_m=E_p+E_c$$ siendo $E_c$ la energía cinética de la masa y $E_p$ la energía potencial del muelle que tiene el muelle cuando está deformado. Esta energía viene dada por: $$E_p=\frac{1}{2}kx^2$$ Como $$x(t)=A\sin\left(\omega t+\varphi_0\right)$$ tendremos entonces que: $$E_p=\frac{1}{2}kA^2\sin^2\left(\omega t+\varphi_0\right)$$ Fíjese que la energía potencial será máxima cuando el muelle esté totalmente estirado o comprimido, instantes en los que $x=\pm A$ y por lo tanto: $$E_{p,MAX}=\frac{1}{2}kA^2$$
+
+Por otro lado, la masa en su movimiento tiene una energía cinética: $$E_c=\frac{1}{2}mv^2$$ Como: $$v(t)=\frac{dx}{dt}=\omega A\cos\left(\omega t+\varphi_0\right)$$ se obtiene que: $$E_c=\frac{1}{2}m\omega^2A^2\cos^2\left(\omega t+\varphi_0\right)$$ Y dado que $\omega=\sqrt{\frac{k}{m}}$, entonces: $$E_c=\frac{1}{2}kA^2\cos^2\left(\omega t+\varphi_0\right)$$
+
+El valor máximo de la energía cinética será: $$E_{c,MAX}=\frac{1}{2}kA^2$$
+
+Exactamente igual que el valor máximo de la energía potencial. Fíjese que en realidad estos valores de energía se alcanzan en instantes diferentes. En efecto, cuando la velocidad es máxima (y por tanto tambié la energía cinética), la posición es la de equilibrio ($x=0$, ya que la velocidad y la posición están desfasados $\pi/2$), y por tanto la energía potencial es nula. Igualmente, cuando la posición es máxima (y por tanto, la energía potencial), la velocidad es nula, y por tanto, la energía cinética es nula. Dicho de otro modo:
+
+**Cuando el muelle está totalmente estirado o comprimido, la energía potencial es máxima y la energía cinética nula, mientras que cuando el muelle no está deformado, la energía potencial es nula y la energía cinética máxima.**
+
+Esto se ilustra en la siguiente figura.
+
+::: {style="text-align:center;"}
+![](figuras/img7.png){width="50%"}
+:::
+
+La energía mecánica total será: $$E_m=E_c+E_p=\frac{1}{2}kA^2\cos^2\left(\omega t+\varphi_0\right)+\frac{1}{2}kA^2\sin^2\left(\omega t+\varphi_0\right)$$
+
+Y sacando factor común $\frac{1}{2}kA^2$, tendremos:
+$$E_m=\frac{1}{2}kA^2\left [\cos^2\left(\omega t+\varphi_0\right)+\sin^2\left(\omega t+\varphi_0\right)\right ]$$ 
+Si tenemos en cuenta que $\cos^2R+\sin^2R=1$, tendremos: 
+$$E_m=\frac{1}{2}kA^2$$
+
+Puede verse que aunque tanto la energía cinética como la energía potencial varían con el tiempo, la suma permanece constante, es decir,\
+
+> **La energía mecánica de un oscilador armónico se conserva**
+
+De este modo, cuando la masa se aleja de la posición de equilibrio, empieza a frenarse, disminuye su energía cinética hasta que se para y retrocede. Al mismo tiempo, la energía potencial va aumentando hasta llegar a su valor máximo cuando la masa se ha parado.
+
+## 1.6. El péndulo {#el-pendulo}
+
+
+Imaginemos una cuerda de longitud $L$ fija en su extremo superior. Supongamos que es muy ligera. En el extremo inferior sujetamos un cuerpo de masa $m$. En este sistema, las únicas fuerzas que actúan sobre dicho cuerpo son su peso y la tensión de cuerda. Mientras que la primera será siempre vertical, la segunda llevará la dirección de la cuerda.
+
+::: {style="text-align:center;"}
+![](figuras/img8.png){width="50%"}
+:::
+
+Por tanto, en el equilibrio, la cuerda estará en posición vertical, de modo que la tensión de la cuerda compensa el peso de dicho cuerpo. Si desplazamos la masa hacia la izquierda, tal y como se muestra en el segundo dibujo, entonces la tensión de la cuerda y el peso no llevarán la misma dirección. Si separamos el peso en componentes radial $$P_1=P\cos\alpha$$ y tangencial $$P_2=P\sin\alpha=P\frac{x}{L}$$ dado que la tensión de la cuerda tiene dirección radial, entonces sólo compensará a la componente $P_1$, mientras que la componente tangencial del peso será la responsable del movimiento. Por lo tanto, el objeto se moverá en dirección tangencial, es decir, describiendo arcos.
+
+$$\sum\vec{F}=\vec{P}_2=m\vec{a}$$ $$P_2=-mg\frac{x}{L}=ma_t$$
+
+En la siguiente figura se muestra un esquema: en un instante cualquiera, tendremos que la cuerda se ha desviado desde la vertical un ángulo $\alpha$, de modo que el arco descrito $s=L\alpha$.
+
+::: {style="text-align:center;"}
+![](figuras/img9.png){width="30%"}
+:::
+
+Si el ángulo $\alpha$ es pequeño, entonces el arco $s$ que describe el péndulo es prácticamente igual a $x$, y por tanto el movimiento tiene lugar prácticamente en la horizontal, es decir,
+
+$$a_t=\frac{d^2s}{dt^2}\approx\frac{d^2x}{dt^2}$$
+
+Finalmente: $$-m\frac{g}{L}x=m\frac{d^2x}{dt^2}$$ Esta ecuación es idéntica a la ecuación de la ley de Hooke, si hacemos la equivalencia $k=mg/L$. Por lo tanto, siempre y cuando el ángulo sea pequeño, el péndulo realizará un movimiento armónico simple de frecuencia: $$\omega=\sqrt{\frac{g}{L}}$$
+
+La ecuación del movimiento será: $$x(t)=A\sin\left(\omega t+\varphi_0\right)$$
+
+Y su velocidad: $$v(t)=\omega A\cos\left(\omega t+\varphi_0\right)$$ Fíjese que las características son las mismas que en el caso del muelle, pero con una diferencia: la frecuencia no depende de la masa. En efecto, esto podríamos haberlo deducido desde el principio: cuando la única fuerza externa es la fuerza gravitatoria, entonces la aceleración, la velocidad y la posición no dependen de la masa.
+
+## 1.6. Energía del péndulo
+
+Al igual que en el caso del muelle, la energía cinética será: 
+$$E_c=\frac{1}{2}m\omega^2A^2\cos^2\left(\omega t+\varphi_0\right)$$
+
+Pero ahora la energía potencial es energía potencial gravitatoria: $$E_p=mgy$$ Para conocer $y$, la altura que asciende el péndulo en cada instante desde la posición más baja, observemos el triángulo rectángulo de la siguiente figura:
+
+::: {style="text-align:center;"}
+![](figuras/img10.png){width="35%"}
+:::
+
+De ahí, $$L^2=(L-y)^2+x^2=L^2+y^2-2Ly+x^2=L^2+y^2-2Ly+x^2$$ Simplificando y sacando factor común $y$: $$0=y(y-2L)+x^2$$ Dado que el péndulo se desvía poco de la vertical, tendremos que $y$ es mucho más pequeño que $2L$, por lo que el paréntesis en la igualdad anterior es aproximadamente: $$y(y-2L)\approx -2Ly$$ Y por lo tanto $$0=y(y-2L)+x^2\approx -2Ly+x^2$$ de donde: $$y=\frac{x^2}{2L}$$ Teniendo en cuenta que $x(t)$ es un MAS, la energía potencial nos queda:
+$$E_p=mgy=mg\frac{x^2}{2L}=\frac{1}{2}m\frac{g}{L}A^2\sin^2\left(\omega t+\varphi_0\right)$$ Finalmente, como $\omega=\sqrt{\frac{g}{L}}$, $$E_p=\frac{1}{2}m\omega^2A^2\sin^2\left(\omega t+\varphi_0\right)$$
+
+Observamos que las características son las mismas que en el caso del muelle. La única diferencia estriba en el valor de la frecuencia $\omega$. Por tanto, la energía potencial y cinética se comportan igual que en aquel caso. Además, la energía mecánica: 
+$$E_m=E_p+E_c=\frac{1}{2}m\omega^2A^2\left [\sin^2\left(\omega t+\varphi_0\right)+\cos^2\left(\omega t+\varphi_0\right)\right ]$$
+Y como $\sin^2R+\cos^2R=1$, $$E_m=E_p+E_c=\frac{1}{2}m\omega^2A^2=\frac{mg}{2L}A^2$$ Y se conserva durante el movimiento del péndulo.
+
+Tomemos el caso de un péndulo que parte del reposo con un cierto ángulo inicial. Este caso es idéntico al caso del muelle que se estira y se suelta. la ecuación del movimiento viene dada por: $$x(t)=A\sin\left(\sqrt{\frac{g}{L}}t+\pi/2\right)$$ siendo $A=x(0)$. Es decir, si se suelta el péndulo, éste nunca rebasará la posición inicial, ya que esto significaría aumentar la energía potencial por encima del máximo y por tanto, no se cumpliría el principio de conservación de la energía mecánica.
+
+## 1.7. Ejercicios de oscilaciones
+
+::::{.callout-caution title="Ejercicio 1" collapse="false" icon="false"}
+Un MAS viene descrito por la siguiente ecuación: $x(t)=3\sin\left(2\pi 1000 t+\pi/2\right)\text{ m}$. Calcule el periodo, la frecuencia, la frecuencia angular y la amplitud del movimiento.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+Dado que la forma general de un MAS es 
+$$x(t)=A\sin\left(\omega t+\varphi_0\right)$$ 
+comparando, vemos que lo que acompaña al tiempo es la frecuencia angular: 
+$$\omega=2000\pi\text{ rad/s}$$
+
+- Frecuencia: dado que $\omega=2\pi f$, comparando tenemos que $f=1000\text{ Hz}$
+
+- Periodo: puesto que $T=1/f$, entonces $T=\frac{1}{1000\text{ Hz}}=0.001\text{ s}$
+
+- Amplitud: es el factor que acompaña a la función seno o coseno. Por tanto $A=3\text{ m}$
+:::
+::::
+
+::::{.callout-caution title="Ejercicio 2" collapse="false" icon="false"}
+Un MAS viene descrito por la siguiente ecuación: $x(t)=2.5\cos\left(800 t+\pi/2\right)\text{ m}$. Calcule el periodo, la frecuencia, la frecuencia angular y la amplitud del movimiento.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+La función coseno también describe movimiento armónico simple. La diferencia está sólo en la fase inicial. Por tanto, podemos tomar como forma general $x(t)=A\cos\left(\omega t+\varphi_0\right)$. Comparando, vemos que lo que acompaña al tiempo es la frecuencia angular: 
+$$\omega=800\text{ rad/s}$$
+
+- Frecuencia: dado que $\omega=2\pi f$, comparando tenemos que:
+$$f=\frac{\omega}{2\pi}=\frac{800\text{ rad/s}}{2\pi}={127\text{ Hz}}$$
+ 
+- Periodo: Puesto que $T=1/f$, entonces 
+$$T=\frac{1}{127\text{ Hz}}=0.00785\text{ s}=7.85\text{ ms}$$
+
+- Amplitud: Es el factor que acompaña a la función seno o coseno. Por tanto, 
+$$A=2.5\text{ m}$$
+:::
+::::
+
+::::{.callout-caution title="Ejercicio 3" collapse="false" icon="false"}
+Un MAS viene descrito por la siguiente ecuación: $x(t)=82\cos\left(\frac{2\pi}{2.5} t+\pi/2\right)\text{ m}$. Calcule el periodo, la frecuencia, la frecuencia angular y la fase inicial del movimiento.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+Dado que $\omega=\frac{2\pi}{T}$, entonces podemos tomar como forma general $x(t)=A\cos\left(\frac{2\pi}{T} t+\varphi_0\right)$. Comparando, vemos que en el factor que acompaña al tiempo, el denominador es justamente el periodo: 
+- Periodo: $T=2.5\text{ s}$
+
+- Frecuencia: $f=\frac{1}{T}=\frac{1}{2.5\text{ s}}=0.4\text{ Hz}$
+  
+- Frecuencia angular: $\omega=2\pi f=2.5\text{ rad/s}$
+
+- Fase inicial: $\varphi_0=\pi/2\text{ rad}$
+:::
+::::
+
+::::{.callout-caution title="Ejercicio 4" collapse="false" icon="false"}
+
+Una partícula describe un MAS con una amplitud de $3\text{ m}$ y una frecuencia de $25\text{ Hz}$. En el instante inicial, la partícula se encuentra en $x=2 \text{ m}$. Calcular la fase inicial y la posición en el instante $t=3 \text{ s}$.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+
+- Fase inicial:\
+   Describimos el movimiento mediante la función $x(t)=A\sin\left(\omega t+\varphi_0\right)$ siendo $A=3 \text{ m}$, y $\omega=2\pi f=50\pi \text{ rad/s}$ En el instante inicial $t=0$, nos dan $x(0)=2 \text{ m}$. Según la ecuación anterior, tendremos $x(0)=A\sin\left(0+\varphi_0\right)$ siendo $x(0)=2 \text{ m}$, entonces: 
+   $$\varphi_0=\arcsin\bigl(\frac{x(0)}{A}\bigr)$$ 
+   Sustituyendo valores: 
+   $$\varphi_0=\arcsin\bigl(\frac{2}{3}\bigr)=0.73\text{ rad}$$ 
+   Finalmente, tendremos que la posición viene determinada por la ecuación: 
+   $$x(t)=3\sin\left(50\pi t+0.73\right) \text { m}$$
+
+- Posición en el instante $t=3 \text{ s}$:\
+   Podemos sustituir $t=3 \text{ s}$ en la ecuación anterior, o bien tener en cuenta que $f$ es la frecuencia, es decir, el número de ciclos por segundo. En $3\text{ s}$ se ejecutan $N=ft=25\cdot 3=75$ ciclos completos. Por tanto, la posición es la misma que la posición inicial: 
+   $$x(3\text{ s})=2\text{ m}$$
+
+:::
+
+::::
+
+:::::{.callout-caution title="Ejercicio 5" collapse="false" icon="false"}
+Una partícula describe un MAS con una amplitud de $3 \text{ m}$ y una frecuencia de $0.25 \text{ Hz}$. En el instante inicial, la partícula se encuentra en el origen $x=0$ y con velocidad positiva. Calcular la posición en el instante $t=3 \text{ s}$. Repetir el cálculo para el caso en el que la velocidad inical sea negativa.
+
+::::{.callout-caution title="Solución" collapse="true" icon="false"}
+La siguiente figura muestra la posición en función del tiempo. 
+
+::: {style="text-align:center;"}
+![](figuras/prob1-xMAS.png){width="30%"}
+:::
+
+En el instante inicial la posición es $x(0)=0$. Como la velocidad es la derivada de la posición, en esta gráfica la velocidad es la pendiente de la curva. Como la velocidad inicial es positiva. entonces, la función $x(t)$ es cero en el instante inicial con pendiente positiva.
+
+La frecuencia es $0.25\text{ Hz}$, es decir en $1\text{ s}$ completa $0.25\text{ ciclos}$; en $3\text{ s}$ completará $N=ft=0.75=\frac{3}{4}$ de ciclo. Por lo tanto 
+$$x(3\text{ s})=-3\text{ m}$$
+Si la velocidad es negativa, entonces:
+
+::: {style="text-align:center;"}
+![](figuras/prob1-graph-vneg.png){width="30%"}
+:::
+
+Ahora la posición mínima $x=-A$ se alcanza en $T/4$, mientras que en $3T/4$ se alcanza la posición máxima 
+$$x(t=3\text{ s})=A$$
+
+::::
+
+:::::
+
+:::::{.callout-caution title="Ejercicio 6" collapse="false" icon="false"}
+Una cuerda de $R= 2 \text{ m}$ de largo está fija en un extremo. En el extremo contrario hay una masa que describe círculos a velocidad constante, de modo que tarda $2 \text{ s}$ en dar una vuelta completa. Describa la evolución temporal de la componente $x$ de su posición. Calcule el periodo, la frecuencia, la frecuencia angular y la amplitud del movimiento.
+
+::::{.callout-caution title="Solución" collapse="true" icon="false"}
+Si hacemos un pequeño esquema:
+
+::: {style="text-align:center;"}
+![](figuras/prob1-circular.png){width="30%"}
+:::
+
+Vemos que en este movimiento, la proyección sobre el eje $x$ será: $x(t)=R\cos\left(\varphi\right)$ donde $\varphi=\omega t$. Dado que tarda un tiempo $T=2\text{ s}$ en dar una vuelta, es decir, en recorrer un ángulo de $2\pi$. Por tanto $\omega T=2\pi$ de donde
+$$\omega=\frac{2\pi}{T}=\frac{2\pi}{2\text{ s}}=\pi\text{ rad/s}$$ 
+De modo que la coordenada $$x$$ de este movimiento viene descrita por: 
+$$x(t)=2\cos\left(\pi t\right)\text{ m}$$ 
+- Periodo: Dado que tarda 2 s en realizar un ciclo completo, esto es justamente el periodo: $$T=2\text{ s}$$.
+
+- Frecuencia: $f=1/T=1/2\text{ s}=0.5\text{ Hz}$.
+
+- Frecuencia angular: $\omega=2\pi/T=\pi\text{ rad/s}$.
+
+- Amplitud: El valor máximo de x(t) será la longitud de la cuerda: $A=2\text{ m}$.
+::::
+:::::
+
+## 1.8. Ejercicios de muelles y péndulos.
+
+::::{.callout-caution title="Ejercicio 1" collapse="false" icon="false"}
+Una masa de $50\text{ g}$ está sujeta a un muelle horizontal de constante $k=25 \text{ N/m}$. Calcule el periodo de las oscilaciones.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+Dado que $\omega=\sqrt{\frac{k}{m}}$, por lo que $$T=\frac{2\pi}{\omega}=\frac{2\pi}{\sqrt{\frac{k}{m}}}=\frac{2\pi}{\sqrt{\frac{25\text{ N/m}}{0.05\text{ kg}}}}={0.28\text{ s}}$$
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 2" collapse="false" icon="false"}
+Se hace oscilar horizontalmente una masa de $0.5\text{ kg}$ sujeta a un muelle de constante desconocida. Se observa que en un minuto realiza $45$ oscilaciones. Calcule la constante del muelle.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+Para conocer la constante del muelle, recuérdese que la periodicidad de las oscilaciones está relacionada con dicha constante y con la masa oscilante a través de $\omega=\sqrt{\frac{k}{m}}$, por lo que $$k=m\omega^2$$ Para calcular la frecuencia angular, fíjese que nos dan el número de oscilaciones $N=45$ en un minuto, podemos calcular el número de oscilaciones en 1 s, es decir, la frecuencia, como: $$f=\frac{45}{60\text{ s}}=0.75\text{ Hz}$$ Por lo que $\omega=2\pi f=1.5\pi \text{ rad/s}$ y finalmente: $$k=0.5(1.5\pi)^2={11.1\text{ N/m}}$$
+:::
+
+::::
+
+:::::{.callout-caution title="Ejercicio 3" collapse="false" icon="false"}
+Una masa de $20\text{ g}$ está en el origen y sujeta a un muelle horizontal de constante $k=10 \text{ N/m}$. En el instante inicial se coloca la masa en la posición $x=-20 \text{ cm}$ y se suelta. Escriba la ecuación que describe la posición en función del tiempo, la velocidad, la aceleración, la fuerza ejercida por el muelle, su energía potencial, la energía cinética de la masa y la energía mecánica. Represente gráficamente cada una de estas funciones.
+
+::::{.callout-caution title="Solución" collapse="true" icon="false"}
+Con las características de este sistema, la frecuencia angular será: $$\omega=\sqrt{\frac{k}{m}}=\sqrt{\frac{10}{0.02}}=22.4\text{ rad/s}$$ Y el periodo será: $$T=\frac{2\pi}{\omega}=\frac{2\pi}{22.4\text{ rad/s}}=0.28\text{ s}$$ La forma general del movimiento es: $$x(t)=A\sin\left(\omega t+\varphi_0\right)$$ Y su velocidad: $$v(t)=\omega A\cos\left(\omega t+\varphi_0\right)$$ En el instante inicial se suelta la masa, luego en ese instante su velocidad es cero: $$v(0)=\omega A\cos\left(\varphi_0\right)=0$$ Dado que ni $\omega$ ni $A$ pueden ser cero (pues en ese caso no habría movimiento), entonces, $$\cos\left(\varphi_0\right)=0$$ Lo cual se cumple siempre y cuando $$\varphi_0=\pi/2$$ Por otro lado, me dicen que en el instante inicial la partícula está en $x(0)=0.2 \text{ m}$, luego: $$x(0)=A\sin\left(\varphi_0\right)=A\sin\left(\pi/2\right)=A=0.2\text{ m}$$
+
+Por lo tanto: $${x(t)=0.2\sin\left(22.4 t+\pi/2\right)\text{ m}}$$ La amplitud de la velocidad es $\omega A=22.4\text{ rad/s}\cdot 0.2\text{ m}=4.48 \text{ m/s}$, y por lo tanto $${v(t)=4.48\cos\left(22.4 t+\pi/2\right)\text{ m/s}}$$
+
+La aceleración la podemos calcular como la derivada temporal de la velocidad: $$a(t)=\frac{dv}{dt}=-\omega^2A\sin\left(\omega t+\varphi_0\right)$$ Y la amplitud de la aceleración será $\omega^2A=(22.4\text{ rad/s})^2\cdot0.2\text{ m}=100.4 \text{ m/s}^2$, por lo que: $$a(t)=\frac{dv}{dt}={-100.4\sin\left(22.4 t+\pi/2\right)\text{ m/s}^2}$$
+
+Para calcular la fuerza podemos hacer uso de dos ecuaciones: $$F=-kx(t)=-kA\sin\left(\omega t+\varphi_0\right)$$ o bien $$F(t)=ma(t)=-m\omega^2A\sin\left(\omega t+\varphi_0\right)$$ lo cual da el mismo resultado. La amplitud de la fuerza será $m\omega^2A=kA=2 \text{ N}$, por lo que $${F(t)=-2\sin\left(22.4 t+\pi/2\right)\text{ N}}$$
+
+La energía potencial viene dada por $E_p(t)=\frac{1}{2}kx(t)^2$, por lo que 
+$$E_p(t)=\frac{1}{2}k\bigl]A\sin\left(\omega t+\varphi_0\right)\bigr]^2$$
+ Sustituyendo los valores calculados: 
+$${E_p(t)=0.2\sin^2\left(22.4 t+\pi/2\right)\text{ J}}$$
+
+La energía cinética se calcula como $E_c(t)=\frac{1}{2}mv(t)^2$, por lo que: $$E_c(t)=\frac{1}{2}m\omega^2\bigl]A\cos\left(\omega t+\varphi_0\right)\bigr]^2$$ Sustituyendo: $${E_c(t)=0.2\text{ J}\cos^2\left(22.4 t+\pi/2\right)}$$
+
+La energía mecánica $E_m=E_p+E_c$ se conserva y por lo tanto no varía con el tiempo. Podemos utilizar cualquier instante para calcularlo, por ejemplo el instante en que $E_c=0$. Vimos que en ese instante, la energía potencial es máxima, por lo tanto $E_p=0.2 \text{ J}$. Entonces, $${E_m=0.2\text{ J}}$$
+
+Fíjese que dado que las amplitudes de la energía potencial y cinética son iguales. Esto debe ser así, ya que la energía mecánica coincide con el máximo de cualquiera de ellas.
+
+En la siguiente figura se representan estas funciones:
+
+::: {style="text-align:center;"}
+![](figuras/prob2-graph.png){width="25%"}
+:::
+
+::::
+
+:::::
+
+:::::{.callout-caution title="Ejercicio 4" collapse="false" icon="false"}
+Una masa de $20\text{ g}$ está en el origen y sujeta a un muelle horizontal de constante $k=10 \text{ N/m}$. En el instante inicial se coloca la masa en la posición de equilibrio y se le imprime una velocidad de $4.48 \text{ m/s}$. Escriba la ecuación que describe la posición en función del tiempo, la velocidad, la aceleración, la fuerza ejercida por el muelle, su energía potencial, la energía cinética de la masa y la energía mecánica. Represente gráficamente cada una de estas funciones.
+
+::::{.callout-caution title="Solución" collapse="true" icon="false"}
+Con las características de este sistema, la frecuencia angular será igual que en el problema anterior: $$\omega=\sqrt{\frac{k}{m}}=\sqrt{\frac{10}{0.02}}=22.4\text{ rad/s}$$ Y el periodo será: $$T=\frac{2\pi}{\omega}=\frac{2\pi}{22.4\text{ rad/s}}=0.28\text{ s}$$ La forma general del movimiento es: $$x(t)=A\sin\left(\omega t+\varphi_0\right)$$ Y su velocidad: $$v(t)=\omega A\cos\left(\omega t+\varphi_0\right)$$ Pero en este caso, en el instante inicial la masa está en la posición de equilibrio. Esto quiere decir que: $$x(0)=0=A\sin\left(\varphi_0\right)$$ Condición que se cumple si $\varphi_0=0$. Por otro lado, la velocidad inicial es 4.48 m/s, es decir $$v(0)=4.48=\omega A\cos\left(\varphi_0\right)=\omega A$$ donde se ha utilizado que $\cos\left(\varphi_0\right)=\cos 0=1$. Como $\omega=22.4 \text{ rad/s}$, entonces: $$A=\frac{v(0)}{\omega}=\frac{4.48\text{ m/s}}{22.4\text{ rad/s}}=0.2\text{ m}$$ Por lo tanto: $${x(t)=0.2\sin\left(22.4 t\right)\text{ m}}$$ $${v(t)=4.48\cos\left(22.4 t\right)\text{ m/s}}$$ Vemos que la solución es la misma, pero con una fase inicial $\varphi_0=0$, por lo que: $${a(t)=-100.4\sin\left(22.4 t\right)\text{ m/s}^2}$$ $${F(t)=-2\sin\left(22.4 t\right)\text{ N}}$$ $${E_p(t)=0.2\sin^2\left(22.4 t\right)\text{ J}}$$ $${E_c(t)=0.2\cos^2\left(22.4 t\right)\text{ J}}$$ $${E_m=0.2\text{ J}}$$
+
+En la siguiente figura se representan estas funciones:
+
+::: {style="text-align:center;"}
+![](figuras/prob2-graph2.png){width="25%"}
+:::
+En estas figuras vemos que la diferencia fundamental es el momento del ciclo en el que comienza la oscilación.
+::::
+
+:::::
+
+::::{.callout-caution title="Ejercicio 5" collapse="false" icon="false"}
+
+A un resorte, cuya longitud natural, cuando está colgado de un punto fijo es de $25 \text{ cm}$, se le cuelga una masa de $80 \text{ g}$, unida a su extremo libre. Cuando esta masa está en posición de equilibrio, la longitud del resorte es de $33 \text{ cm}$. La masa se impulsa $8 \text{ cm}$ hacia abajo y se suelta. Calcule:
+
+1.  La constante recuperadora del muelle.
+
+2.  Las expresiones de la elongación y de la velocidad, tomando como referencia la posición de equilibrio de resorte-masa.
+
+3.  Los valores máximos de las magnitudes anteriores.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+
+- En este caso, el sistema está en posición vertical, por lo que además de la fuerza del muelle tendremos la fuerza gravitatoria. Esto se muestra en el siguiente esquema:
+
+  ::: {style="text-align:center;"}
+  ![](figuras/prob2-muelle_vertical.png){width="25%"}
+  :::
+
+  En el segundo dibujo, el objeto está en equilibrio. Por lo tanto, $$\sum\vec{F}=0$$ Las fuerzas que actúan son la fuerza del muelle $\vec{F}_k=-k(l-l_0)\hat{\jmath}$ y la fuerza gravitatoria $\vec{P}=mg\hat{\jmath}$. Por lo tanto, $$-k(l-l_0)\hat{\jmath}+mg\hat{\jmath}=0$$ de donde: $$k=\frac{mg}{l-l_0}=\frac{0.08\text{ kg}\cdot 9.8\text{m/s}^2}{0.33\text{ m}-0.25\text{ m}}={9.8\text{ N/m}}$$
+
+- El objeto realizará oscilaciones en torno a la posición de equilibrio. Si llamamos $y$ la distancia desde esta posición, tal y como se muestra en la figura anterior, entonces: $$y(t)=A\sin\left(\omega t+\varphi_0\right)$$ siendo $$\omega=\sqrt{\frac{k}{m}}=\sqrt{\frac{9.8\text{ N/m}}{0.08\text{ kg}}}=11.1\text{ rad/s}$$ Para conocer $A$ y $\varphi_0$ tenemos que tener en cuenta, al igual que en los ejercicios anteriores, las condiciones en el instante inicial. Como $y(0)=0.33 \text{ m}$ y $v(0)=0$. Con esto tendremos: $$A=y(0)=0.33\text{ m}$$ $$\varphi_0=\pi/2\text{ rad}$$ Por lo cual: $${y(t)=0.33\sin\left(11.1 t+\pi/2\right)\text{ m}}$$ Fíjese que en efecto, $y(t=0)=0.33\sin\left(\pi/2\right)\text{ m}=0.33$ m.
+
+  Para la velocidad: $$v(t)=\frac{dy}{dt}=\omega A\cos\left(\omega t+\varphi_0\right)$$ Y sustituyendo: $${v(t)=3.66\cos\left(11.1 t+\pi/2\right)\text{ m/s}}$$ Fíjese que en efecto, $v(t=0)=0.33\cos\left(\pi/2\right)\text{ m}=0$.
+
+- Dado que el valor máximo tanto del seno como del coseno es 1, los valores máximos de la posición y la velocidad serán: $${x_{max}=A=0.33\text{ m}}$$ $${v_{max}=\omega A=3.66\text{ m/s}}$$
+:::
+
+::::
+
+:::::{.callout-caution title="Ejercicio 6" collapse="false" icon="false"}
+
+El péndulo de la figura tiene una longitud de $3 \text{ m}$. Inicialmente se separa de la vertical un ángulo $3^\circ$ y se suelta. Calcular:\
+
+1.  El periodo de las oscilaciones.
+
+2.  El máximo desplazamiento desde la vertical.
+
+3.  El tiempo que tarda en pasar por la vertical.
+
+4.  La posición en el instante $t=2 \text{ s}$.
+
+5.  La dirección del movimiento en ese mismo instante.
+
+::: {style="text-align:center;"}
+![](figuras/prob2-pendulo1.png){width="25%"}
+:::
+
+::::{.callout-caution title="Solución" collapse="true" icon="false"}
+
+1.  Dadas las características, como el ángulo es pequeño, el péndulo realiza un M.A.S. con frecuencia: $$\omega=\sqrt{\frac{g}{L}}$$ Y por lo tanto, el periodo: $$T=2\pi\frac{1}{\omega}=2\pi\sqrt{\frac{L}{g}}$$ Sustituyendo los valores del problema: $$T=2\pi\sqrt{\frac{3\text{ m}}{9.8\text{ m/s}^2}}={3.48\text{ s}}$$
+
+2.  Dado que la energía cinética inicial es nula, la energía mecánica es únicamente energía potencial, es decir, en esta posición, la energía potencial es máxima. Por tanto, el desplazamiento es también máximo. En la siguiente figura se muestra un esquema de la posición inicial.
+
+  La coordenada $x_{max}$ será: $$x_{max}=L\sin\alpha=L\sin 3^\circ={0.157\text{ m}}$$
+
+3.  Dado que parte de la máxima distancia, el paso por la vertical es $1/4$ de ciclo, por tanto tardará $T/4$: $$t=\frac{T}{4}=\frac{3.48}{4}={0.869\text{ s}}$$
+
+4.  Para calcularlo utilicemos: $$x(t)=A\sin\left(\omega t+\varphi_0\right)$$ Dadas las condiciones del problema, como parte del reposo: $$v(0)=\omega A\cos\left(\omega\cdot 0+\varphi_0\right)=0$$ Por lo que $\varphi=\pi/2$. La posición en el instante inicial queda: $$x(0)=L\sin\alpha=A\sin\pi/2=A$$ Por lo que: $$A=x(0)=0.157\text{ m}$$ Y la frecuencia angular de las oscilaciones: $$\omega=\sqrt{\frac{g}{L}}=\sqrt{\frac{9.8\text{ m/s}^2}{3\text{ m}}}=1.81\text{ rad/s}$$ Así, la posición en cualquier instante la podemos calcular con la función: $$x(t)=0.157\sin\left(1.81 t+\pi/2\right)\text{ m}$$ En particular, la posición a los 2 s: $$x(t-2\text{ s})=0.157\sin\left(1.81\cdot 2+\pi/2\right)\text{ m}={-0.139\text{ m}}$$ Es decir, a la izquierda de la vertical, como se muestra en la figura:
+
+::: {style="text-align:center;"}
+![](figuras/prob2-pendulo2.png){width="25%"}
+:::
+
+5.  La velocidad será: $$v(t)=\omega A \cos\left(\omega t+\varphi_0\right)=0.284\cos\left(1.81 t+\pi/2\right)\text{ m/s}$$ Y sustituyendo $t=2 \text{ s}$, $$v(t)=0.284\cos\left(1.81\cdot 2+\pi/2\right)\text{ m/s}={0.131\text{ m/s}}$$ Es decir, se mueve en la dirección positiva del eje $x$.
+::::
+
+:::::
+
+::::{.callout-caution title="Ejercicio 7" collapse="false" icon="false"}
+
+Se separa un péndulo 3$^\circ$ de la vertical y se observa que el periodo de las oscilaciones es $T=2.5 \text{ s}$. Si ahora se separa el péndulo 6$^\circ$, ¿cuál será el periodo de estas oscilaciones?
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+Dado que en ambos casos la desviación de la vertical es pequeña, el periodo vendrá dado por $T=2\pi\sqrt{\frac{L}{g}}$, independiente de la amplitud de las oscilaciones. Por tanto, el periodo será el mismo: $T=2.5 \text{ s}$.
+:::
+
+::::
+# 2.  Ondas 
+
+Una onda (o movimiento ondulatorio) se puede definir como una perturbación que se propaga de unos puntos a otros del espacio. También se define como un trasporte de energía de un punto del espacio a otro sin que haya transporte neto de materia. Ejemplos de ondas son: onda en una cuerda, en la superficie del agua, el sonido, o las ondas electromagnéticas.
+
+## 2.1. El pulso
+
+Podemos imaginarnos una onda de manera esquemática como se muestra en la figura. Tenemos una cuerda horizontal y tensa infinitamente larga y sujeta en un extremo a un muelle que se fuerza a oscilar. En un cierto tiempo $T/4$, concretamente) se habrá levantado el extremo. La tensión de la cuerda provocará que el segmento adyacente se levante a continuación. En este tiempo, el muelle comienza a descender, tirando de nuevo de la cuerda hacia abajo, de modo que en la cuerda se van sucediendo las situaciones mostradas en la figura. Transcurrido un cierto tiempo observaremos que un segmento cualquiera de cuerda que inicialmente estaba en reposo, y que por tanto no tenía energía mecánica, comienza a oscilar, es decir, adquiere energía potencial elástica y energía cinética procedente del muelle oscilante.
+
+:::{style="text-align:center;"}
+![](figuras/teoria-cuerda_oscilante.png){width="55%"}
+:::
+
+Vemos por tanto que se propaga energía de izquierda a derecha sin desplazamiento de materia (la cuerda sólo oscila en la dirección vertical). **A esta propagación de energía lo llamamos onda**. Al emisor de este pulso lo llamamos **fuente**.
+
+Si el muelle sigue oscilando, entonces, al cabo de un tiempo todos los segmentos de la cuerda se pondrán también a oscilar. Si nos fijamos en un segmento concreto, entonces veremos que está haciendo una oscilación en la dirección vertical:
+
+$$y(t)=A\text{sen}\left(\omega t+\varphi_0\right)$$ 
+donde la fase inicial dependerá del segmento qu estemos mirando. Es decir, depende de la coordenada $x$. Si en vez de fijarnos en un segmento concreto, hacemos una foto en un instante cualquiera, entonces veremos que la cuerda tiene la forma de una función seno. Cada cierta distancia nos encontraremos que la cuerda está haciendo exactamente lo mismo que el muelle. Esta distancia entre dos puntos de la cuerda que ejecutan exactamente el mismo movimiento se llama **longitud de onda** y se designa por la letra griega $\lambda$.
+
+## 2.2. Tipos de onda
+
+En el caso anterior vemos que hay dos desplazamientos diferentes. Por un lado, cada segmento se mueve en la dirección vertical. Por otro lado, el muelle continúa su oscilación produciendo continuamente una perturbación sobre la cuerda que se propaga hacia la derecha en la dirección horizontal. Ambos desplazamientos, movimiento de la cuerda y perturbación, se producen en direcciones perpendiculares. Cuando se da este tipo de situación, decimos que la onda es **transversal**.
+
+En la siguiente figura tenemos un tubo en el que hay un gas, por ejemplo aire. En el extremo izquierdo hay una membrana como la de un tambor. Deformamos la membrana rápidamente y la hacemos vibrar como se ve en la segunda figura. La densidad, y por tanto la presión, en esa zona aumentará, por lo que el aire se desplazará hacia la derecha. En ese tiempo, la membrana se dirige hacia la derecha como se ve en la figura tercera. Cuando vuelve, generará un nuevo pulso de alta presión. Al cabo de un tiempo se obtiene la imagen de la última figura, donde la presión pasa alternativamente de alta a baja a medida que nos desplazamos por el tubo.
+
+:::{style="text-align:center;"}
+![](figuras/teoria-tambor.png){width="50%"}
+:::
+
+En este caso, el desplazamiento del aire y la perturbación llevan la misma dirección. Se dice que la onda es **longitudinal**.
+
+Finalmente, hay ondas que no son ni puramente longitudinales ni transversales. Un ejemplo son las olas del mar, en las que el agua ejecuta movimientos circulares como el de la figura.
+
+:::{style="text-align:center;"}
+![](figuras/teoria-ola.png){width="50%"}
+:::
+
+Todas estas ondas tienen una característica común: se propagan en una única dirección. Se dice que son **monodimensionales**. También pueden ser **bidimensionales**, si se extiende en dos dimensiones, como el caso de la onda producida por una piedra en el agua, o la estela de un barco, o **tridimensionales**, si se propaga en tres dimensiones, como el caso del sonido en el espacio.
+
+Ya sean monodimensionales o no, longitudinales o transversales, todos los ejemplos mostrados tienen una cosa en común: necesitan un medio para propagarse. Por ello, se les llama **ondas mecánicas**. Si por el contrario no necesitan de un medio material, como es el caso de la luz, se les llama **ondas electromagnéticas**. En resumen:
+
+\
+
+  -----------------------------------------------------------------------------------
+                      Tipo                                    Ejemplo
+  -------------------------------------------- --------------------------------------
+       **Necesidad de un medio material**      
+
+                   Mecánicas                        Sonido, onda en la cuerda,\
+                                                             terremotos
+
+               Electromagnéticas                       Luz, microondas, radio
+
+          **Dirección de propagación**         
+
+               Monodimensionales                       Cuerda, tubo de sonido
+
+                Bidimensionales                 Ondas en una plataforma vibratoria,\
+                                                  ondas en la superficie del agua
+
+                Tridimensionales                            Luz, sonido
+
+   **Relación entre propagación y vibración**  
+
+                 Longitudinales                                Sonido
+
+                 Transversales                   Onda en la cuerda, luz en el vacío
+
+                     Mixtas                                     Olas
+  -----------------------------------------------------------------------------------
+
+## 2.3. Magnitudes características de una onda
+
+### Velocidad de la onda
+
+Tomemos el ejemplo anterior de la cuerda horizontal estirada. El impulso que produce el muelle tarda un tiempo en llegar al final de la cuerda. En el caso del sonido o cualquier otra onda, el pulso producido por la fuente tarda siempre un tiempo en llegar a cualquier receptor ya que viaja a una velocidad finita. La velocidad a la que viaje el pulso o perturbación producido por la fuente lo llamamos **velocidad de la onda**. Esta velocidad depende de las características del medio por el que viaja.
+
+No debe confundirse esta velocidad con la velocidad de vibración. En una onda existen dos velocidades:
+
+- La velocidad de vibración de las partículas. Esta es la velocidad a la que se mueven las partículas al oscilar y se calcula como la variación temporal de su posición: 
+$\frac{d y}{d t}$.
+
+- La velocidad de la onda. Se suele designar con la letra $v$. Esta es la velocidad a la que se transmite la perturbación de unos puntos a otros del medio por el que se propaga la onda. Por ejemplo, la velocidad de la luz en el vacío es $3\cdot 10^8$ m/s. La velocidad del sonido en el aire es 340 m/s. No está relacionado con la posición de ninguna partícula. Depende de las características elásticas y la densidad del medio.
+
+::::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+Una cuerda estirada horizontal se levanta repentinamente en un extremo una altura de $20\text{ cm}$ y se vuelve a bajar a la posición inicial. En total el extremo tarda $0.1\text{ s}$ en bajar desde la posición más alta. Se observa que dicho pulso se propaga por la cuerda de modo que recorre $5 \text{ m}$ en $2 \text{ s}$. Hacer un esquema de la situación inicial cuando se levanta la cuerda, cuando han pasado $0.1\text{ s}$ y cuando han pasado $2 \text{ s}$.
+
+::::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+:::{style="text-align:center;"}
+![](figuras/prob1.png){width="55%"}
+:::
+
+
+La primera figura muestra la situación inicial en la que el extremo está levantado $20 \text{ cm}$. En la segunda el extremo ha bajado a su posición inicial y el pulso se ha trasladado una cierta distancia. En la tercera, el pulso se encuentra a $5 \text{ m}$ y el resto está en reposo ya que sólo se ha producido un pulso.
+::::
+:::::
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+En el ejemplo anterior, ¿cuál es la velocidad de la onda?
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+La velocidad de la onda es la velocidad a la que viaja el pulso. Por tanto: $$v=\frac{v}{t}=\frac{5 \text{ m}}{2 \text{ s}}=2.5\text{ m/s}$$
+:::
+::::
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+¿Cuál es la velocidad media del extremo de la cuerda?
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+La velocidad del extremo de la cuerda es la velocidad a la que se mueve. Por tanto: $$v_c=\frac{20 \text{ cm}}{0.1 \text{ s}}=2\text{ m/s}$$
+:::
+::::
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+¿Determinar la posición del pulso cuando el extremo vuelve a la posición horizontal
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+La posición del pulso es la distancia recorrida por éste. Como la velocidad de la onda es $2.5 \text{ m/s}$, en $0.1\text{ s}$ habrá recorrido: 
+$$v_2=vt=2.5 \text{ m/s} \cdot 0.1\text{ s} = 0.25 \text{ m}$$
+:::
+::::
+
+::::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+¿Cuál será la anchura del pulso?
+
+::::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+Cuando el extremo de la cuerda vuelve a su posicián inicial, el pulso está totalmente desarrollado. Esto ocurre $0.1 \text{ s}$ después de tenerlo en su punto más alto. En el apartado anterior encontramos que en ese instante, el punto de mayor altura se habrá desplazado a $0.25 \text{ m}$. La siguiente figura esquematiza esta situación:
+
+:::{style="text-align:center;"}
+![](figuras/prob1_v.png){width="45%"}
+:::
+::::
+
+Luego, esa distancia es justamente la mitad de la anchura del pulso. Es decir la anchura del pulso es $0.5 \text{ m}$.
+:::::
+
+### Periodicidad de la onda
+
+Supongamos que hacemos vibrar un extremo de la cuerda, el periodo $T$ (señalado en azul en la figura siguiente) es el tiempo que tarda en ejecutar un ciclo completo. Durante este tiempo, la perturbación habrá recorrido una distancia $vT$ (señalado en verde en la figura), de modo que transcurrido un tiempo $T$, ambos puntos se encuentran exactamente en la misma posición. Dado que el extremo sigue vibrando, se siguen propagando pulsos por la cuerda. Estos pulsos son periódicos, al igual que la vibración del extremo. Por tanto, si esperamos otro tiempo $T$, entonces, el extremo y los puntos situados a una distancia $vT$ y $2vT$ se encontrarán en la misma posición y así sucesivamente. Si detenemos el tiempo (podemos imaginarnos esta situación si hacemos una foto a la cuerda), nos encontraremos que la posición de la cuerda se repite periódicamente en intervalos espaciales $vT$. Esta es la periodicidad espacial, conocida como **"longitud de onda\"**. La longitud de onda se designa con la letra griega $\lambda$ y se mide en metros en el S.I.
+
+:::{style="text-align:center;"}
+![](figuras/teoria-lambda.png){width="50%"}
+:::
+
+> La longitud de onda es la mínima distancia entre dos puntos del medio por el que se propaga la onda que se mueven de la misma forma. Se calcula como:
+>
+> $$\lambda=vT$$
+
+Para describir las ondas, es usual utilizar también el llamado **"número de ondas"**. Se calcula como: 
+$$k=\frac{2\pi}{\lambda}$$
+y se mide en $\text{ m}^{-1}$.
+
+Por tanto, en una onda existe una doble periodicidad:
+
+- Temporal: El extremo de la cuerda está vibrando, por lo que su posición se repite cada periodo de tiempo $T$. Esta perturbación se propaga por la cuerda. Por lo tanto, si nos fijamos en un cierto punto de la cuerda situado a una distancia $x$ del extremo, observaremos que realiza el mismo movimiento que el extremo, es decir, una oscilación con un mismo periodo $T$. Dado que esta perturbación tarda un tiempo $t=x/v$ en llegar desde el extremo hasta dicho punto, entonces, observamos que realiza el mismo movimiento, pero retrasado.
+
+- Espacial: Cuando el extremo llega a su punto más alto, en la cuerda habrá puntos que también están en su punto más alto. Por tanto, en un instante concreto, la situación en la que se encuentra el extremo se repite en puntos de la cuerda equidistantes. La distancia entre estos puntos es la longitud de onda.
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+En la siguiente figura, determine la distancia entre los puntos indicados, en términos de la longitud de onda $\lambda$.
+
+:::{style="text-align:center;"}
+![](figuras/ejemplo_lambda.png){width="55%"}
+:::
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+Por definición, $x_1 = \lambda$.\
+Los extremos de $x_2$ están en la misma posición y tienen la misma velocidad: la distancia entre ellos también es la longitud de onda:
+$$x_2 = \lambda$$
+Los extremos de $x_3$ están en la misma posición pero la velocidad es diferente: $A$ tiene velocidad negativa y $C$ positiva. Luego
+$$x_3 = \frac{\lambda}{2}$$
+Para saber la velocidad de un punto de la cuerda tenemos que fijarnos en el lado por el que viene la perturbación. En el ejemplo, la onda se dirige hacia la derecha. Por ejemplo, el punto $A$, tiene a su izquierda un tramo de cuerda que se encuentra por debajo. Por lo tanto, en instantes posteriores, dicho punto de la cuerda bajará, es decir, en el instante indicado en la figura, el punto $A$ tiene velocidad negativa. El punto $C$, sin embargo, tiene a su izquierda un tramo que está a mayor altura y por lo tanto, como reacción, en instantes posteriores se espera que $C$ suba, es decir, tiene velocidad positiva.
+:::
+::::
+
+
+### Amplitud de la onda
+
+Dado que el extremo ejecuta oscilaciones, su separación del equilibrio no superará un cierto valor, que es la amplitud de la oscilación. Por tanto, ningún segmento de la cuerda superará esta separación del equilibrio. Esta máxima distancia de separación del equilibrio se llama **"Amplitud\"** $A$, en rojo en la figura anterior). Sus unidades son las mismas que tenga la perturbación. En el caso de la onda en la cuerda, la perturbación es un desplazamiento, por lo que $A$ se mide en metros.
+
+## 2.4. Ecuación de la onda armónica
+
+Al igual que la ecuación de una vibración describe la posición del oscilador en cualquier instante de tiempo, la ecuación de ondas debe describir la posición temporal de todos los puntos por los que se propaga la onda. Imaginemos que se trata de una onda transversal como la de la cuerda. Entonces la ecuación de ondas debe ser una función del tipo: 
+$$y(x,t)$$
+Es decir, la posición $y$ en el instante $t$ del segmento de cuerda o punto del espacio situado a una distancia $x$ de la fuente que produce la onda.
+
+Decimos que una onda es armónica cuando se puede describir matemáticamente mediante una función seno o coseno. Si la fuente ejecuta una oscilación armónica simple: $$y(0,t)=A\sin\left(\omega t\right)$$ Entonces, en cualquier otro punto encontraremos: 
+$$y(x,t)=A\sin\left(\omega t-kx\right)$$
+Esta es la ecuación de una onda armónica.
+
+:::: {.callout-note title="Ejemplo:" collapse="false" icon="false"}
+Una onda se desplaza por una cuerda de acuerdo con la siguiente ecuación: $y(x, t) = (2000\pi t − 20x)$. Determine:
+
+-La altura máxima a la que podremos encontrar cualquier segmento de la cuerda.
+-La frecuencia angular de la onda.
+-El periodo.
+-La longitud de onda.
+-La velocidad de la onda.
+-La posición y velocidad de un segmento situado a 2 m de la fuente en cualquier instante.
+
+:::{.callout-note title="Solución:" collapse="true" icon="false"}
+
+En general, sabemos que: 
+$$y(x,t)=A\sin\left(\omega t-kx\right)$$
+
+$A = 1\text{ m}$. Esta es la amplitud del movimiento en cualquier punto de la cuerda, luego también es la máxima altura que se puede alcanzar.
+
+Si comparamos con la ecuación general, la frecuencia angular \omega será: $$\omega=2000\pi \text{ rad/s}$$
+
+Dado $T=\frac{2\pi}{\omega}$ entonces $$T=10^{-3} \text{ s}$$
+
+En la ecuación de ondas tenemos también $k = 20 \text{ m}^{−1}$.Como $k=\frac{2\pi}{\lambda}$, entonces la longitud de onda es $\lambda=\frac{2\pi}{k}$.Sustituyendo valores: $$\lambda=0.314 \text{ m}$$
+
+La velocidad la podemos obtener teniendo en cuenta que $\lambda=vT$, luego $v=\lambda/T$. Sustituyendo: $$v = \frac{0.314 \text{ m}}{10^{-3} \text{ s}} = 314 \text{ m/s}$$
+
+Es decir $x=2 \text{ m}$. Sustituyendo en la ecuación de ondas: $$y(x=2,t) = A\sin(\omega t-40)$$ Y la velocidad de este segmento es su velocidad de vibración en la dirección vertical: $$v_v=\frac{d_y}{d_t} = A\omega\cos(\omega t -kx)$$ Sustituyendo los valores que conocemos de $A$, $\omega$, $k$ y $x$: $$v_v=2000\pi \cos(2000\pi t - 40) \text{ m/s}$$
+:::
+::::
+
+## 2.4.  Ondas estacionarias
+Una onda estacionaria es el resultado de la superposición de dos ondas armónicas que se propagan en sentidos opuestos. En la siguiente figura se muestra un ejemplo de onda estacionaria en una cuerda. La cuerda está sujeta en ambos extremos y se hace oscilar en el centro. La onda que se propaga hacia la derecha se refleja en el extremo derecho y vuelve hacia la izquierda. La onda que se propaga hacia la izquierda se refleja en el extremo izquierdo y vuelve hacia la derecha. La superposición de ambas ondas produce una onda estacionaria.
+
+La ecuación de una onda estacionaria se puede escribir como:
+$$y(x,t)=2A\sin(kx)\cos(\omega t)$$
+donde $A$ es la amplitud de las ondas que se superponen, $k$ es el número de onda y $\omega$ es la frecuencia angular. En esta ecuación, la parte $\sin(kx)$ representa la variación espacial de la onda, mientras que $\cos(\omega t)$ representa la variación temporal.
+
+Los puntos donde $\sin(kx)=0$ son los nodos, donde la cuerda no se mueve. Los puntos donde $\sin(kx)=\pm 1$ son los antinodos o vientres, donde la cuerda alcanza su máxima amplitud.
+
+Se puede observar que la onda estacionaria no se propaga, sino que oscila en su lugar. Esto es característico de las ondas estacionarias, que se forman por la interferencia de dos ondas que se mueven en direcciones opuestas.
+
+## 2.5. Ejercicios de ondas
+
+::::{.callout-caution title="Ejercicio 1" collapse="false" icon="false"}
+En la siguiente figura se muestra un instante particular de una onda propagándose por una cuerda. El muelle oscila a una frecuencia $10\pi \text{ rad/s}$. La velocidad de propagación de la onda es $5 \text{ m/s}$.
+
+- Calcule la longitud de onda y el número de onda.
+
+- Calcule la distancia entre los puntos $A$ y $B$, entre los puntos $A$ y $C$ y entre los puntos $D$ y $F$.
+
+- Indique el signo de la velocidad en los puntos $A$, $B$ y $C$.
+
+:::{style="text-align:center;"}
+![](figuras/ejemplo_lambda.png){width="50%"}
+:::
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+
+- La longitud de onda se calcula a partir de $\lambda=vT$. Necesitamos el periodo: $$T=\frac{2\pi}{\omega}=\frac{2\pi}{10\pi\text{ rad/s}}=0.2\text{ s}$$ Finalmente: $$\lambda=vT=5\text{ m/s}\cdot 0.2\text{ s}=1\text{ m}$$
+
+- En cuanto a la distancia entre los puntos:
+  - La distancia entre $A$ y $B$ es 1/4 de la longitud de onda, es decir, $0.25\text{ m}$.
+  - La distancia entre $A$ y $C$ es 1/2 de la longitud de onda, es decir, $0.5\text{ m}$.
+  - La distancia entre $D$ y $F$ es la longitud de onda, es decir, $1\text{ m}$.
+
+-En cuanto al signo de la velocidad:
+  - El tramo a la izquierda de $A$ está por debajo, luego $A$ está bajando: $v_A<0$\
+  - El tramo a la izquierda de $B$ está por debajo, luego $B$ está bajando: $v_B<0$\
+  - El tramo a la izquierda de $C$ está por encima, luego $C$ está subiendo: $v_C>0$\
+
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 2" collapse="false" icon="false"}
+Una onda armónica se describe con la siguiente ecuación: $$y(x,t)=0.05\sin\left[2\pi\left(\frac{t}{0.001}-\frac{x}{4}\right)\right]\text{ m}$$ Determine:
+
+- La amplitud del movimiento
+
+- El periodo y la longitud de onda
+
+- La frecuencia angular y el número de onda
+
+- La fase en un punto situado a $2 \text{ m}$ de la fuente en el instante $0.5 \text{ ms}$
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+
+La ecuación de ondas me describe la posición de una partícula situada a una distancia $x$ de la fuente en un instante cualquiera $t$. En este caso se trata de un movimiento oscilatorio en la dirección $y$.
+
+Es el valor máximo que puede adquirir la función. Dado que la función seno vale como máximo 1, entonces $A=0.05 \text{ m}$, es decir, lo que acompaña a la función seno.
+
+Si nos fijamos en la forma general de la ecuación de ondas: $y(x,t)=A\sin\left(\omega t-kx\right),$ entonces la frecuencia angular es el prefactor del tiempo, es decir, $\omega=\frac{2\pi}{0.001}$. Como $\omega=2\pi f=\frac{2\pi}{T}$, comparando tenemos $\frac{2\pi}{T}=\frac{2\pi}{0.001}$ Y por tanto, $T=0.001 \text{ s}$. Del mismo modo, $k$ es el prefactor de $x$, por lo que: $$k=\frac{2\pi}{4}$$ Y como $k=\frac{2\pi}{\lambda}$, entonces $\lambda=4\text{ m}$
+
+$$\omega=\frac{2\pi}{T}=2000\pi\text{ rad/s}$$ $$k=\frac{2\pi}{\lambda}=0.5\pi\text{ m}^{-1}$$
+
+La fase es $\varphi=\left(\omega t-kx\right)$, por lo que: $$\varphi=\left(2000\pi\text{ rad/s}\cdot 0.5\cdot 10^{-3}\text{ s}-0.5\pi\text{ m}^{-1}\cdot 2\text{ m}\right)=0$$
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 3" collapse="false" icon="false"}
+Una onda armónica se describe con la siguiente ecuación: $$y(x,t)=0.3\sin\left(0.2t-4x\right) \text{ m}$$ Determine:
+
+- La amplitud, periodo, longitud de onda y velocidad de la onda.
+
+- La fase del movimiento en un punto por el que pasa la onda, situado a $0.2 \text{ m}$ de la fuente, en el instante $t=11 \text{ s}$.
+
+- La posición de dicho punto en ese instante.
+
+- La velocidad de movimiento de dicho punto en ese instante.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+De nuevo, $A$ es el factor que acompaña a la función armónica: $$A=0.3\text{ m}.$$ Para calcular el periodo nos fijamos en el prefactor del tiempo. Este prefactor es la frecuencia angular, es decir: $\omega=0.2 \text{ rad/s}$. Como $T=2\pi/\omega$: $$T=\frac{2\pi}{0.2\text{ rad/s}}=10\pi\text{ s}=31.4\text{ s}.$$ Para calcular la longitud de onda nos fijamos en el prefactor de la posición $x$. Este prefactor es el número de onda $k=2\pi/\lambda$ luego $$\lambda=\frac{2\pi}{k}=\frac{2\pi}{4\text{ m}^{-1}}=0.5\text{ m}=1.57\text{ m}$$ Finalmente, la velocidad de la onda: $$v=\frac{\lambda}{T}=\frac{0.5\pi\text{ m}}{10\pi\text{ s}}=0.05\text{ m/s}.$$
+
+La fase es el argumento de la función trigonométrica, luego: $$\varphi=0.2t-4x=0.2\cdot 11-4\cdot 0.2= 1.4\text{ rad}$$
+
+La ecuación de ondas me da justamente la posición de dicha partícula. Sustituyendo $x=0.2 \text{ m}$ y $t=11 \text{ s}$, $$y(x=0.2,t=11)=0.3\sin\left(0.2\cdot 11-4\cdot 0.2\right)\text{ m}=0.296\text{ m}$$
+
+El medio por el que circula la onda ejecuta movimientos oscilatorios en la dirección vertical. Dado que tenemos la posición en cualquier $y$ instante, podemos calcular la velocidad de vibración mediante. Lo hacemos primero en general: $$y(x,t)=A\sin\left(\omega t-kx\right)$$ $$v_{vib}(x,t)=\frac{\text{d}y}{\text{d}t}=\omega A\cos\left(\omega t-kx\right)$$ Y ahora particularizamos para la onda de este problema: $$v_{vib}(x,t)=0.06\cos\left(0.2t-4x\right)\text{ m/s}$$ Vemos que no es constante, sino que depende del instante y del punto del espacio que esté mirando. Sustituyendo para el caso particular que nos piden: $$v_{vib}(x=0.2,t=11)=0.06\cos\left(0.2\cdot 11-4\cdot 0.2\right)\text{ m/s}=0.0102\text{ m/s}$$
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 4" collapse="false" icon="false"}
+Una onda armónica de amplitud $20 \text{ cm}$ se propaga por una cuerda horizontal con un periodo de $2 \text{ ms}$ y una longitud de onda de $3 \text{ m}.$
+
+- Determinar la ecuación que rige el movimiento de una partícula que se encuentra a $1.5 \text{ m}$ de la fuente.
+
+- Determinar la fase de este punto $2 \text{ s}$ después de iniciado el movimiento.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+En general, la ecuación de la onda es: $$y(x,t)=A\sin\left(\omega t-kx\right)$$ En este caso, $$\omega=2\pi f=\frac{2\pi}{T}=\frac{2\pi}{2\cdot 10^{-3}\text{ s}}=1000\pi\text{ rad/s}$$ $$k=\frac{2\pi}{\lambda}=\frac{2\pi}{3\text{ m}}=0.67\pi\text{ m}^{-1}$$ $$A=0.2\text{ m}$$ Por lo tanto, en cualquier punto de la cuerda se tendrá: $$y(x,t)=0.2\sin\left(1000\pi t-0.67\pi x\right)\text{ m}$$ Y en particular, si $x=1.5 \text{ m}$: $$y(t)=0.2\sin\left(1000\pi t-\pi\right)\text{ m}$$ Es decir, una oscilación con una fase inicial $-\pi$. 
+
+Sustituyendo $t=2 \text{ s}$: $$y(t=2\text{ s})=0.2\sin\left(1000\pi 2-\pi\right)\text{ m}=0$$ En efecto, dado que el periodo es $2\cdot 10^{-3} \text{ s}$, cuando pasen 2 s habrá ejecutado $2/0.002=1000$ oscilaciones completas, y por lo tanto se encontrará en la misma posición que en el instante inicial, es decir, $$y(t=2\text{ s})=0.2\sin\left(-\pi\right)\text{ m}=0$$
+
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 5" collapse="false" icon="false"}
+Una onda armónica que se propaga por un medio unidimensional tiene una frecuencia de 500 Hz y una velocidad de propagación de $350\text{ m/s}$.
+
+- ¿Qué distancia mínima hay en un cierto instante , entre dos puntos del medio que oscilan con una diferencia de fase de $60^\circ$?
+
+- ¿Cuál es la diferencia de fase de oscilación, en un cierto punto, para un intervalo de tiempo de $10^{-3} \text{ s}$?
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+La fase de la onda $\varphi$ en un punto situado a una distancia $x$ de la fuente y en un instante $t$ es $\varphi(x,t)=\omega t-kx$. Esta fase así definida tiene por unidad el radián. En este caso: $$\omega=2\pi f=2\pi\cdot500\text{ Hz}=1000\pi\text{ rad/s}$$ $$\lambda=vT=\frac{v}{f}=\frac{350\text{ m/s}}{500\text{ Hz}}=0.7\text{ m}$$ $$k=\frac{2\pi}{\lambda}=\frac{2\pi}{0.7\text{ m}}=2.85\pi\text{ m}^{-1}$$ Por lo tanto, la fase de la onda será: $$\varphi(x,t)=1000\pi t-2.85\pi x$$ Es usual utilizar la letra griega $\Delta$ para indicar diferencias. Así, $\Delta\varphi$ es la diferencia de fase. En un instante concreto, la diferencia de fase entre dos puntos será: $$\Delta\varphi=\varphi(x_1,t)-\varphi(x_2,t)=(\omega t-kx_1)-(\omega t-kx_2)=k(x_2-x_1)$$ Dado que nos dan la diferencia de fase, de la ecuación anterior tenemos que despejar la distancia entre los puntos $x_1$ y $x_2$: $$x_2-x_1=\frac{\Delta\varphi}{k}$$ Antes de operar, hay que pasar la diferencia de fase a radianes: $$\Delta\varphi=60^\circ\frac{\pi\text{ rad}}{180^\circ}=0.33\pi \text{ rad}$$ Y finalmente: $$x_2-x_1=\frac{0.33\pi}{2.85\pi\text{ m}^{-1}}=0.117\text{ m}$$
+
+En este caso, la posición es la misma y se busca la diferencia de fase entre dos instantes diferentes: $$\Delta\varphi=\varphi(x,t_1)-\varphi(x,t_2)=(\omega t_1-kx)-(\omega t_2-kx)=\omega(t_1-t_2)$$ Si $t_1-t_2=10^{-3} \text{ s}$, entonces, $$\Delta\varphi=1000\pi\text{ rad/s}\cdot 10^{-3}\text{ s}=3.14\text{ rad}$$
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 6" collapse="false" icon="false"}
+Una onda armónica transversal que se propaga en la dirección del eje $x$ tiene las siguientes características: amplitud $5 \text{ cm}$, longitud de onda $8 \text{ cm}$ y velocidad de propagación $40 \text{ cm/s}$. Determinar:
+
+- El número de onda y la frecuencia angular de la onda.
+
+- La ecuación de ondas.
+
+- La ecuación que representa el movimiento vibratorio armónico simple de la partícula de abscisa $x = 0$.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+El número de ondas es: $$k=\frac{2\pi}{\lambda}$$ siendo $\lambda=0.08 \text{ m}$ la longitud de onda que me dan en el enunciado. Sustituyendo: $$k=\frac{2\pi}{0.08\text{ m}}=78.5\text{ m}^{-1}$$ Para calcular la frecuencia angular, $\omega=\frac{2\pi}{T}$, necesitamos conocer el periodo. Cuando no tengo esta información he de fijarme en la longitud de onda o número de ondas y en la velocidad de la onda, pues: $$\lambda=vT$$ Luego: $$T=\frac{\lambda}{v}=\frac{0.08\text{ m}}{0.4\text{ m/s}}=0.2\text{ s}$$ Y finalmente la frecuencia: $$\omega=\frac{2\pi}{0.2\text{ s}}=10\pi\text{ rad/s}=31.4\text{ rad/s}$$
+
+Dado que se trata de una onda transversal, esto quiere decir que si se propaga e la dirección $x$, las partículas del medio por el que se propaga oscilan en la dirección vertical $y$. La forma general es: $$y(x,t)=A\sin\left(\omega t-kx\right)$$ Sustituyendo la amplitud, la frecuencia angular y el número de onda: $$y(x,t)=0.05\sin\left(31.4t-78.5x\right) \text{ m}$$
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 7" collapse="false" icon="false"}
+Por una cuerda tensa se propaga una onda transversal con amplitud $5 \text{ cm}$, frecuencia $50 \text{ Hz}$ y velocidad de propagación $20 \text{ m/s}$. Calcule:
+
+- La ecuación de onda $y(x, t)$.
+
+- Los valores del tiempo para los que $y(x, t)$ es máxima en la posición $x = 1 \text{ m}$.
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+La forma general para una onda transversal que se desplaza en la dirección $x$ es: $$y(x,t)=A\sin\left(\omega t-kx\right)$$ Para dar la solución, tenemos que proporcionar una ecuación en la que las únicas incógnitas sean la posición $x$ y el tiempo $t$. Los datos del problema son:\
+$A=0.05 \text{ m}$\
+$f=50 \text{ Hz}$ Hz\
+$v=20 \text{ m/s}$.\
+La frecuencia angular: $$\omega=2\pi f=2\pi \cdot 50\text{ Hz}=100\pi\text{ rad/s}$$ Para calcular $k=\frac{2\pi}{\lambda}$: Cuando no nos dan $\lambda$, nos tenemos que fijar en la frecuencia o el periodo y la velocidad de la onda, ya que como $\lambda=vT=\frac{v}{f}$: $$\lambda=\frac{20\text{ m/s}}{50\text{ Hz}}=0.4\text{ m}$$ Y por lo tanto: $$k=\frac{2\pi}{0.4\text {m}}=5\pi\text{ m}^{-1}$$ Por lo tanto: $$y(x,t)=0.05\sin\left(100\pi t-5\pi x\right) \text{ m}$$
+
+La partícula que ocupa esta posición ejecuta una oscilación vertical dada por la ecuación: $$y(x=1,t)=0.05\sin\left(100\pi t-5\pi\right)\text{ m}$$ Además, sabemos que $\sin\left(x\right)=\sin\left(x\pm 2\pi\right)=\sin\left(x\pm 4\pi\right)$, etc. Luego: $$y(x=1,t)=0.05\sin\left(100\pi t-\pi\right)\text{ m}$$ El valor máximo es 0.05 m, y se alcanza cuando la función $seno$ vale 1. Esto ocurre cuando el argumento de esta función vale $\pi/2$, $\pi/2+2\pi$, $\pi/2+4\pi$, etc. Es decir, cuando el argumento vale $\pi/2+2\pi n$. En este caso, el argumento de la función $seno$ es $\varphi=100\pi t-\pi$, por lo que, el valor máximo se alcanza si: $$\varphi=100\pi t-\pi=2\pi n+\frac{\pi}{2}$$ Despejado el tiempo de esta ecuación: $$t=\frac{2\pi n+3\pi/2}{100\pi}=0.02n+0.015\text{ s, con }n=1,2,3,\text{ etc}$$ Por ejemplo, para $n=1,2,3$ tendremos: $$t_1=0.035\text { s}$$ $$t_2=0.055\text { s}$$ $$t_3=0.075\text { s}$$
+:::
+
+::::
+
+::::{.callout-caution title="Ejercicio 8" collapse="false" icon="false"}
+Una onda periódica viene dada por la ecuación $y(t, x) = 10\sin\left[2\pi\left(50t - 0.2x\right)\right]$ en unidades del S.I. Calcule:
+
+- Frecuencia, velocidad de la onda y longitud de onda.
+
+- La velocidad máxima de una partícula del medio y los valores del tiempo t para los que esa velocidad es máxima (en un punto que dista $50 \text{ cm}$ del origen).
+
+:::{.callout-caution title="Solución" collapse="true" icon="false"}
+El prefactor del tiempo es la frecuencia angular: $\omega=2\pi \cdot 50\text{ rad/s}$. Como $\omega=2\pi f$, entonces $$f=50\text{ Hz}$$ El prefactor de la posición es el número de ondas: $k=2\pi\cdot0.2\text{ m}^{-1}$. Como $k=\frac{2\pi}{\lambda}$, entonces $$\frac{1}{\lambda}=0.2\text{ m}^{-1}\Rightarrow \lambda=\frac{1}{0.2 \text{ m}^{-1}}=5\text{ m}$$ Finalmente, la velocidad de la onda es $v=\frac{\lambda}{T}=\lambda f$, luego $$v=5\text{ m}\cdot 50\text{ Hz}=250\text{ m/s}$$
+
+Las partículas del medio están oscilando con una velocidad que no es la velocidad de la onda, sino la velocidad de vibración. Esta se calcula derivando la posición. En general: $$y(x,t)=A\sin\left(\omega t-kx\right)$$ $$v_{vib}(x,t)=\frac{\text{d}y}{\text{d}t}=\omega A\cos\left(\omega t-kx\right)$$ Y ahora particularizamos para la onda de este problema: $$v_{vib}(x,t)=3100\cos\left[2\pi\left(50t - 0.2x\right)\right]\text{ m/s}$$ Dado que la función $coseno$ vale como máximo 1, la velocidad de vibración vale como máximo $$v_{vib,max}=3100\text{ m/s}$$ Y esto ocurrirá cuando el coseno valga 1, es decir, cuando su argumento sea múltiplo de $2\pi$. Particularizando para la posición del ejercicio $x=0.5 \text{ m}$: $$\varphi=2\pi\left(50t-0.1\right)=2\pi n$$ Despejando el tiempo de esta ecuación: $$t=\frac{n+0.1}{50}=0.02n+0.002\text{ s}$$ con $n=0,1,2,$ etc.
+:::
+
+::::

@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+
+<body>
+    <div id="header">
+      <h1 class="title">Leyes del movimiento de Newton</h1>
+    </div>
+
+    <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+    
+
+
+    <section>
+        <header>
+          <h1 id="introducción">Introducción</h1>
+        </header>
+
+        <p>En este tema, introduciremos el concepto de <em>fuerza</em> en Física y veremos por qué las fuerzas son vectores. En particular, nos detendremos en los siguientes puntos:</p>
+    
+        <ol>
+            <li><p>La importancia de la fuerza neta sobre un objeto, y lo que sucede cuando la fuerza neta es cero <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(1^{\rm a}\)</span> Ley de Newton.</p></li>
+            <li><p>La relación entre la fuerza neta sobre un objeto, la masa del objeto y su aceleración <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2^{\rm a}\)</span> Ley de Newton. </p></li>
+            <li><p>La manera en que se relacionan las fuerzas que dos objetos ejercen entre sí <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(3^{\rm a}\)</span> Ley de Newton.</p></li>
+        </ol>
+
+        <p>Usaremos dos conceptos, la <strong>fuerza</strong> y la <strong>masa</strong>, para analizar los principios de la DINÁMICA, establecidos en las tres leyes que fueron enunciadas por Isaac Newton (1642-1727) en sus <em>Philosophiae Naturalis Principia Mathematica</em>. Newton tuvo en cuenta algunas ideas y observaciones que otros científicos hicieron antes que él, como Copérnico, Brahe, Kepler, y especialmente Galileo. Son leyes fundamentales, porque no pueden ser deducidas ni demostradas a través de otros principios. Newton también formuló la <strong>ley de la Gravitación Universal</strong>.</p>
+    
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Fuerzas-e-interacciones">Fuerzas e interacciones</h1>
+        </header>
+
+        <p>En el lenguaje cotidiano, una <em>fuerza</em> es un <em>empujón</em> o <em>tirón</em>. Una definición más apropiada de <em>fuerza</em> es una interacción entre dos cuerpos. La <em>fuerza</em> es una cantidad vectorial, con magnitud, dirección y sentido. Veamos cuatro tipos de fuerzas comunes:</p>
+    
+        <ol>
+            <li><p><u>Fuerza normal <span class="math inline">\(\vec{N}\)</span></u>: Cuando un objeto descansa o se empuja sobre una superficie, ésta ejerce una fuerza sobre el objeto, que es siempre perpendicular a la superficie.</p>                
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/Fuerza-Normal.png">
+                        <img alt="" src="figuras/Fuerza-Normal.png" width="60%"/>
+                        </a>
+                    </div>
+                </div> 
+            </li>
+
+            <li><p><u>Fuerza de fricción o rozamiento <span class="math inline">\(\vec{f}_r\)</span></u>: Además de la fuerza normal, una superficie puede ejercer una fuerza de fricción sobre un objeto que es paralela a la superficie y de sentido contrario al desplazamiento del objeto.</p>
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/rozamiento2.png">
+                        <img alt="" src="figuras/rozamiento2.png" width="50%"/>
+                        </a>
+                    </div>
+                </div> 
+            </li>
+
+            <li><p><u>Fuerza de tensión <span class="math inline">\(\vec{T}\)</span></u>: Es la fuerza ejercida por una cuerda, cable, cadena, etc. Por ejemplo:</p>
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/tension.png">
+                        <img alt="" src="figuras/tension.png" width="60%"/>
+                        </a>
+                    </div>
+                </div> 
+            </li>
+
+            <li><p><u>Fuerza Peso <span class="math inline">\(\vec{P}\)</span></u>: Es la fuerza que ejerce la gravedad sobre un objeto. Se trata de una fuerza de largo alcance, no es una fuerza de contacto. Siempre está dirigido hacia el suelo.</p>
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/peso.png">
+                        <img alt="" src="figuras/peso.png" width="60%"/>
+                        </a>
+                    </div>
+                </div> 
+            </li>
+        </ol>
+
+        <p>Algunas magnitudes de fuerzas comunes son las siguientes:</p>
+
+        <ul>
+            <li><p>Fuerza gravitacional del sol sobre la Tierra <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(3.5 \times 10^{22}\)</span> N.</p></li>
+            <li><p>Peso de una manzana <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(1\)</span> N.</p></li>
+            <li><p>Peso de un átomo de hidrógeno <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(1.6 \times 10^{-26}\)</span> N.</p></li>
+        </ul>
+
+        <p>Un instrumento común para medir fuerzas es el <em>dinamómetro</em>.</p>
+
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Fuerzas-e-interacciones">Fuerzas e interacciones</h1>
+        </header>
+
+        <p>Si dos fuerzas <span class="math inline">\(\vec{F_1}\)</span> y <span class="math inline">\(\vec{F_2}\)</span> actúan al mismo tiempo sobre un punto <span class="math inline">\(O\)</span> de un cuerpo, el efecto sobre el movimiento del cuerpo es igual al de una sola fuerza <span class="math inline">\(\vec{R}\)</span>, que es igual a la suma vectorial de las fuerzas originales, <span class="math inline">\(\vec{R}= \vec{F_1} + \vec{F_2}\)</span>. En general, el efecto de cualquier número de fuerzas aplicadas a un punto de un cuerpo es el mismo que el que resultaría cuando una sola fuerza actuara sobre dicho punto, igual a la suma vectorial de todas ellas <span class="math inline">\(\rightarrow\)</span> <em>principio de superposición</em>.</p>
+
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/superposicion.png">
+                <img alt="" src="figuras/superposicion.png" width="55%"/>
+                </a>
+            </div>
+        </div> 
+
+        <p>Este principio nos permite entonces sustituir un conjunto de fuerzas que actúan sobre un objeto ejercidas todas ellas en un mismo punto, por su vector fuerza resultante <span class="math inline">\(\vec{R}\)</span>, y sus componentes respectivas en el espacio</p>
+        <span class="math display">\[\vec{R}  =  \vec{F_1} \, + \, \vec{F_2} \, + \, \vec{F_3} \, +\, ...\, +\, \vec{F_n}\, = \, \sum_{i=1}^n \vec{F_i} \nonumber \\ R_x  =  \sum_{i=1}^n {(F_i)}_x   \quad R_y =   \sum_{i=1}^n {(F_i)}_y  \quad  R_z  =  \sum_{i=1}^n {(F_i)}_z \nonumber \]</span>
+
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO: Calcula la fuerza resultante, teniendo en cuenta los valores de los módulos y los ángulos que forman con el eje <span class="math inline">\(x\)</span> para las tres fuerzas <span class="math inline">\(\vec{F_1}\)</span>, <span class="math inline">\(\vec{F_2}\)</span> y <span class="math inline">\(\vec{F_3}\)</span>.</strong>
+ 
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/ejemplo-suma.png">
+                    <img alt="" src="figuras/ejemplo-suma.png" width="70%"/>
+                    </a>
+                </div>
+            </div> 
+
+            <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+            <div id="sol-e1" style="display:none;">
+                  
+                <p> Solución: </p>
+
+                <span class="math display">\[|\vec{R}|=25 \text{ N}\]</span> 
+                <span class="math display">\[\theta_R = 76.8^{\circ}\]</span>
+
+            </div>
+        </article></li>
+
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Primera-Ley-de-Newton:-Ley-de-la-Inercia">Primera Ley de Newton: Ley de la Inercia</h1>
+        </header>
+    
+        <p>Era sabido, ya desde tiempos de Galileo, que si se eliminan todas las fuerzas que actúan sobre un cuerpo, su velocidad no cambiará, propiedad de la materia que se describía como <em>inercia</em>. Esta conclusión fue establecida por Newton como su primera ley, también llamada <em>ley de la inercia</em>.</p>
+    
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 150px 20px 150px">
+            <p>PRIMERA LEY: <em>Todo cuerpo en reposo sigue en reposo a menos que sobre él actúe una fuerza externa. Un cuerpo en movimiento continúa moviéndose con velocidad constante a menos que sobre él actúe una fuerza externa.</em></p>
+        </blockquote>
+
+        <p>Como conclusión, un cuerpo sobre el que no actúa una fuerza neta se mueve con velocidad constante (que puede ser cero) y aceleración nula. Es decir, esta <span class="math inline">\(1^{\rm a}\)</span> ley no distingue entre un objeto en reposo y otro que se mueve con velocidad constante, distinta de cero. El hecho de que un objeto esté en reposo o en movimiento con velocidad constante depende del sistema de referencia en el cual se observa el objeto. Hay que tener cuidado, porque la primera ley de Newton solo puede aplicarse a <u>sistemas de referencia denominados inerciales</u>. De hecho, la <span class="math inline">\(1^{\rm a}\)</span> ley de Newton nos proporciona un criterio para determinar si un sistema de referencia es inercial o no:</p>
+    
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 150px 20px 150px">
+            <p><em>Si sobre un objeto no actúa ninguna fuerza, cualquier sistema de referencia con respecto al cual la aceleración del objeto sea cero, es un sistema de referencia inercial.</em></p>
+        </blockquote>
+
+        <p>Normalmente se considera que la Tierra es un sistema de referencia inercial (S.R.I), despreciando la aceleración debida al movimiento de la Tierra alrededor del Sol y de su propio movimiento de rotación.</p>
+
+    </section>
+
+    <section>
+        <header>
+            <h1 id="Fuerza-y-masa">Fuerza y masa</h1>
+        </header>
+
+        <p>Utilizando la <span class="math inline">\(1^{\rm a}\)</span> ley de Newton y la idea de S.R.I, podemos definir una <strong><u>Fuerza</u></strong> como una influencia externa sobre un objeto, que produce un cambio en su velocidad, es decir, una aceleración respecto a un sistema de referencia incercial. La <strong><u>Fuerza</u></strong> es una cantidad vectorial. Tiene módulo, dirección y sentido. Las fuerzas son ejercidas por unos cuerpos sobre otros. Las que se generan al estar dos cuerpos en contacto físico se llaman <em>fuerzas de contacto</em>, como por ejemplo golpear una pelota, tirar de un hilo, la fuerza de rozamiento entre un objeto y el suelo..., es decir, siempre debe haber un contacto directo entre el cuerpo que aplica la fuerza y el cuerpo sobre el cual se aplica. También hay fuerzas que no requieren contacto directo; éstas son las <em>fuerzas a distancia</em>. Las fuerzas fundamentales son cuatro:</p>
+
+        <ol>
+            <li><p><u>Interacción gravitacional</u>: Es la interacción entre partículas debida a su masa.</p></li>
+            <li><p><u>Interacción electromagnética</u>: Es la interacción de largo alcance entre partículas cargadas eléctricamente.</p></li>
+            <li><p><u>Interacción débil</u>: Es la interacción a corto alcance entre partículas subnucleares.</p></li>
+            <li><p><u>Fuerza nuclear fuerte</u>: Interacción de largo alcance entre los hadrones (protones y neutrones), que los mantiene unidos, formando el núcleo.</p></li>
+        </ol>
+
+        <p>Por otra parte, sabemos que los objetos se resisten intrínsecamente a ser acelerados. Por ejemplo, si pensamos en dar una patada a un balón de fútbol o a una bola de una bolera, el sentido común nos dice que la segunda se resistirá más a ser acelerada. Esta propiedad intrínseca de un cuerpo es la <strong><u>masa</u></strong>. La masa es una medida de la inercia de un cuerpo. Desde el 20 de mayo de 2019, la definición del kilogramo pasó a estar ligada con la constante de Planck, definida como <span class="math inline">\(6.62607015 \times 10^{-34} \text{ kg} \cdot \text{ m}^2 \cdot \text{ s}^{-1}\)</span>. El <em>Grand Kilo</em>, como se conoce al patrón parisino usado hasta la fecha para definir el kilogramo, es ahora un estándar de masa secundario, quedando el kilogramo ahora definido a partir de la constante de Planck y de otras unidades básicas del SI, como el segundo y el metro.</p>
+
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Segunda-ley-de-Newton">Segunda ley de Newton</h1>
+        </header>
+
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 130px 20px 130px">
+            <p><em>La aceleración de un cuerpo es proporcional a la fuerza neta que actúa sobre él, e inversamente proporcional a su masa.</em></p>
+        </blockquote>
+
+        <span class="math display">\[\fbox{ $\vec{a} = {\displaystyle \frac{\vec{F}_{\rm neta}}{m}} \, ; \quad \vec{F}_{\rm neta}= {\displaystyle \sum_i \vec{F}_i}$ .}\]</span>
+        
+        <p>O lo que es lo mismo:</p>
+
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 150px 20px 150px">
+            <p><em>Si una fuerza externa neta actúa sobre un cuerpo, ésta se acelera, siendo la dirección de aceleración la misma que la de la fuerza neta. El vector de fuerza neta es igual a la masa del cuerpo multiplicada por su aceleración.</em></p>
+        </blockquote>
+
+        <p>Por ejemplo, una fuerza neta de 1 N le produce una aceleración de 1 m/s<span class="math inline">\(^2\)</span> a un cuerpo de 1 kg de masa. Una fuerza neta de 2 N le producirá a un cuerpo de 2 kg de masa una aceleración también de 1 m/s<span class="math inline">\(^2\)</span>. Por tanto, si aplicamos la misma fuerza a dos objetos con diferente masa, el que tenga menos masa se acelerará más.</p>
+
+        <span class="math display">\[\text{Fuerza neta} \Longrightarrow \text{produce aceleración} \\ \text{Causa} \Longrightarrow \text{efecto} \, \; \;\;\;\;\;\;\;\]</span>
+
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 1: Un objeto, de masa <span class="math inline">\(m_1=1\)</span> kg, está sometido a una fuerza de módulo <span class="math inline">\(|F_1|\)</span>, dirigida horizontalmente y en sentido positivo, adquiriendo una aceleración de módulo <span class="math inline">\(|a_1|=5\)</span> m/s<span class="math inline">\(^2\)</span>. Posteriormente, se le aplica esta misma fuerza a otro objeto de masa <span class="math inline">\(m_2\)</span>, adquiriendo una aceleración <span class="math inline">\(|a_2|=11\)</span> m/s<span class="math inline">\(^2\)</span> ¿Qué valor tiene la masa <span class="math inline">\(m_2\)</span>?</strong>
+    
+            <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+            <div id="sol-e2" style="display:none;">
+                      
+                <p> Solución: </p>
+    
+                <span class="math display">\[m_2 = \frac{m_1 \times |a_1|}{|a_2|}=0.45 \text{ kg.} \]</span>
+
+            </div>
+        </article></li>
+
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 2: Una partícula de masa <span class="math inline">\(0.5\)</span> kg está sometida simultáneamente a dos fuerzas, <span class="math inline">\(\vec{F}_1= -2.0 \, \vec{\imath} - 3.0 \, \vec{\jmath} \,\)</span> y <span class="math inline">\(\, \vec{F}_2= -2.0 \, \vec{\imath} + 4.0 \, \vec{\jmath}\)</span>, ambas expresadas en N. Si la partícula está en el origen y parte del reposo para <span class="math inline">\(t_0=0\)</span>, calcular:
+            <ol>
+                <li><p>Su vector posición <span class="math inline">\(\vec{r}\)</span>.</p></li>
+                <li><p>Su velocidad <span class="math inline">\(\vec{v}\)</span>, ambos para <span class="math inline">\(t=2.0\)</span> s.</p></li>
+            </ol>
+            </strong>
+        
+            <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+            <div id="sol-e3" style="display:none;">
+                          
+                <p> Solución: </p>
+        
+                <span class="math display">\[\vec{F}_{\rm neta} = \vec{F}_1 + \vec{F}_2 = \left ( -4.0 \, \vec{\imath} + 1.0 \, \vec{\jmath} \right )\, \, {\rm N} \, , \]</span>
+                <p>Por componentes:</p>
+                <span class="math display">\[F_x = m \, a_x \Longrightarrow  a_x=  -8 \text{ m/s}^2 \quad \quad F_y = m \, a_y \Longrightarrow  a_y=  +2 \text{ m/s}^2.\]</span>
+                <span class="math display">\[x(t)= x(t_0) + v_x(t_0) \cdot (t - t_0) + {\displaystyle \frac{1}{2} }a_x(t_0) \cdot (t - t_0)^2= -16.0 \text{ m}.\]</span>
+                <span class="math display">\[y(t)= y(t_0) + v_y(t_0) \cdot (t - t_0) + {\displaystyle \frac{1}{2} }a_y(t_0) \cdot (t - t_0)^2=  + 4.0 \text{ m}.\]</span>
+                <span class="math display">\[\fbox{$\vec{r} = \left ( -16.0 \, \vec{\imath} + 4.0 \, \vec{\jmath} \right ) \, {\rm m}$}\]</span>
+
+                <span class="math display">\[v_x(t) = v_x(t_0) + a_x \cdot (t-t_0) = -16.0  \text{ m/s.}\]</span>
+                <span class="math display">\[v_y(t) = v_y(t_0) + a_y \cdot (t-t_0) = + 8.0  \text{ m/s.}\]</span>
+                <span class="math display">\[\fbox{$\vec{v} = \left ( -16.0 \, \vec{\imath} + 8.0 \, \vec{\jmath} \right ) \, {\rm m}$}\]</span>
+                
+            </div>
+        </article></li>
+        
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Fuerza-debida-a-la-gravedad:-El-peso">Fuerza debida a la gravedad: El peso</h1>
+        </header> 
+    
+        <p>Si dejamos caer un objeto cerca de la superficie de la Tierra, el objeto acelera en dirección hacia la Tierra. Despreciando la resistencia del aire, todos los objetos poseen la misma aceleración, <span class="math inline">\(\vec{g}\)</span>. La fuerza que causa esta aceleración es la Fuerza de la gravedad, <span class="math inline">\(\vec{F}_g\)</span>, que ejerce la Tierra sobre cualquier objeto con una determinada masa <span class="math inline">\(m\)</span>. Si solo actúa esa fuerza sobre el objeto, se dice que el cuerpo está en caída libre:</p>
+    
+        <span class="math display">\[\vec{F}_g = m \, \vec{g} \quad \quad \vec{g} = -9.81 \, {\rm m/s}^2 \, \vec{\jmath} \, \, ,\ \]</span>
+
+        <p>siempre que estemos cerca de la superficie de la Tierra. En general, <span class="math inline">\(|\vec{g}|\)</span> será menor para cuerpos situados más lejos de la superficie de la Tierra, y también será menor en latitudes diferentes al ecuador.</p>
+    
+        <p>El peso no es una propiedad intrínseca de los cuerpos, lo que sí es una propiedad intrínseca es la masa. Por ejemplo, el peso de un objeto en la Luna será aproximadamente <span class="math inline">\(1/6\)</span> de su peso en la Tierra.</p>
+    
+        <p>El <strong>peso aparente</strong> es la fuerza que equilibra el peso (por ejemplo, en una balanza, será la fuerza normal que ésta ejerce sobre el cuerpo). Si el peso aparente es cero (no hay ninguna fuerza que equilibra el peso del cuerpo), diremos que el cuerpo está en <strong>caída libre</strong> <span class="math inline">\(\rightarrow\)</span> <strong>ingravidez</strong>.</p>
+   
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Fuerzas-de-contacto:-sólidos,-muelles-y-cuerdas">Fuerzas de contacto: sólidos, muelles y cuerdas</h1>
+        </header> 
+
+        <p>La <u>fuerza normal</u> es la fuerza que cualquier superficie ejerce sobre un objeto, y que siempre es perpendicular a la misma, como se puede ver en la siguiente figura:</p>
+    
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/normal1-2-3.png">
+                    <img alt="" src="figuras/normal1-2-3.png" width="60%"/>
+                </a>
+            </div>
+        </div> 
+
+        <p>La fuerza que ejerce un muelle sobre un objeto viene dada por la <u>ley de Hooke</u>. Suponiendo que el muelle esté situado en la dirección del eje <span class="math inline">\(x\)</span>, la fuerza que ejerce el muelle sobre el objeto se expresa de la siguiente forma:</p>
+    
+        <span class="math display">\[\vec{F} = -k \, \Delta x \,  \vec{\imath} \, \, ,\]</span>
+
+        <p>donde <span class="math inline">\(k\)</span> es la constante elástica del muelle, y mide la rigidez del mismo. <span class="math inline">\(\Delta x\)</span> es el desplazamiento realizado por el muelle, respecto de su posición de equilibrio <span class="math inline">\(x_0\)</span>.</p>
+
+        <p>La figura siguiente muestra cómo es la fuerza elástica del muelle sobre un objeto, suponiendo que la posición de equilibrio es <span class="math inline">\(x_0=0\)</span>.</p>
+
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/Hooke.png">
+                    <img alt="" src="figuras/Hooke.png" width="65%"/>
+                </a>
+            </div>
+        </div>   
+
+        <p>Un objeto en reposo bajo la acción de fuerzas que se equilibran se dice que está en <u>equilibrio estático</u>. Si un pequeño desplazamiento da lugar a una fuerza de restitución neta hacia la posición de equilibrio, se dice que el equilibrio es <u>estable</u>.</p>
+
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong><p>EJEMPLO 1: Una jugadora de baloncesto de 95 kg se cuelga del aro del cesto después de haber hecho un mate. Antes de dejarse caer, se queda en reposo, con el anillo del aro doblado hacia abajo 10 cm. Si suponemos que el aro se comporta como un muelle elástico, calcular <span class="math inline">\(k\)</span>.</p></strong>
+            
+            <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+            <div id="sol-e4" style="display:none;">
+                              
+                <p> Solución: </p>
+
+                <p>Teniendo en cuenta que la fuerza realizada por el muelle equilibra el peso de la jugadora, tendremos que:</p>
+                    
+                <span class="math display">\[m\,g = k \cdot \Delta y  \quad  \rightarrow \quad  k = \frac{95 \, {\rm kg} \times 9.8 \, {\rm m/s^2} } {10 \times 10^{-2} \, {\rm m} } = 7.2 \times 10^3 \, {\rm N/m}\]</span>
+            </div>
+        </article></li>
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong><p>EJEMPLO 2: Un racimo de bananas de 2 kg está suspendido en reposo de una balanza de muelle, cuya constante es <span class="math inline">\(k=200\)</span> N/m. Calcular cuál ha sido el estiramiento del muelle respecto de su posición de equilibrio.</p></strong>
+                
+            <button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+            <div id="sol-e5" style="display:none;">
+                                  
+                <p> Solución: </p>
+    
+                <span class="math display">\[m\,g = k \Delta y  \quad  \rightarrow \quad \Delta y = \frac{ 2 \, {\rm kg} \times 9.8 \, {\rm m/s}^2 }{200 \, {\rm N/m} } = 9.8 \, {\rm cm}\]</span>
+
+            </div>
+        </article></li>
+
+        <br>
+        <p>La magnitud de la fuerza que un trozo de cuerda ejerce sobre otro adyacente se denomina <u>tensión</u>.</p>
+
+        
+        <article style="background-color:lightblue;border-color:blue">
+            <strong><p>EJEMPLO 3: Una pelota (C) que pesa <span class="math inline">\(P=6\)</span> N se cuelga mediante dos cables (A y B) que ejercen tensiones <span class="math inline">\(T_A\)</span> y <span class="math inline">\(T_B\)</span>, respectivamente, tal como indica la figura. Determinar ambas tensiones, suponiendo que la pelota se encuentra en equilibrio estático.</p></strong>
+
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/pelota.png">
+                        <img alt="" src="figuras/pelota.png" width="75%"/>
+                    </a>
+                </div>
+            </div>  
+
+            <button id="e6" class="button"  onclick="show2('e6');">Solución</button>
+            <div id="sol-e6" style="display:none;">
+                                      
+                <p> Solución: </p>
+
+                <span class="math display">\[{T_A}_x = T_A \, {\rm cos} (60^{\circ})   \quad \quad  {T_A}_y=T_A  \, {\rm sen} (60^{\circ}) \]</span>
+                <span class="math display">\[{T_B}_x=T_B \, {\rm cos} (40^{\circ})     \quad \quad   {T_B}_y=T_B \, {\rm sen} (40^{\circ} )\]</span>
+                
+                <p>Teniendo en cuenta que el sistema está en equilibrio</p>
+
+                <span class="math display">\[{T_A}_x =  {T_B}_x \quad \rightarrow \quad  T_A \, {\rm cos} (60^{\circ})  =  T_B \, {\rm cos} (40^{\circ})    \quad \rightarrow \quad T_B = T_A \,  \frac{{\rm cos} \, ( 60^{\circ})} {{\rm cos} \, ( 40^{\circ})}\]</span>
+                <span class="math display">\[ {T_A}_y + {T_B}_y = P \quad \rightarrow \quad T_A  \, {\rm sen} (60^{\circ}) + T_A  {\rm cos} \, ( 60^{\circ}) \, {\rm tg} \, ( 40^{\circ}) = P\]</span>
+
+                <p>Por tanto:</p>
+
+                <span class="math display">\[T_A = \frac{P}{{\rm sen} (60^{\circ}) + {\rm cos} \, ( 60^{\circ}) \, {\rm tg} \, ( 40^{\circ})}  = 4.667 \, \, {\rm N}\]</span>
+                <span class="math display">\[T_B= T_A \,  \frac{{\rm cos} \, ( 60^{\circ})} {{\rm cos} \, ( 40^{\circ})} = 3.046 \, \, {\rm N}\]</span>
+            </div>
+        </article></li>
+
+        <br>
+        <p>Esto nos servirá para explicar con más detalle los diagramas de cuerpo libre para la <strong>resolución de problemas</strong>:</p>
+
+        <ul>
+            <li><p><strong><span style="color: #ff0000;">Planteamiento:</span></strong> Identificar todas las fuerzas que actúan sobre la partícula, así como la direcciín del vector <span class="math inline">\(\vec{a}\)</span>. Esto será útil para elegir el sistema de referencia más adecuado.</p></li>    
+            <li><p><strong><span style="color: #ff0000;">Solución:</span></strong></p>
+                <ol>
+                    <li><p>Dibujar un diagrama claro.</p></li>
+                    <li><p>Aislar al cuerpo de interés e identificar y representar cada una de las fuerzas que actúan sobre él.</p></li>
+                    <li><p>Elegir un sistema de coordenadas adecuado. Si se conoce la dirección de <span class="math inline">\(\vec{a}\)</span>, escoger uno de los ejes paralelo a ella. Para cuerpos que se deslizan sobre superficies, elegir los ejes de forma que uno sea paralelo y el otro perpendicular a la superficie.</p></li>
+                    <li><p>Aplicar la segunda ley de Newton en forma de componentes.</p></li>
+                </ol>
+            </li>
+            <li><p><strong><span style="color: #ff0000;">Comprobación:</span></strong> Ver si los resultados tienen las unidades correctas y parecen razonables los valores obtenidos.</p></li>
+        </ul>
+
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong><p>EJEMPLO 1: Una joven tira de un trineo con una fuerza de 100 N, formando un ángulo de <span class="math inline">\(30^{\circ}\)</span> con la horizontal. La masa del conjunto trineo-cuerda-pasajero es de <span class="math inline">\(75\)</span> kg y suponemos que podemos despreciar el rozamiento. Determinar la aceleración <span class="math inline">\(\vec{a}\)</span> que adquiere el sistema y la fuerza normal <span class="math inline">\(\vec{N}=F_N \, \vec{\jmath}\)</span>  ejercida por la superficie sobre el trineo.</p></strong>
+    
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/trineo.png">
+                        <img alt="" src="figuras/trineo.png" width="65%"/>
+                    </a>
+                </div>
+            </div>  
+    
+            <button id="e7" class="button"  onclick="show2('e7');">Solución</button>
+            <div id="sol-e7" style="display:none;">
+                                          
+                <p> Solución: </p>
+
+                <span class="math display">\[F_x= m a_x \quad \rightarrow \quad  a_x = \frac{F \, {\rm cos} \, (30^{\circ})}{m} = 1.15 \, \, {\rm m/s^2}\]</span>
+                <span class="math display">\[F_N + F \, {\rm sen}  \, (30^{\circ}) = m \, g  \quad \rightarrow \quad F_N = 685 \,  {\rm N}\]</span>
+
+            </div>
+        </article></li>
+
+        <article style="background-color:lightblue;border-color:blue">
+                <strong><p>EJEMPLO 2: Dejamos caer un paquete desde la parte superior de un plano inclinado. Sabemos que si la velocidad vertical con la que el paquete llega al final de la rampa es superior a 1.5 m/s, la carga del paquete se daña. Calcular el máximo ángulo que puede tener el plano inclinado para que podamos tener una recepción segura de la carga, teniendo en cuenta que la altura del plano inclinado es <span class="math inline">\(h=1.5\)</span> m.</p></strong>
+        
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/rampa.png">
+                            <img alt="" src="figuras/rampa.png" width="70%"/>
+                        </a>
+                    </div>
+                </div>  
+        
+                <button id="e8" class="button"  onclick="show2('e8');">Solución</button>
+                <div id="sol-e8" style="display:none;">
+                                              
+                    <p> Solución: </p>
+
+                    <p>Supondremos que el eje <span class="math inline">\(x\)</span> es el paralelo al plano y el eje <span class="math inline">\(y\)</span> el perpendicular. La velocidad vertical será la que tiene el objeto en la dirección vertical, cuando llega al suelo.</p>
+
+                    <span class="math display">\[P_x = m a_x \quad \quad F_N - P_y = 0 \quad  \quad a_x = \frac{ m \, g \, {\rm sen} \, \theta }{m} \quad    \quad   {\rm sen} \, \theta = \frac{h}{e}\]</span>
+                    <span class="math display">\[ v_x^2(t) = v_x^2(t=0) \, + \, 2 \, a_x \, e  \quad \quad  v_x^2(t) = 2 \, g \, {\rm sen} \, \theta  \frac{h}{{\rm sen} \, \theta}   \quad \quad {\rm sen}^2 \, \theta = \frac{v_v^2}{v_x^2(t)}= \frac{v_v^2}{2 \, g \, h}\]</span>
+                    <p>Por tanto:</p>
+                    <span class="math display">\[{\rm sen} \, \theta = \sqrt{ \frac{v_v^2}{2\, g \, h}} = 0.2766 \quad \rightarrow \quad \theta = 16.06^{\circ}\]</span>
+                    
+                </div>
+            </article></li>
+
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Tercera-ley-de-Newton">Tercera ley de Newton</h1>
+        </header>
+
+        <p>Si se aplica una fuerza sobre un cuerpo <span class="math inline">\(A\)</span>, debe haber un cuerpo <span class="math inline">\(B\)</span> que ejerza la fuerza. La 3<span class="math inline">\(^{\rm a}\)</span> ley de Newton establece entonces que dichos cuerpos ejercen fuerzas  entre sí que tienen el mismo módulo, la misma dirección y sentidos contrarios.</p>
+    
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 170px 20px 170px">
+            <p><em><span class="math inline">\(A\)</span> ejerce una fuerza sobre <span class="math inline">\(B\)</span> <span class="math inline">\(\longrightarrow\)</span> <span class="math inline">\(B\)</span> ejerce una fuerza sobre <span class="math inline">\(A\)</span>, de igual módulo, dirección y sentido opuesto.</em></p>
+        </blockquote>
+
+        <p>En general, podemos enunciar la tercera ley de Newton de la siguiente manera:</p>
+
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 170px 20px 170px">
+            <p><em>Las fuerzas siempre actúan por pares, iguales y opuestas. Si el cuerpo <span class="math inline">\(A\)</span> ejerce una fuerza <span class="math inline">\(\vec{F}_{AB}\)</span> sobre el cuerpo <span class="math inline">\(B\)</span>, éste ejerce una fuerza igual, pero opuesta, <span class="math inline">\(\vec{F}_{BA}\)</span> sobre el cuerpo <span class="math inline">\(A\)</span>, de tal manera que:
+                <span class="math display">\[\vec{F}_{BA} = - \vec{F}_{AB}\]</span>            
+            </em></p>
+        </blockquote>  
+         
+        <p>Es común referirse a estas fuerzas como par acción-reacción. Ambas fuerzas actúan siempre <u>simultáneamente y sobre objetos diferentes</u>. En la figura siguiente se muestra esta propiedad, en el caso de dos masas <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>.</p>
+    
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/accionyreaccion.png">
+                    <img alt="" src="figuras/accionyreaccion.png" width="80%"/>
+                </a>
+            </div>
+        </div>  
+
+    </section> 
+
+
+    <section>
+        <header>
+            <h1 id="Problemas-con-dos-o-más-objetos">Problemas con dos o más objetos</h1>
+        </header>
+
+        <p>Como regla general, para aplicar las leyes de Newton a dos o más cuerpos, deberemos:</p>
+
+        <ol>
+            <li><p>Dibujar un diagrama de fuerzas para cada cuerpo. Las incógnitas se obtendrán al resolver simultáneamente las ecuaciones.</p></li>
+            <li><p>Usar un sistema de coordenadas distinto para cada cuerpo y tener en cuenta en el principio de acción-reacción.</p></li>
+            <li><p>Aplicar la 2<span class="math inline">\(^{\rm a}\)</span> ley de Newton a cada objeto.</p></li>
+            <li><p>Resolver las ecuaciones obtenidas.</p></li>
+        </ol>
+
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong><p>EJEMPLO: Dos alpinistas unidos por una cuerda, quedan en la posición que se describe en la figura.  Determinar la aceleración que adquiriría el conjunto formado por ambos.</p></strong>
+        
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/problema_mano.png">
+                        <img alt="" src="figuras/problema_mano.png" width="50%"/>
+                    </a>
+                </div>
+            </div>  
+        
+            <button id="e9" class="button"  onclick="show2('e9');">Solución</button>
+            <div id="sol-e9" style="display:none;">
+                                              
+                <p> Solución: </p>
+
+                <p>Teniendo en cuenta que Juan tiene masa <span class="math inline">\(m_1\)</span> y Pedro, <span class="math inline">\(m_2\)</span>, tendremos que:</p>
+                <span class="math display">\[\sum_i (\vec{F_1})_i = m_1 \, \vec{a}_1 \quad  \quad  \sum_i (\vec{F_2})_i = m_2 \, \vec{a}_2\]</span>
+                
+                <p>Si suponemos que la masa de la cuerda es despreciable, las tensiones serán iguales <span class="math inline">\(\rightarrow T_1=T_2=T\)</span>. Por tanto, para cada objeto, en la dirección del movimiento, tendremos las siguientes ecuaciones</p>
+
+                <span class="math display">\[T \, +  \, P_{1x} = m_1 \, a \quad \rightarrow \quad T  + m_1 \, g \, {\rm sen} \, \theta = m_1 \, a \, ; \quad \quad    P_2 \, - \,  T = m_2 \, a\]</span>
+
+                <p>Sumando ambas ecuaciones:</p>
+                <span class="math display">\[P_2 \, + \, m_1 \, g  \, {\rm sen} \, \theta = (m_1 + m_2 ) \, a \quad \rightarrow \quad a = g \, \frac{\left ( m_2 + m_1 \, {\rm sen} \, \theta \, \right  )}{m_1 + m_2}\]</span>
+                
+            </div>
+        </article></li>
+    </section>
+
+    <br>
+
+    <a href="newton-test.html">Test para repasar las leyes de Newton</a><br><br>
+    <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+  
+    <br><br>
+
+<script type="text/javascript" language="javascript">
+function show(str, obj){
+  document.getElementById(obj).innerHTML = str;
+  //MathJax.Hub.Typeset();
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+}
+function show2(divID) {
+    var sol = document.getElementById("sol-"+divID);
+    var div = document.getElementById(divID);
+    if(sol.style.display == "none"){
+      sol.style.display = "block";
+    }else{
+      sol.style.display = "none";
+    }
+    if(div.innerHTML == "Solución"){
+      div.innerHTML = "Oculta solución";
+    }else{
+      div.innerHTML = "Solución";
+    }
+}
+</script>
+
+</body>
+</html>

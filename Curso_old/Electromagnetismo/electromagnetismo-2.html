@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+    <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+<body>
+      <div id="header">
+            <h1 class="title">CÁLCULO DE FUERZAS MAGNÉTICAS 2</h1>
+      </div>
+     
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a><br><br>
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a>
+
+      <ol type="1">
+
+            <li><article style="background-color:lightred;border-color:red">
+                  
+                  <strong><p>Una carga de -5 <span class="math inline">\(\mu\)</span>C se mueve a una velocidad <span class="math inline">\(\vec{v}=(3\hat{\imath}+2\hat{k})\)</span> m/s.</p>
+                    <ol style="list-style-type: lower-alpha">
+                        <li><p>Calcular la fuerza magnética que actúa sobre ella cuando se encuentra en un campo magnético <span class="math inline">\(\vec{B}=25\hat{\imath}\)</span> mT.</p></li>
+                        <li><p>Represente esquemáticamente los tres vectores.</p></li>
+                        <li><p>Si su masa es <span class="math inline">\(6.6 \cdot 10^{-26}\)</span> kg, calcular la aceleración.</p></li>
+                        <li><p>Y si la velocidad hubiese sido <span class="math inline">\(\vec{v}=2\hat{k}\)</span> m/s, ¿cambiaría el resultado? ¿por qué?</p></li>
+                    </ol>  
+
+                  </strong>
+
+                  <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+                  <div id="sol-e1" style="display:none;">
+                  
+                        <p>SOLUCIÓN:</p> 
+
+                        <ol style="list-style-type: lower-alpha">
+                        <li><p>Datos:  <span class="math inline">\(q=-5\cdot 10^{-6}\)</span> C; <span class="math inline">\(\quad\vec{v}=3\hat{\imath}+2\hat{k}\)</span> m/s; <span class="math inline">\(\quad\vec{B}=25\cdot 10^{-3}\hat{\imath}\)</span> T</p>
+                            <p>La fuerza será:</p>
+                            <span class="math display">\[\vec{F}=q\vec{v}\times\vec{B}=-5\cdot 10^{-6}(3\hat{\imath}+2\hat{k})\times 25\cdot 10^{-3}\hat{\imath}=\]</span>
+                            <span class="math display">\[=-125\cdot 10^{-9}(3\hat{\imath}+2\hat{k})\times\hat{\imath}=-125\cdot 10^{-9}\left[3(\hat{\imath}\times\hat{\imath})+2(\hat{k}\times\hat{\imath})\right]\]</span>
+                            <p>	Como <span class="math inline">\(\hat{\imath}\times\hat{\imath}=0\)</span> y <span class="math inline">\(\hat{k}\times\hat{\imath}=\hat{\jmath}\)</span>,</p>
+                            <span class="math display">\[\vec{F}=-250\cdot 10^{-9}\hat{\jmath} \mbox{ N}\]</span>
+                        </li>
+
+                        <li><br>
+                            <div class="sbsimage">
+                                <div class="imgContainerEnd">
+                                    <a data-fancybox="" href="figuras/ejercicios-magnetismo2-1-sol.png">
+                                    <img alt="" src="figuras/ejercicios-magnetismo2-1-sol.png" width="30%"/>
+                                    </a>
+                                </div>
+                            </div>    
+                        </li>
+
+                        <li><p><span class="math inline">\(\vec{F}=m\vec{a}\)</span>, de donde <span class="math inline">\(\vec{a}=\vec{F}/m=\frac{-250\cdot 10^{-9}\mbox{ N}}{6.6\cdot 10^{-23}\mbox{ kg}}\hat{\jmath}=-3.8\cdot 10^{18}\hat{\jmath}\)</span> m/s<span class="math inline">\(^2\)</span></p></li>
+
+                        <li><p>La fuerza sólo depende de la proyección de la velocidad en el plano perpendicular al campo magnético. En nuestro caso, dado que el campo magnético va en la dirección x, la proyección de la velocidad en esta dirección no influye en la fuerza magnética, y por lo tanto el resultado no varía.</p></li>                        
+                        </ol>
+                    </div>
+                    
+            </article></li>
+
+            <li><article style="background-color:lightred;border-color:red">
+                  
+                <strong><p>Una carga de 2 nC viaja a una velocidad <span class="math inline">\(\vec{v}=(5\hat{\jmath}+8\hat{k})\)</span> m/s. En esta región existe un campo magnético <span class="math inline">\(\vec{B}=(0.2\hat{\imath}+0.2\hat{\jmath})\)</span> T. Calcular la fuerza que actúa sobre ella.</p></strong>
+  
+                    <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+                    <div id="sol-e2" style="display:none;">
+                    
+                        <p>SOLUCIÓN:</p> 
+  
+                        <p>Datos:  <span class="math inline">\(q= 2\cdot 10^{-9} \mbox{ C}\)</span>; <span class="math inline">\(\quad v_x=0, \, v_y=5 \mbox{ m/s}, \, v_z=8 \mbox{ m/s}\)</span>; <span class="math inline">\(\quad B_x=0.2 \mbox{ T}, \, B_y=0.2 \mbox{ T}\)</span></p>
+                        <p>Aplicando la ley de Lorentz:</p>
+                        <span class="math display">\[\vec{F}= q\begin{vmatrix}
+                                \hat{\imath} & \hat{\jmath} & \hat{k}\\
+                                0 & v_y & v_z\\
+                                B_x & B_y & 0
+                                \end{vmatrix}=q\begin{vmatrix}
+                                v_y & v_z\\
+                                B_y & 0
+                                \end{vmatrix}\hat{\imath}-q\begin{vmatrix}
+                                0 & v_z\\
+                                B_x & 0
+                                \end{vmatrix}\hat{\jmath}+q\begin{vmatrix}
+                                0 & v_y\\
+                                B_x & B_y
+                                \end{vmatrix}\hat{k}=\]</span>
+                        <span class="math display">\[=-qv_zB_y\hat{\imath}+qv_zB_x\hat{\jmath}-qv_yB_x\hat{k}\]</span>
+                        <p>Y sustituyendo:</p>
+                        <span class="math display">\[\vec{F}=-2\cdot 10^{-9}\times 8\times 0.2\hat{\imath}+2\cdot 10^{-9}\times 8\times 0.2\hat{\jmath}-2\cdot 10^{-9}\times 5\times 0.2\hat{k}\]</span>
+                        <span class="math display">\[\vec{F}=\left(-3.2\cdot 10^{-9}\hat{\imath}+3.2\cdot 10^{-9}\hat{\jmath}-2\cdot 10^{-9}\hat{k}\right) \mbox{ N}\]</span>
+
+                      </div>
+                      
+              </article></li>
+
+          
+      </ol>
+
+      <a href="electromagnetismo_teoría.html">Volver a teoría</a><br><br>
+      <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+      
+      <br><br>
+      
+      <script type="text/javascript" language="javascript">
+        function show(str, obj){
+          document.getElementById(obj).innerHTML = str;
+          //MathJax.Hub.Typeset();
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+        }
+        function show2(divID) {
+            var sol = document.getElementById("sol-"+divID);
+            var div = document.getElementById(divID);
+            if(sol.style.display == "none"){
+              sol.style.display = "block";
+            }else{
+              sol.style.display = "none";
+            }
+            if(div.innerHTML == "Solución"){
+              div.innerHTML = "Oculta solución";
+            }else{
+              div.innerHTML = "Solución";
+            }
+        }
+      </script>
+      
+</body>
+</html>

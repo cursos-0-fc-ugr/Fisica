@@ -1,0 +1,18 @@
+project:
+  type: default
+  output-dir: .
+
+website:
+  title: "Cursos 0 Física"
+  back-to-top-navigation: true
+  page-footer: 
+    right: Made with [Quarto](https://quarto.org/)
+    #right: "Maintenance: the organizers"
+
+format:
+  html:
+    theme: sandstone
+    fontsize: 1.2em
+    toc: true
+    sidebar: false
+

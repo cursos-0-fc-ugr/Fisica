@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+
+<body>
+    <div id="header">
+      <h1 class="title">Electrostática</h1>
+    </div>
+
+    <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+    
+    <section>
+        <header>
+          <h1 id="Ley-de-Coulomb">Ley de Coulomb</h1>
+        </header>
+
+        <p>Hay dos tipos de carga eléctrica: positiva y negativa. La unidad de carga en el sistema internacional es el Culombio (C): 1 culombio = carga de <span class="math inline">\(6.25 \times 10^{18}\)</span> electrones.</p>
+        <p>También existe un principio de conservación de la carga eléctrica: la carga eléctrica de un sistema aislado permanece constante, es decir, la suma algebraica de las cargas positivas y negativas no varía.</p>
+        <p>Coulomb (1736-1806) estudió las fuerzas entre cargas eléctricas y formuló una ley que la describe.</p>
+
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 150px 20px 150px">
+            <p><strong>Ley de Coulomb:</strong> La fuerza entre dos cargas eléctricas puntuales <span class="math inline">\(q_1\)</span> y <span class="math inline">\(q_2\)</span>, es directamente proporcional al valor de las cargas e inversamente proporcional al cuadrado de la distancia r que las separa:</p>
+            <span class="math display">\[\vec{F} = \pm \, K \, \frac{q_{1} \cdot q_{2}}{r^{2}} \, \hat{u_{r}}\]</span>
+        </blockquote>
+
+        <ul>
+            <li><p><span class="math inline">\(\vec{F}\)</span> es un vector de modo que tiene: módulo, dirección y sentido, además de unidades [Newton].</p></li>
+            <li><p>K es una constante cuyo valor depende del medio en el que se encuentran las cargas: <span class="math inline">\(K=\frac{1}{4} \, \pi \, \varepsilon\)</span>, donde <span class="math inline">\(\varepsilon\)</span> es la constante dieléctrica o permitividad del medio (en el vacío, <span class="math inline">\(K=8.99 \times 10^9 \, \, \rm{N} \, \rm {m}^2 / \rm{C}^2\)</span>).</p></li>
+            <li><p><span class="math inline">\(\hat{u_r}\)</span> es el vector unitario en la dirección de ambas cargas puntuales.</p></li>
+        </ul>
+
+        <p>La fuerza es <strong>central</strong>, o sea, que tiene la dirección de la recta que une las cargas, y puede ser:</p>
+
+        <ul>
+            <li><p>repulsiva si las cargas tienen el mismo signo.</p></li>
+            <li><p>atractiva si las cargas tienen signo opuesto.</p></li>
+       </ul>
+
+       <p>Por otra parte, la ley de Newton para la gravitación y la de Coulomb para la fuerza eléctrica tienen analogías y diferencias claras:</p>
+
+       <br>
+
+       <center><table>
+            <thead>
+            <tr class="header">
+            <th style="text-align:center;">Analogías</th>
+            <th style="text-align:center;">Diferencias</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td style="text-align:center;">Expresión matemática análoga</td>
+            <td style="text-align:center;">Gravitatoria asociada a masa. Eléctrica asociada a carga</td>
+            </tr>
+            <tr>
+            <td style="text-align:center;">Proporcionales a carga o masa</td>
+            <td style="text-align:center;">Gravitatoria siempre atractiva.Eléctrica atractiva/repulsiva</td>
+            </tr>
+            <tr>
+            <td style="text-align:center;">Inversamente proporcionales al cuadrado de la distancia</td>
+            <td style="text-align:center;">El valor de G no depende del medio. El valor de K sí</td>
+            </tr>
+            <tr>
+            <td style="text-align:center;">Fuerzas centrales</td>
+            <td style="text-align:center;">G <span class="math inline">\(\ll\)</span> K . Fuerza gravitatoria mucho menor que fuerza eléctrica</td>
+            </tr>
+            </tbody>
+        </table></center>
+
+        <br>
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 1: La distancia entre el electrón y el protón en el átomo de hidrógeno es de aproximadamente <span class="math inline">\(5.3\cdot10^{-11} \, \text{m}\)</span>. Calcula el valor del módulo de la fuerza electrostática que ejerce el protón sobre el electrón.</strong>
+        
+            <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+            <div id="sol-e1" style="display:none;">
+                          
+                <p> Solución: </p>
+
+                <p>Haciendo uso de la ley de Coulomb, es posible hallar el módulo de la fuerza electrostática:</p>
+
+                <span class="math display">\[F = K \, \frac{\left|q_{1}\,q_{2}\right|}{r^{2}} = K \, \frac{e^2}{r^2} = \frac{\left(8.99\cdot10^{9}\,\text{N}\cdot \text{m}^{2}/\text{C}^{2}\right)\left(1.6\cdot10^{-19}\,\text{C}\right)^{2}}{\left(5.3\cdot10^{-11}\,\text{m}\right)^{2}}\]</span>
+                <span class="math display">\[F = 8.19\cdot10^{-8} \, \text{N}\]</span>
+
+            </div>
+        </article></li>
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 2: Tres cargas se encuentran alineadas sobre el eje X. La carga <span class="math inline">\(q_1\)</span> están en el origen <span class="math inline">\(\left(0,0\right)\)</span>, <span class="math inline">\(q_2\)</span> en el punto <span class="math inline">\(\left(2,0\right)\)</span> y <span class="math inline">\(q_0\)</span> se encuentra en el punto <span class="math inline">\(\left(x,0\right)\)</span>, con <span class="math inline">\(x > 2 \, \text{m}\)</span> (todas estas medidas están expresadas en metros).
+                <ol style="list-style-type: lower-alpha">                 
+                <li><p>Determine la fuerza resultante sobre <span class="math inline">\(q_0\)</span> que ejercen las demás cargas si <span class="math inline">\(q_1=+50 \, \text{nC}\)</span>, <span class="math inline">\(q_2=-5 \, \text{nC}\)</span> y <span class="math inline">\(3.5\,\text{m}\)</span>.</p>
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/ejemplo2-1.png">
+                        <img alt="" src="figuras/ejemplo2-1.png" width="35%"/>
+                        </a>
+                    </div>
+                </div>
+                </li>	
+                <li><p>Halle la fuerza neta sobre <span class="math inline">\(q_0\)</span> debida a las demás cargas en el intervalo <span class="math inline">\(2 \, \text{m} < x < \infty\)</span>.</p>
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                            <a data-fancybox="" href="figuras/ejemplo2-2.png">
+                            <img alt="" src="figuras/ejemplo2-2.png" width="35%"/>
+                            </a>
+                        </div>
+                    </div>                
+                </li> 	   
+            </ol></strong>
+            
+            <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+            <div id="sol-e2" style="display:none;">
+                              
+                <p> Solución: </p>
+
+                <p>La fuerza neta sobre <span class="math inline">\(q_0\)</span> es el vector suma de la fuerza <span class="math inline">\(\vec{F}_{1,0}\)</span> ejercida por <span class="math inline">\(q_1\)</span> y la fuerza <span class="math inline">\(\vec{F}_{2,0}\)</span> ejercida por <span class="math inline">\(q_2\)</span>. Las fuerzas individuales se determinan mediante la ley de Coulomb. Obsérvese que <span class="math inline">\(\hat{r}_{1,0}=\hat{r}_{2,0}=\hat{\imath}\)</span>, pues ambos versores se encuentran en la dirección positiva de X. </p>
+
+                <ol style="list-style-type: lower-alpha">     
+                <li><p>Fuerza <span class="math inline">\(\vec{F}_{1,0}\)</span> debida a <span class="math inline">\(q_1\)</span>:</p>
+                    <span class="math display">\[\vec{F}_{1,0}=K\frac{q_1 \, q_0}{r_{1,0}^2}\hat{r_{1,0}}=\frac{\left(8.99\cdot10^{9}\,\text{N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(50\cdot10^{-9}\,\text{C}\right)\left(40\cdot10^{-9}\,\text{C}\right)}{\left(3.5\,\text{m}\right)^{2}}\hat{\imath}=\left(1.469\cdot10^{-6}\,\text{N}\right) \, \hat{\imath}\]</span>
+                    <p>Fuerza <span class="math inline">\(\vec{F}_{2,0}\)</span> debida a <span class="math inline">\(q_2\)</span>:</p>
+                    <span class="math display">\[\vec{F}_{2,0}=K\frac{q_2 \, q_0}{r_{2,0}^2}\hat{r_{2,0}}=\frac{\left(8.99\cdot10^{9}\,\text{N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(-5\cdot10^{-9}\,\text{C}\right)\left(40\cdot10^{-9}\,\text{C}\right)}{\left(1.5\,\text{m}\right)^{2}}\hat{\imath}=\left(-0.8\cdot10^{-6}\,\text{N}\right)\,\hat{\imath}\]</span>
+                    <p>La fuerza neta ejercida sobre <span class="math inline">\(q_0\)</span> será la suma de ambas:</p>
+                    <span class="math display">\[\vec{F}_{\text{neta}}=\vec{F}_{1,0}+\vec{F}_{2,0}=\left(0.669\cdot10^{-6} \, \text{N}\right)\,\hat{\imath}\]</span>
+                </li>
+                <li><p>La expresión de la fuerza debida a <span class="math inline">\(q_1\)</span> será:</p>
+                    <span class="math display">\[\vec{F}_{1,0}=K\frac{q_1 \, q_0}{r_{1,0}^2}\hat{r_{1,0}}= K\frac{q_1 \, q_0}{x^2}\hat{\imath}\]</span>
+                    <p>y la debida a <span class="math inline">\(q_2\)</span>:</p>
+                    <span class="math display">\[\vec{F}_{2,0}=K\frac{q_2 \, q_0}{r_{2,0}^2}\hat{r_{2,0}}= K\frac{q_2 \, q_0}{\left(x-2\right)^2}\hat{\imath}\]</span>
+                    <p>Análogamente, para obtener el valor de la fuerza neta se suman los vectores resultantes obtenidos anteriormente:</p>
+                    <span class="math display">\[\vec{F}_{\text{neta}}=\vec{F}_{1,0}+\vec{F}_{2,0}=\left(K\frac{q_1 \, q_0}{x^2} \, + K\frac{q_2 \, q_0}{\left(x-2\right)^2} \, \right) \, \hat{\imath}\]</span>
+                </li>
+                </ol>
+        
+            </div>
+        </article></li>
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 3: La carga <span class="math inline">\(q_1=+50 \, \text{nC}\)</span> está en el origen, la carga <span class="math inline">\(q_2=-8 \, \text{nC}\)</span> está situada en el eje X a 4 m del origen y la carga <span class="math inline">\(q_0=+10 \, \text{nC}\)</span> se encuentra en el punto <span class="math inline">\(\left(4,4\right)\,\text{m}\)</span> tal y como aparece en la figura. Determina el vector de la fuerza resultante sobre la carga <span class="math inline">\(q_0\)</span>.</strong>
+             
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/ejemplo3.png">
+                    <img alt="" src="figuras/ejemplo3.png" width="40%"/>
+                    </a>
+                </div>
+            </div>
+
+            <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+            <div id="sol-e3" style="display:none;">
+                                  
+                <p> Solución: </p>
+                
+                <span class="math display">\[F_{1,0}=K\frac{\left|q_{1}\,q_{0}\right|}{r_{1,0}^{2}}=\frac{\left(8.99\cdot10^{9}\,\text{N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(50\cdot10^{-9}\,\text{C}\right)\left(10\cdot10^{-9}\,\text{C}\right)}{\left(4\sqrt{2}\,\text{m}\right)^{2}}=1.4\cdot10^{-7}\,\text{N}\]</span>
+                <span class="math display">\[F_{1,0x}=F_{2,0y}=F_{1,0}\,\cos\,45^{\circ}=\frac{1.4\cdot10^{-7}\,\text{N}}{\sqrt{2}}=9.89\cdot10^{-8}\,\text{N}\]</span>
+                <span class="math display">\[\vec{F}_{2,0}=K\frac{q_{2}\,q_{0}}{r_{2,0}^{2}}\hat{r}_{2,0}=\frac{\left(8.99\cdot10^{9}\,\text{N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(-8\cdot10^{-9}\,\text{C}\right)\left(10\cdot10^{-9}\,\text{C}\right)}{\left(4\,\text{m}\right)^{2}}\hat{\jmath}=\left(-4.49\cdot10^{-8}\,\text{N}\right)\hat{\jmath}\]</span>
+                <span class="math display">\[F_{x}^{neta}=F_{1,0x}+F_{2,0x}=\left(9.89\cdot10^{-8}\,\text{N}\right)+0=9.89\cdot10^{-8}\,\text{N}\]</span>
+                <span class="math display">\[F_{y}^{neta}=F_{1,0y}+F_{2,0y}=\left(9.89\cdot10^{-8}\,\text{N}\right)+\left(-4.49\cdot10^{-8}\,\text{N}\right)=5.4\cdot10^{-8}\,\text{N}\]</span>
+                <span class="math display">\[F=\sqrt{F_{x}^{2}+F_{y}^{2}}=\sqrt{\left(9.89\cdot10^{-8}\,\text{N}\right)^{2}+\left(5.4\cdot10^{-8}\,\text{N}\right)^{2}}=1.13\cdot10^{-7}\,\text{N}\]</span>
+                <span class="math display">\[\tan\theta=\frac{F_{y}}{F_{x}}=\frac{5.4\cdot10^{-8}\,\text{N}}{9.89\cdot10^{-8}\,\text{N}}=0.546\longrightarrow\theta=28.63^{\circ}\]</span>
+
+            </div>
+        </article></li>
+
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Campo-Electrostatico">Campo Electrostático</h1>
+        </header>
+
+        <p>¿Cuál es el mecanismo según el cuál una carga eléctrica puede ejercer una fuerza sobre otra a través del espacio vacío que existe entre ellas sin que haya contacto? La fuerza eléctrica ejercida por una carga sobre otra es un ejemplo de acción a distancia (al igual que la fuerza gravitatoria).</p>
+
+        <p>Para explicar el fenómeno de acción a distancia se introduce el concepto de campo eléctrico. 
+        Toda carga eléctrica <span class="math inline">\(q\)</span> perturba el espacio donde está situada, creando un campo eléctrico <span class="math inline">\(\vec{E}\)</span> a su alrededor, y es este campo el que ejerce una fuerza sobre cualquier otra carga <span class="math inline">\(q'\)</span> situada en cualquier punto del espacio a una distancia <span class="math inline">\(r\)</span>.
+        Es decir, la carga <span class="math inline">\(q'\)</span> experimenta una fuerza debida al campo <span class="math inline">\(\vec{E}\)</span> (creado por la carga <span class="math inline">\(q\)</span>) existente en su posición.
+        <span class="math inline">\(\vec{E}\)</span> es un vector de modo que tiene: módulo, dirección y sentido, además de unidades [Newton/Culombio].
+        </p>
+
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/representacion_campo_electrico.png">
+                <img alt="" src="figuras/representacion_campo_electrico.png" width="25%"/>
+                </a>
+            </div>
+        </div>
+
+        <p>Supongamos una carga eléctrica <span class="math inline">\(q\)</span> en un punto del espacio. Si colocamos una carga <span class="math inline">\(q'\)</span> en otro punto, ésta experimentará una fuerza eléctrica <span class="math inline">\(\vec{F}\)</span> dada por la Ley de Coulomb.</p>
+
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 150px 20px 150px">
+            <p>Se define en cada punto del espacio un vector <span class="math inline">\(\vec{E}\)</span>, denominado <strong>intesidad de campo eléctrico</strong> o, simplemente, campo eléctrico, mediante la relación:</p>
+            <span class="math display">\[\vec{E} = \frac{\vec{F}}{q'}\]</span>
+        </blockquote>
+
+        <p>Por tanto, el campo eléctrico debido a una carga puntual <span class="math inline">\(q\)</span> en un punto P situado a una distancia <span class="math inline">\(r\)</span> de la carga es:</p>
+    
+        <span class="math display">\[\vec{E} = \pm \, K \, \frac{q}{r^{2}} \, \hat{u_{r}}\]</span>
+    
+
+        <h2 id="Principio-Superposicion">Principio de Superposición de Campos Eléctricos</h2>
+
+        <p>En el espacio puede haber <b>sistemas discretos</b> de cargas, formados por cargas puntuales aisladas unas de otras, o <b>sistemas continuos</b> de cargas, donde toda la carga se encuentra distribuida en un volumen.
+        El <b>principio de superposición</b> establece que la intensidad del campo eléctrico en un punto debido a un sistema <b>discreto</b> de cargas es igual a la <b>suma</b> de las intensidades de los campos debidos a cada una de ellas. Si el sistema es <b>continuo</b>, la suma ha de sustituirse por la <b>integral</b> extendida al volumen del sistema de los campos debidos a cada elemento de volumen que contiene la carga elemental <b>dq</b>.
+        </p>
+
+        <span class="math display">\[\vec{E}=\pm \, K \sum_{i=1}^n \frac{q_{i}}{r_{i}^{2}} \, \hat{u_{r_{i}}}\]</span>
+        <span class="math display">\[\text{d} \vec{E} = \pm \, K \,\frac{\text{d}q}{r^{2}} \, \hat{u_{r}}\]</span>
+        <span class="math display">\[\vec{E}=\int_{\tau}\text{d}\vec{E}=\pm \, K \int_{\tau} \frac{\text{d}q}{r^{2}} \, \hat{u_{r}}\]</span>
+        
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/superposicion.png">
+                <img alt="" src="figuras/superposicion.png" width="55%"/>
+                </a>
+            </div>
+        </div>
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 1: Calcula la intensidad del campo eléctrico creado en el vacío por una carga puntual de +24 nC a una distancia de 20 cm. Halle el módulo de la fuerza que actuaría sobre una carga puntual de +1 nC situada en el mismo punto.</strong>
+            
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                        <a data-fancybox="" href="figuras/ejemplo4.png">
+                        <img alt="" src="figuras/ejemplo4.png" width="25%"/>
+                        </a>
+                    </div>
+                </div>
+
+            <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+            <div id="sol-e4" style="display:none;">
+                              
+                <p> Solución: </p>
+
+                    <p>La intensidad del campo eléctrico creado en el punto P por la carga de +24 nC será</p>
+                    <span class="math display">\[E=K\frac{q}{r^{2}}=9\cdot10^{9}\,\text{N}\cdot \text{m}^{2}/\text{C}^{2}\,\frac{24\cdot10^{-9}\,\text{C}}{\left(0.2\,\text{m}\right)^{2}}=5400\,\text{N/C}\]</span>
+                    <p>Por otra parte, la fuerza que actuaría sobre la carga <span class="math inline">\(q'\)</span> situada en el punto P sería</p>
+                    <span class="math display">\[F=q'\cdot E=1\cdot10^{-9}\,\text{C}\cdot5400\,\text{N/C}=5.4\cdot10^{-6}\,\text{N}\]</span>
+                    <p>Como <span class="math inline">\(q'\)</span> es positiva, <span class="math inline">\(\vec{F}\)</span> tiene el mismo sentido que <span class="math inline">\(\vec{E}\)</span>.</p>
+
+            </div>
+        </article></li>
+    
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 2: Dos cargas eléctricas puntuales <span class="math inline">\(q_1=+4 \, \mu\text{C}\)</span> y <span class="math inline">\(q_2=-4 \, \mu\text{C}\)</span> se encuentran situadas en los puntos <span class="math inline">\(\left(0,0\right)\text{m}\)</span> y <span class="math inline">\(\left(3,0\right)\text{m}\)</span>, respectivamente. Determine el campo eléctrico en el punto P<span class="math inline">\(\left(3,3\right)\text{m}\)</span>.</strong>
+
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/ejemplo5.png">
+                    <img alt="" src="figuras/ejemplo5.png" width="50%"/>
+                    </a>
+                </div>
+            </div>
+
+            <button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+            <div id="sol-e5" style="display:none;">
+                                  
+                <p> Solución: </p>
+            
+                <span class="math display">\[E_{1}=K\frac{q_{1}}{r_{1^{2}}}=9\cdot10^{9}\,\text{N}\cdot\text{m}/\text{C}^{2}\,\frac{4\cdot10^{-6}\,\text{C}}{\left(3\sqrt{2}\,\text{m}\right)^{2}}=2000\,\text{N/C}\]</span>
+                <span class="math display">\[E_{1x}=E_{1}\,\cos45^{\circ}=1414.21\,\text{N/C}\quad\quad E_{1y}=E_{1}\,\sin45^{\circ}=1414.21\,\text{N/C}\]</span>
+                <span class="math display">\[E_{2}=K\frac{q_{2}}{r_{2^{2}}}=9\cdot10^{9}\,\text{N}\cdot\text{m}/\text{C}^{2}\,\frac{-4\cdot10^{-6}\,\text{C}}{\left(3\,\text{m}\right)^{2}}=-4000\,\text{N/C}\]</span>
+                <span class="math display">\[E_{2x}=0\quad\quad E_{2y}=-4000\,\text{N/C}\]</span>
+                <span class="math display">\[E_{x}=E_{1x}+E_{2x}=1414.21\,\text{N/C}\quad\quad E_{y}=E_{1y}+E_{2y}=-2585.79\,\text{N}\]</span>
+
+                <p>El campo eléctrico es <span class="math inline">\(\vec{E}=\left(1414.21\,\hat{\imath}-2585.79\,\hat{\jmath}\right)\,\text{N/C}\)</span>, y su módulo <span class="math inline">\(E=\sqrt{E_{x}^{2}+E_{y}^{2}}=2947.25\,\text{N/C}\)</span></p>
+
+            </div>
+        </article></li>
+    </section>
+
+
+    <section>
+        <header>
+            <h1 id="Energia-Potencial">Energía Potencial</h1>
+        </header>
+
+        <p><b>El campo eléctrico es “conservativo”</b> porque (se comprueba experimentalmente) el trabajo <span class="math inline">\(W_{\text{A}\rightarrow \text{B}}\)</span> necesario para trasladar una carga eléctrica con velocidad constante (es decir, sin variar su energía cinética) entre dos puntos <b>A</b> y <b>B</b> de un campo eléctrico, es el mismo independientemente del camino por el que se lleve la carga desde A hasta B.</p>
+        
+        <div class="sbsimage">
+            <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/campo_conservativo.png">
+                <img alt="" src="figuras/campo_conservativo.png" width="35%"/>
+                </a>
+            </div>
+        </div>
+        
+        <p>El trabajo <span class="math inline">\(W_{\text{A}\rightarrow \text{B}}\)</span> realizado por las fuerzas de campo se emplea en variar la energía potencial del sistema:</p>
+        <span class="math display">\[W_{\text{A}\rightarrow \text{B}}=-\Delta E_{p}=E_{p}\left(\text{A}\right)-E_{p}\left(\text{B}\right)\]</span>
+        
+        <p>La energía potencial absoluta de una carga situada en un campo electrostático no puede calcularse sin tomar un origen de referencia. Si, por convenio, se toma el infinito como origen de referencia, y si se supone que A está en el infinito (<span class="math inline">\(E_{p}\left(\text{A}\right)=0\)</span>), el trabajo para traer la carga desde el infinito hasta B puede interpretarse como:</p>
+        <span class="math display">\[W_{\infty\rightarrow\text{B}}^{\text{ext}}=\Delta E_{p}=E_{p}\left(\text{B}\right)-E_{p}\left(\text{A}\right)=E_{p}\left(\text{B}\right)-0=E_{p}\left(\text{B}\right)\]</span>
+    
+        <p>La energía potencial <span class="math inline">\(E_p\)</span> de una carga eléctrica en un punto del campo electrostático es igual al trabajo necesario para traer la carga desde el infinito hasta ese punto.</p>
+        <span class="math display">\[E_{p}\left(\text{B}\right)=W_{\infty\rightarrow\text{B}}^{\text{ext}}=-\int_{\infty}^{\text{B}}\vec{F}\cdot\text{d}\vec{r}=-\int_{\infty}^{\text{B}}q'\vec{E}\cdot\text{d}\vec{r}=-K\int_{\infty}^{\text{B}}\frac{q\,q'}{r^{2}}\text{d}r=-K\,q\,q'\left[-\frac{1}{r}\right]_{\infty}^{\text{B}}=K\frac{q\,q'}{r_{\text{B}}}\]</span>
+    
+
+        <h2 id="Potencial-Electrostático">Potencial Electrostático</h2>
+
+        <p>La energía potencial en un punto depende de la carga <span class="math inline">\(q'\)</span> allí situada, por lo que se define una magnitud propia del campo en cada punto, el <b>potencial electrostático V</b>, que no es función de la carga colocada en él.</p>
+
+        <p>El potencial electrostático de un punto B del campo eléctrico es la energía potencial de la unidad de carga eléctrica positiva situada en ese punto B:</p>     
+        <span class="math display">\[V_{\text{B}}=\frac{E_{p}\left(\text{B}\right)}{q'}=K\frac{q}{r_{\text{B}}}\]</span>
+        
+        <p>El potencial electrostático es una magnitud escalar, quedando definida por un número y una unidad. La unidad de potencial electrostático en el Sistema Internacional es el Voltio [V]. Un punto del campo tiene un potencial de 1 V si una carga de +1 C situada en él tiene una energía potencial de 1 J.</p>
+        
+        <p>Si el campo eléctrico está creado por un conjunto de cargas puntuales <span class="math inline">\(q_1\)</span>, <span class="math inline">\(q_2\)</span>, <span class="math inline">\(q_3\)</span> ... situadas a diferentes distancias <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span>, <span class="math inline">\(r_3\)</span> de un punto B del campo, el potencial electrostático total creado en dicho punto es la suma algebraica de cada potencial (con su signo).</p>
+        <span class="math display">\[V_{\text{B}}=V_{1}+V_{2}+V_{3}+\ldots=\sum V_{i}\]</span>
+
+        <p>Si <span class="math inline">\(V_\text{A}\)</span> es el potencial electrostático del punto A, y <span class="math inline">\(V_\text{B}\)</span> es el del punto B, el trabajo para mover la carga q' desde A hasta B en contra de las fuerzas del campo es:</p>
+        <span class="math display">\[W_{\text{A}\rightarrow\text{B}}^{\text{ext}}=E_{p}\left(\text{B}\right)-E_{p}\left(\text{A}\right)=V_{\text{B}} \, q'-V_{\text{A}} \, q'=\left(V_{\text{B}}-V_{\text{A}}\right)q'\]</span>
+        <span class="math display">\[\frac{W_{\text{A}\rightarrow\text{B}}^{\text{ext}}}{q'}=V_{\text{B}}-V_{\text{A}}\]</span>
+    
+        <blockquote style="background-color:lightyellow;border-color:yellow;margin: 20px 150px 20px 150px">
+            <p>La <b>diferencia de potencial</b> (ddp) entre dos puntos A y B es el trabajo realizado para transportar la unidad de carga eléctrica positiva desde A hasta B.</p>
+        </blockquote>
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO 1: Determina el potencial electrostático en el punto <span class="math inline">\(\left(4,4\right)\)</span> creado por tres cargas puntuales de <span class="math inline">\(+4 \, \mu\text{C}\)</span>, <span class="math inline">\(-2 \, \mu\text{C}\)</span> y <span class="math inline">\(+8 \, \mu\text{C}\)</span> situadas respectivamente en los puntos <span class="math inline">\(\left(4,0\right)\)</span>, <span class="math inline">\(\left(0,0\right)\)</span> y <span class="math inline">\(\left(0,4\right)\)</span> (las distancias están expresadas en metros).</strong>
+                    
+            <button id="e6" class="button"  onclick="show2('e6');">Solución</button>
+            <div id="sol-e6" style="display:none;">
+                                      
+                <p> Solución: </p>
+                
+                <span class="math display">\[V_{1}=K\frac{q_{1}}{r_{1}}=9\cdot10^{9}\,\text{N}\cdot \text{m}^{2}/\text{C}^{2}\,\frac{4\cdot10^{-6}\,\text{C}}{4 \, \text{m}}=9000\,\text{V}\]</span>
+                <span class="math display">\[V_{2}=K\frac{q_{2}}{r_{2}}=9\cdot10^{9}\,\text{N}\cdot \text{m}^{2}/\text{C}^{2}\,\frac{-2\cdot10^{-6}\,\text{C}}{4\sqrt{2} \, \text{m}}=-3181.98\,\text{V}\]</span>
+                <span class="math display">\[V_{3}=K\frac{q_{3}}{r_{3}}=9\cdot10^{9}\,\text{N}\cdot \text{m}^{2}/\text{C}^{2}\,\frac{8\cdot10^{-6}\,\text{C}}{4 \, \text{m}}=18000\,\text{V}\]</span>
+
+                <p>El potencial total en el punto <span class="math inline">\(\left(4,4\right)\)</span> es la suma de los potenciales debidos a cada carga:</p>
+                <span class="math display">\[V=V_{1}+V_{2}+V_{3}=9000\,\text{V}-3181.98\,\text{V}+18000\,\text{V}=23818.02\,\text{V}\]</span>
+            
+            </div>
+        </article></li>
+
+        </section>
+    
+
+        <section>
+            <header>
+                <h1 id="Equipotenciales">Líneas de Fuerza y Superficies Equipotenciales</h1>
+            </header>
+
+            <p>Las <b>líneas de fuerza del campo eléctrico</b> son <b>líneas imaginarias tangentes</b> en cada punto al vector intensidad de campo eléctrico. Para representarlas gráficamente se usa como modelo la trayectoria que seguiría una unidad de carga eléctrica positiva ideal abandonada en reposo en un punto del campo eléctrico. Algunos ejemplos de líneas de fuerza creados por cargas puntuales y por un dipolo:</p>
+
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/lineas_fuerza.png">
+                    <img alt="" src="figuras/lineas_fuerza.png" width="35%"/>
+                    </a>
+                </div>
+            </div>
+
+            <p>Las <b>superficies equipotenciales</b> son aquellos puntos del campo que tienen el mismo potencial electrostático. Así, son perpendiculares a las líneas de fuerza del campo. Ver ejemplo:</p>
+        
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/equipotenciales.png">
+                    <img alt="" src="figuras/equipotenciales.png" width="35%"/>
+                    </a>
+                </div>
+            </div>
+        
+        </section>
+
+
+        <section>
+            <header>
+                <h1 id="Teorema-de-Gauss">Teorema de Gauss</h1>
+            </header>
+
+            <p>El <b>flujo de campo eléctrico</b>, <span class="math inline">\(\Phi\)</span>, es la magnitud matemática relacionada con el número de líneas de campo que atraviesa una superficie.</p>
+    
+            <p>En el caso de una superficie plana como la de la figura, con un campo <span class="math inline">\(\vec{E}\)</span> que forma un ángulo <span class="math inline">\(\alpha\)</span> con el vector Superficie <span class="math inline">\(\vec{S}\)</span> (perpendicular al plano y de módulo igual a su área), el flujo de campo se calcula matemáticamente como el siguiente producto escalar:</p>
+            <span class="math display">\[\Phi=\vec{E}\cdot\vec{S}=E\,S\,\cos\alpha\]</span>
+
+            <p>En el caso más general en que tengamos una superficie cualquiera, no plana, el flujo elemental <span class="math inline">\(\text{d}\Phi\)</span> a través de un elemento de superficie <span class="math inline">\(\text{d}S\)</span> es: <span class="math inline">\(\text{d}\Phi=\vec{E} \cdot \text{d}\vec{S} \)</span> y el flujo total a través de toda la superficie:</p>
+            <span class="math display">\[\Phi=\int_{S}\text{d}\Phi=\int_{S}\vec{E}\cdot\text{d}\vec{S}\]</span>
+        
+            <p>El <b>Teorema de Gauss</b> dice que el flujo neto a través de cualquier superficie cerrada S es igual a <span class="math inline">\(4 \, \pi \, K\)</span> veces la carga neta encerrada en la superficie:</p>
+            <span class="math display">\[\Phi=\oint_{S}E_{n}\,\text{d}S=4\,\pi\,K\,Q_{\text{interior}}\]</span>
+            
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/flujo_electrico.png">
+                    <img alt="" src="figuras/flujo_electrico.png" width="42%"/>
+                    </a>
+                </div>
+            </div>
+
+            <p>El <b>Teorema de Gauss</b> puede utilizarse para determinar los campos eléctricos debidos a distribuciones de cargas de geometría sencilla. Por ejemplo, el campo eléctrico debido a una esfera hueca de radio <span class="math inline">\(R\)</span> cargada superficialmente con carga <span class="math inline">\(Q\)</span>, sería:</p>
+            <ul>
+                <li><p>Cero en el interior, pues no hay carga encerrada.</p></li>
+                <li><span class="math inline">\(E=K \, \frac{Q}{R^2}\)</span>, justo en la superficie de la esfera.<p></p></li>
+                <li><p><span class="math inline">\(E=K \, \frac{Q}{r^2}\)</span>, a una distancia <span class="math inline">\(r>R\)</span> fuera de la esfera.</p></li>
+            </ul>
+
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/esfera_hueca.png">
+                    <img alt="" src="figuras/esfera_hueca.png" width="45%"/>
+                    </a>
+                </div>
+            </div>
+
+            <article style="background-color:lightblue;border-color:blue">
+                <strong>EJEMPLO 1: Una esfera conductora hueca de radio R=20 cm situada en el vacío presenta una carga superficial de 80 nC. Calcula la intensidad del campo eléctrico en un punto que dista del centro de la esfera
+                    <ol style="list-style-type: lower-alpha"> 
+                        <li><p>5 cm.</p></li>
+                        <li><p>20 cm.</p></li>
+                        <li><p>40 cm.</p></li>
+                    </ol>    
+
+                </strong>
+                            
+                <button id="e7" class="button"  onclick="show2('e7');">Solución</button>
+                <div id="sol-e7" style="display:none;">
+                                              
+                    <p> Solución: </p>
+                    
+                    <ol style="list-style-type: lower-alpha"> 
+                        <li><p>Para <span class="math inline">\(r=5 \text{ cm}\)</span> nos encontramos en el interior de la esfera, donde no hay carga, por lo que  <span class="math inline">\(E=0\)</span>.</p></li>
+                        <li><p>Para <span class="math inline">\(r=R=20 \text{ cm}\) (superficie de la esfera):</span></p>
+                            <span class="math display">\[E=\frac{1}{4\pi\varepsilon_{0}}\frac{Q}{R^{2}}=9\cdot10^{9}\,\text{N}\cdot \text{m}^{2}/\text{C}^{2}\,\frac{80\cdot10^{-9}\,\text{C}}{\left(0.2\,\text{m}\right)^{2}}=18000\,\text{N/C}\]</span>
+                        </li>
+                        <li><p>De igual manera, para <span class="math inline">\(r=40 \text{ cm}\)</span> se tiene que </p>
+                            <span class="math display">\[E=\frac{1}{4\pi\varepsilon_{0}}\frac{Q}{r^{2}}=9\cdot10^{9}\,\text{N}\cdot \text{m}^{2}/\text{C}^{2}\,\frac{80\cdot10^{-9}\,\text{C}}{\left(0.4\,\text{m}\right)^{2}}=4500\,\text{N/C}\]</span>
+                        </li>
+                    </ol>     
+
+                </div>
+            </article></li>
+
+        </section>
+
+        <br>
+
+        <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+      
+        <br><br>
+
+    <script type="text/javascript" language="javascript">
+        function show(str, obj){
+          document.getElementById(obj).innerHTML = str;
+          //MathJax.Hub.Typeset();
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+        }
+        function show2(divID) {
+            var sol = document.getElementById("sol-"+divID);
+            var div = document.getElementById(divID);
+            if(sol.style.display == "none"){
+              sol.style.display = "block";
+            }else{
+              sol.style.display = "none";
+            }
+            if(div.innerHTML == "Solución"){
+              div.innerHTML = "Oculta solución";
+            }else{
+              div.innerHTML = "Solución";
+            }
+        }
+        </script>
+        
+        </body>
+        </html>

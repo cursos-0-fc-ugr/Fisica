@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="otro.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+</head>
+
+<body>
+    <div id="header">
+      <h1 class="title">Vectores. Análisis Vectorial.</h1>
+    </div>
+
+    <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+
+    <section>
+      <header>
+        <h1 id="propiedades-generales-de-los-vectores">Propiedades generales de los vectores</h1>
+      </header>
+
+      <p>En Física, algunas cantidades como el tiempo, la temperatura, la masa y la densidad, se pueden describir completamente con un número y una unidad. Diremos entonces que se trata de <span><strong>magnitudes escalares</strong></span>.</p>
+      <p>Sin embargo, existen otras magnitudes que están asociadas con una dirección y no pueden describirse con un sólo número. Por ejemplo, la velocidad: no solo es necesario indicar la rapidez de un avión, sino también su dirección. También ocurre igual con la magnitud física fuerza: para describirla correctamente, hay que indicar no solo su intensidad, sino también su dirección y sentido. Diremos que son <span><strong>magnitudes vectoriales</strong></span>.</p>
+
+
+      <article style="background-color:lightblue;border-color:blue">
+          <strong>EJEMPLO: <span class="math inline">\({\overrightarrow{A}}\)</span> y <span class="math inline">\({\overrightarrow{B}}\)</span> son vectores con la misma magnitud y dirección, pero diferente sentido. El vector <span class="math inline">\({\overrightarrow{C}}\)</span> tiene la misma dirección que los dos vectores anteriores. Diremos que son vectores paralelos.</strong>
+        
+          <div class="sbsimage">
+              <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/fig-vectores0.png">
+                <img alt="" src="figuras/fig-vectores0.png" width="30%"/>
+              </a>
+              </div>
+          </div>
+
+          </div>
+      </article>
+ 
+      <p>La magnitud de un vector es el <span><em>módulo</em></span> del vector, y se expresa en la forma <span class="math inline">\(|{\overrightarrow{A}}|\)</span>. Es una cantidad escalar y siempre es positiva.</p>
+    </section>
+
+
+    <section>
+       <header>
+        <h1 id="operaciones-con-vectores">Operaciones con vectores</h1>
+      </header>
+
+      <ol>
+        <li><p><span><strong>Suma de vectores</strong></span>:</p>
+
+          <p>Supongamos que una partícula sufre un desplazamiento del punto <span class="math inline">\(O\)</span> al punto <span class="math inline">\(P\)</span>, definido por el vector <span class="math inline">\({\overrightarrow{A}}={\overrightarrow{OP}}\)</span>, seguido de un segundo desplazamiento, del punto <span class="math inline">\(P\)</span> al punto <span class="math inline">\(Q\)</span>, definido entonces por el vector <span class="math inline">\({\overrightarrow{B}}={\overrightarrow{PQ}}\)</span>. El resultado final será equivalente a considerar que la partícula parte del punto <span class="math inline">\(O\)</span> y tiene como punto final el punto <span class="math inline">\(Q\)</span>. Es decir, podemos considerar que el desplazamiento total vendrá dado por el vector <span class="math inline">\({\overrightarrow{C}}\)</span>, que se calcula como <span class="math display">\[{\overrightarrow{C}} = {\overrightarrow{A }}+{\overrightarrow{B}} = {\overrightarrow{B}}+{\overrightarrow{A}}\]</span></p>
+          <p>La suma de vectores es <span><strong>conmutativa</strong></span>, tal y como vemos en la siguiente figura</p>
+          
+          <div class="sbsimage">
+              <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/fig-vectores01.png">
+                <img alt="" src="figuras/fig-vectores01.png" width="35%"/>
+              </a>
+              </div>
+          </div>         
+
+          <p>Y además, también es <span><strong>asociativa</strong></span>:</p>
+          <p><span class="math display">\[ {\overrightarrow{A}}+{\overrightarrow{B}}+{\overrightarrow{C}}  \rightarrow \left ( {\overrightarrow{A}}+{\overrightarrow{B}} \right ) + {\overrightarrow{C}} = {\overrightarrow{A}} + \left ( {\overrightarrow{B}} + {\overrightarrow{C}} \right )\]</span></p>
+          <p>Para restar dos vectores:</p>
+          <p><span class="math display">\[{\overrightarrow{A}} - {\overrightarrow{B}} = {\overrightarrow{A}} + \left ( -{\overrightarrow{B}} \right )\]</span></p>
+          <p><span class="math inline">\((-{\overrightarrow{B}})\)</span> es el vector opuesto de <span class="math inline">\({\overrightarrow{B}}\)</span>. Tiene la misma magnitud, la misma dirección, pero sentido contrario.</p>
+          <p>También podemos multiplicar un vector por un escalar. Por ejemplo:</p>
+          <p><span class="math display">\[{\overrightarrow{B}} = 2 \, {\overrightarrow{A}}\]</span></p>
+          <p><span class="math inline">\({\overrightarrow{B}}\)</span> es un vector con la misma dirección y sentido que <span class="math inline">\({\overrightarrow{A}}\)</span> pero su magnitud es el doble.</p>
+          <p>La fuerza es una magnitud vectorial. Por tanto, de la expresión</p>
+          <p><span class="math display">\[ {\overrightarrow{F}}= m \, {\overrightarrow{a}} \,\]</span></p>
+          <p>podemos deducir que la dirección de <span class="math inline">\({\overrightarrow{F}}\)</span> y <span class="math inline">\({\overrightarrow{a}}\)</span> es la misma, el sentido también (porque <span class="math inline">\(m\)</span> es siempre una cantidad positiva) y la magnitud de <span class="math inline">\({\overrightarrow{F}}\)</span> es igual a la magnitud de <span class="math inline">\({\overrightarrow{a}}\)</span> multiplicada por la masa <span class="math inline">\(m\)</span>.</p>
+
+          <article style="background-color:lightblue;border-color:blue">
+              <strong>EJEMPLO: Un senderista camina desde un refugio en una llanura <span class="math inline">\(1\)</span> km hacia el norte y <span class="math inline">\(2\)</span> km hacia el este. ¿A qué distancia y en qué dirección está respecto al punto de partida?</strong>
+              <button id="e1" class="button"  onclick="show2('e1');">Solución</button>
+              <div id="sol-e1" style="display:none;">
+                
+                <p> Solución: </p>
+                           
+                <p>El camino que sigue el senderista puede ser descrito mediante los vectores <span class="math inline">\({\overrightarrow{A}}\)</span>, <span class="math inline">\({\overrightarrow{B}}\)</span> y su resultante <span class="math inline">\({\overrightarrow{C}}\)</span>, tal y como se representa en la siguiente figura</p>
+
+                <div class="sbsimage">
+                    <div class="imgContainerEnd">
+                      <a data-fancybox="" href="figuras/fig-vectores02.png">
+                      <img alt="" src="figuras/fig-vectores02.png" width="35%"/>
+                    </a>
+                    </div>
+                </div>  
+
+                <p>La distancia al punto de partida la determinaremos mediante la magnitud del vector <span class="math inline">\({\overrightarrow{C}}\)</span>, que vendrá dada por:</p>
+                <p><span class="math display">\[|{\overrightarrow{C}}| = \sqrt{1 + 4} \; {\rm km} = \sqrt{5} \; {\rm km} \, .\]</span></p>
+                <p>La dirección nos la dará el ángulo <span class="math inline">\(\phi\)</span> y por tanto, puede ser calculado teniendo en cuenta la magnitud de los vectores <span class="math inline">\({\overrightarrow{A}}\)</span> y <span class="math inline">\({\overrightarrow{B}}\)</span>, <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span> km, respectivamente. Por tanto</p>
+                <p><span class="math display">\[{\rm tg} \, \phi = \frac{2}{1} \;\; \rightarrow \phi=63.4^{\rm o}\]</span></p></li>
+                
+              </div>
+            </article>
+
+        <br>
+
+        <li><p><span><strong>Componentes</strong></span></p>
+          <p>Las componentes de los vectores nos van a permitir un método sencillo pero general para sumar vectores. Supongamos que tenemos un sistema cartesiano de ejes de coordenadas. Entonces <span class="math inline">\(A_x\)</span> es la magnitud del vector <span class="math inline">\({\overrightarrow{A_x}}\)</span> y <span class="math inline">\(A_y\)</span> es la magnitud del vector <span class="math inline">\({\overrightarrow{A_y}}\)</span>. <span class="math inline">\(A_x\)</span> y <span class="math inline">\(A_y\)</span> son las componentes del vector <span class="math inline">\({\overrightarrow{A}}\)</span>. Podemos calcular las componentes del vector <span class="math inline">\({\overrightarrow{A}}\)</span> si conocemos la magnitud y la dirección de dicho vector. Describiremos la dirección de un vector con su ángulo <span class="math inline">\(\theta\)</span>, relativo a una dirección de referencia, que es el eje <span class="math inline">\(x\)</span> positivo, siempre en sentido antihorario</p>
+          <p><span class="math display">\[\frac{A_x}{|{\overrightarrow{A}}|} = \cos \theta   \rightarrow A_x= |{\overrightarrow{A}}| \cos \theta  \quad \quad \frac{A_y}{|{\overrightarrow{A}}|}= {\rm sen}\,  \theta \rightarrow A_y= |{\overrightarrow{A}}| {\rm sen} \, \theta\]</span></p>
+
+          <article style="background-color:lightblue;border-color:blue">
+              <strong>EJEMPLO: Determina las componente <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> del vector <span class="math inline">\({\overrightarrow{D}}\)</span>, con magnitud <span class="math inline">\(|{\overrightarrow{D}}|=3\)</span> m y siendo <span class="math inline">\(\alpha=45^{\rm o}\)</span> (ver figura).</strong>
+              <button id="e2" class="button"  onclick="show2('e2');">Solución</button>
+              <div id="sol-e2" style="display:none;">
+                
+                <p> Solución: </p>
+                           
+                <p>Según la figura, vemos que <span class="math inline">\(D_x\)</span> es positiva y <span class="math inline">\(D_y\)</span> es negativa. Por tanto</p>
+                <p><span class="math display">\[\cos \alpha = \frac{D_x}{|{\overrightarrow{D}}|} \quad {\rm sen} \, \alpha = \frac{|D_y|}{|{\overrightarrow{D}}|} \rightarrow D_x=3/2 \sqrt{2} \quad  D_y=3/2 \sqrt{2} \, .\]</span></p>
+                                
+              </div>
+            </article>
+  
+        <br>
+
+        <li><p><span><strong>Cálculo de vectores usando componentes</strong></span></p>
+          <p>El uso de componentes facilita algunos cálculos que implican vectores. Veamos algunos ejemplos</p>
+
+          <ul>
+          <li><p><span><em>Cálculo y magnitud de un vector a partir de sus componentes</em></span>:</p>
+          <p>Un vector queda descrito por su magnitud y dirección, pero también dando sus componentes. A partir de ellas, podemos calcular la magnitud y dirección del vector</p>
+          <p><span class="math display">\[ |{\overrightarrow{A}}| = \sqrt{A_x^2 + A_y^2} \quad  {\rm tg} \, \theta = \frac{A_y}{A_x} \quad \theta = {\rm arctg} \, \, \frac{A_y}{A_x}\]</span></p>
+
+          <article style="background-color:lightblue;border-color:blue">
+              <strong>EJEMPLO: Calcula la magnitud y dirección del vector <span class="math inline">\({\overrightarrow{A}}\)</span> si <span class="math inline">\(A_x=2\)</span> m y <span class="math inline">\(A_y=-2\)</span> m.</strong>
+              <button id="e3" class="button"  onclick="show2('e3');">Solución</button>
+              <div id="sol-e3" style="display:none;">
+                
+                <p> Solución: </p>
+
+                <p><span class="math display">\[ |{\overrightarrow{A}}| = \sqrt{A_x^2 + A_y^2} =\sqrt{8} \quad  \theta = {\rm arctg} \, \,(-1) \quad \theta=315^{\rm o}\]</span></p>
+                <p>Al introducir el valor <span class="math inline">\(-1\)</span> en la calculadora para obtener el valor del arco tangente, nos dará <span class="math inline">\(-45^{\rm o}\)</span>. Este ángulo, siguiendo nuestro criterio de tomarlo respecto al eje <span class="math inline">\(x\)</span> positivo, en sentido antihorario, es equivalente al ángulo de <span class="math inline">\(315^{\rm o}\)</span>.</p>
+                                          
+              </div>
+            </article></li>
+
+            <br>
+
+        <li><p><span><em>Multiplicación de un vector por un escalar</em></span>:</p>
+          <p><span class="math display">\[ {\overrightarrow{D}}= c {\overrightarrow{A}} \rightarrow D_x = c \, A_x \quad D_y = c \, A_y\]</span></p></li>
+        <li><p><span><em>Uso de componentes para calcular la suma de vectores</em></span>:</p>
+          <p><span class="math display">\[ {\overrightarrow{A}}, {\overrightarrow{B}} \quad {\overrightarrow{R}} = {\overrightarrow{A}} + {\overrightarrow{B}}  \rightarrow R_x=A_x+B_x \quad  R_y=A_y+B_y \, .\]</span></p></li>
+        </ul>
+
+
+        <article style="background-color:lightblue;border-color:blue">
+            <strong>EJEMPLO: Un conductor desorientado recorre <span class="math inline">\(3.25\)</span> km hacia el norte, <span class="math inline">\(4.75\)</span> km hacia el oeste y <span class="math inline">\(1.50\)</span> km hacia el sur. Calcular la magnitud y dirección del vector desplazamiento resultante, mediante la suma de las componentes.</strong>
+            
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                  <a data-fancybox="" href="figuras/fig-vectores1.png">
+                  <img alt="" src="figuras/fig-vectores1.png" width="35%"/>
+                </a>
+                </div>
+            </div> 
+
+            <button id="e4" class="button"  onclick="show2('e4');">Solución</button>
+            <div id="sol-e4" style="display:none;">
+              
+              <p> Solución: </p>
+
+              <p>Teniendo en cuenta las componentes (expresadas en km):</p>
+              <p><span class="math display">\[ A_x=0 \;\; A_y=3.25 \quad B_x=-4.75 \, \, B_y= 0 \quad C_x= 0 \;\; C_y=-1.50\]</span></p>
+              <p>Por tanto</p>
+              <p><span class="math display">\[ R_x=A_x+B_x+C_x=-4.75 \quad R_y=A_y+B_y+C_y=1.75 \, .\]</span></p></li>
+                        
+            </div>
+          </article></li>
+
+
+          <article style="background-color:lightblue;border-color:blue">
+              <strong>EJEMPLO: El vector <span class="math inline">\({\overrightarrow{A}}\)</span> tiene componentes <span class="math inline">\(A_x=1.30\)</span> cm. <span class="math inline">\(A_y=2.25\)</span> cm. El vector <span class="math inline">\({\overrightarrow{B}}\)</span> tiene componentes <span class="math inline">\(B_x=4.10\)</span> cm y <span class="math inline">\(B_y=-3.75\)</span> cm. Calcular:
+              <ol>
+                <li><p>Las componentes de la resultante <span class="math inline">\({\overrightarrow{R}}={\overrightarrow{A}}+{\overrightarrow{B}}\)</span>.</p></li>
+                <li><p>La magnitud y la dirección de <span class="math inline">\({\overrightarrow{R}}={\overrightarrow{A}}+{\overrightarrow{B}}\)</span>.</p></li>
+                <li><p>Las componentes de la diferencia vectorial <span class="math inline">\({\overrightarrow{S}}={\overrightarrow{B}}-{\overrightarrow{A}}\)</span>.</p></li>
+                <li><p>La magnitud y la dirección de <span class="math inline">\({\overrightarrow{S}}={\overrightarrow{B}}-{\overrightarrow{A}}\)</span>.</p></li> 
+              </ol></strong>
+  
+              <button id="e5" class="button"  onclick="show2('e5');">Solución</button>
+              <div id="sol-e5" style="display:none;">
+                
+                <p> Solución: </p>
+                <ol>
+                  <li><p><span class="math display">\[ R_x=A_x+B_x=5.40 \; {\rm cm} \quad \quad R_y=A_y+B_y=-1.50 \; {\rm cm}\]</span></p></li>
+                  <li><p><span class="math display">\[|{\overrightarrow{R}}|=\sqrt{(5.40)^2 + (1.50)^2} \; {\rm cm} = 5.60 \; {\rm cm} \quad \quad {\rm tg} \; \phi= \frac{-1.50}{5.40} \rightarrow \phi=285.52^{\rm o}\]</span></p></li>
+                  <li><p><span class="math display">\[S_x=B_x-A_x=2.80 \; {\rm cm} \quad \quad S_y=B_y-A_y=-6.00 \; {\rm cm}\]</span></p></li>
+                  <li><p><span class="math display">\[|{\overrightarrow{S}}|=\sqrt{(2.80)^2 + (6.00)^2} \; {\rm cm} = 6.62 \; {\rm cm} \quad \quad {\rm tg} \; \psi= \frac{-6.00}{2.80} \rightarrow \psi=115.02^{\rm o}\]</span></p></li>
+                </ol>
+                
+              </div>
+            </article></li>
+    </section>
+
+
+    <section>
+        <header>
+         <h1 id="vectores-unitarios">Vectores unitarios</h1>
+       </header>
+
+      <p>Los vectores unitarios son aquéllos con magnitud igual a <span class="math inline">\(1\)</span> (sin unidades). Su única finalidad es dar una dirección en el espacio. Siempre los notaremos con un acento del tipo <span class="math inline">\(\hat{ }\)</span>, para indicar que se trata de un vector unitario.</p>
+
+      <ul>
+        <li><p><span class="math inline">\(\hat{\imath}\)</span> <span class="math inline">\(\rightarrow\)</span> apunta en la dirección <span class="math inline">\(x\)</span> positiva.</p></li>
+        <li><p><span class="math inline">\(\hat{\jmath}\)</span> <span class="math inline">\(\rightarrow\)</span> apunta en la dirección <span class="math inline">\(y\)</span> positiva</p></li>
+      </ul>
+
+      <p>Por tanto, podemos escribir:</p>
+      <p><span class="math display">\[{\overrightarrow{A}}= A_x \, \hat{\imath} \, + \, A_y \, \hat{\jmath} \, .\]</span></p>
+
+      <p>Y la suma de vectores se haría sumando directamente componentes: <span class="math display">\[\vec{A}=A_x \, \hat{\imath} \, + \, A_y \, \hat{\jmath} \quad \quad \quad \vec{B}=B_x \, \hat{\imath} \, + \, B_y \, \hat{\jmath} \quad \quad \quad {\overrightarrow{R}}= {\overrightarrow{A}}+{\overrightarrow{B}}=\left ( A_x+B_x \right) \hat{\imath} + \left (A_y+B_y \right) \hat{\jmath}\]</span></p>
+
+
+      <article style="background-color:lightblue;border-color:blue">
+          <strong>EJEMPLO: Sean los vectores <span class="math inline">\({\overrightarrow{D}}= \left ( 6 \hat{\imath} + 3\hat{\jmath} \right )\, {\rm m}\)</span> y <span class="math inline">\({\overrightarrow{E}}= \left ( 4 \hat{\imath} - 5 \hat{\jmath} \right ) \, {\rm m}\)</span>. Calcular el vector <span class="math inline">\(2 {\overrightarrow{D}} - {\overrightarrow{E}}\)</span> y su magnitud.</strong>
+
+          <button id="e6" class="button"  onclick="show2('e6');">Solución</button>
+          <div id="sol-e6" style="display:none;">
+            
+            <p> Solución: </p>
+
+            <span class="math display">\[ {\overrightarrow{R}} = 2\, {\overrightarrow{D}} -{\overrightarrow{E}} = 2 \, \left ( 6 \hat{\imath} + 3 \hat{\jmath} \right ) - \left ( 4 \hat{\imath} - 5 \hat{\jmath} \right ) = 12 \hat{\imath} + 6 \hat{\jmath} - 4\hat{\imath} + 5 \hat{\jmath} = \left ( 8 \hat{\imath} + 11 \hat{\jmath} \right ) \, { \rm m} \, .\]</span></p>
+            <p>Y la magnitud del vector <span class="math inline">\({\overrightarrow{R}}\)</span> será:</p>
+            <p><span class="math display">\[ |{\overrightarrow{R}}|= \sqrt{64 \, +\, 121} = \sqrt{185} \, {\rm m} = 13.6 \, {\rm m}\]</span></p>
+                       
+          </div>
+        </article></li>
+    </section>
+
+    <section>
+        <header>
+         <h1 id="producto-de-vectores">Producto de vectores</h1>
+       </header>
+
+      <ol>
+        <li><p><span><strong>Producto escalar de dos vectores</strong></span>:<br />
+          <p>Se denota por <span class="math inline">\({\overrightarrow{A}} \cdot {\overrightarrow{B}}\)</span> y el resultado es un escalar. Para calcularlo, representamos los vectores <span class="math inline">\({\overrightarrow{A}}\)</span> y <span class="math inline">\({\overrightarrow{B}}\)</span> con origen en el mismo punto.</p>
+
+          <div class="sbsimage">
+              <div class="imgContainerEnd">
+                <a data-fancybox="" href="figuras/fig-vectores03.png">
+                <img alt="" src="figuras/fig-vectores03.png" width="35%"/>
+              </a>
+              </div>
+          </div> 
+
+          <p>Definimos <span class="math inline">\({\overrightarrow{A}} \cdot {\overrightarrow{B}}\)</span> como la magnitud de <span class="math inline">\({\overrightarrow{A}}\)</span> multiplicada por la componente de <span class="math inline">\({\overrightarrow{B}}\)</span> paralela a <span class="math inline">\({\overrightarrow{A}}\)</span>, es decir:</p>
+          <p><span> <span class="math display">\[\fbox{${\overrightarrow{A}} \cdot {\overrightarrow{B}} = |{\overrightarrow{A}}|\, |{\overrightarrow{B}}| \, {\rm cos} \, \theta$ }\]</span></span></p>
+          <p>Es un escalar, y puede ser positivo, negativo o cero. Si <span class="math inline">\(\theta= \pi /2\)</span> (vectores perpendiculares) el producto escalar es siempre cero, independientemente de la magnitud de los vectores. También podemos comprobar que el producto escalar es <span><strong>conmutativo</strong></span>:</p>
+          <p><span class="math display">\[{\overrightarrow{A}} \cdot {\overrightarrow{B}} = |{\overrightarrow{A}}| \, |{\overrightarrow{B}}| \, {\rm cos} \, \theta= |{\overrightarrow{B}}| \, |{\overrightarrow{A}}| \, {\rm cos} \, \theta = {\overrightarrow{B}} \cdot {\overrightarrow{A}}\]</span></p>
+          <p>Por ejemplo, si una fuerza constante <span class="math inline">\(\vec{F}\)</span> se aplica a un cuerpo que sufre un desplazamiento <span class="math inline">\(\vec{s}\)</span>, el trabajo <span class="math inline">\(W\)</span> realizado por la fuerza se calculará como</p>
+          <p><span> <span class="math display">\[\fbox{$W = {\overrightarrow{F}} \cdot {\overrightarrow{s}} $ }\]</span></span></p>
+          <p>Si queremos usar las componentes para calcular el producto escalar de los vectores <span class="math inline">\({\overrightarrow{A}}\)</span> y <span class="math inline">\({\overrightarrow{B}}\)</span></p>
+          <p><span class="math display">\[{\overrightarrow{A}}= A_x \hat{\imath} + A_y \hat{\jmath}   \quad \; {\overrightarrow{B}}= B_x \hat{\imath} + B_y \hat{\jmath} \,\]</span></p>
+          <p>tendremos: <span class="math display">\[\vec{A} \cdot \vec{B} = \left ( A_x \hat{\imath} + A_y \hat{\jmath} \right )  \cdot \left ( B_x \hat{\imath} + B_y \hat{\jmath} \right ) = A_x \, B_x + A_y \, B_y \, ,\]</span> donde hemos usado que se verifica que: <span class="math display">\[\hat{\imath} \cdot \hat{\imath} = \hat{\jmath} \cdot \hat{\jmath}= 1 \quad \; \hat{\imath} \cdot \hat{\jmath} = \hat{\jmath} \cdot \hat{\imath} = 0\]</span></p>    
+            
+
+          <article style="background-color:lightblue;border-color:blue">
+              <strong><p>EJEMPLO: Obtener el producto escalar de los vectores <span class="math inline">\({\overrightarrow{A}}\)</span> y <span class="math inline">\({\overrightarrow{B}}\)</span>, siendo <span class="math inline">\(|{\overrightarrow{A}}|=4\)</span>, <span class="math inline">\(\theta_A=53^{\rm o}\)</span> y <span class="math inline">\(|{\overrightarrow{B}}|=5\)</span>, <span class="math inline">\(\theta_B=130^{\rm o}\)</span> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></strong></p>
+      
+              <div class="sbsimage">
+                  <div class="imgContainerEnd">
+                    <a data-fancybox="" href="figuras/fig-vectores04.png">
+                    <img alt="" src="figuras/fig-vectores04.png" width="100%"/>
+                  </a>
+                  </div>
+              </div> 
+
+              <button id="e7" class="button"  onclick="show2('e7');">Solución</button>
+              <div id="sol-e7" style="display:none;">
+                  
+                <p> Solución: </p>
+
+                <p>Podemos calcular las componentes de cada uno de los vectores: <span class="math display">\[A_x= |{\overrightarrow{A}}| \cos 53^{\rm o} = 2.407 \quad \; A_y = |{\overrightarrow{A}}| {\rm sen} 53^{\rm o}=3.195\]</span></p>
+                <p><span class="math display">\[B_x= |{\overrightarrow{B}}| \cos 130^{\rm o} = -3.214 \quad \; B_y = |{\overrightarrow{B}}| {\rm sen} 130^{\rm o}=3.830 \, .\]</span></p>
+                <p>Por tanto:</p>
+                <p><span class="math display">\[ {\overrightarrow{A}} \cdot {\overrightarrow{B}} = A_x \, B_x \, + \, A_y \, B_y = 4.499 \, .\]</span></p>
+
+              </div>
+          </article></li>  
+          
+
+          <article style="background-color:lightblue;border-color:blue">
+              <strong>EJEMPLO: Determinar el ángulo de los vectores <span class="math inline">\({\overrightarrow{A}} = 2 \hat{\imath} + 3 \hat{\jmath}\)</span> y <span class="math inline">\({\overrightarrow{B}} = -4 \hat{\imath} + 2 \hat{\jmath} \, .\)</span> </strong>
+      
+              <button id="e8" class="button"  onclick="show2('e8');">Solución</button>
+              <div id="sol-e8" style="display:none;">
+                  
+                <p> Solución: </p>
+                   
+                <p>Usando la definición de producto escalar:</p>
+                <p><span class="math display">\[ {\overrightarrow{A}} \cdot {\overrightarrow{B}} = -8 + 6 = -2 = |{\overrightarrow{A}}| \, |{\overrightarrow{B}}| \, \cos{\theta}\]</span></p>
+                <p>Pero: <span class="math display">\[|{\overrightarrow{A}}| = \sqrt{4 +9}=\sqrt{13} \quad \; |{\overrightarrow{B}}|= \sqrt{16+4}= \sqrt{20} \, .\]</span></p>
+                <p>Por tanto: <span class="math display">\[ -2 = |{\overrightarrow{A}}| \, |{\overrightarrow{B}}| \, \cos{\theta} = \sqrt{13} \, \sqrt{20} \cos{\theta} \; \rightarrow \; \theta = {\rm arc \, cos} \left (\frac{-2}{\sqrt{260}} \right ) = 97.125^{\rm o}\]</span></p>                
+
+              </div>
+          </article></li>  
+
+          <br>
+
+          <li><p><span><strong>Producto vectorial de dos vectores</strong></span>:<br />
+            <p>El producto vectorial de los vectores <span class="math inline">\({\overrightarrow{A}}\)</span> y <span class="math inline">\({\overrightarrow{B}}\)</span> se denota como <span class="math inline">\({\overrightarrow{A}} \wedge {\overrightarrow{B}}\)</span>. Definimos dicho producto vectorial como un vector, perpendicular al plano que forman los vectores <span class="math inline">\({\overrightarrow{A}}\)</span> y <span class="math inline">\(\vec{B}\)</span>, y cuya magnitud viene dada por <span class="math display">\[|{\overrightarrow{A}} \wedge {\overrightarrow{B}}| = |{\overrightarrow{A}}| \, |{\overrightarrow{B}}| \, {\rm sen} \theta \, ,\]</span> siendo <span class="math inline">\(\theta\)</span> el ángulo que forman ambos vectores. La dirección y sentido del vector <span class="math inline">\({\overrightarrow{A}} \wedge {\overrightarrow{B}}\)</span> nos lo da la <span><em>regla de la mano derecha</em></span>. La dirección del producto vectorial está definida por la dirección del pulgar, cerrando los demás dedos en torno al vector <span class="math inline">\({\overrightarrow{A}}\)</span> primero y siguiendo con el vector <span class="math inline">\({\overrightarrow{B}}\)</span>.</p>
+            <p>Una propiedad del producto vectorial es que cuando ambos vectores son paralelos (<span class="math inline">\(\theta=0\)</span>, <span class="math inline">\(180^{\rm o}\)</span>), el producto vectorial es nulo.</p>
+            <p>Teniendo en cuenta los vectores unitarios en el espacio tridimensional:</p>
+
+            <div class="sbsimage">
+                <div class="imgContainerEnd">
+                  <a data-fancybox="" href="figuras/unitarios.png">
+                  <img alt="" src="figuras/unitarios.png" width="50%"/>
+                </a>
+                </div>
+            </div> 
+
+            <p>Podemos ver que verifican: <span class="math display">\[\hat{\imath} \wedge \hat{\jmath} = \hat{k} \quad \; \hat{\jmath} \wedge \hat{\imath} = -\hat{k} \quad \; \hat{\imath} \wedge \hat{\imath} = 0\]</span></p>
+            <p><span class="math display">\[\hat{\jmath} \wedge \hat{k} = \hat{\imath} \quad \; \hat{k} \wedge \hat{\jmath} = -\hat{\imath} \quad \; \hat{\jmath} \wedge \hat{\jmath} = 0\]</span></p>
+            <p><span class="math display">\[\hat{k} \wedge \hat{\imath} = \hat{\jmath} \quad \; \hat{\imath} \wedge \hat{k} = -\hat{\jmath} \quad \; \hat{k} \wedge \hat{k} = 0\]</span></p>
+            <p>Y esto nos sirve para escribir una expresión general para el producto vectorial <span class="math inline">\({\overrightarrow{A}} \wedge {\overrightarrow{B}}\)</span>:</p>
+            <p><span class="math display">\[{\overrightarrow{A}} \wedge {\overrightarrow{B}} = \left ( A_x \hat{\imath} + A_y \hat{\jmath} + A_z \hat{k} \right ) \wedge \left (B_x \hat{\imath} + B_y \hat{\jmath} + B_z \hat{k} \right ) = \left ( A_y\, B_z\, -\, A_z\, B_y \right)\hat{\imath} + 
+              \left  ( A_z\, B_x\, -\, A_x\, B_z \right)\hat{\jmath} + \left ( A_x\, B_y\, -\, A_y\, B_x \right)\hat{k} \,\]</span></p>
+            <p>que puede escribirse en forma más sencilla como un determinante:</p>
+            <p><span class="math display">\[ {\overrightarrow{A}} \wedge {\overrightarrow{B}} = \left | \begin{matrix} 
+               \hat{\imath} &amp; \hat{\jmath} &amp; \hat{k} \\
+                 A_x  &amp; A_y   &amp; A_z \\
+                 B_x  &amp; B_y  &amp; B_z
+                 \end{matrix} \right |\]</span></p>
+
+            
+            <article style="background-color:lightblue;border-color:blue">
+              <strong>EJEMPLO: Sea <span class="math inline">\({\overrightarrow{A}}= 6 \, \hat{\imath}\)</span> y <span class="math inline">\({\overrightarrow{B}}= 4 \left ( \cos 30^{\rm o} \, \hat{\imath} + {\rm sen} \, 30^{\rm o} \, \hat{\jmath} \right )\)</span>. Calcula <span class="math inline">\({\overrightarrow{A}} \wedge {\overrightarrow{B}}\)</span>. </strong>
+            
+              <button id="e9" class="button"  onclick="show2('e9');">Solución</button>
+              <div id="sol-e9" style="display:none;">
+                        
+                <p> Solución: </p>
+                     
+                <p><span class="math display">\[{\overrightarrow{A}} \wedge {\overrightarrow{B}} = 24 \cdot {\rm sen} \, 30^{\rm o} \, \hat{k} = 12 \, \hat{k}\]</span></p>
+      
+              </div>
+            </article></li> 
+
+        </ol>
+      </section>
+
+        <a href="vectores-test.html">Test para repasar análisis vectorial</a><br><br>
+        <a href="https://cursos-0-fc-ugr.github.io/Fisica/">Volver a la página principal de Física</a>
+      
+        <br><br>
+
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Los angulos <span class="math inline">\(\theta_A\)</span> y <span class="math inline">\(\theta_B\)</span> se refieren al ángulo que forma cada uno de los vectores con el eje <span class="math inline">\(x\)</span> positivo.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+<script type="text/javascript" language="javascript">
+  function show(str, obj){
+    document.getElementById(obj).innerHTML = str;
+    //MathJax.Hub.Typeset();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,obj]);
+  }
+  function show2(divID) {
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+      if(sol.style.display == "none"){
+        sol.style.display = "block";
+      }else{
+        sol.style.display = "none";
+      }
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+  }
+</script>
+
+</body>
+</html>
