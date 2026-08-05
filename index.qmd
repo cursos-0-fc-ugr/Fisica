@@ -1,7 +1,18 @@
 ---
 title: "Curso cero de Física"
-format: html
+title-block-banner: true
+lang: es
+execute:
+  echo: false
+format: 
+  html:
+    toc: false
+    page-layout: full
+    format-links: true
+    lightbox: true
+    
 ---
+
 Curso cero de Física para la ETSIIT y la Facultad de Ciencias de la Universidad de Granada. Puedes encontrar otros cursos cero de nuestro centro en este [enlace](https://cursos-0-fc-ugr.github.io/).
 
 Este repositorio se puede visitar en [GitHub pages](https://cursos-0-fc-ugr.github.io/Fisica).

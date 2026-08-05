@@ -87,7 +87,7 @@ $$\tan  \phi = \frac{2}{1} \ \rightarrow \phi=63.4^\circ$$
 
 ## 2.2 Componentes
 
-Las componentes de los vectores nos van a permitir un método sencillo pero general para sumar vectores. Supongamos que tenemos un sistema cartesiano de ejes de coordenadas. Entonces $A_x$ es la magnitud del vector $\vec{A_x}$ y $A_y$ es la magnitud del vector $\vec{A_y}$. $A_x$ y $A_y$ son las componentes del vector $\vec{A}$. Podemos calcular las componentes del vector $\vec{A}$ si conocemos la magnitud y la dirección de dicho vector. Describiremos la dirección de un vector con su ángulo $\theta$, relativo a una dirección de referencia, que es el eje $x$ positivo, siempre en sentido antihorario
+Las componentes de los vectores nos van a permitir un método sencillo pero general para sumar vectores. Supongamos que tenemos un sistema cartesiano de ejes de coordenadas en dos dimensiones y que $\vec A$ es un vector en ese sistema. Entonces $A_x$ es la proyección del vector $\vec A$ en la dirección del eje $x$ y $A_y$ es la proyección del vector $\vec{A}$ en la dirección del eje $y$. $A_x$ y $A_y$ son las componentes del vector $\vec{A}$. Podemos calcular las componentes del vector $\vec{A}$ si conocemos la magnitud y la dirección de dicho vector. Describiremos la dirección de un vector con su ángulo $\theta$, relativo a una dirección de referencia, que es el eje $x$ positivo, siempre en sentido antihorario
 
 $$\frac{A_x}{|\vec{A}|} = \cos \theta \rightarrow A_x= |\vec{A}| \cos \theta, \quad \frac{A_y}{|\vec{A}|}= \text{sen} \theta \rightarrow A_y= |\vec{A}| \text{sen}  \theta$$
 
@@ -112,7 +112,7 @@ El uso de componentes facilita algunos cálculos que implican vectores. Veamos a
 
   $$ |\vec{A}| = \sqrt{A_x^2 + A_y^2}, \quad \tan  \theta = \frac{A_y}{A_x}, \quad \theta = \text{ arctg}   \frac{A_y}{A_x}$$
 
-  :::: {.callout-note title="Ejemplo" collapse="true" icon="false"}
+  :::: {.callout-note title="Ejemplo" collapse="false" icon="false"}
   EJEMPLO: Calcula la magnitud y dirección del vector $\vec{A}$ si $A_x=2$ m y $A_y=-2$ m.
 
   ::: {.callout-note title="Solución" collapse="true" icon="false"}
@@ -205,6 +205,9 @@ $$ |\vec{R}|= \sqrt{64  + 121} = \sqrt{185}  \text{ m} = 13.6  \text{ m}$$
 :::
 ::::
 
+En tres dimensiones, además de los vectores unitarios $\hat{\imath}$ y $\hat{\jmath}$, tenemos el vector unitario $\hat{k}$, que apunta en la dirección del eje $z$ positivo. Por tanto, un vector $\vec{A}$ en tres dimensiones se puede escribir como:
+
+$$\vec{A}= A_x  \hat{\imath} + A_y  \hat{\jmath} + A_z  \hat{k}$$
 
 # 4. Producto de vectores
 
@@ -235,7 +238,7 @@ $$\vec{A}= A_x \hat{\imath} + A_y \hat{\jmath}, \ \vec{B}= B_x \hat{\imath} + B_
 tendremos: $$\vec{A} \cdot \vec{B} = \left ( A_x \hat{\imath} + A_y \hat{\jmath} \right ) \cdot \left ( B_x \hat{\imath} + B_y \hat{\jmath} \right ) = A_x  B_x + A_y  B_y  ,$$ donde hemos usado que se verifica que: $$\hat{\imath} \cdot \hat{\imath} = \hat{\jmath} \cdot \hat{\jmath}= 1 \quad \; \hat{\imath} \cdot \hat{\jmath} = \hat{\jmath} \cdot \hat{\imath} = 0$$
 
 :::: {.callout-note title="Ejemplo" collapse="false" icon="false"}
-Obtener el producto escalar de los vectores $\vec{A}$ y $\vec{B}$, siendo $\vec{A}|=4$, $\theta_A=53^\circ$ y $\vec{B}|=5$, $\theta_B=130^\circ$, siendo los ángulos los que los vectores forman con el semieje positivo de las $x$, en el sentido antihorario.
+Obtener el producto escalar de los vectores $\vec{A}$ y $\vec{B}$, siendo $|\vec{A}|=4$, $\theta_A=53^\circ$ y $|\vec{B}|=5$, $\theta_B=130^\circ$, siendo los ángulos los que los vectores forman con el semieje positivo de las $x$, en el sentido antihorario.
 
 ::: {style="text-align:center;"}
 ![](figuras/fig-vectores04.png){width="30%"}
@@ -276,7 +279,7 @@ $$ -2 = |\vec{A}|  |\vec{B}|  \cos{\theta} = \sqrt{13}  \sqrt{20} \cos{\theta}\
 
 ## 4.2. Producto vectorial de dos vectores
 
-El producto vectorial de los vectores $\vec{A}$ y $\vec{B}$ se denota como $\vec{A} \wedge \vec{B}$. Definimos dicho producto vectorial como un vector, perpendicular al plano que forman los vectores $\vec{A}$ y $\vec{B}$, y cuya magnitud viene dada por $$|\vec{A} \wedge \vec{B}| = |\vec{A}|  |\vec{B}|  \text{sen} \theta  ,$$ siendo $\theta$ el ángulo que forman ambos vectores. La dirección y sentido del vector $\vec{A} \wedge \vec{B}$ nos lo da la *regla de la mano derecha*. La dirección del producto vectorial está definida por la dirección del pulgar, cerrando los demás dedos en torno al vector $\vec{A}$ primero y siguiendo con el vector $\vec{B}$.
+El producto vectorial de los vectores $\vec{A}$ y $\vec{B}$ se denota como $\vec{A} \times \vec{B}$. Definimos dicho producto vectorial como un vector, perpendicular al plano que forman los vectores $\vec{A}$ y $\vec{B}$, y cuya magnitud viene dada por $$|\vec{A} \times \vec{B}| = |\vec{A}|  |\vec{B}|  \text{sen} \theta  ,$$ siendo $\theta$ el ángulo que forman ambos vectores. La dirección y sentido del vector $\vec{A} \times \vec{B}$ nos lo da la *regla de la mano derecha*. La dirección del producto vectorial está definida por la dirección del pulgar, cerrando los demás dedos en torno al vector $\vec{A}$ primero y siguiendo con el vector $\vec{B}$.
 
 Una propiedad del producto vectorial es que cuando ambos vectores son paralelos ($\theta=0$, $180^\circ$), el producto vectorial es nulo.
 
@@ -288,32 +291,32 @@ Teniendo en cuenta los vectores unitarios en el espacio tridimensional:
 
 
 Podemos ver que verifican: 
-$$\hat{\imath} \wedge \hat{\jmath} = \hat{k} \quad \; \hat{\jmath} \wedge \hat{\imath} = -\hat{k} \quad \; \hat{\imath} \wedge \hat{\imath} = 0$$
+$$\hat{\imath} \times \hat{\jmath} = \hat{k} \quad \; \hat{\jmath} \times \hat{\imath} = -\hat{k} \quad \; \hat{\imath} \times \hat{\imath} = 0$$
 
-$$\hat{\jmath} \wedge \hat{k} = \hat{\imath} \quad \; \hat{k} \wedge \hat{\jmath} = -\hat{\imath} \quad \; \hat{\jmath} \wedge \hat{\jmath} = 0$$
+$$\hat{\jmath} \times \hat{k} = \hat{\imath} \quad \; \hat{k} \times \hat{\jmath} = -\hat{\imath} \quad \; \hat{\jmath} \times \hat{\jmath} = 0$$
 
-$$\hat{k} \wedge \hat{\imath} = \hat{\jmath} \quad \; \hat{\imath} \wedge \hat{k} = -\hat{\jmath} \quad \; \hat{k} \wedge \hat{k} = 0$$
+$$\hat{k} \times \hat{\imath} = \hat{\jmath} \quad \; \hat{\imath} \times \hat{k} = -\hat{\jmath} \quad \; \hat{k} \times \hat{k} = 0$$
 
-Y esto nos sirve para escribir una expresión general para el producto vectorial $\vec{A} \wedge \vec{B}$:
+Y esto nos sirve para escribir una expresión general para el producto vectorial $\vec{A} \times \vec{B}$:
 
 $$
 \begin{aligned}
-\vec{A} \wedge \vec{B} &= \left ( A_x \hat{\imath} + A_y \hat{\jmath} + A_z \hat{k} \right ) \wedge \left (B_x \hat{\imath} + B_y \hat{\jmath} + B_z \hat{k} \right )
+\vec{A} \times \vec{B} &= \left ( A_x \hat{\imath} + A_y \hat{\jmath} + A_z \hat{k} \right ) \times \left (B_x \hat{\imath} + B_y \hat{\jmath} + B_z \hat{k} \right )
 \\&=\left ( A_y B_z - A_z B_y \right)\hat{\imath} + \left ( A_z B_x - A_x B_z \right)\hat{\jmath} + \left ( A_x B_y - A_y B_x \right)\hat{k}
 \end{aligned}
 $$
 
 que puede escribirse en forma más sencilla como un determinante:
 
-$$ \vec{A} \wedge \vec{B} = \left | \begin{matrix} \hat{\imath} & \hat{\jmath} & \hat{k} \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{matrix} \right |$$
+$$ \vec{A} \times \vec{B} = \left | \begin{matrix} \hat{\imath} & \hat{\jmath} & \hat{k} \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{matrix} \right |$$
 
 :::: {.callout-note title="Ejemplo" collapse="false" icon="false"}
 
-Sea $\vec{A}= 6  \hat{\imath}$ y $\vec{B}= 4 \left ( \cos 30^\circ  \hat{\imath} + \text{sen}  30^\circ  \hat{\jmath} \right )$. Calcula $\vec{A} \wedge \vec{B}$.
+Sea $\vec{A}= 6  \hat{\imath}$ y $\vec{B}= 4 \left ( \cos 30^\circ  \hat{\imath} + \text{sen}  30^\circ  \hat{\jmath} \right )$. Calcula $\vec{A} \times \vec{B}$.
 
 ::: {.callout-note title="Solución" collapse="true" icon="false"}
 
-$$\vec{A} \wedge \vec{B} = 24 \cdot \text{sen}  30^\circ  \hat{k} = 12  \hat{k}$$
+$$\vec{A} \times \vec{B} = 24 \cdot \text{sen}  30^\circ  \hat{k} = 12  \hat{k}$$
 :::
 
 ::::

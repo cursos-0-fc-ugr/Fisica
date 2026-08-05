@@ -40,7 +40,7 @@ La descripción del movimiento consiste en saber la posición de una partícula 
 
 :::{.callout-note title="Ejemplo:" collapse="false" icon="false"}
 
-$$x (t_i) \, ----------------------------------------\, x(t_f)$$
+$$x (t_i) \, -------------------------------------\, x(t_f)$$
 
 :::
 
@@ -78,7 +78,7 @@ Se tardan $10\text{ m}$ de casa al conservatorio ($5\text{ km}$) en línea recta
 
 - Velocidad durante el 1$^{\text{er}}$ tramo $\rightarrow$ $20\text{ km/h}$ $\rightarrow$ $2\text{ km}$
 
-- Velocidad en los últimos $3\text{ km}$  $\rightarrow$ ${\displaystyle \frac{5 \text{ km}}{10 \text{ m}/60 \text{ m} \times 1 \text{ h}} = 30 \text{ km}}$
+- Velocidad en los últimos $3\text{ km}$  $\rightarrow$ ${\displaystyle \frac{5 \text{ km}}{10 \text{ m}/60 \text{ m} \cdot 1 \text{ h}} = 30 \text{ km}}$
 
 - Distancia recorrida en el primer tramo $\rightarrow$ $2\text{ km}$ $\rightarrow$¿tiempo?
 
@@ -134,7 +134,7 @@ instantánea, a partir de la velocidad instantánea:
   $$a(t) = \lim\limits_{\Delta t \rightarrow 0} \frac{\Delta v(t) }{\Delta t} = \frac{ d^2 x }{d t^2} $$
 
 ::::{.callout-note title="Ejemplo:" collapse="false" icon="false"}
-Un guepardo puede acelerar de $0$ a $100\text{ km/h}$ en $2\text{ s}$, mientras que una moto requiere $5\text{ s}$. Calcular las aceleraciones medias del guepardo y de la moto, y compararlas con la aceleración de caída libre debido a la gravedad (g$=9.81$\text{ m/s$^2$}).
+Un guepardo puede acelerar de $0$ a $100\text{ km/h}$ en $2\text{ s}$, mientras que una moto requiere $5\text{ s}$. Calcular las aceleraciones medias del guepardo y de la moto, y compararlas con la aceleración de caída libre debido a la gravedad (g$=9.81\text{ m/s}^2$).
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
 
@@ -216,9 +216,12 @@ $$ v(t) = v(t_0) + a (t-t_0) \ \rightarrow \ \left ( t-t_0 \right ) = \frac{v(t
 
 Y si ahora, sustituimos esta cantidad en la ecuación de la posición $x(t)$, resulta:
 
-$$x(t)= x(t_0) + v(t_0)  (t-t_0) + a \frac{(t-t_0)^2}{2} \ \rightarrow \ x(t) = x(t_0) + \frac{v(t_0)}{a} \left (v(t)-v(t_0) \right ) + \frac{a}{2 a^2} \left (v(t)-v(t_0) \right)^2$$
+$$\begin{align}
+x(t)&= x(t_0) + v(t_0)  (t-t_0) + a \frac{(t-t_0)^2}{2} \\
+&= x(t_0) + \frac{v(t_0)}{a} \left (v(t)-v(t_0) \right ) + \frac{a}{2 a^2} \left (v(t)-v(t_0) \right)^2\\
+&=x(t_0) + \frac{1}{2 a} \left (v(t) - v(t_0) \right ) \left (v(t_0) + v(t) \right ) =x(t_0) + \frac{1}{2 a} \left (v(t)^2 - v(t_0)^2 \right )
+\end{align}$$
 
-$$ x(t)=x(t_0) + \frac{1}{2¡ a} \left (v(t) - v(t_0) \right ) \left (v(t_0) + v(t) \right ) =x(t_0) + \frac{1}{2 a} \left (v(t)^2 - v(t_0)^2 \right )$$
 
 Definiendo el desplazamiento $\Delta x(t)= x(t)-x(t_0)$, podemos escribir finalmente:
 
@@ -285,9 +288,10 @@ $9.8\text{ m/s}^2$ hacia abajo (despreciando la resistencia del aire), determina
 $$v(t) =    v(t_0) + a \left ( t-t_0 \right )\ \rightarrow\ 0 = 15 \text{ m/s} - 9.8 \text{ m/s}^2 t \ \rightarrow \ t = 1.53\text{ s}$$
 
 2.  Tenemos que determinar la posición para el tiempo $t$ calculado anteriormente. Por tanto, 
-$$ x(t) = x(t_0) +    v(t_0) \left (t - t_0 \right ) + \frac{a}{2} \left ( t - t_0\right )^2 = 0 + 15 \text{ m/s} \left (1.53 \text{ s} -0 \text{ s} \right ) - \frac{9.8}{2} \left ( 1.53 \text{ s} - 0 \text{ s} \right )^2 = 11.48 \text{ m}$$
+$$ x(t) = x(t_0) +    v(t_0) \left (t - t_0 \right ) + \frac{a}{2} \left ( t - t_0\right )^2 = 0 + 15 \text{ m/s} \left (1.53 \text{ s} -0 \text{ s} \right ) - \frac{9.8}{2} \left ( 1.53 \text{ s} - 0 \text{ s} \right )^2 $$
+finalmente, obtenemos que la altura máxima alcanzada es $11.48\text{ m}$.
 
-3.  Dado que la pelota tardará lo mismo en subir que en bajar la misma altura, el tiempo total que estará en el aire será el doble del tiempo calculado en el primer apartado, es decir, $2 \times1.53\text{ s}=3.06 \text{ s}$.
+3.  Dado que la pelota tardará lo mismo en subir que en bajar la misma altura, el tiempo total que estará en el aire será el doble del tiempo calculado en el primer apartado, es decir, $2 \cdot1.53\text{ s}=3.06 \text{ s}$.
 :::
 ::::
 
@@ -302,15 +306,15 @@ Un coche lleva una velocidad constante $v_c=50\text{ m/s}$ en una zona cercana a
 
 Notaremos con subíndice $c$ todas las magnitudes referidas al coche, y con $p$ al coche de policía. Supondremos que el instante en el que ambos coches se encuentran es $t_0=0$, y que la posición de ambos en dicho instante es $x_c(t_0)=x_p(t_0)=0$. Inicialmente, el coche de policía está parado, por lo que $v_p(t_0)=0$. Por tanto, para cualquier instante de tiempo $t$, tendremos que:
 
-$$ x_c(t)= v_c \times t \; \; \; x_p(t)= \frac{1}{2} a t^2$$
+$$ x_c(t)= v_c \cdot t \; \; \; x_p(t)= \frac{1}{2} a t^2$$
 
 Por tanto, ambos coches se encontrarán cuando
 
-$$ x_c(t)=x_p(t) \  \rightarrow \  v_c \times t = \frac{1}{2}  a  t^2 \rightarrow 50  t = \frac{1}{2} 8  t^2\  \rightarrow\ t= 12.5 \text{ s}$$
+$$ x_c(t)=x_p(t) \  \rightarrow \  v_c \cdot t = \frac{1}{2}  a  t^2 \rightarrow 50  t = \frac{1}{2} 8  t^2\  \rightarrow\ t= 12.5 \text{ s}$$
 
 Usamos la ecuación
 
-$$ v_p(t) = v_p(t_0) + a\left(t-t_0\right)=0+8\times 12.5 = 100 \text{ m/s}$$
+$$ v_p(t) = v_p(t_0) + a\left(t-t_0\right)=0+8\cdot 12.5 = 100 \text{ m/s}$$
 :::
 ::::
 
@@ -335,9 +339,9 @@ $$ a(t) = 2 \text{ m/s}^2 -  0.10 \text{ m/s}^3 t$$
 
     $$\frac{dv}{dt}=2-0.10t=0\ \rightarrow \ t=20 \text{ s}$$
 
-    $$v_\text{max} = v(t=20 \text{ s}) = 10 + 2 \times 20 - 0.05 \times 20^2 \text{ m/s} = 30 \text{ m/s}$$
+    $$v_\text{max} = v(t=20 \text{ s}) = 10 + 2 \cdot 20 - 0.05 \cdot 20^2 \text{ m/s} = 30 \text{ m/s}$$
 
-3.  $$x(t=20\text{ s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3} 20^3 \right )= 516.6  \text{ m}$$
+3.  $$x(t=20\text{ s})= \left ( 50 + 10 \cdot 20 + 20^2 - \frac{0.05}{3} 20^3 \right )= 516.6  \text{ m}$$
 :::
 ::::
 
@@ -437,7 +441,7 @@ $$\fbox{$\vec v_m = \left ( -0.167  \hat{\imath} + 0.108  \hat{\jmath} \right )\
     $$ \theta = \arctan \left( \frac{0.108}{-0.167} \right ) = -32.89^\circ \equiv    147.11^\circ$$
 
 
-3.  $$x(t=20 \text{s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3}  20^3 \right )\text{ m} = 516.6 \text{ m}$$
+3.  $$x(t=20 \text{s})= \left ( 50 + 10 \cdot 20 + 20^2 - \frac{0.05}{3}  20^3 \right )\text{ m} = 516.6 \text{ m}$$
 
 :::
 ::::
@@ -481,7 +485,7 @@ $$\vec v_f= 60 \text{ km/h} \hat{\jmath} =16.67 \text{ m/s}  \hat{\jmath}$$
 
 Por tanto:
 
-$$ {\vec{a_m}} =\frac{\vec v_f-\vecv_i}{\Delta t} = \left ( -3.3 \hat{\imath} + 3.3 \hat{\jmath} \right )\text{ m/s^2}$$
+$$ \vec a_m =\frac{\vec v_f-\vec v_i}{\Delta t} = \left ( -3.3 \hat{\imath} + 3.3 \hat{\jmath} \right )\text{ m/s}^2$$
 
 El movimiento de un objeto alrededor de una circunferencia es un ejemplo típico de movimiento en el cual la velocidad de un objeto cambia, aunque su módulo permanece constante.
 :::
@@ -497,14 +501,16 @@ donde $\hat{e}_t$ es el vector unitario en la dirección tangencial, es decir, e
 
 $$ {\vec{a}} = \frac{d {\vec{v}}}{d t} = \frac{d |{\vec{v}}|}{d t} \hat{e}_t + |{\vec{v}}| \frac{d \hat{e}_t}{d t}$$
 
-El primero de los términos de la derecha es la componente tangencial de la aceleración, llamada \emph{aceleración tangencial} ($\vec{a}_t$), que es paralela a la dirección del vector velocidad y cuya magnitud es la derivada del módulo de la velocidad respecto al tiempo:
+El primero de los términos de la derecha es la componente tangencial de la aceleración, llamada \emph{aceleración tangencial} $a_t$, que es paralela a la dirección del vector velocidad y cuya magnitud es la derivada del módulo de la velocidad respecto al tiempo:
 
-$$ |{\vec{a}}_t| = \frac{d |{\vec{v}}|}{d t}$$
+$$ a_t = \frac{d |{\vec{v}}|}{d t}$$
 
-El segundo de los términos de la derecha es la componente normal de la aceleración, llamada \emph{aceleración normal} ($\vec{a}_n$), que es perpendicular a la dirección del vector velocidad y cuya magnitud es el producto del módulo de la velocidad por la derivada del vector unitario tangente respecto al tiempo:
+El segundo de los términos de la derecha es la componente normal de la aceleración, llamada \emph{aceleración normal} $a_n$, que es perpendicular a la dirección del vector velocidad y cuya magnitud es el producto del módulo de la velocidad por la derivada del vector unitario tangente respecto al tiempo:
 
-$$ |{\vec{a}}_n| = |{\vec{v}}| \left | \frac{d \hat{e}_t}{d t} \right |= \frac{v^2}{R}\hat{e}_n$$
-donde $R$ es el radio de curvatura de la trayectoria y $\hat{e}_n$ es el vector unitario en la dirección normal, es decir, perpendicular a la trayectoria y hacia el centro de curvatura. 
+$$ a_n = |{\vec{v}}| \left | \frac{d \hat{e}_t}{d t} \right |= \frac{v^2}{R}$$
+donde $R$ es el radio de curvatura de la trayectoria. Esta componente normal lleva la dirección normal o perpendicular a la trayectoria, y en el sentido hacia el centro de curvatura. Esta dirección y sentido vienen dados por el versor $\hat{e}_n$. Con este versor, podemos escribir el vector aceleración como la suma de sus componentes tangencial y normal:
+ $$ {\vec{a}} = a_t \hat{e}_t + a_n \hat{e}_n=\frac{dv}{dt} \hat{e}_t + \frac{v^2}{R} \hat{e}_n$$
+
 
 ## 3.5. Casos particulares
 
@@ -581,10 +587,10 @@ Un coche circula por una rotonda de radio $R=20\text{ m}$ a una velocidad consta
 
 2.  El ángulo recorrido en 5 segundos se obtiene de la relación $\theta(t) = \theta_0 + \omega t$:
 
-    $$ \theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \times 5 \text{ s} = 2.5 \text{ rad}$$
+    $$ \theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \cdot 5 \text{ s} = 2.5 \text{ rad}$$
 3.  La aceleración normal se obtiene de la relación $a_n = R \omega^2$:
 
-    $$ a_n = R \omega^2 = 20\text{ m} \times (0.5 \text{ rad/s})^2 = 5 \text{ m/s}^2$$
+    $$ a_n = R \omega^2 = 20\text{ m} \cdot (0.5 \text{ rad/s})^2 = 5 \text{ m/s}^2$$
 :::
 ::::
 
@@ -595,10 +601,10 @@ Ejemplo de movimiento circular de aceleración angular constante. Un coche circu
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
 1.  La velocidad angular después de 5 segundos se obtiene de la relación $\omega(t) = \omega_0 + \alpha t$:
-    $$ \omega(5\text{ s}) = 0.5 \text{ rad/s} + 0.1 \text{ rad/s}^2 \times 5 \text{ s} = 1.0 \text{ rad/s}$$
+    $$ \omega(5\text{ s}) = 0.5 \text{ rad/s} + 0.1 \text{ rad/s}^2 \cdot 5 \text{ s} = 1.0 \text{ rad/s}$$
 
 2.  El ángulo recorrido en 5 segundos se obtiene de la relación $\theta(t) = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2$:
-    $$ \theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \times 5 \text{ s} + \frac{1}{2} \times 0.1 \text{ rad/s}^2 \times (5 \text{ s})^2 = 2.5 \text{ rad} + 1.25 \text{ rad} = 3.75 \text{ rad}$$
+    $$ \theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \cdot 5 \text{ s} + \frac{1}{2} \cdot 0.1 \text{ rad/s}^2 \cdot (5 \text{ s})^2 = 2.5 \text{ rad} + 1.25 \text{ rad} = 3.75 \text{ rad}$$
 :::
 ::::  
 
@@ -658,11 +664,11 @@ Se lanza una pelota al aire con una velocidad inicial de $v_0=24.5\ \text{m/s}$,
 
     Suponiendo que $t_0=0$, tendremos:
 
-    $$  \left ( v_{0y} - \frac{1}{2} g t \right ) t =0 \ \rightarrow \ v_{0y}=\frac{1}{2} g t \ \rightarrow \  t = \frac{2 v_{0y}}{g} = \frac{2 \times24.5 \sin (36.9^\circ)}{9.81} = 3.0 \text{ s}$$
+    $$  \left ( v_{0y} - \frac{1}{2} g t \right ) t =0 \ \rightarrow \ v_{0y}=\frac{1}{2} g t \ \rightarrow \  t = \frac{2 v_{0y}}{g} = \frac{2 \cdot24.5 \sin (36.9^\circ)}{9.81} = 3.0 \text{ s}$$
 
 2.  Suponemos que $x(t_0)=0$ y usamos la expresión:
 
-    $$ x(T) = x(t_0) + v_{0x} t = 0 + 24.5\times 3.0 \cos(36.9^\circ)   = 58.8 \text{ m}$$
+    $$ x(T) = x(t_0) + v_{0x} t = 0 + 24.5\cdot 3.0 \cos(36.9^\circ)   = 58.8 \text{ m}$$
 :::
 ::::
 

@@ -11,8 +11,6 @@ format:
     format-links: true
     lightbox: true
 
-filters:
-  - quizdown    
 ---
 
 # 1. Leyes del movimiento de Newton {#leyes-del-movimiento-de-newton .title}
@@ -63,11 +61,11 @@ En el lenguaje cotidiano, una *fuerza* es un *empujón* o *tirón*. Una definici
 
 Algunas magnitudes de fuerzas comunes son las siguientes:
 
-- Fuerza gravitacional del sol sobre la Tierra $\rightarrow 3.5 \times 10^{22}\text{ N}$.
+- Fuerza gravitacional del sol sobre la Tierra $\rightarrow 3.5 \cdot 10^{22}\text{ N}$.
 
 - Peso de una manzana $\rightarrow 1\text{ N}$.
 
-- Peso de un átomo de hidrógeno $\rightarrow1.6\times 10^{-26}\text{ N}$.
+- Peso de un átomo de hidrógeno $\rightarrow1.6\cdot 10^{-26}\text{ N}$.
 
 Un instrumento común para medir fuerzas es el *dinamómetro*.
 
@@ -139,7 +137,7 @@ distancia*. Las fuerzas fundamentales son cuatro:
 4.  *Fuerza nuclear fuerte*: Interacción de largo alcance entre los hadrones (protones y neutrones), que los mantiene unidos, formando el núcleo.
 
 Por otra parte, sabemos que los objetos se resisten intrínsecamente a ser acelerados. Por ejemplo, si pensamos en dar una patada a un balón de fútbol o a una bola de una bolera, el sentido común nos dice que la segunda se resistirá más a ser acelerada. Esta propiedad intrínseca de un cuerpo es la **masa**. La masa es una medida de la
-inercia de un cuerpo. Desde el 20 de mayo de 2019, la definición del kilogramo pasó a estar ligada con la constante de Planck, definida como $6.62607015\times 10^{-34}\text{ kg\, m}^2\text{ s}^{-1}$. El *Grand Kilo*, como se conoce al patrón parisino usado hasta la fecha para definir el kilogramo, es ahora un estándar de masa secundario, quedando el kilogramo ahora definido a partir de la constante de Planck y de otras unidades básicas del SI, como el segundo y el metro.
+inercia de un cuerpo. Desde el 20 de mayo de 2019, la definición del kilogramo pasó a estar ligada con la constante de Planck, definida como $6.62607015\cdot 10^{-34}\text{ kg\, m}^2\text{ s}^{-1}$. El *Grand Kilo*, como se conoce al patrón parisino usado hasta la fecha para definir el kilogramo, es ahora un estándar de masa secundario, quedando el kilogramo ahora definido a partir de la constante de Planck y de otras unidades básicas del SI, como el segundo y el metro.
 
 ## 1.6. Segunda ley de Newton {#Segunda-ley-de-Newton}
 
@@ -160,7 +158,7 @@ $$\text{Fuerza neta} \Longrightarrow \text{produce aceleración} \ \text{Causa} 
 Un objeto, de masa $m_1=1\text{ kg}$, está sometido a una fuerza de módulo $|F_1|$, dirigida horizontalmente y en sentido positivo, adquiriendo una aceleración de módulo $|a_1|=5\text{ m/s}^2$. Posteriormente, se le aplica esta misma fuerza a otro objeto de masa $m_2$, adquiriendo una aceleración $|a_2|=11\text{ m/s}^2$. ¿Qué valor tiene la masa $m_2$?
 
 :::{.callout-note title="Solución" collapse="true" icon="false"}
-$$m_2 = \frac{m_1 \times |a_1|}{|a_2|}=0.45\text{ kg}$$
+$$m_2 = \frac{m_1 \cdot |a_1|}{|a_2|}=0.45\text{ kg}$$
 
 :::
 
@@ -234,7 +232,7 @@ Una jugadora de baloncesto de $95\text{ kg}$ se cuelga del aro del cesto despué
 
 Teniendo en cuenta que la fuerza realizada por el muelle equilibra el peso de la jugadora, tendremos que:
 
-$$mg=k\Delta y \ \rightarrow \ k = \frac{mg}{\Delta y}=\frac{95\text{ kg} \times 9.8 \text{ m/s}^2} {10 \times 10^{-2} \text{ m} } = 7.2 \times 10^3 \text{ N/m}$$
+$$mg=k\Delta y \ \rightarrow \ k = \frac{mg}{\Delta y}=\frac{95\text{ kg} \cdot 9.8 \text{ m/s}^2} {10 \cdot 10^{-2} \text{ m} } = 7.2 \cdot 10^3 \text{ N/m}$$
 
 :::
 ::::
@@ -244,7 +242,7 @@ Un racimo de bananas de $2\text{ kg}$ está suspendido en reposo de una balanza 
 
 :::{.callout-note title="Solución" collapse="true" icon="false"}
 
-$$mg = k \Delta y \ \rightarrow \ \Delta y = \frac{2\text{ kg} \times 9.8 \text{ m/s}^2}{200\text{ N/m}}$$
+$$mg = k \Delta y \ \rightarrow \ \Delta y = \frac{2\text{ kg} \cdot 9.8 \text{ m/s}^2}{200\text{ N/m}}$$
 
 :::
 ::::
@@ -398,7 +396,7 @@ Cuando el cuerpo se mueve lo puede hacer de dos formas posibles: se traslada o g
 
 El momento $\vec M$ de una fuerza $\vec F$ respecto de un punto $O$ es un vector de módulo $M=r F \sin \alpha$, siendo $\alpha$ el ángulo que forman los vectores $\vec r$y $\vec F$, o dicho de otra forma:
 
-$$\vec M_O = \vec r \times \vec F$$
+$$\vec M_O = \vec r \cdot \vec F$$
 
 La dirección del vector $\vec M_0$ es perpendicular al plano que forman los vectores $\vec r$ y $\vec F$, y su sentido viene dado por la regla del tornillo o mano derecha (sentido del giro desde $\vec r$ hasta $\vec F$ por el camino más corto). La unidad del momento de una fuerza en el SI es $\text{N}\,\text{m}$.
 
@@ -408,7 +406,7 @@ Por tanto, el momento de la fuerza depende de la distancia al punto de aplicaci�
 Un volante de $30 \text{ cm}$ de radio puede girar alrededor de su eje. Si aplicas una fuerza tangencial de $15 \text{ N}$ en la periferia, ¿cuál es el momento de dicha fuerza respecto del centro del volante?
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
-$$M = r F \sin \alpha = 0.3 \text{ m} \times 15 \text{ N} \times \sin 90^{\circ} = 4.5 \text{ N}\,\text{m}$$
+$$M = r F \sin \alpha = 0.3 \text{ m} \cdot 15 \text{ N} \cdot \sin 90^{\circ} = 4.5 \text{ N}\,\text{m}$$
 :::
 
 ::::
@@ -483,28 +481,6 @@ $$F=92.5\text{ N}, \ F'=107.5\text{ N}$$
 ::::
 :::::
 
-### 2.3.1  Test de repaso:
-###  Test de repaso:
-
-```quizdown
-
-## Pregunta 1
-El tirador de una puerta se coloca en el centro de la puerta en lugar de en un lado, ¿qué sucede con el valor de la fuerza necesaria para abrir la puerta?
-
-- [ ] No varía.
-- [x] Se duplica.
-- [ ] Se reduce a la mitad.
-- [ ] Se cuadruplica.
-
-## Pregunta 2
-Un niño de 35 kg de masa se coloca a 1.5 m del punto de apoyo de un balancín. ¿Dónde se debe colocar una chica de 25 kg de masa para equilibrar el balancín? Suponga que el balancín está formado por una barra uniforme apoyada en su centro.
-
-- [ ] 1.0 m.
-- [x] 2.1 m.
-- [ ] 3.0 m.
-- [ ] No se puede calcular, faltan datos.
-```
-
 # 3.  Cantidad de movimiento o momento lineal
 
 Seguramente habrás observado que es mas difícil detener un coche cuanta más velocidad lleve, o que si tenemos un camión y un coche que se mueven a la misma velocidad, es más difícil detener el camión. Newton llamó cantidad de movimiento de un cuerpo a la magnitud que caracteriza su estado de movimiento.
@@ -527,7 +503,7 @@ Un cuerpo puede tener una gran cantidad de movimiento si tiene una masa grande o
 La cantidad de movimiento de un camión de 12 toneladas que se mueve con una velocidad de $\text{15 km/h}$ es la misma que la de un coche de 900 kg. ¿Con qué velocidad debería moverse el coche para que la afirmación anterior fuera cierta?
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
-$$p=mv\ \Rightarrow m_\text{coche}v_\text{coche}=m_\text{camión}v_\text{camión}\ \Rightarrow v_\text{coche}=\frac{m_\text{camión}v_\text{camión}}{m_\text{coche}}=\frac{12000 \times 15}{900}=200\text{ km/h}$$
+$$p=mv\ \Rightarrow m_\text{coche}v_\text{coche}=m_\text{camión}v_\text{camión}\ \Rightarrow v_\text{coche}=\frac{m_\text{camión}v_\text{camión}}{m_\text{coche}}=\frac{12000 \cdot 15}{900}=200\text{ km/h}$$
 :::
 
 ::::
@@ -564,7 +540,7 @@ El impulso mecánico tiene una gran importancia en aplicaciones de la vida diari
 Un palo de golf impacta en una bola con una fuerza media de $2500\text{ N}$. Si el tiempo de contacto entre el palo y la bola es de dos milésimas de segundo, ¿cuál es el impulso que comunica a la bola?
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
-$$2500 \times 0.002 = 5 \text{ Ns}$$
+$$2500 \cdot 0.002 = 5 \text{ Ns}$$
 :::
 
 ::::
@@ -581,7 +557,7 @@ c)  Su velocidad final si en el momento de actuar la fuerza el cuerpo se mueve a
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
 
-a)  $\vec I = \sum \vec F \Delta t = 55 \text{ N} \times 14 \text{ s} = 770 \text{ Ns}$$
+a)  $\vec I = \sum \vec F \Delta t = 55 \text{ N} \cdot 14 \text{ s} = 770 \text{ Ns}$$
 
 b)  $\Delta \vec p = \vec I = 770 \text{ Ns}$$
 
@@ -632,48 +608,6 @@ Como la resultante de las fuerzas externas aplicadas al sistema niño+patín es 
 sistema:
 $$\vec p_\text{total}^\text{antes} = \vec p_\text{total}^\text{después}$$
 $$0 = m_\text{niño} v_\text{niño} + m_\text{patín} v_\text{patín}$$
-$$v_\text{patín} = - \frac{m_\text{niño} v_\text{niño}}{m_\text{patín}} = - \frac{40 \text{ kg} \times 1 \text{ m/s}}{3 \text{ kg}} = -13.33 \text{ m/s}$$
+$$v_\text{patín} = - \frac{m_\text{niño} v_\text{niño}}{m_\text{patín}} = - \frac{40 \text{ kg} \cdot 1 \text{ m/s}}{3 \text{ kg}} = -13.33 \text{ m/s}$$
 :::
 ::::
-
-```quizdown
-# Pregunta 1
-Una persona de $75\text{ kg}$ camina con una velocidad de $2\text{ m/s}$. ¿Cuál es su cantidad de movimiento?
-
-- [x] $150\text{ kg m/s}$
-- [ ] $37.5\text{ kg m/s}$
-- [ ] $150\text{ N}$
-- [ ] $150\text{ kg m/s}^2$
-
-# Pregunta 2
-¿Qué afirmación sobre la cantidad de movimiento o el impulse mecánico es correcta?
-
-- [ ] El impulso y la cantidad de movimiento son magnitudes escaleres.
-- [ ] La unidad de la cantidad de movimiento es $\text{kg m/s}^2$.
-- [ ] El impulso es una fuerza.
-- [x] La unidad de impulso es $\text{Ns}$.
-
-# Pregunta 3
-Un martillo de $1.5\text{ kg}$, que maneja un operario distraído, golpea la uña de su dedo cuando se mueve a $3.5\text{ m/s}$ y rebota con la misma velocidad. Si el tiempo que dura el golpe es de $0.075\text{ s}$, ¿cuál es el valor de la fuerza media que ejerce el martillo sobre la uña?
-
-- [ ]  $70\text{ N}$
-- [x]  $140\text{ N}$
-- [ ]  $35\text{ N}$
-- [ ]  $210\text{ N}$
-
-# Pregunta 4
-Dos bolas de billar, situadas sobre una mesa, impactan una con la otra. ¿Qué sucede con la cantidad de movimiento de las bolas?
-
-- [ ] La cantidad de movimiento de las bolas es la misma.
-- [x] La cantidad de movimiento del sistema formado por las dos bolas no varía.
-- [ ] La cantidad de movimiento del sistema formado por las dos bolas aumenta.
-- [ ] La cantidad de movimiento del sistema formado por las dos bolas disminuye.
-
-# Pregunta 5
-Dos patinadores, uno de $60\text{ kg}$ y el otro de masa desconocida, se encuentran juntos, en reposo, antes de empezar a patinar. Empiezan el movimiento empujándose uno a otro. El primero sale con una velocidad de $15\text{ km/h}$ y el segundo con una velocidad de $4\text{ m/s}$ en sentido contrario. ¿Cuál es la masa del segundo patinador?
-
-- [ ] $60\text{ kg}$.
-- [ ] $48\text{ kg}$.
-- [x] $75\text{ kg}$
-- [ ] $80\text{ kg}$
-```

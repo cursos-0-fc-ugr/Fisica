@@ -40,7 +40,7 @@ El campo magnético es un campo vectorial. Es decir, en cada punto, el campo tie
 
 > La unidad de la intensidad del campo magnético en el S.I. es el Tesla (T).
 
-# 3. Fuerza magnética sobre cargas en movimiento {#Fuerza-magnética-sobre-cargas-en-movimiento}
+# 3. Fuerza magnética sobre cargas en movimiento 
 
 Como ya hemos dicho, los materiales magnéticos modifican su posición cuando se encuentran en presencia de un campo magnético, orientando sus polos en la dirección del campo. Para que este movimiento tenga lugar, es necesario que actúe sobre ellos una fuerza, que es la fuerza magnética.
 
@@ -358,8 +358,6 @@ $$\vec{F}=\left(-3.2\cdot 10^{-9}\hat{\imath}+3.2\cdot 10^{-9}\hat{\jmath}-2\cdo
 :::
 ::::
 
-
-
 Hemos visto que la fuerza magnética es siempre perpendicular a la dirección de movimiento de la carga. La aceleración que produce no actúa aumentando ni disminuyendo la velocidad, sino cambiándola de dirección, es decir:
 
 **La fuerza magnética es una fuerza centrípeta.**
@@ -567,11 +565,11 @@ Teniendo en cuenta la componente $x$ de la velocidad, tendremos finalmente que l
 ::::::
 
 
-# 4. Fuerza magnética sobre corrientes {#Fuerza-magnética-sobre-corrientes}
+# 4. Fuerza magnética sobre corrientes
 
 La corriente eléctrica no es más que cargas eléctricas en movimiento, por lo que si situamos un conductor por el que pasa una corriente en un campo magnético, éste ejercerá una fuerza magnética sobre el conductor. Según la ley de Lorentz, esta fuerza debe ser perpendicular al campo y a la dirección de movimiento de las cargas, es decir, perpendicular al eje del conductor.
 
-## 4.1. Corriente rectilínea {#Corriente-rectilínea}
+## 4.1. Corriente rectilínea 
 
 Sea un segmento de conductor de una cierta longitud $l$ por el que circula una corriente de intensidad $I$. Podemos construir un vector $\vec{l}$ que tenga la longitud del conductor y dirección la de la corriente (ver figura [9](./electromagnetismo_teoría_files/teoria-conductor_rectilineo.png)). Entonces, la fuerza sobre eléctrica sobre el conductor viene dada por:
 
@@ -589,7 +587,7 @@ En definitiva:
 
 - El módulo es $|\vec{F}|=IlB\sin\theta$.
 
-## 4.2. Fuerza sobre una espira cuadrada {#Fuerza-sobre-una-espira-cuadrada}
+## 4.2. Fuerza sobre una espira cuadrada 
 
 Supongamos que tenemos una espira cuadrada perpendicular al campo magnético, tal y como se muestra en la figura A. Entonces sobre cada sección del conductor tendremos una dirección diferente de la fuerza, tal y como se indica en la figura [10](./electromagnetismo_teoría_files/teoria-espira.png).
 
@@ -603,9 +601,9 @@ Las fuerzas se anulan dos a dos y por tanto la espira no se desplaza.
 
 Si en cambio, la espira no es perpendicular (figura B), vemos que las fuerzas sobre los tramos laterales ejercen un momento $\vec{M}$ que hace girar la espira. Este es el fundamento de los motores eléctricos: se hace pasar corriente por una espira situada en un campo magnético como el creado por un imán. En el momento que empieza a pasar corriente, la fuerza magnética fuerza a la espira y todo lo que esté ligado a ella a girar.
 
-# 5. Campo creado por cargas en movimiento {#Campo-creado-por-cargas-en-movimiento}
+# 5. Campo creado por cargas en movimiento 
 
-## 5.1. Campo creado por una corriente rectilínea {#Campo-creado-por-una-corriente-rectilínea}
+## 5.1. Campo creado por una corriente rectilínea 
 
 **Dirección y sentido del campo magnético creado**
 
@@ -634,7 +632,7 @@ Si lo comparamos con el campo magnético terrestre (entre $25$ y $65\ \mu\text{T
 ::::
 
 
-## 5.2. Fuerza entre corrientes paralelas {#Fuerza-entre-corrientes-paralelas}
+## 5.2. Fuerza entre corrientes paralelas 
 
 Anteriormente vimos que una corriente rectilínea en presencia de un campo magnético experimenta una fuerza perpendicular a la línea. Por tanto, si acercamos dos corrientes rectilíneas existirá una fuerza sobre una de ellas debida al campo magnético generado por la otra y viceversa. Esta fuerza es perpendicular a las líneas y será de repulsión o atracción según la dirección de las corrientes:
 
@@ -663,7 +661,7 @@ En ambos casos, la fuerza es de atracción.
 ::::
 
 
-## 5.3. Campo magnético creado por un solenoide {#Campo-magnético-creado-por-un-solenoide}
+## 5.3. Campo magnético creado por un solenoide 
 
 Un solenoide es un conductor enrollado en torno a un cilindro (ver la @fig-solenoide), de modo que su longitud es mucho mayor que el radio del cilindro. Se trata, pues, de un conjunto de $N$ espiras, tantas como vueltas. El campo magnético que genera en el eje es un vector que lleva la dirección del eje $Y$ el sentido marcado por la regla de la mano derecha. Se calcula con la expresión:
 
@@ -683,7 +681,7 @@ $$B=N\frac{\mu I}{L}=\frac{400\cdot 4\pi\cdot 10^{-7}\text{ Tm/A }3\text{ A}}{0.
 :::
 ::::
 
-# 6. El flujo magnético a través de una superficie {#El-flujo-magnético-a-través-de-una-superficie}
+# 6. El flujo magnético a través de una superficie 
 
 El flujo es una magnitud que puede calcularse para cualquier campo vectorial y consiste en la suma del campo a todos los puntos de una superficie perpendicular a aquel. En este apartado vamos a aplicarlo al caso de un campo magnético.
 
@@ -737,11 +735,11 @@ El flujo total a través de toda la superficie será la suma del flujo sobre cad
 >
 > $$1 \text{ Wb}= 1 \text{ T·m}^2$$
 
-# 7. Inducción electromagnética {#Inducción-electromagnética}
+# 7. Inducción electromagnética
 
 Hemos visto que los campos magnéticos ejercen fuerzas sobre las cargas en movimiento. Vamos a ver a continuación que esto puede utilizarse para la generación de corriente eléctrica.
 
-## 7.1. Ley de Faraday {#Ley de Faraday}
+## 7.1. Ley de Faraday 
 
 Si situamos un conductor en el seno de un campo magnético, en determinadas circunstancias se puede producir una fuerza electromotriz entre los extremos que dé lugar a una corriente eléctrica. Faraday realizó diversas experiencias en las que se mostraba como un campo magnético podía genera corriente en una espira:
 

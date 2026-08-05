@@ -153,7 +153,7 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[x (t_i) \, ----------------------------------------\, x(t_f)\]</span></p>
+<p><span class="math display">\[x (t_i) \, -------------------------------------\, x(t_f)\]</span></p>
 </div>
 </div>
 </div>
@@ -228,7 +228,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Velocidad durante el 1<span class="math inline">\(^{\text{er}}\)</span> tramo <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(20\text{ km/h}\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2\text{ km}\)</span></p></li>
-<li><p>Velocidad en los últimos <span class="math inline">\(3\text{ km}\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\displaystyle \frac{5 \text{ km}}{10 \text{ m}/60 \text{ m} \times 1 \text{ h}} = 30 \text{ km}}\)</span></p></li>
+<li><p>Velocidad en los últimos <span class="math inline">\(3\text{ km}\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\displaystyle \frac{5 \text{ km}}{10 \text{ m}/60 \text{ m} \cdot 1 \text{ h}} = 30 \text{ km}}\)</span></p></li>
 <li><p>Distancia recorrida en el primer tramo <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2\text{ km}\)</span> <span class="math inline">\(\rightarrow\)</span>¿tiempo?</p>
 <p><span class="math display">\[\Delta t_1 = \frac{ 2 \text{ km}}{20 \text{ km/h}} =   \frac{1}{10} \text{ h} = 6 \text{ min}\]</span></p>
 <p>En el segundo tramo:</p>
@@ -304,7 +304,7 @@ window.Quarto = {
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Un guepardo puede acelerar de <span class="math inline">\(0\)</span> a <span class="math inline">\(100\text{ km/h}\)</span> en <span class="math inline">\(2\text{ s}\)</span>, mientras que una moto requiere <span class="math inline">\(5\text{ s}\)</span>. Calcular las aceleraciones medias del guepardo y de la moto, y compararlas con la aceleración de caída libre debido a la gravedad (g<span class="math inline">\(=9.81\)</span>).</p>
+<p>Un guepardo puede acelerar de <span class="math inline">\(0\)</span> a <span class="math inline">\(100\text{ km/h}\)</span> en <span class="math inline">\(2\text{ s}\)</span>, mientras que una moto requiere <span class="math inline">\(5\text{ s}\)</span>. Calcular las aceleraciones medias del guepardo y de la moto, y compararlas con la aceleración de caída libre debido a la gravedad (g<span class="math inline">\(=9.81\text{ m/s}^2\)</span>).</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -392,8 +392,11 @@ window.Quarto = {
 <p>Si en la ecuación general obtenida la velocidad <span class="math inline">\(v(t)\)</span>, despejamos <span class="math inline">\((t-t_0)\)</span>, tendremos:</p>
 <p><span class="math display">\[&nbsp;v(t) = v(t_0) + a (t-t_0) \ \rightarrow \ \left ( t-t_0 \right ) = \frac{v(t) -v(t_0) }{ a }\]</span></p>
 <p>Y si ahora, sustituimos esta cantidad en la ecuación de la posición <span class="math inline">\(x(t)\)</span>, resulta:</p>
-<p><span class="math display">\[x(t)= x(t_0) + v(t_0)  (t-t_0) + a \frac{(t-t_0)^2}{2} \ \rightarrow \ x(t) = x(t_0) + \frac{v(t_0)}{a} \left (v(t)-v(t_0) \right ) + \frac{a}{2 a^2} \left (v(t)-v(t_0) \right)^2\]</span></p>
-<p><span class="math display">\[&nbsp;x(t)=x(t_0) + \frac{1}{2¡ a} \left (v(t) - v(t_0) \right ) \left (v(t_0) + v(t) \right ) =x(t_0) + \frac{1}{2 a} \left (v(t)^2 - v(t_0)^2 \right )\]</span></p>
+<p><span class="math display">\[\begin{align}
+x(t)&amp;= x(t_0) + v(t_0)  (t-t_0) + a \frac{(t-t_0)^2}{2} \\
+&amp;= x(t_0) + \frac{v(t_0)}{a} \left (v(t)-v(t_0) \right ) + \frac{a}{2 a^2} \left (v(t)-v(t_0) \right)^2\\
+&amp;=x(t_0) + \frac{1}{2 a} \left (v(t) - v(t_0) \right ) \left (v(t_0) + v(t) \right ) =x(t_0) + \frac{1}{2 a} \left (v(t)^2 - v(t_0)^2 \right )
+\end{align}\]</span></p>
 <p>Definiendo el desplazamiento <span class="math inline">\(\Delta x(t)= x(t)-x(t_0)\)</span>, podemos escribir finalmente:</p>
 <p><span class="math display">\[\fbox{ $v(t)^2 =  v(t_0)^2  +  2 a  \Delta x(t) $}\]</span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
@@ -481,8 +484,8 @@ window.Quarto = {
 </ol>
 <p><span class="math display">\[v(t) =    v(t_0) + a \left ( t-t_0 \right )\ \rightarrow\ 0 = 15 \text{ m/s} - 9.8 \text{ m/s}^2 t \ \rightarrow \ t = 1.53\text{ s}\]</span></p>
 <ol start="2" type="1">
-<li><p>Tenemos que determinar la posición para el tiempo <span class="math inline">\(t\)</span> calculado anteriormente. Por tanto, <span class="math display">\[&nbsp;x(t) = x(t_0) +    v(t_0) \left (t - t_0 \right ) + \frac{a}{2} \left ( t - t_0\right )^2 = 0 + 15 \text{ m/s} \left (1.53 \text{ s} -0 \text{ s} \right ) - \frac{9.8}{2} \left ( 1.53 \text{ s} - 0 \text{ s} \right )^2 = 11.48 \text{ m}\]</span></p></li>
-<li><p>Dado que la pelota tardará lo mismo en subir que en bajar la misma altura, el tiempo total que estará en el aire será el doble del tiempo calculado en el primer apartado, es decir, <span class="math inline">\(2 \times1.53\text{ s}=3.06 \text{ s}\)</span>.</p></li>
+<li><p>Tenemos que determinar la posición para el tiempo <span class="math inline">\(t\)</span> calculado anteriormente. Por tanto, <span class="math display">\[&nbsp;x(t) = x(t_0) +    v(t_0) \left (t - t_0 \right ) + \frac{a}{2} \left ( t - t_0\right )^2 = 0 + 15 \text{ m/s} \left (1.53 \text{ s} -0 \text{ s} \right ) - \frac{9.8}{2} \left ( 1.53 \text{ s} - 0 \text{ s} \right )^2 \]</span> finalmente, obtenemos que la altura máxima alcanzada es <span class="math inline">\(11.48\text{ m}\)</span>.</p></li>
+<li><p>Dado que la pelota tardará lo mismo en subir que en bajar la misma altura, el tiempo total que estará en el aire será el doble del tiempo calculado en el primer apartado, es decir, <span class="math inline">\(2 \cdot1.53\text{ s}=3.06 \text{ s}\)</span>.</p></li>
 </ol>
 </div>
 </div>
@@ -520,11 +523,11 @@ window.Quarto = {
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Notaremos con subíndice <span class="math inline">\(c\)</span> todas las magnitudes referidas al coche, y con <span class="math inline">\(p\)</span> al coche de policía. Supondremos que el instante en el que ambos coches se encuentran es <span class="math inline">\(t_0=0\)</span>, y que la posición de ambos en dicho instante es <span class="math inline">\(x_c(t_0)=x_p(t_0)=0\)</span>. Inicialmente, el coche de policía está parado, por lo que <span class="math inline">\(v_p(t_0)=0\)</span>. Por tanto, para cualquier instante de tiempo <span class="math inline">\(t\)</span>, tendremos que:</p>
-<p><span class="math display">\[&nbsp;x_c(t)= v_c \times t \; \; \; x_p(t)= \frac{1}{2} a t^2\]</span></p>
+<p><span class="math display">\[&nbsp;x_c(t)= v_c \cdot t \; \; \; x_p(t)= \frac{1}{2} a t^2\]</span></p>
 <p>Por tanto, ambos coches se encontrarán cuando</p>
-<p><span class="math display">\[&nbsp;x_c(t)=x_p(t) \  \rightarrow \  v_c \times t = \frac{1}{2}  a  t^2 \rightarrow 50  t = \frac{1}{2} 8  t^2\  \rightarrow\ t= 12.5 \text{ s}\]</span></p>
+<p><span class="math display">\[&nbsp;x_c(t)=x_p(t) \  \rightarrow \  v_c \cdot t = \frac{1}{2}  a  t^2 \rightarrow 50  t = \frac{1}{2} 8  t^2\  \rightarrow\ t= 12.5 \text{ s}\]</span></p>
 <p>Usamos la ecuación</p>
-<p><span class="math display">\[&nbsp;v_p(t) = v_p(t_0) + a\left(t-t_0\right)=0+8\times 12.5 = 100 \text{ m/s}\]</span></p>
+<p><span class="math display">\[&nbsp;v_p(t) = v_p(t_0) + a\left(t-t_0\right)=0+8\cdot 12.5 = 100 \text{ m/s}\]</span></p>
 </div>
 </div>
 </div>
@@ -566,8 +569,8 @@ window.Quarto = {
 <p><span class="math display">\[x(t)=x(t_0)+\int_{t_0}^tv(t)dt=50\text{ m}+\int_{t_0}^t\left(10+2t-0.05t^2\right)d&nbsp;t=\left(50+10 t+t^2-\frac{0.05}{3}t^3\right)\text{ m}\]</span></p></li>
 <li><p>La velocidad será máxima cuando su derivada valga cero. Por tanto:</p>
 <p><span class="math display">\[\frac{dv}{dt}=2-0.10t=0\ \rightarrow \ t=20 \text{ s}\]</span></p>
-<p><span class="math display">\[v_\text{max} = v(t=20 \text{ s}) = 10 + 2 \times 20 - 0.05 \times 20^2 \text{ m/s} = 30 \text{ m/s}\]</span></p></li>
-<li><p><span class="math display">\[x(t=20\text{ s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3} 20^3 \right )= 516.6  \text{ m}\]</span></p></li>
+<p><span class="math display">\[v_\text{max} = v(t=20 \text{ s}) = 10 + 2 \cdot 20 - 0.05 \cdot 20^2 \text{ m/s} = 30 \text{ m/s}\]</span></p></li>
+<li><p><span class="math display">\[x(t=20\text{ s})= \left ( 50 + 10 \cdot 20 + 20^2 - \frac{0.05}{3} 20^3 \right )= 516.6  \text{ m}\]</span></p></li>
 </ol>
 </div>
 </div>
@@ -656,7 +659,7 @@ window.Quarto = {
 <li><p><span class="math display">\[{\vec v_m} = \frac{\Delta {\vec{r}}}{\Delta t} = \frac{\left (x_2-x_1 \right ) \hat{\imath} + \left(y_2-y_1 \right ) \hat{\jmath}}{120}= \frac{\left ( 110-130 \right )}{120} \hat{\imath} + \frac{\left ( 218-205 \right )}{120} \hat{\jmath} = -\frac{20}{120} \hat{\imath} + \frac{113}{120} \hat{\jmath}\]</span> <span class="math display">\[\fbox{$\vec v_m = \left ( -0.167  \hat{\imath} + 0.108  \hat{\jmath} \right )\text{ m/s}$}\]</span></p></li>
 <li><p><span class="math display">\[&nbsp;|\vec v_m| = \sqrt{\left (0.167 \right)^2 + \left ( 0.108 \right ) ^2 } = 0.199  \text{ m/s}\]</span></p>
 <p><span class="math display">\[&nbsp;\theta = \arctan \left( \frac{0.108}{-0.167} \right ) = -32.89^\circ \equiv    147.11^\circ\]</span></p></li>
-<li><p><span class="math display">\[x(t=20 \text{s})= \left ( 50 + 10 \times 20 + 20^2 - \frac{0.05}{3}  20^3 \right )\text{ m} = 516.6 \text{ m}\]</span></p></li>
+<li><p><span class="math display">\[x(t=20 \text{s})= \left ( 50 + 10 \cdot 20 + 20^2 - \frac{0.05}{3}  20^3 \right )\text{ m} = 516.6 \text{ m}\]</span></p></li>
 </ol>
 </div>
 </div>
@@ -734,7 +737,7 @@ window.Quarto = {
 <p><span class="math display">\[&nbsp;\vec v_i = 60 \text{ km/h} \hat{\imath} = 16.67 \text{ m/s}\hat{\imath}\]</span></p>
 <p><span class="math display">\[\vec v_f= 60 \text{ km/h} \hat{\jmath} =16.67 \text{ m/s}  \hat{\jmath}\]</span></p>
 <p>Por tanto:</p>
-<p><span class="math display">\[&nbsp;{\vec{a_m}} =\frac{\vec v_f-\vecv_i}{\Delta t} = \left ( -3.3 \hat{\imath} + 3.3 \hat{\jmath} \right )\text{ m/s^2}\]</span></p>
+<p><span class="math display">\[&nbsp;\vec a_m =\frac{\vec v_f-\vec v_i}{\Delta t} = \left ( -3.3 \hat{\imath} + 3.3 \hat{\jmath} \right )\text{ m/s}^2\]</span></p>
 <p>El movimiento de un objeto alrededor de una circunferencia es un ejemplo típico de movimiento en el cual la velocidad de un objeto cambia, aunque su módulo permanece constante.</p>
 </div>
 </div>
@@ -749,10 +752,10 @@ window.Quarto = {
 <p><span class="math display">\[&nbsp;{\vec{v}} = |{\vec{v}}| \hat{e}_t\]</span></p>
 <p>donde <span class="math inline">\(\hat{e}_t\)</span> es el vector unitario en la dirección tangencial, es decir, el vector tangente a la trayectoria en el sentido del movimiento, que es la dirección del vector velocidad. Ahora derivamos respecto al tiempo:</p>
 <p><span class="math display">\[&nbsp;{\vec{a}} = \frac{d {\vec{v}}}{d t} = \frac{d |{\vec{v}}|}{d t} \hat{e}_t + |{\vec{v}}| \frac{d \hat{e}_t}{d t}\]</span></p>
-<p>El primero de los términos de la derecha es la componente tangencial de la aceleración, llamada (<span class="math inline">\(\vec{a}_t\)</span>), que es paralela a la dirección del vector velocidad y cuya magnitud es la derivada del módulo de la velocidad respecto al tiempo:</p>
-<p><span class="math display">\[&nbsp;|{\vec{a}}_t| = \frac{d |{\vec{v}}|}{d t}\]</span></p>
-<p>El segundo de los términos de la derecha es la componente normal de la aceleración, llamada (<span class="math inline">\(\vec{a}_n\)</span>), que es perpendicular a la dirección del vector velocidad y cuya magnitud es el producto del módulo de la velocidad por la derivada del vector unitario tangente respecto al tiempo:</p>
-<p><span class="math display">\[&nbsp;|{\vec{a}}_n| = |{\vec{v}}| \left | \frac{d \hat{e}_t}{d t} \right |= \frac{v^2}{R}\hat{e}_n\]</span> donde <span class="math inline">\(R\)</span> es el radio de curvatura de la trayectoria y <span class="math inline">\(\hat{e}_n\)</span> es el vector unitario en la dirección normal, es decir, perpendicular a la trayectoria y hacia el centro de curvatura.</p>
+<p>El primero de los términos de la derecha es la componente tangencial de la aceleración, llamada <span class="math inline">\(a_t\)</span>, que es paralela a la dirección del vector velocidad y cuya magnitud es la derivada del módulo de la velocidad respecto al tiempo:</p>
+<p><span class="math display">\[&nbsp;a_t = \frac{d |{\vec{v}}|}{d t}\]</span></p>
+<p>El segundo de los términos de la derecha es la componente normal de la aceleración, llamada <span class="math inline">\(a_n\)</span>, que es perpendicular a la dirección del vector velocidad y cuya magnitud es el producto del módulo de la velocidad por la derivada del vector unitario tangente respecto al tiempo:</p>
+<p><span class="math display">\[&nbsp;a_n = |{\vec{v}}| \left | \frac{d \hat{e}_t}{d t} \right |= \frac{v^2}{R}\]</span> donde <span class="math inline">\(R\)</span> es el radio de curvatura de la trayectoria. Esta componente normal lleva la dirección normal o perpendicular a la trayectoria, y en el sentido hacia el centro de curvatura. Esta dirección y sentido vienen dados por el versor <span class="math inline">\(\hat{e}_n\)</span>. Con este versor, podemos escribir el vector aceleración como la suma de sus componentes tangencial y normal: <span class="math display">\[&nbsp;{\vec{a}} = a_t \hat{e}_t + a_n \hat{e}_n=\frac{dv}{dt} \hat{e}_t + \frac{v^2}{R} \hat{e}_n\]</span></p>
 </section>
 <section id="casos-particulares" class="level2">
 <h2 class="anchored" data-anchor-id="casos-particulares">3.5. Casos particulares</h2>
@@ -820,9 +823,9 @@ window.Quarto = {
 <li><p>La velocidad angular se obtiene de la relación <span class="math inline">\(v=R\omega\)</span>:</p>
 <p><span class="math display">\[&nbsp;\omega = \frac{v}{R} = \frac{10\text{ m/s}}{20\text{ m}} = 0.5 \text{ rad/s}\]</span></p></li>
 <li><p>El ángulo recorrido en 5 segundos se obtiene de la relación <span class="math inline">\(\theta(t) = \theta_0 + \omega t\)</span>:</p>
-<p><span class="math display">\[&nbsp;\theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \times 5 \text{ s} = 2.5 \text{ rad}\]</span></p></li>
+<p><span class="math display">\[&nbsp;\theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \cdot 5 \text{ s} = 2.5 \text{ rad}\]</span></p></li>
 <li><p>La aceleración normal se obtiene de la relación <span class="math inline">\(a_n = R \omega^2\)</span>:</p>
-<p><span class="math display">\[&nbsp;a_n = R \omega^2 = 20\text{ m} \times (0.5 \text{ rad/s})^2 = 5 \text{ m/s}^2\]</span></p></li>
+<p><span class="math display">\[&nbsp;a_n = R \omega^2 = 20\text{ m} \cdot (0.5 \text{ rad/s})^2 = 5 \text{ m/s}^2\]</span></p></li>
 </ol>
 </div>
 </div>
@@ -856,8 +859,8 @@ window.Quarto = {
 <div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>La velocidad angular después de 5 segundos se obtiene de la relación <span class="math inline">\(\omega(t) = \omega_0 + \alpha t\)</span>: <span class="math display">\[&nbsp;\omega(5\text{ s}) = 0.5 \text{ rad/s} + 0.1 \text{ rad/s}^2 \times 5 \text{ s} = 1.0 \text{ rad/s}\]</span></p></li>
-<li><p>El ángulo recorrido en 5 segundos se obtiene de la relación <span class="math inline">\(\theta(t) = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2\)</span>: <span class="math display">\[&nbsp;\theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \times 5 \text{ s} + \frac{1}{2} \times 0.1 \text{ rad/s}^2 \times (5 \text{ s})^2 = 2.5 \text{ rad} + 1.25 \text{ rad} = 3.75 \text{ rad}\]</span></p></li>
+<li><p>La velocidad angular después de 5 segundos se obtiene de la relación <span class="math inline">\(\omega(t) = \omega_0 + \alpha t\)</span>: <span class="math display">\[&nbsp;\omega(5\text{ s}) = 0.5 \text{ rad/s} + 0.1 \text{ rad/s}^2 \cdot 5 \text{ s} = 1.0 \text{ rad/s}\]</span></p></li>
+<li><p>El ángulo recorrido en 5 segundos se obtiene de la relación <span class="math inline">\(\theta(t) = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2\)</span>: <span class="math display">\[&nbsp;\theta(5\text{ s}) = 0 + 0.5 \text{ rad/s} \cdot 5 \text{ s} + \frac{1}{2} \cdot 0.1 \text{ rad/s}^2 \cdot (5 \text{ s})^2 = 2.5 \text{ rad} + 1.25 \text{ rad} = 3.75 \text{ rad}\]</span></p></li>
 </ol>
 </div>
 </div>
@@ -921,9 +924,9 @@ window.Quarto = {
 <li><p>Para determinar el tiempo total <span class="math inline">\(T\)</span> en el que la pelota está en el aire, debemos de imponer que <span class="math inline">\(y(T)=y(t_0)\)</span>:</p>
 <p><span class="math display">\[&nbsp;y(T) = y(t_0) + v_{0y} \left ( t-t_0 \right ) - \frac{1}{2} g  \left ( t - t_0 \right ) ^2 = y(t_0)\]</span></p>
 <p>Suponiendo que <span class="math inline">\(t_0=0\)</span>, tendremos:</p>
-<p><span class="math display">\[&nbsp; \left ( v_{0y} - \frac{1}{2} g t \right ) t =0 \ \rightarrow \ v_{0y}=\frac{1}{2} g t \ \rightarrow \  t = \frac{2 v_{0y}}{g} = \frac{2 \times24.5 \sin (36.9^\circ)}{9.81} = 3.0 \text{ s}\]</span></p></li>
+<p><span class="math display">\[&nbsp; \left ( v_{0y} - \frac{1}{2} g t \right ) t =0 \ \rightarrow \ v_{0y}=\frac{1}{2} g t \ \rightarrow \  t = \frac{2 v_{0y}}{g} = \frac{2 \cdot24.5 \sin (36.9^\circ)}{9.81} = 3.0 \text{ s}\]</span></p></li>
 <li><p>Suponemos que <span class="math inline">\(x(t_0)=0\)</span> y usamos la expresión:</p>
-<p><span class="math display">\[&nbsp;x(T) = x(t_0) + v_{0x} t = 0 + 24.5\times 3.0 \cos(36.9^\circ)   = 58.8 \text{ m}\]</span></p></li>
+<p><span class="math display">\[&nbsp;x(T) = x(t_0) + v_{0x} t = 0 + 24.5\cdot 3.0 \cos(36.9^\circ)   = 58.8 \text{ m}\]</span></p></li>
 </ol>
 </div>
 </div>

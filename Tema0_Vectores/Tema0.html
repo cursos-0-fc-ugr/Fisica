@@ -204,7 +204,7 @@ window.Quarto = {
 </section>
 <section id="componentes" class="level2">
 <h2 class="anchored" data-anchor-id="componentes">2.2 Componentes</h2>
-<p>Las componentes de los vectores nos van a permitir un método sencillo pero general para sumar vectores. Supongamos que tenemos un sistema cartesiano de ejes de coordenadas. Entonces <span class="math inline">\(A_x\)</span> es la magnitud del vector <span class="math inline">\(\vec{A_x}\)</span> y <span class="math inline">\(A_y\)</span> es la magnitud del vector <span class="math inline">\(\vec{A_y}\)</span>. <span class="math inline">\(A_x\)</span> y <span class="math inline">\(A_y\)</span> son las componentes del vector <span class="math inline">\(\vec{A}\)</span>. Podemos calcular las componentes del vector <span class="math inline">\(\vec{A}\)</span> si conocemos la magnitud y la dirección de dicho vector. Describiremos la dirección de un vector con su ángulo <span class="math inline">\(\theta\)</span>, relativo a una dirección de referencia, que es el eje <span class="math inline">\(x\)</span> positivo, siempre en sentido antihorario</p>
+<p>Las componentes de los vectores nos van a permitir un método sencillo pero general para sumar vectores. Supongamos que tenemos un sistema cartesiano de ejes de coordenadas en dos dimensiones y que <span class="math inline">\(\vec A\)</span> es un vector en ese sistema. Entonces <span class="math inline">\(A_x\)</span> es la proyección del vector <span class="math inline">\(\vec A\)</span> en la dirección del eje <span class="math inline">\(x\)</span> y <span class="math inline">\(A_y\)</span> es la proyección del vector <span class="math inline">\(\vec{A}\)</span> en la dirección del eje <span class="math inline">\(y\)</span>. <span class="math inline">\(A_x\)</span> y <span class="math inline">\(A_y\)</span> son las componentes del vector <span class="math inline">\(\vec{A}\)</span>. Podemos calcular las componentes del vector <span class="math inline">\(\vec{A}\)</span> si conocemos la magnitud y la dirección de dicho vector. Describiremos la dirección de un vector con su ángulo <span class="math inline">\(\theta\)</span>, relativo a una dirección de referencia, que es el eje <span class="math inline">\(x\)</span> positivo, siempre en sentido antihorario</p>
 <p><span class="math display">\[\frac{A_x}{|\vec{A}|} = \cos \theta \rightarrow A_x= |\vec{A}| \cos \theta, \quad \frac{A_y}{|\vec{A}|}= \text{sen} \theta \rightarrow A_y= |\vec{A}| \text{sen}&nbsp; \theta\]</span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
@@ -248,7 +248,7 @@ window.Quarto = {
 <p>Un vector queda descrito por su magnitud y dirección, pero también dando sus componentes. A partir de ellas, podemos calcular la magnitud y dirección del vector</p>
 <p><span class="math display">\[&nbsp;|\vec{A}| = \sqrt{A_x^2 + A_y^2}, \quad \tan  \theta = \frac{A_y}{A_x}, \quad \theta = \text{ arctg}   \frac{A_y}{A_x}\]</span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -257,7 +257,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>EJEMPLO: Calcula la magnitud y dirección del vector <span class="math inline">\(\vec{A}\)</span> si <span class="math inline">\(A_x=2\)</span> m y <span class="math inline">\(A_y=-2\)</span> m.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución">
@@ -412,6 +412,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>En tres dimensiones, además de los vectores unitarios <span class="math inline">\(\hat{\imath}\)</span> y <span class="math inline">\(\hat{\jmath}\)</span>, tenemos el vector unitario <span class="math inline">\(\hat{k}\)</span>, que apunta en la dirección del eje <span class="math inline">\(z\)</span> positivo. Por tanto, un vector <span class="math inline">\(\vec{A}\)</span> en tres dimensiones se puede escribir como:</p>
+<p><span class="math display">\[\vec{A}= A_x  \hat{\imath} + A_y  \hat{\jmath} + A_z  \hat{k}\]</span></p>
 </section>
 <section id="producto-de-vectores" class="level1">
 <h1>4. Producto de vectores</h1>
@@ -442,7 +444,7 @@ window.Quarto = {
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Obtener el producto escalar de los vectores <span class="math inline">\(\vec{A}\)</span> y <span class="math inline">\(\vec{B}\)</span>, siendo <span class="math inline">\(\vec{A}|=4\)</span>, <span class="math inline">\(\theta_A=53^\circ\)</span> y <span class="math inline">\(\vec{B}|=5\)</span>, <span class="math inline">\(\theta_B=130^\circ\)</span>, siendo los ángulos los que los vectores forman con el semieje positivo de las <span class="math inline">\(x\)</span>, en el sentido antihorario.</p>
+<p>Obtener el producto escalar de los vectores <span class="math inline">\(\vec{A}\)</span> y <span class="math inline">\(\vec{B}\)</span>, siendo <span class="math inline">\(|\vec{A}|=4\)</span>, <span class="math inline">\(\theta_A=53^\circ\)</span> y <span class="math inline">\(|\vec{B}|=5\)</span>, <span class="math inline">\(\theta_B=130^\circ\)</span>, siendo los ángulos los que los vectores forman con el semieje positivo de las <span class="math inline">\(x\)</span>, en el sentido antihorario.</p>
 <div style="text-align:center;">
 <p><a href="figuras/fig-vectores04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="figuras/fig-vectores04.png" class="img-fluid" style="width:30.0%"></a></p>
 </div>
@@ -507,24 +509,24 @@ window.Quarto = {
 </section>
 <section id="producto-vectorial-de-dos-vectores" class="level2">
 <h2 class="anchored" data-anchor-id="producto-vectorial-de-dos-vectores">4.2. Producto vectorial de dos vectores</h2>
-<p>El producto vectorial de los vectores <span class="math inline">\(\vec{A}\)</span> y <span class="math inline">\(\vec{B}\)</span> se denota como <span class="math inline">\(\vec{A} \wedge \vec{B}\)</span>. Definimos dicho producto vectorial como un vector, perpendicular al plano que forman los vectores <span class="math inline">\(\vec{A}\)</span> y <span class="math inline">\(\vec{B}\)</span>, y cuya magnitud viene dada por <span class="math display">\[|\vec{A} \wedge \vec{B}| = |\vec{A}|  |\vec{B}|  \text{sen} \theta  ,\]</span> siendo <span class="math inline">\(\theta\)</span> el ángulo que forman ambos vectores. La dirección y sentido del vector <span class="math inline">\(\vec{A} \wedge \vec{B}\)</span> nos lo da la <em>regla de la mano derecha</em>. La dirección del producto vectorial está definida por la dirección del pulgar, cerrando los demás dedos en torno al vector <span class="math inline">\(\vec{A}\)</span> primero y siguiendo con el vector <span class="math inline">\(\vec{B}\)</span>.</p>
+<p>El producto vectorial de los vectores <span class="math inline">\(\vec{A}\)</span> y <span class="math inline">\(\vec{B}\)</span> se denota como <span class="math inline">\(\vec{A} \times \vec{B}\)</span>. Definimos dicho producto vectorial como un vector, perpendicular al plano que forman los vectores <span class="math inline">\(\vec{A}\)</span> y <span class="math inline">\(\vec{B}\)</span>, y cuya magnitud viene dada por <span class="math display">\[|\vec{A} \times \vec{B}| = |\vec{A}|  |\vec{B}|  \text{sen} \theta  ,\]</span> siendo <span class="math inline">\(\theta\)</span> el ángulo que forman ambos vectores. La dirección y sentido del vector <span class="math inline">\(\vec{A} \times \vec{B}\)</span> nos lo da la <em>regla de la mano derecha</em>. La dirección del producto vectorial está definida por la dirección del pulgar, cerrando los demás dedos en torno al vector <span class="math inline">\(\vec{A}\)</span> primero y siguiendo con el vector <span class="math inline">\(\vec{B}\)</span>.</p>
 <p>Una propiedad del producto vectorial es que cuando ambos vectores son paralelos (<span class="math inline">\(\theta=0\)</span>, <span class="math inline">\(180^\circ\)</span>), el producto vectorial es nulo.</p>
 <p>Teniendo en cuenta los vectores unitarios en el espacio tridimensional:</p>
 <div style="text-align:center;">
 <p><a href="figuras/unitarios.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="figuras/unitarios.png" class="img-fluid" style="width:30.0%"></a></p>
 </div>
-<p>Podemos ver que verifican: <span class="math display">\[\hat{\imath} \wedge \hat{\jmath} = \hat{k} \quad \; \hat{\jmath} \wedge \hat{\imath} = -\hat{k} \quad \; \hat{\imath} \wedge \hat{\imath} = 0\]</span></p>
-<p><span class="math display">\[\hat{\jmath} \wedge \hat{k} = \hat{\imath} \quad \; \hat{k} \wedge \hat{\jmath} = -\hat{\imath} \quad \; \hat{\jmath} \wedge \hat{\jmath} = 0\]</span></p>
-<p><span class="math display">\[\hat{k} \wedge \hat{\imath} = \hat{\jmath} \quad \; \hat{\imath} \wedge \hat{k} = -\hat{\jmath} \quad \; \hat{k} \wedge \hat{k} = 0\]</span></p>
-<p>Y esto nos sirve para escribir una expresión general para el producto vectorial <span class="math inline">\(\vec{A} \wedge \vec{B}\)</span>:</p>
+<p>Podemos ver que verifican: <span class="math display">\[\hat{\imath} \times \hat{\jmath} = \hat{k} \quad \; \hat{\jmath} \times \hat{\imath} = -\hat{k} \quad \; \hat{\imath} \times \hat{\imath} = 0\]</span></p>
+<p><span class="math display">\[\hat{\jmath} \times \hat{k} = \hat{\imath} \quad \; \hat{k} \times \hat{\jmath} = -\hat{\imath} \quad \; \hat{\jmath} \times \hat{\jmath} = 0\]</span></p>
+<p><span class="math display">\[\hat{k} \times \hat{\imath} = \hat{\jmath} \quad \; \hat{\imath} \times \hat{k} = -\hat{\jmath} \quad \; \hat{k} \times \hat{k} = 0\]</span></p>
+<p>Y esto nos sirve para escribir una expresión general para el producto vectorial <span class="math inline">\(\vec{A} \times \vec{B}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\vec{A} \wedge \vec{B} &amp;= \left ( A_x \hat{\imath} + A_y \hat{\jmath} + A_z \hat{k} \right ) \wedge \left (B_x \hat{\imath} + B_y \hat{\jmath} + B_z \hat{k} \right )
+\vec{A} \times \vec{B} &amp;= \left ( A_x \hat{\imath} + A_y \hat{\jmath} + A_z \hat{k} \right ) \times \left (B_x \hat{\imath} + B_y \hat{\jmath} + B_z \hat{k} \right )
 \\&amp;=\left ( A_y B_z - A_z B_y \right)\hat{\imath} + \left ( A_z B_x - A_x B_z \right)\hat{\jmath} + \left ( A_x B_y - A_y B_x \right)\hat{k}
 \end{aligned}
 \]</span></p>
 <p>que puede escribirse en forma más sencilla como un determinante:</p>
-<p><span class="math display">\[&nbsp;\vec{A}&nbsp;\wedge \vec{B} = \left | \begin{matrix} \hat{\imath} &amp; \hat{\jmath} &amp; \hat{k} \\ A_x &amp; A_y &amp; A_z \\ B_x &amp; B_y &amp; B_z \end{matrix} \right |\]</span></p>
+<p><span class="math display">\[&nbsp;\vec{A}&nbsp;\times \vec{B} = \left | \begin{matrix} \hat{\imath} &amp; \hat{\jmath} &amp; \hat{k} \\ A_x &amp; A_y &amp; A_z \\ B_x &amp; B_y &amp; B_z \end{matrix} \right |\]</span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -537,7 +539,7 @@ window.Quarto = {
 </div>
 <div id="callout-19" class="callout-19-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(\vec{A}= 6  \hat{\imath}\)</span> y <span class="math inline">\(\vec{B}= 4 \left ( \cos 30^\circ  \hat{\imath} + \text{sen}  30^\circ  \hat{\jmath} \right )\)</span>. Calcula <span class="math inline">\(\vec{A} \wedge \vec{B}\)</span>.</p>
+<p>Sea <span class="math inline">\(\vec{A}= 6  \hat{\imath}\)</span> y <span class="math inline">\(\vec{B}= 4 \left ( \cos 30^\circ  \hat{\imath} + \text{sen}  30^\circ  \hat{\jmath} \right )\)</span>. Calcula <span class="math inline">\(\vec{A} \times \vec{B}\)</span>.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -550,7 +552,7 @@ window.Quarto = {
 </div>
 <div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\vec{A} \wedge \vec{B} = 24 \cdot \text{sen}  30^\circ  \hat{k} = 12  \hat{k}\]</span></p>
+<p><span class="math display">\[\vec{A} \times \vec{B} = 24 \cdot \text{sen}  30^\circ  \hat{k} = 12  \hat{k}\]</span></p>
 </div>
 </div>
 </div>
