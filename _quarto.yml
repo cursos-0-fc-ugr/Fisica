@@ -1,6 +1,8 @@
 project:
-  type: default
-  output-dir: .
+  type: website
+  output-dir: _site
+  render:
+    - "**/*.qmd"
 
 website:
   title: "Cursos 0 Física"
