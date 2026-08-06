@@ -17,7 +17,7 @@ Curso cero de Física para la ETSIIT y la Facultad de Ciencias de la Universidad
 
 Este repositorio se puede visitar en [GitHub pages](https://github.com/cursos-0-fc-ugr/Fisica).
 
-Para esta edición se han actualizado los contenidos y adaptado a la LOMLOE. La versión anterior está disponible en este [enlace](https://cursos-0-fc-ugr.github.io/Fisica/Curso_old/index.html).
+Para esta edición se han actualizado los contenidos y adaptado a la LOMLOE. La versión anterior está disponible en este [enlace](https://cursos-0-fc-ugr.github.io/Fisica/Curso_old/).
 
 Si encuentra algún error, por favor, comuníquenoslo usando el [gestor de incidencias](https://github.com/cursos-0-fc-ugr/Fisica/issues) de este repositorio.
 
