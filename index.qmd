@@ -23,12 +23,12 @@ Si encuentra algún error, por favor, comuníquenoslo usando el [gestor de incid
 
 # Temas
 
-- [Tema 0. Vectores](Tema0_Vectores/Tema0.html)
-- [Tema 1. Cinemática](Tema1_Cinematica/Tema1.html)
-- [Tema 2. Dinámica](Tema2_Dinamica/Tema2.html)
-- [Tema 3. Energía](Tema3_Energia/Tema3.html)
-- [Tema 4. Campo gravitatorio](Tema4_Campo_Gravitatorio/Tema4.html)
-- [Tema 5. Campo electrostático](Tema5_Campo_Electrostatico/Tema5.html)
-- [Tema 6. Electromagnetismo](Tema6_Electromagnetismo/Tema6.html)
-- [Tema 7. Oscilaciones y ondas](Tema7_Oscilaciones_Ondas/Tema7.html)
-- [Tema 8. Óptica](Tema8_Optica/Tema8.html)
+- [Tema 0. Vectores](Tema0_Vectores/)
+- [Tema 1. Cinemática](Tema1_Cinematica/)
+- [Tema 2. Dinámica](Tema2_Dinamica/)
+- [Tema 3. Energía](Tema3_Energia/)
+- [Tema 4. Campo gravitatorio](Tema4_Campo_Gravitatorio/)
+- [Tema 5. Campo electrostático](Tema5_Campo_Electrostatico/)
+- [Tema 6. Electromagnetismo](Tema6_Electromagnetismo/)
+- [Tema 7. Oscilaciones y ondas](Tema7_Oscilaciones_Ondas/)
+- [Tema 8. Óptica](Tema8_Optica/)
