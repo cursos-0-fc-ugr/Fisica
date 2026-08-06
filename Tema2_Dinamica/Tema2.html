@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 2. Dinámica – Cursos 0 Física</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f3e89eac363b64a60f18145b5b60ba0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Tema 2. Dinámica</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#leyes-del-movimiento-de-newton" id="toc-leyes-del-movimiento-de-newton" class="nav-link active" data-scroll-target="#leyes-del-movimiento-de-newton">1. Leyes del movimiento de Newton</a>
+  <ul class="collapse">
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">1.1. Introducción</a></li>
+  <li><a href="#Fuerzas-e-interacciones" id="toc-Fuerzas-e-interacciones" class="nav-link" data-scroll-target="#Fuerzas-e-interacciones">1.2. Fuerzas e interacciones</a></li>
+  <li><a href="#suma-de-fuerzas" id="toc-suma-de-fuerzas" class="nav-link" data-scroll-target="#suma-de-fuerzas">1.3. Suma de fuerzas</a></li>
+  <li><a href="#Primera-Ley-de-Newton:-Ley-de-la-Inercia" id="toc-Primera-Ley-de-Newton:-Ley-de-la-Inercia" class="nav-link" data-scroll-target="#Primera-Ley-de-Newton\:-Ley-de-la-Inercia">1.4. Primera Ley de Newton: Ley de la Inercia</a></li>
+  <li><a href="#Fuerza-y-masa" id="toc-Fuerza-y-masa" class="nav-link" data-scroll-target="#Fuerza-y-masa">1.5. Fuerza y masa</a></li>
+  <li><a href="#Segunda-ley-de-Newton" id="toc-Segunda-ley-de-Newton" class="nav-link" data-scroll-target="#Segunda-ley-de-Newton">1.6. Segunda ley de Newton</a></li>
+  <li><a href="#fuerza-debida-a-la-gravedad-el-peso" id="toc-fuerza-debida-a-la-gravedad-el-peso" class="nav-link" data-scroll-target="#fuerza-debida-a-la-gravedad-el-peso">1.7. Fuerza debida a la gravedad: El peso</a></li>
+  <li><a href="#fuerzas-de-contacto-sólidos-muelles-y-cuerdas" id="toc-fuerzas-de-contacto-sólidos-muelles-y-cuerdas" class="nav-link" data-scroll-target="#fuerzas-de-contacto-sólidos-muelles-y-cuerdas">1.8. Fuerzas de contacto: sólidos, muelles y cuerdas</a></li>
+  <li><a href="#Tercera-ley-de-Newton" id="toc-Tercera-ley-de-Newton" class="nav-link" data-scroll-target="#Tercera-ley-de-Newton">1.9. Tercera ley de Newton</a></li>
+  <li><a href="#Problemas-con-dos-o-más-objetos" id="toc-Problemas-con-dos-o-más-objetos" class="nav-link" data-scroll-target="#Problemas-con-dos-o-más-objetos">1.10. Problemas con dos o más objetos</a></li>
+  </ul></li>
+  <li><a href="#equilibrio" id="toc-equilibrio" class="nav-link" data-scroll-target="#equilibrio">2. Equilibrio</a>
+  <ul class="collapse">
+  <li><a href="#momento-de-una-fuerza" id="toc-momento-de-una-fuerza" class="nav-link" data-scroll-target="#momento-de-una-fuerza">2.1. Momento de una fuerza</a></li>
+  <li><a href="#el-equilibrio-de-los-cuerpos-y-el-sólido-rígido" id="toc-el-equilibrio-de-los-cuerpos-y-el-sólido-rígido" class="nav-link" data-scroll-target="#el-equilibrio-de-los-cuerpos-y-el-sólido-rígido">2.2. <strong>El equilibrio de los cuerpos y el sólido rígido</strong></a></li>
+  <li><a href="#el-centro-de-gravedad" id="toc-el-centro-de-gravedad" class="nav-link" data-scroll-target="#el-centro-de-gravedad">2.3. <strong>El centro de gravedad</strong></a></li>
+  </ul></li>
+  <li><a href="#cantidad-de-movimiento-o-momento-lineal" id="toc-cantidad-de-movimiento-o-momento-lineal" class="nav-link" data-scroll-target="#cantidad-de-movimiento-o-momento-lineal">3. Cantidad de movimiento o momento lineal</a>
+  <ul class="collapse">
+  <li><a href="#relación-entre-cantidad-de-movimiento-y-fuerzas-aplicadas" id="toc-relación-entre-cantidad-de-movimiento-y-fuerzas-aplicadas" class="nav-link" data-scroll-target="#relación-entre-cantidad-de-movimiento-y-fuerzas-aplicadas">3.1. Relación entre cantidad de movimiento y fuerzas aplicadas</a></li>
+  <li><a href="#conservación-de-la-cantidad-de-movimiento" id="toc-conservación-de-la-cantidad-de-movimiento" class="nav-link" data-scroll-target="#conservación-de-la-cantidad-de-movimiento">3.2. Conservación de la cantidad de movimiento</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="leyes-del-movimiento-de-newton" class="level1 title">
+<h1 class="title">1. Leyes del movimiento de Newton</h1>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">1.1. Introducción</h2>
+<p>En este tema, introduciremos el concepto de <em>fuerza</em> en Física y veremos por qué las fuerzas son vectores. En particular, nos detendremos en los siguientes puntos:</p>
+<ol type="1">
+<li><p>La importancia de la fuerza neta sobre un objeto, y lo que sucede cuando la fuerza neta es cero <span class="math inline">\(\rightarrow\)</span> 1ª Ley de Newton.</p></li>
+<li><p>La relación entre la fuerza neta sobre un objeto, la masa del objeto y su aceleración <span class="math inline">\(\rightarrow\)</span> 2ª Ley de Newton.</p></li>
+<li><p>La manera en que se relacionan las fuerzas que dos objetos ejercen entre sí <span class="math inline">\(\rightarrow\)</span> 3ª Ley de Newton.</p></li>
+</ol>
+<p>Usaremos dos conceptos, la <strong>fuerza</strong> y la <strong>masa</strong>, para analizar los principios de la DINÁMICA, establecidos en las tres leyes que fueron enunciadas por Isaac Newton (1642-1727) en sus <em>Philosophiae Naturalis Principia Mathematica</em>. Newton tuvo en cuenta algunas ideas y observaciones que otros científicos hicieron antes que él, como Copérnico, Brahe, Kepler, y especialmente Galileo. Son leyes fundamentales, porque no pueden ser deducidas ni demostradas a través de otros principios. Newton también formuló la <strong>ley de la Gravitación Universal</strong>.</p>
+</section>
+<section id="Fuerzas-e-interacciones" class="level2">
+<h2 class="anchored" data-anchor-id="Fuerzas-e-interacciones">1.2. Fuerzas e interacciones</h2>
+<p>En el lenguaje cotidiano, una <em>fuerza</em> es un <em>empujón</em> o <em>tirón</em>. Una definición más apropiada de <em>fuerza</em> es una interacción entre dos cuerpos. La <em>fuerza</em> es una cantidad vectorial, con magnitud, dirección y sentido. Veamos cuatro tipos de fuerzas comunes:</p>
+<ol type="1">
+<li><p><em>Fuerza normal</em> <span class="math inline">\(\vec{N}\)</span>: Cuando un objeto descansa o se empuja sobre una superficie, ésta ejerce una fuerza sobre el objeto, que es siempre perpendicular a la superficie.</p>
+<div style="text-align:center;">
+<p><a href="media/Fuerza-Normal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="media/Fuerza-Normal.png" class="img-fluid" style="width:60.0%"></a></p>
+</div></li>
+<li><p><em>Fuerza de fricción o rozamiento</em> <span class="math inline">\(\vec f_r\)</span>: Además de la fuerza normal, una superficie puede ejercer una fuerza de fricción sobre un objeto que es paralela a la superficie y de sentido contrario al desplazamiento del objeto.</p>
+<div style="text-align:center;">
+<p><a href="media/rozamiento2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="media/rozamiento2.png" class="img-fluid" style="width:50.0%"></a></p>
+</div></li>
+<li><p><em>Fuerza de tensión</em> <span class="math inline">\(\vec{T}\)</span>: Es la fuerza ejercida por una cuerda, cable, cadena, etc. Por ejemplo:</p>
+<div style="text-align:center;">
+<p><a href="media/tension.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="media/tension.png" class="img-fluid" style="width:30.0%"></a></p>
+</div></li>
+<li><p><em>Fuerza Peso</em> <span class="math inline">\(\vec{P}\)</span>: Es la fuerza que ejerce la gravedad sobre un objeto. Se trata de una fuerza de largo alcance, no es una fuerza de contacto. Siempre está dirigido hacia el suelo.</p>
+<div style="text-align:center;">
+<p><a href="media//peso.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="media//peso.png" class="img-fluid" style="width:30.0%"></a></p>
+</div></li>
+</ol>
+<p>Algunas magnitudes de fuerzas comunes son las siguientes:</p>
+<ul>
+<li><p>Fuerza gravitacional del sol sobre la Tierra <span class="math inline">\(\rightarrow 3.5 \cdot 10^{22}\text{ N}\)</span>.</p></li>
+<li><p>Peso de una manzana <span class="math inline">\(\rightarrow 1\text{ N}\)</span>.</p></li>
+<li><p>Peso de un átomo de hidrógeno <span class="math inline">\(\rightarrow1.6\cdot 10^{-26}\text{ N}\)</span>.</p></li>
+</ul>
+<p>Un instrumento común para medir fuerzas es el <em>dinamómetro</em>.</p>
+</section>
+<section id="suma-de-fuerzas" class="level2">
+<h2 class="anchored" data-anchor-id="suma-de-fuerzas">1.3. Suma de fuerzas</h2>
+<p>Si dos fuerzas <span class="math inline">\(\vec F_1\)</span> y <span class="math inline">\(\vec F_2\)</span> actúan al mismo tiempo sobre un punto <span class="math inline">\(O\)</span> de un cuerpo, el efecto sobre el movimiento del cuerpo es igual al de una sola fuerza <span class="math inline">\(\vec{R}\)</span>, que es igual a la suma vectorial de las fuerzas originales, <span class="math inline">\(\vec{R}= \vec F_1 + \vec F_2\)</span>. En general, el efecto de cualquier número de fuerzas aplicadas a un punto de un cuerpo es el mismo que el que resultaría cuando una sola fuerza actuara sobre dicho punto, igual a la suma vectorial de todas ellas <span class="math inline">\(\rightarrow\)</span> <em>principio de superposición</em>.</p>
+<div style="text-align:center;">
+<p><a href="media//superposicion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="media//superposicion.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<p>Este principio nos permite entonces sustituir un conjunto de fuerzas que actúan sobre un objeto ejercidas todas ellas en un mismo punto, por su vector fuerza resultante <span class="math inline">\(\vec{R}\)</span>, y sus componentes respectivas en el espacio</p>
+<p><span class="math display">\[\vec R = \vec F_1+\vec F_2+\vec F_3+\dots+\vec F_n=\sum_{i=1}^n\vec F_i\]</span> <span class="math display">\[
+\vec R = R_x \hat i + R_y \hat j + R_z \hat k\ \Rightarrow\ \left\lbrace
+\begin{array}{l} R_x=\sum_{i=1}^n {(F_i)}_x \\ R_y = \sum_{i=1}^n {(F_i)}_y \\ R_z = \sum_{i=1}^n {(F_i)}_z \end{array}\right.
+\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Calcula la fuerza resultante, teniendo en cuenta los valores de los módulos y los ángulos que forman con el eje <span class="math inline">\(x\)</span> para las tres fuerzas <span class="math inline">\(\vec{F_1}\)</span>, <span class="math inline">\(\vec{F_2}\)</span> y <span class="math inline">\(\vec{F_3}\)</span> de <a href="#fig-ejemplo1" class="quarto-xref">Figura&nbsp;1</a>.</p>
+<div style="text-align:center;">
+<div id="fig-ejemplo1" class="quarto-float quarto-figure quarto-figure-center anchored" width="30%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ejemplo1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="media/ejemplo-suma.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;1: "><img src="media/ejemplo-suma.png" id="fig-ejemplo1" class="img-fluid figure-img" style="width:30.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-ejemplo1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Calculamos las componentes de cada una de las fuerzas: <span class="math display">\[{F_1}_x = 15\cos 35^{\circ} = 12.29 \text{ N},\ {F_1}_y = 15\sin 35^{\circ} = 8.59 \text{ N}\]</span> <span class="math display">\[{F_2}_x = 25\cos 115^{\circ} = -10.59 \text{ N},\ {F_2}_y = 25\sin 115^{\circ} = 22.63 \text{ N}\]</span> <span class="math display">\[{F_3}_x = 8\cos 300^{\circ} = 4 \text{ N},\ {F_3}_y = 8\sin 300^{\circ} = -6.93 \text{ N}\]</span></p>
+<p>Las componentes de la fuerza resultante son: <span class="math display">\[R_x = 12.29 - 10.59 + 4 = 5.7 \text{ N},\ R_y = 8.59 + 22.63 - 6.93 = 24.29 \text{ N}\]</span> El módulo de la fuerza resultante es: <span class="math display">\[|\vec{R}| = \sqrt{R_x^2 + R_y^2} = 25 \text{ N}\]</span> Y el ángulo que forma con el eje <span class="math inline">\(x\)</span> es: <span class="math display">\[\theta_R = \arctan\left(\frac{R_y}{R_x}\right) = 76.8^{\circ}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="Primera-Ley-de-Newton:-Ley-de-la-Inercia" class="level2">
+<h2 class="anchored" data-anchor-id="Primera-Ley-de-Newton:-Ley-de-la-Inercia">1.4. Primera Ley de Newton: Ley de la Inercia</h2>
+<p>Era sabido, ya desde tiempos de Galileo, que si se eliminan todas las fuerzas que actúan sobre un cuerpo, su velocidad no cambiará, propiedad de la materia que se describía como <em>inercia</em>. Esta conclusión fue establecida por Newton como su primera ley, también llamada <em>ley de la inercia</em>.</p>
+<blockquote class="blockquote">
+<p>PRIMERA LEY: <em>Todo cuerpo en reposo sigue en reposo a menos que sobre él actúe una fuerza externa. Un cuerpo en movimiento continúa moviéndose con velocidad constante a menos que sobre él actúe una fuerza externa.</em></p>
+</blockquote>
+<p>Como conclusión, un cuerpo sobre el que no actúa una fuerza neta se mueve con velocidad constante (que puede ser cero) y aceleración nula. Es decir, esta 1ª ley no distingue entre un objeto en reposo y otro que se mueve con velocidad constante, distinta de cero. El hecho de que un objeto esté en reposo o en movimiento con velocidad constante depende del sistema de referencia en el cual se observa el objeto. Hay que tener cuidado, porque la primera ley de Newton solo puede aplicarse a <u>sistemas de referencia denominados inerciales</u>. De hecho, la 1ª ley de Newton nos proporciona un criterio para determinar si un sistema de referencia es inercial o no:</p>
+<blockquote class="blockquote">
+<p><em>Si sobre un objeto no actúa ninguna fuerza, cualquier sistema de referencia con respecto al cual la aceleración del objeto sea cero, es un sistema de referencia inercial.</em></p>
+</blockquote>
+<p>Normalmente se considera que la Tierra es un sistema de referencia inercial (SRI), despreciando la aceleración debida al movimiento de la Tierra alrededor del Sol y de su propio movimiento de rotación.</p>
+</section>
+<section id="Fuerza-y-masa" class="level2">
+<h2 class="anchored" data-anchor-id="Fuerza-y-masa">1.5. Fuerza y masa</h2>
+<p>Utilizando la 1º ley de Newton y la idea de SRI, podemos definir una <strong>Fuerza</strong> como una influencia externa sobre un objeto, que produce un cambio en su velocidad, es decir, una aceleración respecto a un sistema de referencia incercial. La <strong>Fuerza</strong> es una cantidad vectorial. Tiene módulo, dirección y sentido. Las fuerzas son ejercidas por unos cuerpos sobre otros. Las que se generan al estar dos cuerpos en contacto físico se llaman <em>fuerzas de contacto</em>, como por ejemplo golpear una pelota, tirar de un hilo, la fuerza de rozamiento entre un objeto y el suelo , es decir, siempre debe haber un contacto directo entre el cuerpo que aplica la fuerza y el cuerpo sobre el cual se aplica. También hay fuerzas que no requieren contacto directo; éstas son las <em>fuerzas a distancia</em>. Las fuerzas fundamentales son cuatro:</p>
+<ol type="1">
+<li><p><em>Interacción gravitacional</em>: Es la interacción entre partículas debida a su masa.</p></li>
+<li><p><em>Interacción electromagnética</em>: Es la interacción de largo alcance entre partículas cargadas eléctricamente.</p></li>
+<li><p><em>Interacción débil</em>: Es la interacción a corto alcance entre partículas subnucleares.</p></li>
+<li><p><em>Fuerza nuclear fuerte</em>: Interacción de largo alcance entre los hadrones (protones y neutrones), que los mantiene unidos, formando el núcleo.</p></li>
+</ol>
+<p>Por otra parte, sabemos que los objetos se resisten intrínsecamente a ser acelerados. Por ejemplo, si pensamos en dar una patada a un balón de fútbol o a una bola de una bolera, el sentido común nos dice que la segunda se resistirá más a ser acelerada. Esta propiedad intrínseca de un cuerpo es la <strong>masa</strong>. La masa es una medida de la inercia de un cuerpo. Desde el 20 de mayo de 2019, la definición del kilogramo pasó a estar ligada con la constante de Planck, definida como <span class="math inline">\(6.62607015\cdot 10^{-34}\text{ kg\, m}^2\text{ s}^{-1}\)</span>. El <em>Grand Kilo</em>, como se conoce al patrón parisino usado hasta la fecha para definir el kilogramo, es ahora un estándar de masa secundario, quedando el kilogramo ahora definido a partir de la constante de Planck y de otras unidades básicas del SI, como el segundo y el metro.</p>
+</section>
+<section id="Segunda-ley-de-Newton" class="level2">
+<h2 class="anchored" data-anchor-id="Segunda-ley-de-Newton">1.6. Segunda ley de Newton</h2>
+<blockquote class="blockquote">
+<p><em>La aceleración de un cuerpo es proporcional a la fuerza neta que actúa sobre él, e inversamente proporcional a su masa.</em></p>
+</blockquote>
+<p><span class="math display">\[\vec{a} = \frac{\vec F_\text{neta}}{m};\ \vec{F}_\text{neta}=\sum_i\vec F_i\]</span></p>
+<p>O lo que es lo mismo:</p>
+<blockquote class="blockquote">
+<p><em>Si una fuerza externa neta actúa sobre un cuerpo, ésta se acelera, siendo la dirección de aceleración la misma que la de la fuerza neta. El vector de fuerza neta es igual a la masa del cuerpo multiplicada por su aceleración.</em></p>
+</blockquote>
+<p>Por ejemplo, una fuerza neta de 1 N le produce una aceleración de <span class="math inline">\(1\text{ m/s}^2\)</span> a un cuerpo de <span class="math inline">\(1\text{ kg}\)</span> de masa. Una fuerza neta de <span class="math inline">\(2\text{ N}\)</span> le producirá a un cuerpo de <span class="math inline">\(2\text{ kg}\)</span> de masa una aceleración también de <span class="math inline">\(1\text{ m/s}^2\)</span>. Por tanto, si aplicamos la misma fuerza a dos objetos con diferente masa, el que tenga menos masa se acelerará más.</p>
+<p><span class="math display">\[\text{Fuerza neta} \Longrightarrow \text{produce aceleración} \ \text{Causa} \Longrightarrow \text{efecto}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un objeto, de masa <span class="math inline">\(m_1=1\text{ kg}\)</span>, está sometido a una fuerza de módulo <span class="math inline">\(|F_1|\)</span>, dirigida horizontalmente y en sentido positivo, adquiriendo una aceleración de módulo <span class="math inline">\(|a_1|=5\text{ m/s}^2\)</span>. Posteriormente, se le aplica esta misma fuerza a otro objeto de masa <span class="math inline">\(m_2\)</span>, adquiriendo una aceleración <span class="math inline">\(|a_2|=11\text{ m/s}^2\)</span>. ¿Qué valor tiene la masa <span class="math inline">\(m_2\)</span>?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[m_2 = \frac{m_1 \cdot |a_1|}{|a_2|}=0.45\text{ kg}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una partícula de masa <span class="math inline">\(0.5\)</span> kg está sometida simultáneamente a dos fuerzas, <span class="math inline">\(\vec{F}_1= -2.0 \hat{\imath} - 3.0 \hat{\jmath}\)</span> y <span class="math inline">\(\vec{F}_2= -2.0 \hat{\imath} + 4.0 \, \hat{\jmath}\)</span>, ambas expresadas en N. Si la partícula está en el origen y parte del reposo para <span class="math inline">\(t_0=0\)</span>, calcular:</p>
+<ol type="1">
+<li><p>Su vector posición <span class="math inline">\(\vec{r}\)</span>.</p></li>
+<li><p>Su velocidad <span class="math inline">\(\vec{v}\)</span>, ambos para <span class="math inline">\(t=2.0\)</span> s.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\vec{F}_\text{neta} = \vec{F}_1 + \vec{F}_2 = \left( -4.0 \hat{\imath} + 1.0 \hat{\jmath} \right)\text{ N}\]</span></p>
+<p>Por componentes:</p>
+<p><span class="math display">\[F_x = m a_x \Longrightarrow a_x= -8 \text{ m/s}^2, \ F_y = m a_y \Longrightarrow a_y= +2 \text{m/s}^2\]</span></p>
+<p><span class="math display">\[x(t)= x(t_0) + v_x(t_0) (t-t_0) + \frac{1}{2}a_x(t - t_0)^2= -16.0\text{ m}\]</span> <span class="math display">\[y(t)= y(t_0) + v_y(t_0) (t-t_0) + \frac{1}{2}a_y(t - t_0)^2= + 4.0\text{ m}\]</span> <span class="math display">\[\fbox{$\vec{r} =\left( -16.0 \hat{\imath} + 4.0 \, \hat{\jmath} \right)\text{ m}$}\]</span> <span class="math display">\[v_x(t) = v_x(t_0) + a_x(t-t_0) = -16.0 \text{ m/s}\]</span> <span class="math display">\[v_y(t) =v_y(t_0) + a_y (t-t_0) = + 8.0 \text{ m/s}\]</span> <span class="math display">\[\fbox{$\vec{v} = \left ( -16.0 \hat{\imath} + 8.0 \hat{\jmath} \right ) \text{ m}$}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="fuerza-debida-a-la-gravedad-el-peso" class="level2">
+<h2 class="anchored" data-anchor-id="fuerza-debida-a-la-gravedad-el-peso">1.7. Fuerza debida a la gravedad: El peso</h2>
+<p>Si dejamos caer un objeto cerca de la superficie de la Tierra, el objeto acelera en dirección hacia la Tierra. Despreciando la resistencia del aire, todos los objetos poseen la misma aceleración, <span class="math inline">\(\vec{g}\)</span>. La fuerza que causa esta aceleración es la Fuerza de la gravedad, <span class="math inline">\(\vec{F}_g\)</span>, que ejerce la Tierra sobre cualquier objeto con una determinada masa <span class="math inline">\(m\)</span>. Si solo actúa esa fuerza sobre el objeto, se dice que el cuerpo está en caída libre:</p>
+<p><span class="math display">\[\vec{F}_g = m \vec{g} \ \Rightarrow\ \vec{g} = -9.81\hat\jmath \text{ m/s}^2\]</span></p>
+<p>siempre que estemos cerca de la superficie de la Tierra. En general, <span class="math inline">\(g\)</span> será menor para cuerpos situados más lejos de la superficie de la Tierra, y también será menor en latitudes diferentes al ecuador.</p>
+<p>El peso no es una propiedad intrínseca de los cuerpos, lo que sí es una propiedad intrínseca es la masa. Por ejemplo, el peso de un objeto en la Luna será aproximadamente <span class="math inline">\(1/6\)</span> de su peso en la Tierra.</p>
+<p>El <strong>peso aparente</strong> es la fuerza que equilibra el peso (por ejemplo, en una balanza, será la fuerza normal que ésta ejerce sobre el cuerpo). Si el peso aparente es cero (no hay ninguna fuerza que equilibra el peso del cuerpo), diremos que el cuerpo está en <strong>caída libre</strong> <span class="math inline">\(\rightarrow\)</span> <strong>ingravidez</strong>.</p>
+</section>
+<section id="fuerzas-de-contacto-sólidos-muelles-y-cuerdas" class="level2">
+<h2 class="anchored" data-anchor-id="fuerzas-de-contacto-sólidos-muelles-y-cuerdas">1.8. Fuerzas de contacto: sólidos, muelles y cuerdas</h2>
+<p>La <strong>fuerza normal</strong> es la fuerza que cualquier superficie ejerce sobre un objeto, y que siempre es perpendicular a la misma, como se puede ver en la siguiente figura:</p>
+<div style="text-align:center;">
+<p><a href="media/normal1-2-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="media/normal1-2-3.png" class="img-fluid" style="width:60.0%"></a></p>
+</div>
+<p>La fuerza que ejerce un muelle sobre un objeto viene dada por la <strong>ley de Hooke</strong>. Suponiendo que el muelle esté situado en la dirección del eje <span class="math inline">\(x\)</span>, la fuerza que ejerce el muelle sobre el objeto se expresa de la siguiente forma:</p>
+<p><span class="math display">\[\vec{F} = -k \, \Delta x \, \hat{\imath}\]</span></p>
+<p>donde <span class="math inline">\(k\)</span> es la constante elástica del muelle, y mide la rigidez del mismo. <span class="math inline">\(\Delta x\)</span> es el desplazamiento realizado por el muelle, respecto de su posición de equilibrio <span class="math inline">\(x_0\)</span>.</p>
+<p>La figura siguiente muestra cómo es la fuerza elástica del muelle sobre un objeto, suponiendo que la posición de equilibrio es <span class="math inline">\(x_0=0\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="media/Hooke.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="media/Hooke.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<p>Un objeto en reposo bajo la acción de fuerzas que se equilibran se dice que está en <em>equilibrio estático</em>. Si un pequeño desplazamiento da lugar a una fuerza de restitución neta hacia la posición de equilibrio, se dice que el equilibrio es <em>estable</em>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una jugadora de baloncesto de <span class="math inline">\(95\text{ kg}\)</span> se cuelga del aro del cesto después de haber hecho un mate. Antes de dejarse caer, se queda en reposo, con el anillo del aro doblado hacia abajo 10 cm. Si suponemos que el aro se comporta como un muelle elástico, calcular <span class="math inline">\(k\)</span>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Teniendo en cuenta que la fuerza realizada por el muelle equilibra el peso de la jugadora, tendremos que:</p>
+<p><span class="math display">\[mg=k\Delta y \ \rightarrow \ k = \frac{mg}{\Delta y}=\frac{95\text{ kg} \cdot 9.8 \text{ m/s}^2} {10 \cdot 10^{-2} \text{ m} } = 7.2 \cdot 10^3 \text{ N/m}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un racimo de bananas de <span class="math inline">\(2\text{ kg}\)</span> está suspendido en reposo de una balanza de muelle, cuya constante es <span class="math inline">\(k=200\text{&nbsp;N/m}\)</span>. Calcular cuál ha sido el estiramiento del muelle respecto de su posición de equilibrio.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[mg = k \Delta y \ \rightarrow \ \Delta y = \frac{2\text{ kg} \cdot 9.8 \text{ m/s}^2}{200\text{ N/m}}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>La magnitud de la fuerza que un trozo de cuerda ejerce sobre otro adyacente se denomina <span class="math inline">\(tensión\)</span>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una pelota <span class="math inline">\(C\)</span> que pesa <span class="math inline">\(P=6\text{ N}\)</span> se cuelga mediante dos cables (<span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>) que ejercen tensiones <span class="math inline">\(T_A\)</span> y <span class="math inline">\(T_B\)</span>, respectivamente, tal como indica la <a href="#fig-e6" class="quarto-xref">Figura&nbsp;2</a>. Determinar ambas tensiones, suponiendo que la pelota se encuentra en equilibrio estático.</p>
+<div style="text-align:center;">
+<div id="fig-e6" class="quarto-float quarto-figure quarto-figure-center anchored" width="25%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="media/pelota.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figura&nbsp;2: "><img src="media/pelota.png" id="fig-e6" class="img-fluid figure-img" style="width:25.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-e6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[{T_A}_x = T_A \cos (60^{\circ}), \ \ {T_A}_y=T_A \sin (60^{\circ}) \]</span> <span class="math display">\[{T_B}_x=T_B \, \cos (40^{\circ}), \ \ {T_B}_y=T_B \, \sin (40^{\circ} )\]</span></p>
+<p>Teniendo en cuenta que el sistema está en equilibrio</p>
+<p><span class="math display">\[{T_A}_x = {T_B}_x \ \rightarrow \ T_A \cos (60^{\circ}) = T_B \cos (40^{\circ}) \ \rightarrow \ T_B = T_A \frac{\cos ( 60^{\circ})} {\cos ( 40^{\circ})}\]</span> <span class="math display">\[ {T_A}_y + {T_B}_y = P\ \rightarrow \ T_A \sin (60^{\circ}) + T_A \cos ( 60^{\circ}) \, \tan( 40^{\circ}) =P\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[T_A = \frac{P}{\sin (60^{\circ}) + \cos (60^{\circ}) \tan( 40^{\circ})} = 4.667\text{ N}\]</span> <span class="math display">\[T_B= T_A \frac{\cos (60^{\circ})} {\cos ( 40^{\circ})} = 3.046 \text{ N}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Esto nos servirá para explicar con más detalle los diagramas de cuerpo libre para la <strong>resolución de problemas</strong>:</p>
+<ul>
+<li><p><strong>Planteamiento:</strong> Identificar todas las fuerzas que actúan sobre la partícula, así como la dirección del vector <span class="math inline">\(\vec{a}\)</span>. Esto será útil para elegir el sistema de referencia más adecuado.</p></li>
+<li><p><strong>Solución:</strong></p>
+<ol type="1">
+<li><p>Dibujar un diagrama claro.</p></li>
+<li><p>Aislar al cuerpo de interés e identificar y representar cada una de las fuerzas que actúan sobre él.</p></li>
+<li><p>Elegir un sistema de coordenadas adecuado. Si se conoce la dirección de <span class="math inline">\(\vec{a}\)</span>, escoger uno de los ejes paralelo a ella. Para cuerpos que se deslizan sobre superficies, elegir los ejes de forma que uno sea paralelo y el otro perpendicular a la superficie.</p></li>
+<li><p>Aplicar la segunda ley de Newton en forma de componentes.</p></li>
+</ol></li>
+<li><p><strong>Comprobación:</strong> Ver si los resultados tienen las unidades correctas y parecen razonables los valores obtenidos.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una joven tira de un trineo con una fuerza de <span class="math inline">\(100\text{ N}\)</span>, formando un ángulo de <span class="math inline">\(30^{\circ}\)</span> con la horizontal. La masa del conjunto trineo-cuerda-pasajero es de <span class="math inline">\(75\text{ kg}\)</span> y suponemos que podemos despreciar el rozamiento. Determinar la aceleración <span class="math inline">\(\vec{a}\)</span> que adquiere el sistema y la fuerza normal <span class="math inline">\(\vec{N}=F_N \hat{\jmath}\)</span> ejercida por la superficie sobre el trineo.</p>
+<div style="text-align:center;">
+<p><a href="media/trineo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="media/trineo.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[F_x= m a_x \ \rightarrow \ a_x = \frac{F \cos(30^{\circ})}{m} = 1.15 \text{  m/s}^2\]</span> <span class="math display">\[F_N + F \sin (30^{\circ}) = m g \ \rightarrow \ F_N = 685 \, \text{  N}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Dejamos caer un paquete desde la parte superior de un plano inclinado. Sabemos que si la velocidad vertical con la que el paquete llega al final de la rampa es superior a <span class="math inline">\(1.5\text{ m/s}\)</span>, la carga del paquete se daña. Calcular el máximo ángulo que puede tener el plano inclinado para que podamos tener una recepción segura de la carga, teniendo en cuenta que la altura del plano inclinado es <span class="math inline">\(h=1.5\text{ m}\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="media/rampa.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="media/rampa.png" class="img-fluid" style="width:30.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supondremos que el eje <span class="math inline">\(x\)</span> es el paralelo al plano y el eje <span class="math inline">\(y\)</span> el perpendicular. La velocidad vertical será la que tiene el objeto en la dirección vertical, cuando llega al suelo.</p>
+<p><span class="math display">\[P_x = m a_x, \ F_N - P_y = 0, \ a_x = \frac{m g \sin\theta }{m}, \ \sin \theta = \frac{h}{e}\]</span> <span class="math display">\[ v_x^2(t) =v_x^2(t=0) + 2 a_x e \ v_x^2(t) = 2 g\sin\theta \frac{h}{\sin \theta}, \ \sin^2 \theta = \frac{v_v^2}{v_x^2(t)}=\frac{v_v^2}{2 g h}\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[\sin \theta = \sqrt{ \frac{v_v^2}{2 g h}} =0.2766 \ \rightarrow \ \theta = 16.06^{\circ}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="Tercera-ley-de-Newton" class="level2">
+<h2 class="anchored" data-anchor-id="Tercera-ley-de-Newton">1.9. Tercera ley de Newton</h2>
+<p>Si se aplica una fuerza sobre un cuerpo <span class="math inline">\(A\)</span>, debe haber un cuerpo <span class="math inline">\(B\)</span> que ejerza la fuerza. La 3ª ley de Newton establece entonces que dichos cuerpos ejercen fuerzas entre sí que tienen el mismo módulo, la misma dirección y sentidos contrarios.</p>
+<blockquote class="blockquote">
+<p><em><span class="math inline">\(A\)</span> ejerce una fuerza sobre <span class="math inline">\(B\)</span> <span class="math inline">\(\Longrightarrow\)</span> <span class="math inline">\(B\)</span> ejerce una fuerza sobre <span class="math inline">\(A\)</span>, de igual módulo, dirección y sentido opuesto.</em></p>
+</blockquote>
+<p>En general, podemos enunciar la tercera ley de Newton de la siguiente manera:</p>
+<blockquote class="blockquote">
+<p><em>Las fuerzas siempre actúan por pares, iguales y opuestas. Si el cuerpo <span class="math inline">\(A\)</span> ejerce una fuerza <span class="math inline">\(\vec{F}_{AB}\)</span> sobre el cuerpo <span class="math inline">\(B\)</span>, éste ejerce una fuerza igual, pero opuesta, <span class="math inline">\(\vec{F}_{BA}\)</span> sobre el cuerpo <span class="math inline">\(A\)</span>, de tal manera que: <span class="math display">\[\vec{F}_{BA} = -\vec{F}_{AB}\]</span></em></p>
+</blockquote>
+<p>Es común referirse a estas fuerzas como par acción-reacción. Ambas fuerzas actúan siempre <em>simultáneamente y sobre objetos diferentes</em>. En la figura siguiente se muestra esta propiedad, en el caso de dos masas <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="media/accionyreaccion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="media/accionyreaccion.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+</section>
+<section id="Problemas-con-dos-o-más-objetos" class="level2">
+<h2 class="anchored" data-anchor-id="Problemas-con-dos-o-más-objetos">1.10. Problemas con dos o más objetos</h2>
+<p>Como regla general, para aplicar las leyes de Newton a dos o más cuerpos, deberemos:</p>
+<ol type="1">
+<li><p>Dibujar un diagrama de fuerzas para cada cuerpo. Las incógnitas se obtendrán al resolver simultáneamente las ecuaciones.</p></li>
+<li><p>Usar un sistema de coordenadas distinto para cada cuerpo y tener en cuenta en el principio de acción-reacción.</p></li>
+<li><p>Aplicar la 2ª ley de Newton a cada objeto.</p></li>
+<li><p>Resolver las ecuaciones obtenidas.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Dos alpinistas unidos por una cuerda, quedan en la posición que se describe en la figura. Determinar la aceleración que adquiriría el conjunto formado por ambos.</p>
+<div style="text-align:center;">
+<p><a href="media/problema_mano.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="media/problema_mano.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Teniendo en cuenta que Juan tiene masa <span class="math inline">\(m_1\)</span> y Pedro, <span class="math inline">\(m_2\)</span>, tendremos que:</p>
+<p><span class="math display">\[\sum_i (\vec{F_1})_i = m_1 \vec{a}_1, \ \sum_i(\vec{F_2})_i = m_2 \, \vec{a}_2\]</span></p>
+<p>Si suponemos que la masa de la cuerda es despreciable, las tensiones serán iguales <span class="math inline">\(\rightarrow\ T_1=T_2=T\)</span>. Por tanto, para cada objeto, en la dirección del movimiento, tendremos las siguientes ecuaciones</p>
+<p><span class="math display">\[T + P_{1x} = m_1 a \ \rightarrow \ T + m_1 g \sin \theta = m_1 a ;\ P_2 - T = m_2 a\]</span></p>
+<p>Sumando ambas ecuaciones: <span class="math display">\[P_2 + m_1 g \sin \theta = (m_1 + m_2 ) a \ \rightarrow \ a = g \frac{\left ( m_2 + m_1 \sin \theta \right )}{m_1 + m_2}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="equilibrio" class="level1">
+<h1>2. Equilibrio</h1>
+<section id="momento-de-una-fuerza" class="level2">
+<h2 class="anchored" data-anchor-id="momento-de-una-fuerza">2.1. Momento de una fuerza</h2>
+<p>Los cuerpos no siempre pueden ser considerados como masas puntuales. Los cuerpos son extensos, y las fuerzas aplicadas sobre ellos no tienen por qué tener un punto de aplicación común. En ese caso hay que considerar el punto de aplicación de cada fuerza que actúe sobre el cuerpo.</p>
+<div class="columns">
+<div class="column" style="width:75%;">
+<p>Cuando el cuerpo se mueve lo puede hacer de dos formas posibles: se traslada o gira. En la mayoría de los casos, se traslada y gira a la vez. Si se aplica una fuerza sobre un cuerpo de manera que este pueda girar, para describir este efecto se utiliza una magnitud llamada momento de la fuerza (o torque de la fuerza).</p>
+</div><div class="column" style="width:25%;">
+<p><a href="media/image1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="media/image1.png" class="img-fluid" style="width:100.0%"></a></p>
+</div>
+</div>
+<p>El momento <span class="math inline">\(\vec M\)</span> de una fuerza <span class="math inline">\(\vec F\)</span> respecto de un punto <span class="math inline">\(O\)</span> es un vector de módulo <span class="math inline">\(M=r F \sin \alpha\)</span>, siendo <span class="math inline">\(\alpha\)</span> el ángulo que forman los vectores <span class="math inline">\(\vec r\)</span>y <span class="math inline">\(\vec F\)</span>, o dicho de otra forma:</p>
+<p><span class="math display">\[\vec M_O = \vec r \cdot \vec F\]</span></p>
+<p>La dirección del vector <span class="math inline">\(\vec M_0\)</span> es perpendicular al plano que forman los vectores <span class="math inline">\(\vec r\)</span> y <span class="math inline">\(\vec F\)</span>, y su sentido viene dado por la regla del tornillo o mano derecha (sentido del giro desde <span class="math inline">\(\vec r\)</span> hasta <span class="math inline">\(\vec F\)</span> por el camino más corto). La unidad del momento de una fuerza en el SI es <span class="math inline">\(\text{N}\,\text{m}\)</span>.</p>
+<p>Por tanto, el momento de la fuerza depende de la distancia al punto de aplicación, y es mayor cuanto mayor sea dicha distancia. Por esta razón, para hacer girar un tuerca interesa utilizar una llave inglesa cuyo mango sea lo más largo posible, porque el efecto de giro será mayor al aumentar el momento de la fuerza. Ahora ya sabes por qué las manivelas de las puertas se colocan en el lado opuesto a las bisagras. Si intentas abrir una puerta empujando cerca de las bisagras verás que te resulta casi imposible.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un volante de <span class="math inline">\(30 \text{ cm}\)</span> de radio puede girar alrededor de su eje. Si aplicas una fuerza tangencial de <span class="math inline">\(15 \text{ N}\)</span> en la periferia, ¿cuál es el momento de dicha fuerza respecto del centro del volante?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[M = r F \sin \alpha = 0.3 \text{ m} \cdot 15 \text{ N} \cdot \sin 90^{\circ} = 4.5 \text{ N}\,\text{m}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Si sobre un cuerpo actúan simultáneamente varias fuerzas, el momento resultante del sistema es igual a la suma de los momentos de cada una de las fuerzas respecto del mismo punto:</p>
+<p><span class="math display">\[\vec {M_\text{Total}}_O = \sum_i {\vec M_i}_O=\vec {M_1}_O + \vec {M_2}_O + \cdots\]</span></p>
+</section>
+<section id="el-equilibrio-de-los-cuerpos-y-el-sólido-rígido" class="level2">
+<h2 class="anchored" data-anchor-id="el-equilibrio-de-los-cuerpos-y-el-sólido-rígido">2.2. <strong>El equilibrio de los cuerpos y el sólido rígido</strong></h2>
+<p>Un sólido rígido es un cuerpo que no cambia de forma ni de volumen aunque se le apliquen fuerzas. Esto significa que las distancias entre sus partículas permanecen constantes. Es decir, aunque el sólido rígido pueda moverse o girar, su forma se mantiene inalterada.</p>
+<p>Decimos que un sólido rígido está en equilibrio estático cuando no tiene movimiento de traslación ni de rotación. Para que un cuerpo esté en equilibrio estático debe cumplir dos condiciones: que no se traslade y que no rote.</p>
+<p>La primera condición de equilibrio estático establece que no haya movimiento de traslación, por lo que la resultante de las fuerzas que actúan sobre el cuerpo tiene que ser igual a cero:</p>
+<p><span class="math display">\[\vec {F_\text{Total}} = \sum_i \vec F_i = 0\text{ (condición de equilibrio traslacional)}\]</span></p>
+<p>La segunda condición de equilibrio estático establece que no haya movimiento de rotación, por lo que la resultante de los momentos de las fuerzas externas aplicadas al cuerpo respecto de un punto tiene que ser igual a cero:</p>
+<p><span class="math display">\[\vec {M_\text{Total}}_O = \sum_i {\vec M_i}_O=\vec {M_1}_O + \vec {M_2}_O + \cdots = 0\text{ (condición de equilibrio rotacional)}\]</span></p>
+</section>
+<section id="el-centro-de-gravedad" class="level2">
+<h2 class="anchored" data-anchor-id="el-centro-de-gravedad">2.3. <strong>El centro de gravedad</strong></h2>
+<p>El centro de gravedad es un punto en el que puede considerarse aplicada la fuerza de la gravedad que actúa sobre él. Dicho de otro modo, es el punto en el que se puede imaginar concentrado todo su peso.</p>
+<p>Es un punto importante porque describe cómo se comporta un cuerpo bajo la acción de la gravedad, de forma que si el cuerpo se apoya o se suspende por su centro de gravedad, permanecerá en equilibrio; si no, tenderá a girar o a caer hasta que dicho punto quede lo más bajo posible. Por ejemplo, en un sólido rígido como una regla, el centro de gravedad se encuentra en el punto medio de la regla; en un martillo, en cambio, está más cerca de la parte metálica, que es la más pesada.</p>
+<p>Si tratamos de separar un cuerpo de su posición de equilibrio, pueden suceder tres cosas:</p>
+<ol type="1">
+<li><p>Que el cuerpo vuelva a la posición inicial (equilibrio estable).</p></li>
+<li><p>Que el cuerpo vuelque (equilibrio inestable)</p></li>
+<li><p>Que permanezca en la nueva posición (equilibrio indiferente).</p></li>
+</ol>
+<p>Si un cuerpo está apoyado sobre una superficie horizontal se encontrará en equilibrio si cumple las condiciones anteriores de equilibrio traslacional y rotacional. Cuanto más cercano a la superficie horizontal (más bajo) esté el centro de gravedad y más grande sea la base de apoyo del cuerpo, más estable será el equilibrio.</p>
+<p>En el cuerpo humano, el centro de gravedad cambia su ubicación según la posición del cuerpo. De pie, está aproximadamente en la barriga o la cintura baja. Al levantar los brazos, o al inclinarnos, el centro de gravedad se desplaza.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Calcula las fuerzas que deben soportar cada una de las patas de la mesa de la figura, si su peso es de 150 N y colocamos un cuerpo de 50 N en el punto indicado en la <a href="#fig-e7" class="quarto-xref">Figura&nbsp;3</a>.</p>
+<div style="text-align:center;">
+<div id="fig-e7" class="quarto-float quarto-figure quarto-figure-center anchored" width="2.4875in" height="1.35in">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="media/image15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figura&nbsp;3: "><img src="media/image15.png" id="fig-e7" style="width:2.4875in;height:1.35in" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-e7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div style="text-align:center;">
+<p><a href="media/image16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="media/image16.png" style="width:2.81875in;height:2.39722in"></a></p>
+</div>
+<p>El tablero de la mesa debe estar en equilibrio. Suponemos que la mesa tiene dos patas.</p>
+<p>La primera condición para equilibrio traslacional <span class="math inline">\(\rightarrow\)</span> la fuerza total que actúa sobre el tablero es cero:</p>
+<p><span id="eq-i"><span class="math display">\[
+F+F'-P-P_1=0 \ \rightarrow \ F+F' = 200\text{ N}
+\tag{1}\]</span></span></p>
+<p>De la segunda condición para que haya equilibrio rotacional <span class="math inline">\(\rightarrow\)</span> la suma de los momentos respecto de un punto es cero:</p>
+<p><span id="eq-ii"><span class="math display">\[
+F'\cdot0.6-P_1\cdot0.3-F\cdot0.6=0 \ \rightarrow \ 0.6F'-0.6F = 15\text{ N}
+\tag{2}\]</span></span></p>
+<p>Las ecuaciones <a href="#eq-i" class="quarto-xref">1</a> y <a href="#eq-ii" class="quarto-xref">2</a> forman un sistema de dos ecuaciones con dos incógnitas. Resolviendo el sistema:</p>
+<p><span class="math display">\[F=92.5\text{ N}, \ F'=107.5\text{ N}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="cantidad-de-movimiento-o-momento-lineal" class="level1">
+<h1>3. Cantidad de movimiento o momento lineal</h1>
+<p>Seguramente habrás observado que es mas difícil detener un coche cuanta más velocidad lleve, o que si tenemos un camión y un coche que se mueven a la misma velocidad, es más difícil detener el camión. Newton llamó cantidad de movimiento de un cuerpo a la magnitud que caracteriza su estado de movimiento.</p>
+<p>La cantidad de movimiento de una partícula, o momento lineal <span class="math inline">\(\vec p\)</span>, es una magnitud vectorial que se define como el producto de la masa de la partícula por su velocidad:</p>
+<p><span class="math display">\[\vec p = m \vec v\]</span></p>
+<p>Esta magnitud vectorial permite cuantificar la intensidad del movimiento de un cuerpo, es decir, da idea del grado de dificultad que presenta para ser modificado. Cuanto mayor sea su valor, mayor será el esfuerzo necesario para cambiar dicho movimiento.</p>
+<p>Las unidades de la cantidad de movimiento en el SI son <span class="math inline">\(\text{kg\, m\, s}^{-1}\)</span>.</p>
+<p>Para un cuerpo formado por <span class="math inline">\(N\)</span> partículas, la cantidad de movimiento total es igual a la suma de las cantidades de movimiento de cada una de ellas:</p>
+<p><span class="math display">\[\vec p_\text{total} = \sum_{i=1}^N \vec p_i=\vec p_1 + \vec p_2 + \cdots + \vec p_N\]</span></p>
+<p>Un cuerpo puede tener una gran cantidad de movimiento si tiene una masa grande o si se mueve a gran velocidad.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La cantidad de movimiento de un camión de 12 toneladas que se mueve con una velocidad de <span class="math inline">\(\text{15 km/h}\)</span> es la misma que la de un coche de 900 kg. ¿Con qué velocidad debería moverse el coche para que la afirmación anterior fuera cierta?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[p=mv\ \Rightarrow m_\text{coche}v_\text{coche}=m_\text{camión}v_\text{camión}\ \Rightarrow v_\text{coche}=\frac{m_\text{camión}v_\text{camión}}{m_\text{coche}}=\frac{12000 \cdot 15}{900}=200\text{ km/h}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="relación-entre-cantidad-de-movimiento-y-fuerzas-aplicadas" class="level2">
+<h2 class="anchored" data-anchor-id="relación-entre-cantidad-de-movimiento-y-fuerzas-aplicadas">3.1. Relación entre cantidad de movimiento y fuerzas aplicadas</h2>
+<p>Supongamos que un cuerpo con masa m sufre un cambio en su velocidad. Su cantidad de movimiento o momento lineal también experimentará un cambio, dado por:</p>
+<p><span class="math display">\[\Delta \vec p = m \Delta \vec v\]</span></p>
+<p>Calculando la variación de la cantidad de movimiento y dividiendo por el tiempo trascurrido tenemos:</p>
+<p><span class="math display">\[\frac{\Delta \vec p}{\Delta t} = m \frac{\Delta \vec v}{\Delta t}\]</span></p>
+<p>Pero <span class="math inline">\(\frac{\Delta \vec v}{\Delta t} = \vec a\)</span>, por lo que <span class="math display">\[\frac{\Delta \vec p}{\Delta t} = m \vec a=\sum \vec F\]</span> (la 2ª Ley de Newton). En resumen, tenemos <span class="math display">\[\frac{\Delta \vec p}{\Delta t} = \sum \vec F\]</span> que es otra forma de escribir la 2ª Ley de Newton, y que nos dice:</p>
+<blockquote class="blockquote">
+<p>La variación de la cantidad de movimiento con el tiempo de un cuerpo es igual a la resultante de las fuerzas aplicadas sobre el cuerpo”, o lo que es lo mismo “La cantidad de movimiento de un cuerpo cambia debido a la acción de fuerzas sobre él.</p>
+</blockquote>
+<p>Si despejamos la variación de la cantidad de movimiento obtenemos:</p>
+<p><span class="math display">\[\Delta \vec p = \sum \vec F \Delta t\]</span></p>
+<p>El producto de la fuerza por el tiempo que ha estado actuando se denomina impulso mecánico <span class="math inline">\(\vec I\)</span>:</p>
+<p><span class="math display">\[\vec I = \sum \vec F \Delta t\]</span></p>
+<p>El impulso se mide en <span class="math inline">\(\text{N\,s}\)</span> (que es equivalente a la unidad de cantidad de movimiento <span class="math inline">\(\text{kg\,m\,s}^{-1}\)</span>), y es igual al cambio total que se ha producido en la cantidad de movimiento:</p>
+<p><span class="math display">\[\vec I = \Delta \vec p\]</span></p>
+<p>El impulso mecánico tiene una gran importancia en aplicaciones de la vida diaria. Por ejemplo, en el salto con pértiga o en el salto de altura los saltadores caen sobre una colchoneta. Los coches disponen de sistemas como el airbag, el cinturón de seguridad o el parachoques, que tienen funciones parecidas. En todos estos casos se intenta que el impulso necesario para detener a la persona se realice en un tiempo mayor, con lo que la fuerza que deberá soportar su estructura corporal será menor y, por lo tanto, será más difícil lesionarse.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un palo de golf impacta en una bola con una fuerza media de <span class="math inline">\(2500\text{ N}\)</span>. Si el tiempo de contacto entre el palo y la bola es de dos milésimas de segundo, ¿cuál es el impulso que comunica a la bola?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[2500 \cdot 0.002 = 5 \text{ Ns}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Sobre un cuerpo de <span class="math inline">\(75\text{ kg}\)</span> actúa una fuerza de <span class="math inline">\(55\text{ N}\)</span> durante <span class="math inline">\(14\text{ s}\)</span>. Calcula:</p>
+<ol type="a">
+<li><p>El impulso de la fuerza.</p></li>
+<li><p>La variación de la cantidad de movimiento del cuerpo.</p></li>
+<li><p>Su velocidad final si en el momento de actuar la fuerza el cuerpo se mueve a <span class="math inline">\(9 \text{ m/s}\)</span>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\vec I = \sum \vec F \Delta t = 55 \text{ N} \cdot 14 \text{ s} = 770 \text{ Ns}\)</span>$</p></li>
+<li><p><span class="math inline">\(\Delta \vec p = \vec I = 770 \text{ Ns}\)</span>$</p></li>
+<li><p>Como <span class="math inline">\(\Delta \vec p = m \Delta \vec v\)</span>, tenemos que:</p></li>
+</ol>
+<p><span class="math display">\[\Delta \vec v = \frac{\Delta \vec p}{m} = \frac{770}{75} = 10.27 \text{ m/s}\]</span></p>
+<p>Por lo tanto, la velocidad final es:</p>
+<p><span class="math display">\[v_f = v_i + \Delta v = 9 + 10.27 = 19.27 \text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="conservación-de-la-cantidad-de-movimiento" class="level2">
+<h2 class="anchored" data-anchor-id="conservación-de-la-cantidad-de-movimiento">3.2. Conservación de la cantidad de movimiento</h2>
+<p>Acabamos de ver que la cantidad de movimiento cambiará cuando exista una resultante de fuerzas aplicada sobre la partícula (<span class="math inline">\(\sum \vec F \neq \vec 0\)</span>). Por lo tanto, para que la cantidad de movimiento se conserve (<span class="math inline">\(\vec p = \vec 0\)</span>), es necesario que la resultante de todas las fuerzas que actúen sobre el cuerpo sea cero. A esto se le conoce como Principio de conservación de la cantidad de movimiento:</p>
+<blockquote class="blockquote">
+<p>La cantidad de movimiento de una particula permanece constante si y solo si la resultante de las fuerzas que actúan sobre la partícula es cero (es otra forma de expresar el primer principio de la dinámica o principio de inercia):</p>
+</blockquote>
+<p><span class="math display">\[\text{Si } \sum \vec F = \vec 0 \Rightarrow \Delta \vec p = \vec 0\ \Rightarrow m\vec v=cte,\text{ y si } m=cte \text{ entonces } \vec p = \text{cte}\]</span></p>
+<p>La conservación de la cantidad de movimiento se puede generalizar a un sistema de partículas. Un sistema de partículas es un conjunto de partículas del que queremos estudiar su movimiento.</p>
+<p>Como ya se ha visto, la cantidad de movimiento o momento lineal de un sistema de partículas es la suma de las cantidades de movimiento de cada una de las partículas que lo forman. El principio de conservación de la cantidad de movimiento lineal para un sistema de partículas afirma que si la resultante de las fuerzas exteriores que actúan sobre un sistema de partículas es nula, la cantidad de movimiento del sistema permanece constante. Aunque la cantidad de movimiento del sistema permanezca constante, puede variar la cantidad de movimiento de cada partícula del sistema.</p>
+<p>Este principio tiene bastante aplicación en los problemas de cuerpos que chocan, explosiones, etc.</p>
+<p>Cuando se produce una colisión (choque en dos cuerpos) o una explosión (varios cuerpos estaban juntos y se separan), podemos usar la conservación de la cantidad de movimiento para estudiar el problema, teniendo en cuenta las siguientes consideraciones:</p>
+<ol type="1">
+<li><p>Estudiamos los diferentes fragmentos como partes de un mismo cuerpo. De este modo al sumar las fuerzas que se ejercen mutuamente durante la interacción, la resultante es nula.</p></li>
+<li><p>Consideramos que la colisión o la explosión ocurre muy rápido, de manera que las fuerzas externas (gravedad, etc) apenas han modificado el movimiento del sistema durante la interacción.</p></li>
+</ol>
+<p>De esta forma, es una muy buena aproximación el considerar que la cantidad de movimiento total es la misma justo antes y justo después de la interacción (choque o explosión):</p>
+<p><span class="math display">\[\vec p_\text{total}^\text{antes} = \vec p_\text{total}^\text{después}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Un niño, cuya masa es de <span class="math inline">\(40\text{ kg}\)</span>, está encima de un monopatín, de <span class="math inline">\(3\text{ kg}\)</span> de masa. En un instante dado, el niño salta hacia delante con una velocidad de <span class="math inline">\(1 \text{ m/s}\)</span>. Calcula la velocidad con la que se mueve el monopatín.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como la resultante de las fuerzas externas aplicadas al sistema niño+patín es cero, se conserva la cantidad de movimiento del sistema: <span class="math display">\[\vec p_\text{total}^\text{antes} = \vec p_\text{total}^\text{después}\]</span> <span class="math display">\[0 = m_\text{niño} v_\text{niño} + m_\text{patín} v_\text{patín}\]</span> <span class="math display">\[v_\text{patín} = - \frac{m_\text{niño} v_\text{niño}}{m_\text{patín}} = - \frac{40 \text{ kg} \cdot 1 \text{ m/s}}{3 \text{ kg}} = -13.33 \text{ m/s}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cursos-0-fc-ugr\.github\.io\/Fisica\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

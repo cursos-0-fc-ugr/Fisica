@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Campo Electrostático – Cursos 0 Física</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f3e89eac363b64a60f18145b5b60ba0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Campo Electrostático</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#ley-de-coulomb" id="toc-ley-de-coulomb" class="nav-link active" data-scroll-target="#ley-de-coulomb">1. Ley de Coulomb</a></li>
+  <li><a href="#Campo-Electrostatico" id="toc-Campo-Electrostatico" class="nav-link" data-scroll-target="#Campo-Electrostatico">2. Campo Electrostático</a>
+  <ul class="collapse">
+  <li><a href="#Principio-Superposicion" id="toc-Principio-Superposicion" class="nav-link" data-scroll-target="#Principio-Superposicion">2.1. Principio de Superposición de Campos Eléctricos</a></li>
+  </ul></li>
+  <li><a href="#Energia-Potencial" id="toc-Energia-Potencial" class="nav-link" data-scroll-target="#Energia-Potencial">3. Energía Potencial</a></li>
+  <li><a href="#Potencial-Electrostático" id="toc-Potencial-Electrostático" class="nav-link" data-scroll-target="#Potencial-Electrostático">4. Potencial Electrostático</a></li>
+  <li><a href="#Equipotenciales" id="toc-Equipotenciales" class="nav-link" data-scroll-target="#Equipotenciales">5. Líneas de Fuerza y Superficies Equipotenciales</a></li>
+  <li><a href="#Teorema-de-Gauss" id="toc-Teorema-de-Gauss" class="nav-link" data-scroll-target="#Teorema-de-Gauss">6. Teorema de Gauss</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="ley-de-coulomb" class="level1">
+<h1>1. Ley de Coulomb</h1>
+<p>Hay dos tipos de carga eléctrica: positiva y negativa. La unidad de carga en el sistema internacional es el Culombio, <span class="math inline">\(\text{ C}\)</span>: <span class="math display">\[1\text{C} =\text{ carga de }6.25 \times 10^{18}\text{ electrones}\]</span></p>
+<p>También existe un principio de conservación de la carga eléctrica: la carga eléctrica de un sistema aislado permanece constante, es decir, la suma algebraica de las cargas positivas y negativas no varía.</p>
+<p>Coulomb (1736-1806) estudió las fuerzas entre cargas eléctricas y formuló una ley que la describe.</p>
+<blockquote class="blockquote">
+<p><strong>Ley de Coulomb:</strong> La fuerza entre dos cargas eléctricas puntuales <span class="math inline">\(q_1\)</span> y <span class="math inline">\(q_2\)</span>, es directamente proporcional al valor de las cargas e inversamente proporcional al cuadrado de la distancia r que las separa:</p>
+<p><span class="math display">\[\vec{F} = \pm K \frac{q_{1} q_{2}}{r^{2}} \hat{u_{r}}\]</span></p>
+</blockquote>
+<ul>
+<li><p><span class="math inline">\(\vec{F}\)</span> es un vector de modo que tiene: módulo, dirección y sentido, además de unidades [Newton].</p></li>
+<li><p><span class="math inline">\(K\)</span> es una constante cuyo valor depende del medio en el que se encuentran las cargas: <span class="math inline">\(K=\frac{1}{4\pi\varepsilon_0}\)</span>, donde <span class="math inline">\(\varepsilon_0\)</span> es la constante dieléctrica o permitividad del medio (en el vacío, <span class="math inline">\(K=8.99 \cdot 10^9 \text{ Nm}^2\text{/C}^2\)</span>).</p></li>
+<li><p><span class="math inline">\(\hat{u_r}\)</span> es el vector unitario en la dirección de ambas cargas puntuales.</p></li>
+</ul>
+<p>La fuerza es <strong>central</strong>, o sea, que tiene la dirección de la recta que une las cargas, y puede ser:</p>
+<ul>
+<li><p>repulsiva si las cargas tienen el mismo signo.</p></li>
+<li><p>atractiva si las cargas tienen signo opuesto.</p></li>
+</ul>
+<p>Por otra parte, la ley de Newton para la gravitación y la de Coulomb para la fuerza eléctrica tienen analogías y diferencias claras:</p>
+<p><br>
+</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Analogías</th>
+<th style="text-align: center;">Diferencias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Expresión matemática análoga</td>
+<td style="text-align: center;">Gravitatoria asociada a masa. Eléctrica asociada a carga</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Proporcionales a carga o masa</td>
+<td style="text-align: center;">Gravitatoria siempre atractiva.Eléctrica atractiva/repulsiva</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Inversamente proporcionales al cuadrado de la distancia</td>
+<td style="text-align: center;">El valor de <span class="math inline">\(G\)</span> no depende del medio. El valor de <span class="math inline">\(K\)</span> sí</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Fuerzas centrales</td>
+<td style="text-align: center;"><span class="math inline">\(G \ll K\)</span> . Fuerza gravitatoria mucho menor que fuerza eléctrica</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La distancia entre el electrón y el protón en el átomo de hidrógeno es de aproximadamente <span class="math inline">\(5.3\cdot10^{-11}\text{ m}\)</span>. Calcula el valor del módulo de la fuerza electrostática que ejerce el protón sobre el electrón.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Haciendo uso de la ley de Coulomb, es posible hallar el módulo de la fuerza electrostática:</p>
+<p><span class="math display">\[F = K \frac{\left|q_{1}q_{2}\right|}{r^{2}} = K \frac{e^2}{r^2} = \frac{8.99\cdot10^{9}\cdot1.6\cdot10^{-19}}{\left(5.3\cdot10^{-11}\right)^{2}}\]</span></p>
+<p><span class="math display">\[F = 8.19\cdot10^{-8}\text{ N}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Tres cargas se encuentran alineadas sobre el eje <span class="math inline">\(X\)</span>. La carga <span class="math inline">\(q_1\)</span> están en el origen <span class="math inline">\(\left(0,0\right)\)</span>, <span class="math inline">\(q_2\)</span> en el punto <span class="math inline">\(\left(2,0\right)\)</span> y <span class="math inline">\(q_0\)</span> se encuentra en el punto <span class="math inline">\(\left(x,0\right)\)</span>, con <span class="math inline">\(x &gt; 2\text{ m}\)</span> (todas estas medidas están expresadas en metros).</p>
+<ol type="a">
+<li>Determine la fuerza resultante sobre <span class="math inline">\(q_0\)</span> que ejercen las demás cargas si <span class="math inline">\(q_1=+50  \text{ nC}\)</span>, <span class="math inline">\(q_2=-5  \text{ nC}\)</span> y <span class="math inline">\(3.5\text{ m}\)</span>.</li>
+</ol>
+<div style="text-align:center;">
+<p><a href="media/ejemplo2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="media/ejemplo2-1.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<ol start="2" type="a">
+<li>Halle la fuerza neta sobre <span class="math inline">\(q_0\)</span> debida a las demás cargas en el intervalo <span class="math inline">\(2  \text{ m} &lt; x &lt; \infty\)</span>.</li>
+</ol>
+<div style="text-align:center;">
+<p><a href="media/ejemplo2-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="media/ejemplo2-2.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La fuerza neta sobre <span class="math inline">\(q_0\)</span> es el vector suma de la fuerza <span class="math inline">\(\vec{F}_{1,0}\)</span> ejercida por <span class="math inline">\(q_1\)</span> y la fuerza <span class="math inline">\(\vec{F}_{2,0}\)</span> ejercida por <span class="math inline">\(q_2\)</span>. Las fuerzas individuales se determinan mediante la ley de Coulomb. Obsérvese que <span class="math inline">\(\hat{r}_{1,0}=\hat{r}_{2,0}=\hat{\imath}\)</span>, pues ambos versores se encuentran en la dirección positiva de <span class="math inline">\(X\)</span>.</p>
+<ol type="a">
+<li><p>Fuerza <span class="math inline">\(\vec{F}_{1,0}\)</span> debida a <span class="math inline">\(q_1\)</span>: <span class="math display">\[\vec{F}_{1,0}=K\frac{q_1  q_0}{r_{1,0}^2}\hat{r_{1,0}}=\frac{\left(8.99\cdot10^{9}\text{ N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(50\cdot10^{-9}\text{ C}\right)\left(40\cdot10^{-9}\text{ C}\right)}{\left(3.5\text{ m}\right)^{2}}\hat{\imath}=\left(1.469\cdot10^{-6}\text{ N}\right)  \hat{\imath}\]</span></p>
+<p>Fuerza <span class="math inline">\(\vec{F}_{2,0}\)</span> debida a <span class="math inline">\(q_2\)</span>: <span class="math display">\[\vec{F}_{2,0}=K\frac{q_2  q_0}{r_{2,0}^2}\hat{r_{2,0}}=\frac{\left(8.99\cdot10^{9}\text{ N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(-5\cdot10^{-9}\text{ C}\right)\left(40\cdot10^{-9}\text{ C}\right)}{\left(1.5\text{ m}\right)^{2}}\hat{\imath}=\left(-0.8\cdot10^{-6}\text{ N}\right)\hat{\imath}\]</span> La fuerza neta ejercida sobre <span class="math inline">\(q_0\)</span> será la suma de ambas: <span class="math display">\[\vec{F}_{\text{neta}}=\vec{F}_{1,0}+\vec{F}_{2,0}=\left(0.669\cdot10^{-6}  \text{ N}\right)\hat{\imath}\]</span></p></li>
+<li><p>La expresión de la fuerza debida a <span class="math inline">\(q_1\)</span> será: <span class="math display">\[\vec{F}_{1,0}=K\frac{q_1  q_0}{r_{1,0}^2}\hat{r_{1,0}}= K\frac{q_1  q_0}{x^2}\hat{\imath}\]</span> y la debida a <span class="math inline">\(q_2\)</span>: <span class="math display">\[\vec{F}_{2,0}=K\frac{q_2  q_0}{r_{2,0}^2}\hat{r_{2,0}}= K\frac{q_2  q_0}{\left(x-2\right)^2}\hat{\imath}\]</span></p>
+<p>Análogamente, para obtener el valor de la fuerza neta se suman los vectores resultantes obtenidos anteriormente: <span class="math display">\[\vec{F}_{\text{neta}}=\vec{F}_{1,0}+\vec{F}_{2,0}=\left(K\frac{q_1  q_0}{x^2}  + K\frac{q_2  q_0}{\left(x-2\right)^2}  \right)  \hat{\imath}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>La carga <span class="math inline">\(q_1=+50  \text{ nC}\)</span> está en el origen, la carga <span class="math inline">\(q_2=-8  \text{ nC}\)</span> está situada en el eje X a 4 m del origen y la carga <span class="math inline">\(q_0=+10  \text{ nC}\)</span> se encuentra en el punto <span class="math inline">\(\left(4,4\right)\text{ m}\)</span> tal y como aparece en la figura. Determina el vector de la fuerza resultante sobre la carga <span class="math inline">\(q_0\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="media/ejemplo3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="media/ejemplo3.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[F_{1,0}=K\frac{\left|q_{1}q_{0}\right|}{r_{1,0}^{2}}=\frac{\left(8.99\cdot10^{9}\text{ N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(50\cdot10^{-9}\text{ C}\right)\left(10\cdot10^{-9}\text{ C}\right)}{\left(4\sqrt{2}\text{ m}\right)^{2}}=1.4\cdot10^{-7}\text{ N}\]</span> <span class="math display">\[F_{1,0x}=F_{2,0y}=F_{1,0}\cos45^{\circ}=\frac{1.4\cdot10^{-7}\text{ N}}{\sqrt{2}}=9.89\cdot10^{-8}\text{ N}\]</span> <span class="math display">\[\vec{F}_{2,0}=K\frac{q_{2}q_{0}}{r_{2,0}^{2}}\hat{r}_{2,0}=\frac{\left(8.99\cdot10^{9}\text{ N}\cdot\text{m}^{2}/\text{C}^{2}\right)\left(-8\cdot10^{-9}\text{ C}\right)\left(10\cdot10^{-9}\text{ C}\right)}{\left(4\text{ m}\right)^{2}}\hat{\jmath}=\left(-4.49\cdot10^{-8}\text{ N}\right)\hat{\jmath}\]</span> <span class="math display">\[F_{x}^{neta}=F_{1,0x}+F_{2,0x}=\left(9.89\cdot10^{-8}\text{ N}\right)+0=9.89\cdot10^{-8}\text{ N}\]</span> <span class="math display">\[F_{y}^{neta}=F_{1,0y}+F_{2,0y}=\left(9.89\cdot10^{-8}\text{ N}\right)+\left(-4.49\cdot10^{-8}\text{ N}\right)=5.4\cdot10^{-8}\text{ N}\]</span> <span class="math display">\[F=\sqrt{F_{x}^{2}+F_{y}^{2}}=\sqrt{\left(9.89\cdot10^{-8}\text{ N}\right)^{2}+\left(5.4\cdot10^{-8}\text{ N}\right)^{2}}=1.13\cdot10^{-7}\text{ N}\]</span> <span class="math display">\[\tan\theta=\frac{F_{y}}{F_{x}}=\frac{5.4\cdot10^{-8}\text{ N}}{9.89\cdot10^{-8}\text{ N}}=0.546\longrightarrow\theta=28.63^{\circ}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="Campo-Electrostatico" class="level1">
+<h1>2. Campo Electrostático</h1>
+<p>¿Cuál es el mecanismo según el cuál una carga eléctrica puede ejercer una fuerza sobre otra a través del espacio vacío que existe entre ellas sin que haya contacto? La fuerza eléctrica ejercida por una carga sobre otra es un ejemplo de acción a distancia (al igual que la fuerza gravitatoria).</p>
+<p>Para explicar el fenómeno de acción a distancia se introduce el concepto de campo eléctrico. Toda carga eléctrica <span class="math inline">\(q\)</span> perturba el espacio donde está situada, creando un campo eléctrico <span class="math inline">\(\vec{E}\)</span> a su alrededor, y es este campo el que ejerce una fuerza sobre cualquier otra carga <span class="math inline">\(q'\)</span> situada en cualquier punto del espacio a una distancia <span class="math inline">\(r\)</span>. Es decir, la carga <span class="math inline">\(q'\)</span> experimenta una fuerza debida al campo <span class="math inline">\(\vec{E}\)</span> (creado por la carga <span class="math inline">\(q\)</span>) existente en su posición. <span class="math inline">\(\vec{E}\)</span> es un vector de modo que tiene: módulo, dirección y sentido, además de unidades [Newton/Culombio].</p>
+<div style="text-align:center;">
+<p><a href="media/representacion_campo_electrico.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="media/representacion_campo_electrico.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<p>Supongamos una carga eléctrica <span class="math inline">\(q\)</span> en un punto del espacio. Si colocamos una carga <span class="math inline">\(q'\)</span> en otro punto, ésta experimentará una fuerza eléctrica <span class="math inline">\(\vec{F}\)</span> dada por la Ley de Coulomb.</p>
+<blockquote class="blockquote">
+<p>Se define en cada punto del espacio un vector <span class="math inline">\(\vec{E}\)</span>, denominado <strong>intesidad de campo eléctrico</strong> o, simplemente, campo eléctrico, mediante la relación:</p>
+<p><span class="math display">\[\vec{E} = \frac{\vec{F}}{q'}\]</span></p>
+</blockquote>
+<p>Por tanto, el campo eléctrico debido a una carga puntual <span class="math inline">\(q\)</span> en un punto <span class="math inline">\(P\)</span> situado a una distancia <span class="math inline">\(r\)</span> de la carga es:</p>
+<p><span class="math display">\[\vec{E} = \pm  K  \frac{q}{r^{2}}  \hat{u_{r}}\]</span></p>
+<section id="Principio-Superposicion" class="level2">
+<h2 class="anchored" data-anchor-id="Principio-Superposicion">2.1. Principio de Superposición de Campos Eléctricos</h2>
+<p>En el espacio puede haber <strong>sistemas discretos</strong> de cargas, formados por cargas puntuales aisladas unas de otras, o <strong>sistemas continuos</strong> de cargas, donde toda la carga se encuentra distribuida en un volumen. El <strong>principio de superposición</strong> establece que la intensidad del campo eléctrico en un punto debido a un sistema <strong>discreto</strong> de cargas es igual a la <strong>suma</strong> de las intensidades de los campos debidos a cada una de ellas. Si el sistema es <strong>continuo</strong>, la suma ha de sustituirse por la <strong>integral</strong> extendida al volumen del sistema de los campos debidos a cada elemento de volumen que contiene la carga elemental <strong>dq</strong>.</p>
+<p><span class="math display">\[\vec{E}=\pm  K \sum_{i=1}^n \frac{q_{i}}{r_{i}^{2}}  \hat{u_{r_{i}}}\]</span> <span class="math display">\[d \vec{E} = \pm  K \frac{dq}{r^{2}}  \hat{u_{r}}\]</span> <span class="math display">\[\vec{E}=\int_{\tau}d\vec{E}=\pm  K \int_{\tau} \frac{dq}{r^{2}}  \hat{u_{r}}\]</span></p>
+<div style="text-align:center;">
+<p><a href="media/superposicion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="media/superposicion.png" class="img-fluid" style="width:55.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Calcula la intensidad del campo eléctrico creado en el vacío por una carga puntual de +24 nC a una distancia de 20 cm. Halle el módulo de la fuerza que actuaría sobre una carga puntual de +1 nC situada en el mismo punto.</p>
+<div style="text-align:center;">
+<p><a href="media/ejemplo4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="media/ejemplo4.png" class="img-fluid" style="width:25.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La intensidad del campo eléctrico creado en el punto <span class="math inline">\(P\)</span> por la carga de +24 nC será</p>
+<p><span class="math display">\[E=K\frac{q}{r^{2}}=9\cdot10^{9}\text{ N}\cdot \text{ m}^{2}/\text{ C}^{2}\frac{24\cdot10^{-9}\text{ C}}{\left(0.2\text{ m}\right)^{2}}=5400\text{ N/C}\]</span></p>
+<p>Por otra parte, la fuerza que actuaría sobre la carga <span class="math inline">\(q'\)</span> situada en el punto <span class="math inline">\(P\)</span> sería</p>
+<p><span class="math display">\[F=q'\cdot E=1\cdot10^{-9}\text{ C}\cdot5400\text{ N/C}=5.4\cdot10^{-6}\text{ N}\]</span></p>
+<p>Como <span class="math inline">\(q'\)</span> es positiva, <span class="math inline">\(\vec{F}\)</span> tiene el mismo sentido que <span class="math inline">\(\vec{E}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Dos cargas eléctricas puntuales <span class="math inline">\(q_1=+4  \mu\text{C}\)</span> y <span class="math inline">\(q_2=-4  \mu\text{C}\)</span> se encuentran situadas en los puntos <span class="math inline">\(\left(0,0\right)\text{ m}\)</span> y <span class="math inline">\(\left(3,0\right)\text{ m}\)</span>, respectivamente. Determine el campo eléctrico en el punto <span class="math inline">\(P\)</span><span class="math inline">\(\left(3,3\right)\text{ m}\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="media/ejemplo5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="media/ejemplo5.png" class="img-fluid" style="width:50.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[E_{1}=K\frac{q_{1}}{r_{1^{2}}}=9\cdot10^{9}\text{ N}\cdot\text{ m}/\text{ C}^{2}\frac{4\cdot10^{-6}\text{ C}}{\left(3\sqrt{2}\text{ m}\right)^{2}}=2000\text{ N/C}\]</span> <span class="math display">\[E_{1x}=E_{1}\cos45^{\circ}=1414.21\text{ N/C}\quad\quad E_{1y}=E_{1}\sin45^{\circ}=1414.21\text{ N/C}\]</span> <span class="math display">\[E_{2}=K\frac{q_{2}}{r_{2^{2}}}=9\cdot10^{9}\text{ N}\cdot\text{ m}/\text{ C}^{2}\frac{-4\cdot10^{-6}\text{ C}}{\left(3\text{ m}\right)^{2}}=-4000\text{ N/C}\]</span> <span class="math display">\[E_{2x}=0\quad\quad E_{2y}=-4000\text{ N/C}\]</span> <span class="math display">\[E_{x}=E_{1x}+E_{2x}=1414.21\text{ N/C}\quad\quad E_{y}=E_{1y}+E_{2y}=-2585.79\text{ N/C}\]</span></p>
+<p>El campo eléctrico es <span class="math inline">\(\vec{E}=\left(1414.21\hat{\imath}-2585.79\hat{\jmath}\right)\text{ N/C}\)</span>, y su módulo <span class="math inline">\(E=\sqrt{E_{x}^{2}+E_{y}^{2}}=2947.25\text{ N/C}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="Energia-Potencial" class="level1">
+<h1>3. Energía Potencial</h1>
+<p><strong>El campo eléctrico es “conservativo”</strong> porque (se comprueba experimentalmente) el trabajo <span class="math inline">\(W_{A\rightarrow B}\)</span> necesario para trasladar una carga eléctrica con velocidad constante (es decir, sin variar su energía cinética) entre dos puntos <strong>A</strong> y <strong>B</strong> de un campo eléctrico, es el mismo independientemente del camino por el que se lleve la carga desde <span class="math inline">\(A\)</span> hasta <span class="math inline">\(B\)</span>.</p>
+<div style="text-align:center;">
+<p><a href="media/campo_conservativo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="media/campo_conservativo.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<p>El trabajo <span class="math inline">\(W_{A\rightarrow B}\)</span> realizado por las fuerzas de campo se emplea en variar la energía potencial del sistema:</p>
+<p><span class="math display">\[W_{A\rightarrow B}=-\Delta E_{p}=E_{p}\left(A\right)-E_{p}\left(B\right)\]</span></p>
+<p>La energía potencial absoluta de una carga situada en un campo electrostático no puede calcularse sin tomar un origen de referencia. Si, por convenio, se toma el infinito como origen de referencia, y si se supone que <span class="math inline">\(A\)</span> está en el infinito (<span class="math inline">\(E_{p}\left(A\right)=0\)</span>), el trabajo para traer la carga desde el infinito hasta <span class="math inline">\(B\)</span> puede interpretarse como:</p>
+<p><span class="math display">\[W_{\infty\rightarrow B}^{\text{ext}}=\Delta E_{p}=E_{p}\left(B\right)-E_{p}\left(A\right)=E_{p}\left(B\right)-0=E_{p}\left(B\right)\]</span></p>
+<p>La energía potencial <span class="math inline">\(E_p\)</span> de una carga eléctrica en un punto del campo electrostático es igual al trabajo necesario para traer la carga desde el infinito hasta ese punto.</p>
+<p><span class="math display">\[E_{p}\left(B\right)=W_{\infty\rightarrow B}^{\text{ext}}=-\int_{\infty}^{B}\vec{F}\cdot d\vec{r}=-\int_{\infty}^{B}q'\vec{E}\cdot d\vec{r}=-K\int_{\infty}^{B}\frac{qq'}{r^2}dr=-Kqq'\left[-\frac{1}{r}\right]_{\infty}^{B}=K\frac{qq'}{r_{B}}\]</span></p>
+</section>
+<section id="Potencial-Electrostático" class="level1">
+<h1>4. Potencial Electrostático</h1>
+<p>La energía potencial en un punto depende de la carga <span class="math inline">\(q'\)</span> allí situada, por lo que se define una magnitud propia del campo en cada punto, el <strong>potencial electrostático V</strong>, que no es función de la carga colocada en él.</p>
+<p>El potencial electrostático de un punto <span class="math inline">\(B\)</span> del campo eléctrico es la energía potencial de la unidad de carga eléctrica positiva situada en ese punto <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[V_{B}=\frac{E_{p}\left(B\right)}{q'}=K\frac{q}{r_{B}}\]</span></p>
+<p>El potencial electrostático es una magnitud escalar, quedando definida por un número y una unidad. La unidad de potencial electrostático en el Sistema Internacional es el Voltio (<span class="math inline">\(\text{V}\)</span>). Un punto del campo tiene un potencial de <span class="math inline">\(1 \text{ V}\)</span> si una carga de <span class="math inline">\(+1 \text{ C}\)</span> situada en él tiene una energía potencial de <span class="math inline">\(1 \text{ J}\)</span>.</p>
+<p>Si el campo eléctrico está creado por un conjunto de cargas puntuales <span class="math inline">\(q_1\)</span>, <span class="math inline">\(q_2\)</span>, <span class="math inline">\(q_3\)</span> ... situadas a diferentes distancias <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span>, <span class="math inline">\(r_3\)</span> de un punto <span class="math inline">\(B\)</span> del campo, el potencial electrostático total creado en dicho punto es la suma algebraica de cada potencial (con su signo).</p>
+<p><span class="math display">\[V_{B}=V_{1}+V_{2}+V_{3}+\ldots=\sum V_{i}\]</span></p>
+<p>Si <span class="math inline">\(V_A\)</span> es el potencial electrostático del punto <span class="math inline">\(A\)</span>, y <span class="math inline">\(V_B\)</span> es el del punto <span class="math inline">\(B\)</span>, el trabajo para mover la carga <span class="math inline">\(q'\)</span> desde <span class="math inline">\(A\)</span> hasta <span class="math inline">\(B\)</span> en contra de las fuerzas del campo es:</p>
+<p><span class="math display">\[W_{A\rightarrow B}^{\text{ext}}=E_{p}\left(B\right)-E_{p}\left(A\right)=V_{B}  q'-V_{A}  q'=\left(V_{B}-V_{A}\right)q'\]</span> <span class="math display">\[\frac{W_{A\rightarrow B}^{\text{ext}}}{q'}=V_{B}-V_{A}\]</span></p>
+<blockquote class="blockquote">
+<p>La <strong>diferencia de potencial</strong> (ddp) entre dos puntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el trabajo realizado para transportar la unidad de carga eléctrica positiva desde <span class="math inline">\(A\)</span> hasta <span class="math inline">\(B\)</span>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Determina el potencial electrostático en el punto <span class="math inline">\(\left(4,4\right)\)</span> creado por tres cargas puntuales de <span class="math inline">\(+4  \mu\text{C}\)</span>, <span class="math inline">\(-2  \mu\text{C}\)</span> y <span class="math inline">\(+8  \mu\text{C}\)</span> situadas respectivamente en los puntos <span class="math inline">\(\left(4,0\right)\)</span>, <span class="math inline">\(\left(0,0\right)\)</span> y <span class="math inline">\(\left(0,4\right)\)</span> (las distancias están expresadas en metros).</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[V_{1}=K\frac{q_{1}}{r_{1}}=9\cdot10^{9}\text{ N}\cdot \text{m}^{2}/\text{C}^{2}\frac{4\cdot10^{-6}\text{ C}}{4  \text{ m}}=9000\text{ V}\]</span> <span class="math display">\[V_{2}=K\frac{q_{2}}{r_{2}}=9\cdot10^{9}\text{ N}\cdot \text{m}^{2}/\text{C}^{2}\frac{-2\cdot10^{-6}\text{ C}}{4\sqrt{2}  \text{ m}}=-3181.98\text{ V}\]</span> <span class="math display">\[V_{3}=K\frac{q_{3}}{r_{3}}=9\cdot10^{9}\text{ N}\cdot \text{m}^{2}/\text{C}^{2}\frac{8\cdot10^{-6}\text{ C}}{4  \text{ m}}=18000\text{ V}\]</span></p>
+<p>El potencial total en el punto <span class="math inline">\(\left(4,4\right)\)</span> es la suma de los potenciales debidos a cada carga:</p>
+<p><span class="math display">\[V=V_{1}+V_{2}+V_{3}=9000\text{ V}-3181.98\text{ V}+18000\text{ V}=23818.02\text{ V}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="Equipotenciales" class="level1">
+<h1>5. Líneas de Fuerza y Superficies Equipotenciales</h1>
+<p>Las <strong>líneas de fuerza del campo eléctrico</strong> son <strong>líneas imaginarias tangentes</strong> en cada punto al vector intensidad de campo eléctrico. Para representarlas gráficamente se usa como modelo la trayectoria que seguiría una unidad de carga eléctrica positiva ideal abandonada en reposo en un punto del campo eléctrico. Algunos ejemplos de líneas de fuerza creados por cargas puntuales y por un dipolo:</p>
+<div style="text-align:center;">
+<p><a href="media/lineas_fuerza.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="media/lineas_fuerza.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+<p>Las <strong>superficies equipotenciales</strong> son aquellos puntos del campo que tienen el mismo potencial electrostático. Así, son perpendiculares a las líneas de fuerza del campo. Ver ejemplo:</p>
+<div style="text-align:center;">
+<p><a href="media/equipotenciales.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="media/equipotenciales.png" class="img-fluid" style="width:35.0%"></a></p>
+</div>
+</section>
+<section id="Teorema-de-Gauss" class="level1">
+<h1>6. Teorema de Gauss</h1>
+<p>El <strong>flujo de campo eléctrico</strong>, <span class="math inline">\(\Phi\)</span>, es la magnitud matemática relacionada con el número de líneas de campo que atraviesa una superficie.</p>
+<p>En el caso de una superficie plana, como la de la <a href="#fig-flujo-electrico" class="quarto-xref">Figura&nbsp;1</a>, con un campo <span class="math inline">\(\vec{E}\)</span> que forma un ángulo <span class="math inline">\(\alpha\)</span> con el vector Superficie <span class="math inline">\(\vec{S}\)</span> (perpendicular al plano y de módulo igual a su área), el flujo de campo se calcula matemáticamente como el siguiente producto escalar:</p>
+<p><span class="math display">\[\Phi=\vec{E}\cdot\vec{S}=ES\cos\alpha\]</span></p>
+<p>En el caso más general en que tengamos una superficie cualquiera, no plana, el flujo elemental <span class="math inline">\(d\Phi\)</span> a través de un elemento de superficie <span class="math inline">\(dS\)</span> es: $d= d $ y el flujo total a través de toda la superficie:</p>
+<p><span class="math display">\[\Phi=\int_{S}d\Phi=\int_{S}\vec{E}\cdot d\vec{S}\]</span></p>
+<p>El <strong>Teorema de Gauss</strong> dice que el flujo neto a través de cualquier superficie cerrada <span class="math inline">\(S\)</span> es igual a <span class="math inline">\(4  \pi  K\)</span> veces la carga neta encerrada en la superficie:</p>
+<p><span class="math display">\[\Phi=\oint_{S}E_{n}dS=4\pi KQ_{\text{interior}}\]</span></p>
+<div style="text-align:center;">
+<div id="fig-flujo-electrico" class="quarto-float quarto-figure quarto-figure-center anchored" width="42%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flujo-electrico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="media/flujo_electrico.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figura&nbsp;1: "><img src="media/flujo_electrico.png" id="fig-flujo-electrico" class="img-fluid figure-img" style="width:42.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-flujo-electrico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+<p>El <strong>Teorema de Gauss</strong> puede utilizarse para determinar los campos eléctricos debidos a distribuciones de cargas de geometría sencilla. Por ejemplo, el campo eléctrico debido a una esfera hueca de radio <span class="math inline">\(R\)</span> cargada superficialmente con carga <span class="math inline">\(Q\)</span>, sería:</p>
+<ul>
+<li><p>Cero en el interior, pues no hay carga encerrada.</p></li>
+<li><p><span class="math inline">\(E=K \frac{Q}{R^2}\)</span>, justo en la superficie de la esfera.</p></li>
+<li><p><span class="math inline">\(E=K \frac{Q}{r^2}\)</span>, a una distancia <span class="math inline">\(r&gt;R\)</span> fuera de la esfera.</p></li>
+</ul>
+<div style="text-align:center;">
+<p><a href="media/esfera_hueca.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="media/esfera_hueca.png" class="img-fluid" style="width:45.0%"></a></p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Ejemplo:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Una esfera conductora hueca de radio <span class="math inline">\(R=20 \text{ cm}\)</span> situada en el vacío presenta una carga superficial de <span class="math inline">\(80\text{ nC}\)</span>. Calcula la intensidad del campo eléctrico en un punto que dista del centro de la esfera.</p>
+<ol type="a">
+<li><p><span class="math inline">\(5 \text{ cm}\)</span>.</p></li>
+<li><p><span class="math inline">\(20 \text{ cm}\)</span>.</p></li>
+<li><p><span class="math inline">\(40 \text{ cm}\)</span>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Solución:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Solución:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Para <span class="math inline">\(r=5 \text{ cm}\)</span> nos encontramos en el interior de la esfera, donde no hay carga, por lo que <span class="math inline">\(E=0\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(r=R=20 \text{ cm}\)</span> (superficie de la esfera):</p></li>
+</ol>
+<p><span class="math display">\[E=\frac{1}{4\pi\varepsilon_{0}}\frac{Q}{R^{2}}=9\cdot10^{9}\text{ N}\cdot \text{m}^{2}/\text{C}^{2}\frac{80\cdot10^{-9}\text{ C}}{\left(0.2\text{ m}\right)^{2}}=18000\text{ N/C}\]</span></p>
+<ol start="3" type="a">
+<li>De igual manera, para <span class="math inline">\(r=40 \text{ cm}\)</span> se tiene que</li>
+</ol>
+<p><span class="math display">\[E=\frac{1}{4\pi\varepsilon_{0}}\frac{Q}{r^{2}}=9\cdot10^{9}\text{ N}\cdot \text{m}^{2}/\text{C}^{2}\frac{80\cdot10^{-9}\text{ C}}{\left(0.4\text{ m}\right)^{2}}=4500\text{ N/C}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cursos-0-fc-ugr\.github\.io\/Fisica\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
