@@ -102,7 +102,7 @@ $$v(t) = \lim\limits_{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} = \frac{
 Por tanto, podemos decir que la velocidad instantánea en el tiempo $t$ es la derivada de la función posición, $x(t)$, respecto al tiempo. Este valor puede ser positivo, negativo o nulo; en un movimiento unidimensional, la velocidad instantánea puede ser positiva ($x$ creciente, negativa ($x$ decreciente) o nula (no hay movimiento). En un objeto que se mueve a velocidad constante, la velocidad instantánea coincide con la velocidad media, y tendremos que la gráfica de la posición en función del tiempo será
 
 :::{style="text-align:center;"}
-![](_media/fig-velocidad.png){width="35%"}
+![](media/fig-velocidad.png){width="35%"}
 :::
 
 La velocidad instantánea es un vector, por lo que a veces podemos hablar del *módulo* de la velocidad instantánea.
@@ -366,7 +366,7 @@ $$ \vec r = x  \hat{\imath} + y\hat{\jmath}$$
 Fijémonos ahora en la siguiente figura:
 
 :::{style="text-align:center;"}
-![](_media/Cine_10.png){width="50%"}
+![](media/Cine_10.png){width="50%"}
 :::
 
 Tenemos que
@@ -383,7 +383,7 @@ $${\vec{v_m}} = \frac{\Delta {\vec{r}}} {\Delta t}$$
 El módulo del vector desplazamiento es inferior a la distancia recorrida a menos que la partícula se mueva en línea recta. Sin embargo, si consideramos intervalos de tiempo cada vez más pequeños, el desplazamiento se aproxima a la distancia real recorrida por la partícula a lo largo de la curva.
 
 ::: {style="text-align:center;"}
-![](_media/Cine_11.png){width="50%"}
+![](media/Cine_11.png){width="50%"}
 :::
 
 Definimos el vector velocidad instantánea como el límite del vector velocidad media cuando $\Delta t$ tiende a cero:
@@ -393,7 +393,7 @@ $${\vec{v}} = \lim_{\Delta t \rightarrow 0} \frac{\Delta {\vec{r}}}{\Delta t} = 
 El módulo de ${\vec{v}}$, $|{\vec{v}}|$ es la velocidad escalar, y la dirección de ${\vec{v}}$ coincide con la tangente a la curva en la dirección del movimiento de la partícula:
 
 :::{style="text-align:center;"}
-![](_media/Cine_12.png){width="50%"}
+![](media/Cine_12.png){width="50%"}
 :::
 
 
@@ -613,7 +613,7 @@ Ejemplo de movimiento circular de aceleración angular constante. Un coche circu
 En esta sección, vamos a estudiar el tipo de movimiento que describe un proyectil cuando se lanza al aire y se mueve libremente. Despreciando la resistencia del aire, diremos que el proyectil está en caída libre. Supongamos que lanzamos una partícula con velocidad inicial $v_0$, formando un ángulo $\theta_0$ con el eje horizontal y sea $(x_0,y_0)$ el punto de lanzamiento, para $t_0=0$. Tendremos un movimiento en dos dimensiones, $x$ e $y$. Notaremos las magnitudes con un subídice $x$ o $y$, según se refieran a uno u otro movimiento.
 
 :::{style="text-align:center;"}
-![](_media/2245d-tiro-h8.png){width="50%"}
+![](media/2245d-tiro-h8.png){width="50%"}
 :::
 
 Por tanto, las componentes de la velocidad inicial serán:

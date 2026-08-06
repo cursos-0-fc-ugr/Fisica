@@ -31,7 +31,7 @@ Hay materiales que pueden convertirse en imanes temporalmente, al ponerlo en con
 La región de influencia de un imán se conoce como **CAMPO MAGNÉTICO**. En esta región se suelen representar unas líneas. En cada punto, estas líneas llevan la dirección que tendría una aguja imantada colocada en dicho punto. En la siguiente figura se muestran dos ejemplos: el campo magnético de un imán natural (izquierda) y el campo magnético terrestre (derecha).
 
 ::: {style="text-align:center;"}
-![Izquierda: campo magnético alrededor de un imán. Derecha: campo magnético en torno a la Tierra](_media/teoria-campo_magnetico.png){width="60%" #fig-campo_magnetico}
+![Izquierda: campo magnético alrededor de un imán. Derecha: campo magnético en torno a la Tierra](media/teoria-campo_magnetico.png){width="60%" #fig-campo_magnetico}
 :::
 
 Está claro que el campo magnético se deja sentir no sólo donde están las líneas, sino en toda la región del espacio. El número de líneas que se representan depende de la intensidad del campo, siendo mayor el número de líneas en las zonas donde el campo es mayor. Por ejemplo, en el dibujo anterior se señalan dos puntos (1) y (2). Obsérvese que la distancia entre las líneas de campo es mayor en el punto (2), lo cual implica que la intensidad del campo en ese punto es menor.
@@ -69,7 +69,7 @@ Veamos en esta situación cómo calcular la fuerza (y por tanto la aceleración)
 Si lo que deseamos conocer es la intensidad de la fuerza, entonces un modo sencillo de calcularlo es utilizar la forma más compacta del producto vectorial: $|\vec{a}\times\vec{b}|=|\vec{a}||\vec{b}|\sin[\theta]$. La dirección es la perpendicular al plano formado por ambos vectores. Para saber el sentido hay que seguir la regla del tornillo o de la mano derecha. Aquí usaremos la de la mano derecha, véanse algunos ejemplos en la @fig-producto_vectorial.
 
 ::: {style="text-align:center;"}
-![Ejemplos de producto vectorial](_media/teoria-producto_vectorial.png){width="60%" #fig-producto_vectorial}
+![Ejemplos de producto vectorial](media/teoria-producto_vectorial.png){width="60%" #fig-producto_vectorial}
 :::
 
 Para aplicar esta regla, debe ponerse la mano derecha con los dedos índice-anular en la dirección del primer vector de modo que al cerrar el puño estos dedos se dirijan hacia el segundo vector. En esta posición, el pulgar indica la dirección del producto vectorial.
@@ -77,7 +77,7 @@ Para aplicar esta regla, debe ponerse la mano derecha con los dedos índice-anul
 En nuestro caso, el vector $q\vec{v}$ juega el papel de $\vec{a}$ y el vector $\vec{B}$ el papel del vector $\vec{b}$. Esto quiere decir que si tenemos una carga positiva, el sentido de la fuerza es el mismo que el del producto $\vec{v}\times\vec{B}$, mientras que si la carga es negativa, entonces el sentido de la fuerza es el opuesto al producto $\vec{v}\times \vec{B}$, tal y como se muestra en la @fig-ley_Lorentz.
 
 ::: {style="text-align:center;"}
-![](_media/teoria-ley_Lorentz.png){width="60%" #fig-ley_Lorentz}
+![](media/teoria-ley_Lorentz.png){width="60%" #fig-ley_Lorentz}
 :::
 
 :::::: {.callout-tip title="Dirección de la fuerza magnética" collapse="true" icon="false"}
@@ -87,7 +87,7 @@ En nuestro caso, el vector $q\vec{v}$ juega el papel de $\vec{a}$ y el vector $\
 En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $3\ \mu\text{C}$ de valor.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-1.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-1.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
@@ -95,7 +95,7 @@ En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $3\ \
 $q>0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec{v}\times\vec{B}$
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-1-sol.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-1-sol.png){width="25%"}
 :::
 ::::
 :::::
@@ -105,7 +105,7 @@ $q>0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec
 En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $-3\ \mu\text{C}$ de valor.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-1neg.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-1neg.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
@@ -113,7 +113,7 @@ En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $-3\ 
 Ahora la carga es negativa, $q < 0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec{v}\times\vec{B}$ pero SENTIDO OPUESTO. En la siguiente figura el esquema es igual que el del ejercicio anterior, pero ahora la fuerza apunta en sentido opuesto.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-1neg-sol.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-1neg-sol.png){width="25%"}
 :::
 ::::
 :::::
@@ -122,7 +122,7 @@ Ahora la carga es negativa, $q < 0$, luego la fuerza lleva la misma dirección q
 En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $3\ \mu\text{C}$ de valor.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-2.png){width="20%"}
+![](media/ejercicios-ley_Lorentz-2.png){width="20%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
@@ -130,7 +130,7 @@ En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $3\ \
 El campo y la velocidad tienen sentidos opuestos, pero la misma dirección, y por tanto, la fuerza, que es el producto vectorial $\vec{F}=q\vec{v}\times\vec{B}$ es nulo.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-2-sol.png){width="15%"}
+![](media/ejercicios-ley_Lorentz-2-sol.png){width="15%"}
 :::
 ::::
 :::::
@@ -140,14 +140,14 @@ El campo y la velocidad tienen sentidos opuestos, pero la misma dirección, y po
 En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $3\ \mu\text{C}$ de valor.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-3.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-3.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
 $q>0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec{v}\times\vec{B}$.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-3-sol.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-3-sol.png){width="25%"}
 :::
 ::::
 :::::
@@ -156,14 +156,14 @@ $q>0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec
 En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $-3\ \mu\text{C}$ de valor.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-3neg.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-3neg.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
 Ahora la carga es negativa, $q < 0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec{v}\times\vec{B}$ pero SENTIDO OPUESTO. En la siguiente figura el esquema es igual que el del ejercicio anterior, pero ahora la fuerza apunta en sentido opuesto.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-3neg-sol.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-3neg-sol.png){width="25%"}
 :::
 ::::
 :::::
@@ -172,14 +172,14 @@ Ahora la carga es negativa, $q < 0$, luego la fuerza lleva la misma dirección q
 En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $3\ \mu\text{C}$ de valor.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-4.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-4.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
 $q>0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec{v}\times\vec{B}$.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-4-sol.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-4-sol.png){width="25%"}
 :::
 ::::
 :::::
@@ -188,14 +188,14 @@ $q>0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec
 En la siguiente figura, indicar el sentido de la fuerza sobre la carga, de $-3\ \mu\text{C}$ de valor.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-4neg.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-4neg.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
 Ahora la carga es negativa, $q < 0$, luego la fuerza lleva la misma dirección que el producto vectorial $\vec{v}\times\vec{B}$ pero SENTIDO OPUESTO. En la siguiente figura el esquema es igual que el del ejercicio anterior, pero ahora la fuerza apunta en sentido opuesto.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley_Lorentz-4neg-sol.png){width="25%"}
+![](media/ejercicios-ley_Lorentz-4neg-sol.png){width="25%"}
 :::
 ::::
 :::::
@@ -259,7 +259,7 @@ Profundicemos un poco más. En caso de que el vector velocidad forme un cierto �
 $$F_m=q|\vec{v}\times \vec{B}|=qvB\sin\theta$$
 
 ::: {style="text-align:center;"}
-![Descomposición del vector velocidad en componente paralela y perpendicular al campo magnético](_media/teoria-vparalelo.png){width="35%" #fig-vparalelo}
+![Descomposición del vector velocidad en componente paralela y perpendicular al campo magnético](media/teoria-vparalelo.png){width="35%" #fig-vparalelo}
 :::
 
 Tal y como se muestra en la @fig-vparalelo, $v\sin\theta$ es la componente de la velocidad perpendicular al campo, $v_\perp$, por lo que concluimos que:
@@ -283,7 +283,7 @@ El primer sumando es nulo y se llega a la misma conclusión. La fuerza magnétic
 En el caso de que uno de los vectores, la velocidad, el campo magnético, o ambos, tenga una sola componente cartesiana, el producto vectorial se puede hacer de un modo más rápido. Tal y como se muestra en el esquema de la @fig-triedro, si aplicamos la regla de la mano derecha a cualesquiera dos vectores unitarios perpendiculares, entonces obtenemos el vector restante. Es decir, si giramos en el sentido antihorario nos da un producto positivo, si lo hacemos en el sentido horario, negativo. En la figura de la izquierda se muestra un ejemplo, $\hat{\jmath}\times\hat{k}$, y en la figura de la derecha un resumen de todas las opciones.
 
 ::: {style="text-align:center;"}
-![](_media/teoria-triedro.png){width="45%" #fig-triedro}
+![](media/teoria-triedro.png){width="45%" #fig-triedro}
 :::
 
 Todas estas opciones se pueden resumir en las siguientes igualdades:
@@ -319,7 +319,7 @@ $$\vec{F}=-250\cdot 10^{-9}\hat{\jmath} \text{ N}$$
 b. Para representar los vectores, se puede usar el siguiente esquema:
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-magnetismo2-1-sol.png){width="30%"}
+![](media/ejercicios-magnetismo2-1-sol.png){width="30%"}
 :::
 c. $\vec{F}=m\vec{a}$, de donde $\vec{a}=\vec{F}/m=\frac{-250\cdot 10^{-9}\text{ N}}{6.6\cdot 10^{-23}\text{ kg}}\hat{\jmath}=-3.8\cdot 10^{18}\hat{\jmath} \text{ m/s}^2$
 
@@ -365,7 +365,7 @@ Hemos visto que la fuerza magnética es siempre perpendicular a la dirección de
 En ausencia de otras fuerzas, si una carga se mueve inicialmente perpendicularmente al campo magnético, realizará trayectorias circulares, tal y como se muestra esquemáticamente en la @fig-ciclotron.
 
 :::{style="text-align:center;"}
-![Trayectoria de una carga en un campo magnético](_media/teoria-ciclotron.png){width="35%" #fig-ciclotron}
+![Trayectoria de una carga en un campo magnético](media/teoria-ciclotron.png){width="35%" #fig-ciclotron}
 :::
 
 El radio $r$ de esta trayectoria se puede calcular también. El ángulo entre $\vec{v}$ y $\vec{B}$ es 90$^\circ$, por lo que $|\sin \vec{v}\vec{B}|=1$. Por lo tanto:
@@ -387,13 +387,13 @@ Esta propiedad se usa en la práctica, en los espectrómetros de masa (para medi
 Además, dado que la fuerza es también perpendicular al campo magnético, la carga se moverá siempre en el plano perpendicular. En efecto, $\vec{v}=\vec{v}_0+\vec{a}t$, y la aceleración, al igual que la fuerza, siempre está en la dirección perpendicular al campo. Por tanto, si inicialmente la velocidad no tiene ninguna componente en la dirección de $\vec{B}$, tampoco la tendrá después. Esto se ilustra en la @fig-aceleracion, en la que se muestra la velocidad de una carga en el seno de un campo magnético perpendicular, en dos instantes de tiempo $\vec{v}_0$ y $\vec{v}$ y de la aceleración que experimenta.
 
 ::: {style="text-align:center;"}
-![Esquema de la velocidad de una carga en el seno de un campo magnético perpendicular, en dos instantes de tiempo $\vec{v}_0$ y $\vec{v}$ y de la aceleración que experimenta.](_media/teoria-aceleracion.png){width="35%" #fig-aceleracion}
+![Esquema de la velocidad de una carga en el seno de un campo magnético perpendicular, en dos instantes de tiempo $\vec{v}_0$ y $\vec{v}$ y de la aceleración que experimenta.](media/teoria-aceleracion.png){width="35%" #fig-aceleracion}
 :::
 
 Puede darse el caso de que la carga no se mueva inicialmente perpendicularmente al campo magnético. Por ejemplo, sea el campo magnético en la dirección $x$: $\vec{B}=B\hat{\imath}$ (ver figura inferior). Si la carga tiene una velocidad $\vec{v}=v\hat{\jmath}$, entonces estaríamos en el ejemplo anterior, campo y velocidad de la carga perpendiculares. Si en cambio, la velocidad no es perpendicular, entonces podemos separarla en dos componentes, una paralela y una perpendicular. En este ejemplo, tendríamos $\vec{v}=\vec{v}_\perp+v_\parallel\hat{\imath}$ (@fig-trayectoria_helicoidal).
 
 ::: {style="text-align:center;"}
-![Distintos instantes de la trayectoria helicoidal de una carga que se mueve en una dirección no perpendicular al campo magnético](_media/teoria-trayectoria_helicoidal.png){width="70%" #fig-trayectoria_helicoidal}
+![Distintos instantes de la trayectoria helicoidal de una carga que se mueve en una dirección no perpendicular al campo magnético](media/teoria-trayectoria_helicoidal.png){width="70%" #fig-trayectoria_helicoidal}
 :::
 
 Como la aceleración es perpendicular al campo, sólo hace variar $\vec{v}_\perp$, mientras que la otra componente no varía (obsérvese que en todos los casos $\vec{v}_\parallel$ es la misma).
@@ -468,7 +468,7 @@ Una carga positiva con velocidad $\vec{v_i}=2\hat{\imath}$ m/s penetra en una re
 En el instante inicial está claro que no hay fuerza magnética, puesto que el campo magnético es paralelo a la velocidad. Pero sobre la carga actúa una fuerza eléctrica en la dirección del campo eléctrico. Como éste es perpendicular a la dirección inicial de la carga, ésta se desviará de esta trayectoria tal y como se indica en la figura de la izquierda,
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-fuerzaBE.png){width="50%"}
+![](media/ejercicios-fuerzaBE.png){width="50%"}
 :::
 
 $$\vec{F}_e=q\vec{E}=qE_j\hat{\jmath}$$ $$\vec{a}=\frac{qE}{m}\hat{\jmath}$$ $$\vec{v}=\vec{v}_i+\vec{a}t=v_i\hat{\imath}+\frac{qE}{m}\hat{\jmath}$$
@@ -493,7 +493,7 @@ $$\vec{F}=(-10\hat{\imath}-250\hat{\jmath})\text{ nN}$$
 En la siguiente figura se muestra una representación:
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-ley_LorentzG-2sol.png){width="35%"}
+![](media/ejercicios-ley_LorentzG-2sol.png){width="35%"}
 :::
 ::::
 :::::
@@ -527,7 +527,7 @@ Para calcular la fuerza magnética, recordemos que
 - Su módulo sólo depende de la parte de la velocidad perpendicular al campo. En nuestro caso $\vec{v}_\perp=v_y\hat{\jmath}+v_z\hat{k}$. En efecto, como se muestra en la figura, si $\theta$ es el ángulo que forma el campo y la velocidad, entonces $|\vec{F}_B|=qvB\sin\theta$ y tal y como se muestra en la figura $v\sin\theta=v_\perp=\sqrt{v_y^2+v_z^2}$.
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-ley-Lorentz-5.png){width="30%"}
+![](media/ejercicios-ley-Lorentz-5.png){width="30%"}
 :::
 
 
@@ -558,7 +558,7 @@ $$ r=\frac{mv_i}{qB}=\frac{10^{-10}\text{ kg }3\text{ m/s}}{5\cdot 10^{-6}\text{
 Teniendo en cuenta la componente $x$ de la velocidad, tendremos finalmente que la trayectoria será helicoidal: la carga avanza con un movimiento uniformemente acelerado en la dirección $X$ girando en torno a dicho eje:
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-trayectoria_helicoidal.png){width="35%"}
+![](media/ejercicios-trayectoria_helicoidal.png){width="35%"}
 :::
 ::::
 :::::
@@ -576,7 +576,7 @@ Sea un segmento de conductor de una cierta longitud $l$ por el que circula una c
 $$\fbox{$\vec{F}=I(\vec{l}\times\vec{B})$}$$
 
 ::: {style="text-align:center;"}
-![Esquema de la fuerza que actúa sobre un conductor rectilíneo](_media/teoria-conductor_rectilineo.png){width="40%" }
+![Esquema de la fuerza que actúa sobre un conductor rectilíneo](media/teoria-conductor_rectilineo.png){width="40%" }
 :::
 
 En definitiva:
@@ -592,7 +592,7 @@ En definitiva:
 Supongamos que tenemos una espira cuadrada perpendicular al campo magnético, tal y como se muestra en la figura A. Entonces sobre cada sección del conductor tendremos una dirección diferente de la fuerza, tal y como se indica en la figura [10](./electromagnetismo_teoría_files/teoria-espira.png).
 
 ::: {style="text-align:center;"}
-![Fuerza que actúa sobre una espira](_media/teoria-espira.png){width="60%"}
+![Fuerza que actúa sobre una espira](media/teoria-espira.png){width="60%"}
 :::
 
 En efecto, sobre los tramos laterales el campo magnético es el mismo y también su longitud. Pero el sentido de la corriente, y por tanto de la fuerza, es opuesto. Lo mismo ocurre con los tramos horizontales.
@@ -610,7 +610,7 @@ Si en cambio, la espira no es perpendicular (figura B), vemos que las fuerzas so
 El campo magnético creado por una corriente $I$ son circunferencias que rodean al conductor y que siguen la dirección indicada por la mano derecha, tal y como se muestra en la @fig-campo_creado_conductor.
 
 ::: {style="text-align:center;"}
-![Esquema de la regla de la mano derecha para conocer la dirección del campo magnético.](_media/teoria-campo_creado_conductor.png){width="25%" #fig-campo_creado_conductor}
+![Esquema de la regla de la mano derecha para conocer la dirección del campo magnético.](media/teoria-campo_creado_conductor.png){width="25%" #fig-campo_creado_conductor}
 :::
 
 **Módulo del campo**
@@ -641,7 +641,7 @@ Anteriormente vimos que una corriente rectilínea en presencia de un campo magn�
 - Corrientes antiparalelas (B en la @fig-fuerza_entre_corrientes). En la figura B izquierda se ha destacado en rojo el campo magnético $\vec{B}_2$ generado por la corriente 1 en un punto situado sobre un elemento de la corriente 2. Al ser la corriente 1 igual al ejemplo anterior, el campo es también el mismo. Sin embargo, dado que ahora la corriente 2 se dirige hacia abajo, la fuerza es opuesta al ejemplo anterior, en la dirección positiva del eje $OX$. Es de REPULSIÓN. Se destaca en la figura B derecha en naranja el campo magnético $\vec{B}_2$ generado por la corriente 2 en un punto sobre un elemento de la corriente 1. Teniendo de nuevo en cuenta la regla de la mano derecha, encontramos que la fuerza $\vec{F}_{2-1}$ sigue la dirección negativa del eje $OX$. Es de repulsión. De nuevo comprobamos que se cumple la ley de acción y reacción.
 
 ::: {style="text-align:center;"}
-![](_media/teoria-fuerza_entre_corrientes.png){width="65%" #fig-fuerza_entre_corrientes}
+![](media/teoria-fuerza_entre_corrientes.png){width="65%" #fig-fuerza_entre_corrientes}
 :::
 
 :::: {.callout-note title="Ejemplo" collapse="false" icon="false"}
@@ -668,7 +668,7 @@ Un solenoide es un conductor enrollado en torno a un cilindro (ver la @fig-solen
 $$\fbox{$B=N\frac{\mu I}{L}$}$$
 
 ::: {style="text-align:center;"}
-![Campo magnético en el eje de un solenoide.](_media/teoria-solenoide.png){width="50%" #fig-solenoide}
+![Campo magnético en el eje de un solenoide.](media/teoria-solenoide.png){width="50%" #fig-solenoide}
 :::
 
 :::: {.callout-note title="Ejemplo" collapse="false" icon="false"}
@@ -691,13 +691,13 @@ El flujo es una magnitud que puede calcularse para cualquier campo vectorial y c
 Previamente vamos a definir el vector superficie. Supongamos que trazamos una superficie imaginaria con un cierto área $S$. Esta superficie podría ser la sustentada por una línea de corriente como la de la espira de la @fig-vector_superficie. El vector superficie asociado es un vector de módulo $S$ y dirección PERPENDICULAR al plano de la superficie, tal y como se muestra en la misma figura:
 
 :::{style="text-align:center;"}
-![Superficie sustentada por una espira.](_media/teoria-vector_superficie.png){width="40%" #fig-vector_superficie}
+![Superficie sustentada por una espira.](media/teoria-vector_superficie.png){width="40%" #fig-vector_superficie}
 :::
 
 Naturalmente, si la superficie no es plana, entonces no se puede definir un único vector superficie para todo el área. En este caso, el vector superficie se define de manera local, para una porción de superficie infinitesimal $\vec{dS}$ (ver @fig-vector_superficie2). Al ser tan pequeña, la curvatura es despreciable y puede considerarse que la dirección es la misma en todos punto de este elemento de superficie.
 
 ::: {style="text-align:center;"}
-![Vector $d\vec{S}$ en una superficie curva.](_media/teoria-vector_superficie2.png){width="45%" #fig-vector_superficie2}
+![Vector $d\vec{S}$ en una superficie curva.](media/teoria-vector_superficie2.png){width="45%" #fig-vector_superficie2}
 :::
 
 Para el cálculo del flujo magnético partamos del caso más sencillo:
@@ -718,7 +718,7 @@ $$\Phi=BS_\perp=BS\cos\theta=\vec{B}\cdot\vec{S}$$
 es decir, el producto escalar entre campo magnético y vector superficie.
 
 ::: {style="text-align:center;"}
-![Esquema de la proyección de $\vec{S}$ sobre la dirección del campo magnético.](_media/teoria-flujo_superficie.png){width="45%" #fig-flujo_superficie}
+![Esquema de la proyección de $\vec{S}$ sobre la dirección del campo magnético.](media/teoria-flujo_superficie.png){width="45%" #fig-flujo_superficie}
 :::
 
 **Flujo magnético de un campo no uniforme a través de una superficie cualquiera**
@@ -756,7 +756,7 @@ Existen más posibilidades:
 - **Espira que gira.** Si la espira gira en el seno de un campo magnético, entonces también se produce una fuerza electromotriz. (Este es el fundamento de la dinamo de una bicicleta)
 
 ::: {style="text-align:center;"}
-![Espira con un lado corredero.](_media/teoria-espira_ladomovil.png){width="35%" #fig-espira_ladomovil}
+![Espira con un lado corredero.](media/teoria-espira_ladomovil.png){width="35%" #fig-espira_ladomovil}
 :::
 
 Vemos entonces que no es necesario que varíe el campo magnético. Basta con variar el área que sustenta la espira o el ángulo entre dicha superficie y el campo. Esto se resume en la ley de Faraday:
@@ -804,7 +804,7 @@ a. Dibuje el vector superficie.
 b. Calcule el flujo a través de la espira.
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-flujo1.png){width="20%"}
+![](media/ejercicios-flujo1.png){width="20%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
@@ -812,7 +812,7 @@ b. Calcule el flujo a través de la espira.
 a. \
 
 ::: {style="text-align:center;"}
-![](_media/ejercicios-flujo1-sol.png){width="20%"}
+![](media/ejercicios-flujo1-sol.png){width="20%"}
 :::
 b. Como la espira es plana y el campo uniforme:
 $$\Phi=\vec{B}\cdot\vec{S}=BS\cos (70^\circ)=0.0547\text{ Wb}$$
@@ -830,7 +830,7 @@ b. Calcular la fuerza electromotriz inducida sobre la espira.
 c. Dibujar la dirección que lleva la corriente por la espira.
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-espira_movil.png){width="25%"}
+![](media/ejercicios-espira_movil.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
@@ -844,7 +844,7 @@ donde $S=l_1l_2=1.2(1.2-0.2t)$ m$^2$, por lo tanto:
 $$\Phi=0.5\text{ T}\times 1.2(1.2-0.2t)\text{ m}^2=(0.72-0.12t)\text{ Wb}$$
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-espira_movil-sol.png){width="30%"}
+![](media/ejercicios-espira_movil-sol.png){width="30%"}
 :::
 
 b. Sigamos los pasos indicados en teoría. Definido el sentido del vector superficie, usamos la regla de la mano derecha para determinar el sentido positivo de la fuerza electromotriz, tal y como se muestra en la figura B.
@@ -862,7 +862,7 @@ c. Dado que se ha obtenido un valor positivo, esto quiere decir que el sentido e
 La misma espira del ejercicio anterior, pero ahora el lado móvil se mueve en dirección contraria a igual velocidad, de modo que $l_1=1.2\text{ m}$ y $l_2=vt$, siendo $v=0.2\text{ m/s}$. El campo es el mismo, $B=0.5\text{ T}$. ¿Cómo cambiaría el ejercicio anterior?
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-espira_movil2.png){width="25%"}
+![](media/ejercicios-espira_movil2.png){width="25%"}
 :::
 
 ::::{.callout title="Solución" collapse="true" icon="false"}
@@ -878,7 +878,7 @@ donde $S=l_1l_2=0.24t\text{ m}^2$, por lo tanto:
 $$\Phi=0.5\text{ T}\times 0.24t\text{ m}^2=0.12t\text{ Wb}$$
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-espira_movil2-sol.png){width="25%"}
+![](media/ejercicios-espira_movil2-sol.png){width="25%"}
 :::
 
 Definido el sentido del vector superficie, usamos la regla de la mano derecha para determinar el sentido positivo de la fuerza electromotriz, tal y como se muestra en la figura a la derecha en verde.
@@ -900,7 +900,7 @@ a. ¿Cuál es la fuerza electromotriz en cualquier instante de tiempo $t$?
 b. ¿Cuál es la máxima fuerza electromotriz?
 
 :::{style="text-align:center;"}
-![](_media/ejercicios-bobina_girando.png){width="20%"}
+![](media/ejercicios-bobina_girando.png){width="20%"}
 :::
 
 :::{.callout title="Solución" collapse="true" icon="false"}

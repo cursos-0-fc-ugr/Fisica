@@ -26,7 +26,7 @@ En el lenguaje cotidiano suele relacionarse el realizar un esfuerzo con hacer un
 Supongamos que sobre un cuerpo actúa una **fuerza constante** $\vec F$ provocando sobre él un desplazamiento $\vec s$ como se muestra en la @fig-fuerza-desplazamiento. 
 
 ::: {style="text-align:center;"}
-![Esquema de un cuerpo sometido a la acción de una fuerza constante $\vec F$ que genera su desplazamiento $\vec s$.](_media/image1.png){width=50% #fig-fuerza-desplazamiento} 
+![Esquema de un cuerpo sometido a la acción de una fuerza constante $\vec F$ que genera su desplazamiento $\vec s$.](media/image1.png){width=50% #fig-fuerza-desplazamiento} 
 :::
 
 El trabajo ($W$) realizado por la fuerza se calcula como el producto escalar de los vectores fuerza y desplazamiento:
@@ -52,7 +52,7 @@ Para poder calcular el trabajo mediante la @eq-trabajo, la fuerza tiene que ser 
 ::::: {.callout-note title="Ejercicio: Trabajo de fuerzas sobre un cuerpo" collapse="false" icon="false"}
 
 ::: {style="text-align:center;"}
-![](_media/image2.png){width="1.9913046806649168in" height="1.2521741032370954in"} 
+![](media/image2.png){width="1.9913046806649168in" height="1.2521741032370954in"} 
 :::
 Una caja de masa $m$ es arrastrada sobre una superficie rugosa horizontal una distancia s en el sentido positivo del eje $X$ mediante una fuerza constante $\vec{F}$ (ver Figura). Entre la caja y la superficie existe una fuerza de rozamiento dinámico que se opone al movimiento. Suponiendo que la caja es un cuerpo
 puntual:
@@ -66,7 +66,7 @@ B)  Encontrar la fuerza neta sobre la caja y calcular el trabajo realizado por l
 A)  Las fuerzas que actúan sobre la caja son: la fuerza peso o Fuerza gravitatoria ( $\vec{F_{g}}$ ), la normal ($\vec{N}$), la fuerza de rozamiento ($\vec{Fr}$) y la fuerza $\vec{F}$. El vector desplazamiento es $\vec{s}$:
 
 ::: {style="text-align:center;"}
-![](_media/image3.png){width="3.147222222222222in" height="2.2465277777777777in"}
+![](media/image3.png){width="3.147222222222222in" height="2.2465277777777777in"}
 :::
 
 - Trabajo realizado por la fuerza normal: como la fuerza normal forma $90^\circ$ con el vector desplazamiento, el trabajo es nulo.
@@ -169,7 +169,7 @@ Supongamos que una pelota se encuentra a una altura tal que su coordenada $y$ me
 sentido que ese desplazamiento) realizará un trabajo
 
 :::{style="text-align:center;"}
-![Esquema de variación de energía potencial gravitatoria](_media/image4.png){width="0.8274671916010499in" height="1.8614063867016624in" #fig-energia-potencial-gravitatoria}
+![Esquema de variación de energía potencial gravitatoria](media/image4.png){width="0.8274671916010499in" height="1.8614063867016624in" #fig-energia-potencial-gravitatoria}
 :::
 
 $W_{F_{g}}$ que se calcula como:
@@ -210,7 +210,7 @@ Esto es lo que caracteriza a las **fuerzas conservativas**, como la fuerza de la
 ## 5.2.  Energía potencial elástica
 
 :::{style="text-align:center;"}
-![](_media/image5.png){width="1.6236111111111111in" height="1.73125in" #fig-energia-potencial-elastica}
+![](media/image5.png){width="1.6236111111111111in" height="1.73125in" #fig-energia-potencial-elastica}
 :::
 
 Supongamos que tenemos un muelle en su estado natural, de manera que no está ni estirado ni comprimido. Situamos el origen del eje $X$ la posición de su extremo, como se indica en la @fig-energia-potencial-elastica. Si comprimimos el muelle hasta que hayamos desplazado su extremo una distancia $x$ desde el origen (ver @fig-energia-potencial-elastica), aparecerá sobre el muelle una fuerza recuperadora que actuará para que el muelle recupere su estado natural. Dicha fuerza es la fuerza elástica, $F_{el}$, cuya expresión se conoce como Ley de Hooke, que para este caso sería:

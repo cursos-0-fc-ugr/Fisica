@@ -35,19 +35,19 @@ En el lenguaje cotidiano, una *fuerza* es un *empujón* o *tirón*. Una definici
 1.  *Fuerza normal* $\vec{N}$: Cuando un objeto descansa o se empuja sobre una superficie, ésta ejerce una fuerza sobre el objeto, que es siempre perpendicular a la superficie.
 
     ::: {style="text-align:center;"}
-    ![](_media/Fuerza-Normal.png){width=60%}
+    ![](media/Fuerza-Normal.png){width=60%}
     :::
     
 2.  *Fuerza de fricción o rozamiento* $\vec f_r$: Además de la fuerza normal, una superficie puede ejercer una fuerza de fricción sobre un objeto que es paralela a la superficie y de sentido contrario al desplazamiento del objeto.
 
     ::: {style="text-align:center;"}
-    ![](_media/rozamiento2.png){width=50%}
+    ![](media/rozamiento2.png){width=50%}
     :::
     
 3.  *Fuerza de tensión* $\vec{T}$: Es la fuerza ejercida por una cuerda, cable, cadena, etc. Por ejemplo:
 
     ::: {style="text-align:center;"}
-    ![](_media/tension.png){width=30%}
+    ![](media/tension.png){width=30%}
     :::
 
 4.  *Fuerza Peso* $\vec{P}$: Es la
@@ -56,7 +56,7 @@ En el lenguaje cotidiano, una *fuerza* es un *empujón* o *tirón*. Una definici
     dirigido hacia el suelo.
 
     ::: {style="text-align:center;"}
-    ![](_media//peso.png){width=30%}
+    ![](media//peso.png){width=30%}
     :::
 
 Algunas magnitudes de fuerzas comunes son las siguientes:
@@ -74,7 +74,7 @@ Un instrumento común para medir fuerzas es el *dinamómetro*.
 Si dos fuerzas $\vec F_1$ y $\vec F_2$ actúan al mismo tiempo sobre un punto $O$ de un cuerpo, el efecto sobre el movimiento del cuerpo es igual al de una sola fuerza $\vec{R}$, que es igual a la suma vectorial de las fuerzas originales, $\vec{R}= \vec F_1 + \vec F_2$. En general, el efecto de cualquier número de fuerzas aplicadas a un punto de un cuerpo es el mismo que el que resultaría cuando una sola fuerza actuara sobre dicho punto, igual a la suma vectorial de todas ellas $\rightarrow$ *principio de superposición*.
 
 :::{style="text-align:center;"}
-![](_media//superposicion.png){width="35%"}
+![](media//superposicion.png){width="35%"}
 :::
 
 Este principio nos permite entonces sustituir un conjunto de fuerzas que
@@ -92,7 +92,7 @@ $$
 Calcula la fuerza resultante, teniendo en cuenta los valores de los módulos y los ángulos que forman con el eje $x$ para las tres fuerzas $\vec{F_1}$, $\vec{F_2}$ y $\vec{F_3}$ de @fig-ejemplo1.
 
 :::{style="text-align:center;"}
-![](_media/ejemplo-suma.png){width=30% #fig-ejemplo1}
+![](media/ejemplo-suma.png){width=30% #fig-ejemplo1}
 :::
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
 
@@ -208,7 +208,7 @@ El **peso aparente** es la fuerza que equilibra el peso (por ejemplo, en una bal
 La **fuerza normal** es la fuerza que cualquier superficie ejerce sobre un objeto, y que siempre es perpendicular a la misma, como se puede ver en la siguiente figura:
 
 :::{style="text-align:center;"}
-![](_media/normal1-2-3.png){width=60%}
+![](media/normal1-2-3.png){width=60%}
 :::
 
 La fuerza que ejerce un muelle sobre un objeto viene dada por la **ley de Hooke**. Suponiendo que el muelle esté situado en la dirección del eje $x$, la fuerza que ejerce el muelle sobre el objeto se expresa de la siguiente forma:
@@ -220,7 +220,7 @@ donde $k$ es la constante elástica del muelle, y mide la rigidez del mismo. $\D
 La figura siguiente muestra cómo es la fuerza elástica del muelle sobre un objeto, suponiendo que la posición de equilibrio es $x_0=0$.
 
 :::{style="text-align:center;"}
-![](_media/Hooke.png){width=30%}
+![](media/Hooke.png){width=30%}
 :::
 
 Un objeto en reposo bajo la acción de fuerzas que se equilibran se dice que está en *equilibrio estático*. Si un pequeño desplazamiento da lugar a una fuerza de restitución neta hacia la posición de equilibrio, se dice que el equilibrio es *estable*.
@@ -253,7 +253,7 @@ La magnitud de la fuerza que un trozo de cuerda ejerce sobre otro adyacente se d
 Una pelota $C$ que pesa $P=6\text{ N}$ se cuelga mediante dos cables ($A$ y $B$) que ejercen tensiones $T_A$ y $T_B$, respectivamente, tal como indica la @fig-e6. Determinar ambas tensiones, suponiendo que la pelota se encuentra en equilibrio estático.
 
 :::{style="text-align:center;"}
-![](_media/pelota.png){width=25% #fig-e6}
+![](media/pelota.png){width=25% #fig-e6}
 :::
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
@@ -292,7 +292,7 @@ Esto nos servirá para explicar con más detalle los diagramas de cuerpo libre p
 Una joven tira de un trineo con una fuerza de $100\text{ N}$, formando un ángulo de $30^{\circ}$ con la horizontal. La masa del conjunto trineo-cuerda-pasajero es de $75\text{ kg}$ y suponemos que podemos despreciar el rozamiento. Determinar la aceleración $\vec{a}$ que adquiere el sistema y la fuerza normal $\vec{N}=F_N \hat{\jmath}$ ejercida por la superficie sobre el trineo.
 
 :::{style="text-align:center;"}
-![](_media/trineo.png){width=25%}
+![](media/trineo.png){width=25%}
 :::
 
 ::: {.callout-note title="Solución:" collapse="true" icon="false"}
@@ -306,7 +306,7 @@ $$F_N + F \sin (30^{\circ}) = m g \ \rightarrow \ F_N = 685 \, \text{  N}$$
 Dejamos caer un paquete desde la parte superior de un plano inclinado. Sabemos que si la velocidad vertical con la que el paquete llega al final de la rampa es superior a $1.5\text{ m/s}$, la carga del paquete se daña. Calcular el máximo ángulo que puede tener el plano inclinado para que podamos tener una recepción segura de la carga, teniendo en cuenta que la altura del plano inclinado es $h=1.5\text{ m}$.
 
 :::{style="text-align:center;"}
-![](_media/rampa.png){width=30%}
+![](media/rampa.png){width=30%}
 :::
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
@@ -336,7 +336,7 @@ En general, podemos enunciar la tercera ley de Newton de la siguiente manera:
 Es común referirse a estas fuerzas como par acción-reacción. Ambas fuerzas actúan siempre *simultáneamente y sobre objetos diferentes*. En la figura siguiente se muestra esta propiedad, en el caso de dos masas $A$ y $B$.
 
 ::: {style="text-align:center;"}
-![](_media/accionyreaccion.png){width=50%}
+![](media/accionyreaccion.png){width=50%}
 :::
 
 ## 1.10. Problemas con dos o más objetos {#Problemas-con-dos-o-más-objetos}
@@ -355,7 +355,7 @@ Como regla general, para aplicar las leyes de Newton a dos o más cuerpos, deber
 Dos alpinistas unidos por una cuerda, quedan en la posición que se describe en la figura. Determinar la aceleración que adquiriría el conjunto formado por ambos.
 
 ::: {style="text-align:center;"}
-![](_media/problema_mano.png){width=50%}
+![](media/problema_mano.png){width=50%}
 :::
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
@@ -388,7 +388,7 @@ Cuando el cuerpo se mueve lo puede hacer de dos formas posibles: se traslada o g
 :::
 
 ::: {.column width="25%"}
-![](_media/image1.png){width=100%}
+![](media/image1.png){width=100%}
 :::
 
 :::
@@ -452,13 +452,13 @@ En el cuerpo humano, el centro de gravedad cambia su ubicación según la posici
 Calcula las fuerzas que deben soportar cada una de las patas de la mesa de la figura, si su peso es de 150 N y colocamos un cuerpo de 50 N en el punto indicado en la @fig-e7.
 
 :::{style="text-align:center;"}
-![](_media/image15.png){width="2.4875in" height="1.35in" #fig-e7}
+![](media/image15.png){width="2.4875in" height="1.35in" #fig-e7}
 :::
 
 ::::{.callout-note title="Solución:" collapse="true" icon="false"}
 
 :::{style="text-align:center;"}
-![](_media/image16.png){width="2.81875in" height="2.397222222222222in"}
+![](media/image16.png){width="2.81875in" height="2.397222222222222in"}
 :::
 El tablero de la mesa debe estar en equilibrio. Suponemos que la mesa tiene dos patas.
 

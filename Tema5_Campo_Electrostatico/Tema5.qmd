@@ -71,13 +71,13 @@ Tres cargas se encuentran alineadas sobre el eje $X$. La carga $q_1$ están en e
 a.  Determine la fuerza resultante sobre $q_0$ que ejercen las demás cargas si $q_1=+50  \text{ nC}$, $q_2=-5  \text{ nC}$ y $3.5\text{ m}$.
 
 ::: {style="text-align:center;"}
-![](_media/ejemplo2-1.png){width="35%"}
+![](media/ejemplo2-1.png){width="35%"}
 :::
 
 b.  Halle la fuerza neta sobre $q_0$ debida a las demás cargas en el intervalo $2  \text{ m} < x < \infty$.
 
 ::: {style="text-align:center;"}
-![](_media/ejemplo2-2.png){width="35%"}
+![](media/ejemplo2-2.png){width="35%"}
 :::
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
@@ -108,7 +108,7 @@ La carga $q_1=+50  \text{ nC}$ está en el origen, la carga $q_2=-8  \text{ nC}$
 
 
 :::{style="text-align:center;"}
-![](_media/ejemplo3.png){width="35%"}
+![](media/ejemplo3.png){width="35%"}
 :::
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
@@ -129,7 +129,7 @@ $$\tan\theta=\frac{F_{y}}{F_{x}}=\frac{5.4\cdot10^{-8}\text{ N}}{9.89\cdot10^{-8
 Para explicar el fenómeno de acción a distancia se introduce el concepto de campo eléctrico. Toda carga eléctrica $q$ perturba el espacio donde está situada, creando un campo eléctrico $\vec{E}$ a su alrededor, y es este campo el que ejerce una fuerza sobre cualquier otra carga $q'$ situada en cualquier punto del espacio a una distancia $r$. Es decir, la carga $q'$ experimenta una fuerza debida al campo $\vec{E}$ (creado por la carga $q$) existente en su posición. $\vec{E}$ es un vector de modo que tiene: módulo, dirección y sentido, además de unidades \[Newton/Culombio\].
 
 :::{style="text-align:center;"}
-![](_media/representacion_campo_electrico.png){width="25%"}
+![](media/representacion_campo_electrico.png){width="25%"}
 :::
 
 Supongamos una carga eléctrica $q$ en un punto del espacio. Si colocamos una carga $q'$ en otro punto, ésta experimentará una fuerza eléctrica $\vec{F}$ dada por la Ley de Coulomb.
@@ -149,14 +149,14 @@ En el espacio puede haber **sistemas discretos** de cargas, formados por cargas 
 $$\vec{E}=\pm  K \sum_{i=1}^n \frac{q_{i}}{r_{i}^{2}}  \hat{u_{r_{i}}}$$ $$d \vec{E} = \pm  K \frac{dq}{r^{2}}  \hat{u_{r}}$$ $$\vec{E}=\int_{\tau}d\vec{E}=\pm  K \int_{\tau} \frac{dq}{r^{2}}  \hat{u_{r}}$$
 
 :::{style="text-align:center;"}
-![](_media/superposicion.png){width="55%"}
+![](media/superposicion.png){width="55%"}
 :::
 
 ::::{.callout-note title="Ejemplo:" collapse="false" icon="false"}
 Calcula la intensidad del campo eléctrico creado en el vacío por una carga puntual de +24 nC a una distancia de 20 cm. Halle el módulo de la fuerza que actuaría sobre una carga puntual de +1 nC situada en el mismo punto.
 
 :::{style="text-align:center;"}
-![](_media/ejemplo4.png){width="25%"}
+![](media/ejemplo4.png){width="25%"}
 :::
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
@@ -177,7 +177,7 @@ Como $q'$ es positiva, $\vec{F}$ tiene el mismo sentido que $\vec{E}$.
 Dos cargas eléctricas puntuales $q_1=+4  \mu\text{C}$ y $q_2=-4  \mu\text{C}$ se encuentran situadas en los puntos $\left(0,0\right)\text{ m}$ y $\left(3,0\right)\text{ m}$, respectivamente. Determine el campo eléctrico en el punto $P$$\left(3,3\right)\text{ m}$.
 
 :::{style="text-align:center;"}
-![](_media/ejemplo5.png){width="50%"}
+![](media/ejemplo5.png){width="50%"}
 :::
 
 :::{.callout-note title="Solución:" collapse="true" icon="false"}
@@ -195,7 +195,7 @@ El campo eléctrico es $\vec{E}=\left(1414.21\hat{\imath}-2585.79\hat{\jmath}\ri
 **El campo eléctrico es "conservativo"** porque (se comprueba experimentalmente) el trabajo $W_{A\rightarrow B}$ necesario para trasladar una carga eléctrica con velocidad constante (es decir, sin variar su energía cinética) entre dos puntos **A** y **B** de un campo eléctrico, es el mismo independientemente del camino por el que se lleve la carga desde $A$ hasta $B$.
 
 :::{style="text-align:center;"}
-![](_media/campo_conservativo.png){width="35%"}
+![](media/campo_conservativo.png){width="35%"}
 :::
 
 El trabajo $W_{A\rightarrow B}$ realizado por las fuerzas de campo se emplea en variar la energía potencial del sistema:
@@ -249,13 +249,13 @@ $$V=V_{1}+V_{2}+V_{3}=9000\text{ V}-3181.98\text{ V}+18000\text{ V}=23818.02\tex
 Las **líneas de fuerza del campo eléctrico** son **líneas imaginarias tangentes** en cada punto al vector intensidad de campo eléctrico. Para representarlas gráficamente se usa como modelo la trayectoria que seguiría una unidad de carga eléctrica positiva ideal abandonada en reposo en un punto del campo eléctrico. Algunos ejemplos de líneas de fuerza creados por cargas puntuales y por un dipolo:
 
 :::{style="text-align:center;"}
-![](_media/lineas_fuerza.png){width="35%"}
+![](media/lineas_fuerza.png){width="35%"}
 :::
 
 Las **superficies equipotenciales** son aquellos puntos del campo que tienen el mismo potencial electrostático. Así, son perpendiculares a las líneas de fuerza del campo. Ver ejemplo:
 
 :::{style="text-align:center;"}
-![](_media/equipotenciales.png){width="35%"}
+![](media/equipotenciales.png){width="35%"}
 :::
 
 # 6. Teorema de Gauss {#Teorema-de-Gauss}
@@ -275,7 +275,7 @@ El **Teorema de Gauss** dice que el flujo neto a través de cualquier superficie
 $$\Phi=\oint_{S}E_{n}dS=4\pi KQ_{\text{interior}}$$
 
 :::{style="text-align:center;"}
-![](_media/flujo_electrico.png){width="42%" #fig-flujo-electrico}
+![](media/flujo_electrico.png){width="42%" #fig-flujo-electrico}
 :::
 
 El **Teorema de Gauss** puede utilizarse para determinar los campos eléctricos debidos a distribuciones de cargas de geometría sencilla. Por ejemplo, el campo eléctrico debido a una esfera hueca de radio $R$ cargada superficialmente con carga $Q$, sería:
@@ -287,7 +287,7 @@ El **Teorema de Gauss** puede utilizarse para determinar los campos eléctricos 
 - $E=K \frac{Q}{r^2}$, a una distancia $r>R$ fuera de la esfera.
 
 :::{style="text-align:center;"}
-![](_media/esfera_hueca.png){width="45%"}
+![](media/esfera_hueca.png){width="45%"}
 :::
 
 ::::{.callout-note title="Ejemplo:" collapse="false" icon="false"}

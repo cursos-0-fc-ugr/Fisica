@@ -35,7 +35,7 @@ $$\vec{E}(x, t) = \vec{E}_0 \cos(k x- \omega t)\ \text{ y }\ \vec{B}(x, t) = \ve
 con $\vec E_0$ y $\vec B_0$ los vectores amplitud de los campos, perpendiculares entre sí y perpendiculares a la dirección de propagación, $k$ el número de onda y $\omega$ la frecuencia angular.
 
 ::: {style="text-align:center;"}
-![Onda Electromagnética, donde $\vec S$ es la dirección de propagación.<br><small>Modificado a partir de un original de SuperManu (vía Wikimedia Commons), bajo licencia CC BY-SA 3.0.</small>](_media/Onda_Electromagnetica.png){width=50%}
+![Onda Electromagnética, donde $\vec S$ es la dirección de propagación.<br><small>Modificado a partir de un original de SuperManu (vía Wikimedia Commons), bajo licencia CC BY-SA 3.0.</small>](media/Onda_Electromagnetica.png){width=50%}
 :::
 
 Su velocidad en el vacío es una constante universal, $c=\frac{1}{\sqrt{\mu_0 \epsilon_0}} \approx 3 \cdot 10^8 \text{ m/s}$. 
@@ -83,7 +83,7 @@ Las ondas electromagnéticas pueden tener una amplia gama de frecuencias y longi
 El **espectro electromagnético** está formado por todas las posibles ondas electromagnéticas, en función de la frecuencia o de la longitud de onda, van desde las ondas de radio de baja frecuencia y gran longitud de onda, aproximadamente de kilómetros, hasta las ondas gamma de alta frecuencia y longitud de onda del orden de picómetros. La luz visible es solo una pequeña fracción de este espectro, comprendida aproximadamente entre los 380 nm (violeta) y los 780 nm (rojo).
 
 ::: {style="text-align:center;"}
-![Espectro Electromagnético. <br><small>Modificado a partir de un original de Ignacio Icke (vía Wikimedia Commons), basado en NASA/Inductiveload.</small>](_media/Espectro_Electromagnetico.png){width=100%}
+![Espectro Electromagnético. <br><small>Modificado a partir de un original de Ignacio Icke (vía Wikimedia Commons), basado en NASA/Inductiveload.</small>](media/Espectro_Electromagnetico.png){width=100%}
 :::
 
 ### 2.3. Fenómenos Ondulatorios Clave
@@ -104,7 +104,7 @@ $$n_1 \text{sen}(\theta_i) = n_2 \text{sen}(\theta_t)$$
 donde $n_1$ y $n_2$ son los índices de refracción de los medios, y $\theta_i$ y $\theta_t$ son los ángulos de incidencia y refracción (o transmisión), respectivamente.
 
 ::: {style="text-align:center;"}
-![Reflexión y Refracción de una onda en una superficie](_media/Reflexion_Refraccion.png){width=50%}
+![Reflexión y Refracción de una onda en una superficie](media/Reflexion_Refraccion.png){width=50%}
 :::
 
 :::: {.callout-tip title="Caso: $n_1<n_2$" collapse="false" icon="false"}
@@ -115,7 +115,7 @@ $$n_1\, \text{sen}(\theta_i) = n_2\, \text{sen}(\theta_t)\ \Rightarrow\ \text{se
 Como $n_1 < n_2$, entonces $\text{sen}(\theta_t) < \text{sen}(\theta_i)$, lo que implica que $\theta_t < \theta_i$.
 
 :::{style="text-align:center;"}
-![$n_1<n_2$](_media/Refraccion_Caso1.png){width=40%}
+![$n_1<n_2$](media/Refraccion_Caso1.png){width=40%}
 :::
 
 ::: {.callout-note title="Ejemplo: Onda incidiendo con un ángulo de 30° desde el aire hacia el agua" collapse="true" icon="false"}
@@ -135,7 +135,7 @@ $$n_1\, \text{sen}(\theta_i) = n_2\, \text{sen}(\theta_t)\ \Rightarrow\ \text{se
 Como $n_1 > n_2$, entonces $\text{sen}(\theta_t) > \text{sen}(\theta_i)$, lo que implica que $\theta_t > \theta_i$.
 
 :::{style="text-align:center;"}
-![$n_1>n_2$](_media/Refraccion_Caso2.png){width=40%}
+![$n_1>n_2$](media/Refraccion_Caso2.png){width=40%}
 :::
 
 ::: {.callout-note title="Ejemplo: Onda incidiendo con un ángulo de 30° desde el agua hacia el aire" collapse="true" icon="false"}
@@ -156,12 +156,12 @@ $$\theta_l = \text{sen}^{-1}\left(\frac{n_2}{n_1}\right)$$
 :::: {style="display:flex; justify-content:center; gap:5%;align-items:flex-end;"}
 
 ::: {style="text-align:center;"}
-![Ángulo límite](_media/Reflexion_Total.png){width=100%}
+![Ángulo límite](media/Reflexion_Total.png){width=100%}
 
 :::
 
 ::: {style="text-align:center;"}
-![Reflexión total interna](_media/Reflexion_Total2.png){width=100%}
+![Reflexión total interna](media/Reflexion_Total2.png){width=100%}
 :::
 
 ::::
@@ -181,7 +181,7 @@ Está compuesta por un núcleo de vidrio o plástico con un índice de refracci�
 > Importante: el ángulo de incidencia en la fibra óptica tiene que ser mayor que el ángulo límite
 
 :::{style="text-align:center;"}
-![Esquema de una fibra óptica <small>[IA: Gemini]</small>.](_media/Fibra_optica.png){width=50%}
+![Esquema de una fibra óptica <small>[IA: Gemini]</small>.](media/Fibra_optica.png){width=50%}
 :::
 
 ::::
@@ -217,21 +217,21 @@ Para comprender por qué modelamos la luz como rayos, podemos fijarnos en fenóm
     Cuando un objeto opaco se interpone ante un foco de luz extenso (como el Sol), la luz viaja en línea recta desde cada punto del emisor. Esto genera una zona de oscuridad total donde no llega ningún rayo (**sombra**) y una zona circundante donde solo llegan rayos de algunas partes del foco (**penumbra**). Este modelo geométrico es el que explica con precisión los eclipses de Sol y Luna.
    
 ::: {style="text-align:center;"}
-![Esquema de eclipses <small>[IA: Gemini]</small>.](_media/Eclipse.png){width=50%}
+![Esquema de eclipses <small>[IA: Gemini]</small>.](media/Eclipse.png){width=50%}
 :::
 
 2.  **La Cámara Oscura:**
     Documentada desde el siglo XI por Al-Hazen, consiste en una caja cerrada con un pequeño orificio en una cara. Debido a que la luz viaja en línea recta y el orificio es pequeño, cada punto de un objeto exterior solo puede enviar un rayo (o un haz muy estrecho) a través del agujero, proyectando una imagen invertida en la pared opuesta. Es el fundamento geométrico de la fotografía.
 
 ::: {style="text-align:center;"}
-![Esquema de la cámara oscura <small>[IA: Gemini]</small>.](_media/Camara_Oscura.png){width=50%}
+![Esquema de la cámara oscura <small>[IA: Gemini]</small>.](media/Camara_Oscura.png){width=50%}
 :::
 
 3.  **Efectos Ópticos de la Refracción:**
     Seguramente has observado que un lápiz parece "doblarse" al introducirlo en un vaso con agua. Este fenómeno se explica por la refracción, que es el cambio de dirección de los rayos al pasar de un medio a otro con diferente índice de refracción. La luz viaja en línea recta dentro de cada medio, pero al cambiar de medio, su dirección se modifica según la ley de Snell, lo que da lugar a la ilusión óptica.
 
 ::: {style="text-align:center;"}
-![Esquema de un lápiz en un vaso con agua.](_media/lapiz_vaso.png){width=30%}
+![Esquema de un lápiz en un vaso con agua.](media/lapiz_vaso.png){width=30%}
 :::
 
 ### 3.4. Leyes Fundamentales de la Óptica Geométrica
@@ -269,12 +269,12 @@ En óptica, un **objeto** es cualquier fuente de luz o cualquier cosa que reflej
 :::: {style="display:flex; justify-content:center; gap:5%;align-items:flex-center;"}
 
 ::: {style="text-align:center;"}
-![Imagen real](_media/Objeto_Imagen1.png){width=100%}
+![Imagen real](media/Objeto_Imagen1.png){width=100%}
 
 :::
 
 ::: {style="text-align:center;"}
-![Imagen virtual](_media/Objeto_Imagen2.png){width=100%}
+![Imagen virtual](media/Objeto_Imagen2.png){width=100%}
 :::
 
 ::::
@@ -284,7 +284,7 @@ Las imágenes también pueden ser **derechas** o **invertidas**, dependiendo de 
 Por último, el tamaño de la imagen puede ser mayor, menor o igual al del objeto, lo que se describe mediante el **aumento lateral**, que es la razón de la altura de la imagen a la altura del objeto. Si el aumento lateral es mayor que 1, la imagen es mayor que el objeto, si es menor que 1, la imagen es menor que el objeto, y si es igual a 1, la imagen tiene el mismo tamaño que el objeto. Si el aumento lateral es positivo, la imagen es derecha, y si es negativo, la imagen es invertida.
 
 ::: {style="text-align:center;"}
-![Esquema de una imagen real, menor e invertida.](_media/arbol_SO.png){width=80%}
+![Esquema de una imagen real, menor e invertida.](media/arbol_SO.png){width=80%}
 :::
 
 ### 4.3. Focos objetos e imagen
@@ -295,12 +295,12 @@ El **foco imagen ($F'$)** es el punto imagen sobre el eje óptico donde los rayo
 :::: {style="display:flex; justify-content:center; gap:5%;align-items:flex-center;"}
 
 ::: {style="text-align:center;"}
-![Foco objeto real](_media/Foco_Objeto.png){width=100%}
+![Foco objeto real](media/Foco_Objeto.png){width=100%}
 
 :::
 
 ::: {style="text-align:center;"}
-![Foco imagen real](_media/Foco_Imagen.png){width=100%}
+![Foco imagen real](media/Foco_Imagen.png){width=100%}
 :::
 
 ::::
@@ -311,7 +311,7 @@ En óptica, es fundamental medir las distancias y alturas de los objetos e imág
 La **distancia focal objeto ($f$)** es la distancia desde el vértice al foco objeto ($F$), mientras que la **distancia focal imagen ($f'$)** es la distancia desde el vértice al foco imagen ($F'$). 
 
 ::: {style="text-align:center;"}
-![Distancias y tamaños, objeto e imagen.](_media/arbol_lente.png){width=80%  fig-alt="Distancias y tamaños, objeto e imagen." .lightbox #fig-distancias}
+![Distancias y tamaños, objeto e imagen.](media/arbol_lente.png){width=80%  fig-alt="Distancias y tamaños, objeto e imagen." .lightbox #fig-distancias}
 :::
 
 ### 4.5. Trazado de rayos
@@ -325,7 +325,7 @@ Estos rayos son fundamentales para determinar la posición, tamaño y orientaci�
 
 
 ::: {style="text-align:center;"}
-![Trazado de rayos. Rayo paralelo (azul), focal (verde) y central (rojo).](_media/marcha_rayos.png){width=80% .lightbox #fig-lente-delgada}
+![Trazado de rayos. Rayo paralelo (azul), focal (verde) y central (rojo).](media/marcha_rayos.png){width=80% .lightbox #fig-lente-delgada}
 :::
 
 
@@ -349,14 +349,14 @@ Las lentes son el componente principal de instrumentos como el microscopio o el 
 *   **Lentes convergentes:** Son más anchas en el centro que en los bordes, y esta forma produce que los rayos paralelos al eje óptico que inciden sobre la lente salgan de ella convergiendo hacia el foco imagen, que por tanto será real. Las lentes convergentes se representan con una una doble flecha que apunta hacia afuera, indicando que la luz se refracta hacia el eje óptico.
 
 ::: {style="text-align:center;"}
-![Lentes convergentes.](_media/Lentes_Convergentes.png){width=80%}
+![Lentes convergentes.](media/Lentes_Convergentes.png){width=80%}
 :::
 Las lentes convergentes se utilizan en una amplia variedad de aplicaciones, como en gafas para corregir la hipermetropía, en cámaras fotográficas para enfocar la luz y en instrumentos ópticos como microscopios y telescopios para ampliar la imagen de objetos lejanos o pequeños.
 
 *   **Lentes divergentes:** Son más anchas en los bordes que en el centro, lo que produce los rayos paralelos al eje óptico que entren en la lente salgan divergiendo, por lo que el foco imagen será virtual. Las lentes divergentes se representan con una doble flecha que apunta hacia adentro, indicando que la luz se refracta alejándose del eje óptico.
 
 ::: {style="text-align:center;"}
-![Lentes divergentes.](_media/Lentes_Divergentes.png){width=80%}
+![Lentes divergentes.](media/Lentes_Divergentes.png){width=80%}
 :::
 
 Las lentes divergentes se utilizan principalmente para corregir la miopía, ya que ayudan a divergir los rayos de luz antes de que entren en el ojo, permitiendo que la imagen se forme correctamente en la retina. También se emplean en algunos tipos de cámaras y dispositivos ópticos para controlar la dispersión de la luz.
@@ -364,12 +364,12 @@ Las lentes divergentes se utilizan principalmente para corregir la miopía, ya q
 :::: {style="display:flex; justify-content:center; gap:5%;align-items:flex-center;"}
 
 ::: {style="text-align:center;"}
-![Foco imagen de lente convergente](_media/Lente_convergente_foco.png){width=100%}
+![Foco imagen de lente convergente](media/Lente_convergente_foco.png){width=100%}
 
 :::
 
 ::: {style="text-align:center;"}
-![Foco imagen de lente divergente](_media/Lente_divergente_foco.png){width=100%}
+![Foco imagen de lente divergente](media/Lente_divergente_foco.png){width=100%}
 :::
 
 ::::
@@ -427,14 +427,14 @@ La marcha de rayos descrita anteriomente y mostrada en @fig-lente-delgada permit
 
 :::: {.callout-tip title="Marcha de rayos de una lente convergente" collapse="false" icon="false"} 
 ::: {style="text-align:center;"}
-![Marcha de rayos de una lente convergente](_media/Marcha_lente_a_7.png){width=80%}
+![Marcha de rayos de una lente convergente](media/Marcha_lente_a_7.png){width=80%}
 
 :::
 ::::
 
 :::: {.callout-tip title="Marcha de rayos de una lente divergente" collapse="false" icon="false"} 
 ::: {style="text-align:center;"}
-![Marcha de rayos de una lente divergente](_media/Marcha_lente_c_7.png){width=80%}
+![Marcha de rayos de una lente divergente](media/Marcha_lente_c_7.png){width=80%}
 
 :::
 ::::
@@ -470,12 +470,12 @@ $$\frac{1}{s'} + \frac{1}{s} = \frac{1}{f'}$$
 :::: {style="display:flex; justify-content:center; gap:5%;align-items:flex-center;"}
 
 ::: {style="text-align:center;"}
-![Foco imagen de un espejo cóncavo](_media/Foco_imagen_espejo.png){width=60%}
+![Foco imagen de un espejo cóncavo](media/Foco_imagen_espejo.png){width=60%}
 
 :::
 
 ::: {style="text-align:center;"}
-![Foco objeto de un espejo cóncavo](_media/Foco_objeto_espejo.png){width=60%}
+![Foco objeto de un espejo cóncavo](media/Foco_objeto_espejo.png){width=60%}
 :::
 
 ::::
@@ -524,12 +524,12 @@ Para un espejo convexo, los rayos paralelos al eje óptico se reflejan divergien
 :::: {style="display:flex; justify-content:center; gap:5%;align-items:flex-center;"}
 
 ::: {style="text-align:center;"}
-![Marcha de rayos en un espejo cóncavo](_media/Marcha_rayos_espejo_concavo.png){width=40%}
+![Marcha de rayos en un espejo cóncavo](media/Marcha_rayos_espejo_concavo.png){width=40%}
 
 :::
 
 ::: {style="text-align:center;"}
-![Marcha de rayos en un espejo convexo](_media/Marcha_rayos_espejo_convexo.png){width=90%}
+![Marcha de rayos en un espejo convexo](media/Marcha_rayos_espejo_convexo.png){width=90%}
 :::
 
 ::::
